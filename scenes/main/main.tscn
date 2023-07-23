@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scenes/main/main.gd" type="Script" id=1]
+[ext_resource path="res://scenes/gui/intro/intro.tscn" type="PackedScene" id=2]
+
+[node name="Main" type="Node"]
+script = ExtResource( 1 )
+
+[node name="Intro" parent="." instance=ExtResource( 2 )]
+
+[connection signal="intro_finished" from="Intro" to="." method="_on_Intro_intro_finished"]

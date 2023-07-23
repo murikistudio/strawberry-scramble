@@ -1,0 +1,38 @@
+# Godot-specific ignores
+.import/
+export.cfg
+export_presets.cfg
+
+# Imported translations (automatically generated from CSV files)
+*.translation
+
+# Mono-specific ignores
+.mono/
+data_*/
+
+# Blender-specific ignores
+*.blend1
+*.blend2
+
+# Project ignores
+/lang/.~lock*
+/release/*
+!/release/.gdignore
+/.idea
+*.kra
+
+# Android specific ignores
+/android/build/*
+/android/build/res/*
+/android/build/res/values/*
+/android/.build_version
+!/android/plugins
+!/android/.gdignore
+!/android/build/AndroidManifest.xml
+!/android/build/build.gradle
+!/android/build/gradle.properties
+!/android/build/res/
+!/android/build/res/values/
+!/android/build/res/values/Strings.xml
+*.keystore
+*.keystore.old
