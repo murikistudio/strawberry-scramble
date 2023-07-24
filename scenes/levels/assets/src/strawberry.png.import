@@ -2,8 +2,8 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/tree.png-79524d80f3dc446c2e2656fd09309d2a.s3tc.stex"
-path.etc="res://.import/tree.png-79524d80f3dc446c2e2656fd09309d2a.etc.stex"
+path.s3tc="res://.import/strawberry.png-6d6eef7bb0600afaff16bad753aa71f7.s3tc.stex"
+path.etc="res://.import/strawberry.png-6d6eef7bb0600afaff16bad753aa71f7.etc.stex"
 metadata={
 "imported_formats": [ "s3tc", "etc" ],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://scenes/levels/assets/src/tree.png"
-dest_files=[ "res://.import/tree.png-79524d80f3dc446c2e2656fd09309d2a.s3tc.stex", "res://.import/tree.png-79524d80f3dc446c2e2656fd09309d2a.etc.stex" ]
+source_file="res://scenes/levels/assets/src/strawberry.png"
+dest_files=[ "res://.import/strawberry.png-6d6eef7bb0600afaff16bad753aa71f7.s3tc.stex", "res://.import/strawberry.png-6d6eef7bb0600afaff16bad753aa71f7.etc.stex" ]
 
 [params]
 

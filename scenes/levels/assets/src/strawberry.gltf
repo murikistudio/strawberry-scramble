@@ -1,7 +1,7 @@
 {
     "asset" : {
-        "generator" : "Khronos glTF Blender I/O v1.2.20",
-        "version" : "2.0"
+        "version" : "2.0",
+        "generator" : "Khronos glTF Blender I/O v1.2.20"
     },
     "extensionsUsed" : [
         "KHR_materials_unlit"
@@ -17,43 +17,43 @@
     ],
     "nodes" : [
         {
+            "name" : "StrawberryMesh",
             "scale" : [
                 1.0153348445892334,
                 1.0153348445892334,
                 1.0153348445892334
             ],
-            "name" : "morango",
             "mesh" : 0
         }
     ],
     "materials" : [
         {
-            "name" : "Material",
+            "name" : "strawberry",
             "extensions" : {
                 "KHR_materials_unlit" : {}
             },
             "pbrMetallicRoughness" : {
                 "baseColorTexture" : {
-                    "index" : 0,
-                    "texCoord" : 0
+                    "texCoord" : 0,
+                    "index" : 0
                 }
             }
         }
     ],
     "meshes" : [
         {
+            "name" : "StrawberryMesh.001",
             "primitives" : [
                 {
-                    "material" : 0,
                     "attributes" : {
-                        "TEXCOORD_0" : 0,
-                        "POSITION" : 1,
-                        "NORMAL" : 2
+                        "POSITION" : 0,
+                        "NORMAL" : 1,
+                        "TEXCOORD_0" : 2
                     },
+                    "material" : 0,
                     "indices" : 3
                 }
-            ],
-            "name" : "morangoMesh.001"
+            ]
         }
     ],
     "textures" : [
@@ -64,81 +64,81 @@
     ],
     "images" : [
         {
-            "name" : "morango",
+            "name" : "strawberry.png",
             "mimeType" : "image/png",
-            "uri" : "morango.png"
+            "uri" : "strawberry.png"
         }
     ],
     "accessors" : [
         {
-            "bufferView" : 0,
-            "componentType" : 5126,
-            "type" : "VEC2",
-            "count" : 382
-        },
-        {
-            "bufferView" : 1,
+            "count" : 382,
             "componentType" : 5126,
             "type" : "VEC3",
-            "count" : 382,
-            "max" : [
-                0.526580274105072,
-                1.7666103839874268,
-                0.513231635093689
-            ],
             "min" : [
-                -0.42396554350852966,
-                0.34838438034057617,
-                -0.4520597457885742
+                -0.47527289390563965,
+                0.01310741901397705,
+                -0.4826456904411316
+            ],
+            "bufferView" : 0,
+            "max" : [
+                0.47527289390563965,
+                1.4313334226608276,
+                0.4826456904411316
             ]
         },
         {
-            "bufferView" : 2,
             "componentType" : 5126,
+            "count" : 382,
             "type" : "VEC3",
-            "count" : 382
+            "bufferView" : 1
         },
         {
-            "bufferView" : 3,
+            "componentType" : 5126,
+            "count" : 382,
+            "type" : "VEC2",
+            "bufferView" : 2
+        },
+        {
             "componentType" : 5123,
+            "count" : 540,
             "type" : "SCALAR",
-            "count" : 540
+            "bufferView" : 3
         }
     ],
     "bufferViews" : [
         {
-            "byteOffset" : 0,
             "buffer" : 0,
-            "byteLength" : 3056
+            "byteLength" : 4584,
+            "byteOffset" : 0
         },
         {
-            "byteOffset" : 3056,
             "buffer" : 0,
-            "byteLength" : 4584
+            "byteLength" : 4584,
+            "byteOffset" : 4584
         },
         {
-            "byteOffset" : 7640,
             "buffer" : 0,
-            "byteLength" : 4584
+            "byteLength" : 3056,
+            "byteOffset" : 9168
         },
         {
-            "byteOffset" : 12224,
             "buffer" : 0,
-            "byteLength" : 1080
+            "byteLength" : 1080,
+            "byteOffset" : 12224
         }
     ],
     "samplers" : [
         {
             "wrapT" : 10497,
-            "magFilter" : 9729,
             "minFilter" : 9986,
-            "wrapS" : 10497
+            "wrapS" : 10497,
+            "magFilter" : 9729
         }
     ],
     "buffers" : [
         {
-            "uri" : "morango.bin",
-            "byteLength" : 13304
+            "byteLength" : 13304,
+            "uri" : "strawberry.bin"
         }
     ]
 }

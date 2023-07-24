@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/morango.gltf-cc61855b088784352ebe81df2063ba1c.scn"
+path="res://.import/strawberry.gltf-8c8f823e4bd9745c79550fc1d8a1a4e6.scn"
 
 [deps]
 
-source_file="res://scenes/levels/assets/src/morango.gltf"
-dest_files=[ "res://.import/morango.gltf-cc61855b088784352ebe81df2063ba1c.scn" ]
+source_file="res://scenes/levels/assets/src/strawberry.gltf"
+dest_files=[ "res://.import/strawberry.gltf-8c8f823e4bd9745c79550fc1d8a1a4e6.scn" ]
 
 [params]
 

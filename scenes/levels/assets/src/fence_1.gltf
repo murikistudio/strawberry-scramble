@@ -18,27 +18,26 @@
             "name" : "Fence1Mesh"
         },
         {
+            "mesh" : 1,
+            "name" : "Fence1Collider -colonly",
             "children" : [
                 0
-            ],
-            "mesh" : 1,
-            "name" : "Fence1Collider -colonly"
+            ]
         }
     ],
     "materials" : [
         {
-            "name" : "house",
             "pbrMetallicRoughness" : {
                 "baseColorTexture" : {
                     "index" : 0,
                     "texCoord" : 0
                 }
-            }
+            },
+            "name" : "house"
         }
     ],
     "meshes" : [
         {
-            "name" : "Fence1Mesh.001",
             "primitives" : [
                 {
                     "attributes" : {
@@ -46,13 +45,13 @@
                         "TEXCOORD_0" : 1,
                         "NORMAL" : 2
                     },
-                    "material" : 0,
-                    "indices" : 3
+                    "indices" : 3,
+                    "material" : 0
                 }
-            ]
+            ],
+            "name" : "Fence1Mesh.001"
         },
         {
-            "name" : "Fence1Collider.001",
             "primitives" : [
                 {
                     "attributes" : {
@@ -61,7 +60,8 @@
                     },
                     "indices" : 6
                 }
-            ]
+            ],
+            "name" : "Fence1Collider.001"
         }
     ],
     "textures" : [
@@ -73,26 +73,26 @@
     "images" : [
         {
             "mimeType" : "image/png",
-            "name" : "house.png",
-            "uri" : "house.png"
+            "uri" : "house.png",
+            "name" : "house.png"
         }
     ],
     "accessors" : [
         {
+            "componentType" : 5126,
             "min" : [
                 -3.5,
                 -0.014436095952987671,
                 -0.05514500290155411
             ],
+            "bufferView" : 0,
+            "type" : "VEC3",
+            "count" : 552,
             "max" : [
                 3.5,
                 0.868532657623291,
                 0.05514500290155411
-            ],
-            "componentType" : 5126,
-            "count" : 552,
-            "type" : "VEC3",
-            "bufferView" : 0
+            ]
         },
         {
             "componentType" : 5126,
@@ -113,20 +113,20 @@
             "bufferView" : 3
         },
         {
+            "componentType" : 5126,
             "min" : [
                 -3.5014402866363525,
                 0,
                 -0.062147438526153564
             ],
+            "bufferView" : 4,
+            "type" : "VEC3",
+            "count" : 24,
             "max" : [
                 3.5014402866363525,
                 0.8799998760223389,
                 0.062147438526153564
-            ],
-            "componentType" : 5126,
-            "count" : 24,
-            "type" : "VEC3",
-            "bufferView" : 4
+            ]
         },
         {
             "componentType" : 5126,
@@ -143,47 +143,47 @@
     ],
     "bufferViews" : [
         {
+            "byteOffset" : 0,
             "byteLength" : 6624,
-            "buffer" : 0,
-            "byteOffset" : 0
+            "buffer" : 0
         },
         {
+            "byteOffset" : 6624,
             "byteLength" : 4416,
-            "buffer" : 0,
-            "byteOffset" : 6624
+            "buffer" : 0
         },
         {
+            "byteOffset" : 11040,
             "byteLength" : 6624,
-            "buffer" : 0,
-            "byteOffset" : 11040
+            "buffer" : 0
         },
         {
+            "byteOffset" : 17664,
             "byteLength" : 1656,
-            "buffer" : 0,
-            "byteOffset" : 17664
+            "buffer" : 0
         },
         {
+            "byteOffset" : 19320,
             "byteLength" : 288,
-            "buffer" : 0,
-            "byteOffset" : 19320
+            "buffer" : 0
         },
         {
+            "byteOffset" : 19608,
             "byteLength" : 288,
-            "buffer" : 0,
-            "byteOffset" : 19608
+            "buffer" : 0
         },
         {
+            "byteOffset" : 19896,
             "byteLength" : 72,
-            "buffer" : 0,
-            "byteOffset" : 19896
+            "buffer" : 0
         }
     ],
     "samplers" : [
         {
+            "minFilter" : 9986,
             "magFilter" : 9729,
-            "wrapT" : 10497,
             "wrapS" : 10497,
-            "minFilter" : 9986
+            "wrapT" : 10497
         }
     ],
     "buffers" : [
