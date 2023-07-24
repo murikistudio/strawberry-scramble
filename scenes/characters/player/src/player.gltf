@@ -1,0 +1,145 @@
+{
+    "asset" : {
+        "generator" : "Khronos glTF Blender I/O v1.2.20",
+        "version" : "2.0"
+    },
+    "extensionsUsed" : [
+        "KHR_materials_unlit"
+    ],
+    "scene" : 0,
+    "scenes" : [
+        {
+            "name" : "Scene",
+            "nodes" : [
+                0
+            ]
+        }
+    ],
+    "nodes" : [
+        {
+            "name" : "PlayerMesh",
+            "rotation" : [
+                0,
+                0.005832098890095949,
+                0,
+                0.999983012676239
+            ],
+            "mesh" : 0
+        }
+    ],
+    "materials" : [
+        {
+            "extensions" : {
+                "KHR_materials_unlit" : {}
+            },
+            "name" : "player",
+            "pbrMetallicRoughness" : {
+                "baseColorTexture" : {
+                    "texCoord" : 0,
+                    "index" : 0
+                }
+            }
+        }
+    ],
+    "meshes" : [
+        {
+            "name" : "PlayerMesh.001",
+            "primitives" : [
+                {
+                    "material" : 0,
+                    "attributes" : {
+                        "TEXCOORD_0" : 0,
+                        "NORMAL" : 1,
+                        "POSITION" : 2
+                    },
+                    "indices" : 3
+                }
+            ]
+        }
+    ],
+    "textures" : [
+        {
+            "sampler" : 0,
+            "source" : 0
+        }
+    ],
+    "images" : [
+        {
+            "name" : "player.png",
+            "uri" : "player.png",
+            "mimeType" : "image/png"
+        }
+    ],
+    "accessors" : [
+        {
+            "componentType" : 5126,
+            "bufferView" : 0,
+            "type" : "VEC2",
+            "count" : 3027
+        },
+        {
+            "componentType" : 5126,
+            "bufferView" : 1,
+            "type" : "VEC3",
+            "count" : 3027
+        },
+        {
+            "componentType" : 5126,
+            "min" : [
+                -0.2525607943534851,
+                -0.009424030780792236,
+                -0.41010767221450806
+            ],
+            "type" : "VEC3",
+            "max" : [
+                0.2525607943534851,
+                1.171454668045044,
+                0.20448192954063416
+            ],
+            "bufferView" : 2,
+            "count" : 3027
+        },
+        {
+            "componentType" : 5123,
+            "bufferView" : 3,
+            "type" : "SCALAR",
+            "count" : 7557
+        }
+    ],
+    "bufferViews" : [
+        {
+            "buffer" : 0,
+            "byteLength" : 24216,
+            "byteOffset" : 0
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 36324,
+            "byteOffset" : 24216
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 36324,
+            "byteOffset" : 60540
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 15114,
+            "byteOffset" : 96864
+        }
+    ],
+    "samplers" : [
+        {
+            "wrapS" : 10497,
+            "magFilter" : 9729,
+            "minFilter" : 9986,
+            "wrapT" : 10497
+        }
+    ],
+    "buffers" : [
+        {
+            "byteLength" : 111980,
+            "uri" : "player.bin"
+        }
+    ]
+}

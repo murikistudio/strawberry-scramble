@@ -44,9 +44,9 @@ onready var _state_manager: BaseStateManager = find_node("StateManager")
 onready var _visual: Spatial = find_node("Visual")
 onready var _camera: Camera = find_node("Camera")
 onready var _camera_axis: Position3D = find_node("CameraAxis")
-onready var _camera_smooth: Position3D = find_node("CameraSmooth")
 onready var _mesh_direction: MeshInstance = find_node("MeshDirection")
 onready var _label_debug: Label3D = find_node("LabelDebug")
+onready var _directional_light: DirectionalLight = find_node("DirectionalLight")
 
 
 # Setters and getters
@@ -57,8 +57,8 @@ func _set_jumps_left(value: int) -> void:
 # Built-in overrides
 func _ready() -> void:
 	_label_debug.visible = debug
+	_directional_light.set_as_toplevel(true)
 	_camera_axis.set_as_toplevel(true)
-	_camera_smooth.set_as_toplevel(true)
 	_mesh_direction.set_as_toplevel(true)
 	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
 
@@ -71,6 +71,8 @@ func _unhandled_input(event: InputEvent) -> void:
 
 
 func _physics_process(delta: float) -> void:
+	_directional_light.global_translation = global_translation
+
 	_process_move(delta)
 	_process_visual(delta)
 	_process_camera(delta)
@@ -142,8 +144,7 @@ func _process_move(_delta: float) -> void:
 
 # Processa a movimentação e suavização da câmera.
 func _process_camera(_delta: float) -> void:
-	_camera_axis.global_translation = global_translation
-	_camera_smooth.global_translation = _camera_smooth.global_translation.linear_interpolate(global_translation, 0.1)
+	_camera_axis.global_translation = _camera_axis.global_translation.linear_interpolate(_mesh_direction.global_translation, 0.1)
 
 
 # Helper methods
