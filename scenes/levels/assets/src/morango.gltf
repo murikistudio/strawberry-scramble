@@ -1,0 +1,144 @@
+{
+    "asset" : {
+        "generator" : "Khronos glTF Blender I/O v1.2.20",
+        "version" : "2.0"
+    },
+    "extensionsUsed" : [
+        "KHR_materials_unlit"
+    ],
+    "scene" : 0,
+    "scenes" : [
+        {
+            "name" : "Scene",
+            "nodes" : [
+                0
+            ]
+        }
+    ],
+    "nodes" : [
+        {
+            "scale" : [
+                1.0153348445892334,
+                1.0153348445892334,
+                1.0153348445892334
+            ],
+            "name" : "morango",
+            "mesh" : 0
+        }
+    ],
+    "materials" : [
+        {
+            "name" : "Material",
+            "extensions" : {
+                "KHR_materials_unlit" : {}
+            },
+            "pbrMetallicRoughness" : {
+                "baseColorTexture" : {
+                    "index" : 0,
+                    "texCoord" : 0
+                }
+            }
+        }
+    ],
+    "meshes" : [
+        {
+            "primitives" : [
+                {
+                    "material" : 0,
+                    "attributes" : {
+                        "TEXCOORD_0" : 0,
+                        "POSITION" : 1,
+                        "NORMAL" : 2
+                    },
+                    "indices" : 3
+                }
+            ],
+            "name" : "morangoMesh.001"
+        }
+    ],
+    "textures" : [
+        {
+            "sampler" : 0,
+            "source" : 0
+        }
+    ],
+    "images" : [
+        {
+            "name" : "morango",
+            "mimeType" : "image/png",
+            "uri" : "morango.png"
+        }
+    ],
+    "accessors" : [
+        {
+            "bufferView" : 0,
+            "componentType" : 5126,
+            "type" : "VEC2",
+            "count" : 382
+        },
+        {
+            "bufferView" : 1,
+            "componentType" : 5126,
+            "type" : "VEC3",
+            "count" : 382,
+            "max" : [
+                0.526580274105072,
+                1.7666103839874268,
+                0.513231635093689
+            ],
+            "min" : [
+                -0.42396554350852966,
+                0.34838438034057617,
+                -0.4520597457885742
+            ]
+        },
+        {
+            "bufferView" : 2,
+            "componentType" : 5126,
+            "type" : "VEC3",
+            "count" : 382
+        },
+        {
+            "bufferView" : 3,
+            "componentType" : 5123,
+            "type" : "SCALAR",
+            "count" : 540
+        }
+    ],
+    "bufferViews" : [
+        {
+            "byteOffset" : 0,
+            "buffer" : 0,
+            "byteLength" : 3056
+        },
+        {
+            "byteOffset" : 3056,
+            "buffer" : 0,
+            "byteLength" : 4584
+        },
+        {
+            "byteOffset" : 7640,
+            "buffer" : 0,
+            "byteLength" : 4584
+        },
+        {
+            "byteOffset" : 12224,
+            "buffer" : 0,
+            "byteLength" : 1080
+        }
+    ],
+    "samplers" : [
+        {
+            "wrapT" : 10497,
+            "magFilter" : 9729,
+            "minFilter" : 9986,
+            "wrapS" : 10497
+        }
+    ],
+    "buffers" : [
+        {
+            "uri" : "morango.bin",
+            "byteLength" : 13304
+        }
+    ]
+}
