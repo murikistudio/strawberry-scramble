@@ -27,3 +27,8 @@ material/0 = SubResource( 2 )
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.32434, 0 )
+
+[node name="DirectionalLight" type="DirectionalLight" parent="."]
+transform = Transform( 0.868813, -0.432552, -0.240963, 0, -0.486656, 0.873594, -0.49514, -0.75899, -0.422813, 0, 3, 0 )
+light_energy = 0.2
+shadow_enabled = true
