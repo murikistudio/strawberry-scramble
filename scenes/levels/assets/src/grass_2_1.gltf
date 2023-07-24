@@ -1,0 +1,138 @@
+{
+    "asset" : {
+        "version" : "2.0",
+        "generator" : "Khronos glTF Blender I/O v1.2.20"
+    },
+    "scene" : 0,
+    "scenes" : [
+        {
+            "nodes" : [
+                0
+            ],
+            "name" : "Scene"
+        }
+    ],
+    "nodes" : [
+        {
+            "scale" : [
+                0.42633163928985596,
+                0.42633163928985596,
+                0.42633163928985596
+            ],
+            "mesh" : 0,
+            "name" : "Grass2Mesh1"
+        }
+    ],
+    "materials" : [
+        {
+            "name" : "grass_2",
+            "pbrMetallicRoughness" : {
+                "baseColorTexture" : {
+                    "index" : 0,
+                    "texCoord" : 0
+                }
+            }
+        }
+    ],
+    "meshes" : [
+        {
+            "name" : "Grass2Mesh1.001",
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "POSITION" : 0,
+                        "TEXCOORD_0" : 1,
+                        "NORMAL" : 2
+                    },
+                    "material" : 0,
+                    "indices" : 3
+                }
+            ]
+        }
+    ],
+    "textures" : [
+        {
+            "sampler" : 0,
+            "source" : 0
+        }
+    ],
+    "images" : [
+        {
+            "mimeType" : "image/png",
+            "name" : "grass_2.png",
+            "uri" : "grass_2.png"
+        }
+    ],
+    "accessors" : [
+        {
+            "min" : [
+                -3.7171268463134766,
+                -0.2137260138988495,
+                -1.241742730140686
+            ],
+            "max" : [
+                3.7171268463134766,
+                1.7177845239639282,
+                1.241742730140686
+            ],
+            "componentType" : 5126,
+            "count" : 20,
+            "type" : "VEC3",
+            "bufferView" : 0
+        },
+        {
+            "componentType" : 5126,
+            "count" : 20,
+            "type" : "VEC2",
+            "bufferView" : 1
+        },
+        {
+            "componentType" : 5126,
+            "count" : 20,
+            "type" : "VEC3",
+            "bufferView" : 2
+        },
+        {
+            "componentType" : 5123,
+            "count" : 30,
+            "type" : "SCALAR",
+            "bufferView" : 3
+        }
+    ],
+    "bufferViews" : [
+        {
+            "byteLength" : 240,
+            "buffer" : 0,
+            "byteOffset" : 0
+        },
+        {
+            "byteLength" : 160,
+            "buffer" : 0,
+            "byteOffset" : 240
+        },
+        {
+            "byteLength" : 240,
+            "buffer" : 0,
+            "byteOffset" : 400
+        },
+        {
+            "byteLength" : 60,
+            "buffer" : 0,
+            "byteOffset" : 640
+        }
+    ],
+    "samplers" : [
+        {
+            "magFilter" : 9729,
+            "wrapT" : 10497,
+            "wrapS" : 10497,
+            "minFilter" : 9986
+        }
+    ],
+    "buffers" : [
+        {
+            "byteLength" : 700,
+            "uri" : "grass_2_1.bin"
+        }
+    ]
+}

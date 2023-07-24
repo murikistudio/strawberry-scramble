@@ -1,0 +1,195 @@
+{
+    "asset" : {
+        "version" : "2.0",
+        "generator" : "Khronos glTF Blender I/O v1.2.20"
+    },
+    "scene" : 0,
+    "scenes" : [
+        {
+            "nodes" : [
+                1
+            ],
+            "name" : "Scene"
+        }
+    ],
+    "nodes" : [
+        {
+            "mesh" : 0,
+            "name" : "Fence3Mesh"
+        },
+        {
+            "children" : [
+                0
+            ],
+            "mesh" : 1,
+            "name" : "Fence3Collider -colonly"
+        }
+    ],
+    "materials" : [
+        {
+            "name" : "house",
+            "pbrMetallicRoughness" : {
+                "baseColorTexture" : {
+                    "index" : 0,
+                    "texCoord" : 0
+                }
+            }
+        }
+    ],
+    "meshes" : [
+        {
+            "name" : "Fence3Mesh.001",
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "POSITION" : 0,
+                        "TEXCOORD_0" : 1,
+                        "NORMAL" : 2
+                    },
+                    "material" : 0,
+                    "indices" : 3
+                }
+            ]
+        },
+        {
+            "name" : "Fence3Collider.001",
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "POSITION" : 4,
+                        "NORMAL" : 5
+                    },
+                    "indices" : 6
+                }
+            ]
+        }
+    ],
+    "textures" : [
+        {
+            "sampler" : 0,
+            "source" : 0
+        }
+    ],
+    "images" : [
+        {
+            "mimeType" : "image/png",
+            "name" : "house.png",
+            "uri" : "house.png"
+        }
+    ],
+    "accessors" : [
+        {
+            "min" : [
+                -0.27440696954727173,
+                -0.009891301393508911,
+                -0.049354247748851776
+            ],
+            "max" : [
+                0.28291159868240356,
+                0.873077392578125,
+                0.050783250480890274
+            ],
+            "componentType" : 5126,
+            "count" : 88,
+            "type" : "VEC3",
+            "bufferView" : 0
+        },
+        {
+            "componentType" : 5126,
+            "count" : 88,
+            "type" : "VEC2",
+            "bufferView" : 1
+        },
+        {
+            "componentType" : 5126,
+            "count" : 88,
+            "type" : "VEC3",
+            "bufferView" : 2
+        },
+        {
+            "componentType" : 5123,
+            "count" : 132,
+            "type" : "SCALAR",
+            "bufferView" : 3
+        },
+        {
+            "min" : [
+                -0.2829660177230835,
+                0.0008689165115356445,
+                -0.05385962501168251
+            ],
+            "max" : [
+                0.2829660177230835,
+                0.8790903091430664,
+                0.05385962501168251
+            ],
+            "componentType" : 5126,
+            "count" : 24,
+            "type" : "VEC3",
+            "bufferView" : 4
+        },
+        {
+            "componentType" : 5126,
+            "count" : 24,
+            "type" : "VEC3",
+            "bufferView" : 5
+        },
+        {
+            "componentType" : 5123,
+            "count" : 36,
+            "type" : "SCALAR",
+            "bufferView" : 6
+        }
+    ],
+    "bufferViews" : [
+        {
+            "byteLength" : 1056,
+            "buffer" : 0,
+            "byteOffset" : 0
+        },
+        {
+            "byteLength" : 704,
+            "buffer" : 0,
+            "byteOffset" : 1056
+        },
+        {
+            "byteLength" : 1056,
+            "buffer" : 0,
+            "byteOffset" : 1760
+        },
+        {
+            "byteLength" : 264,
+            "buffer" : 0,
+            "byteOffset" : 2816
+        },
+        {
+            "byteLength" : 288,
+            "buffer" : 0,
+            "byteOffset" : 3080
+        },
+        {
+            "byteLength" : 288,
+            "buffer" : 0,
+            "byteOffset" : 3368
+        },
+        {
+            "byteLength" : 72,
+            "buffer" : 0,
+            "byteOffset" : 3656
+        }
+    ],
+    "samplers" : [
+        {
+            "magFilter" : 9729,
+            "wrapT" : 10497,
+            "wrapS" : 10497,
+            "minFilter" : 9986
+        }
+    ],
+    "buffers" : [
+        {
+            "byteLength" : 3728,
+            "uri" : "fence_3.bin"
+        }
+    ]
+}
