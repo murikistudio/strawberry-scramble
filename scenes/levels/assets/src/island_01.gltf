@@ -1,0 +1,138 @@
+{
+    "asset" : {
+        "version" : "2.0",
+        "generator" : "Khronos glTF Blender I/O v1.2.20"
+    },
+    "scene" : 0,
+    "scenes" : [
+        {
+            "nodes" : [
+                0
+            ],
+            "name" : "Scene"
+        }
+    ],
+    "nodes" : [
+        {
+            "mesh" : 0,
+            "scale" : [
+                5.064178466796875,
+                5.064178466796875,
+                5.064178466796875
+            ],
+            "name" : "Island01Mesh -col"
+        }
+    ],
+    "materials" : [
+        {
+            "name" : "island",
+            "pbrMetallicRoughness" : {
+                "baseColorTexture" : {
+                    "index" : 0,
+                    "texCoord" : 0
+                }
+            }
+        }
+    ],
+    "meshes" : [
+        {
+            "name" : "Island1Mesh.001",
+            "primitives" : [
+                {
+                    "indices" : 3,
+                    "material" : 0,
+                    "attributes" : {
+                        "POSITION" : 0,
+                        "TEXCOORD_0" : 1,
+                        "NORMAL" : 2
+                    }
+                }
+            ]
+        }
+    ],
+    "textures" : [
+        {
+            "source" : 0,
+            "sampler" : 0
+        }
+    ],
+    "images" : [
+        {
+            "mimeType" : "image/png",
+            "name" : "island.png",
+            "uri" : "island.png"
+        }
+    ],
+    "accessors" : [
+        {
+            "componentType" : 5126,
+            "bufferView" : 0,
+            "type" : "VEC3",
+            "count" : 51,
+            "min" : [
+                -1.6182856559753418,
+                -0.0033565163612365723,
+                -1.6182860136032104
+            ],
+            "max" : [
+                1.6182856559753418,
+                0.13429245352745056,
+                1.6182860136032104
+            ]
+        },
+        {
+            "componentType" : 5126,
+            "bufferView" : 1,
+            "type" : "VEC2",
+            "count" : 51
+        },
+        {
+            "componentType" : 5126,
+            "bufferView" : 2,
+            "type" : "VEC3",
+            "count" : 51
+        },
+        {
+            "componentType" : 5123,
+            "bufferView" : 3,
+            "type" : "SCALAR",
+            "count" : 138
+        }
+    ],
+    "bufferViews" : [
+        {
+            "byteLength" : 612,
+            "byteOffset" : 0,
+            "buffer" : 0
+        },
+        {
+            "byteLength" : 408,
+            "byteOffset" : 612,
+            "buffer" : 0
+        },
+        {
+            "byteLength" : 612,
+            "byteOffset" : 1020,
+            "buffer" : 0
+        },
+        {
+            "byteLength" : 276,
+            "byteOffset" : 1632,
+            "buffer" : 0
+        }
+    ],
+    "samplers" : [
+        {
+            "wrapS" : 10497,
+            "magFilter" : 9729,
+            "wrapT" : 10497,
+            "minFilter" : 9986
+        }
+    ],
+    "buffers" : [
+        {
+            "byteLength" : 1908,
+            "uri" : "island_01.bin"
+        }
+    ]
+}

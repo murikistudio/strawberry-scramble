@@ -1,0 +1,282 @@
+{
+    "asset" : {
+        "version" : "2.0",
+        "generator" : "Khronos glTF Blender I/O v1.2.20"
+    },
+    "scene" : 0,
+    "scenes" : [
+        {
+            "nodes" : [
+                1
+            ],
+            "name" : "Scene"
+        }
+    ],
+    "nodes" : [
+        {
+            "scale" : [
+                1.0153348445892334,
+                1.0153348445892334,
+                1.0153348445892334
+            ],
+            "mesh" : 0,
+            "name" : "Tree1Mesh"
+        },
+        {
+            "children" : [
+                0
+            ],
+            "mesh" : 1,
+            "name" : "Tree1Collider -colonly"
+        }
+    ],
+    "materials" : [
+        {
+            "pbrMetallicRoughness" : {
+                "baseColorTexture" : {
+                    "texCoord" : 0,
+                    "index" : 0
+                }
+            },
+            "name" : "branch"
+        },
+        {
+            "pbrMetallicRoughness" : {
+                "baseColorTexture" : {
+                    "texCoord" : 0,
+                    "index" : 1
+                }
+            },
+            "name" : "leaves"
+        }
+    ],
+    "meshes" : [
+        {
+            "primitives" : [
+                {
+                    "material" : 0,
+                    "indices" : 3,
+                    "attributes" : {
+                        "NORMAL" : 0,
+                        "TEXCOORD_0" : 1,
+                        "POSITION" : 2
+                    }
+                },
+                {
+                    "material" : 1,
+                    "indices" : 7,
+                    "attributes" : {
+                        "NORMAL" : 4,
+                        "TEXCOORD_0" : 5,
+                        "POSITION" : 6
+                    }
+                }
+            ],
+            "name" : "Tree1Mesh.001"
+        },
+        {
+            "primitives" : [
+                {
+                    "indices" : 10,
+                    "attributes" : {
+                        "NORMAL" : 8,
+                        "POSITION" : 9
+                    }
+                }
+            ],
+            "name" : "Tree1Collider.001"
+        }
+    ],
+    "textures" : [
+        {
+            "source" : 0,
+            "sampler" : 0
+        },
+        {
+            "source" : 0,
+            "sampler" : 1
+        }
+    ],
+    "images" : [
+        {
+            "uri" : "tree.png",
+            "mimeType" : "image/png",
+            "name" : "tree"
+        }
+    ],
+    "accessors" : [
+        {
+            "componentType" : 5126,
+            "type" : "VEC3",
+            "bufferView" : 0,
+            "count" : 480
+        },
+        {
+            "componentType" : 5126,
+            "type" : "VEC2",
+            "bufferView" : 1,
+            "count" : 480
+        },
+        {
+            "type" : "VEC3",
+            "min" : [
+                -2.164700508117676,
+                -0.14743685722351074,
+                -1.7989823818206787
+            ],
+            "max" : [
+                1.8097608089447021,
+                5.1867570877075195,
+                2.5222625732421875
+            ],
+            "componentType" : 5126,
+            "bufferView" : 2,
+            "count" : 480
+        },
+        {
+            "componentType" : 5123,
+            "type" : "SCALAR",
+            "bufferView" : 3,
+            "count" : 2061
+        },
+        {
+            "componentType" : 5126,
+            "type" : "VEC3",
+            "bufferView" : 4,
+            "count" : 320
+        },
+        {
+            "componentType" : 5126,
+            "type" : "VEC2",
+            "bufferView" : 5,
+            "count" : 320
+        },
+        {
+            "type" : "VEC3",
+            "min" : [
+                -2.5474448204040527,
+                1.8621385097503662,
+                -2.0530037879943848
+            ],
+            "max" : [
+                2.4424679279327393,
+                5.558786869049072,
+                2.9406943321228027
+            ],
+            "componentType" : 5126,
+            "bufferView" : 6,
+            "count" : 320
+        },
+        {
+            "componentType" : 5123,
+            "type" : "SCALAR",
+            "bufferView" : 7,
+            "count" : 336
+        },
+        {
+            "componentType" : 5126,
+            "type" : "VEC3",
+            "bufferView" : 8,
+            "count" : 24
+        },
+        {
+            "type" : "VEC3",
+            "min" : [
+                -0.7925688028335571,
+                0,
+                -0.5126624703407288
+            ],
+            "max" : [
+                0.717147946357727,
+                5.0376996994018555,
+                0.9910166263580322
+            ],
+            "componentType" : 5126,
+            "bufferView" : 9,
+            "count" : 24
+        },
+        {
+            "componentType" : 5123,
+            "type" : "SCALAR",
+            "bufferView" : 10,
+            "count" : 36
+        }
+    ],
+    "bufferViews" : [
+        {
+            "byteLength" : 5760,
+            "buffer" : 0,
+            "byteOffset" : 0
+        },
+        {
+            "byteLength" : 3840,
+            "buffer" : 0,
+            "byteOffset" : 5760
+        },
+        {
+            "byteLength" : 5760,
+            "buffer" : 0,
+            "byteOffset" : 9600
+        },
+        {
+            "byteLength" : 4122,
+            "buffer" : 0,
+            "byteOffset" : 15360
+        },
+        {
+            "byteLength" : 3840,
+            "buffer" : 0,
+            "byteOffset" : 19484
+        },
+        {
+            "byteLength" : 2560,
+            "buffer" : 0,
+            "byteOffset" : 23324
+        },
+        {
+            "byteLength" : 3840,
+            "buffer" : 0,
+            "byteOffset" : 25884
+        },
+        {
+            "byteLength" : 672,
+            "buffer" : 0,
+            "byteOffset" : 29724
+        },
+        {
+            "byteLength" : 288,
+            "buffer" : 0,
+            "byteOffset" : 30396
+        },
+        {
+            "byteLength" : 288,
+            "buffer" : 0,
+            "byteOffset" : 30684
+        },
+        {
+            "byteLength" : 72,
+            "buffer" : 0,
+            "byteOffset" : 30972
+        }
+    ],
+    "samplers" : [
+        {
+            "wrapS" : 10497,
+            "wrapT" : 10497,
+            "minFilter" : 9986,
+            "magFilter" : 9729
+        },
+        {
+            "wrapS" : 10497,
+            "wrapT" : 10497,
+            "minFilter" : 9986,
+            "magFilter" : 9729
+        }
+    ],
+    "buffers" : [
+        {
+            "uri" : "tree_1.bin",
+            "byteLength" : 31044
+        }
+    ]
+}

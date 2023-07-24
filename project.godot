@@ -75,7 +75,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Morango"
-run/main_scene="res://scenes/main/main.tscn"
+run/main_scene="res://scenes/levels/test.tscn"
 config/icon="res://icon.svg"
 config/version="0.0.1"
 config/build=1
@@ -199,6 +199,7 @@ common/enable_pause_aware_picking=true
 quality/driver/driver_name="GLES2"
 vram_compression/import_etc=true
 vram_compression/import_etc2=false
+environment/default_clear_color=Color( 0.537255, 0.784314, 0.780392, 1 )
 environment/default_environment="res://resources/default_env.tres"
 
 [utils]

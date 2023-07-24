@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://scenes/levels/assets/src/island_05.gltf" type="PackedScene" id=1]
+
+[node name="Island05" type="Spatial"]
+
+[node name="Visual" parent="." instance=ExtResource( 1 )]
+
+[editable path="Visual"]
