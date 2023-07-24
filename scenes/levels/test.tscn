@@ -44,6 +44,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0339391, 0.676777, 2.14478 )
 transform = Transform( -0.994243, 0, 0.107149, 0, 1, 0, -0.107149, 0, -0.994243, 19.1604, 1.96595, -2.68906 )
 
 [node name="Bridge1" parent="Bridges" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, -7.45058e-09, 0, 1, 0, 7.45058e-09, 0, 1, 0, 0, 0 )
 
 [node name="Bridge5" parent="Bridges" instance=ExtResource( 5 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1 )
