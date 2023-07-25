@@ -159,6 +159,8 @@ func _process_visual(_delta: float) -> void:
 	var target_vec: Vector3 = global_translation + _get_axis_offset(move_weight)
 	var interp_vec: Vector3 = lerp(global_translation, target_vec, 0.01)
 
+	_anim_player.playback_speed = move_weight.length() if animation["name"] == "run_loop" else animation["speed"]
+
 	if move_weight.length() > 0.1:
 		look_at(interp_vec, Vector3.UP)
 

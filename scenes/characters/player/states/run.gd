@@ -22,6 +22,8 @@ func physics_process(delta: float) -> BaseState:
 
 	_step_time += delta
 
+	step_sound_interval = 0.25 / player.move_weight.length()
+
 	if _step_time >= step_sound_interval:
 		_step_time = 0.0
 		player.play_sfx_step()
