@@ -18,12 +18,12 @@
     "nodes" : [
         {
             "name" : "StrawberryMesh",
+            "mesh" : 0,
             "scale" : [
                 1.0153348445892334,
                 1.0153348445892334,
                 1.0153348445892334
-            ],
-            "mesh" : 0
+            ]
         }
     ],
     "materials" : [
@@ -47,8 +47,8 @@
                 {
                     "attributes" : {
                         "POSITION" : 0,
-                        "NORMAL" : 1,
-                        "TEXCOORD_0" : 2
+                        "TEXCOORD_0" : 1,
+                        "NORMAL" : 2
                     },
                     "material" : 0,
                     "indices" : 3
@@ -71,74 +71,74 @@
     ],
     "accessors" : [
         {
-            "count" : 382,
+            "max" : [
+                0.47527289390563965,
+                1.4313334226608276,
+                0.4826456904411316
+            ],
             "componentType" : 5126,
-            "type" : "VEC3",
+            "bufferView" : 0,
             "min" : [
                 -0.47527289390563965,
                 0.01310741901397705,
                 -0.4826456904411316
             ],
-            "bufferView" : 0,
-            "max" : [
-                0.47527289390563965,
-                1.4313334226608276,
-                0.4826456904411316
-            ]
+            "count" : 179,
+            "type" : "VEC3"
         },
         {
+            "bufferView" : 1,
             "componentType" : 5126,
-            "count" : 382,
-            "type" : "VEC3",
-            "bufferView" : 1
+            "count" : 179,
+            "type" : "VEC2"
         },
         {
+            "bufferView" : 2,
             "componentType" : 5126,
-            "count" : 382,
-            "type" : "VEC2",
-            "bufferView" : 2
+            "count" : 179,
+            "type" : "VEC3"
         },
         {
+            "bufferView" : 3,
             "componentType" : 5123,
             "count" : 540,
-            "type" : "SCALAR",
-            "bufferView" : 3
+            "type" : "SCALAR"
         }
     ],
     "bufferViews" : [
         {
+            "byteOffset" : 0,
             "buffer" : 0,
-            "byteLength" : 4584,
-            "byteOffset" : 0
+            "byteLength" : 2148
         },
         {
+            "byteOffset" : 2148,
             "buffer" : 0,
-            "byteLength" : 4584,
-            "byteOffset" : 4584
+            "byteLength" : 1432
         },
         {
+            "byteOffset" : 3580,
             "buffer" : 0,
-            "byteLength" : 3056,
-            "byteOffset" : 9168
+            "byteLength" : 2148
         },
         {
+            "byteOffset" : 5728,
             "buffer" : 0,
-            "byteLength" : 1080,
-            "byteOffset" : 12224
+            "byteLength" : 1080
         }
     ],
     "samplers" : [
         {
-            "wrapT" : 10497,
-            "minFilter" : 9986,
             "wrapS" : 10497,
-            "magFilter" : 9729
+            "wrapT" : 10497,
+            "magFilter" : 9729,
+            "minFilter" : 9986
         }
     ],
     "buffers" : [
         {
-            "byteLength" : 13304,
-            "uri" : "strawberry.bin"
+            "uri" : "strawberry.bin",
+            "byteLength" : 6808
         }
     ]
 }
