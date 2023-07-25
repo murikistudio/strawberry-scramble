@@ -59,7 +59,6 @@ material/0 = SubResource( 9 )
 
 [node name="LabelDebug" type="Label3D" parent="Visual"]
 transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 1, 0 )
-visible = false
 billboard = 1
 double_sided = false
 no_depth_test = true
@@ -68,7 +67,7 @@ alpha_cut = 1
 text = "Player"
 
 [node name="Player" parent="Visual" instance=ExtResource( 5 )]
-transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, -0.627689, 0 )
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, -0.633532, 0 )
 
 [node name="StateManager" type="Node" parent="."]
 script = ExtResource( 2 )
@@ -105,3 +104,5 @@ state_run = NodePath("../Run")
 state_jump = NodePath("../Jump")
 
 [connection signal="state_entered" from="StateManager" to="." method="_on_StateManager_state_entered"]
+
+[editable path="Visual/Player"]

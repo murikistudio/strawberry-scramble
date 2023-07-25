@@ -14,6 +14,7 @@ func enter() -> void:
 	player.jumps_left -= 1
 	player.play_sfx_jump()
 	player.play_sfx_swing(0.8)
+	player.set_animation("jump_loop")
 
 
 func physics_process(delta: float) -> BaseState:

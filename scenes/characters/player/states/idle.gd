@@ -9,6 +9,10 @@ export(NodePath) var state_jump: NodePath
 
 
 # State overrides
+func enter() -> void:
+	player.set_animation("idle_loop")
+
+
 func physics_process(delta: float) -> BaseState:
 	.physics_process(delta)
 

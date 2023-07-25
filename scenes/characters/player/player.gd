@@ -39,6 +39,11 @@ var move_weight := Vector2.ZERO
 var move_gravity := 0.0
 var move_snap := Vector3.ZERO
 var controller: int = ControllerLook.MOUSE
+var animation := {
+	"name": "idle_loop",
+	"speed": 1.0,
+	"blend": 0.2,
+}
 
 onready var _state_manager: BaseStateManager = find_node("StateManager")
 onready var _visual: Spatial = find_node("Visual")
@@ -47,6 +52,7 @@ onready var _camera_axis: Position3D = find_node("CameraAxis")
 onready var _mesh_direction: MeshInstance = find_node("MeshDirection")
 onready var _label_debug: Label3D = find_node("LabelDebug")
 onready var _directional_light: DirectionalLight = find_node("DirectionalLight")
+onready var _anim_player: AnimationPlayer = find_node("AnimationPlayer")
 
 
 # Setters and getters
@@ -82,6 +88,13 @@ func _physics_process(delta: float) -> void:
 
 
 # Public methods
+# Define a animação atual do jogador.
+func set_animation(anim_name: String, speed := 1.0, blend := 0.2) -> void:
+	animation["name"] = anim_name
+	animation["speed"] = speed
+	animation["blend"] = blend
+
+
 # Toca som aleatório de voz de pulo.
 func play_sfx_jump(pitch := 1.0) -> void:
 	if rand_range(0, 100) > 30:
@@ -159,9 +172,14 @@ static func _get_random_item(array: Array):
 
 
 # Event handlers
-# Atualizar o texto de debug quando um estado entrar na cena.
+# Executado quando o jogador entra em um novo estado.
 func _on_StateManager_state_entered(state: BaseState) -> void:
-	if not debug:
-		return
+	if debug and _label_debug:
+		_label_debug.text = state.name
 
-	_label_debug.text = state.name
+	if _anim_player:
+		_anim_player.play(
+			animation["name"],
+			animation["blend"],
+			animation["speed"]
+		)
