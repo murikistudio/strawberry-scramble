@@ -195,9 +195,16 @@ func _on_StateManager_state_entered(state: BaseState) -> void:
 
 # Tratar colisão do jogador com obstáculos do cenário e coletáveis.
 func _on_Area_area_entered(area: Area) -> void:
-	if not dead and area.is_in_group("death"):
+	if dead:
+		return
+
+	if area.is_in_group("death"):
 		dead = true
 		GameSounds.play_sfx(DatabaseSounds.SFX_WATER)
 		yield(get_tree().create_timer(1.5, false), "timeout")
 		get_tree().reload_current_scene()
 		return
+
+	if area.is_in_group("collectable"):
+		GameSounds.play_sfx(DatabaseSounds.SFX_COLLECT)
+		area.monitorable = false
