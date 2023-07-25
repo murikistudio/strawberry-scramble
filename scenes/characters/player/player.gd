@@ -39,6 +39,7 @@ var move_weight := Vector2.ZERO
 var move_gravity := 0.0
 var move_snap := Vector3.ZERO
 var controller: int = ControllerLook.MOUSE
+var dead := false
 var animation := {
 	"name": "idle_loop",
 	"speed": 1.0,
@@ -53,6 +54,7 @@ onready var _mesh_direction: MeshInstance = find_node("MeshDirection")
 onready var _label_debug: Label3D = find_node("LabelDebug")
 onready var _directional_light: DirectionalLight = find_node("DirectionalLight")
 onready var _anim_player: AnimationPlayer = find_node("AnimationPlayer")
+onready var _area: Area = find_node("Area")
 
 
 # Setters and getters
@@ -77,6 +79,9 @@ func _unhandled_input(event: InputEvent) -> void:
 
 
 func _physics_process(delta: float) -> void:
+	if dead:
+		return
+
 	_directional_light.global_translation = global_translation
 
 	_process_move(delta)
@@ -157,6 +162,9 @@ func _process_move(_delta: float) -> void:
 
 # Processa a movimentação e suavização da câmera.
 func _process_camera(_delta: float) -> void:
+	if dead:
+		return
+
 	_camera_axis.global_translation = _camera_axis.global_translation.linear_interpolate(_mesh_direction.global_translation, 0.1)
 
 
@@ -183,3 +191,13 @@ func _on_StateManager_state_entered(state: BaseState) -> void:
 			animation["blend"],
 			animation["speed"]
 		)
+
+
+# Tratar colisão do jogador com obstáculos do cenário e coletáveis.
+func _on_Area_area_entered(area: Area) -> void:
+	if not dead and area.is_in_group("death"):
+		dead = true
+		GameSounds.play_sfx(DatabaseSounds.SFX_WATER)
+		yield(get_tree().create_timer(1.5, false), "timeout")
+		get_tree().reload_current_scene()
+		return

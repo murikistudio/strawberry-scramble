@@ -88,82 +88,62 @@ transform = Transform( 0.814567, 2.21851e-08, 0.507536, -2.21851e-08, 0.959746, 
 
 [node name="Water" parent="Water" instance=ExtResource( 12 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, 0 )
-skeleton = NodePath("../..")
 
 [node name="Water2" parent="Water" instance=ExtResource( 12 )]
-skeleton = NodePath("../..")
 
 [node name="Water3" parent="Water" instance=ExtResource( 12 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 0, 0 )
-skeleton = NodePath("../..")
 
 [node name="Water4" parent="Water" instance=ExtResource( 12 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, 20 )
-skeleton = NodePath("../..")
 
 [node name="Water5" parent="Water" instance=ExtResource( 12 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 20 )
-skeleton = NodePath("../..")
 
 [node name="Water6" parent="Water" instance=ExtResource( 12 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 0, 20 )
-skeleton = NodePath("../..")
 
 [node name="Water10" parent="Water" instance=ExtResource( 12 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, 40 )
-skeleton = NodePath("../..")
 
 [node name="Water11" parent="Water" instance=ExtResource( 12 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 40 )
-skeleton = NodePath("../..")
 
 [node name="Water12" parent="Water" instance=ExtResource( 12 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 0, 40 )
-skeleton = NodePath("../..")
 
 [node name="Water7" parent="Water" instance=ExtResource( 12 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, -20 )
-skeleton = NodePath("../..")
 
 [node name="Water13" parent="Water" instance=ExtResource( 12 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 40, 0, 0 )
-skeleton = NodePath("../..")
 
 [node name="Water14" parent="Water" instance=ExtResource( 12 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 40, 0, 20 )
-skeleton = NodePath("../..")
 
 [node name="Water15" parent="Water" instance=ExtResource( 12 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 40, 0, 40 )
-skeleton = NodePath("../..")
 
 [node name="Water16" parent="Water" instance=ExtResource( 12 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 40, 0, -20 )
-skeleton = NodePath("../..")
 
 [node name="Water8" parent="Water" instance=ExtResource( 12 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -20 )
-skeleton = NodePath("../..")
 
 [node name="Water9" parent="Water" instance=ExtResource( 12 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 0, -20 )
-skeleton = NodePath("../..")
 
 [node name="Water17" parent="Water" instance=ExtResource( 12 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -40, 0, 0 )
-skeleton = NodePath("../..")
 
 [node name="Water18" parent="Water" instance=ExtResource( 12 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -40, 0, 20 )
-skeleton = NodePath("../..")
 
 [node name="Water19" parent="Water" instance=ExtResource( 12 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -40, 0, 40 )
-skeleton = NodePath("../..")
 
 [node name="Water20" parent="Water" instance=ExtResource( 12 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -40, 0, -20 )
-skeleton = NodePath("../..")
 
 [node name="Trees" type="Spatial" parent="."]
 

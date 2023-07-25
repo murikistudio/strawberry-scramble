@@ -29,6 +29,11 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://addons/utils/config_enabler.gd"
 }, {
+"base": "Reference",
+"class": "DatabaseSounds",
+"language": "GDScript",
+"path": "res://database/sounds.gd"
+}, {
 "base": "Node",
 "class": "GuiTransition",
 "language": "GDScript",
@@ -64,6 +69,7 @@ _global_script_class_icons={
 "BaseStateManager": "",
 "ButtonHighlighter": "res://addons/utils/icons/button_highlighter.svg",
 "ConfigEnabler": "res://addons/utils/icons/config_enabler.png",
+"DatabaseSounds": "",
 "GuiTransition": "res://addons/simple-gui-transitions/icon.png",
 "PlatformVisibility": "res://addons/utils/icons/platform_visibility.png",
 "Player": "",
@@ -201,7 +207,6 @@ common/enable_pause_aware_picking=true
 quality/driver/driver_name="GLES2"
 vram_compression/import_etc=true
 vram_compression/import_etc2=false
-environment/default_clear_color=Color( 0.537255, 0.784314, 0.780392, 1 )
 environment/default_environment="res://resources/default_env.tres"
 
 [utils]
