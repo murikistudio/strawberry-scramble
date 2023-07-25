@@ -29,6 +29,7 @@ export(int, 1, 5, 1) var jump_times := 1
 export(float, 0.0, 2.0, 0.01) var gravity_force := 0.5
 export(float, 0.0, 10.0, 0.1) var move_speed := 5.0
 export(float, 0.0, 1.0, 0.01) var intertia_factor := 0.15
+export(PackedScene) var scene_water_splash: PackedScene
 
 var input_move_axis := Vector2.ZERO
 var jumps_left := jump_times setget _set_jumps_left
@@ -40,6 +41,7 @@ var move_gravity := 0.0
 var move_snap := Vector3.ZERO
 var controller: int = ControllerLook.MOUSE
 var dead := false
+var ground_type := "grass"
 var animation := {
 	"name": "idle_loop",
 	"speed": 1.0,
@@ -55,6 +57,7 @@ onready var _label_debug: Label3D = find_node("LabelDebug")
 onready var _directional_light: DirectionalLight = find_node("DirectionalLight")
 onready var _anim_player: AnimationPlayer = find_node("AnimationPlayer")
 onready var _area: Area = find_node("Area")
+onready var _ray_cast: RayCast = find_node("RayCast")
 
 
 # Setters and getters
@@ -98,6 +101,31 @@ func set_animation(anim_name: String, speed := 1.0, blend := 0.2) -> void:
 	animation["name"] = anim_name
 	animation["speed"] = speed
 	animation["blend"] = blend
+
+
+# Toca som aleatório de voz de passo.
+func play_sfx_step() -> void:
+	var step_volume := -22.0
+	var sfx := {
+		"grass": [
+			DatabaseSounds.SFX_STEP_GRASS_1,
+			DatabaseSounds.SFX_STEP_GRASS_2,
+		],
+		"rock": [
+			DatabaseSounds.SFX_STEP_ROCK_1,
+			DatabaseSounds.SFX_STEP_ROCK_2,
+		],
+		"wood": [
+			DatabaseSounds.SFX_STEP_WOOD_1,
+			DatabaseSounds.SFX_STEP_WOOD_2,
+		],
+	}
+
+	GameSounds.play_sfx(
+		_get_random_item(sfx[ground_type]),
+		step_volume,
+		rand_range(1.05, 1.15)
+	)
 
 
 # Toca som aleatório de voz de pulo.
@@ -147,6 +175,9 @@ func _process_move(_delta: float) -> void:
 	move_snap = -get_floor_normal() if is_on_floor() else Vector3.ZERO
 	move_weight = lerp(move_weight, move_axis, intertia_factor)
 
+	if _ray_cast.is_colliding():
+		_process_ray_cast(_ray_cast.get_collider())
+
 	if move_axis.length():
 		direction_axis = move_axis.normalized()
 
@@ -166,6 +197,26 @@ func _process_camera(_delta: float) -> void:
 		return
 
 	_camera_axis.global_translation = _camera_axis.global_translation.linear_interpolate(_mesh_direction.global_translation, 0.1)
+
+
+# Processa a colisão do ray cast.
+func _process_ray_cast(body: Spatial) -> void:
+	var root := body.find_parent("Visual")
+
+	if not root:
+		return
+
+	root = root.get_parent()
+
+	if root.is_in_group("ground"):
+		if root.is_in_group("grass"):
+			ground_type = "grass"
+
+		elif root.is_in_group("rock"):
+			ground_type = "rock"
+
+		elif root.is_in_group("wood"):
+			ground_type = "wood"
 
 
 # Helper methods
@@ -201,6 +252,10 @@ func _on_Area_area_entered(area: Area) -> void:
 	if area.is_in_group("death"):
 		dead = true
 		GameSounds.play_sfx(DatabaseSounds.SFX_WATER)
+		var water_splash: Spatial = scene_water_splash.instance()
+		add_child(water_splash)
+		water_splash.global_translation = global_translation
+		water_splash.global_translation.y += 1.0
 		yield(get_tree().create_timer(1.5, false), "timeout")
 		get_tree().reload_current_scene()
 		return

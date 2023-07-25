@@ -2,7 +2,7 @@
 
 [ext_resource path="res://scenes/levels/assets/src/rock_1.gltf" type="PackedScene" id=1]
 
-[node name="Rock1" type="Spatial"]
+[node name="Rock1" type="Spatial" groups=["ground", "rock"]]
 
 [node name="Visual" parent="." instance=ExtResource( 1 )]
 

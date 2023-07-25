@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://scenes/characters/player/player.gd" type="Script" id=1]
 [ext_resource path="res://classes/base/state_manager.gd" type="Script" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://scenes/characters/player/src/player.gltf" type="PackedScene" id=5]
 [ext_resource path="res://scenes/characters/player/states/jump.gd" type="Script" id=6]
 [ext_resource path="res://scenes/characters/player/states/fall.gd" type="Script" id=7]
+[ext_resource path="res://scenes/effects/water_splash/water_splash.tscn" type="PackedScene" id=8]
 [ext_resource path="res://scenes/characters/player/states/coyote.gd" type="Script" id=9]
 
 [sub_resource type="CapsuleShape" id=1]
@@ -14,7 +15,7 @@ radius = 0.25
 height = 0.75
 
 [sub_resource type="BoxShape" id=10]
-extents = Vector3( 0.2, 0.2, 0.5 )
+extents = Vector3( 0.2, 0.2, 0.524089 )
 
 [sub_resource type="CubeMesh" id=8]
 size = Vector3( 0.2, 0.2, 0.2 )
@@ -36,10 +37,17 @@ collision_mask = 5
 script = ExtResource( 1 )
 move_speed = 3.5
 intertia_factor = 0.18
+scene_water_splash = ExtResource( 8 )
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
 transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0 )
 shape = SubResource( 1 )
+
+[node name="RayCast" type="RayCast" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, -1.06581e-14, 0, 1.06581e-14, 1, 0, -0.6, -6.39488e-15 )
+enabled = true
+cast_to = Vector3( 0, -0.2, 0 )
+debug_shape_thickness = 5
 
 [node name="Area" type="Area" parent="."]
 transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0 )
