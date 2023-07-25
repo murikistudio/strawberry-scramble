@@ -2,18 +2,24 @@ extends Area
 
 
 # Variables
+var _touched := false
+
 onready var _visual: Spatial = $Visual
+onready var _animation_player: AnimationPlayer = $AnimationPlayer
 
 
 # Built-in overrides
-func _process(delta: float) -> void:
-	if monitorable:
-		_visual.rotate_y(deg2rad(45.0) * delta)
-	else:
-		if _visual.scale.length() < 0.05:
-			queue_free()
-			return
+func _ready() -> void:
+	_animation_player.play("idle_loop")
 
-		_visual.scale *= 0.9
-		_visual.global_translate(Vector3(0.0, 0.05, 0.0))
-		_visual.rotate_y(deg2rad(360.0) * delta)
+
+func _process(_delta: float) -> void:
+	if not _touched and not monitorable:
+		_touched = true
+		_animation_player.play("collected", -1, 2.0)
+
+
+# Event handlers
+func _on_AnimationPlayer_animation_finished(anim_name: String) -> void:
+	if anim_name == "collected":
+		queue_free()
