@@ -35,7 +35,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.65, 0 )
 collision_layer = 2
 collision_mask = 5
 script = ExtResource( 1 )
-move_speed = 3.5
+move_speed = 4.0
 intertia_factor = 0.18
 scene_water_splash = ExtResource( 8 )
 
