@@ -80,7 +80,7 @@ _global_script_class_icons={
 
 [application]
 
-config/name="Morango"
+config/name="Strawberry Scramble"
 run/main_scene="res://scenes/levels/test.tscn"
 config/icon="res://icon.svg"
 config/version="0.0.1"
