@@ -4,13 +4,6 @@ class_name Player
 # A lógica de suas ações é delegada aos seus respectivos estados.
 
 
-# Enums
-enum ControllerLook {
-	MOUSE,
-	JOYPAD,
-}
-
-
 # Constants
 const SFX_BASE := "res://scenes/characters/player/sfx/"
 const SFX_JUMP_01 := SFX_BASE + "jump_01.wav"
@@ -39,7 +32,6 @@ var move_speed_multiplier := 1.0
 var move_weight := Vector2.ZERO
 var move_gravity := 0.0
 var move_snap := Vector3.ZERO
-var controller: int = ControllerLook.MOUSE
 var dead := false
 var ground_type := "grass"
 var animation := {
@@ -72,13 +64,6 @@ func _ready() -> void:
 	_camera_axis.set_as_toplevel(true)
 	_mesh_direction.set_as_toplevel(true)
 	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
-
-
-func _unhandled_input(event: InputEvent) -> void:
-	if event is InputEventJoypadMotion and event.axis_value > 0.1:
-		controller = ControllerLook.JOYPAD
-	elif event is InputEventMouseMotion and event.speed.length() > 1:
-		controller = ControllerLook.MOUSE
 
 
 func _physics_process(delta: float) -> void:
