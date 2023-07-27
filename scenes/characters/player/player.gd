@@ -135,7 +135,7 @@ func play_sfx_swing(pitch := 1.0) -> void:
 		SFX_SWING_04,
 		SFX_SWING_05,
 	]
-	GameSounds.play_sfx(_get_random_item(sfx), -4.0, pitch)
+	GameSounds.play_sfx(_get_random_item(sfx), -12.0, pitch)
 
 
 # Private methods
