@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/jump_02.wav-a9aca5f74265b699aa6ebcb20137c770.sample"
+path="res://.import/swing_1.wav-0658f6f22548cb200ae016588e055e10.sample"
 
 [deps]
 
-source_file="res://scenes/characters/player/sfx/jump_02.wav"
-dest_files=[ "res://.import/jump_02.wav-a9aca5f74265b699aa6ebcb20137c770.sample" ]
+source_file="res://sounds/sfx/swing_1.wav"
+dest_files=[ "res://.import/swing_1.wav-0658f6f22548cb200ae016588e055e10.sample" ]
 
 [params]
 

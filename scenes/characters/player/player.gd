@@ -4,18 +4,6 @@ class_name Player
 # A lógica de suas ações é delegada aos seus respectivos estados.
 
 
-# Constants
-const SFX_BASE := "res://scenes/characters/player/sfx/"
-const SFX_JUMP_01 := SFX_BASE + "jump_01.wav"
-const SFX_JUMP_02 := SFX_BASE + "jump_02.wav"
-const SFX_JUMP_03 := SFX_BASE + "jump_03.wav"
-const SFX_SWING_01 := SFX_BASE + "swing_01.wav"
-const SFX_SWING_02 := SFX_BASE + "swing_02.wav"
-const SFX_SWING_03 := SFX_BASE + "swing_03.wav"
-const SFX_SWING_04 := SFX_BASE + "swing_04.wav"
-const SFX_SWING_05 := SFX_BASE + "swing_05.wav"
-
-
 # Variables
 export var debug := false
 export(int, 1, 5, 1) var jump_times := 1
@@ -114,14 +102,14 @@ func play_sfx_step() -> void:
 
 
 # Toca som aleatório de voz de pulo.
-func play_sfx_jump(pitch := 1.0) -> void:
+func play_sfx_jump(pitch := 1.2) -> void:
 	if rand_range(0, 100) > 30:
 		return
 
 	var sfx := [
-		SFX_JUMP_01,
-		SFX_JUMP_02,
-		SFX_JUMP_03,
+		DatabaseSounds.SFX_JUMP_1,
+		DatabaseSounds.SFX_JUMP_2,
+		DatabaseSounds.SFX_JUMP_3,
 	]
 	GameSounds.play_sfx(_get_random_item(sfx), -4.0, pitch)
 
@@ -129,11 +117,9 @@ func play_sfx_jump(pitch := 1.0) -> void:
 # Toca som aleatório de movimento rápido do ar.
 func play_sfx_swing(pitch := 1.0) -> void:
 	var sfx := [
-		SFX_SWING_01,
-		SFX_SWING_02,
-		SFX_SWING_03,
-		SFX_SWING_04,
-		SFX_SWING_05,
+		DatabaseSounds.SFX_SWING_1,
+		DatabaseSounds.SFX_SWING_2,
+		DatabaseSounds.SFX_SWING_3,
 	]
 	GameSounds.play_sfx(_get_random_item(sfx), -12.0, pitch)
 
