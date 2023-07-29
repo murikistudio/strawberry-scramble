@@ -57,9 +57,9 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.77636e-15, 0.134719 )
 shape = SubResource( 10 )
 
 [node name="DirectionalLight" type="DirectionalLight" parent="."]
-transform = Transform( 0.5, -0.75, -0.433013, 4.37114e-08, -0.5, 0.866025, -0.866025, -0.433013, -0.25, 0, 1, 0 )
-light_energy = 0.5
-directional_shadow_mode = 1
+transform = Transform( 0.642787, -0.541675, -0.541675, -6.18172e-08, -0.707107, 0.707107, -0.766044, -0.454519, -0.454519, 0, 1, 0 )
+light_energy = 0.25
+shadow_enabled = true
 
 [node name="CameraAxis" type="Position3D" parent="."]
 
