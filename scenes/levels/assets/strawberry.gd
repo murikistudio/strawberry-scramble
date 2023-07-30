@@ -11,6 +11,8 @@ onready var _animation_player: AnimationPlayer = $AnimationPlayer
 # Built-in overrides
 func _ready() -> void:
 	_animation_player.play("idle_loop")
+	GameState.items_available += 1
+	GameEvents.emit_signal("player_item_available")
 
 
 func _process(_delta: float) -> void:

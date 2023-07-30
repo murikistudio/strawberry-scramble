@@ -35,7 +35,7 @@ onready var _camera_axis: Position3D = find_node("CameraAxis")
 onready var _mesh_direction: MeshInstance = find_node("MeshDirection")
 onready var _label_debug: Label3D = find_node("LabelDebug")
 onready var _directional_light: DirectionalLight = find_node("DirectionalLight")
-onready var _anim_player: AnimationPlayer = find_node("AnimationPlayer")
+onready var _anim_player: AnimationPlayer = $Visual.find_node("AnimationPlayer")
 onready var _area: Area = find_node("Area")
 onready var _ray_cast: RayCast = find_node("RayCast")
 
@@ -46,6 +46,10 @@ func _set_jumps_left(value: int) -> void:
 
 
 # Built-in overrides
+func _init() -> void:
+	GameState.reset_state()
+
+
 func _ready() -> void:
 	_label_debug.visible = debug
 	_directional_light.set_as_toplevel(true)
@@ -69,10 +73,9 @@ func _physics_process(delta: float) -> void:
 
 
 func _unhandled_input(_event: InputEvent) -> void:
-	if Input.is_action_just_pressed("pause"):
+	if not GameState.game_over and Input.is_action_just_pressed("pause"):
+		GameEvents.emit_signal("level_paused")
 		get_tree().paused = true
-		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-		GameTransition.change_scene_to(DatabaseScenes.GUI_MENU)
 
 
 # Public methods
@@ -231,15 +234,18 @@ func _on_Area_area_entered(area: Area) -> void:
 
 	if area.is_in_group("death"):
 		dead = true
+		GameState.game_over = true
 		GameAudio.play_sfx(DatabaseAudio.SFX_WATER)
 		var water_splash: Spatial = scene_water_splash.instance()
 		add_child(water_splash)
 		water_splash.global_translation = global_translation
 		water_splash.global_translation.y += 1.0
-		yield(get_tree().create_timer(1.5, false), "timeout")
-		get_tree().reload_current_scene()
+		yield(get_tree().create_timer(1.0, false), "timeout")
+		GameEvents.emit_signal("level_game_over")
 		return
 
 	if area.is_in_group("collectable"):
 		GameAudio.play_sfx(DatabaseAudio.SFX_COLLECT)
+		GameState.items_collected += 1
+		GameEvents.emit_signal("player_item_collected")
 		area.monitorable = false

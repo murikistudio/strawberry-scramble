@@ -10,3 +10,17 @@ func is_in_root(node: Node) -> bool:
 			return true
 
 	return false
+
+
+func highlight_control(
+	control: Control,
+	highlight_color := Color.red,
+	initial_color := Color.white,
+	trans_time := 0.1,
+	repeat := 3
+) -> void:
+	var tween := control.get_tree().create_tween()
+
+	for i in repeat:
+		tween.tween_property(control, "self_modulate", highlight_color, trans_time)
+		tween.tween_property(control, "self_modulate", initial_color, trans_time)
