@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://resources/themes/default_theme.tres" type="Theme" id=1]
 [ext_resource path="res://scenes/gui/background/background.tscn" type="PackedScene" id=2]
@@ -12,6 +12,7 @@
 [ext_resource path="res://textures/buttons/options.svg" type="Texture" id=10]
 [ext_resource path="res://textures/buttons/button_focus_alt.svg" type="Texture" id=11]
 [ext_resource path="res://textures/buttons/exit.svg" type="Texture" id=12]
+[ext_resource path="res://textures/buttons/about.svg" type="Texture" id=13]
 
 [node name="Menu" type="Control"]
 anchor_right = 1.0
@@ -27,7 +28,7 @@ __meta__ = {
 [node name="GuiTransition" type="Node" parent="."]
 script = ExtResource( 9 )
 layout = NodePath("..")
-controls = [ NodePath("../MarginContainer/HBoxContainer2/VBoxContainer2/ButtonQuit"), NodePath("../MarginContainer/HBoxContainer2/VBoxContainer/ButtonLogo"), NodePath("../MarginContainer/HBoxContainer2/VBoxContainer/ButtonPlay"), NodePath("../MarginContainer/HBoxContainer2/VBoxContainer3/ButtonOptions") ]
+controls = [ NodePath("../MarginContainer/HBoxContainer2/VBoxContainer2/ButtonQuit"), NodePath("../MarginContainer/HBoxContainer2/VBoxContainer/ButtonLogo"), NodePath("../MarginContainer/HBoxContainer2/VBoxContainer/ButtonPlay"), NodePath("../MarginContainer/HBoxContainer2/VBoxContainer3/ButtonCredits"), NodePath("../MarginContainer/HBoxContainer2/VBoxContainer3/ButtonOptions") ]
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 anchor_right = 1.0
@@ -98,15 +99,14 @@ size_flags_stretch_ratio = 3.0
 [node name="ButtonLogo" type="TextureButton" parent="MarginContainer/HBoxContainer2/VBoxContainer"]
 margin_right = 525.0
 margin_bottom = 327.0
+focus_mode = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
+enabled_focus_mode = 0
 texture_normal = ExtResource( 3 )
 texture_focused = ExtResource( 11 )
 expand = true
 stretch_mode = 5
-
-[node name="ButtonHighlighter" type="Node" parent="MarginContainer/HBoxContainer2/VBoxContainer/ButtonLogo"]
-script = ExtResource( 8 )
 
 [node name="Control2" type="Control" parent="MarginContainer/HBoxContainer2/VBoxContainer"]
 margin_top = 331.0
@@ -146,10 +146,26 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="ControlPlaceholder" type="Control" parent="MarginContainer/HBoxContainer2/VBoxContainer3"]
+visible = false
 margin_right = 175.0
-margin_bottom = 168.0
+margin_bottom = 133.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
+
+[node name="ButtonCredits" type="TextureButton" parent="MarginContainer/HBoxContainer2/VBoxContainer3"]
+margin_right = 175.0
+margin_bottom = 168.0
+focus_neighbour_bottom = NodePath("../ButtonOptions")
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource( 13 )
+texture_focused = ExtResource( 5 )
+texture_click_mask = ExtResource( 6 )
+expand = true
+stretch_mode = 5
+
+[node name="ButtonHighlighter" type="Node" parent="MarginContainer/HBoxContainer2/VBoxContainer3/ButtonCredits"]
+script = ExtResource( 8 )
 
 [node name="Control4" type="Control" parent="MarginContainer/HBoxContainer2/VBoxContainer3"]
 margin_top = 172.0
@@ -175,6 +191,6 @@ stretch_mode = 5
 script = ExtResource( 8 )
 
 [connection signal="pressed" from="MarginContainer/HBoxContainer2/VBoxContainer2/ButtonQuit" to="." method="_on_ButtonQuit_pressed"]
-[connection signal="pressed" from="MarginContainer/HBoxContainer2/VBoxContainer/ButtonLogo" to="." method="_on_ButtonLogo_pressed"]
 [connection signal="pressed" from="MarginContainer/HBoxContainer2/VBoxContainer/ButtonPlay" to="." method="_on_ButtonPlay_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer2/VBoxContainer3/ButtonCredits" to="." method="_on_ButtonCredits_pressed"]
 [connection signal="pressed" from="MarginContainer/HBoxContainer2/VBoxContainer3/ButtonOptions" to="." method="_on_ButtonOptions_pressed"]

@@ -28,5 +28,5 @@ func _on_ButtonOptions_pressed() -> void:
 	GameTransition.change_scene_to(DatabaseScenes.GUI_OPTIONS)
 
 
-func _on_ButtonLogo_pressed() -> void:
+func _on_ButtonCredits_pressed() -> void:
 	GameTransition.change_scene_to(DatabaseScenes.GUI_CREDITS)
