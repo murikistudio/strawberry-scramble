@@ -68,8 +68,8 @@ func _physics_process(delta: float) -> void:
 		get_tree().reload_current_scene()
 
 
-func _unhandled_key_input(_event: InputEventKey) -> void:
-	if Input.is_action_just_pressed("ui_cancel"):
+func _unhandled_input(_event: InputEvent) -> void:
+	if Input.is_action_just_pressed("pause"):
 		get_tree().paused = true
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 		GameTransition.change_scene_to(DatabaseScenes.GUI_MENU)
