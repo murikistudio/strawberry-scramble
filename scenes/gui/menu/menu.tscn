@@ -1,0 +1,180 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://resources/themes/default_theme.tres" type="Theme" id=1]
+[ext_resource path="res://scenes/gui/background/background.tscn" type="PackedScene" id=2]
+[ext_resource path="res://textures/gui/logo.png" type="Texture" id=3]
+[ext_resource path="res://scenes/gui/menu/menu.gd" type="Script" id=4]
+[ext_resource path="res://textures/buttons/button_focus.svg" type="Texture" id=5]
+[ext_resource path="res://textures/buttons/mask.png" type="BitMap" id=6]
+[ext_resource path="res://textures/buttons/play.svg" type="Texture" id=7]
+[ext_resource path="res://addons/utils/button_highlighter.gd" type="Script" id=8]
+[ext_resource path="res://addons/simple-gui-transitions/transition.gd" type="Script" id=9]
+[ext_resource path="res://textures/buttons/options.svg" type="Texture" id=10]
+[ext_resource path="res://textures/buttons/button_focus_alt.svg" type="Texture" id=11]
+[ext_resource path="res://textures/buttons/exit.svg" type="Texture" id=12]
+
+[node name="Menu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 1 )
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Background" parent="." instance=ExtResource( 2 )]
+
+[node name="GuiTransition" type="Node" parent="."]
+script = ExtResource( 9 )
+layout = NodePath("..")
+controls = [ NodePath("../MarginContainer/HBoxContainer2/VBoxContainer2/ButtonQuit"), NodePath("../MarginContainer/HBoxContainer2/VBoxContainer/ButtonLogo"), NodePath("../MarginContainer/HBoxContainer2/VBoxContainer/ButtonPlay"), NodePath("../MarginContainer/HBoxContainer2/VBoxContainer3/ButtonOptions") ]
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_constants/margin_right = 20
+custom_constants/margin_top = 20
+custom_constants/margin_left = 20
+custom_constants/margin_bottom = 20
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer"]
+margin_left = 20.0
+margin_top = 20.0
+margin_right = 1260.0
+margin_bottom = 700.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer/HBoxContainer2"]
+margin_right = 174.0
+margin_bottom = 680.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="ControlPlaceholder" type="Control" parent="MarginContainer/HBoxContainer2/VBoxContainer2"]
+margin_right = 174.0
+margin_bottom = 168.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Control4" type="Control" parent="MarginContainer/HBoxContainer2/VBoxContainer2"]
+margin_top = 172.0
+margin_right = 174.0
+margin_bottom = 508.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 2.0
+
+[node name="ButtonQuit" type="TextureButton" parent="MarginContainer/HBoxContainer2/VBoxContainer2"]
+margin_top = 512.0
+margin_right = 174.0
+margin_bottom = 680.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource( 12 )
+texture_focused = ExtResource( 5 )
+texture_click_mask = ExtResource( 6 )
+expand = true
+stretch_mode = 5
+
+[node name="ButtonHighlighter" type="Node" parent="MarginContainer/HBoxContainer2/VBoxContainer2/ButtonQuit"]
+script = ExtResource( 8 )
+
+[node name="Control2" type="Control" parent="MarginContainer/HBoxContainer2"]
+margin_left = 178.0
+margin_right = 353.0
+margin_bottom = 680.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer2"]
+margin_left = 357.0
+margin_right = 882.0
+margin_bottom = 680.0
+size_flags_horizontal = 3
+size_flags_vertical = 7
+size_flags_stretch_ratio = 3.0
+
+[node name="ButtonLogo" type="TextureButton" parent="MarginContainer/HBoxContainer2/VBoxContainer"]
+margin_right = 525.0
+margin_bottom = 327.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource( 3 )
+texture_focused = ExtResource( 11 )
+expand = true
+stretch_mode = 5
+
+[node name="ButtonHighlighter" type="Node" parent="MarginContainer/HBoxContainer2/VBoxContainer/ButtonLogo"]
+script = ExtResource( 8 )
+
+[node name="Control2" type="Control" parent="MarginContainer/HBoxContainer2/VBoxContainer"]
+margin_top = 331.0
+margin_right = 525.0
+margin_bottom = 348.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.05
+
+[node name="ButtonPlay" type="TextureButton" parent="MarginContainer/HBoxContainer2/VBoxContainer"]
+margin_top = 352.0
+margin_right = 525.0
+margin_bottom = 680.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource( 7 )
+texture_focused = ExtResource( 5 )
+texture_click_mask = ExtResource( 6 )
+expand = true
+stretch_mode = 5
+
+[node name="ButtonHighlighter" type="Node" parent="MarginContainer/HBoxContainer2/VBoxContainer/ButtonPlay"]
+script = ExtResource( 8 )
+
+[node name="Control3" type="Control" parent="MarginContainer/HBoxContainer2"]
+margin_left = 886.0
+margin_right = 1061.0
+margin_bottom = 680.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="MarginContainer/HBoxContainer2"]
+margin_left = 1065.0
+margin_right = 1240.0
+margin_bottom = 680.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="ControlPlaceholder" type="Control" parent="MarginContainer/HBoxContainer2/VBoxContainer3"]
+margin_right = 175.0
+margin_bottom = 168.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Control4" type="Control" parent="MarginContainer/HBoxContainer2/VBoxContainer3"]
+margin_top = 172.0
+margin_right = 175.0
+margin_bottom = 508.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 2.0
+
+[node name="ButtonOptions" type="TextureButton" parent="MarginContainer/HBoxContainer2/VBoxContainer3"]
+margin_top = 512.0
+margin_right = 175.0
+margin_bottom = 680.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource( 10 )
+texture_focused = ExtResource( 5 )
+texture_click_mask = ExtResource( 6 )
+expand = true
+stretch_mode = 5
+
+[node name="ButtonHighlighter" type="Node" parent="MarginContainer/HBoxContainer2/VBoxContainer3/ButtonOptions"]
+script = ExtResource( 8 )
+
+[connection signal="pressed" from="MarginContainer/HBoxContainer2/VBoxContainer2/ButtonQuit" to="." method="_on_ButtonQuit_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer2/VBoxContainer/ButtonLogo" to="." method="_on_ButtonLogo_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer2/VBoxContainer/ButtonPlay" to="." method="_on_ButtonPlay_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer2/VBoxContainer3/ButtonOptions" to="." method="_on_ButtonOptions_pressed"]

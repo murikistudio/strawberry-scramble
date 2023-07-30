@@ -1,4 +1,5 @@
 extends Node
+# Event bus central contendo sinais úteis em locais fragmentados no jogo.
 
 
 # Player signals

@@ -327,11 +327,9 @@ valign = 1
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="ScreenCenter/Logo"]
 stream = ExtResource( 9 )
-bus = "SFX"
 
 [node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="ScreenCenter/Logo"]
 stream = ExtResource( 8 )
-bus = "SFX"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="ScreenCenter/Logo"]
 anims/RESET = SubResource( 1 )

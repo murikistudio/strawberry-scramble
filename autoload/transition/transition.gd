@@ -1,4 +1,8 @@
 extends CanvasLayer
+# Overlay usada no jogo para transições de cenas e telas de loading.
+#
+# Depends:
+# - GuiTransitions
 
 
 # Signals
@@ -34,3 +38,23 @@ func hide() -> void:
 	yield(tween, "finished")
 	emit_signal("hide_completed")
 	visible = false
+
+
+# Transiciona suavemente para uma nova cena no jogo.
+func change_scene_to(scene, unpause := true) -> void:
+	if not scene:
+		push_warning("No scene passed to change_scene_to!")
+		return
+
+	GuiTransitions.hide()
+	show()
+	yield(self, "show_completed")
+
+	if typeof(scene) == TYPE_STRING:
+		scene = load(scene)
+
+	if unpause:
+		get_tree().paused = false
+
+	get_tree().change_scene_to(scene)
+	hide()

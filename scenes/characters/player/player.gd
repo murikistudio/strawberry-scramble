@@ -68,6 +68,13 @@ func _physics_process(delta: float) -> void:
 		get_tree().reload_current_scene()
 
 
+func _unhandled_key_input(_event: InputEventKey) -> void:
+	if Input.is_action_just_pressed("ui_cancel"):
+		get_tree().paused = true
+		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+		GameTransition.change_scene_to(DatabaseScenes.GUI_MENU)
+
+
 # Public methods
 # Define a animação atual do jogador.
 func set_animation(anim_name: String, speed := 1.0, blend := 0.2) -> void:
@@ -81,20 +88,20 @@ func play_sfx_step() -> void:
 	var step_volume := -22.0
 	var sfx := {
 		"grass": [
-			DatabaseSounds.SFX_STEP_GRASS_1,
-			DatabaseSounds.SFX_STEP_GRASS_2,
+			DatabaseAudio.SFX_STEP_GRASS_1,
+			DatabaseAudio.SFX_STEP_GRASS_2,
 		],
 		"rock": [
-			DatabaseSounds.SFX_STEP_ROCK_1,
-			DatabaseSounds.SFX_STEP_ROCK_2,
+			DatabaseAudio.SFX_STEP_ROCK_1,
+			DatabaseAudio.SFX_STEP_ROCK_2,
 		],
 		"wood": [
-			DatabaseSounds.SFX_STEP_WOOD_1,
-			DatabaseSounds.SFX_STEP_WOOD_2,
+			DatabaseAudio.SFX_STEP_WOOD_1,
+			DatabaseAudio.SFX_STEP_WOOD_2,
 		],
 	}
 
-	GameSounds.play_sfx(
+	GameAudio.play_sfx(
 		_get_random_item(sfx[ground_type]),
 		step_volume,
 		rand_range(1.05, 1.15)
@@ -107,21 +114,21 @@ func play_sfx_jump(pitch := 1.2) -> void:
 		return
 
 	var sfx := [
-		DatabaseSounds.SFX_JUMP_1,
-		DatabaseSounds.SFX_JUMP_2,
-		DatabaseSounds.SFX_JUMP_3,
+		DatabaseAudio.SFX_JUMP_1,
+		DatabaseAudio.SFX_JUMP_2,
+		DatabaseAudio.SFX_JUMP_3,
 	]
-	GameSounds.play_sfx(_get_random_item(sfx), -4.0, pitch)
+	GameAudio.play_sfx(_get_random_item(sfx), -4.0, pitch)
 
 
 # Toca som aleatório de movimento rápido do ar.
 func play_sfx_swing(pitch := 1.0) -> void:
 	var sfx := [
-		DatabaseSounds.SFX_SWING_1,
-		DatabaseSounds.SFX_SWING_2,
-		DatabaseSounds.SFX_SWING_3,
+		DatabaseAudio.SFX_SWING_1,
+		DatabaseAudio.SFX_SWING_2,
+		DatabaseAudio.SFX_SWING_3,
 	]
-	GameSounds.play_sfx(_get_random_item(sfx), -12.0, pitch)
+	GameAudio.play_sfx(_get_random_item(sfx), -12.0, pitch)
 
 
 # Private methods
@@ -224,7 +231,7 @@ func _on_Area_area_entered(area: Area) -> void:
 
 	if area.is_in_group("death"):
 		dead = true
-		GameSounds.play_sfx(DatabaseSounds.SFX_WATER)
+		GameAudio.play_sfx(DatabaseAudio.SFX_WATER)
 		var water_splash: Spatial = scene_water_splash.instance()
 		add_child(water_splash)
 		water_splash.global_translation = global_translation
@@ -234,5 +241,5 @@ func _on_Area_area_entered(area: Area) -> void:
 		return
 
 	if area.is_in_group("collectable"):
-		GameSounds.play_sfx(DatabaseSounds.SFX_COLLECT)
+		GameAudio.play_sfx(DatabaseAudio.SFX_COLLECT)
 		area.monitorable = false

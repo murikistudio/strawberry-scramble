@@ -1,0 +1,29 @@
+id,en,pt_BR
+,,
+HEADERS,,
+Options,,Opções
+Loading...,,Carregando...
+,,
+LOCALES,,
+en,English,English
+pt_BR,Português,Português
+,,
+OPTIONS,,
+Language,,Idioma
+Enabled,,Ativar
+Disabled,,Desativar
+Fullscreen,,Tela Cheia
+Shadows,,Sombras
+Simple,,Simples
+Advanced,,Avançadas
+Effects,,Efeitos
+Music,,Música
+,,
+CREDITS,,
+Character Design and Art:,,Design de Personagens e Arte:
+Game Design:,,
+"Programming, Sound and Music:",,"Programação, Som e Música:"
+Art:,,Arte:
+{name} {version},,
+"{author}, {year}",,
+All rights reserved.,,Todos os direitos reservados.

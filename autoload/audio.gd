@@ -1,22 +1,25 @@
 extends AudioStreamPlayer
-# Singleton que gerencia a reprodução da música e som do jogo.
+# Singleton que gerencia a reprodução da música e efeitos sonoros do jogo.
 
 
 # Constants
 const FADE_SPEED := 0.25
 const VOLUME_MIN := -80.0
 const VOLUME_MAX := 0.0
+const DEFAULT_BUS_SFX := "SFX"
+const DEFAULT_BUS_BGM := "BGM"
 
 
 # Variables
 var _current_music := ""
+var _hashes := {}
 
 onready var _tween: Tween = Tween.new()
 
 
 # Built-in overrides
 func _ready() -> void:
-	bus = "BGM"
+	bus = DEFAULT_BUS_BGM
 	pause_mode = Node.PAUSE_MODE_PROCESS
 	add_child(_tween)
 
@@ -49,7 +52,7 @@ func play_bgm(file) -> void:
 	_tween.start()
 
 
-# Toca um efeito sonoro a partir de um AudioString ou caminho de arquivo.
+# Toca um efeito sonoro a partir de um AudioStream ou caminho de arquivo.
 func play_sfx(file, vol := 0.0, pitch := 1.0) -> void:
 	var _stream := _get_stream(file)
 
@@ -58,15 +61,32 @@ func play_sfx(file, vol := 0.0, pitch := 1.0) -> void:
 
 	var audio := AudioStreamPlayer.new()
 	audio.stream = _stream
-	audio.bus = "SFX"
-	audio.volume_db = vol
 	audio.pitch_scale = pitch
+	audio.bus = DEFAULT_BUS_SFX
+	audio.volume_db = vol
 	audio.play()
 	audio.connect("finished", self, "_on_audio_finished", [audio])
 	add_child(audio)
 
 
+# Toca um efeito sonoro 3D na posição do node Spatial passado.
+func play_sfx_3d(node: Spatial, file, pitch := 1.0) -> void:
+	var _stream := _get_stream(file)
+
+	if not _stream:
+		return
+
+	var audio := AudioStreamPlayer3D.new()
+	audio.stream = _stream
+	audio.pitch_scale = pitch
+	audio.bus = DEFAULT_BUS_SFX
+	audio.play()
+	audio.connect("finished", self, "_on_audio_finished", [audio])
+	node.add_child(audio)
+
+
 # Private methods
+# Retorna a stream de áudio a partir de um caminho, ou nulo caso inválido.
 func _get_stream(file) -> AudioStream:
 	if not file:
 		return null
@@ -81,5 +101,6 @@ func _get_stream(file) -> AudioStream:
 
 
 # Event handlers
-func _on_audio_finished(audio: AudioStreamPlayer) -> void:
+# Deleta o player de áudio após a repordução.
+func _on_audio_finished(audio: Node) -> void:
 	audio.queue_free()

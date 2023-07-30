@@ -2,8 +2,8 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/banner_loading.jpg-b257fa564ed4f530d63f90aff0a9157a.s3tc.stex"
-path.etc="res://.import/banner_loading.jpg-b257fa564ed4f530d63f90aff0a9157a.etc.stex"
+path.s3tc="res://.import/menu.jpg-b91b46e3eff865d9990087fd3e7c9b1f.s3tc.stex"
+path.etc="res://.import/menu.jpg-b91b46e3eff865d9990087fd3e7c9b1f.etc.stex"
 metadata={
 "imported_formats": [ "s3tc", "etc" ],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://textures/gui/banner_loading.jpg"
-dest_files=[ "res://.import/banner_loading.jpg-b257fa564ed4f530d63f90aff0a9157a.s3tc.stex", "res://.import/banner_loading.jpg-b257fa564ed4f530d63f90aff0a9157a.etc.stex" ]
+source_file="res://textures/banners/menu.jpg"
+dest_files=[ "res://.import/menu.jpg-b91b46e3eff865d9990087fd3e7c9b1f.s3tc.stex", "res://.import/menu.jpg-b91b46e3eff865d9990087fd3e7c9b1f.etc.stex" ]
 
 [params]
 

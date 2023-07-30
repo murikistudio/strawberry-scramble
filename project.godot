@@ -30,9 +30,14 @@ _global_script_classes=[ {
 "path": "res://addons/utils/config_enabler.gd"
 }, {
 "base": "Reference",
-"class": "DatabaseSounds",
+"class": "DatabaseAudio",
 "language": "GDScript",
-"path": "res://database/sounds.gd"
+"path": "res://database/audio.gd"
+}, {
+"base": "Node",
+"class": "DatabaseScenes",
+"language": "GDScript",
+"path": "res://database/scenes.gd"
 }, {
 "base": "Node",
 "class": "GuiTransition",
@@ -69,7 +74,8 @@ _global_script_class_icons={
 "BaseStateManager": "",
 "ButtonHighlighter": "res://addons/utils/icons/button_highlighter.svg",
 "ConfigEnabler": "res://addons/utils/icons/config_enabler.png",
-"DatabaseSounds": "",
+"DatabaseAudio": "",
+"DatabaseScenes": "",
 "GuiTransition": "res://addons/simple-gui-transitions/icon.png",
 "PlatformVisibility": "res://addons/utils/icons/platform_visibility.png",
 "Player": "",
@@ -81,13 +87,14 @@ _global_script_class_icons={
 [application]
 
 config/name="Strawberry Scramble"
-run/main_scene="res://scenes/levels/test.tscn"
-boot_splash/image="res://icon.png"
+run/main_scene="res://scenes/gui/main/main.tscn"
+boot_splash/image="res://textures/gui/logo.png"
 boot_splash/fullsize=false
 boot_splash/bg_color=Color( 0, 0, 0, 1 )
 config/icon="res://icon.png"
 config/version="0.0.1"
 config/build=1
+config/author="Muriki Game Studio"
 
 [audio]
 
@@ -96,10 +103,11 @@ default_bus_layout="res://resources/default_bus_layout.tres"
 [autoload]
 
 GuiTransitions="*res://addons/simple-gui-transitions/singleton.gd"
-GameEvents="*res://autoload/events.gd"
-GameSounds="*res://autoload/sounds.gd"
-GameOverlay="*res://autoload/overlay/overlay.tscn"
+GameConfig="*res://autoload/config.gd"
+GameTransition="*res://autoload/transition/transition.tscn"
+GameAudio="*res://autoload/audio.gd"
 GameCore="*res://autoload/core.gd"
+GameEvents="*res://autoload/events.gd"
 GameState="*res://autoload/state.gd"
 
 [debug]
@@ -114,6 +122,8 @@ window/size/width=1280
 window/size/height=720
 window/size/test_width=960
 window/size/test_height=540
+mouse_cursor/custom_image="res://resources/themes/mouse_cursor.png"
+mouse_cursor/custom_image_hotspot=Vector2( 2, 2 )
 window/stretch/mode="2d"
 window/stretch/aspect="expand"
 
@@ -130,12 +140,12 @@ common/drop_mouse_on_gui_input_disabled=true
 config/default/auto_start=true
 config/default/fade_layout=true
 config/default/center_pivot=true
-config/default/duration=0.5
-config/default/delay=0.5
+config/default/duration=0.3
+config/default/delay=0.0
 config/default/transition_type="QUAD"
 config/default/ease_type="IN_OUT"
-config/default/animation_enter=4
-config/default/animation_leave=4
+config/default/animation_enter=5
+config/default/animation_leave=5
 
 [importer_defaults]
 
@@ -201,6 +211,10 @@ look_right={
  ]
 }
 
+[locale]
+
+translations=PoolStringArray( "res://lang/translations.en.translation", "res://lang/translations.pt_BR.translation" )
+
 [physics]
 
 common/enable_pause_aware_picking=true
@@ -214,8 +228,8 @@ environment/default_environment="res://resources/default_env.tres"
 
 [utils]
 
-button_highlighter/click_sound/file=""
-button_highlighter/click_sound/bus="Master"
-config_enabler/singleton/name=""
-config_enabler/singleton/getter=""
-config_enabler/singleton/signal=""
+button_highlighter/click_sound/file="res://sounds/sfx/click.wav"
+button_highlighter/click_sound/bus="SFX"
+config_enabler/singleton/name="GameConfig"
+config_enabler/singleton/getter="get"
+config_enabler/singleton/signal="config_applied"
