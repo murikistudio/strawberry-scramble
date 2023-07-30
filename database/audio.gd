@@ -22,4 +22,4 @@ const SFX_SWING_3 := SFX_BASE + "swing_3.wav"
 
 # Music
 const BGM_BASE := "res://sounds/bgm/"
-const BGM_MENU := "menu.ogg"
+const BGM_MENU := BGM_BASE + "menu.ogg"
