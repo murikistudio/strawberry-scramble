@@ -13,6 +13,9 @@ func _ready() -> void:
 
 
 func update_hud() -> void:
+	_texture_rect_collected.rect_pivot_offset = _texture_rect_collected.rect_size / 2
+	_label_collected.rect_pivot_offset = _label_collected.rect_size / 2
+
 	var text := "{collected}/{available}".format({
 		"collected": GameState.items_collected,
 		"available": GameState.items_available,

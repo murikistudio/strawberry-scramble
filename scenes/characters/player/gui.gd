@@ -18,7 +18,8 @@ func show_mouse_cursor(show: bool) -> void:
 # Event handlers
 func _on_level_paused() -> void:
 	show_mouse_cursor(true)
-	GuiTransitions.go_to("Pause")
+	GuiTransitions.hide("Hud")
+	GuiTransitions.show("Pause")
 
 
 func _on_level_game_over() -> void:
@@ -29,8 +30,9 @@ func _on_level_game_over() -> void:
 
 func _on_level_resumed() -> void:
 	show_mouse_cursor(false)
-	GuiTransitions.go_to("Hud")
-	yield(GuiTransitions, "hide_completed")
+	GuiTransitions.hide("Pause")
+	GuiTransitions.show("Hud")
+	yield(GuiTransitions, "show_completed")
 	get_tree().paused = false
 
 
