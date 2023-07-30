@@ -12,6 +12,7 @@ func is_in_root(node: Node) -> bool:
 	return false
 
 
+# Piscar controle quando solicitado, como quando houver um erro.
 func highlight_control(
 	control: Control,
 	highlight_color := Color.red,
