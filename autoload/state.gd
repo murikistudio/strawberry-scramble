@@ -3,18 +3,60 @@ extends Node
 
 
 # Variables
-var game_over: bool
+# Level
+var current_level: int
+var times_died: int
+
+# Session
 var items_collected: int
 var items_available: int
+var current_trophy: String
 
 
 # Built-in overrides
 func _ready() -> void:
-	reset_state()
+	reset_level()
 
 
 # Public methods
-func reset_state() -> void:
-	game_over = false
+# Reseta status da fase selecionada.
+func reset_level() -> void:
+	times_died = 0
 	items_collected = 0
 	items_available = 0
+	current_trophy = ""
+
+
+# Avalia estado do jogo (nota do jogador).
+func evaluate_game() -> void:
+	var items_progress := int((float(items_collected) / float(items_available)) * 100)
+
+	if items_progress == 100:
+		if times_died == 0:
+			current_trophy = "diamond"
+		else:
+			current_trophy = "gold"
+
+	elif items_progress >= 66:
+		current_trophy = "silver"
+
+	elif items_progress >= 33:
+		current_trophy = "bronze"
+
+	else:
+		current_trophy = ""
+
+	prints(times_died, items_progress, current_trophy)
+
+
+# Adiciona item coletado ao contador.
+func add_item_collected() -> void:
+	items_collected += 1
+	GameEvents.emit_signal("player_item_collected")
+	evaluate_game()
+
+
+# Adiciona morte do jogador ao contador.
+func add_times_died() -> void:
+	times_died += 1
+	evaluate_game()

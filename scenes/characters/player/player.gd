@@ -22,6 +22,7 @@ var move_gravity := 0.0
 var move_snap := Vector3.ZERO
 var dead := false
 var ground_type := "grass"
+var respawn_position: Vector3
 var animation := {
 	"name": "idle_loop",
 	"speed": 1.0,
@@ -47,10 +48,11 @@ func _set_jumps_left(value: int) -> void:
 
 # Built-in overrides
 func _init() -> void:
-	GameState.reset_state()
+	GameState.reset_level()
 
 
 func _ready() -> void:
+	respawn_position = global_translation
 	_label_debug.visible = debug
 	_directional_light.set_as_toplevel(true)
 	_camera_axis.set_as_toplevel(true)
@@ -73,7 +75,7 @@ func _physics_process(delta: float) -> void:
 
 
 func _unhandled_input(_event: InputEvent) -> void:
-	if not GameState.game_over and Input.is_action_just_pressed("pause"):
+	if not dead and Input.is_action_just_pressed("pause"):
 		GameEvents.emit_signal("level_paused")
 		get_tree().paused = true
 
@@ -234,18 +236,29 @@ func _on_Area_area_entered(area: Area) -> void:
 
 	if area.is_in_group("death"):
 		dead = true
-		GameState.game_over = true
+		GameState.add_times_died()
 		GameAudio.play_sfx(DatabaseAudio.SFX_WATER)
+
+		# Spawnar efeito de água
 		var water_splash: Spatial = scene_water_splash.instance()
 		add_child(water_splash)
 		water_splash.global_translation = global_translation
 		water_splash.global_translation.y += 1.0
+
 		yield(get_tree().create_timer(1.0, false), "timeout")
-		GameEvents.emit_signal("level_game_over")
+		global_translation = respawn_position
+		dead = false
+		move_weight = Vector2.ZERO
 		return
 
 	if area.is_in_group("collectable"):
+		GameState.add_item_collected()
 		GameAudio.play_sfx(DatabaseAudio.SFX_COLLECT)
-		GameState.items_collected += 1
-		GameEvents.emit_signal("player_item_collected")
 		area.monitorable = false
+
+	if area.is_in_group("checkpoint"):
+		if area.global_translation != respawn_position:
+			GameAudio.play_sfx(DatabaseAudio.SFX_CHECKPOINT)
+
+		respawn_position = area.global_translation
+		GameEvents.emit_signal("level_checkpoint_touched", area)

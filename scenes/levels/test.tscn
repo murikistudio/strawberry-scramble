@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://scenes/levels/assets/island_01.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/characters/player/player.tscn" type="PackedScene" id=2]
@@ -21,6 +21,7 @@
 [ext_resource path="res://scenes/levels/assets/grass_2_2.tscn" type="PackedScene" id=19]
 [ext_resource path="res://scenes/levels/assets/grass_2_1.tscn" type="PackedScene" id=20]
 [ext_resource path="res://scenes/levels/assets/grass_1_1.tscn" type="PackedScene" id=21]
+[ext_resource path="res://scenes/levels/assets/checkpoint.tscn" type="PackedScene" id=22]
 
 [node name="Test" type="Spatial"]
 
@@ -254,3 +255,12 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 16.6643, 0.750187, -14.7825 )
 
 [node name="Grass2_1" parent="." instance=ExtResource( 20 )]
 transform = Transform( 1.39133, 0, 1.02077, 0, 1.02514, 0, -1.02077, 0, 1.39133, 14.2935, 2.01646, 3.4358 )
+
+[node name="Checkpoint" parent="." instance=ExtResource( 22 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 16.2481, 3.34859, 7.69593 )
+
+[node name="Checkpoint3" parent="." instance=ExtResource( 22 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 21.2481, 3.34859, -9.30407 )
+
+[node name="Checkpoint2" parent="." instance=ExtResource( 22 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.24805, 1.95099, -3.32752 )

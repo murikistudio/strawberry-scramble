@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://scenes/characters/player/player.gd" type="Script" id=1]
 [ext_resource path="res://classes/base/state_manager.gd" type="Script" id=2]
@@ -9,7 +9,6 @@
 [ext_resource path="res://scenes/characters/player/states/fall.gd" type="Script" id=7]
 [ext_resource path="res://scenes/effects/water_splash/water_splash.tscn" type="PackedScene" id=8]
 [ext_resource path="res://scenes/characters/player/states/coyote.gd" type="Script" id=9]
-[ext_resource path="res://scenes/gui/game_over/game_over.tscn" type="PackedScene" id=10]
 [ext_resource path="res://scenes/gui/vignette/vignette.tscn" type="PackedScene" id=11]
 [ext_resource path="res://scenes/gui/pause/pause.tscn" type="PackedScene" id=12]
 [ext_resource path="res://scenes/gui/options/options.tscn" type="PackedScene" id=13]
@@ -58,9 +57,6 @@ script = ExtResource( 14 )
 [node name="Hud" parent="Gui" instance=ExtResource( 15 )]
 
 [node name="Pause" parent="Gui" instance=ExtResource( 12 )]
-visible = false
-
-[node name="GameOver" parent="Gui" instance=ExtResource( 10 )]
 visible = false
 
 [node name="Options" parent="Gui" instance=ExtResource( 13 )]

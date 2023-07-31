@@ -6,7 +6,6 @@ func _ready() -> void:
 	modulate.a = 0.0
 	GameEvents.connect("level_paused", self, "show_vignette", [true])
 	GameEvents.connect("level_resumed", self, "show_vignette", [false])
-	GameEvents.connect("level_game_over", self, "show_vignette", [true])
 
 
 # Public methods

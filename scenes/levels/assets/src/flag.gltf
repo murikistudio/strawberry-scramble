@@ -1,0 +1,195 @@
+{
+    "asset" : {
+        "generator" : "Khronos glTF Blender I/O v1.2.20",
+        "version" : "2.0"
+    },
+    "scene" : 0,
+    "scenes" : [
+        {
+            "nodes" : [
+                0,
+                1
+            ],
+            "name" : "Scene"
+        }
+    ],
+    "nodes" : [
+        {
+            "mesh" : 0,
+            "name" : "FlagOnMesh"
+        },
+        {
+            "mesh" : 1,
+            "name" : "FlagOffMesh"
+        }
+    ],
+    "materials" : [
+        {
+            "name" : "flag",
+            "pbrMetallicRoughness" : {
+                "baseColorTexture" : {
+                    "index" : 0,
+                    "texCoord" : 0
+                }
+            }
+        }
+    ],
+    "meshes" : [
+        {
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "TEXCOORD_0" : 0,
+                        "POSITION" : 1,
+                        "NORMAL" : 2
+                    },
+                    "material" : 0,
+                    "indices" : 3
+                }
+            ],
+            "name" : "FlagOnMesh.001"
+        },
+        {
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "TEXCOORD_0" : 4,
+                        "POSITION" : 5,
+                        "NORMAL" : 6
+                    },
+                    "material" : 0,
+                    "indices" : 3
+                }
+            ],
+            "name" : "FlagOffMesh.001"
+        }
+    ],
+    "textures" : [
+        {
+            "source" : 0,
+            "sampler" : 0
+        }
+    ],
+    "images" : [
+        {
+            "mimeType" : "image/png",
+            "name" : "flag",
+            "uri" : "flag.png"
+        }
+    ],
+    "accessors" : [
+        {
+            "type" : "VEC2",
+            "componentType" : 5126,
+            "count" : 58,
+            "bufferView" : 0
+        },
+        {
+            "componentType" : 5126,
+            "count" : 58,
+            "max" : [
+                0.5578867197036743,
+                1.5157735347747803,
+                0.015773508697748184
+            ],
+            "type" : "VEC3",
+            "bufferView" : 1,
+            "min" : [
+                -0.015773508697748184,
+                -0.015773508697748184,
+                -0.015773508697748184
+            ]
+        },
+        {
+            "type" : "VEC3",
+            "componentType" : 5126,
+            "count" : 58,
+            "bufferView" : 2
+        },
+        {
+            "type" : "SCALAR",
+            "componentType" : 5123,
+            "count" : 102,
+            "bufferView" : 3
+        },
+        {
+            "type" : "VEC2",
+            "componentType" : 5126,
+            "count" : 58,
+            "bufferView" : 4
+        },
+        {
+            "componentType" : 5126,
+            "count" : 58,
+            "max" : [
+                0.5578867197036743,
+                1.5157735347747803,
+                0.015773508697748184
+            ],
+            "type" : "VEC3",
+            "bufferView" : 5,
+            "min" : [
+                -0.015773508697748184,
+                -0.015773508697748184,
+                -0.015773508697748184
+            ]
+        },
+        {
+            "type" : "VEC3",
+            "componentType" : 5126,
+            "count" : 58,
+            "bufferView" : 6
+        }
+    ],
+    "bufferViews" : [
+        {
+            "byteLength" : 464,
+            "byteOffset" : 0,
+            "buffer" : 0
+        },
+        {
+            "byteLength" : 696,
+            "byteOffset" : 464,
+            "buffer" : 0
+        },
+        {
+            "byteLength" : 696,
+            "byteOffset" : 1160,
+            "buffer" : 0
+        },
+        {
+            "byteLength" : 204,
+            "byteOffset" : 1856,
+            "buffer" : 0
+        },
+        {
+            "byteLength" : 464,
+            "byteOffset" : 2060,
+            "buffer" : 0
+        },
+        {
+            "byteLength" : 696,
+            "byteOffset" : 2524,
+            "buffer" : 0
+        },
+        {
+            "byteLength" : 696,
+            "byteOffset" : 3220,
+            "buffer" : 0
+        }
+    ],
+    "samplers" : [
+        {
+            "wrapS" : 10497,
+            "wrapT" : 10497,
+            "minFilter" : 9986,
+            "magFilter" : 9729
+        }
+    ],
+    "buffers" : [
+        {
+            "byteLength" : 3916,
+            "uri" : "flag.bin"
+        }
+    ]
+}
