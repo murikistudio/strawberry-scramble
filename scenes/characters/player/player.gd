@@ -262,3 +262,7 @@ func _on_Area_area_entered(area: Area) -> void:
 
 		respawn_position = area.global_translation
 		GameEvents.emit_signal("level_checkpoint_touched", area)
+
+	if area.is_in_group("house") and GameState.current_trophy:
+		GameEvents.emit_signal("level_complete")
+		prints("Level complete!")

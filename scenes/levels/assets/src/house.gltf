@@ -6,62 +6,86 @@
     "scene" : 0,
     "scenes" : [
         {
-            "name" : "Scene",
             "nodes" : [
-                1
-            ]
+                2
+            ],
+            "name" : "Scene"
         }
     ],
     "nodes" : [
         {
-            "name" : "HouseMesh",
+            "name" : "DoorMesh",
+            "translation" : [
+                -0.36133497953414917,
+                0.3174252510070801,
+                1.4372961521148682
+            ],
             "mesh" : 0
         },
         {
-            "name" : "HouseCollider -colonly",
-            "children" : [
-                0
-            ],
+            "name" : "HouseMesh",
             "mesh" : 1
+        },
+        {
+            "children" : [
+                0,
+                1
+            ],
+            "name" : "HouseCollider -colonly",
+            "mesh" : 2
         }
     ],
     "materials" : [
         {
-            "name" : "house",
             "pbrMetallicRoughness" : {
                 "baseColorTexture" : {
                     "index" : 0,
                     "texCoord" : 0
                 }
-            }
+            },
+            "name" : "house"
         }
     ],
     "meshes" : [
         {
-            "name" : "HouseMesh.001",
             "primitives" : [
                 {
                     "indices" : 3,
                     "attributes" : {
                         "POSITION" : 0,
-                        "NORMAL" : 1,
-                        "TEXCOORD_0" : 2
+                        "TEXCOORD_0" : 1,
+                        "NORMAL" : 2
                     },
                     "material" : 0
                 }
-            ]
+            ],
+            "name" : "DoorMesh.001"
         },
         {
-            "name" : "HouseCollider.001",
             "primitives" : [
                 {
-                    "indices" : 6,
+                    "indices" : 7,
                     "attributes" : {
                         "POSITION" : 4,
-                        "NORMAL" : 5
-                    }
+                        "TEXCOORD_0" : 5,
+                        "NORMAL" : 6
+                    },
+                    "material" : 0
                 }
-            ]
+            ],
+            "name" : "HouseMesh.001"
+        },
+        {
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "POSITION" : 8,
+                        "NORMAL" : 9
+                    },
+                    "indices" : 10
+                }
+            ],
+            "name" : "HouseCollider.001"
         }
     ],
     "textures" : [
@@ -72,124 +96,178 @@
     ],
     "images" : [
         {
-            "name" : "house.png",
+            "mimeType" : "image/png",
             "uri" : "house.png",
-            "mimeType" : "image/png"
+            "name" : "house.png"
         }
     ],
     "accessors" : [
         {
+            "max" : [
+                0.7143962979316711,
+                1.1422947645187378,
+                -0.05194747447967529
+            ],
+            "componentType" : 5126,
+            "min" : [
+                0.008181512355804443,
+                0.04588088393211365,
+                -0.09259951114654541
+            ],
+            "type" : "VEC3",
+            "count" : 118,
+            "bufferView" : 0
+        },
+        {
+            "type" : "VEC2",
+            "count" : 118,
+            "bufferView" : 1,
+            "componentType" : 5126
+        },
+        {
+            "type" : "VEC3",
+            "count" : 118,
+            "bufferView" : 2,
+            "componentType" : 5126
+        },
+        {
+            "type" : "SCALAR",
+            "count" : 144,
+            "bufferView" : 3,
+            "componentType" : 5123
+        },
+        {
+            "max" : [
+                2.4584054946899414,
+                4.168069362640381,
+                2.354022979736328
+            ],
             "componentType" : 5126,
             "min" : [
                 -2.4584054946899414,
                 -0.06805706024169922,
                 -2.354022979736328
             ],
-            "max" : [
-                2.4584054946899414,
-                4.168069362640381,
-                2.354022979736328
-            ],
             "type" : "VEC3",
-            "bufferView" : 0,
-            "count" : 1011
+            "count" : 939,
+            "bufferView" : 4
         },
         {
-            "componentType" : 5126,
-            "bufferView" : 1,
-            "type" : "VEC3",
-            "count" : 1011
-        },
-        {
-            "componentType" : 5126,
-            "bufferView" : 2,
             "type" : "VEC2",
-            "count" : 1011
+            "count" : 939,
+            "bufferView" : 5,
+            "componentType" : 5126
         },
         {
-            "componentType" : 5123,
-            "bufferView" : 3,
+            "type" : "VEC3",
+            "count" : 939,
+            "bufferView" : 6,
+            "componentType" : 5126
+        },
+        {
             "type" : "SCALAR",
-            "count" : 1581
+            "count" : 1455,
+            "bufferView" : 7,
+            "componentType" : 5123
         },
         {
+            "max" : [
+                2.4814112186431885,
+                4.193504333496094,
+                2.34704327583313
+            ],
             "componentType" : 5126,
             "min" : [
                 -2.4814112186431885,
                 -0.06977913528680801,
                 -2.3774800300598145
             ],
-            "max" : [
-                2.4814112186431885,
-                4.193504333496094,
-                2.34704327583313
-            ],
             "type" : "VEC3",
-            "bufferView" : 4,
-            "count" : 90
+            "count" : 90,
+            "bufferView" : 8
         },
         {
-            "componentType" : 5126,
-            "bufferView" : 5,
             "type" : "VEC3",
-            "count" : 90
+            "count" : 90,
+            "bufferView" : 9,
+            "componentType" : 5126
         },
         {
-            "componentType" : 5123,
-            "bufferView" : 6,
             "type" : "SCALAR",
-            "count" : 132
+            "count" : 132,
+            "bufferView" : 10,
+            "componentType" : 5123
         }
     ],
     "bufferViews" : [
         {
-            "byteLength" : 12132,
             "buffer" : 0,
+            "byteLength" : 1416,
             "byteOffset" : 0
         },
         {
-            "byteLength" : 12132,
             "buffer" : 0,
-            "byteOffset" : 12132
+            "byteLength" : 944,
+            "byteOffset" : 1416
         },
         {
-            "byteLength" : 8088,
             "buffer" : 0,
-            "byteOffset" : 24264
+            "byteLength" : 1416,
+            "byteOffset" : 2360
         },
         {
-            "byteLength" : 3162,
             "buffer" : 0,
-            "byteOffset" : 32352
+            "byteLength" : 288,
+            "byteOffset" : 3776
         },
         {
+            "buffer" : 0,
+            "byteLength" : 11268,
+            "byteOffset" : 4064
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 7512,
+            "byteOffset" : 15332
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 11268,
+            "byteOffset" : 22844
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 2910,
+            "byteOffset" : 34112
+        },
+        {
+            "buffer" : 0,
             "byteLength" : 1080,
-            "buffer" : 0,
-            "byteOffset" : 35516
+            "byteOffset" : 37024
         },
         {
+            "buffer" : 0,
             "byteLength" : 1080,
-            "buffer" : 0,
-            "byteOffset" : 36596
+            "byteOffset" : 38104
         },
         {
+            "buffer" : 0,
             "byteLength" : 264,
-            "buffer" : 0,
-            "byteOffset" : 37676
+            "byteOffset" : 39184
         }
     ],
     "samplers" : [
         {
-            "minFilter" : 9986,
+            "magFilter" : 9729,
             "wrapS" : 10497,
-            "wrapT" : 10497,
-            "magFilter" : 9729
+            "minFilter" : 9986,
+            "wrapT" : 10497
         }
     ],
     "buffers" : [
         {
-            "uri" : "house.bin",
-            "byteLength" : 37940
+            "byteLength" : 39448,
+            "uri" : "house.bin"
         }
     ]
 }

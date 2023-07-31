@@ -7,6 +7,8 @@ signal level_paused
 signal level_resumed
 signal level_restarted
 signal level_checkpoint_touched(checkpoint)
+signal level_can_complete
+signal level_complete
 
 # Player signals
 signal player_item_available

@@ -46,6 +46,9 @@ func evaluate_game() -> void:
 	else:
 		current_trophy = ""
 
+	if current_trophy:
+		GameEvents.emit_signal("level_can_complete")
+
 	prints(times_died, items_progress, current_trophy)
 
 
