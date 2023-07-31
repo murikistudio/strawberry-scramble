@@ -1,37 +1,43 @@
 {
     "asset" : {
-        "version" : "2.0",
-        "generator" : "Khronos glTF Blender I/O v1.2.20"
+        "generator" : "Khronos glTF Blender I/O v1.2.20",
+        "version" : "2.0"
     },
+    "extensionsUsed" : [
+        "KHR_materials_unlit"
+    ],
     "scene" : 0,
     "scenes" : [
         {
+            "name" : "Scene",
             "nodes" : [
                 0
-            ],
-            "name" : "Scene"
+            ]
         }
     ],
     "nodes" : [
         {
-            "mesh" : 0,
+            "name" : "Island01Mesh -col",
             "scale" : [
                 5.064178466796875,
                 5.064178466796875,
                 5.064178466796875
             ],
-            "name" : "Island01Mesh -col"
+            "mesh" : 0
         }
     ],
     "materials" : [
         {
-            "name" : "island",
+            "extensions" : {
+                "KHR_materials_unlit" : {}
+            },
             "pbrMetallicRoughness" : {
                 "baseColorTexture" : {
                     "index" : 0,
                     "texCoord" : 0
                 }
-            }
+            },
+            "name" : "island"
         }
     ],
     "meshes" : [
@@ -40,99 +46,99 @@
             "primitives" : [
                 {
                     "indices" : 3,
-                    "material" : 0,
                     "attributes" : {
                         "POSITION" : 0,
-                        "TEXCOORD_0" : 1,
-                        "NORMAL" : 2
-                    }
+                        "NORMAL" : 1,
+                        "TEXCOORD_0" : 2
+                    },
+                    "material" : 0
                 }
             ]
         }
     ],
     "textures" : [
         {
-            "source" : 0,
-            "sampler" : 0
+            "sampler" : 0,
+            "source" : 0
         }
     ],
     "images" : [
         {
-            "mimeType" : "image/png",
             "name" : "island.png",
-            "uri" : "island.png"
+            "uri" : "island.png",
+            "mimeType" : "image/png"
         }
     ],
     "accessors" : [
         {
             "componentType" : 5126,
-            "bufferView" : 0,
-            "type" : "VEC3",
-            "count" : 51,
             "min" : [
                 -1.6182856559753418,
-                -0.0033565163612365723,
+                -1.433861255645752,
                 -1.6182860136032104
             ],
             "max" : [
                 1.6182856559753418,
                 0.13429245352745056,
                 1.6182860136032104
-            ]
+            ],
+            "type" : "VEC3",
+            "bufferView" : 0,
+            "count" : 83
         },
         {
             "componentType" : 5126,
             "bufferView" : 1,
-            "type" : "VEC2",
-            "count" : 51
+            "type" : "VEC3",
+            "count" : 83
         },
         {
             "componentType" : 5126,
             "bufferView" : 2,
-            "type" : "VEC3",
-            "count" : 51
+            "type" : "VEC2",
+            "count" : 83
         },
         {
             "componentType" : 5123,
             "bufferView" : 3,
             "type" : "SCALAR",
-            "count" : 138
+            "count" : 234
         }
     ],
     "bufferViews" : [
         {
-            "byteLength" : 612,
-            "byteOffset" : 0,
-            "buffer" : 0
+            "byteLength" : 996,
+            "buffer" : 0,
+            "byteOffset" : 0
         },
         {
-            "byteLength" : 408,
-            "byteOffset" : 612,
-            "buffer" : 0
+            "byteLength" : 996,
+            "buffer" : 0,
+            "byteOffset" : 996
         },
         {
-            "byteLength" : 612,
-            "byteOffset" : 1020,
-            "buffer" : 0
+            "byteLength" : 664,
+            "buffer" : 0,
+            "byteOffset" : 1992
         },
         {
-            "byteLength" : 276,
-            "byteOffset" : 1632,
-            "buffer" : 0
+            "byteLength" : 468,
+            "buffer" : 0,
+            "byteOffset" : 2656
         }
     ],
     "samplers" : [
         {
+            "minFilter" : 9986,
             "wrapS" : 10497,
-            "magFilter" : 9729,
             "wrapT" : 10497,
-            "minFilter" : 9986
+            "magFilter" : 9729
         }
     ],
     "buffers" : [
         {
-            "byteLength" : 1908,
-            "uri" : "island_01.bin"
+            "uri" : "island_01.bin",
+            "byteLength" : 3124
         }
     ]
 }
