@@ -98,7 +98,7 @@ size_flags_stretch_ratio = 3.0
 
 [node name="ButtonLogo" type="TextureButton" parent="MarginContainer/HBoxContainer2/VBoxContainer"]
 margin_right = 525.0
-margin_bottom = 327.0
+margin_bottom = 310.0
 focus_mode = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -109,17 +109,17 @@ expand = true
 stretch_mode = 5
 
 [node name="Control2" type="Control" parent="MarginContainer/HBoxContainer2/VBoxContainer"]
-margin_top = 331.0
+margin_top = 314.0
 margin_right = 525.0
-margin_bottom = 348.0
+margin_bottom = 330.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.05
 
 [node name="ButtonPlay" type="TextureButton" parent="MarginContainer/HBoxContainer2/VBoxContainer"]
-margin_top = 352.0
+margin_top = 334.0
 margin_right = 525.0
-margin_bottom = 680.0
+margin_bottom = 644.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 texture_normal = ExtResource( 7 )
@@ -130,6 +130,14 @@ stretch_mode = 5
 
 [node name="ButtonHighlighter" type="Node" parent="MarginContainer/HBoxContainer2/VBoxContainer/ButtonPlay"]
 script = ExtResource( 8 )
+
+[node name="Control4" type="Control" parent="MarginContainer/HBoxContainer2/VBoxContainer"]
+margin_top = 648.0
+margin_right = 525.0
+margin_bottom = 680.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.1
 
 [node name="Control3" type="Control" parent="MarginContainer/HBoxContainer2"]
 margin_left = 886.0
