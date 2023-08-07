@@ -23,7 +23,7 @@ func _on_ButtonResume_pressed() -> void:
 
 
 func _on_ButtonQuit_pressed() -> void:
-	GameTransition.change_scene_to(DatabaseScenes.GUI_MENU)
+	GameTransition.change_scene_to(DatabaseScenes.GUI_LEVEL_SELECT)
 
 
 func _on_ButtonRestart_pressed() -> void:

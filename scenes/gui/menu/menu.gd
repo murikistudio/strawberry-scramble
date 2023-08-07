@@ -13,7 +13,7 @@ func _ready() -> void:
 
 # Event handlers
 func _on_ButtonPlay_pressed() -> void:
-	GameTransition.change_scene_to(DatabaseScenes.LEVEL_TEST)
+	GameTransition.change_scene_to(DatabaseScenes.GUI_LEVEL_SELECT)
 
 
 func _on_ButtonQuit_pressed() -> void:

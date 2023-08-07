@@ -99,6 +99,7 @@ material/0 = SubResource( 9 )
 
 [node name="LabelDebug" type="Label3D" parent="Visual"]
 transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 1, 0 )
+visible = false
 billboard = 1
 double_sided = false
 no_depth_test = true
