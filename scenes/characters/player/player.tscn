@@ -48,6 +48,9 @@ scene_water_splash = ExtResource( 8 )
 transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0 )
 shape = SubResource( 1 )
 
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
 [node name="Gui" type="CanvasLayer" parent="."]
 pause_mode = 2
 script = ExtResource( 14 )
@@ -140,6 +143,7 @@ state_idle = NodePath("../Idle")
 state_run = NodePath("../Run")
 state_jump = NodePath("../Jump")
 
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
 [connection signal="options_exited" from="Gui/Options" to="Gui" method="_on_Options_options_exited"]
 [connection signal="area_entered" from="Area" to="." method="_on_Area_area_entered"]
 [connection signal="state_entered" from="StateManager" to="." method="_on_StateManager_state_entered"]

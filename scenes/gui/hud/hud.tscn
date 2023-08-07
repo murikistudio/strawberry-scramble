@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://scenes/gui/hud/hud.gd" type="Script" id=1]
 [ext_resource path="res://resources/themes/font_medium.tres" type="Theme" id=2]
@@ -6,6 +6,9 @@
 [ext_resource path="res://textures/hud/strawberry.svg" type="Texture" id=4]
 [ext_resource path="res://addons/simple-gui-transitions/transition.gd" type="Script" id=5]
 [ext_resource path="res://scenes/gui/hud/dialog.tscn" type="PackedScene" id=6]
+[ext_resource path="res://textures/hud/door_closed.svg" type="Texture" id=7]
+[ext_resource path="res://textures/hud/clock.svg" type="Texture" id=8]
+[ext_resource path="res://textures/hud/door_opened.svg" type="Texture" id=9]
 
 [sub_resource type="Animation" id=2]
 length = 0.001
@@ -32,6 +35,58 @@ tracks/1/keys = {
 "transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ Vector2( 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("VBoxContainer/HBoxContainer/TextureRectDoor:rect_scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("VBoxContainer/HBoxContainer/TextureRectTime:rect_scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("VBoxContainer/HBoxContainer/LabelTime:rect_scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "door_updated"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/path = NodePath("VBoxContainer/HBoxContainer/TextureRectDoor:rect_scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.05, 0.2 ),
+"transitions": PoolRealArray( -2, -2, -2 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1.25, 1.25 ), Vector2( 1, 1 ) ]
 }
 
 [sub_resource type="Animation" id=1]
@@ -62,22 +117,55 @@ tracks/1/keys = {
 "values": [ Vector2( 1, 1 ), Vector2( 1.25, 1.25 ), Vector2( 1, 1 ) ]
 }
 
+[sub_resource type="Animation" id=4]
+resource_name = "time_updated"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/path = NodePath("VBoxContainer/HBoxContainer/LabelTime:rect_scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.05, 0.2 ),
+"transitions": PoolRealArray( -2, -2, -2 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1.25, 1.25 ), Vector2( 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("VBoxContainer/HBoxContainer/TextureRectTime:rect_scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.05, 0.2 ),
+"transitions": PoolRealArray( -2, -2, -2 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1.25, 1.25 ), Vector2( 1, 1 ) ]
+}
+
 [node name="Hud" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 mouse_filter = 2
 theme = ExtResource( 3 )
 script = ExtResource( 1 )
+texture_door_opened = ExtResource( 9 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 root_node = NodePath("../MarginContainer")
 anims/RESET = SubResource( 2 )
+anims/door_updated = SubResource( 3 )
 anims/item_updated = SubResource( 1 )
+anims/time_updated = SubResource( 4 )
 
 [node name="GuiTransition" type="Node" parent="."]
 script = ExtResource( 5 )
 layout = NodePath("..")
-controls = [ NodePath("../MarginContainer/VBoxContainer/HBoxContainer/TextureRectCollected"), NodePath("../MarginContainer/VBoxContainer/HBoxContainer/LabelCollected") ]
+controls = [ NodePath("../MarginContainer/VBoxContainer/HBoxContainer/TextureRectCollected"), NodePath("../MarginContainer/VBoxContainer/HBoxContainer/LabelCollected"), NodePath("../MarginContainer/VBoxContainer/HBoxContainer/TextureRectDoor"), NodePath("../MarginContainer/VBoxContainer/HBoxContainer/TextureRectTime"), NodePath("../MarginContainer/VBoxContainer/HBoxContainer/LabelTime") ]
+
+[node name="ContainerDialogBox" parent="." instance=ExtResource( 6 )]
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 anchor_right = 1.0
@@ -104,17 +192,53 @@ mouse_filter = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="Control2" type="Control" parent="MarginContainer/VBoxContainer/HBoxContainer"]
-margin_right = 991.0
+[node name="TextureRectTime" type="TextureRect" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+margin_right = 120.0
+margin_bottom = 93.0
+rect_pivot_offset = Vector2( 60, 49 )
+mouse_filter = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource( 8 )
+expand = true
+stretch_mode = 6
+
+[node name="LabelTime" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+margin_left = 124.0
+margin_right = 244.0
+margin_bottom = 93.0
+rect_pivot_offset = Vector2( 54, 48 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource( 2 )
+text = "0s"
+align = 1
+valign = 1
+
+[node name="Control3" type="Control" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+margin_left = 248.0
+margin_right = 848.0
 margin_bottom = 93.0
 mouse_filter = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-size_flags_stretch_ratio = 9.0
+size_flags_stretch_ratio = 5.0
+
+[node name="TextureRectDoor" type="TextureRect" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+margin_left = 852.0
+margin_right = 972.0
+margin_bottom = 93.0
+rect_pivot_offset = Vector2( 60, 49 )
+mouse_filter = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource( 7 )
+expand = true
+stretch_mode = 6
 
 [node name="TextureRectCollected" type="TextureRect" parent="MarginContainer/VBoxContainer/HBoxContainer"]
-margin_left = 995.0
-margin_right = 1105.0
+margin_left = 976.0
+margin_right = 1096.0
 margin_bottom = 93.0
 rect_pivot_offset = Vector2( 60, 49 )
 mouse_filter = 2
@@ -125,7 +249,7 @@ expand = true
 stretch_mode = 6
 
 [node name="LabelCollected" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer"]
-margin_left = 1109.0
+margin_left = 1100.0
 margin_right = 1220.0
 margin_bottom = 93.0
 rect_pivot_offset = Vector2( 54, 48 )
@@ -144,5 +268,3 @@ mouse_filter = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 6.0
-
-[node name="ContainerDialogBox" parent="." instance=ExtResource( 6 )]

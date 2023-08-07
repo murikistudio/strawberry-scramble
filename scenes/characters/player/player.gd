@@ -80,12 +80,6 @@ func _unhandled_input(_event: InputEvent) -> void:
 		GameEvents.emit_signal("level_paused")
 		get_tree().paused = true
 
-	if Input.is_action_just_pressed("ui_page_up"):
-		GameEvents.emit_signal("level_dialog", "mom", "start")
-
-	elif Input.is_action_just_pressed("ui_page_down"):
-		GameEvents.emit_signal("level_dialog", "man", "death")
-
 
 # Public methods
 # Define a animação atual do jogador.
@@ -278,3 +272,8 @@ func _on_Area_area_entered(area: Area) -> void:
 		else:
 			GameEvents.emit_signal("level_dialog", "mom", "incomplete")
 			prints("Level incomplete...")
+
+
+# Avançar tempo no jogo.
+func _on_Timer_timeout() -> void:
+	GameState.add_time_elapsed()

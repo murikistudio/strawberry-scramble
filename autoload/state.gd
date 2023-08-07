@@ -4,8 +4,10 @@ extends Node
 
 # Variables
 # Level
+var completed: bool
 var current_level: int
 var times_died: int
+var time_elapsed: int
 
 # Session
 var items_collected: int
@@ -21,7 +23,9 @@ func _ready() -> void:
 # Public methods
 # Reseta status da fase selecionada.
 func reset_level() -> void:
+	completed = false
 	times_died = 0
+	time_elapsed = 0
 	items_collected = 0
 	items_available = 0
 	current_trophy = ""
@@ -67,3 +71,9 @@ func add_times_died() -> void:
 		GameEvents.emit_signal("level_dialog", "man", "death")
 
 	evaluate_game()
+
+
+# Adicionar tempo passado na fase.
+func add_time_elapsed() -> void:
+	time_elapsed += 1
+	GameEvents.emit_signal("level_time_updated")

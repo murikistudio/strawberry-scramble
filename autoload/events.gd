@@ -10,6 +10,7 @@ signal level_checkpoint_touched(checkpoint)
 signal level_can_complete
 signal level_complete
 signal level_dialog(character, dialog)
+signal level_time_updated
 
 # Player signals
 signal player_item_available
