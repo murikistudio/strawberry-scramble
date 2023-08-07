@@ -1,0 +1,116 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://resources/themes/font_medium.tres" type="Theme" id=1]
+[ext_resource path="res://textures/hud/old_man.png" type="Texture" id=2]
+[ext_resource path="res://scenes/gui/hud/dialog.gd" type="Script" id=3]
+[ext_resource path="res://textures/hud/mom.png" type="Texture" id=4]
+[ext_resource path="res://textures/hud/player.png" type="Texture" id=5]
+[ext_resource path="res://resources/themes/font_small.tres" type="Theme" id=6]
+
+[sub_resource type="Gradient" id=3]
+offsets = PoolRealArray( 0, 0.703911 )
+colors = PoolColorArray( 0, 0, 0, 0.882353, 0, 0, 0, 0 )
+
+[sub_resource type="GradientTexture2D" id=4]
+gradient = SubResource( 3 )
+width = 512
+height = 512
+fill_to = Vector2( 0, 1 )
+
+[node name="ContainerDialogBox" type="VBoxContainer"]
+pause_mode = 1
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+script = ExtResource( 3 )
+texture_man = ExtResource( 2 )
+texture_mom = ExtResource( 4 )
+texture_player = ExtResource( 5 )
+
+[node name="Tween" type="Tween" parent="."]
+
+[node name="Control2" type="Control" parent="."]
+margin_right = 1280.0
+margin_bottom = 477.0
+mouse_filter = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_top = 481.0
+margin_right = 1280.0
+margin_bottom = 720.0
+mouse_filter = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.5
+texture = SubResource( 4 )
+expand = true
+stretch_mode = 1
+flip_v = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TextureRect"]
+margin_top = 4.0
+margin_right = 1280.0
+margin_bottom = 242.0
+mouse_filter = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.5
+
+[node name="TextureRectPortrait" type="TextureRect" parent="TextureRect/HBoxContainer"]
+margin_right = 294.0
+margin_bottom = 238.0
+mouse_filter = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.3
+texture = ExtResource( 2 )
+expand = true
+stretch_mode = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TextureRect/HBoxContainer"]
+margin_left = 298.0
+margin_right = 1280.0
+margin_bottom = 238.0
+mouse_filter = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Control" type="Control" parent="TextureRect/HBoxContainer/VBoxContainer"]
+margin_right = 982.0
+margin_bottom = 88.0
+mouse_filter = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="LabelName" type="Label" parent="TextureRect/HBoxContainer/VBoxContainer"]
+margin_top = 92.0
+margin_right = 982.0
+margin_bottom = 124.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.3
+theme = ExtResource( 6 )
+text = "Character:"
+
+[node name="LabelText" type="Label" parent="TextureRect/HBoxContainer/VBoxContainer"]
+margin_top = 128.0
+margin_right = 982.0
+margin_bottom = 216.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource( 1 )
+text = "Dialog text here..."
+autowrap = true
+
+[node name="Control2" type="Control" parent="TextureRect/HBoxContainer/VBoxContainer"]
+margin_top = 220.0
+margin_right = 982.0
+margin_bottom = 238.0
+mouse_filter = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.2
+
+[connection signal="tween_all_completed" from="Tween" to="." method="_on_Tween_tween_all_completed"]

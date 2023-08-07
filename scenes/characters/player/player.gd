@@ -58,6 +58,7 @@ func _ready() -> void:
 	_camera_axis.set_as_toplevel(true)
 	_mesh_direction.set_as_toplevel(true)
 	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
+	GameEvents.emit_signal("level_dialog", "mom", "start")
 
 
 func _physics_process(delta: float) -> void:
@@ -78,6 +79,12 @@ func _unhandled_input(_event: InputEvent) -> void:
 	if not dead and Input.is_action_just_pressed("pause"):
 		GameEvents.emit_signal("level_paused")
 		get_tree().paused = true
+
+	if Input.is_action_just_pressed("ui_page_up"):
+		GameEvents.emit_signal("level_dialog", "mom", "start")
+
+	elif Input.is_action_just_pressed("ui_page_down"):
+		GameEvents.emit_signal("level_dialog", "man", "death")
 
 
 # Public methods
@@ -263,6 +270,11 @@ func _on_Area_area_entered(area: Area) -> void:
 		respawn_position = area.global_translation
 		GameEvents.emit_signal("level_checkpoint_touched", area)
 
-	if area.is_in_group("house") and GameState.current_trophy:
-		GameEvents.emit_signal("level_complete")
-		prints("Level complete!")
+	if area.is_in_group("house"):
+		if GameState.current_trophy:
+			GameEvents.emit_signal("level_dialog", "man", "complete")
+			GameEvents.emit_signal("level_complete")
+			prints("Level complete!")
+		else:
+			GameEvents.emit_signal("level_dialog", "mom", "incomplete")
+			prints("Level incomplete...")

@@ -62,4 +62,8 @@ func add_item_collected() -> void:
 # Adiciona morte do jogador ao contador.
 func add_times_died() -> void:
 	times_died += 1
+
+	if times_died % 5 == 0:
+		GameEvents.emit_signal("level_dialog", "man", "death")
+
 	evaluate_game()

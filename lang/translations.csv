@@ -31,3 +31,28 @@ Art:,,Arte:
 {name} {version},,
 "{author}, {year}",,
 All rights reserved.,,Todos os direitos reservados.
+,,
+DIALOGS,,
+mom,Mom,Mãe
+man,Old Man,Velho
+player,Boy,Garoto
+dlg_mom_start_1,"Bring the strawberries to me, NOW!!!","Anda, traga os morangos para mim, AGORA!!!"
+dlg_mom_start_2,"You asked for cake, so go get the strawberries!","Você que pediu bolo, então vai pegar os morangos!"
+dlg_mom_start_3,"Strawberries are missing to make the jam, go get them!","Faltam morangos para fazer a geléia, vá pegá-los!"
+dlg_mom_start_4,"Hmmm, some strawberries in this pie would go very well!","Hmmm, uns morangos nessa torta cairiam muito bem!"
+dlg_mom_start_5,I can't make strawberry cookies without strawberries! Go get them!,Não posso fazer cookies de morango sem morangos! Vá pegá-los!
+dlg_mom_incomplete_1,What do you mean you didn't find the strawberries? If I go there and find them...,Como assim você não achou os morangos? Se eu for aí e achar...
+dlg_mom_incomplete_2,"Forgot your coat, huh? I told you it was going to get cold!","Esqueceu o casaco, né? Eu disse que ia esfriar!"
+dlg_mom_incomplete_3,"It looks like a pigsty here! When you come in, go make up your room!","Isso aqui tá parecendo um chiqueiro! Quando você entrar, vai arrumar seu quarto!"
+dlg_mom_incomplete_4,"This kid doesn't know how to do anything, I do everything in this house!","Esse moleque não sabe fazer nada, eu que faço tudo nessa casa!"
+dlg_mom_incomplete_5,Does this boy think that money grows on trees?,Esse menino acha que dinheiro dá em árvore?
+dlg_man_death_1,HA HA HA!,HA HA HA!
+dlg_man_death_2,"Got you, meddling brat!","Peguei você, pirralho enxerido!"
+dlg_man_death_3,And next time it will be worse!,E da próxima vai ser pior!
+dlg_man_death_4,And don't come back here anymore!,Bem feito! E não volte mais aqui!
+dlg_man_death_5,I just won't hit you again because... Hmpf...,Só não te dou outra porque... Hmpf...
+dlg_man_complete_1,This kid will pay me back!,Esse moleque me paga!
+dlg_man_complete_2,Did I plant strawberries today? All gone!,Eu plantei morangos hoje? Sumiram todos!
+dlg_man_complete_3,Where did my strawberries go?,Onde foram parar os meus morangos?
+dlg_man_complete_4,Grrr! Time to get a watchdog!,Grrr! Hora de arrumar um cão de guarda!
+dlg_man_complete_5,"No, not again! This brat!","Não, de novo não! Esse moleque!"
