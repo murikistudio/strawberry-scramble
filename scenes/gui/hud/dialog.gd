@@ -73,6 +73,7 @@ func _show_dialog(character: String, dialog: String) -> void:
 		return
 
 	_current_dialog = current_dialog
+	GameAudio.play_sfx(DatabaseAudio.SFX_BASE + _current_dialog + ".wav")
 
 	var texture: Texture = get("texture_" + character)
 	_texture_rect_portrait.texture = texture
