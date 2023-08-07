@@ -4,7 +4,8 @@ extends VBoxContainer
 # Constants
 const SPEED_SHOW := 0.5
 const SPEED_HIDE := 1.0
-const CHARACTER_VISIBLE_TIME := 0.075
+const CHARACTER_VISIBLE_TIME := 0.1
+const CHARACTER_MIN_LEN := 30
 const DIALOGS := {
 	"mom": {
 		"start": [
@@ -91,9 +92,11 @@ func _show_dialog(character: String, dialog: String) -> void:
 	_tween.interpolate_property(_label_text, "percent_visible", 0.0, 1.0, SPEED_SHOW * 2.0)
 
 	# Fade out
+	var visible_time := max(_label_text.text.length(), CHARACTER_MIN_LEN) * CHARACTER_VISIBLE_TIME
+
 	_tween.interpolate_property(
 		self, "modulate:a", 1.0, 0.0, SPEED_SHOW,
-		Tween.TRANS_LINEAR, Tween.EASE_IN_OUT, _label_text.text.length() * CHARACTER_VISIBLE_TIME
+		Tween.TRANS_LINEAR, Tween.EASE_IN_OUT, visible_time
 	)
 
 	_tween.start()
