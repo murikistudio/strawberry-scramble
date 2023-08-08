@@ -60,6 +60,14 @@ func is_state_valid() -> bool:
 	return owner_object and initial_state
 
 
+func transition_to(state: BaseState) -> bool:
+	if current_state == state:
+		return false
+
+	_handle_new_state(state)
+	return true
+
+
 # Private methods
 func _set_owner_object(node: Node = null) -> void:
 	if not owner_object:

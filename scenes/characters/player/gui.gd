@@ -8,6 +8,7 @@ func _ready() -> void:
 	GameEvents.connect("level_paused", self, "_on_level_paused")
 	GameEvents.connect("level_resumed", self, "_on_level_resumed")
 	GameEvents.connect("level_restarted", self, "_on_level_restarted")
+	GameEvents.connect("level_complete", self, "_on_level_complete")
 
 
 # Public methods
@@ -24,6 +25,13 @@ func _on_level_paused() -> void:
 	show_mouse_cursor(true)
 	GuiTransitions.hide("Hud")
 	GuiTransitions.show("Pause")
+
+
+# Ocultar hud e mostrar menu de fase completa.
+func _on_level_complete() -> void:
+	show_mouse_cursor(true)
+	GuiTransitions.hide("Hud")
+	GuiTransitions.show("LevelComplete")
 
 
 # Ocultar menu de pausa e mostrar hud quando jogo for resumido.

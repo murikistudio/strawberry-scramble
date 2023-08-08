@@ -19,7 +19,7 @@ func _ready() -> void:
 	parts = file_name.split(".", false)
 
 	if parts.size():
-		file_name = (parts[0] as String).capitalize()
+		file_name = tr(parts[0])
 
 	_label_level_name.text = file_name
 

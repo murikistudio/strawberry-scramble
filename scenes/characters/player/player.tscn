@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://scenes/characters/player/player.gd" type="Script" id=1]
 [ext_resource path="res://classes/base/state_manager.gd" type="Script" id=2]
@@ -9,11 +9,13 @@
 [ext_resource path="res://scenes/characters/player/states/fall.gd" type="Script" id=7]
 [ext_resource path="res://scenes/effects/water_splash/water_splash.tscn" type="PackedScene" id=8]
 [ext_resource path="res://scenes/characters/player/states/coyote.gd" type="Script" id=9]
+[ext_resource path="res://scenes/gui/level_complete/level_complete.tscn" type="PackedScene" id=10]
 [ext_resource path="res://scenes/gui/vignette/vignette.tscn" type="PackedScene" id=11]
 [ext_resource path="res://scenes/gui/pause/pause.tscn" type="PackedScene" id=12]
 [ext_resource path="res://scenes/gui/options/options.tscn" type="PackedScene" id=13]
 [ext_resource path="res://scenes/characters/player/gui.gd" type="Script" id=14]
 [ext_resource path="res://scenes/gui/hud/hud.tscn" type="PackedScene" id=15]
+[ext_resource path="res://scenes/characters/player/states/stop.gd" type="Script" id=16]
 
 [sub_resource type="CapsuleShape" id=1]
 radius = 0.25
@@ -40,6 +42,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.65, 0 )
 collision_layer = 2
 collision_mask = 5
 script = ExtResource( 1 )
+debug = true
 move_speed = 4.0
 intertia_factor = 0.18
 scene_water_splash = ExtResource( 8 )
@@ -63,6 +66,9 @@ script = ExtResource( 14 )
 visible = false
 
 [node name="Options" parent="Gui" instance=ExtResource( 13 )]
+visible = false
+
+[node name="LevelComplete" parent="Gui" instance=ExtResource( 10 )]
 visible = false
 
 [node name="RayCast" type="RayCast" parent="."]
@@ -120,6 +126,9 @@ script = ExtResource( 3 )
 state_coyote = NodePath("../Coyote")
 state_run = NodePath("../Run")
 state_jump = NodePath("../Jump")
+
+[node name="Stop" type="Node" parent="StateManager"]
+script = ExtResource( 16 )
 
 [node name="Run" type="Node" parent="StateManager"]
 script = ExtResource( 4 )

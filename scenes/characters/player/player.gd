@@ -76,7 +76,7 @@ func _physics_process(delta: float) -> void:
 
 
 func _unhandled_input(_event: InputEvent) -> void:
-	if not dead and Input.is_action_just_pressed("pause"):
+	if not dead and not GameState.completed and Input.is_action_just_pressed("pause"):
 		GameEvents.emit_signal("level_paused")
 		get_tree().paused = true
 
@@ -267,6 +267,10 @@ func _on_Area_area_entered(area: Area) -> void:
 	if area.is_in_group("house"):
 		if GameState.current_trophy:
 			GameEvents.emit_signal("level_dialog", "man", "complete")
+			area.monitorable = false
+			GameState.completed = true
+			_state_manager.transition_to(_state_manager.get_node("Stop"))
+			yield(get_tree().create_timer(2.0, false), "timeout")
 			GameEvents.emit_signal("level_complete")
 			prints("Level complete!")
 		else:

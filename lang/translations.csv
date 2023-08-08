@@ -6,7 +6,8 @@ Loading...,,Carregando...
 Credits,,Créditos
 Paused,,Pausado
 Game Over,,Fim de Jogo
-Level Completed,,Fase Concluída
+Level Select,,Seleção de Fase
+Level Complete!,,Fase Concluída
 ,,
 LOCALES,,
 en,English,English
@@ -56,3 +57,13 @@ dlg_man_complete_2,Did I plant strawberries today? All gone!,Eu plantei morangos
 dlg_man_complete_3,Where did my strawberries go?,Onde foram parar os meus morangos?
 dlg_man_complete_4,Grrr! Time to get a watchdog!,Grrr! Hora de arrumar um cão de guarda!
 dlg_man_complete_5,"No, not again! This brat!","Não, de novo não! Esse moleque!"
+,,
+TROPHIES,,
+bronze,Bronze,Bronze
+silver,Silver,Prata
+gold,Gold,Ouro
+diamond,Diamond,Diamante
+,,
+LEVELS,,
+test,Test,Teste
+,,
