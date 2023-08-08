@@ -280,4 +280,7 @@ func _on_Area_area_entered(area: Area) -> void:
 
 # Avançar tempo no jogo.
 func _on_Timer_timeout() -> void:
+	if GameState.completed:
+		return
+
 	GameState.add_time_elapsed()
