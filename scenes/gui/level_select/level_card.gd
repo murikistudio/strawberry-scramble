@@ -3,9 +3,11 @@ extends MarginContainer
 
 # Variables
 export var level_path := ""
+export var focus_button := false
 
 onready var _label_level_name: Label = find_node("LabelLevelName")
 onready var _texture_rect_thumbnail: TextureRect = find_node("TextureRectThumbnail")
+onready var _button_level: Button = find_node("ButtonLevel")
 
 
 # Built-in overrides
@@ -22,6 +24,10 @@ func _ready() -> void:
 		file_name = tr(parts[0])
 
 	_label_level_name.text = file_name
+
+	if focus_button:
+		yield(GuiTransitions, "show_completed")
+		_button_level.grab_focus()
 
 
 # Event handlers
