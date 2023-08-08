@@ -2,14 +2,21 @@ extends Control
 # Interface de usuário durante a fase, incluindo contador de itens coletados.
 
 
+# Constants
+const BASE_PATH_ICONS := "res://textures/icons/"
+
+
 # Variables
 export(Texture) var texture_door_opened: Texture
 
-onready var _texture_rect_collected: TextureRect = find_node("TextureRectCollected")
-onready var _label_collected: Label = find_node("LabelCollected")
-onready var _label_time: Label = find_node("LabelTime")
-onready var _animation_player: AnimationPlayer = find_node("AnimationPlayer")
+var _current_trophy := ""
+
+onready var _texture_rect_time: TextureRect = find_node("TextureRectTime")
+onready var _texture_rect_trophy: TextureRect = find_node("TextureRectTrophy")
 onready var _texture_rect_door: TextureRect = find_node("TextureRectDoor")
+onready var _texture_rect_collected: TextureRect = find_node("TextureRectCollected")
+onready var _label_time: Label = find_node("LabelTime")
+onready var _label_collected: Label = find_node("LabelCollected")
 
 
 # Built-in overrides
@@ -24,26 +31,38 @@ func _ready() -> void:
 # Public methods
 # Atualiza valores mostrados na interface de usuário.
 func update_hud() -> void:
-	_texture_rect_collected.rect_pivot_offset = _texture_rect_collected.rect_size / 2
-	_label_collected.rect_pivot_offset = _label_collected.rect_size / 2
+	# Tempo
+	var time := str(GameState.time_elapsed) + "s"
 
-	var text := "{collected}/{available}".format({
+	if _label_time.text != time:
+		GameCore.highlight_control_scale(_texture_rect_time)
+		GameCore.highlight_control_scale(_label_time)
+		_label_time.text = time
+
+	# Itens coletados
+	var collected_text := "{collected}/{available}".format({
 		"collected": GameState.items_collected,
 		"available": GameState.items_available,
 	})
 
-	if _label_collected.text != text:
-		_label_collected.text = text
-		_animation_player.play("item_updated")
+	if _label_collected.text != collected_text:
+		_label_collected.text = collected_text
+		GameCore.highlight_control_scale(_texture_rect_collected)
+		GameCore.highlight_control_scale(_label_collected)
 
+	# Troféu e porta
 	if GameState.current_trophy:
 		_texture_rect_door.self_modulate.a = 1.0
 
+		if _current_trophy != GameState.current_trophy:
+			_texture_rect_trophy.texture = load(BASE_PATH_ICONS + GameState.current_trophy + ".svg")
+			_current_trophy = GameState.current_trophy
+			GameCore.highlight_control_scale(_texture_rect_trophy)
+
 		if _texture_rect_door.texture != texture_door_opened:
 			_texture_rect_door.texture = texture_door_opened
-			_animation_player.play("door_updated")
+			GameCore.highlight_control_scale(_texture_rect_door)
 
 	else:
 		_texture_rect_door.self_modulate.a = 0.6
-
-	_label_time.text = str(GameState.time_elapsed) + "s"
+		_texture_rect_trophy.texture = null

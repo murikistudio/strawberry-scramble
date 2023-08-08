@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://scenes/gui/hud/hud.gd" type="Script" id=1]
 [ext_resource path="res://resources/themes/font_medium.tres" type="Theme" id=2]
@@ -9,141 +9,7 @@
 [ext_resource path="res://textures/hud/door_closed.svg" type="Texture" id=7]
 [ext_resource path="res://textures/hud/clock.svg" type="Texture" id=8]
 [ext_resource path="res://textures/hud/door_opened.svg" type="Texture" id=9]
-
-[sub_resource type="Animation" id=2]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/path = NodePath("VBoxContainer/HBoxContainer/LabelCollected:rect_scale")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( 1, 1 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("VBoxContainer/HBoxContainer/TextureRectCollected:rect_scale")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( 1, 1 ) ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath("VBoxContainer/HBoxContainer/TextureRectDoor:rect_scale")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( 1, 1 ) ]
-}
-tracks/3/type = "value"
-tracks/3/path = NodePath("VBoxContainer/HBoxContainer/TextureRectTime:rect_scale")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( 1, 1 ) ]
-}
-tracks/4/type = "value"
-tracks/4/path = NodePath("VBoxContainer/HBoxContainer/LabelTime:rect_scale")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( 1, 1 ) ]
-}
-
-[sub_resource type="Animation" id=3]
-resource_name = "door_updated"
-length = 0.2
-tracks/0/type = "value"
-tracks/0/path = NodePath("VBoxContainer/HBoxContainer/TextureRectDoor:rect_scale")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.05, 0.2 ),
-"transitions": PoolRealArray( -2, -2, -2 ),
-"update": 0,
-"values": [ Vector2( 1, 1 ), Vector2( 1.25, 1.25 ), Vector2( 1, 1 ) ]
-}
-
-[sub_resource type="Animation" id=1]
-resource_name = "item_updated"
-length = 0.2
-tracks/0/type = "value"
-tracks/0/path = NodePath("VBoxContainer/HBoxContainer/LabelCollected:rect_scale")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.05, 0.2 ),
-"transitions": PoolRealArray( -2, -2, -2 ),
-"update": 0,
-"values": [ Vector2( 1, 1 ), Vector2( 1.25, 1.25 ), Vector2( 1, 1 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("VBoxContainer/HBoxContainer/TextureRectCollected:rect_scale")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0, 0.05, 0.2 ),
-"transitions": PoolRealArray( -2, -2, -2 ),
-"update": 0,
-"values": [ Vector2( 1, 1 ), Vector2( 1.25, 1.25 ), Vector2( 1, 1 ) ]
-}
-
-[sub_resource type="Animation" id=4]
-resource_name = "time_updated"
-length = 0.2
-tracks/0/type = "value"
-tracks/0/path = NodePath("VBoxContainer/HBoxContainer/LabelTime:rect_scale")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.05, 0.2 ),
-"transitions": PoolRealArray( -2, -2, -2 ),
-"update": 0,
-"values": [ Vector2( 1, 1 ), Vector2( 1.25, 1.25 ), Vector2( 1, 1 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("VBoxContainer/HBoxContainer/TextureRectTime:rect_scale")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0, 0.05, 0.2 ),
-"transitions": PoolRealArray( -2, -2, -2 ),
-"update": 0,
-"values": [ Vector2( 1, 1 ), Vector2( 1.25, 1.25 ), Vector2( 1, 1 ) ]
-}
+[ext_resource path="res://textures/icons/gold.svg" type="Texture" id=10]
 
 [sub_resource type="Gradient" id=5]
 offsets = PoolRealArray( 0, 0.703911 )
@@ -162,13 +28,6 @@ mouse_filter = 2
 theme = ExtResource( 3 )
 script = ExtResource( 1 )
 texture_door_opened = ExtResource( 9 )
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-root_node = NodePath("../MarginContainer")
-anims/RESET = SubResource( 2 )
-anims/door_updated = SubResource( 3 )
-anims/item_updated = SubResource( 1 )
-anims/time_updated = SubResource( 4 )
 
 [node name="GuiTransition" type="Node" parent="."]
 script = ExtResource( 5 )
@@ -211,7 +70,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="TextureRectTime" type="TextureRect" parent="MarginContainer/VBoxContainer/HBoxContainer"]
-margin_right = 120.0
+margin_right = 108.0
 margin_bottom = 93.0
 rect_pivot_offset = Vector2( 60, 49 )
 mouse_filter = 2
@@ -222,8 +81,8 @@ expand = true
 stretch_mode = 6
 
 [node name="LabelTime" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer"]
-margin_left = 124.0
-margin_right = 244.0
+margin_left = 112.0
+margin_right = 221.0
 margin_bottom = 93.0
 rect_pivot_offset = Vector2( 54, 48 )
 size_flags_horizontal = 3
@@ -234,17 +93,29 @@ align = 1
 valign = 1
 
 [node name="Control3" type="Control" parent="MarginContainer/VBoxContainer/HBoxContainer"]
-margin_left = 248.0
-margin_right = 848.0
+margin_left = 225.0
+margin_right = 769.0
 margin_bottom = 93.0
 mouse_filter = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 5.0
 
+[node name="TextureRectTrophy" type="TextureRect" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+margin_left = 773.0
+margin_right = 881.0
+margin_bottom = 93.0
+rect_pivot_offset = Vector2( 60, 49 )
+mouse_filter = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource( 10 )
+expand = true
+stretch_mode = 6
+
 [node name="TextureRectDoor" type="TextureRect" parent="MarginContainer/VBoxContainer/HBoxContainer"]
-margin_left = 852.0
-margin_right = 972.0
+margin_left = 885.0
+margin_right = 994.0
 margin_bottom = 93.0
 rect_pivot_offset = Vector2( 60, 49 )
 mouse_filter = 2
@@ -255,8 +126,8 @@ expand = true
 stretch_mode = 6
 
 [node name="TextureRectCollected" type="TextureRect" parent="MarginContainer/VBoxContainer/HBoxContainer"]
-margin_left = 976.0
-margin_right = 1096.0
+margin_left = 998.0
+margin_right = 1107.0
 margin_bottom = 93.0
 rect_pivot_offset = Vector2( 60, 49 )
 mouse_filter = 2
@@ -267,7 +138,7 @@ expand = true
 stretch_mode = 6
 
 [node name="LabelCollected" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer"]
-margin_left = 1100.0
+margin_left = 1111.0
 margin_right = 1220.0
 margin_bottom = 93.0
 rect_pivot_offset = Vector2( 54, 48 )
