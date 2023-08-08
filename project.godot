@@ -88,6 +88,7 @@ _global_script_class_icons={
 
 config/name="Strawberry Scramble"
 run/main_scene="res://scenes/gui/main/main.tscn"
+config/use_custom_user_dir=true
 boot_splash/image="res://textures/gui/logo.png"
 boot_splash/fullsize=false
 boot_splash/bg_color=Color( 0, 0, 0, 1 )

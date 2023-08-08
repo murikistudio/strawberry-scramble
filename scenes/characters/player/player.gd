@@ -271,6 +271,7 @@ func _on_Area_area_entered(area: Area) -> void:
 			GameState.completed = true
 			_state_manager.transition_to(_state_manager.get_node("Stop"))
 			yield(get_tree().create_timer(2.0, false), "timeout")
+			GameState.add_score()
 			GameEvents.emit_signal("level_complete")
 			prints("Level complete!")
 		else:
