@@ -25,3 +25,10 @@ func highlight_control(
 	for i in repeat:
 		tween.tween_property(control, "self_modulate", highlight_color, trans_time)
 		tween.tween_property(control, "self_modulate", initial_color, trans_time)
+
+
+# Anima momentaneamente a escala do controle.
+func highlight_control_scale(control: Control, duration := 0.2, size := 1.2) -> void:
+	var tween := control.create_tween().set_trans(Tween.TRANS_SINE)
+	tween.tween_property(control, "rect_scale", Vector2(size, size), duration / 2)
+	tween.tween_property(control, "rect_scale", Vector2(1.0, 1.0), duration / 2)
