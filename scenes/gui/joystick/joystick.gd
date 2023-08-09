@@ -65,19 +65,15 @@ func _update_input_action(action: String, strength: float) -> void:
 
 
 func _on_TextureRectStickLeftBack_gui_input(event: InputEvent) -> void:
-	if event is InputEventMouse or event is InputEventScreenDrag:
+	if event is InputEventScreenDrag:
 		_stick_left_position = event.position
 
-	if event is InputEventMouseButton:
+	if event is InputEventScreenTouch:
 		_stick_left_pressing = event.is_pressed()
 
 		if not event.is_pressed():
 			for input_name in ["move_left", "move_right", "move_up", "move_down"]:
-				var input := InputEventAction.new()
-				input.action = input_name
-				input.strength = 0.0
-				input.pressed = false
-				Input.parse_input_event(input)
+				_update_input_action(input_name, 0.0)
 
 
 func _on_TextureButtonJump_button_down() -> void:
@@ -96,3 +92,11 @@ func _on_TextureButtonPause_button_down() -> void:
 
 func _on_TextureButtonPause_button_up() -> void:
 	_update_input_action("pause", 0.0)
+
+
+func _on_TextureButtonJump_gui_input(event: InputEvent) -> void:
+	if event is InputEventScreenTouch:
+		if event.pressed:
+			_on_TextureButtonJump_button_down()
+		else:
+			_on_TextureButtonJump_button_up()

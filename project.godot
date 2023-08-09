@@ -246,6 +246,10 @@ pause={
  ]
 }
 
+[input_devices]
+
+pointing/emulate_touch_from_mouse=true
+
 [locale]
 
 translations=PoolStringArray( "res://lang/translations.en.translation", "res://lang/translations.pt_BR.translation" )

@@ -13,77 +13,82 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 mouse_filter = 2
 theme = ExtResource( 4 )
-custom_constants/margin_right = 96
-custom_constants/margin_top = 96
-custom_constants/margin_left = 96
-custom_constants/margin_bottom = 96
+custom_constants/margin_right = 80
+custom_constants/margin_top = 80
+custom_constants/margin_left = 80
+custom_constants/margin_bottom = 80
 script = ExtResource( 3 )
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
-margin_left = 96.0
-margin_top = 96.0
-margin_right = 1184.0
-margin_bottom = 624.0
+margin_left = 80.0
+margin_top = 80.0
+margin_right = 1200.0
+margin_bottom = 640.0
 mouse_filter = 2
 
 [node name="Control" type="HBoxContainer" parent="VBoxContainer"]
-margin_right = 1088.0
-margin_bottom = 262.0
+margin_right = 1120.0
+margin_bottom = 278.0
 mouse_filter = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="Control" type="Control" parent="VBoxContainer/Control"]
-margin_right = 963.0
-margin_bottom = 262.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-size_flags_stretch_ratio = 8.0
-
 [node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/Control"]
-margin_left = 967.0
-margin_right = 1088.0
-margin_bottom = 262.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-
-[node name="Control" type="Control" parent="VBoxContainer/Control/VBoxContainer"]
-margin_right = 121.0
-margin_bottom = 129.0
+margin_right = 124.0
+margin_bottom = 278.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="TextureButtonPause" type="TextureButton" parent="VBoxContainer/Control/VBoxContainer"]
-margin_top = 133.0
-margin_right = 121.0
-margin_bottom = 262.0
+margin_right = 124.0
+margin_bottom = 137.0
 focus_mode = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
+action_mode = 0
+enabled_focus_mode = 0
 texture_normal = ExtResource( 5 )
 expand = true
 stretch_mode = 5
 
-[node name="Control2" type="Control" parent="VBoxContainer/Control/VBoxContainer"]
-visible = false
-margin_top = 238.0
-margin_right = 121.0
-margin_bottom = 262.0
+[node name="Control" type="Control" parent="VBoxContainer/Control/VBoxContainer"]
+margin_top = 141.0
+margin_right = 124.0
+margin_bottom = 278.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-size_flags_stretch_ratio = 0.2
+
+[node name="Control" type="Control" parent="VBoxContainer/Control"]
+margin_left = 128.0
+margin_right = 1120.0
+margin_bottom = 278.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 8.0
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
-margin_top = 266.0
-margin_right = 1088.0
-margin_bottom = 528.0
+margin_top = 282.0
+margin_right = 1120.0
+margin_bottom = 560.0
 mouse_filter = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="TextureRectStickLeftBack" type="TextureRect" parent="VBoxContainer/HBoxContainer"]
-margin_right = 270.0
-margin_bottom = 262.0
+[node name="MarginContainer2" type="MarginContainer" parent="VBoxContainer/HBoxContainer"]
+margin_right = 278.0
+margin_bottom = 278.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/margin_right = 32
+custom_constants/margin_top = 32
+custom_constants/margin_left = 32
+custom_constants/margin_bottom = 32
+
+[node name="TextureRectStickLeftBack" type="TextureRect" parent="VBoxContainer/HBoxContainer/MarginContainer2"]
+margin_left = 32.0
+margin_top = 32.0
+margin_right = 246.0
+margin_bottom = 246.0
 mouse_filter = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -91,9 +96,9 @@ texture = ExtResource( 1 )
 expand = true
 stretch_mode = 6
 
-[node name="StickLeft" type="Control" parent="VBoxContainer/HBoxContainer/TextureRectStickLeftBack"]
+[node name="StickLeft" type="Control" parent="VBoxContainer/HBoxContainer/MarginContainer2/TextureRectStickLeftBack"]
 
-[node name="TextureRectStickLeft" type="TextureRect" parent="VBoxContainer/HBoxContainer/TextureRectStickLeftBack/StickLeft"]
+[node name="TextureRectStickLeft" type="TextureRect" parent="VBoxContainer/HBoxContainer/MarginContainer2/TextureRectStickLeftBack/StickLeft"]
 margin_left = -64.0
 margin_top = -64.0
 margin_right = 64.0
@@ -106,35 +111,38 @@ expand = true
 stretch_mode = 6
 
 [node name="Control" type="Control" parent="VBoxContainer/HBoxContainer"]
-margin_left = 274.0
-margin_right = 814.0
-margin_bottom = 262.0
+margin_left = 282.0
+margin_right = 838.0
+margin_bottom = 278.0
 mouse_filter = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 2.0
 
 [node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/HBoxContainer"]
-margin_left = 818.0
-margin_right = 1088.0
-margin_bottom = 262.0
+margin_left = 842.0
+margin_right = 1120.0
+margin_bottom = 278.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="TextureButtonJump" type="TextureButton" parent="VBoxContainer/HBoxContainer/MarginContainer"]
 margin_left = 20.0
 margin_top = 20.0
-margin_right = 250.0
-margin_bottom = 242.0
+margin_right = 258.0
+margin_bottom = 258.0
 focus_mode = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
+action_mode = 0
+enabled_focus_mode = 0
 texture_normal = ExtResource( 6 )
 expand = true
 stretch_mode = 5
 
 [connection signal="button_down" from="VBoxContainer/Control/VBoxContainer/TextureButtonPause" to="." method="_on_TextureButtonPause_button_down"]
 [connection signal="button_up" from="VBoxContainer/Control/VBoxContainer/TextureButtonPause" to="." method="_on_TextureButtonPause_button_up"]
-[connection signal="gui_input" from="VBoxContainer/HBoxContainer/TextureRectStickLeftBack" to="." method="_on_TextureRectStickLeftBack_gui_input"]
+[connection signal="gui_input" from="VBoxContainer/HBoxContainer/MarginContainer2/TextureRectStickLeftBack" to="." method="_on_TextureRectStickLeftBack_gui_input"]
 [connection signal="button_down" from="VBoxContainer/HBoxContainer/MarginContainer/TextureButtonJump" to="." method="_on_TextureButtonJump_button_down"]
 [connection signal="button_up" from="VBoxContainer/HBoxContainer/MarginContainer/TextureButtonJump" to="." method="_on_TextureButtonJump_button_up"]
+[connection signal="gui_input" from="VBoxContainer/HBoxContainer/MarginContainer/TextureButtonJump" to="." method="_on_TextureButtonJump_gui_input"]
