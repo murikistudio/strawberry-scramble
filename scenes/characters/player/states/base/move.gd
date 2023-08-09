@@ -4,7 +4,7 @@ class_name PlayerStateMove
 
 
 # State overrides
-func input(_event: InputEvent) -> BaseState:
+func process(_delta: float) -> BaseState:
 	player.input_move_axis = Input.get_vector(
 		"move_left", "move_right",
 		"move_down", "move_up"
