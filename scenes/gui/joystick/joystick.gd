@@ -15,6 +15,10 @@ onready var _texture_button_pause: TextureButton = find_node("TextureButtonPause
 
 
 func _ready() -> void:
+	if OS.get_name() == "Android":
+		visible = true
+		return
+
 	visible = enabled
 
 
