@@ -65,4 +65,3 @@ func update_hud() -> void:
 
 	else:
 		_texture_rect_door.self_modulate.a = 0.6
-		_texture_rect_trophy.texture = null

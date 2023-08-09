@@ -1,7 +1,7 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://scenes/gui/hud/hud.gd" type="Script" id=1]
-[ext_resource path="res://resources/themes/font_medium.tres" type="Theme" id=2]
+[ext_resource path="res://textures/icons/no_trophy.svg" type="Texture" id=2]
 [ext_resource path="res://resources/themes/default_theme.tres" type="Theme" id=3]
 [ext_resource path="res://textures/hud/strawberry.svg" type="Texture" id=4]
 [ext_resource path="res://addons/simple-gui-transitions/transition.gd" type="Script" id=5]
@@ -9,17 +9,30 @@
 [ext_resource path="res://textures/hud/door_closed.svg" type="Texture" id=7]
 [ext_resource path="res://textures/hud/clock.svg" type="Texture" id=8]
 [ext_resource path="res://textures/hud/door_opened.svg" type="Texture" id=9]
-[ext_resource path="res://textures/icons/gold.svg" type="Texture" id=10]
+[ext_resource path="res://resources/themes/font_small.tres" type="Theme" id=11]
 
-[sub_resource type="Gradient" id=5]
-offsets = PoolRealArray( 0, 0.703911 )
-colors = PoolColorArray( 0, 0, 0, 0.882353, 0, 0, 0, 0 )
+[sub_resource type="StyleBoxFlat" id=7]
+bg_color = Color( 0.71, 0.4473, 0.4473, 1 )
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color( 0.678431, 0.278431, 0.278431, 1 )
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
 
-[sub_resource type="GradientTexture2D" id=6]
-gradient = SubResource( 5 )
-width = 512
-height = 512
-fill_to = Vector2( 0, 1 )
+[sub_resource type="Theme" id=9]
+MarginContainer/constants/margin_bottom = 16
+MarginContainer/constants/margin_left = 8
+MarginContainer/constants/margin_right = 8
+MarginContainer/constants/margin_top = 8
+
+[sub_resource type="StyleBoxFlat" id=8]
+bg_color = Color( 0.91, 0.5187, 0.5187, 1 )
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color( 0.678431, 0.278431, 0.278431, 1 )
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_left = 16
 
 [node name="Hud" type="Control"]
 anchor_right = 1.0
@@ -32,46 +45,34 @@ texture_door_opened = ExtResource( 9 )
 [node name="GuiTransition" type="Node" parent="."]
 script = ExtResource( 5 )
 layout = NodePath("..")
-controls = [ NodePath("../MarginContainer/VBoxContainer/HBoxContainer/TextureRectCollected"), NodePath("../MarginContainer/VBoxContainer/HBoxContainer/LabelCollected"), NodePath("../MarginContainer/VBoxContainer/HBoxContainer/TextureRectDoor"), NodePath("../MarginContainer/VBoxContainer/HBoxContainer/TextureRectTime"), NodePath("../MarginContainer/VBoxContainer/HBoxContainer/LabelTime") ]
+controls = [ NodePath("../Panel/MarginContainer/HBoxContainer/TextureRectCollected"), NodePath("../Panel/MarginContainer/HBoxContainer/LabelCollected"), NodePath("../Panel/MarginContainer/HBoxContainer/TextureRectTrophy"), NodePath("../Panel/MarginContainer/HBoxContainer/TextureRectDoor"), NodePath("../Panel2/MarginContainer/HBoxContainer/TextureRectTime"), NodePath("../Panel2/MarginContainer/HBoxContainer/LabelTime") ]
 
 [node name="ContainerDialogBox" parent="." instance=ExtResource( 6 )]
 
-[node name="TextureRectGradient" type="TextureRect" parent="."]
-anchor_right = 1.0
-anchor_bottom = 0.2
-mouse_filter = 2
-texture = SubResource( 6 )
-expand = true
-stretch_mode = 1
+[node name="Panel2" type="Panel" parent="."]
+anchor_left = 0.85
+anchor_top = 0.15
+anchor_right = 0.98
+anchor_bottom = 0.25
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/panel = SubResource( 7 )
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
+[node name="MarginContainer" type="MarginContainer" parent="Panel2"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-mouse_filter = 2
-custom_constants/margin_right = 30
-custom_constants/margin_top = 30
-custom_constants/margin_left = 30
-custom_constants/margin_bottom = 30
+theme = SubResource( 9 )
+custom_constants/margin_top = 16
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
-margin_left = 30.0
-margin_top = 30.0
-margin_right = 1250.0
-margin_bottom = 690.0
-mouse_filter = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel2/MarginContainer"]
+margin_left = 8.0
+margin_top = 16.0
+margin_right = 158.0
+margin_bottom = 55.0
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
-margin_right = 1220.0
-margin_bottom = 93.0
-mouse_filter = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-
-[node name="TextureRectTime" type="TextureRect" parent="MarginContainer/VBoxContainer/HBoxContainer"]
-margin_right = 108.0
-margin_bottom = 93.0
+[node name="TextureRectTime" type="TextureRect" parent="Panel2/MarginContainer/HBoxContainer"]
+margin_right = 73.0
+margin_bottom = 39.0
 rect_pivot_offset = Vector2( 60, 49 )
 mouse_filter = 2
 size_flags_horizontal = 3
@@ -80,55 +81,43 @@ texture = ExtResource( 8 )
 expand = true
 stretch_mode = 6
 
-[node name="LabelTime" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer"]
-margin_left = 112.0
-margin_right = 221.0
-margin_bottom = 93.0
+[node name="LabelTime" type="Label" parent="Panel2/MarginContainer/HBoxContainer"]
+margin_left = 77.0
+margin_right = 150.0
+margin_bottom = 39.0
 rect_pivot_offset = Vector2( 54, 48 )
 size_flags_horizontal = 3
 size_flags_vertical = 3
-theme = ExtResource( 2 )
+theme = ExtResource( 11 )
 text = "0s"
-align = 1
 valign = 1
 
-[node name="Control3" type="Control" parent="MarginContainer/VBoxContainer/HBoxContainer"]
-margin_left = 225.0
-margin_right = 769.0
-margin_bottom = 93.0
-mouse_filter = 2
+[node name="Panel" type="Panel" parent="."]
+anchor_left = 0.7
+anchor_top = 0.04
+anchor_right = 0.98
+anchor_bottom = 0.16
+size_flags_horizontal = 0
+size_flags_vertical = 0
+size_flags_stretch_ratio = 4.0
+custom_styles/panel = SubResource( 8 )
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = SubResource( 9 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/MarginContainer"]
+margin_left = 8.0
+margin_top = 8.0
+margin_right = 350.0
+margin_bottom = 70.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-size_flags_stretch_ratio = 5.0
 
-[node name="TextureRectTrophy" type="TextureRect" parent="MarginContainer/VBoxContainer/HBoxContainer"]
-margin_left = 773.0
-margin_right = 881.0
-margin_bottom = 93.0
-rect_pivot_offset = Vector2( 60, 49 )
-mouse_filter = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-texture = ExtResource( 10 )
-expand = true
-stretch_mode = 6
-
-[node name="TextureRectDoor" type="TextureRect" parent="MarginContainer/VBoxContainer/HBoxContainer"]
-margin_left = 885.0
-margin_right = 994.0
-margin_bottom = 93.0
-rect_pivot_offset = Vector2( 60, 49 )
-mouse_filter = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-texture = ExtResource( 7 )
-expand = true
-stretch_mode = 6
-
-[node name="TextureRectCollected" type="TextureRect" parent="MarginContainer/VBoxContainer/HBoxContainer"]
-margin_left = 998.0
-margin_right = 1107.0
-margin_bottom = 93.0
+[node name="TextureRectCollected" type="TextureRect" parent="Panel/MarginContainer/HBoxContainer"]
+margin_right = 82.0
+margin_bottom = 62.0
 rect_pivot_offset = Vector2( 60, 49 )
 mouse_filter = 2
 size_flags_horizontal = 3
@@ -137,23 +126,36 @@ texture = ExtResource( 4 )
 expand = true
 stretch_mode = 6
 
-[node name="LabelCollected" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer"]
-margin_left = 1111.0
-margin_right = 1220.0
-margin_bottom = 93.0
+[node name="LabelCollected" type="Label" parent="Panel/MarginContainer/HBoxContainer"]
+margin_left = 86.0
+margin_right = 169.0
+margin_bottom = 62.0
 rect_pivot_offset = Vector2( 54, 48 )
 size_flags_horizontal = 3
 size_flags_vertical = 3
-theme = ExtResource( 2 )
 text = "0/10"
-align = 1
 valign = 1
 
-[node name="Control" type="Control" parent="MarginContainer/VBoxContainer"]
-margin_top = 97.0
-margin_right = 1220.0
-margin_bottom = 660.0
+[node name="TextureRectTrophy" type="TextureRect" parent="Panel/MarginContainer/HBoxContainer"]
+margin_left = 173.0
+margin_right = 255.0
+margin_bottom = 62.0
+rect_pivot_offset = Vector2( 60, 49 )
 mouse_filter = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-size_flags_stretch_ratio = 6.0
+texture = ExtResource( 2 )
+expand = true
+stretch_mode = 6
+
+[node name="TextureRectDoor" type="TextureRect" parent="Panel/MarginContainer/HBoxContainer"]
+margin_left = 259.0
+margin_right = 342.0
+margin_bottom = 62.0
+rect_pivot_offset = Vector2( 60, 49 )
+mouse_filter = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource( 7 )
+expand = true
+stretch_mode = 6
