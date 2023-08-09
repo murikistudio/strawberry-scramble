@@ -3,16 +3,17 @@
 importer="texture"
 type="StreamTexture"
 path.s3tc="res://.import/water_splash.png-7e40e043cb16ad6261967e0ef812ca72.s3tc.stex"
+path.etc2="res://.import/water_splash.png-7e40e043cb16ad6261967e0ef812ca72.etc2.stex"
 path.etc="res://.import/water_splash.png-7e40e043cb16ad6261967e0ef812ca72.etc.stex"
 metadata={
-"imported_formats": [ "s3tc", "etc" ],
+"imported_formats": [ "s3tc", "etc2", "etc" ],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://scenes/effects/water_splash/src/water_splash.png"
-dest_files=[ "res://.import/water_splash.png-7e40e043cb16ad6261967e0ef812ca72.s3tc.stex", "res://.import/water_splash.png-7e40e043cb16ad6261967e0ef812ca72.etc.stex" ]
+dest_files=[ "res://.import/water_splash.png-7e40e043cb16ad6261967e0ef812ca72.s3tc.stex", "res://.import/water_splash.png-7e40e043cb16ad6261967e0ef812ca72.etc2.stex", "res://.import/water_splash.png-7e40e043cb16ad6261967e0ef812ca72.etc.stex" ]
 
 [params]
 

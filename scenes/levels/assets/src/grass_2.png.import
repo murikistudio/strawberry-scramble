@@ -3,16 +3,17 @@
 importer="texture"
 type="StreamTexture"
 path.s3tc="res://.import/grass_2.png-2e881971a648402734ecd74f81524e13.s3tc.stex"
+path.etc2="res://.import/grass_2.png-2e881971a648402734ecd74f81524e13.etc2.stex"
 path.etc="res://.import/grass_2.png-2e881971a648402734ecd74f81524e13.etc.stex"
 metadata={
-"imported_formats": [ "s3tc", "etc" ],
+"imported_formats": [ "s3tc", "etc2", "etc" ],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://scenes/levels/assets/src/grass_2.png"
-dest_files=[ "res://.import/grass_2.png-2e881971a648402734ecd74f81524e13.s3tc.stex", "res://.import/grass_2.png-2e881971a648402734ecd74f81524e13.etc.stex" ]
+dest_files=[ "res://.import/grass_2.png-2e881971a648402734ecd74f81524e13.s3tc.stex", "res://.import/grass_2.png-2e881971a648402734ecd74f81524e13.etc2.stex", "res://.import/grass_2.png-2e881971a648402734ecd74f81524e13.etc.stex" ]
 
 [params]
 
