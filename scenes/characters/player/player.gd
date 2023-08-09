@@ -75,8 +75,13 @@ func _physics_process(delta: float) -> void:
 		get_tree().reload_current_scene()
 
 
-func _unhandled_input(_event: InputEvent) -> void:
-	if not dead and not GameState.completed and Input.is_action_just_pressed("pause"):
+func _process(_delta: float) -> void:
+	if (
+		not dead
+		and not GameState.completed
+		and not get_tree().paused
+		and Input.is_action_just_pressed("pause")
+	):
 		GameEvents.emit_signal("level_paused")
 		get_tree().paused = true
 
