@@ -20,6 +20,7 @@ data_*/
 !/release/.gdignore
 /.idea
 *.kra
+*.*~
 
 # Android specific ignores
 /android/build/*
