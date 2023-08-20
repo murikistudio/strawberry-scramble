@@ -1,0 +1,22 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://scenes/levels/assets/src/bloco_central.gltf" type="PackedScene" id=1]
+[ext_resource path="res://scenes/levels/assets/src/bloco_canto3.gltf" type="PackedScene" id=2]
+[ext_resource path="res://scenes/levels/assets/src/bloco_pedra.gltf" type="PackedScene" id=3]
+[ext_resource path="res://scenes/levels/assets/src/bloco_canto2.gltf" type="PackedScene" id=4]
+[ext_resource path="res://scenes/levels/assets/src/bloco_canto.gltf" type="PackedScene" id=5]
+[ext_resource path="res://scenes/levels/assets/src/bloco_lateral.gltf" type="PackedScene" id=6]
+
+[node name="GridMap" type="Spatial"]
+
+[node name="bloco_canto2" parent="." instance=ExtResource( 4 )]
+
+[node name="bloco_canto3" parent="." instance=ExtResource( 2 )]
+
+[node name="bloco_canto" parent="." instance=ExtResource( 5 )]
+
+[node name="bloco_central" parent="." instance=ExtResource( 1 )]
+
+[node name="bloco_lateral" parent="." instance=ExtResource( 6 )]
+
+[node name="bloco_pedra" parent="." instance=ExtResource( 3 )]
