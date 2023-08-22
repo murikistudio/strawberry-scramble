@@ -9,8 +9,10 @@
 [node name="Fence" parent="." instance=ExtResource( 3 )]
 
 [node name="FenceCorner" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0 )
 
 [node name="BigFence" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, 0 )
 
 [editable path="Fence"]
 [editable path="FenceCorner"]
