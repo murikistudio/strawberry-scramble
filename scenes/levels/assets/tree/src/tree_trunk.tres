@@ -1,6 +1,6 @@
 [gd_resource type="SpatialMaterial" load_steps=2 format=2]
 
-[ext_resource path="res://scenes/levels/assets/tree/tree_trunk.png" type="Texture" id=1]
+[ext_resource path="res://scenes/levels/assets/tree/src/tree_trunk.png" type="Texture" id=1]
 
 [resource]
 resource_name = "tree_trunk"

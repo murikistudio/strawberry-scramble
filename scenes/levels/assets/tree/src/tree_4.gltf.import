@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/tree_2.gltf-d11b9a4eaaac93447e278fea1156b932.scn"
+path="res://.import/tree_4.gltf-09f5541f87d606b77024512fdb2c69b6.scn"
 
 [deps]
 
-source_file="res://scenes/levels/assets/tree/tree_2.gltf"
-dest_files=[ "res://.import/tree_2.gltf-d11b9a4eaaac93447e278fea1156b932.scn" ]
+source_file="res://scenes/levels/assets/tree/src/tree_4.gltf"
+dest_files=[ "res://.import/tree_4.gltf-09f5541f87d606b77024512fdb2c69b6.scn" ]
 
 [params]
 

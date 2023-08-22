@@ -1,7 +1,7 @@
 {
     "asset" : {
-        "version" : "2.0",
-        "generator" : "Khronos glTF Blender I/O v1.2.20"
+        "generator" : "Khronos glTF Blender I/O v1.2.20",
+        "version" : "2.0"
     },
     "extensionsUsed" : [
         "KHR_materials_unlit"
@@ -28,8 +28,8 @@
             },
             "pbrMetallicRoughness" : {
                 "baseColorTexture" : {
-                    "index" : 0,
-                    "texCoord" : 0
+                    "texCoord" : 0,
+                    "index" : 0
                 }
             },
             "name" : "grass"
@@ -37,24 +37,24 @@
     ],
     "meshes" : [
         {
+            "name" : "GrassCenter.001",
             "primitives" : [
                 {
-                    "material" : 0,
                     "attributes" : {
                         "POSITION" : 0,
                         "NORMAL" : 1,
                         "TEXCOORD_0" : 2
                     },
+                    "material" : 0,
                     "indices" : 3
                 }
-            ],
-            "name" : "GrassCenter.001"
+            ]
         }
     ],
     "textures" : [
         {
-            "source" : 0,
-            "sampler" : 0
+            "sampler" : 0,
+            "source" : 0
         }
     ],
     "images" : [
@@ -66,37 +66,37 @@
     ],
     "accessors" : [
         {
+            "bufferView" : 0,
             "max" : [
                 1.0000003576278687,
                 0,
                 1.0000003576278687
             ],
+            "type" : "VEC3",
             "componentType" : 5126,
-            "bufferView" : 0,
+            "count" : 4,
             "min" : [
                 -0.9999997019767761,
                 0,
                 -0.9999999403953552
-            ],
-            "count" : 4,
-            "type" : "VEC3"
+            ]
         },
         {
             "bufferView" : 1,
-            "count" : 4,
             "componentType" : 5126,
+            "count" : 4,
             "type" : "VEC3"
         },
         {
             "bufferView" : 2,
-            "count" : 4,
             "componentType" : 5126,
+            "count" : 4,
             "type" : "VEC2"
         },
         {
             "bufferView" : 3,
-            "count" : 6,
             "componentType" : 5123,
+            "count" : 6,
             "type" : "SCALAR"
         }
     ],
@@ -124,10 +124,10 @@
     ],
     "samplers" : [
         {
+            "wrapT" : 10497,
             "wrapS" : 10497,
             "minFilter" : 9986,
-            "magFilter" : 9729,
-            "wrapT" : 10497
+            "magFilter" : 9729
         }
     ],
     "buffers" : [
