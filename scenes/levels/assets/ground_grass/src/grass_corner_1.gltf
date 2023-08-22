@@ -1,0 +1,213 @@
+{
+    "asset" : {
+        "version" : "2.0",
+        "generator" : "Khronos glTF Blender I/O v1.2.20"
+    },
+    "extensionsUsed" : [
+        "KHR_materials_unlit"
+    ],
+    "scene" : 0,
+    "scenes" : [
+        {
+            "nodes" : [
+                1
+            ],
+            "name" : "Scene"
+        }
+    ],
+    "nodes" : [
+        {
+            "mesh" : 0,
+            "name" : "GrassCornerCollider -colonly"
+        },
+        {
+            "mesh" : 1,
+            "name" : "GrassCorner1",
+            "children" : [
+                0
+            ]
+        }
+    ],
+    "materials" : [
+        {
+            "extensions" : {
+                "KHR_materials_unlit" : {}
+            },
+            "pbrMetallicRoughness" : {
+                "baseColorTexture" : {
+                    "index" : 0,
+                    "texCoord" : 0
+                }
+            },
+            "name" : "grass"
+        }
+    ],
+    "meshes" : [
+        {
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "POSITION" : 0,
+                        "NORMAL" : 1,
+                        "TEXCOORD_0" : 2
+                    },
+                    "indices" : 3
+                }
+            ],
+            "name" : "GrassCornerCollider.001"
+        },
+        {
+            "primitives" : [
+                {
+                    "material" : 0,
+                    "attributes" : {
+                        "POSITION" : 4,
+                        "NORMAL" : 5,
+                        "TEXCOORD_0" : 6
+                    },
+                    "indices" : 7
+                }
+            ],
+            "name" : "GrassCorner1.001"
+        }
+    ],
+    "textures" : [
+        {
+            "source" : 0,
+            "sampler" : 0
+        }
+    ],
+    "images" : [
+        {
+            "mimeType" : "image/png",
+            "uri" : "grass.png",
+            "name" : "grass.png"
+        }
+    ],
+    "accessors" : [
+        {
+            "max" : [
+                1.0000030994415283,
+                0,
+                0.9999988675117493
+            ],
+            "componentType" : 5126,
+            "bufferView" : 0,
+            "min" : [
+                -0.9999975562095642,
+                -2,
+                -1.000001072883606
+            ],
+            "count" : 21,
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 1,
+            "count" : 21,
+            "componentType" : 5126,
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 2,
+            "count" : 21,
+            "componentType" : 5126,
+            "type" : "VEC2"
+        },
+        {
+            "bufferView" : 3,
+            "count" : 27,
+            "componentType" : 5123,
+            "type" : "SCALAR"
+        },
+        {
+            "max" : [
+                1.0000030994415283,
+                -2.9802322387695312e-08,
+                0.9999988079071045
+            ],
+            "componentType" : 5126,
+            "bufferView" : 4,
+            "min" : [
+                -0.9999977350234985,
+                -2,
+                -1.000001072883606
+            ],
+            "count" : 39,
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 5,
+            "count" : 39,
+            "componentType" : 5126,
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 6,
+            "count" : 39,
+            "componentType" : 5126,
+            "type" : "VEC2"
+        },
+        {
+            "bufferView" : 7,
+            "count" : 57,
+            "componentType" : 5123,
+            "type" : "SCALAR"
+        }
+    ],
+    "bufferViews" : [
+        {
+            "buffer" : 0,
+            "byteOffset" : 0,
+            "byteLength" : 252
+        },
+        {
+            "buffer" : 0,
+            "byteOffset" : 252,
+            "byteLength" : 252
+        },
+        {
+            "buffer" : 0,
+            "byteOffset" : 504,
+            "byteLength" : 168
+        },
+        {
+            "buffer" : 0,
+            "byteOffset" : 672,
+            "byteLength" : 54
+        },
+        {
+            "buffer" : 0,
+            "byteOffset" : 728,
+            "byteLength" : 468
+        },
+        {
+            "buffer" : 0,
+            "byteOffset" : 1196,
+            "byteLength" : 468
+        },
+        {
+            "buffer" : 0,
+            "byteOffset" : 1664,
+            "byteLength" : 312
+        },
+        {
+            "buffer" : 0,
+            "byteOffset" : 1976,
+            "byteLength" : 114
+        }
+    ],
+    "samplers" : [
+        {
+            "wrapS" : 10497,
+            "minFilter" : 9986,
+            "magFilter" : 9729,
+            "wrapT" : 10497
+        }
+    ],
+    "buffers" : [
+        {
+            "uri" : "grass_corner_1.bin",
+            "byteLength" : 2092
+        }
+    ]
+}

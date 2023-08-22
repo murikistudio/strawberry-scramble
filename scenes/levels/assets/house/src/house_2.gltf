@@ -1,0 +1,212 @@
+{
+    "asset" : {
+        "version" : "2.0",
+        "generator" : "Khronos glTF Blender I/O v1.2.20"
+    },
+    "scene" : 0,
+    "scenes" : [
+        {
+            "nodes" : [
+                1
+            ],
+            "name" : "Scene"
+        }
+    ],
+    "nodes" : [
+        {
+            "mesh" : 0,
+            "translation" : [
+                0,
+                1,
+                0
+            ],
+            "name" : "House2Collider -colonly"
+        },
+        {
+            "mesh" : 1,
+            "children" : [
+                0
+            ],
+            "name" : "House2Mesh"
+        }
+    ],
+    "materials" : [
+        {
+            "name" : "house",
+            "pbrMetallicRoughness" : {
+                "baseColorTexture" : {
+                    "texCoord" : 0,
+                    "index" : 0
+                }
+            }
+        }
+    ],
+    "meshes" : [
+        {
+            "primitives" : [
+                {
+                    "indices" : 3,
+                    "attributes" : {
+                        "NORMAL" : 0,
+                        "POSITION" : 1,
+                        "TEXCOORD_0" : 2
+                    }
+                }
+            ],
+            "name" : "House2Collider.001"
+        },
+        {
+            "primitives" : [
+                {
+                    "indices" : 7,
+                    "material" : 0,
+                    "attributes" : {
+                        "NORMAL" : 4,
+                        "POSITION" : 5,
+                        "TEXCOORD_0" : 6
+                    }
+                }
+            ],
+            "name" : "House2Mesh.001"
+        }
+    ],
+    "textures" : [
+        {
+            "source" : 0,
+            "sampler" : 0
+        }
+    ],
+    "images" : [
+        {
+            "name" : "house.png",
+            "mimeType" : "image/png",
+            "uri" : "house.png"
+        }
+    ],
+    "accessors" : [
+        {
+            "componentType" : 5126,
+            "type" : "VEC3",
+            "count" : 62,
+            "bufferView" : 0
+        },
+        {
+            "type" : "VEC3",
+            "bufferView" : 1,
+            "componentType" : 5126,
+            "min" : [
+                -2.460819959640503,
+                -1.0638246536254883,
+                -2.0663270950317383
+            ],
+            "max" : [
+                2.460819959640503,
+                3.1815967559814453,
+                2.6350369453430176
+            ],
+            "count" : 62
+        },
+        {
+            "componentType" : 5126,
+            "type" : "VEC2",
+            "count" : 62,
+            "bufferView" : 2
+        },
+        {
+            "componentType" : 5123,
+            "type" : "SCALAR",
+            "count" : 96,
+            "bufferView" : 3
+        },
+        {
+            "componentType" : 5126,
+            "type" : "VEC3",
+            "count" : 960,
+            "bufferView" : 4
+        },
+        {
+            "type" : "VEC3",
+            "bufferView" : 5,
+            "componentType" : 5126,
+            "min" : [
+                -2.4584054946899414,
+                -0.06382465362548828,
+                -2.0730090141296387
+            ],
+            "max" : [
+                2.4584057331085205,
+                4.172301769256592,
+                2.6350369453430176
+            ],
+            "count" : 960
+        },
+        {
+            "componentType" : 5126,
+            "type" : "VEC2",
+            "count" : 960,
+            "bufferView" : 6
+        },
+        {
+            "componentType" : 5123,
+            "type" : "SCALAR",
+            "count" : 1428,
+            "bufferView" : 7
+        }
+    ],
+    "bufferViews" : [
+        {
+            "byteOffset" : 0,
+            "buffer" : 0,
+            "byteLength" : 744
+        },
+        {
+            "byteOffset" : 744,
+            "buffer" : 0,
+            "byteLength" : 744
+        },
+        {
+            "byteOffset" : 1488,
+            "buffer" : 0,
+            "byteLength" : 496
+        },
+        {
+            "byteOffset" : 1984,
+            "buffer" : 0,
+            "byteLength" : 192
+        },
+        {
+            "byteOffset" : 2176,
+            "buffer" : 0,
+            "byteLength" : 11520
+        },
+        {
+            "byteOffset" : 13696,
+            "buffer" : 0,
+            "byteLength" : 11520
+        },
+        {
+            "byteOffset" : 25216,
+            "buffer" : 0,
+            "byteLength" : 7680
+        },
+        {
+            "byteOffset" : 32896,
+            "buffer" : 0,
+            "byteLength" : 2856
+        }
+    ],
+    "samplers" : [
+        {
+            "wrapS" : 10497,
+            "minFilter" : 9986,
+            "wrapT" : 10497,
+            "magFilter" : 9729
+        }
+    ],
+    "buffers" : [
+        {
+            "byteLength" : 35752,
+            "uri" : "house_2.bin"
+        }
+    ]
+}

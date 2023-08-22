@@ -1,15 +1,16 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
-[ext_resource path="res://resources/ilhas_meshlibrary.tres" type="MeshLibrary" id=1]
+[ext_resource path="res://scenes/levels/assets/ground_grass/lib_ground_grass.meshlib" type="MeshLibrary" id=1]
 [ext_resource path="res://scenes/characters/player/player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://resources/level_env.tres" type="Environment" id=3]
-[ext_resource path="res://scenes/levels/assets/house.tscn" type="PackedScene" id=4]
-[ext_resource path="res://scenes/levels/assets/rock_1.tscn" type="PackedScene" id=8]
-[ext_resource path="res://scenes/levels/assets/water.tscn" type="PackedScene" id=12]
-[ext_resource path="res://scenes/levels/assets/tree_2.tscn" type="PackedScene" id=13]
-[ext_resource path="res://scenes/levels/assets/spyne_vine.tscn" type="PackedScene" id=16]
-[ext_resource path="res://scenes/levels/assets/strawberry.tscn" type="PackedScene" id=18]
-[ext_resource path="res://scenes/levels/assets/checkpoint.tscn" type="PackedScene" id=22]
+[ext_resource path="res://scenes/levels/assets/house/house.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/levels/assets/fence/lib_fences.meshlib" type="MeshLibrary" id=5]
+[ext_resource path="res://scenes/levels/assets/tree/lib_trees.meshlib" type="MeshLibrary" id=6]
+[ext_resource path="res://addons/utils/editor_visibility.gd" type="Script" id=7]
+[ext_resource path="res://scenes/levels/assets/bridge/lib_bridges.meshlib" type="MeshLibrary" id=8]
+[ext_resource path="res://scenes/levels/assets/strawberry/strawberry.tscn" type="PackedScene" id=9]
+[ext_resource path="res://scenes/levels/assets/misc/lib_misc.meshlib" type="MeshLibrary" id=10]
+[ext_resource path="res://scenes/levels/assets/water/water.tscn" type="PackedScene" id=12]
 
 [node name="Test" type="Spatial"]
 
@@ -17,27 +18,16 @@
 environment = ExtResource( 3 )
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1181, 1.57684, -1.2 )
-
-[node name="Strawberry" parent="." instance=ExtResource( 18 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.378181, 1, -5 )
-
-[node name="Strawberry2" parent="." instance=ExtResource( 18 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.37818, 1, -3 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, -1.2 )
 
 [node name="House" parent="." instance=ExtResource( 4 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0339391, 0.676777, 2.14478 )
-
-[node name="Bridges" type="Spatial" parent="."]
-transform = Transform( -0.994243, 0, 0.107149, 0, 1, 0, -0.107149, 0, -0.994243, 19.1604, 1.96595, -2.68906 )
-
-[node name="Rocks" type="Spatial" parent="."]
-
-[node name="Rock1" parent="Rocks" instance=ExtResource( 8 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9.66851, 0, -13.0583 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 2 )
 
 [node name="Water" type="Spatial" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000423431, 0.0384874, 0.0374317 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0 )
+
+[node name="EditorVisibility" type="Node" parent="Water"]
+script = ExtResource( 7 )
 
 [node name="Water" parent="Water" instance=ExtResource( 12 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, 0 )
@@ -98,31 +88,74 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -40, 0, 40 )
 [node name="Water20" parent="Water" instance=ExtResource( 12 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -40, 0, -20 )
 
-[node name="Trees" type="Spatial" parent="."]
+[node name="GridMaps" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
 
-[node name="Tree6" parent="Trees" instance=ExtResource( 13 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.04047, 0.767433, 3.09821 )
-
-[node name="Checkpoint" parent="." instance=ExtResource( 22 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.96483, 3.34859, -4.27798 )
-
-[node name="Checkpoint3" parent="." instance=ExtResource( 22 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.79429, 3.34859, -6.42301 )
-
-[node name="Checkpoint2" parent="." instance=ExtResource( 22 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.24805, 1.95099, -3.32752 )
-
-[node name="Visual2" parent="." instance=ExtResource( 16 )]
-transform = Transform( 0.615506, 0, 0, 0, 0.615506, 0, 0, 0, 0.615506, -1.91323, 0.215297, -2.16864 )
-
-[node name="GridMap" type="GridMap" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.2, 0 )
+[node name="Ground" type="GridMap" parent="GridMaps"]
 mesh_library = ExtResource( 1 )
-cell_size = Vector3( 4, 4, 4 )
+cell_size = Vector3( 2, 1, 2 )
+cell_center_y = false
 data = {
-"cells": PoolIntArray( 0, 0, 3, 1, 0, 3, 2, 0, 3, 3, 0, 655364, 65533, 0, 4, 65534, 0, 3, 65535, 0, 3, 0, 1, 1048580, 1, 1, 1048580, 2, 1, 1048580, 3, 1, 655362, 65533, 1, 1048578, 65534, 1, 1048580, 65535, 1, 1048580, 0, 65532, 1441796, 1, 65532, 1441796, 2, 65532, 1441794, 65534, 65532, 2, 65535, 65532, 1441796, 0, 65533, 3, 1, 65533, 3, 2, 65533, 1441792, 3, 65533, 1441794, 65534, 65533, 4, 65535, 65533, 3, 0, 65534, 3, 1, 65534, 3, 2, 65534, 3, 3, 65534, 655364, 65533, 65534, 2, 65534, 65534, 0, 65535, 65534, 3, 0, 65535, 3, 1, 65535, 3, 2, 65535, 3, 3, 65535, 655364, 65533, 65535, 4, 65534, 65535, 3, 65535, 65535, 3 )
+"cells": PoolIntArray( 0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 1048576, 5, 0, 4, 65530, 0, 655364, 65531, 0, 655360, 65532, 0, 0, 65533, 0, 0, 65534, 0, 0, 65535, 0, 0, 0, 1, 0, 1, 1, 0, 2, 1, 0, 3, 1, 0, 4, 1, 1048576, 5, 1, 4, 65530, 1, 655364, 65531, 1, 655360, 65532, 1, 0, 65533, 1, 0, 65534, 1, 0, 65535, 1, 0, 0, 2, 0, 1, 2, 0, 2, 2, 0, 3, 2, 0, 4, 2, 1048576, 5, 2, 4, 65530, 2, 655364, 65531, 2, 655360, 65532, 2, 0, 65533, 2, 0, 65534, 2, 0, 65535, 2, 0, 0, 3, 0, 1, 3, 0, 2, 3, 655360, 3, 3, 0, 4, 3, 2, 5, 3, 1, 65530, 3, 1441793, 65531, 3, 1441794, 65532, 3, 655360, 65533, 3, 0, 65534, 3, 0, 65535, 3, 0, 0, 4, 655360, 1, 4, 655360, 2, 4, 2, 3, 4, 1441796, 4, 4, 1, 65531, 4, 1441793, 65532, 4, 1441794, 65533, 4, 655360, 65534, 4, 655360, 65535, 4, 655360, 0, 5, 1441796, 1, 5, 1441796, 2, 5, 1, 65532, 5, 1441793, 65533, 5, 1441796, 65534, 5, 1441796, 65535, 5, 1441796, 0, 65524, 1048580, 1, 65524, 1048577, 65535, 65524, 655361, 0, 65525, 1048576, 1, 65525, 4, 65535, 65525, 655364, 0, 65526, 1441796, 1, 65526, 1, 65535, 65526, 1441793, 0, 65532, 1048580, 1, 65532, 1048580, 2, 65532, 1048580, 3, 65532, 1048577, 65532, 65532, 655361, 65533, 65532, 1048580, 65534, 65532, 1048580, 65535, 65532, 1048580, 0, 65533, 1048576, 1, 65533, 1048576, 2, 65533, 1048576, 3, 65533, 1048578, 4, 65533, 1048577, 65531, 65533, 655361, 65532, 65533, 655362, 65533, 65533, 1048576, 65534, 65533, 1048576, 65535, 65533, 1048576, 0, 65534, 0, 1, 65534, 0, 2, 65534, 0, 3, 65534, 0, 4, 65534, 1048578, 5, 65534, 1048577, 65530, 65534, 655361, 65531, 65534, 655362, 65532, 65534, 0, 65533, 65534, 0, 65534, 65534, 0, 65535, 65534, 0, 0, 65535, 0, 1, 65535, 0, 2, 65535, 0, 3, 65535, 0, 4, 65535, 1048576, 5, 65535, 4, 65530, 65535, 655364, 65531, 65535, 655360, 65532, 65535, 0, 65533, 65535, 0, 65534, 65535, 0, 65535, 65535, 0 )
 }
 __meta__ = {
 "_editor_clip_": 0,
 "_editor_floor_": Vector3( 0, 0, 0 )
 }
+
+[node name="Fences" type="GridMap" parent="GridMaps"]
+mesh_library = ExtResource( 5 )
+cell_center_y = false
+data = {
+"cells": PoolIntArray( 4, 0, 1048576, 65530, 0, 1048576, 4, 1, 1048576, 65530, 1, 1048576, 4, 2, 1048576, 65530, 2, 1048576, 3, 3, 655361, 4, 3, 1, 65530, 3, 1441793, 65531, 3, 1048577, 2, 4, 655361, 3, 4, 1, 65531, 4, 1441793, 65532, 4, 1048577, 0, 5, 655360, 1, 5, 655360, 2, 5, 1, 65532, 5, 1441793, 65533, 5, 655360, 65534, 5, 655360, 65535, 5, 655360, 0, 65533, 0, 1, 65533, 0, 2, 65533, 1048577, 65532, 65533, 655361, 65533, 65533, 0, 65534, 65533, 0, 65535, 65533, 0, 2, 65534, 1441793, 3, 65534, 1048577, 65531, 65534, 655361, 65532, 65534, 1, 3, 65535, 1441793, 4, 65535, 1048577, 65530, 65535, 655361, 65531, 65535, 1 )
+}
+__meta__ = {
+"_editor_clip_": 0,
+"_editor_floor_": Vector3( 0, 0, 0 )
+}
+
+[node name="Trees" type="GridMap" parent="GridMaps"]
+mesh_library = ExtResource( 6 )
+cell_center_y = false
+data = {
+"cells": PoolIntArray( 65531, 1, 1048576, 3, 2, 655360, 2, 3, 1441794, 65533, 3, 655362, 0, 4, 1441795, 1, 4, 655361, 65534, 4, 1048576, 2, 65532, 1048579, 65533, 65532, 2, 1, 65534, 2, 65534, 65534, 655363, 2, 65535, 1, 5, 65535, 3, 65533, 65535, 655361 )
+}
+__meta__ = {
+"_editor_clip_": 0,
+"_editor_floor_": Vector3( 0, 0, 0 )
+}
+
+[node name="Bridges" type="GridMap" parent="GridMaps"]
+mesh_library = ExtResource( 8 )
+cell_center_y = false
+data = {
+"cells": PoolIntArray( 0, 65527, 0, 0, 65528, 1, 0, 65530, 1, 0, 65531, 0 )
+}
+__meta__ = {
+"_editor_clip_": 0,
+"_editor_floor_": Vector3( 0, 0, 0 )
+}
+
+[node name="Misc" type="GridMap" parent="GridMaps"]
+mesh_library = ExtResource( 10 )
+cell_center_y = false
+data = {
+"cells": PoolIntArray( 1, 65525, 1441794, 65535, 65532, 655362 )
+}
+__meta__ = {
+"_editor_clip_": 0
+}
+
+[node name="Strawberries" type="Spatial" parent="."]
+
+[node name="Strawberry3" parent="Strawberries" instance=ExtResource( 9 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, -9 )
+
+[node name="Strawberry4" parent="Strawberries" instance=ExtResource( 9 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, -11 )
+
+[node name="Strawberry5" parent="Strawberries" instance=ExtResource( 9 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, -15 )
+
+[node name="Strawberry6" parent="Strawberries" instance=ExtResource( 9 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, -17 )

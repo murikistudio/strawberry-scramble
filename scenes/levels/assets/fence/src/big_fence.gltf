@@ -1,0 +1,201 @@
+{
+    "asset" : {
+        "generator" : "Khronos glTF Blender I/O v1.2.20",
+        "version" : "2.0"
+    },
+    "extensionsUsed" : [
+        "KHR_materials_unlit"
+    ],
+    "scene" : 0,
+    "scenes" : [
+        {
+            "nodes" : [
+                1
+            ],
+            "name" : "Scene"
+        }
+    ],
+    "nodes" : [
+        {
+            "mesh" : 0,
+            "name" : "BigFenceCollider -colonly"
+        },
+        {
+            "mesh" : 1,
+            "children" : [
+                0
+            ],
+            "name" : "BigFence"
+        }
+    ],
+    "materials" : [
+        {
+            "extensions" : {
+                "KHR_materials_unlit" : {}
+            },
+            "pbrMetallicRoughness" : {
+                "baseColorTexture" : {
+                    "index" : 0,
+                    "texCoord" : 0
+                }
+            },
+            "name" : "big_fence"
+        }
+    ],
+    "meshes" : [
+        {
+            "primitives" : [
+                {
+                    "indices" : 2,
+                    "attributes" : {
+                        "POSITION" : 0,
+                        "NORMAL" : 1
+                    }
+                }
+            ],
+            "name" : "BigFenceCollider -colonly.001"
+        },
+        {
+            "primitives" : [
+                {
+                    "material" : 0,
+                    "attributes" : {
+                        "POSITION" : 3,
+                        "NORMAL" : 4,
+                        "TEXCOORD_0" : 5
+                    },
+                    "indices" : 6
+                }
+            ],
+            "name" : "BigFence.001"
+        }
+    ],
+    "textures" : [
+        {
+            "source" : 0,
+            "sampler" : 0
+        }
+    ],
+    "images" : [
+        {
+            "uri" : "big_fence.png",
+            "name" : "big_fence",
+            "mimeType" : "image/png"
+        }
+    ],
+    "accessors" : [
+        {
+            "componentType" : 5126,
+            "min" : [
+                -1,
+                0,
+                -0.1600000262260437
+            ],
+            "max" : [
+                1,
+                2.1000001430511475,
+                0.1600000262260437
+            ],
+            "bufferView" : 0,
+            "type" : "VEC3",
+            "count" : 24
+        },
+        {
+            "componentType" : 5126,
+            "type" : "VEC3",
+            "bufferView" : 1,
+            "count" : 24
+        },
+        {
+            "componentType" : 5123,
+            "type" : "SCALAR",
+            "bufferView" : 2,
+            "count" : 36
+        },
+        {
+            "componentType" : 5126,
+            "min" : [
+                -1.0000003576278687,
+                -0.005461513996124268,
+                -0.1517321616411209
+            ],
+            "max" : [
+                1.0000004768371582,
+                2.1618638038635254,
+                0.15173232555389404
+            ],
+            "bufferView" : 3,
+            "type" : "VEC3",
+            "count" : 160
+        },
+        {
+            "componentType" : 5126,
+            "type" : "VEC3",
+            "bufferView" : 4,
+            "count" : 160
+        },
+        {
+            "componentType" : 5126,
+            "type" : "VEC2",
+            "bufferView" : 5,
+            "count" : 160
+        },
+        {
+            "componentType" : 5123,
+            "type" : "SCALAR",
+            "bufferView" : 6,
+            "count" : 222
+        }
+    ],
+    "bufferViews" : [
+        {
+            "byteOffset" : 0,
+            "byteLength" : 288,
+            "buffer" : 0
+        },
+        {
+            "byteOffset" : 288,
+            "byteLength" : 288,
+            "buffer" : 0
+        },
+        {
+            "byteOffset" : 576,
+            "byteLength" : 72,
+            "buffer" : 0
+        },
+        {
+            "byteOffset" : 648,
+            "byteLength" : 1920,
+            "buffer" : 0
+        },
+        {
+            "byteOffset" : 2568,
+            "byteLength" : 1920,
+            "buffer" : 0
+        },
+        {
+            "byteOffset" : 4488,
+            "byteLength" : 1280,
+            "buffer" : 0
+        },
+        {
+            "byteOffset" : 5768,
+            "byteLength" : 444,
+            "buffer" : 0
+        }
+    ],
+    "samplers" : [
+        {
+            "minFilter" : 9986,
+            "wrapS" : 10497,
+            "magFilter" : 9729,
+            "wrapT" : 10497
+        }
+    ],
+    "buffers" : [
+        {
+            "uri" : "big_fence.bin",
+            "byteLength" : 6212
+        }
+    ]
+}

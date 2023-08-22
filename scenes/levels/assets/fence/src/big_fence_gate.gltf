@@ -1,0 +1,500 @@
+{
+    "asset" : {
+        "version" : "2.0",
+        "generator" : "Khronos glTF Blender I/O v1.2.20"
+    },
+    "extensionsUsed" : [
+        "KHR_materials_unlit"
+    ],
+    "scene" : 0,
+    "scenes" : [
+        {
+            "nodes" : [
+                5
+            ],
+            "name" : "Scene"
+        }
+    ],
+    "nodes" : [
+        {
+            "name" : "BigFenceDoorframeCollider -colonly",
+            "mesh" : 0
+        },
+        {
+            "translation" : [
+                0.2427758276462555,
+                0.6936450600624084,
+                0
+            ],
+            "scale" : [
+                0.6936450600624084,
+                0.6936450600624084,
+                0.6936450600624084
+            ],
+            "name" : "BigFenceGateRightCollider -colonly",
+            "mesh" : 1
+        },
+        {
+            "translation" : [
+                -0.75,
+                0,
+                0
+            ],
+            "scale" : [
+                1.4416595697402954,
+                1.4416595697402954,
+                1.4416595697402954
+            ],
+            "children" : [
+                1
+            ],
+            "name" : "BigFenceGateLeft",
+            "mesh" : 2
+        },
+        {
+            "translation" : [
+                -0.2427758276462555,
+                0.6936450600624084,
+                0
+            ],
+            "scale" : [
+                0.6936450600624084,
+                0.6936450600624084,
+                0.6936450600624084
+            ],
+            "name" : "BigFenceGateLeftCollider -colonly",
+            "mesh" : 3
+        },
+        {
+            "translation" : [
+                0.75,
+                0,
+                0
+            ],
+            "scale" : [
+                1.4416595697402954,
+                1.4416595697402954,
+                1.4416595697402954
+            ],
+            "children" : [
+                3
+            ],
+            "name" : "BigFenceGateRight",
+            "mesh" : 4
+        },
+        {
+            "children" : [
+                0,
+                2,
+                4
+            ],
+            "name" : "BigFenceDoorframe",
+            "mesh" : 5
+        }
+    ],
+    "materials" : [
+        {
+            "pbrMetallicRoughness" : {
+                "baseColorTexture" : {
+                    "index" : 0,
+                    "texCoord" : 0
+                }
+            },
+            "extensions" : {
+                "KHR_materials_unlit" : {}
+            },
+            "name" : "big_fence"
+        }
+    ],
+    "meshes" : [
+        {
+            "primitives" : [
+                {
+                    "indices" : 2,
+                    "attributes" : {
+                        "POSITION" : 0,
+                        "NORMAL" : 1
+                    }
+                }
+            ],
+            "name" : "BigFenceDoorframeCollider.001"
+        },
+        {
+            "primitives" : [
+                {
+                    "indices" : 5,
+                    "attributes" : {
+                        "POSITION" : 3,
+                        "NORMAL" : 4
+                    }
+                }
+            ],
+            "name" : "BigFenceGateRightCollider.001"
+        },
+        {
+            "primitives" : [
+                {
+                    "indices" : 9,
+                    "attributes" : {
+                        "POSITION" : 6,
+                        "NORMAL" : 7,
+                        "TEXCOORD_0" : 8
+                    },
+                    "material" : 0
+                }
+            ],
+            "name" : "BigFenceGateLeft.001"
+        },
+        {
+            "primitives" : [
+                {
+                    "indices" : 5,
+                    "attributes" : {
+                        "POSITION" : 10,
+                        "NORMAL" : 11
+                    }
+                }
+            ],
+            "name" : "BigFenceGateLeftCollider.001"
+        },
+        {
+            "primitives" : [
+                {
+                    "indices" : 15,
+                    "attributes" : {
+                        "POSITION" : 12,
+                        "NORMAL" : 13,
+                        "TEXCOORD_0" : 14
+                    },
+                    "material" : 0
+                }
+            ],
+            "name" : "BigFenceGateRight.001"
+        },
+        {
+            "primitives" : [
+                {
+                    "indices" : 19,
+                    "attributes" : {
+                        "POSITION" : 16,
+                        "NORMAL" : 17,
+                        "TEXCOORD_0" : 18
+                    },
+                    "material" : 0
+                }
+            ],
+            "name" : "BigFenceDoorframe.001"
+        }
+    ],
+    "textures" : [
+        {
+            "source" : 0,
+            "sampler" : 0
+        }
+    ],
+    "images" : [
+        {
+            "uri" : "big_fence.png",
+            "mimeType" : "image/png",
+            "name" : "big_fence"
+        }
+    ],
+    "accessors" : [
+        {
+            "componentType" : 5126,
+            "bufferView" : 0,
+            "count" : 40,
+            "max" : [
+                1.0000001192092896,
+                2.1599998474121094,
+                0.15000003576278687
+            ],
+            "min" : [
+                -1.0000001192092896,
+                -1.4901161193847656e-08,
+                -0.15000003576278687
+            ],
+            "type" : "VEC3"
+        },
+        {
+            "componentType" : 5126,
+            "bufferView" : 1,
+            "count" : 40,
+            "type" : "VEC3"
+        },
+        {
+            "componentType" : 5123,
+            "bufferView" : 2,
+            "count" : 72,
+            "type" : "SCALAR"
+        },
+        {
+            "componentType" : 5126,
+            "bufferView" : 3,
+            "count" : 24,
+            "max" : [
+                0.3999999761581421,
+                0.8000000715255737,
+                0.060000017285346985
+            ],
+            "min" : [
+                -0.40000003576278687,
+                -1,
+                -0.060000017285346985
+            ],
+            "type" : "VEC3"
+        },
+        {
+            "componentType" : 5126,
+            "bufferView" : 4,
+            "count" : 24,
+            "type" : "VEC3"
+        },
+        {
+            "componentType" : 5123,
+            "bufferView" : 5,
+            "count" : 36,
+            "type" : "SCALAR"
+        },
+        {
+            "componentType" : 5126,
+            "bufferView" : 6,
+            "count" : 246,
+            "max" : [
+                0.5171252489089966,
+                1.2610868215560913,
+                0.04165331646800041
+            ],
+            "min" : [
+                -0.04933375120162964,
+                0.007099151611328125,
+                -0.04006405547261238
+            ],
+            "type" : "VEC3"
+        },
+        {
+            "componentType" : 5126,
+            "bufferView" : 7,
+            "count" : 246,
+            "type" : "VEC3"
+        },
+        {
+            "componentType" : 5126,
+            "bufferView" : 8,
+            "count" : 246,
+            "type" : "VEC2"
+        },
+        {
+            "componentType" : 5123,
+            "bufferView" : 9,
+            "count" : 372,
+            "type" : "SCALAR"
+        },
+        {
+            "componentType" : 5126,
+            "bufferView" : 10,
+            "count" : 24,
+            "max" : [
+                0.3999999761581421,
+                0.8000000715255737,
+                0.060000017285346985
+            ],
+            "min" : [
+                -0.40000003576278687,
+                -1,
+                -0.060000017285346985
+            ],
+            "type" : "VEC3"
+        },
+        {
+            "componentType" : 5126,
+            "bufferView" : 11,
+            "count" : 24,
+            "type" : "VEC3"
+        },
+        {
+            "componentType" : 5126,
+            "bufferView" : 12,
+            "count" : 242,
+            "max" : [
+                0.048786044120788574,
+                1.2610868215560913,
+                0.04059470817446709
+            ],
+            "min" : [
+                -0.517673134803772,
+                0.007099151611328125,
+                -0.04112262651324272
+            ],
+            "type" : "VEC3"
+        },
+        {
+            "componentType" : 5126,
+            "bufferView" : 13,
+            "count" : 242,
+            "type" : "VEC3"
+        },
+        {
+            "componentType" : 5126,
+            "bufferView" : 14,
+            "count" : 242,
+            "type" : "VEC2"
+        },
+        {
+            "componentType" : 5123,
+            "bufferView" : 15,
+            "count" : 372,
+            "type" : "SCALAR"
+        },
+        {
+            "componentType" : 5126,
+            "bufferView" : 16,
+            "count" : 68,
+            "max" : [
+                1.0000004768371582,
+                2.1618638038635254,
+                0.1517324149608612
+            ],
+            "min" : [
+                -1.0000003576278687,
+                -0.005461513996124268,
+                -0.1517326682806015
+            ],
+            "type" : "VEC3"
+        },
+        {
+            "componentType" : 5126,
+            "bufferView" : 17,
+            "count" : 68,
+            "type" : "VEC3"
+        },
+        {
+            "componentType" : 5126,
+            "bufferView" : 18,
+            "count" : 68,
+            "type" : "VEC2"
+        },
+        {
+            "componentType" : 5123,
+            "bufferView" : 19,
+            "count" : 96,
+            "type" : "SCALAR"
+        }
+    ],
+    "bufferViews" : [
+        {
+            "buffer" : 0,
+            "byteLength" : 480,
+            "byteOffset" : 0
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 480,
+            "byteOffset" : 480
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 144,
+            "byteOffset" : 960
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 288,
+            "byteOffset" : 1104
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 288,
+            "byteOffset" : 1392
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 72,
+            "byteOffset" : 1680
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 2952,
+            "byteOffset" : 1752
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 2952,
+            "byteOffset" : 4704
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 1968,
+            "byteOffset" : 7656
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 744,
+            "byteOffset" : 9624
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 288,
+            "byteOffset" : 10368
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 288,
+            "byteOffset" : 10656
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 2904,
+            "byteOffset" : 10944
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 2904,
+            "byteOffset" : 13848
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 1936,
+            "byteOffset" : 16752
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 744,
+            "byteOffset" : 18688
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 816,
+            "byteOffset" : 19432
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 816,
+            "byteOffset" : 20248
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 544,
+            "byteOffset" : 21064
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 192,
+            "byteOffset" : 21608
+        }
+    ],
+    "samplers" : [
+        {
+            "minFilter" : 9986,
+            "wrapS" : 10497,
+            "wrapT" : 10497,
+            "magFilter" : 9729
+        }
+    ],
+    "buffers" : [
+        {
+            "uri" : "big_fence_gate.bin",
+            "byteLength" : 21800
+        }
+    ]
+}

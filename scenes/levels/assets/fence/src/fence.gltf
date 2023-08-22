@@ -1,0 +1,199 @@
+{
+    "asset" : {
+        "version" : "2.0",
+        "generator" : "Khronos glTF Blender I/O v1.2.20"
+    },
+    "extensionsUsed" : [
+        "KHR_materials_unlit"
+    ],
+    "scene" : 0,
+    "scenes" : [
+        {
+            "nodes" : [
+                0,
+                1
+            ],
+            "name" : "Scene"
+        }
+    ],
+    "nodes" : [
+        {
+            "name" : "FenceMesh",
+            "mesh" : 0
+        },
+        {
+            "name" : "FenceCollider -colonly",
+            "mesh" : 1
+        }
+    ],
+    "materials" : [
+        {
+            "name" : "fence",
+            "pbrMetallicRoughness" : {
+                "baseColorTexture" : {
+                    "index" : 0,
+                    "texCoord" : 0
+                }
+            },
+            "extensions" : {
+                "KHR_materials_unlit" : {}
+            }
+        }
+    ],
+    "meshes" : [
+        {
+            "name" : "FenceMesh.001",
+            "primitives" : [
+                {
+                    "material" : 0,
+                    "attributes" : {
+                        "POSITION" : 0,
+                        "NORMAL" : 1,
+                        "TEXCOORD_0" : 2
+                    },
+                    "indices" : 3
+                }
+            ]
+        },
+        {
+            "name" : "FenceCollider.001",
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "POSITION" : 4,
+                        "NORMAL" : 5
+                    },
+                    "indices" : 6
+                }
+            ]
+        }
+    ],
+    "textures" : [
+        {
+            "sampler" : 0,
+            "source" : 0
+        }
+    ],
+    "images" : [
+        {
+            "name" : "fence.png",
+            "uri" : "fence.png",
+            "mimeType" : "image/png"
+        }
+    ],
+    "accessors" : [
+        {
+            "min" : [
+                -1,
+                -0.014436095952987671,
+                -0.05514500290155411
+            ],
+            "type" : "VEC3",
+            "bufferView" : 0,
+            "count" : 204,
+            "componentType" : 5126,
+            "max" : [
+                1,
+                0.868532657623291,
+                0.05514500290155411
+            ]
+        },
+        {
+            "count" : 204,
+            "componentType" : 5126,
+            "bufferView" : 1,
+            "type" : "VEC3"
+        },
+        {
+            "count" : 204,
+            "componentType" : 5126,
+            "bufferView" : 2,
+            "type" : "VEC2"
+        },
+        {
+            "count" : 306,
+            "componentType" : 5123,
+            "bufferView" : 3,
+            "type" : "SCALAR"
+        },
+        {
+            "min" : [
+                -1,
+                0,
+                -0.062147438526153564
+            ],
+            "type" : "VEC3",
+            "bufferView" : 4,
+            "count" : 24,
+            "componentType" : 5126,
+            "max" : [
+                1,
+                0.8799998760223389,
+                0.062147438526153564
+            ]
+        },
+        {
+            "count" : 24,
+            "componentType" : 5126,
+            "bufferView" : 5,
+            "type" : "VEC3"
+        },
+        {
+            "count" : 36,
+            "componentType" : 5123,
+            "bufferView" : 6,
+            "type" : "SCALAR"
+        }
+    ],
+    "bufferViews" : [
+        {
+            "byteLength" : 2448,
+            "byteOffset" : 0,
+            "buffer" : 0
+        },
+        {
+            "byteLength" : 2448,
+            "byteOffset" : 2448,
+            "buffer" : 0
+        },
+        {
+            "byteLength" : 1632,
+            "byteOffset" : 4896,
+            "buffer" : 0
+        },
+        {
+            "byteLength" : 612,
+            "byteOffset" : 6528,
+            "buffer" : 0
+        },
+        {
+            "byteLength" : 288,
+            "byteOffset" : 7140,
+            "buffer" : 0
+        },
+        {
+            "byteLength" : 288,
+            "byteOffset" : 7428,
+            "buffer" : 0
+        },
+        {
+            "byteLength" : 72,
+            "byteOffset" : 7716,
+            "buffer" : 0
+        }
+    ],
+    "samplers" : [
+        {
+            "minFilter" : 9986,
+            "magFilter" : 9729,
+            "wrapT" : 10497,
+            "wrapS" : 10497
+        }
+    ],
+    "buffers" : [
+        {
+            "uri" : "fence.bin",
+            "byteLength" : 7788
+        }
+    ]
+}

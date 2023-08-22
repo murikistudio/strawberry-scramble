@@ -1,0 +1,195 @@
+{
+    "asset" : {
+        "version" : "2.0",
+        "generator" : "Khronos glTF Blender I/O v1.2.20"
+    },
+    "scene" : 0,
+    "scenes" : [
+        {
+            "name" : "Scene",
+            "nodes" : [
+                1
+            ]
+        }
+    ],
+    "nodes" : [
+        {
+            "mesh" : 0,
+            "name" : "Bridge1Collider -colonly"
+        },
+        {
+            "mesh" : 1,
+            "children" : [
+                0
+            ],
+            "name" : "Bridge1"
+        }
+    ],
+    "materials" : [
+        {
+            "pbrMetallicRoughness" : {
+                "baseColorTexture" : {
+                    "texCoord" : 0,
+                    "index" : 0
+                }
+            },
+            "name" : "bridge"
+        }
+    ],
+    "meshes" : [
+        {
+            "name" : "Bridge1Collider.001",
+            "primitives" : [
+                {
+                    "indices" : 2,
+                    "attributes" : {
+                        "POSITION" : 0,
+                        "NORMAL" : 1
+                    }
+                }
+            ]
+        },
+        {
+            "name" : "Bridge1.001",
+            "primitives" : [
+                {
+                    "material" : 0,
+                    "indices" : 6,
+                    "attributes" : {
+                        "TEXCOORD_0" : 3,
+                        "POSITION" : 4,
+                        "NORMAL" : 5
+                    }
+                }
+            ]
+        }
+    ],
+    "textures" : [
+        {
+            "source" : 0,
+            "sampler" : 0
+        }
+    ],
+    "images" : [
+        {
+            "uri" : "bridge.png",
+            "mimeType" : "image/png",
+            "name" : "bridge.png"
+        }
+    ],
+    "accessors" : [
+        {
+            "count" : 120,
+            "type" : "VEC3",
+            "min" : [
+                -0.5010091662406921,
+                -4,
+                -1.0020183324813843
+            ],
+            "componentType" : 5126,
+            "bufferView" : 0,
+            "max" : [
+                0.5010091662406921,
+                0,
+                1.0020183324813843
+            ]
+        },
+        {
+            "count" : 120,
+            "componentType" : 5126,
+            "bufferView" : 1,
+            "type" : "VEC3"
+        },
+        {
+            "count" : 180,
+            "componentType" : 5123,
+            "bufferView" : 2,
+            "type" : "SCALAR"
+        },
+        {
+            "count" : 384,
+            "componentType" : 5126,
+            "bufferView" : 3,
+            "type" : "VEC2"
+        },
+        {
+            "count" : 384,
+            "type" : "VEC3",
+            "min" : [
+                -0.5190026760101318,
+                -3.9815096855163574,
+                -1.0000001192092896
+            ],
+            "componentType" : 5126,
+            "bufferView" : 4,
+            "max" : [
+                0.5022359490394592,
+                0.005451202392578125,
+                0.9999999403953552
+            ]
+        },
+        {
+            "count" : 384,
+            "componentType" : 5126,
+            "bufferView" : 5,
+            "type" : "VEC3"
+        },
+        {
+            "count" : 576,
+            "componentType" : 5123,
+            "bufferView" : 6,
+            "type" : "SCALAR"
+        }
+    ],
+    "bufferViews" : [
+        {
+            "byteLength" : 1440,
+            "buffer" : 0,
+            "byteOffset" : 0
+        },
+        {
+            "byteLength" : 1440,
+            "buffer" : 0,
+            "byteOffset" : 1440
+        },
+        {
+            "byteLength" : 360,
+            "buffer" : 0,
+            "byteOffset" : 2880
+        },
+        {
+            "byteLength" : 3072,
+            "buffer" : 0,
+            "byteOffset" : 3240
+        },
+        {
+            "byteLength" : 4608,
+            "buffer" : 0,
+            "byteOffset" : 6312
+        },
+        {
+            "byteLength" : 4608,
+            "buffer" : 0,
+            "byteOffset" : 10920
+        },
+        {
+            "byteLength" : 1152,
+            "buffer" : 0,
+            "byteOffset" : 15528
+        }
+    ],
+    "samplers" : [
+        {
+            "wrapT" : 10497,
+            "magFilter" : 9729,
+            "wrapS" : 10497,
+            "minFilter" : 9986
+        }
+    ],
+    "buffers" : [
+        {
+            "byteLength" : 16680,
+            "uri" : "bridge_1.bin"
+        }
+    ]
+}

@@ -1,0 +1,195 @@
+{
+    "asset" : {
+        "version" : "2.0",
+        "generator" : "Khronos glTF Blender I/O v1.2.20"
+    },
+    "scene" : 0,
+    "scenes" : [
+        {
+            "nodes" : [
+                1
+            ],
+            "name" : "Scene"
+        }
+    ],
+    "nodes" : [
+        {
+            "name" : "Rock2Collider -colonly",
+            "mesh" : 0
+        },
+        {
+            "children" : [
+                0
+            ],
+            "name" : "Rock2",
+            "mesh" : 1
+        }
+    ],
+    "materials" : [
+        {
+            "name" : "rock_2",
+            "pbrMetallicRoughness" : {
+                "baseColorTexture" : {
+                    "texCoord" : 0,
+                    "index" : 0
+                }
+            }
+        }
+    ],
+    "meshes" : [
+        {
+            "name" : "Rock2Collider.001",
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "POSITION" : 0,
+                        "NORMAL" : 1
+                    },
+                    "indices" : 2
+                }
+            ]
+        },
+        {
+            "name" : "Rock2.001",
+            "primitives" : [
+                {
+                    "material" : 0,
+                    "indices" : 6,
+                    "attributes" : {
+                        "POSITION" : 3,
+                        "TEXCOORD_0" : 4,
+                        "NORMAL" : 5
+                    }
+                }
+            ]
+        }
+    ],
+    "textures" : [
+        {
+            "source" : 0,
+            "sampler" : 0
+        }
+    ],
+    "images" : [
+        {
+            "name" : "rock_2.png",
+            "uri" : "rock_2.png",
+            "mimeType" : "image/png"
+        }
+    ],
+    "accessors" : [
+        {
+            "bufferView" : 0,
+            "componentType" : 5126,
+            "max" : [
+                0.654575765132904,
+                1.9200735092163086,
+                0.6872786283493042
+            ],
+            "min" : [
+                -0.654575765132904,
+                -0.17728406190872192,
+                -0.6868418455123901
+            ],
+            "count" : 53,
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 1,
+            "count" : 53,
+            "componentType" : 5126,
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 2,
+            "count" : 96,
+            "componentType" : 5123,
+            "type" : "SCALAR"
+        },
+        {
+            "bufferView" : 3,
+            "componentType" : 5126,
+            "max" : [
+                0.6832294464111328,
+                1.9156084060668945,
+                0.7023672461509705
+            ],
+            "min" : [
+                -0.6535640954971313,
+                -0.22525495290756226,
+                -0.6681928634643555
+            ],
+            "count" : 52,
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 4,
+            "count" : 52,
+            "componentType" : 5126,
+            "type" : "VEC2"
+        },
+        {
+            "bufferView" : 5,
+            "count" : 52,
+            "componentType" : 5126,
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 6,
+            "count" : 300,
+            "componentType" : 5123,
+            "type" : "SCALAR"
+        }
+    ],
+    "bufferViews" : [
+        {
+            "byteLength" : 636,
+            "byteOffset" : 0,
+            "buffer" : 0
+        },
+        {
+            "byteLength" : 636,
+            "byteOffset" : 636,
+            "buffer" : 0
+        },
+        {
+            "byteLength" : 192,
+            "byteOffset" : 1272,
+            "buffer" : 0
+        },
+        {
+            "byteLength" : 624,
+            "byteOffset" : 1464,
+            "buffer" : 0
+        },
+        {
+            "byteLength" : 416,
+            "byteOffset" : 2088,
+            "buffer" : 0
+        },
+        {
+            "byteLength" : 624,
+            "byteOffset" : 2504,
+            "buffer" : 0
+        },
+        {
+            "byteLength" : 600,
+            "byteOffset" : 3128,
+            "buffer" : 0
+        }
+    ],
+    "samplers" : [
+        {
+            "wrapT" : 10497,
+            "wrapS" : 10497,
+            "minFilter" : 9986,
+            "magFilter" : 9729
+        }
+    ],
+    "buffers" : [
+        {
+            "byteLength" : 3728,
+            "uri" : "rock_2.bin"
+        }
+    ]
+}
