@@ -31,17 +31,24 @@ func apply_changes() -> void:
 	if resource_name != scene_name:
 		return
 
+	var directory := Directory.new()
 	var mesh_lib := MeshLibrary.new()
 
 	for i in scene.get_child_count():
 		var child: Node = scene.get_child(i)
+
 		mesh_lib.create_item(i)
 		mesh_lib.set_item_name(i, child.name)
+
+		if child.filename:
+			var preview_path := child.filename.replace("." + child.filename.get_extension(), "_preview.png")
+
+			if directory.file_exists(preview_path):
+				mesh_lib.set_item_preview(i, load(preview_path))
+
 		_iterate_child(mesh_lib, i, child)
 
 	var resource_path := scene_path + resource_name + ".meshlib"
-
-	var directory := Directory.new()
 
 	if directory.file_exists(resource_path):
 		directory.remove(resource_path)
