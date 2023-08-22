@@ -23,6 +23,7 @@ var move_snap := Vector3.ZERO
 var dead := false
 var ground_type := "grass"
 var respawn_position: Vector3
+var raycast_object: Spatial
 var animation := {
 	"name": "idle_loop",
 	"speed": 1.0,
@@ -192,6 +193,25 @@ func _process_camera(_delta: float) -> void:
 
 # Processa a colisão do ray cast.
 func _process_ray_cast(body: Spatial) -> void:
+	if body == raycast_object:
+		return
+
+	raycast_object = body
+
+	if body is GridMap:
+		var body_name := body.name.to_lower()
+
+		if "grass" in body_name:
+			ground_type = "grass"
+
+		elif "bridge" in body_name or "fence" in body_name or "tree" in body_name:
+			ground_type = "wood"
+
+		else:
+			ground_type = "rock"
+
+		return
+
 	var root := body.find_parent("Visual")
 
 	if not root:

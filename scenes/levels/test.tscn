@@ -92,7 +92,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -40, 0, -20 )
 [node name="GridMaps" type="Spatial" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
 
-[node name="Ground" type="GridMap" parent="GridMaps"]
+[node name="GroundGrass" type="GridMap" parent="GridMaps"]
 mesh_library = ExtResource( 1 )
 cell_size = Vector3( 2, 1, 2 )
 cell_center_y = false
