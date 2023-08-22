@@ -1,7 +1,7 @@
 {
     "asset" : {
-        "generator" : "Khronos glTF Blender I/O v1.2.20",
-        "version" : "2.0"
+        "version" : "2.0",
+        "generator" : "Khronos glTF Blender I/O v1.2.20"
     },
     "scene" : 0,
     "scenes" : [
@@ -19,21 +19,21 @@
         },
         {
             "mesh" : 1,
-            "name" : "SignCautionMesh",
             "children" : [
                 0
-            ]
+            ],
+            "name" : "SignCautionMesh"
         }
     ],
     "materials" : [
         {
+            "name" : "sign",
             "pbrMetallicRoughness" : {
                 "baseColorTexture" : {
-                    "texCoord" : 0,
-                    "index" : 0
+                    "index" : 0,
+                    "texCoord" : 0
                 }
-            },
-            "name" : "sign"
+            }
         }
     ],
     "meshes" : [
@@ -41,11 +41,11 @@
             "name" : "SignCautionCollider.001",
             "primitives" : [
                 {
+                    "indices" : 2,
                     "attributes" : {
                         "NORMAL" : 0,
                         "POSITION" : 1
-                    },
-                    "indices" : 2
+                    }
                 }
             ]
         },
@@ -53,137 +53,137 @@
             "name" : "SignCautionMesh.001",
             "primitives" : [
                 {
-                    "attributes" : {
-                        "NORMAL" : 3,
-                        "TEXCOORD_0" : 4,
-                        "POSITION" : 5
-                    },
+                    "indices" : 6,
                     "material" : 0,
-                    "indices" : 6
+                    "attributes" : {
+                        "TEXCOORD_0" : 3,
+                        "NORMAL" : 4,
+                        "POSITION" : 5
+                    }
                 }
             ]
         }
     ],
     "textures" : [
         {
-            "sampler" : 0,
-            "source" : 0
+            "source" : 0,
+            "sampler" : 0
         }
     ],
     "images" : [
         {
             "mimeType" : "image/png",
-            "name" : "sign.png",
-            "uri" : "sign.png"
+            "uri" : "sign.png",
+            "name" : "sign.png"
         }
     ],
     "accessors" : [
         {
-            "componentType" : 5126,
-            "type" : "VEC3",
+            "bufferView" : 0,
             "count" : 24,
-            "bufferView" : 0
+            "componentType" : 5126,
+            "type" : "VEC3"
         },
         {
-            "max" : [
-                0.9846789240837097,
-                1.8760266304016113,
-                0.16606876254081726
-            ],
-            "componentType" : 5126,
-            "type" : "VEC3",
-            "count" : 24,
             "bufferView" : 1,
-            "min" : [
-                -0.9706966280937195,
-                -0.03581448644399643,
-                -0.16606877744197845
-            ]
-        },
-        {
-            "componentType" : 5123,
-            "type" : "SCALAR",
-            "count" : 36,
-            "bufferView" : 2
-        },
-        {
-            "componentType" : 5126,
-            "type" : "VEC3",
-            "count" : 110,
-            "bufferView" : 3
-        },
-        {
-            "componentType" : 5126,
-            "type" : "VEC2",
-            "count" : 110,
-            "bufferView" : 4
-        },
-        {
             "max" : [
-                0.9526087641716003,
-                1.859785556793213,
-                0.14650052785873413
+                0.5386993885040283,
+                1.0263389348983765,
+                0.09085310250520706
             ],
             "componentType" : 5126,
-            "type" : "VEC3",
-            "count" : 110,
-            "bufferView" : 5,
             "min" : [
-                -0.9266565442085266,
-                -0.14021369814872742,
-                -0.06016770750284195
-            ]
+                -0.531049907207489,
+                -0.019593432545661926,
+                -0.09085310995578766
+            ],
+            "count" : 24,
+            "type" : "VEC3"
         },
         {
+            "bufferView" : 2,
+            "count" : 36,
             "componentType" : 5123,
-            "type" : "SCALAR",
+            "type" : "SCALAR"
+        },
+        {
+            "bufferView" : 3,
+            "count" : 110,
+            "componentType" : 5126,
+            "type" : "VEC2"
+        },
+        {
+            "bufferView" : 4,
+            "count" : 110,
+            "componentType" : 5126,
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 5,
+            "max" : [
+                0.5211544036865234,
+                1.0174537897109985,
+                0.08014769107103348
+            ],
+            "componentType" : 5126,
+            "min" : [
+                -0.5069563984870911,
+                -0.07670827955007553,
+                -0.03291662409901619
+            ],
+            "count" : 110,
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 6,
             "count" : 156,
-            "bufferView" : 6
+            "componentType" : 5123,
+            "type" : "SCALAR"
         }
     ],
     "bufferViews" : [
         {
-            "byteLength" : 288,
             "buffer" : 0,
-            "byteOffset" : 0
+            "byteOffset" : 0,
+            "byteLength" : 288
         },
         {
-            "byteLength" : 288,
             "buffer" : 0,
-            "byteOffset" : 288
+            "byteOffset" : 288,
+            "byteLength" : 288
         },
         {
-            "byteLength" : 72,
             "buffer" : 0,
-            "byteOffset" : 576
+            "byteOffset" : 576,
+            "byteLength" : 72
         },
         {
-            "byteLength" : 1320,
             "buffer" : 0,
-            "byteOffset" : 648
+            "byteOffset" : 648,
+            "byteLength" : 880
         },
         {
-            "byteLength" : 880,
             "buffer" : 0,
-            "byteOffset" : 1968
+            "byteOffset" : 1528,
+            "byteLength" : 1320
         },
         {
-            "byteLength" : 1320,
             "buffer" : 0,
-            "byteOffset" : 2848
+            "byteOffset" : 2848,
+            "byteLength" : 1320
         },
         {
-            "byteLength" : 312,
             "buffer" : 0,
-            "byteOffset" : 4168
+            "byteOffset" : 4168,
+            "byteLength" : 312
         }
     ],
     "samplers" : [
         {
-            "wrapT" : 10497,
-            "wrapS" : 10497,
             "magFilter" : 9729,
-            "minFilter" : 9986
+            "minFilter" : 9986,
+            "wrapS" : 10497,
+            "wrapT" : 10497
         }
     ],
     "buffers" : [
