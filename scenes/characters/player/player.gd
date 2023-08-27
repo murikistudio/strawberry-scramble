@@ -11,6 +11,7 @@ export(float, 0.0, 2.0, 0.01) var gravity_force := 0.5
 export(float, 0.0, 10.0, 0.1) var move_speed := 5.0
 export(float, 0.0, 1.0, 0.01) var intertia_factor := 0.15
 export(PackedScene) var scene_water_splash: PackedScene
+export(PackedScene) var scene_balloon_pop: PackedScene
 
 var input_move_axis := Vector2.ZERO
 var jumps_left := jump_times setget _set_jumps_left
@@ -262,18 +263,31 @@ func _on_Area_area_entered(area: Area) -> void:
 
 	if area.is_in_group("death"):
 		dead = true
+		_visual.visible = false
 		GameState.add_times_died()
-		GameAudio.play_sfx(DatabaseAudio.SFX_WATER)
 
 		# Spawnar efeito de água
-		var water_splash: Spatial = scene_water_splash.instance()
-		add_child(water_splash)
-		water_splash.global_translation = global_translation
-		water_splash.global_translation.y += 2.0
+		if area.is_in_group("water"):
+			var water_splash: Spatial = scene_water_splash.instance()
+			add_child(water_splash)
+			water_splash.set_as_toplevel(true)
+			water_splash.global_translation = global_translation
+			water_splash.global_translation.y += 2.0
+			GameAudio.play_sfx(DatabaseAudio.SFX_WATER)
+
+		# Spawnar efeito de água
+		elif area.is_in_group("thorns"):
+			var balloon_pop: Spatial = scene_balloon_pop.instance()
+			add_child(balloon_pop)
+			balloon_pop.set_as_toplevel(true)
+			balloon_pop.global_translation = global_translation
+			balloon_pop.global_translation.y += -1.0
+			GameAudio.play_sfx(DatabaseAudio.SFX_BALLOON_POP)
 
 		yield(get_tree().create_timer(1.0, false), "timeout")
 		global_translation = respawn_position
 		dead = false
+		_visual.visible = true
 		move_weight = Vector2.ZERO
 		return
 

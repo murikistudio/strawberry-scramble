@@ -5,7 +5,7 @@
 [sub_resource type="BoxShape" id=1]
 extents = Vector3( 1, 0.25, 1 )
 
-[node name="Thorns" type="Area"]
+[node name="Thorns" type="Area" groups=["death", "thorns"]]
 monitoring = false
 
 [node name="CollisionShape" type="CollisionShape" parent="."]

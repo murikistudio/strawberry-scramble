@@ -10,7 +10,7 @@ size = Vector2( 20, 20 )
 subdivide_width = 5
 subdivide_depth = 5
 
-[node name="Water" type="Area" groups=["death"]]
+[node name="Water" type="Area" groups=["death", "water"]]
 monitoring = false
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
