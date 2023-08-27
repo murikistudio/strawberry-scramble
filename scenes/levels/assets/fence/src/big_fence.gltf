@@ -1,7 +1,7 @@
 {
     "asset" : {
-        "generator" : "Khronos glTF Blender I/O v1.2.20",
-        "version" : "2.0"
+        "version" : "2.0",
+        "generator" : "Khronos glTF Blender I/O v1.2.20"
     },
     "extensionsUsed" : [
         "KHR_materials_unlit"
@@ -30,14 +30,14 @@
     ],
     "materials" : [
         {
-            "extensions" : {
-                "KHR_materials_unlit" : {}
-            },
             "pbrMetallicRoughness" : {
                 "baseColorTexture" : {
-                    "index" : 0,
-                    "texCoord" : 0
+                    "texCoord" : 0,
+                    "index" : 0
                 }
+            },
+            "extensions" : {
+                "KHR_materials_unlit" : {}
             },
             "name" : "big_fence"
         }
@@ -46,11 +46,11 @@
         {
             "primitives" : [
                 {
-                    "indices" : 2,
                     "attributes" : {
-                        "POSITION" : 0,
-                        "NORMAL" : 1
-                    }
+                        "NORMAL" : 0,
+                        "POSITION" : 1
+                    },
+                    "indices" : 2
                 }
             ],
             "name" : "BigFenceCollider -colonly.001"
@@ -60,9 +60,9 @@
                 {
                     "material" : 0,
                     "attributes" : {
-                        "POSITION" : 3,
-                        "NORMAL" : 4,
-                        "TEXCOORD_0" : 5
+                        "NORMAL" : 3,
+                        "TEXCOORD_0" : 4,
+                        "POSITION" : 5
                     },
                     "indices" : 6
                 }
@@ -79,116 +79,116 @@
     "images" : [
         {
             "uri" : "big_fence.png",
-            "name" : "big_fence",
-            "mimeType" : "image/png"
+            "mimeType" : "image/png",
+            "name" : "big_fence"
         }
     ],
     "accessors" : [
         {
-            "componentType" : 5126,
-            "min" : [
-                -1,
-                0,
-                -0.1600000262260437
-            ],
+            "count" : 24,
+            "bufferView" : 0,
+            "type" : "VEC3",
+            "componentType" : 5126
+        },
+        {
             "max" : [
                 1,
                 2.1000001430511475,
                 0.1600000262260437
             ],
-            "bufferView" : 0,
-            "type" : "VEC3",
-            "count" : 24
-        },
-        {
-            "componentType" : 5126,
-            "type" : "VEC3",
-            "bufferView" : 1,
-            "count" : 24
-        },
-        {
-            "componentType" : 5123,
-            "type" : "SCALAR",
-            "bufferView" : 2,
-            "count" : 36
-        },
-        {
-            "componentType" : 5126,
+            "count" : 24,
             "min" : [
-                -1.0000003576278687,
-                -0.005461513996124268,
-                -0.1517321616411209
+                -1,
+                0,
+                -0.1600000262260437
             ],
+            "bufferView" : 1,
+            "type" : "VEC3",
+            "componentType" : 5126
+        },
+        {
+            "count" : 36,
+            "bufferView" : 2,
+            "type" : "SCALAR",
+            "componentType" : 5123
+        },
+        {
+            "count" : 160,
+            "bufferView" : 3,
+            "type" : "VEC3",
+            "componentType" : 5126
+        },
+        {
+            "count" : 160,
+            "bufferView" : 4,
+            "type" : "VEC2",
+            "componentType" : 5126
+        },
+        {
             "max" : [
                 1.0000004768371582,
                 2.1618638038635254,
                 0.15173232555389404
             ],
-            "bufferView" : 3,
-            "type" : "VEC3",
-            "count" : 160
-        },
-        {
-            "componentType" : 5126,
-            "type" : "VEC3",
-            "bufferView" : 4,
-            "count" : 160
-        },
-        {
-            "componentType" : 5126,
-            "type" : "VEC2",
+            "count" : 160,
+            "min" : [
+                -1.0000003576278687,
+                -0.005461513996124268,
+                -0.1517321616411209
+            ],
             "bufferView" : 5,
-            "count" : 160
+            "type" : "VEC3",
+            "componentType" : 5126
         },
         {
-            "componentType" : 5123,
-            "type" : "SCALAR",
+            "count" : 222,
             "bufferView" : 6,
-            "count" : 222
+            "type" : "SCALAR",
+            "componentType" : 5123
         }
     ],
     "bufferViews" : [
         {
             "byteOffset" : 0,
-            "byteLength" : 288,
-            "buffer" : 0
+            "buffer" : 0,
+            "byteLength" : 288
         },
         {
             "byteOffset" : 288,
-            "byteLength" : 288,
-            "buffer" : 0
+            "buffer" : 0,
+            "byteLength" : 288
         },
         {
             "byteOffset" : 576,
-            "byteLength" : 72,
-            "buffer" : 0
+            "buffer" : 0,
+            "byteLength" : 72
         },
         {
             "byteOffset" : 648,
-            "byteLength" : 1920,
-            "buffer" : 0
+            "buffer" : 0,
+            "byteLength" : 1920
         },
         {
             "byteOffset" : 2568,
-            "byteLength" : 1920,
-            "buffer" : 0
+            "buffer" : 0,
+            "byteLength" : 1280
         },
         {
-            "byteOffset" : 4488,
-            "byteLength" : 1280,
-            "buffer" : 0
+            "byteOffset" : 3848,
+            "buffer" : 0,
+            "byteLength" : 1920
         },
         {
             "byteOffset" : 5768,
-            "byteLength" : 444,
-            "buffer" : 0
+            "buffer" : 0,
+            "byteLength" : 444
         }
     ],
     "samplers" : [
         {
-            "minFilter" : 9986,
             "wrapS" : 10497,
             "magFilter" : 9729,
+            "minFilter" : 9986,
             "wrapT" : 10497
         }
     ],
