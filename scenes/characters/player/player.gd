@@ -269,7 +269,7 @@ func _on_Area_area_entered(area: Area) -> void:
 		var water_splash: Spatial = scene_water_splash.instance()
 		add_child(water_splash)
 		water_splash.global_translation = global_translation
-		water_splash.global_translation.y += 1.0
+		water_splash.global_translation.y += 2.0
 
 		yield(get_tree().create_timer(1.0, false), "timeout")
 		global_translation = respawn_position

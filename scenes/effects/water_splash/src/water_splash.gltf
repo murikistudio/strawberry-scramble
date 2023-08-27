@@ -1,0 +1,139 @@
+{
+    "asset" : {
+        "version" : "2.0",
+        "generator" : "Khronos glTF Blender I/O v1.2.20"
+    },
+    "extensionsUsed" : [
+        "KHR_materials_unlit"
+    ],
+    "scene" : 0,
+    "scenes" : [
+        {
+            "name" : "Scene",
+            "nodes" : [
+                0
+            ]
+        }
+    ],
+    "nodes" : [
+        {
+            "name" : "WaterSplash",
+            "mesh" : 0
+        }
+    ],
+    "materials" : [
+        {
+            "pbrMetallicRoughness" : {
+                "baseColorTexture" : {
+                    "texCoord" : 0,
+                    "index" : 0
+                }
+            },
+            "name" : "water_splash",
+            "extensions" : {
+                "KHR_materials_unlit" : {}
+            }
+        }
+    ],
+    "meshes" : [
+        {
+            "primitives" : [
+                {
+                    "indices" : 3,
+                    "attributes" : {
+                        "NORMAL" : 0,
+                        "POSITION" : 1,
+                        "TEXCOORD_0" : 2
+                    },
+                    "material" : 0
+                }
+            ],
+            "name" : "WaterSplash.001"
+        }
+    ],
+    "textures" : [
+        {
+            "source" : 0,
+            "sampler" : 0
+        }
+    ],
+    "images" : [
+        {
+            "mimeType" : "image/png",
+            "uri" : "water_splash.png",
+            "name" : "water_splash.png"
+        }
+    ],
+    "accessors" : [
+        {
+            "bufferView" : 0,
+            "type" : "VEC3",
+            "count" : 4,
+            "componentType" : 5126
+        },
+        {
+            "bufferView" : 1,
+            "max" : [
+                0.07999998331069946,
+                0.07999998331069946,
+                5.960464122267695e-09
+            ],
+            "type" : "VEC3",
+            "componentType" : 5126,
+            "min" : [
+                -0.07999998331069946,
+                -0.07999998331069946,
+                -5.960464122267695e-09
+            ],
+            "count" : 4
+        },
+        {
+            "bufferView" : 2,
+            "type" : "VEC2",
+            "count" : 4,
+            "componentType" : 5126
+        },
+        {
+            "bufferView" : 3,
+            "type" : "SCALAR",
+            "count" : 6,
+            "componentType" : 5123
+        }
+    ],
+    "bufferViews" : [
+        {
+            "byteLength" : 48,
+            "buffer" : 0,
+            "byteOffset" : 0
+        },
+        {
+            "byteLength" : 48,
+            "buffer" : 0,
+            "byteOffset" : 48
+        },
+        {
+            "byteLength" : 32,
+            "buffer" : 0,
+            "byteOffset" : 96
+        },
+        {
+            "byteLength" : 12,
+            "buffer" : 0,
+            "byteOffset" : 128
+        }
+    ],
+    "samplers" : [
+        {
+            "magFilter" : 9729,
+            "wrapT" : 10497,
+            "minFilter" : 9986,
+            "wrapS" : 10497
+        }
+    ],
+    "buffers" : [
+        {
+            "byteLength" : 140,
+            "uri" : "water_splash.bin"
+        }
+    ]
+}
