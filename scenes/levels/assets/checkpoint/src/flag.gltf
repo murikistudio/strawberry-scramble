@@ -3,65 +3,71 @@
         "version" : "2.0",
         "generator" : "Khronos glTF Blender I/O v1.2.20"
     },
+    "extensionsUsed" : [
+        "KHR_materials_unlit"
+    ],
     "scene" : 0,
     "scenes" : [
         {
+            "name" : "Scene",
             "nodes" : [
                 0,
                 1
-            ],
-            "name" : "Scene"
+            ]
         }
     ],
     "nodes" : [
         {
-            "mesh" : 0,
-            "name" : "FlagOnMesh"
+            "name" : "FlagOnMesh",
+            "mesh" : 0
         },
         {
-            "mesh" : 1,
-            "name" : "FlagOffMesh"
+            "name" : "FlagOffMesh",
+            "mesh" : 1
         }
     ],
     "materials" : [
         {
+            "name" : "flag",
             "pbrMetallicRoughness" : {
                 "baseColorTexture" : {
-                    "texCoord" : 0,
-                    "index" : 0
+                    "index" : 0,
+                    "texCoord" : 0
                 }
             },
-            "name" : "flag"
+            "extensions" : {
+                "KHR_materials_unlit" : {}
+            }
         }
     ],
     "meshes" : [
         {
+            "name" : "FlagOnMesh.001",
             "primitives" : [
                 {
-                    "indices" : 3,
-                    "material" : 0,
                     "attributes" : {
-                        "TEXCOORD_0" : 0,
-                        "POSITION" : 1,
-                        "NORMAL" : 2
-                    }
+                        "POSITION" : 0,
+                        "NORMAL" : 1,
+                        "TEXCOORD_0" : 2
+                    },
+                    "material" : 0,
+                    "indices" : 3
                 }
-            ],
-            "name" : "FlagOnMesh.001"
+            ]
         },
         {
+            "name" : "FlagOffMesh.001",
             "primitives" : [
                 {
-                    "indices" : 3,
-                    "material" : 0,
                     "attributes" : {
-                        "TEXCOORD_0" : 4,
-                        "POSITION" : 5,
-                        "NORMAL" : 6
-                    }
+                        "POSITION" : 4,
+                        "NORMAL" : 5,
+                        "TEXCOORD_0" : 6
+                    },
+                    "material" : 0,
+                    "indices" : 7
                 }
-            ],
-            "name" : "FlagOffMesh.001"
+            ]
         }
     ],
     "textures" : [
@@ -72,124 +78,135 @@
     ],
     "images" : [
         {
-            "uri" : "flag.png",
+            "name" : "flag-1.png",
             "mimeType" : "image/png",
-            "name" : "flag"
+            "uri" : "flag-1.png"
         }
     ],
     "accessors" : [
         {
+            "min" : [
+                -0.4383718967437744,
+                -0.0792698860168457,
+                -0.058552488684654236
+            ],
+            "count" : 210,
+            "type" : "VEC3",
             "componentType" : 5126,
             "bufferView" : 0,
-            "type" : "VEC2",
-            "count" : 58
-        },
-        {
-            "componentType" : 5126,
-            "type" : "VEC3",
-            "min" : [
-                -0.015773508697748184,
-                -0.015773508697748184,
-                -0.015773508697748184
-            ],
             "max" : [
-                0.5578867197036743,
-                1.5157735347747803,
-                0.015773508697748184
-            ],
-            "bufferView" : 1,
-            "count" : 58
+                0.43837183713912964,
+                1.5134315490722656,
+                0.05137619748711586
+            ]
         },
         {
             "componentType" : 5126,
+            "count" : 210,
+            "bufferView" : 1,
+            "type" : "VEC3"
+        },
+        {
+            "componentType" : 5126,
+            "count" : 210,
             "bufferView" : 2,
-            "type" : "VEC3",
-            "count" : 58
+            "type" : "VEC2"
         },
         {
             "componentType" : 5123,
+            "count" : 348,
             "bufferView" : 3,
-            "type" : "SCALAR",
-            "count" : 102
+            "type" : "SCALAR"
         },
         {
+            "min" : [
+                -0.4383718967437744,
+                -0.0792698860168457,
+                -0.03876936435699463
+            ],
+            "count" : 226,
+            "type" : "VEC3",
             "componentType" : 5126,
             "bufferView" : 4,
-            "type" : "VEC2",
-            "count" : 58
-        },
-        {
-            "componentType" : 5126,
-            "type" : "VEC3",
-            "min" : [
-                -0.015773508697748184,
-                -0.015773508697748184,
-                -0.015773508697748184
-            ],
             "max" : [
-                0.5578867197036743,
-                1.5157735347747803,
-                0.015773508697748184
-            ],
-            "bufferView" : 5,
-            "count" : 58
+                0.43837183713912964,
+                1.5252240896224976,
+                0.05378809571266174
+            ]
         },
         {
             "componentType" : 5126,
+            "count" : 226,
+            "bufferView" : 5,
+            "type" : "VEC3"
+        },
+        {
+            "componentType" : 5126,
+            "count" : 226,
             "bufferView" : 6,
-            "type" : "VEC3",
-            "count" : 58
+            "type" : "VEC2"
+        },
+        {
+            "componentType" : 5123,
+            "count" : 372,
+            "bufferView" : 7,
+            "type" : "SCALAR"
         }
     ],
     "bufferViews" : [
         {
             "byteOffset" : 0,
-            "byteLength" : 464,
+            "byteLength" : 2520,
             "buffer" : 0
         },
         {
-            "byteOffset" : 464,
+            "byteOffset" : 2520,
+            "byteLength" : 2520,
+            "buffer" : 0
+        },
+        {
+            "byteOffset" : 5040,
+            "byteLength" : 1680,
+            "buffer" : 0
+        },
+        {
+            "byteOffset" : 6720,
             "byteLength" : 696,
             "buffer" : 0
         },
         {
-            "byteOffset" : 1160,
-            "byteLength" : 696,
+            "byteOffset" : 7416,
+            "byteLength" : 2712,
             "buffer" : 0
         },
         {
-            "byteOffset" : 1856,
-            "byteLength" : 204,
+            "byteOffset" : 10128,
+            "byteLength" : 2712,
             "buffer" : 0
         },
         {
-            "byteOffset" : 2060,
-            "byteLength" : 464,
+            "byteOffset" : 12840,
+            "byteLength" : 1808,
             "buffer" : 0
         },
         {
-            "byteOffset" : 2524,
-            "byteLength" : 696,
-            "buffer" : 0
-        },
-        {
-            "byteOffset" : 3220,
-            "byteLength" : 696,
+            "byteOffset" : 14648,
+            "byteLength" : 744,
             "buffer" : 0
         }
     ],
     "samplers" : [
         {
-            "wrapS" : 10497,
-            "minFilter" : 9986,
             "wrapT" : 10497,
-            "magFilter" : 9729
+            "wrapS" : 10497,
+            "magFilter" : 9729,
+            "minFilter" : 9986
         }
     ],
     "buffers" : [
         {
-            "uri" : "flag.bin",
-            "byteLength" : 3916
+            "byteLength" : 15392,
+            "uri" : "flag.bin"
         }
     ]
 }
