@@ -129,6 +129,10 @@ tracks/2/keys = {
 monitoring = false
 script = ExtResource( 2 )
 
+[node name="VisibilityEnabler" type="VisibilityEnabler" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.369591, 0 )
+aabb = AABB( -0.25, -0.35, -0.25, 0.5, 0.7, 0.5 )
+
 [node name="CollisionShape" type="CollisionShape" parent="."]
 transform = Transform( 0.785263, 0, 0, 0, 0.785263, 0, 0, 0, 0.785263, 0, 0.363803, 0 )
 shape = SubResource( 1 )
