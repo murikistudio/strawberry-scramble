@@ -4,6 +4,7 @@ extends EditorPlugin
 
 # Variables
 var _can_save := true
+var _extension := ".tres"
 
 
 # Built-in overrides
@@ -48,7 +49,7 @@ func apply_changes() -> void:
 
 		_iterate_child(mesh_lib, i, child)
 
-	var resource_path := scene_path + resource_name + ".meshlib"
+	var resource_path := scene_path + resource_name + _extension
 
 	if directory.file_exists(resource_path):
 		directory.remove(resource_path)
