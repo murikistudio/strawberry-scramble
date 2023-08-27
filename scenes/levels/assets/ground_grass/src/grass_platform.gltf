@@ -1,0 +1,144 @@
+{
+    "asset" : {
+        "version" : "2.0",
+        "generator" : "Khronos glTF Blender I/O v1.2.20"
+    },
+    "extensionsUsed" : [
+        "KHR_materials_unlit"
+    ],
+    "scene" : 0,
+    "scenes" : [
+        {
+            "name" : "Scene",
+            "nodes" : [
+                0
+            ]
+        }
+    ],
+    "nodes" : [
+        {
+            "name" : "GrassPlatform",
+            "mesh" : 0,
+            "scale" : [
+                0.5,
+                0.5,
+                0.5
+            ]
+        }
+    ],
+    "materials" : [
+        {
+            "name" : "grass",
+            "extensions" : {
+                "KHR_materials_unlit" : {}
+            },
+            "pbrMetallicRoughness" : {
+                "baseColorTexture" : {
+                    "texCoord" : 0,
+                    "index" : 0
+                }
+            }
+        }
+    ],
+    "meshes" : [
+        {
+            "name" : "GrassPlatform.001",
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "POSITION" : 0,
+                        "TEXCOORD_0" : 1,
+                        "NORMAL" : 2
+                    },
+                    "indices" : 3,
+                    "material" : 0
+                }
+            ]
+        }
+    ],
+    "textures" : [
+        {
+            "sampler" : 0,
+            "source" : 0
+        }
+    ],
+    "images" : [
+        {
+            "name" : "grass.png",
+            "uri" : "grass.png",
+            "mimeType" : "image/png"
+        }
+    ],
+    "accessors" : [
+        {
+            "type" : "VEC3",
+            "componentType" : 5126,
+            "count" : 156,
+            "min" : [
+                -2,
+                -1.0000001192092896,
+                -2.000004291534424
+            ],
+            "max" : [
+                2.0000061988830566,
+                -2.9802322387695312e-08,
+                2.000001907348633
+            ],
+            "bufferView" : 0
+        },
+        {
+            "type" : "VEC2",
+            "componentType" : 5126,
+            "count" : 156,
+            "bufferView" : 1
+        },
+        {
+            "type" : "VEC3",
+            "componentType" : 5126,
+            "count" : 156,
+            "bufferView" : 2
+        },
+        {
+            "type" : "SCALAR",
+            "componentType" : 5123,
+            "count" : 228,
+            "bufferView" : 3
+        }
+    ],
+    "bufferViews" : [
+        {
+            "byteOffset" : 0,
+            "buffer" : 0,
+            "byteLength" : 1872
+        },
+        {
+            "byteOffset" : 1872,
+            "buffer" : 0,
+            "byteLength" : 1248
+        },
+        {
+            "byteOffset" : 3120,
+            "buffer" : 0,
+            "byteLength" : 1872
+        },
+        {
+            "byteOffset" : 4992,
+            "buffer" : 0,
+            "byteLength" : 456
+        }
+    ],
+    "samplers" : [
+        {
+            "minFilter" : 9986,
+            "wrapT" : 10497,
+            "magFilter" : 9729,
+            "wrapS" : 10497
+        }
+    ],
+    "buffers" : [
+        {
+            "uri" : "grass_platform.bin",
+            "byteLength" : 5448
+        }
+    ]
+}

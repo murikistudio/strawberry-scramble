@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://scenes/levels/assets/ground_grass/lib_ground_grass.tres" type="MeshLibrary" id=1]
 [ext_resource path="res://scenes/characters/player/player.tscn" type="PackedScene" id=2]
@@ -13,6 +13,7 @@
 [ext_resource path="res://scenes/levels/assets/rock/lib_rocks.tres" type="MeshLibrary" id=11]
 [ext_resource path="res://scenes/levels/assets/water/water.tscn" type="PackedScene" id=12]
 [ext_resource path="res://scenes/levels/assets/checkpoint/checkpoint.tscn" type="PackedScene" id=13]
+[ext_resource path="res://scenes/levels/assets/ground_grass/grass_platform.tscn" type="PackedScene" id=14]
 
 [node name="Test" type="Spatial"]
 
@@ -27,6 +28,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 2 )
 
 [node name="Water" type="Spatial" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0 )
+visible = false
 __meta__ = {
 "_edit_lock_": true
 }
@@ -137,7 +139,7 @@ mesh_library = ExtResource( 8 )
 cell_size = Vector3( 2, 1, 2 )
 cell_center_y = false
 data = {
-"cells": PoolIntArray( 2, 65525, 1441792, 3, 65525, 1441793, 5, 65525, 1441792, 7, 65525, 1441793, 8, 65525, 1441792, 0, 65527, 0, 0, 65528, 1, 0, 65530, 1, 0, 65531, 0 )
+"cells": PoolIntArray( 2, 65525, 1441792, 3, 65525, 1441793, 5, 65525, 1441792, 7, 65525, 1441793, 8, 65525, 1441792 )
 }
 __meta__ = {
 "_editor_clip_": 0,
@@ -234,3 +236,9 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, -17 )
 
 [node name="Checkpoint" parent="Checkpoints" instance=ExtResource( 13 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 22, 2.3, -20.5045 )
+
+[node name="Platforms" type="Spatial" parent="."]
+
+[node name="GrassPlatform" parent="Platforms" instance=ExtResource( 14 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, -17 )
+target_position = Vector3( 0, 0, 8 )
