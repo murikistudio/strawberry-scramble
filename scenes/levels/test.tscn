@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://scenes/levels/assets/ground_grass/lib_ground_grass.tres" type="MeshLibrary" id=1]
 [ext_resource path="res://scenes/characters/player/player.tscn" type="PackedScene" id=2]
@@ -14,6 +14,8 @@
 [ext_resource path="res://scenes/levels/assets/water/water.tscn" type="PackedScene" id=12]
 [ext_resource path="res://scenes/levels/assets/checkpoint/checkpoint.tscn" type="PackedScene" id=13]
 [ext_resource path="res://scenes/levels/assets/ground_grass/grass_platform.tscn" type="PackedScene" id=14]
+[ext_resource path="res://scenes/levels/assets/fence/big_fence_gate.tscn" type="PackedScene" id=15]
+[ext_resource path="res://scenes/levels/assets/fence/big_fence_lever.tscn" type="PackedScene" id=16]
 
 [node name="Test" type="Spatial"]
 
@@ -242,3 +244,12 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 22, 2.3, -20.5045 )
 [node name="GrassPlatform" parent="Platforms" instance=ExtResource( 14 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, -17 )
 target_position = Vector3( 0, 0, 8 )
+
+[node name="Gates" type="Spatial" parent="."]
+
+[node name="BigFenceLever" parent="Gates" instance=ExtResource( 16 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 1, -1 )
+target = NodePath("../BigFenceGate")
+
+[node name="BigFenceGate" parent="Gates" instance=ExtResource( 15 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -5 )

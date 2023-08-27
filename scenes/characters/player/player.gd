@@ -303,6 +303,9 @@ func _on_Area_area_entered(area: Area) -> void:
 			GameEvents.emit_signal("level_dialog", "mom", "incomplete")
 			prints("Level incomplete...")
 
+	if area.is_in_group("lever"):
+		GameEvents.emit_signal("level_lever_touched", area)
+
 
 # Avançar tempo no jogo.
 func _on_Timer_timeout() -> void:
