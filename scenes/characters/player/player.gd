@@ -10,6 +10,7 @@ export(int, 1, 5, 1) var jump_times := 1
 export(float, 0.0, 2.0, 0.01) var gravity_force := 0.5
 export(float, 0.0, 10.0, 0.1) var move_speed := 5.0
 export(float, 0.0, 1.0, 0.01) var intertia_factor := 0.15
+export(float, 0.5, 2.0, 0.01) var view_forward_multiplier := 1.0
 export(PackedScene) var scene_water_splash: PackedScene
 export(PackedScene) var scene_balloon_pop: PackedScene
 
@@ -149,7 +150,7 @@ func play_sfx_swing(pitch := 1.0) -> void:
 # Private methods
 # Atualiza as malhas visuais de acordo com o estado.
 func _process_visual(_delta: float) -> void:
-	var target_vec: Vector3 = global_translation + _get_axis_offset(move_weight)
+	var target_vec: Vector3 = global_translation + _get_axis_offset(move_weight) * view_forward_multiplier
 	var interp_vec: Vector3 = lerp(global_translation, target_vec, 0.01)
 
 	_anim_player.playback_speed = move_weight.length() if animation["name"] == "run_loop" else animation["speed"]

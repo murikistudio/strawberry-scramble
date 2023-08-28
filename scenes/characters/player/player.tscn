@@ -46,6 +46,7 @@ collision_mask = 5
 script = ExtResource( 1 )
 move_speed = 4.0
 intertia_factor = 0.18
+view_forward_multiplier = 1.5
 scene_water_splash = ExtResource( 8 )
 scene_balloon_pop = ExtResource( 18 )
 
