@@ -6,6 +6,7 @@ const BASE_PATH := "res://textures/icons/"
 
 
 # Variables
+onready var _label_deaths: Label = find_node("LabelDeaths")
 onready var _label_time: Label = find_node("LabelTime")
 onready var _texture_rect_trophy: TextureRect = find_node("TextureRectTrophy")
 onready var _label_trophy: Label = find_node("LabelTrophy")
@@ -23,6 +24,7 @@ func _ready() -> void:
 func _update_interface() -> void:
 	_texture_rect_trophy.texture = load(BASE_PATH + GameState.current_trophy + ".svg")
 	_label_time.text = str(GameState.time_elapsed) + "s"
+	_label_deaths.text = "x" + str(GameState.times_died)
 	_label_trophy.text = tr(GameState.current_trophy)
 	_label_collected.text = "{collected}/{available}".format({
 		"collected": str(GameState.items_collected),

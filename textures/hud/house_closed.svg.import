@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/strawberry_heart.png-da701abd181178e1ee2641649aa3d8f0.stex"
+path="res://.import/house_closed.svg-82fad7d0d59603593930af526b7c2ced.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://textures/icons/strawberry_heart.png"
-dest_files=[ "res://.import/strawberry_heart.png-da701abd181178e1ee2641649aa3d8f0.stex" ]
+source_file="res://textures/hud/house_closed.svg"
+dest_files=[ "res://.import/house_closed.svg-82fad7d0d59603593930af526b7c2ced.stex" ]
 
 [params]
 

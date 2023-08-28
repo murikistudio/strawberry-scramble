@@ -7,20 +7,23 @@ const BASE_PATH_ICONS := "res://textures/icons/"
 
 
 # Variables
-export(Texture) var texture_door_opened: Texture
+export(Texture) var texture_house_opened: Texture
 
 var _current_trophy := ""
 
+onready var _texture_rect_deaths: TextureRect = find_node("TextureRectDeaths")
 onready var _texture_rect_time: TextureRect = find_node("TextureRectTime")
 onready var _texture_rect_trophy: TextureRect = find_node("TextureRectTrophy")
 onready var _texture_rect_door: TextureRect = find_node("TextureRectDoor")
 onready var _texture_rect_collected: TextureRect = find_node("TextureRectCollected")
+onready var _label_deaths: Label = find_node("LabelDeaths")
 onready var _label_time: Label = find_node("LabelTime")
 onready var _label_collected: Label = find_node("LabelCollected")
 
 
 # Built-in overrides
 func _ready() -> void:
+	GameEvents.connect("player_died", self, "update_hud")
 	GameEvents.connect("player_item_collected", self, "update_hud")
 	GameEvents.connect("player_item_available", self, "update_hud")
 	GameEvents.connect("level_can_complete", self, "update_hud")
@@ -31,6 +34,14 @@ func _ready() -> void:
 # Public methods
 # Atualiza valores mostrados na interface de usuário.
 func update_hud() -> void:
+	# Mortes
+	var deaths := "x" + str(GameState.times_died)
+
+	if _label_deaths.text != deaths:
+		GameCore.highlight_control_scale(_texture_rect_deaths)
+		GameCore.highlight_control_scale(_label_deaths)
+		_label_deaths.text = deaths
+
 	# Tempo
 	var time := str(GameState.time_elapsed) + "s"
 
@@ -59,8 +70,8 @@ func update_hud() -> void:
 			_current_trophy = GameState.current_trophy
 			GameCore.highlight_control_scale(_texture_rect_trophy)
 
-		if _texture_rect_door.texture != texture_door_opened:
-			_texture_rect_door.texture = texture_door_opened
+		if _texture_rect_door.texture != texture_house_opened:
+			_texture_rect_door.texture = texture_house_opened
 			GameCore.highlight_control_scale(_texture_rect_door)
 
 	else:

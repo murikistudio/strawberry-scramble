@@ -15,6 +15,7 @@ signal level_lever_touched(lever)
 signal level_lever_pushed(target)
 
 # Player signals
+signal player_died
 signal player_item_available
 signal player_item_collected
 signal player_request_camera_focus(target)

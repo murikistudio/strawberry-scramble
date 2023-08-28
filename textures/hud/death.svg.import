@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/strawberry_timer.png-b475cf87edd07444955e17d0f4c064b5.stex"
+path="res://.import/death.svg-5a938eef77d5e697b417ef673a21f339.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://textures/icons/strawberry_timer.png"
-dest_files=[ "res://.import/strawberry_timer.png-b475cf87edd07444955e17d0f4c064b5.stex" ]
+source_file="res://textures/hud/death.svg"
+dest_files=[ "res://.import/death.svg-5a938eef77d5e697b417ef673a21f339.stex" ]
 
 [params]
 

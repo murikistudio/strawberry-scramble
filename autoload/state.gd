@@ -134,6 +134,7 @@ func add_times_died() -> void:
 	if times_died % 5 == 0:
 		GameEvents.emit_signal("level_dialog", "man", "death")
 
+	GameEvents.emit_signal("player_died")
 	evaluate_game()
 
 

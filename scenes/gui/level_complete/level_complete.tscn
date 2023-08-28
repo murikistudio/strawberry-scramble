@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://scenes/gui/level_complete/level_complete.gd" type="Script" id=1]
 [ext_resource path="res://textures/buttons/next.svg" type="Texture" id=2]
@@ -13,6 +13,7 @@
 [ext_resource path="res://textures/icons/diamond.svg" type="Texture" id=11]
 [ext_resource path="res://addons/simple-gui-transitions/transition.gd" type="Script" id=12]
 [ext_resource path="res://textures/hud/strawberry.svg" type="Texture" id=13]
+[ext_resource path="res://textures/hud/death.svg" type="Texture" id=14]
 
 [node name="LevelComplete" type="Control"]
 pause_mode = 2
@@ -38,107 +39,39 @@ margin_bottom = 700.0
 
 [node name="LabelTitle" type="Label" parent="MarginContainer/VBoxContainer"]
 margin_right = 1240.0
-margin_bottom = 92.0
+margin_bottom = 102.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-size_flags_stretch_ratio = 0.25
+size_flags_stretch_ratio = 0.3
 theme = ExtResource( 9 )
 text = "Level Complete!"
 align = 1
 valign = 1
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
-margin_top = 96.0
+margin_top = 106.0
 margin_right = 1240.0
-margin_bottom = 467.0
+margin_bottom = 449.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme = ExtResource( 9 )
 
 [node name="Control" type="Control" parent="MarginContainer/VBoxContainer/HBoxContainer"]
-margin_right = 225.0
-margin_bottom = 371.0
+margin_right = 183.0
+margin_bottom = 343.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-
-[node name="ContainerTime" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer"]
-margin_left = 229.0
-margin_right = 454.0
-margin_bottom = 371.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-
-[node name="TextureRectTime" type="TextureRect" parent="MarginContainer/VBoxContainer/HBoxContainer/ContainerTime"]
-margin_right = 225.0
-margin_bottom = 305.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-texture = ExtResource( 6 )
-expand = true
-stretch_mode = 6
-
-[node name="LabelTime" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/ContainerTime"]
-margin_top = 309.0
-margin_right = 225.0
-margin_bottom = 371.0
-size_flags_horizontal = 3
-size_flags_vertical = 7
-size_flags_stretch_ratio = 0.2
-text = "0s"
-align = 1
-
-[node name="Control3" type="Control" parent="MarginContainer/VBoxContainer/HBoxContainer"]
-margin_left = 458.0
-margin_right = 503.0
-margin_bottom = 371.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-size_flags_stretch_ratio = 0.2
-
-[node name="ContainerMedal" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer"]
-margin_left = 507.0
-margin_right = 732.0
-margin_bottom = 371.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-
-[node name="TextureRectTrophy" type="TextureRect" parent="MarginContainer/VBoxContainer/HBoxContainer/ContainerMedal"]
-margin_right = 225.0
-margin_bottom = 305.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-texture = ExtResource( 11 )
-expand = true
-stretch_mode = 6
-
-[node name="LabelTrophy" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/ContainerMedal"]
-margin_top = 309.0
-margin_right = 225.0
-margin_bottom = 371.0
-size_flags_horizontal = 3
-size_flags_vertical = 7
-size_flags_stretch_ratio = 0.2
-text = "Diamond"
-align = 1
-
-[node name="Control4" type="Control" parent="MarginContainer/VBoxContainer/HBoxContainer"]
-margin_left = 736.0
-margin_right = 781.0
-margin_bottom = 371.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-size_flags_stretch_ratio = 0.2
 
 [node name="ContainerCollected" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer"]
-margin_left = 785.0
-margin_right = 1010.0
-margin_bottom = 371.0
+margin_left = 187.0
+margin_right = 370.0
+margin_bottom = 343.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="TextureRectCollected" type="TextureRect" parent="MarginContainer/VBoxContainer/HBoxContainer/ContainerCollected"]
-margin_right = 225.0
-margin_bottom = 305.0
+margin_right = 183.0
+margin_bottom = 282.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 texture = ExtResource( 13 )
@@ -146,41 +79,143 @@ expand = true
 stretch_mode = 6
 
 [node name="LabelCollected" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/ContainerCollected"]
-margin_top = 309.0
-margin_right = 225.0
-margin_bottom = 371.0
+margin_top = 286.0
+margin_right = 183.0
+margin_bottom = 343.0
 size_flags_horizontal = 3
 size_flags_vertical = 7
 size_flags_stretch_ratio = 0.2
 text = "0/0"
 align = 1
 
+[node name="Control5" type="Control" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+margin_left = 374.0
+margin_right = 410.0
+margin_bottom = 343.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.2
+
+[node name="ContainerMedal" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+margin_left = 414.0
+margin_right = 597.0
+margin_bottom = 343.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="TextureRectTrophy" type="TextureRect" parent="MarginContainer/VBoxContainer/HBoxContainer/ContainerMedal"]
+margin_right = 183.0
+margin_bottom = 282.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource( 11 )
+expand = true
+stretch_mode = 6
+
+[node name="LabelTrophy" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/ContainerMedal"]
+margin_top = 286.0
+margin_right = 183.0
+margin_bottom = 343.0
+size_flags_horizontal = 3
+size_flags_vertical = 7
+size_flags_stretch_ratio = 0.2
+text = "Diamond"
+align = 1
+
+[node name="Control3" type="Control" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+margin_left = 601.0
+margin_right = 638.0
+margin_bottom = 343.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.2
+
+[node name="ContainerTime" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+margin_left = 642.0
+margin_right = 825.0
+margin_bottom = 343.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="TextureRectTime" type="TextureRect" parent="MarginContainer/VBoxContainer/HBoxContainer/ContainerTime"]
+margin_right = 183.0
+margin_bottom = 282.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource( 6 )
+expand = true
+stretch_mode = 6
+
+[node name="LabelTime" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/ContainerTime"]
+margin_top = 286.0
+margin_right = 183.0
+margin_bottom = 343.0
+size_flags_horizontal = 3
+size_flags_vertical = 7
+size_flags_stretch_ratio = 0.2
+text = "0s"
+align = 1
+
+[node name="Control4" type="Control" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+margin_left = 829.0
+margin_right = 865.0
+margin_bottom = 343.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.2
+
+[node name="ContainerDeaths" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+margin_left = 869.0
+margin_right = 1052.0
+margin_bottom = 343.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="TextureRectDeaths" type="TextureRect" parent="MarginContainer/VBoxContainer/HBoxContainer/ContainerDeaths"]
+margin_right = 183.0
+margin_bottom = 282.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource( 14 )
+expand = true
+stretch_mode = 6
+
+[node name="LabelDeaths" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/ContainerDeaths"]
+margin_top = 286.0
+margin_right = 183.0
+margin_bottom = 343.0
+size_flags_horizontal = 3
+size_flags_vertical = 7
+size_flags_stretch_ratio = 0.2
+text = "x0"
+align = 1
+
 [node name="Control2" type="Control" parent="MarginContainer/VBoxContainer/HBoxContainer"]
-margin_left = 1014.0
+margin_left = 1056.0
 margin_right = 1240.0
-margin_bottom = 371.0
+margin_bottom = 343.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="Control5" type="Control" parent="MarginContainer/VBoxContainer"]
-margin_top = 471.0
+margin_top = 453.0
 margin_right = 1240.0
-margin_bottom = 490.0
+margin_bottom = 470.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.05
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
-margin_top = 494.0
+margin_top = 474.0
 margin_right = 1240.0
 margin_bottom = 680.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-size_flags_stretch_ratio = 0.5
+size_flags_stretch_ratio = 0.6
 
 [node name="ButtonQuit" type="TextureButton" parent="MarginContainer/VBoxContainer/HBoxContainer2"]
 margin_right = 244.0
-margin_bottom = 186.0
+margin_bottom = 206.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 texture_normal = ExtResource( 3 )
@@ -195,14 +230,14 @@ script = ExtResource( 10 )
 [node name="Control2" type="Control" parent="MarginContainer/VBoxContainer/HBoxContainer2"]
 margin_left = 248.0
 margin_right = 493.0
-margin_bottom = 186.0
+margin_bottom = 206.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="ButtonRestart" type="TextureButton" parent="MarginContainer/VBoxContainer/HBoxContainer2"]
 margin_left = 497.0
 margin_right = 742.0
-margin_bottom = 186.0
+margin_bottom = 206.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 texture_normal = ExtResource( 5 )
@@ -217,14 +252,14 @@ script = ExtResource( 10 )
 [node name="Control3" type="Control" parent="MarginContainer/VBoxContainer/HBoxContainer2"]
 margin_left = 746.0
 margin_right = 991.0
-margin_bottom = 186.0
+margin_bottom = 206.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="ButtonNext" type="TextureButton" parent="MarginContainer/VBoxContainer/HBoxContainer2"]
 margin_left = 995.0
 margin_right = 1240.0
-margin_bottom = 186.0
+margin_bottom = 206.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 texture_normal = ExtResource( 2 )
