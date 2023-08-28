@@ -41,6 +41,7 @@ onready var _directional_light: DirectionalLight = find_node("DirectionalLight")
 onready var _anim_player: AnimationPlayer = $Visual.find_node("AnimationPlayer")
 onready var _area: Area = find_node("Area")
 onready var _ray_cast: RayCast = find_node("RayCast")
+onready var _camera_focus: Spatial = null
 
 
 # Setters and getters
@@ -61,6 +62,7 @@ func _ready() -> void:
 	_mesh_direction.set_as_toplevel(true)
 	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
 	GameEvents.emit_signal("level_dialog", "mom", "start")
+	GameEvents.connect("player_request_camera_focus", self, "_on_player_request_camera_focus")
 
 
 func _physics_process(delta: float) -> void:
@@ -186,10 +188,12 @@ func _process_move(_delta: float) -> void:
 
 # Processa a movimentação e suavização da câmera.
 func _process_camera(_delta: float) -> void:
-	if dead:
-		return
+	if not _camera_focus:
+		_camera_focus = _mesh_direction
 
-	_camera_axis.global_translation = _camera_axis.global_translation.linear_interpolate(_mesh_direction.global_translation, 0.1)
+	_camera_axis.global_translation = _camera_axis.global_translation.linear_interpolate(
+		_camera_focus.global_translation, 0.1
+	)
 
 
 # Processa a colisão do ray cast.
@@ -327,3 +331,14 @@ func _on_Timer_timeout() -> void:
 		return
 
 	GameState.add_time_elapsed()
+
+
+# Alterar objeto de foco da câmera.
+func _on_player_request_camera_focus(target: Spatial) -> void:
+	if not target:
+		_state_manager.transition_to(_state_manager.get_node("Idle"))
+		_camera_focus = null
+		return
+
+	_state_manager.transition_to(_state_manager.get_node("Stop"))
+	_camera_focus = target
