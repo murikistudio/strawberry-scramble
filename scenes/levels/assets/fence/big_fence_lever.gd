@@ -20,6 +20,8 @@ func _on_level_lever_touched(lever: Node) -> void:
 
 	var target_node := get_node(target)
 
-	GameEvents.emit_signal("level_lever_pushed", target_node)
 	_anim_player.play("push")
+	GameAudio.play_sfx(DatabaseAudio.SFX_LEVER)
 	_pushed = true
+	yield(get_tree().create_timer(1.0, false), "timeout")
+	GameEvents.emit_signal("level_lever_pushed", target_node)

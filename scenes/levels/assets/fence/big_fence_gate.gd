@@ -16,5 +16,6 @@ func _on_level_lever_pushed(target: Node) -> void:
 	if _opened or target != self:
 		return
 
-	_anim_player.play("open")
 	_opened = true
+	_anim_player.play("open")
+	GameAudio.play_sfx(DatabaseAudio.SFX_GATE)

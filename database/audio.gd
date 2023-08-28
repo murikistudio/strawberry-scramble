@@ -7,6 +7,8 @@ class_name DatabaseAudio
 const SFX_BASE := "res://sounds/sfx/"
 const SFX_WATER := SFX_BASE + "water.wav"
 const SFX_BALLOON_POP := SFX_BASE + "balloon_pop.wav"
+const SFX_LEVER := SFX_BASE + "lever.wav"
+const SFX_GATE := SFX_BASE + "gate.wav"
 const SFX_COLLECT := SFX_BASE + "collect.wav"
 const SFX_CHECKPOINT := SFX_BASE + "checkpoint.wav"
 const SFX_STEP_GRASS_1 := SFX_BASE + "step_grass_1.wav"
