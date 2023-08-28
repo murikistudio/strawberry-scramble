@@ -25,7 +25,7 @@ script = ExtResource( 1 )
 [node name="GuiTransition" type="Node" parent="."]
 script = ExtResource( 12 )
 layout = NodePath("..")
-controls = [ NodePath("../MarginContainer/VBoxContainer/LabelTitle"), NodePath("../MarginContainer/VBoxContainer/HBoxContainer/ContainerTime"), NodePath("../MarginContainer/VBoxContainer/HBoxContainer/ContainerMedal"), NodePath("../MarginContainer/VBoxContainer/HBoxContainer/ContainerCollected"), NodePath("../MarginContainer/VBoxContainer/HBoxContainer2/ButtonQuit"), NodePath("../MarginContainer/VBoxContainer/HBoxContainer2/ButtonRestart"), NodePath("../MarginContainer/VBoxContainer/HBoxContainer2/ButtonNext") ]
+controls = [ NodePath("../MarginContainer/VBoxContainer/LabelTitle"), NodePath("../MarginContainer/VBoxContainer/HBoxContainer/ContainerTime"), NodePath("../MarginContainer/VBoxContainer/HBoxContainer/ContainerMedal"), NodePath("../MarginContainer/VBoxContainer/HBoxContainer/ContainerCollected"), NodePath("../MarginContainer/VBoxContainer/HBoxContainer2/ButtonQuit"), NodePath("../MarginContainer/VBoxContainer/HBoxContainer2/ButtonRestart"), NodePath("../MarginContainer/VBoxContainer/HBoxContainer2/ButtonNext"), NodePath("../MarginContainer/VBoxContainer/HBoxContainer/ContainerDeaths/TextureRectDeaths"), NodePath("../MarginContainer/VBoxContainer/HBoxContainer/ContainerDeaths/LabelDeaths") ]
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 anchor_right = 1.0
