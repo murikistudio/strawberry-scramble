@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://scenes/levels/assets/ground_grass/lib_ground_grass.tres" type="MeshLibrary" id=1]
 [ext_resource path="res://scenes/characters/player/player.tscn" type="PackedScene" id=2]
@@ -17,6 +17,8 @@
 [ext_resource path="res://scenes/levels/assets/fence/big_fence_gate.tscn" type="PackedScene" id=15]
 [ext_resource path="res://scenes/levels/assets/fence/big_fence_lever.tscn" type="PackedScene" id=16]
 [ext_resource path="res://scenes/levels/assets/thorns/thorns.tscn" type="PackedScene" id=17]
+[ext_resource path="res://scenes/characters/snail/snail.tscn" type="PackedScene" id=18]
+[ext_resource path="res://scenes/characters/fish/fish.tscn" type="PackedScene" id=19]
 
 [node name="Test" type="Spatial"]
 
@@ -31,7 +33,6 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 2 )
 
 [node name="Water" type="Spatial" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0 )
-visible = false
 __meta__ = {
 "_edit_lock_": true
 }
@@ -257,3 +258,9 @@ target = NodePath("../BigFenceGate")
 
 [node name="BigFenceGate" parent="Gates" instance=ExtResource( 15 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -5 )
+
+[node name="Snail" parent="." instance=ExtResource( 18 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -6, 1, -6 )
+
+[node name="Fish" parent="." instance=ExtResource( 19 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -4, 2, 0 )

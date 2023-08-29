@@ -1,0 +1,133 @@
+{
+    "asset" : {
+        "generator" : "Khronos glTF Blender I/O v1.2.20",
+        "version" : "2.0"
+    },
+    "scene" : 0,
+    "scenes" : [
+        {
+            "name" : "Scene",
+            "nodes" : [
+                0
+            ]
+        }
+    ],
+    "nodes" : [
+        {
+            "name" : "FishMesh",
+            "mesh" : 0
+        }
+    ],
+    "materials" : [
+        {
+            "name" : "fish",
+            "pbrMetallicRoughness" : {
+                "baseColorTexture" : {
+                    "index" : 0,
+                    "texCoord" : 0
+                }
+            }
+        }
+    ],
+    "meshes" : [
+        {
+            "name" : "FishMesh.001",
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "TEXCOORD_0" : 0,
+                        "POSITION" : 1,
+                        "NORMAL" : 2
+                    },
+                    "indices" : 3,
+                    "material" : 0
+                }
+            ]
+        }
+    ],
+    "textures" : [
+        {
+            "sampler" : 0,
+            "source" : 0
+        }
+    ],
+    "images" : [
+        {
+            "name" : "fish",
+            "mimeType" : "image/png",
+            "uri" : "fish.png"
+        }
+    ],
+    "accessors" : [
+        {
+            "type" : "VEC2",
+            "bufferView" : 0,
+            "count" : 482,
+            "componentType" : 5126
+        },
+        {
+            "bufferView" : 1,
+            "count" : 482,
+            "componentType" : 5126,
+            "type" : "VEC3",
+            "min" : [
+                -0.29210296273231506,
+                -0.5986880660057068,
+                -1.032496452331543
+            ],
+            "max" : [
+                0.29210296273231506,
+                0.5986880660057068,
+                1.032496452331543
+            ]
+        },
+        {
+            "type" : "VEC3",
+            "bufferView" : 2,
+            "count" : 482,
+            "componentType" : 5126
+        },
+        {
+            "type" : "SCALAR",
+            "bufferView" : 3,
+            "count" : 2088,
+            "componentType" : 5123
+        }
+    ],
+    "bufferViews" : [
+        {
+            "byteLength" : 3856,
+            "buffer" : 0,
+            "byteOffset" : 0
+        },
+        {
+            "byteLength" : 5784,
+            "buffer" : 0,
+            "byteOffset" : 3856
+        },
+        {
+            "byteLength" : 5784,
+            "buffer" : 0,
+            "byteOffset" : 9640
+        },
+        {
+            "byteLength" : 4176,
+            "buffer" : 0,
+            "byteOffset" : 15424
+        }
+    ],
+    "samplers" : [
+        {
+            "wrapT" : 10497,
+            "magFilter" : 9729,
+            "minFilter" : 9986,
+            "wrapS" : 10497
+        }
+    ],
+    "buffers" : [
+        {
+            "byteLength" : 19600,
+            "uri" : "fish.bin"
+        }
+    ]
+}

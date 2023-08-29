@@ -1,0 +1,139 @@
+{
+    "asset" : {
+        "version" : "2.0",
+        "generator" : "Khronos glTF Blender I/O v1.2.20"
+    },
+    "extensionsUsed" : [
+        "KHR_materials_unlit"
+    ],
+    "scene" : 0,
+    "scenes" : [
+        {
+            "name" : "Scene",
+            "nodes" : [
+                0
+            ]
+        }
+    ],
+    "nodes" : [
+        {
+            "name" : "SnailMesh",
+            "mesh" : 0
+        }
+    ],
+    "materials" : [
+        {
+            "extensions" : {
+                "KHR_materials_unlit" : {}
+            },
+            "name" : "snail",
+            "pbrMetallicRoughness" : {
+                "baseColorTexture" : {
+                    "texCoord" : 0,
+                    "index" : 0
+                }
+            }
+        }
+    ],
+    "meshes" : [
+        {
+            "name" : "SnailMesh.001",
+            "primitives" : [
+                {
+                    "indices" : 3,
+                    "attributes" : {
+                        "NORMAL" : 0,
+                        "POSITION" : 1,
+                        "TEXCOORD_0" : 2
+                    },
+                    "material" : 0
+                }
+            ]
+        }
+    ],
+    "textures" : [
+        {
+            "sampler" : 0,
+            "source" : 0
+        }
+    ],
+    "images" : [
+        {
+            "name" : "snail",
+            "mimeType" : "image/png",
+            "uri" : "snail.png"
+        }
+    ],
+    "accessors" : [
+        {
+            "bufferView" : 0,
+            "componentType" : 5126,
+            "type" : "VEC3",
+            "count" : 249
+        },
+        {
+            "min" : [
+                -0.3620259463787079,
+                1.2066275303368457e-05,
+                -0.5774144530296326
+            ],
+            "bufferView" : 1,
+            "componentType" : 5126,
+            "type" : "VEC3",
+            "count" : 249,
+            "max" : [
+                0.3620259463787079,
+                1.0820809602737427,
+                0.8850390315055847
+            ]
+        },
+        {
+            "bufferView" : 2,
+            "componentType" : 5126,
+            "type" : "VEC2",
+            "count" : 249
+        },
+        {
+            "bufferView" : 3,
+            "componentType" : 5123,
+            "type" : "SCALAR",
+            "count" : 984
+        }
+    ],
+    "bufferViews" : [
+        {
+            "byteLength" : 2988,
+            "buffer" : 0,
+            "byteOffset" : 0
+        },
+        {
+            "byteLength" : 2988,
+            "buffer" : 0,
+            "byteOffset" : 2988
+        },
+        {
+            "byteLength" : 1992,
+            "buffer" : 0,
+            "byteOffset" : 5976
+        },
+        {
+            "byteLength" : 1968,
+            "buffer" : 0,
+            "byteOffset" : 7968
+        }
+    ],
+    "samplers" : [
+        {
+            "magFilter" : 9729,
+            "wrapT" : 10497,
+            "wrapS" : 10497,
+            "minFilter" : 9986
+        }
+    ],
+    "buffers" : [
+        {
+            "byteLength" : 9936,
+            "uri" : "snail.bin"
+        }
+    ]
+}
