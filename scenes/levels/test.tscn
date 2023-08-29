@@ -260,7 +260,8 @@ target = NodePath("../BigFenceGate")
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -5 )
 
 [node name="Snail" parent="." instance=ExtResource( 18 )]
-transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -6, 1, -6 )
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -7, 1, -6.5 )
+target_x = 9.0
 
 [node name="Fish" parent="." instance=ExtResource( 19 )]
 transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -4, 2, 0 )
