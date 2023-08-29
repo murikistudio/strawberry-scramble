@@ -19,3 +19,4 @@ signal player_died
 signal player_item_available
 signal player_item_collected
 signal player_request_camera_focus(target)
+signal player_emitted(player)

@@ -9,11 +9,23 @@ export(float, 0.0, 10.0, 0.1) var follow_distance := 2.0
 onready var _anim_player: AnimationPlayer = $AnimationPlayer
 onready var _initial_position := global_translation
 onready var _target_position := Vector3()
+onready var _player: Spatial
 
 
 # Built-in overrides
+func _init() -> void:
+	GameEvents.connect("player_emitted", self, "_on_player_emitted")
+
+
 func _ready() -> void:
 	_loop_movement()
+
+
+func _process(_delta: float) -> void:
+	if not _player or not follow_distance:
+		return
+
+	# TODO: Seguir jogador em um eixo quando estiver próximo dele
 
 
 # Private methods
@@ -47,3 +59,8 @@ func _loop_movement() -> void:
 
 	for i in rot_loop:
 		tween.tween_callback(self, "rotate_y", [deg2rad(-rot_degrees)]).set_delay(rot_interval)
+
+
+# Event handlers
+func _on_player_emitted(player: Spatial) -> void:
+	_player = player
