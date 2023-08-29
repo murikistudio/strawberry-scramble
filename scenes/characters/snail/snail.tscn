@@ -38,7 +38,7 @@ tracks/0/keys = {
 "values": [ Vector3( 1, 0.9, 1.25 ), Vector3( 1.2, 1, 1 ), Vector3( 1, 0.9, 1.25 ) ]
 }
 
-[node name="Snail" type="Area"]
+[node name="Snail" type="Area" groups=["death"]]
 monitoring = false
 script = ExtResource( 1 )
 

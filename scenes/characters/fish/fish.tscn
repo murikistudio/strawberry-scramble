@@ -5,7 +5,7 @@
 
 [sub_resource type="BoxShape" id=1]
 
-[node name="Fish" type="Area"]
+[node name="Fish" type="Area" groups=["death"]]
 monitoring = false
 script = ExtResource( 2 )
 
