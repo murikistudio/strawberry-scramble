@@ -33,6 +33,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 2 )
 
 [node name="Water" type="Spatial" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0 )
+visible = false
 __meta__ = {
 "_edit_lock_": true
 }
@@ -266,4 +267,4 @@ transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -7, 1, 
 target_x = 9.0
 
 [node name="Fish" parent="Enemies" instance=ExtResource( 19 )]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -2, -2, -9 )
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 21.5, -2, -10 )
