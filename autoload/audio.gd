@@ -70,7 +70,7 @@ func play_sfx(file, vol := 0.0, pitch := 1.0) -> void:
 
 
 # Toca um efeito sonoro 3D na posição do node Spatial passado.
-func play_sfx_3d(node: Spatial, file, pitch := 1.0) -> void:
+func play_sfx_3d(node: Spatial, file, unit_size := 1.0, pitch := 1.0) -> void:
 	var _stream := _get_stream(file)
 
 	if not _stream:
@@ -80,6 +80,7 @@ func play_sfx_3d(node: Spatial, file, pitch := 1.0) -> void:
 	audio.stream = _stream
 	audio.pitch_scale = pitch
 	audio.bus = DEFAULT_BUS_SFX
+	audio.unit_size = unit_size
 	audio.play()
 	audio.connect("finished", self, "_on_audio_finished", [audio])
 	node.add_child(audio)
