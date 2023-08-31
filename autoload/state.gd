@@ -117,8 +117,6 @@ func evaluate_game() -> void:
 	if current_trophy:
 		GameEvents.emit_signal("level_can_complete")
 
-	prints(times_died, items_progress, current_trophy)
-
 
 # Adiciona item coletado ao contador.
 func add_item_collected() -> void:
