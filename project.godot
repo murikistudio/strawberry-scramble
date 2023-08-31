@@ -159,6 +159,9 @@ config/default/animation_leave=5
 scene={
 "materials/storage": 2
 }
+texture={
+"flags/srgb": 1
+}
 
 [input]
 
