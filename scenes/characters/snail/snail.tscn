@@ -49,7 +49,7 @@ shape = SubResource( 1 )
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
 stream = ExtResource( 3 )
-unit_size = 5.0
+unit_size = 2.0
 autoplay = true
 bus = "SFX"
 
