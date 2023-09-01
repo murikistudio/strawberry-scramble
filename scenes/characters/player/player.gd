@@ -276,7 +276,6 @@ func _on_Area_area_entered(area: Area) -> void:
 		if area.is_in_group("water"):
 			var water_splash: Spatial = scene_water_splash.instance()
 			add_child(water_splash)
-			water_splash.set_as_toplevel(true)
 			water_splash.global_translation = global_translation
 			water_splash.global_translation.y += 2.0
 			GameAudio.play_sfx(DatabaseAudio.SFX_WATER)
@@ -285,10 +284,8 @@ func _on_Area_area_entered(area: Area) -> void:
 		elif area.is_in_group("thorns"):
 			var balloon_pop: Spatial = scene_balloon_pop.instance()
 			add_child(balloon_pop)
-			balloon_pop.set_as_toplevel(true)
 			balloon_pop.global_translation = global_translation
 			balloon_pop.global_translation.y += -1.0
-			GameAudio.play_sfx(DatabaseAudio.SFX_BALLOON_POP)
 
 		yield(get_tree().create_timer(1.0, false), "timeout")
 		global_translation = respawn_position
@@ -299,13 +296,9 @@ func _on_Area_area_entered(area: Area) -> void:
 
 	if area.is_in_group("collectable"):
 		GameState.add_item_collected()
-		GameAudio.play_sfx(DatabaseAudio.SFX_COLLECT)
 		area.monitorable = false
 
 	if area.is_in_group("checkpoint"):
-		if area.global_translation != respawn_position:
-			GameAudio.play_sfx(DatabaseAudio.SFX_CHECKPOINT)
-
 		respawn_position = area.global_translation
 		GameEvents.emit_signal("level_checkpoint_touched", area)
 

@@ -20,7 +20,6 @@ func spawn_water_splash() -> void:
 
 	var water_splash: Spatial = scene_water_splash.instance()
 	add_child(water_splash)
-	water_splash.set_as_toplevel(true)
 	water_splash.global_translation = _fish.global_translation
 	water_splash.global_rotation = Vector3.ZERO
 	GameAudio.play_sfx_3d(water_splash, DatabaseAudio.SFX_WATER, 5.0, rand_range(1.0, 1.2))

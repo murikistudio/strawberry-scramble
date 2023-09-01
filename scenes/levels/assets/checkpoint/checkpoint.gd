@@ -19,6 +19,7 @@ func _ready() -> void:
 func _update_visual() -> void:
 	if _flag_on_mesh.visible != _active:
 		_animation_player.play("checkpoint_touched")
+		GameAudio.play_sfx(DatabaseAudio.SFX_CHECKPOINT)
 
 	_flag_on_mesh.visible = _active
 	_flag_off_mesh.visible = not _active

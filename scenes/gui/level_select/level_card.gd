@@ -57,5 +57,4 @@ func _on_ButtonLevel_pressed() -> void:
 
 	_pressed = true
 	GameState.current_level = _level_name
-	print(GameState.current_level)
 	GameTransition.change_scene_to(level_path)
