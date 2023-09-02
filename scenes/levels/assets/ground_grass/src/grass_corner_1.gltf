@@ -22,53 +22,52 @@
         },
         {
             "mesh" : 1,
-            "name" : "GrassCorner1",
             "children" : [
                 0
-            ]
+            ],
+            "name" : "GrassCorner1"
         }
     ],
     "materials" : [
         {
-            "extensions" : {
-                "KHR_materials_unlit" : {}
-            },
             "pbrMetallicRoughness" : {
                 "baseColorTexture" : {
-                    "index" : 0,
-                    "texCoord" : 0
+                    "texCoord" : 0,
+                    "index" : 0
                 }
+            },
+            "extensions" : {
+                "KHR_materials_unlit" : {}
             },
             "name" : "grass"
         }
     ],
     "meshes" : [
         {
+            "name" : "GrassCornerCollider.001",
             "primitives" : [
                 {
+                    "indices" : 2,
                     "attributes" : {
-                        "POSITION" : 0,
-                        "NORMAL" : 1,
-                        "TEXCOORD_0" : 2
-                    },
-                    "indices" : 3
+                        "NORMAL" : 0,
+                        "POSITION" : 1
+                    }
                 }
-            ],
-            "name" : "GrassCornerCollider.001"
+            ]
         },
         {
+            "name" : "GrassCorner1.001",
             "primitives" : [
                 {
-                    "material" : 0,
+                    "indices" : 6,
                     "attributes" : {
-                        "POSITION" : 4,
-                        "NORMAL" : 5,
-                        "TEXCOORD_0" : 6
+                        "TEXCOORD_0" : 3,
+                        "NORMAL" : 4,
+                        "POSITION" : 5
                     },
-                    "indices" : 7
+                    "material" : 0
                 }
-            ],
-            "name" : "GrassCorner1.001"
+            ]
         }
     ],
     "textures" : [
@@ -79,120 +78,109 @@
     ],
     "images" : [
         {
-            "mimeType" : "image/png",
             "uri" : "grass.png",
+            "mimeType" : "image/png",
             "name" : "grass.png"
         }
     ],
     "accessors" : [
         {
-            "max" : [
-                1.0000030994415283,
-                0,
-                0.9999988675117493
-            ],
-            "componentType" : 5126,
+            "type" : "VEC3",
+            "count" : 17,
             "bufferView" : 0,
+            "componentType" : 5126
+        },
+        {
             "min" : [
                 -0.9999975562095642,
                 -2,
                 -1.000001072883606
             ],
-            "count" : 21,
-            "type" : "VEC3"
-        },
-        {
+            "type" : "VEC3",
             "bufferView" : 1,
-            "count" : 21,
             "componentType" : 5126,
-            "type" : "VEC3"
-        },
-        {
-            "bufferView" : 2,
-            "count" : 21,
-            "componentType" : 5126,
-            "type" : "VEC2"
-        },
-        {
-            "bufferView" : 3,
-            "count" : 27,
-            "componentType" : 5123,
-            "type" : "SCALAR"
-        },
-        {
+            "count" : 17,
             "max" : [
                 1.0000030994415283,
-                -2.9802322387695312e-08,
-                0.9999988079071045
-            ],
-            "componentType" : 5126,
+                0,
+                0.9999988675117493
+            ]
+        },
+        {
+            "type" : "SCALAR",
+            "count" : 27,
+            "bufferView" : 2,
+            "componentType" : 5123
+        },
+        {
+            "type" : "VEC2",
+            "count" : 39,
+            "bufferView" : 3,
+            "componentType" : 5126
+        },
+        {
+            "type" : "VEC3",
+            "count" : 39,
             "bufferView" : 4,
+            "componentType" : 5126
+        },
+        {
             "min" : [
                 -0.9999977350234985,
                 -2,
                 -1.000001072883606
             ],
-            "count" : 39,
-            "type" : "VEC3"
-        },
-        {
+            "type" : "VEC3",
             "bufferView" : 5,
-            "count" : 39,
             "componentType" : 5126,
-            "type" : "VEC3"
+            "count" : 39,
+            "max" : [
+                1.0000030994415283,
+                -2.9802322387695312e-08,
+                0.9999988079071045
+            ]
         },
         {
-            "bufferView" : 6,
-            "count" : 39,
-            "componentType" : 5126,
-            "type" : "VEC2"
-        },
-        {
-            "bufferView" : 7,
+            "type" : "SCALAR",
             "count" : 57,
-            "componentType" : 5123,
-            "type" : "SCALAR"
+            "bufferView" : 6,
+            "componentType" : 5123
         }
     ],
     "bufferViews" : [
         {
-            "buffer" : 0,
             "byteOffset" : 0,
-            "byteLength" : 252
+            "buffer" : 0,
+            "byteLength" : 204
         },
         {
+            "byteOffset" : 204,
             "buffer" : 0,
-            "byteOffset" : 252,
-            "byteLength" : 252
+            "byteLength" : 204
         },
         {
+            "byteOffset" : 408,
             "buffer" : 0,
-            "byteOffset" : 504,
-            "byteLength" : 168
-        },
-        {
-            "buffer" : 0,
-            "byteOffset" : 672,
             "byteLength" : 54
         },
         {
+            "byteOffset" : 464,
             "buffer" : 0,
-            "byteOffset" : 728,
-            "byteLength" : 468
-        },
-        {
-            "buffer" : 0,
-            "byteOffset" : 1196,
-            "byteLength" : 468
-        },
-        {
-            "buffer" : 0,
-            "byteOffset" : 1664,
             "byteLength" : 312
         },
         {
+            "byteOffset" : 776,
             "buffer" : 0,
-            "byteOffset" : 1976,
+            "byteLength" : 468
+        },
+        {
+            "byteOffset" : 1244,
+            "buffer" : 0,
+            "byteLength" : 468
+        },
+        {
+            "byteOffset" : 1712,
+            "buffer" : 0,
             "byteLength" : 114
         }
     ],
@@ -207,7 +195,7 @@
     "buffers" : [
         {
             "uri" : "grass_corner_1.bin",
-            "byteLength" : 2092
+            "byteLength" : 1828
         }
     ]
 }

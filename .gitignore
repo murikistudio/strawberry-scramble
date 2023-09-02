@@ -37,3 +37,4 @@ data_*/
 !/android/build/res/values/Strings.xml
 *.keystore
 *.keystore.old
+*.png~
