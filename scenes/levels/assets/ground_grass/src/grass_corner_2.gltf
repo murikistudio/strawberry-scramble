@@ -17,6 +17,7 @@
     ],
     "nodes" : [
         {
+<<<<<<< Updated upstream
             "name" : "GrassCorner2Collider -colonly",
             "mesh" : 0
         },
@@ -26,6 +27,17 @@
             ],
             "name" : "GrassCorner2",
             "mesh" : 1
+=======
+            "mesh" : 0,
+            "name" : "GrassCorner2Collider -colonly"
+        },
+        {
+            "mesh" : 1,
+            "children" : [
+                0
+            ],
+            "name" : "GrassCorner2"
+>>>>>>> Stashed changes
         }
     ],
     "materials" : [
@@ -39,11 +51,13 @@
             "name" : "grass",
             "extensions" : {
                 "KHR_materials_unlit" : {}
-            }
+            },
+            "name" : "grass"
         }
     ],
     "meshes" : [
         {
+<<<<<<< Updated upstream
             "primitives" : [
                 {
                     "indices" : 2,
@@ -68,12 +82,39 @@
                 }
             ],
             "name" : "GrassCorner2.001"
+=======
+            "name" : "GrassCorner2Collider.001",
+            "primitives" : [
+                {
+                    "indices" : 3,
+                    "attributes" : {
+                        "TEXCOORD_0" : 0,
+                        "NORMAL" : 1,
+                        "POSITION" : 2
+                    }
+                }
+            ]
+        },
+        {
+            "name" : "GrassCorner2.001",
+            "primitives" : [
+                {
+                    "indices" : 7,
+                    "attributes" : {
+                        "TEXCOORD_0" : 4,
+                        "NORMAL" : 5,
+                        "POSITION" : 6
+                    },
+                    "material" : 0
+                }
+            ]
+>>>>>>> Stashed changes
         }
     ],
     "textures" : [
         {
-            "sampler" : 0,
-            "source" : 0
+            "source" : 0,
+            "sampler" : 0
         }
     ],
     "images" : [
@@ -85,6 +126,7 @@
     ],
     "accessors" : [
         {
+<<<<<<< Updated upstream
             "componentType" : 5126,
             "type" : "VEC3",
             "count" : 4,
@@ -93,16 +135,38 @@
         {
             "componentType" : 5126,
             "type" : "VEC3",
+=======
+            "type" : "VEC2",
+            "count" : 4,
+            "bufferView" : 0,
+            "componentType" : 5126
+        },
+        {
+            "type" : "VEC3",
+            "count" : 4,
+            "bufferView" : 1,
+            "componentType" : 5126
+        },
+        {
+>>>>>>> Stashed changes
             "min" : [
                 -1,
                 0,
                 -1
             ],
+<<<<<<< Updated upstream
             "bufferView" : 1,
+=======
+            "type" : "VEC3",
+            "bufferView" : 2,
+            "componentType" : 5126,
+            "count" : 4,
+>>>>>>> Stashed changes
             "max" : [
                 1,
                 0,
                 1
+<<<<<<< Updated upstream
             ],
             "count" : 4
         },
@@ -127,30 +191,69 @@
         {
             "componentType" : 5126,
             "type" : "VEC3",
+=======
+            ]
+        },
+        {
+            "type" : "SCALAR",
+            "count" : 6,
+            "bufferView" : 3,
+            "componentType" : 5123
+        },
+        {
+            "type" : "VEC2",
+            "count" : 24,
+            "bufferView" : 4,
+            "componentType" : 5126
+        },
+        {
+            "type" : "VEC3",
+            "count" : 24,
+            "bufferView" : 5,
+            "componentType" : 5126
+        },
+        {
+>>>>>>> Stashed changes
             "min" : [
                 -1,
                 -0.10000000149011612,
                 -1
             ],
+<<<<<<< Updated upstream
             "bufferView" : 5,
+=======
+            "type" : "VEC3",
+            "bufferView" : 6,
+            "componentType" : 5126,
+            "count" : 24,
+>>>>>>> Stashed changes
             "max" : [
                 1,
                 -2.9802322387695312e-08,
                 1.0000004768371582
+<<<<<<< Updated upstream
             ],
             "count" : 24
+=======
+            ]
+>>>>>>> Stashed changes
         },
         {
             "componentType" : 5123,
             "type" : "SCALAR",
             "count" : 30,
+<<<<<<< Updated upstream
             "bufferView" : 6
+=======
+            "bufferView" : 7,
+            "componentType" : 5123
+>>>>>>> Stashed changes
         }
     ],
     "bufferViews" : [
         {
-            "buffer" : 0,
             "byteOffset" : 0,
+<<<<<<< Updated upstream
             "byteLength" : 48
         },
         {
@@ -166,36 +269,82 @@
         {
             "buffer" : 0,
             "byteOffset" : 108,
+=======
+            "buffer" : 0,
+            "byteLength" : 32
+        },
+        {
+            "byteOffset" : 32,
+            "buffer" : 0,
+            "byteLength" : 48
+        },
+        {
+            "byteOffset" : 80,
+            "buffer" : 0,
+            "byteLength" : 48
+        },
+        {
+            "byteOffset" : 128,
+            "buffer" : 0,
+            "byteLength" : 12
+        },
+        {
+            "byteOffset" : 140,
+            "buffer" : 0,
+>>>>>>> Stashed changes
             "byteLength" : 192
         },
         {
+            "byteOffset" : 332,
             "buffer" : 0,
+<<<<<<< Updated upstream
             "byteOffset" : 300,
+=======
+>>>>>>> Stashed changes
             "byteLength" : 288
         },
         {
+            "byteOffset" : 620,
             "buffer" : 0,
+<<<<<<< Updated upstream
             "byteOffset" : 588,
+=======
+>>>>>>> Stashed changes
             "byteLength" : 288
         },
         {
+            "byteOffset" : 908,
             "buffer" : 0,
+<<<<<<< Updated upstream
             "byteOffset" : 876,
+=======
+>>>>>>> Stashed changes
             "byteLength" : 60
         }
     ],
     "samplers" : [
         {
+<<<<<<< Updated upstream
             "magFilter" : 9729,
             "wrapT" : 10497,
             "wrapS" : 10497,
             "minFilter" : 9986
+=======
+            "wrapS" : 10497,
+            "minFilter" : 9986,
+            "magFilter" : 9729,
+            "wrapT" : 10497
+>>>>>>> Stashed changes
         }
     ],
     "buffers" : [
         {
             "uri" : "grass_corner_2.bin",
+<<<<<<< Updated upstream
             "byteLength" : 936
+=======
+            "byteLength" : 968
+>>>>>>> Stashed changes
         }
     ]
 }

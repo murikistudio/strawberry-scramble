@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/grass_corner_1_preview.png-44b99297e4a7e3e23cda4550f8734f85.stex"
+path="res://.import/grass_center.png-d1aaa730550dac1c613f791bf98fd8ef.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/levels/assets/ground_grass/src/grass_corner_1_preview.png"
-dest_files=[ "res://.import/grass_corner_1_preview.png-44b99297e4a7e3e23cda4550f8734f85.stex" ]
+source_file="res://scenes/levels/assets/ground_grass/src/grass_center.png"
+dest_files=[ "res://.import/grass_center.png-d1aaa730550dac1c613f791bf98fd8ef.stex" ]
 
 [params]
 
@@ -23,7 +23,7 @@ flags/repeat=0
 flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
-flags/srgb=2
+flags/srgb=1
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/HDR_as_SRGB=false
