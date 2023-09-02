@@ -1,7 +1,7 @@
 {
     "asset" : {
-        "version" : "2.0",
-        "generator" : "Khronos glTF Blender I/O v1.2.20"
+        "generator" : "Khronos glTF Blender I/O v1.2.20",
+        "version" : "2.0"
     },
     "extensionsUsed" : [
         "KHR_materials_unlit"
@@ -9,27 +9,34 @@
     "scene" : 0,
     "scenes" : [
         {
-            "name" : "Scene",
             "nodes" : [
-                0
-            ]
+                1
+            ],
+            "name" : "Scene"
         }
     ],
     "nodes" : [
         {
-            "name" : "GrassSide",
+            "name" : "GrassSideCollider -colonly",
             "mesh" : 0
+        },
+        {
+            "children" : [
+                0
+            ],
+            "name" : "GrassSide",
+            "mesh" : 1
         }
     ],
     "materials" : [
         {
-            "name" : "grass",
             "pbrMetallicRoughness" : {
                 "baseColorTexture" : {
-                    "texCoord" : 0,
-                    "index" : 0
+                    "index" : 0,
+                    "texCoord" : 0
                 }
             },
+            "name" : "grass",
             "extensions" : {
                 "KHR_materials_unlit" : {}
             }
@@ -37,18 +44,31 @@
     ],
     "meshes" : [
         {
-            "name" : "GrassSide.001",
             "primitives" : [
                 {
-                    "material" : 0,
                     "indices" : 3,
                     "attributes" : {
                         "TEXCOORD_0" : 0,
-                        "POSITION" : 1,
-                        "NORMAL" : 2
+                        "NORMAL" : 1,
+                        "POSITION" : 2
                     }
                 }
-            ]
+            ],
+            "name" : "GrassSideCollider.001"
+        },
+        {
+            "primitives" : [
+                {
+                    "indices" : 7,
+                    "material" : 0,
+                    "attributes" : {
+                        "TEXCOORD_0" : 4,
+                        "NORMAL" : 5,
+                        "POSITION" : 6
+                    }
+                }
+            ],
+            "name" : "GrassSide.001"
         }
     ],
     "textures" : [
@@ -59,81 +79,135 @@
     ],
     "images" : [
         {
-            "name" : "grass.png",
+            "uri" : "grass.png",
             "mimeType" : "image/png",
-            "uri" : "grass.png"
+            "name" : "grass.png"
         }
     ],
     "accessors" : [
         {
+            "componentType" : 5126,
             "type" : "VEC2",
-            "count" : 12,
-            "bufferView" : 0,
-            "componentType" : 5126
+            "count" : 8,
+            "bufferView" : 0
         },
         {
+            "componentType" : 5126,
+            "type" : "VEC3",
+            "count" : 8,
+            "bufferView" : 1
+        },
+        {
+            "componentType" : 5126,
+            "type" : "VEC3",
+            "min" : [
+                -0.9999983906745911,
+                -2,
+                -0.9999998211860657
+            ],
+            "bufferView" : 2,
+            "max" : [
+                1.0000022649765015,
+                0,
+                1.0000003576278687
+            ],
+            "count" : 8
+        },
+        {
+            "componentType" : 5123,
+            "type" : "SCALAR",
+            "count" : 12,
+            "bufferView" : 3
+        },
+        {
+            "componentType" : 5126,
+            "type" : "VEC2",
+            "count" : 12,
+            "bufferView" : 4
+        },
+        {
+            "componentType" : 5126,
+            "type" : "VEC3",
+            "count" : 12,
+            "bufferView" : 5
+        },
+        {
+            "componentType" : 5126,
+            "type" : "VEC3",
             "min" : [
                 -0.9999985694885254,
                 -2,
                 -0.9999997019767761
             ],
-            "type" : "VEC3",
-            "count" : 12,
-            "componentType" : 5126,
+            "bufferView" : 6,
             "max" : [
                 1.0000019073486328,
                 -8.940696716308594e-08,
                 1.000000238418579
             ],
-            "bufferView" : 1
+            "count" : 12
         },
         {
-            "type" : "VEC3",
-            "count" : 12,
-            "bufferView" : 2,
-            "componentType" : 5126
-        },
-        {
+            "componentType" : 5123,
             "type" : "SCALAR",
             "count" : 18,
-            "bufferView" : 3,
-            "componentType" : 5123
+            "bufferView" : 7
         }
     ],
     "bufferViews" : [
         {
             "buffer" : 0,
             "byteOffset" : 0,
+            "byteLength" : 64
+        },
+        {
+            "buffer" : 0,
+            "byteOffset" : 64,
             "byteLength" : 96
         },
         {
             "buffer" : 0,
-            "byteOffset" : 96,
+            "byteOffset" : 160,
+            "byteLength" : 96
+        },
+        {
+            "buffer" : 0,
+            "byteOffset" : 256,
+            "byteLength" : 24
+        },
+        {
+            "buffer" : 0,
+            "byteOffset" : 280,
+            "byteLength" : 96
+        },
+        {
+            "buffer" : 0,
+            "byteOffset" : 376,
             "byteLength" : 144
         },
         {
             "buffer" : 0,
-            "byteOffset" : 240,
+            "byteOffset" : 520,
             "byteLength" : 144
         },
         {
             "buffer" : 0,
-            "byteOffset" : 384,
+            "byteOffset" : 664,
             "byteLength" : 36
         }
     ],
     "samplers" : [
         {
+            "magFilter" : 9729,
             "wrapT" : 10497,
             "wrapS" : 10497,
-            "minFilter" : 9986,
-            "magFilter" : 9729
+            "minFilter" : 9986
         }
     ],
     "buffers" : [
         {
             "uri" : "grass_side.bin",
-            "byteLength" : 420
+            "byteLength" : 700
         }
     ]
 }

@@ -1,7 +1,7 @@
 {
     "asset" : {
-        "version" : "2.0",
-        "generator" : "Khronos glTF Blender I/O v1.2.20"
+        "generator" : "Khronos glTF Blender I/O v1.2.20",
+        "version" : "2.0"
     },
     "extensionsUsed" : [
         "KHR_materials_unlit"
@@ -9,27 +9,34 @@
     "scene" : 0,
     "scenes" : [
         {
-            "name" : "Scene",
             "nodes" : [
-                0
-            ]
+                1
+            ],
+            "name" : "Scene"
         }
     ],
     "nodes" : [
         {
-            "name" : "GrassCorner3",
+            "name" : "GrassCorner3Collider -colonly",
             "mesh" : 0
+        },
+        {
+            "children" : [
+                0
+            ],
+            "name" : "GrassCorner3",
+            "mesh" : 1
         }
     ],
     "materials" : [
         {
-            "name" : "grass",
             "pbrMetallicRoughness" : {
                 "baseColorTexture" : {
-                    "texCoord" : 0,
-                    "index" : 0
+                    "index" : 0,
+                    "texCoord" : 0
                 }
             },
+            "name" : "grass",
             "extensions" : {
                 "KHR_materials_unlit" : {}
             }
@@ -37,18 +44,30 @@
     ],
     "meshes" : [
         {
-            "name" : "GrassCorner3.001",
             "primitives" : [
                 {
-                    "material" : 0,
-                    "indices" : 3,
+                    "indices" : 2,
                     "attributes" : {
-                        "TEXCOORD_0" : 0,
-                        "POSITION" : 1,
-                        "NORMAL" : 2
+                        "NORMAL" : 0,
+                        "POSITION" : 1
                     }
                 }
-            ]
+            ],
+            "name" : "GrassCorner3Collider.001"
+        },
+        {
+            "primitives" : [
+                {
+                    "indices" : 6,
+                    "material" : 0,
+                    "attributes" : {
+                        "TEXCOORD_0" : 3,
+                        "NORMAL" : 4,
+                        "POSITION" : 5
+                    }
+                }
+            ],
+            "name" : "GrassCorner3.001"
         }
     ],
     "textures" : [
@@ -59,81 +78,124 @@
     ],
     "images" : [
         {
-            "name" : "grass.png",
+            "uri" : "grass.png",
             "mimeType" : "image/png",
-            "uri" : "grass.png"
+            "name" : "grass.png"
         }
     ],
     "accessors" : [
         {
-            "type" : "VEC2",
-            "count" : 32,
-            "bufferView" : 0,
-            "componentType" : 5126
+            "componentType" : 5126,
+            "type" : "VEC3",
+            "count" : 4,
+            "bufferView" : 0
         },
         {
+            "componentType" : 5126,
+            "type" : "VEC3",
+            "min" : [
+                -1,
+                0,
+                -1
+            ],
+            "bufferView" : 1,
+            "max" : [
+                1,
+                0,
+                1
+            ],
+            "count" : 4
+        },
+        {
+            "componentType" : 5123,
+            "type" : "SCALAR",
+            "count" : 6,
+            "bufferView" : 2
+        },
+        {
+            "componentType" : 5126,
+            "type" : "VEC2",
+            "count" : 32,
+            "bufferView" : 3
+        },
+        {
+            "componentType" : 5126,
+            "type" : "VEC3",
+            "count" : 32,
+            "bufferView" : 4
+        },
+        {
+            "componentType" : 5126,
+            "type" : "VEC3",
             "min" : [
                 -0.9999985694885254,
                 -0.10000000149011612,
                 -0.9999992847442627
             ],
-            "type" : "VEC3",
-            "count" : 32,
-            "componentType" : 5126,
+            "bufferView" : 5,
             "max" : [
                 1.0000014305114746,
                 -2.9802322387695312e-08,
                 1.0000014305114746
             ],
-            "bufferView" : 1
+            "count" : 32
         },
         {
-            "type" : "VEC3",
-            "count" : 32,
-            "bufferView" : 2,
-            "componentType" : 5126
-        },
-        {
+            "componentType" : 5123,
             "type" : "SCALAR",
             "count" : 36,
-            "bufferView" : 3,
-            "componentType" : 5123
+            "bufferView" : 6
         }
     ],
     "bufferViews" : [
         {
             "buffer" : 0,
             "byteOffset" : 0,
+            "byteLength" : 48
+        },
+        {
+            "buffer" : 0,
+            "byteOffset" : 48,
+            "byteLength" : 48
+        },
+        {
+            "buffer" : 0,
+            "byteOffset" : 96,
+            "byteLength" : 12
+        },
+        {
+            "buffer" : 0,
+            "byteOffset" : 108,
             "byteLength" : 256
         },
         {
             "buffer" : 0,
-            "byteOffset" : 256,
+            "byteOffset" : 364,
             "byteLength" : 384
         },
         {
             "buffer" : 0,
-            "byteOffset" : 640,
+            "byteOffset" : 748,
             "byteLength" : 384
         },
         {
             "buffer" : 0,
-            "byteOffset" : 1024,
+            "byteOffset" : 1132,
             "byteLength" : 72
         }
     ],
     "samplers" : [
         {
+            "magFilter" : 9729,
             "wrapT" : 10497,
             "wrapS" : 10497,
-            "minFilter" : 9986,
-            "magFilter" : 9729
+            "minFilter" : 9986
         }
     ],
     "buffers" : [
         {
             "uri" : "grass_corner_3.bin",
-            "byteLength" : 1096
+            "byteLength" : 1204
         }
     ]
 }

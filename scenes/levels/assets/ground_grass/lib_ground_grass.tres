@@ -1,4 +1,4 @@
-[gd_resource type="MeshLibrary" load_steps=20 format=2]
+[gd_resource type="MeshLibrary" load_steps=23 format=2]
 
 [ext_resource path="res://scenes/levels/assets/ground_grass/src/grass.tres" type="Material" id=1]
 [ext_resource path="res://scenes/levels/assets/ground_grass/src/grass_slope_preview.png" type="Texture" id=2]
@@ -60,7 +60,10 @@ surfaces/0 = {
 "vertex_count": 24
 }
 
-[sub_resource type="ArrayMesh" id=6]
+[sub_resource type="ConcavePolygonShape" id=6]
+data = PoolVector3Array( -1, 0, 1, -1, 0, -1, 1, 0, -1, -1, 0, 1, 1, 0, -1, 1, 0, 1 )
+
+[sub_resource type="ArrayMesh" id=7]
 resource_name = "grass_corner_3_GrassCorner3001"
 surfaces/0 = {
 "aabb": AABB( -0.999999, -0.1, -0.999999, 2.00001, 0.10001, 2 ),
@@ -75,7 +78,10 @@ surfaces/0 = {
 "vertex_count": 32
 }
 
-[sub_resource type="ArrayMesh" id=7]
+[sub_resource type="ConcavePolygonShape" id=8]
+data = PoolVector3Array( -1, 0, 1, -1, 0, -1, 1, 0, -1, -1, 0, 1, 1, 0, -1, 1, 0, 1 )
+
+[sub_resource type="ArrayMesh" id=9]
 resource_name = "grass_side_GrassSide001"
 surfaces/0 = {
 "aabb": AABB( -0.999999, -2, -1, 2.00001, 2, 2 ),
@@ -90,7 +96,10 @@ surfaces/0 = {
 "vertex_count": 12
 }
 
-[sub_resource type="ArrayMesh" id=8]
+[sub_resource type="ConcavePolygonShape" id=10]
+data = PoolVector3Array( 1, 0, -1, 1, -2, -1, 1, -2, 1, 1, 0, -1, 1, -2, 1, 1, 0, 1, -1, 0, -1, 1, 0, -1, 1, 0, 1, -1, 0, 1, -1, 0, -1, 1, 0, 1 )
+
+[sub_resource type="ArrayMesh" id=11]
 resource_name = "grass_slope_GrassSlope001"
 surfaces/0 = {
 "aabb": AABB( -1, 0, -1, 2.00001, 1, 2.00001 ),
@@ -105,10 +114,10 @@ surfaces/0 = {
 "vertex_count": 4
 }
 
-[sub_resource type="ConcavePolygonShape" id=9]
+[sub_resource type="ConcavePolygonShape" id=12]
 data = PoolVector3Array( 1, 0, 1, -1, 0, 1, -1, 1, -1, 1, 1, -1, 1, 0, 1, -1, 1, -1 )
 
-[sub_resource type="ArrayMesh" id=10]
+[sub_resource type="ArrayMesh" id=13]
 resource_name = "grass_slope_corner_GrassSlopeCorner001"
 surfaces/0 = {
 "aabb": AABB( -1, 0, -1, 2, 1, 2 ),
@@ -123,7 +132,7 @@ surfaces/0 = {
 "vertex_count": 6
 }
 
-[sub_resource type="ConcavePolygonShape" id=11]
+[sub_resource type="ConcavePolygonShape" id=14]
 data = PoolVector3Array( -1, 0, -1, 1, 0, 1, -1, 0, 1, 1, 0, 1, -1, 0, -1, 1, 1, -1 )
 
 [resource]
@@ -142,30 +151,30 @@ item/1/preview = ExtResource( 6 )
 item/2/name = "GrassCorner2"
 item/2/mesh = SubResource( 5 )
 item/2/mesh_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
-item/2/shapes = [  ]
+item/2/shapes = [ SubResource( 6 ), Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 ) ]
 item/2/navmesh_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 item/2/preview = ExtResource( 5 )
 item/3/name = "GrassCorner3"
-item/3/mesh = SubResource( 6 )
+item/3/mesh = SubResource( 7 )
 item/3/mesh_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
-item/3/shapes = [  ]
+item/3/shapes = [ SubResource( 8 ), Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 ) ]
 item/3/navmesh_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 item/3/preview = ExtResource( 3 )
 item/4/name = "GrassSide"
-item/4/mesh = SubResource( 7 )
+item/4/mesh = SubResource( 9 )
 item/4/mesh_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
-item/4/shapes = [  ]
+item/4/shapes = [ SubResource( 10 ), Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 ) ]
 item/4/navmesh_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 item/4/preview = ExtResource( 7 )
 item/5/name = "GrassSlope"
-item/5/mesh = SubResource( 8 )
+item/5/mesh = SubResource( 11 )
 item/5/mesh_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
-item/5/shapes = [ SubResource( 9 ), Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 ) ]
+item/5/shapes = [ SubResource( 12 ), Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 ) ]
 item/5/navmesh_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 item/5/preview = ExtResource( 2 )
 item/6/name = "GrassSlopeCorner"
-item/6/mesh = SubResource( 10 )
+item/6/mesh = SubResource( 13 )
 item/6/mesh_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
-item/6/shapes = [ SubResource( 11 ), Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 ) ]
+item/6/shapes = [ SubResource( 14 ), Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 ) ]
 item/6/navmesh_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 item/6/preview = ExtResource( 8 )
