@@ -2,11 +2,13 @@
 
 importer="scene"
 type="PackedScene"
-valid=false
+path="res://.import/grass_side.gltf-2bae945619e1aeeff997b29547398afa.scn"
 
 [deps]
 
 source_file="res://scenes/levels/assets/ground_grass/src/grass_side.gltf"
+dest_files=[ "res://.import/grass_side.gltf-2bae945619e1aeeff997b29547398afa.scn" ]
+
 [params]
 
 nodes/root_type="Spatial"
