@@ -5,7 +5,8 @@ extends Area
 export(float, 0.5, 10.0, 0.1) var move_time := 5.0
 export var target_x: float
 export var target_z: float
-export(float, 0.0, 10.0, 0.1) var follow_distance := 2.0
+export(float, 0.0, 10.0, 0.1) var follow_distance := 5.0
+export(float, 0.0, 10.0, 0.1) var follow_limit := 1.0
 onready var _anim_player: AnimationPlayer = $AnimationPlayer
 onready var _initial_position := global_translation
 onready var _target_position := Vector3()
@@ -25,7 +26,38 @@ func _process(_delta: float) -> void:
 	if not _player or not follow_distance:
 		return
 
-	# TODO: Seguir jogador em um eixo quando estiver próximo dele
+	var distance := global_translation.distance_to(_player.global_translation)
+	var follow_interpolation := 0.025
+
+	if distance <= follow_distance:
+		if not target_x:
+			global_translation.x = lerp(
+				global_translation.x,
+				clamp(
+					_player.global_translation.x,
+					_initial_position.x - follow_limit,
+					_initial_position.x + follow_limit
+				),
+				follow_interpolation
+			)
+
+		elif not target_z:
+			global_translation.z = lerp(
+				global_translation.z,
+				clamp(
+					_player.global_translation.z,
+					_initial_position.z - follow_limit,
+					_initial_position.z + follow_limit
+				),
+				follow_interpolation
+			)
+
+	else:
+		if not target_x:
+			global_translation.x = lerp(global_translation.x, _initial_position.x, follow_interpolation)
+
+		elif not target_z:
+			global_translation.z = lerp(global_translation.z, _initial_position.z, follow_interpolation)
 
 
 # Private methods
@@ -40,6 +72,9 @@ func _loop_movement() -> void:
 	elif target_z:
 		target_x = 0.0
 
+	if not target_x and not target_z:
+		return
+
 	_target_position = _initial_position + Vector3(target_x, 0.0, target_z)
 
 	# Ciclo de movimento e rotação
@@ -48,14 +83,18 @@ func _loop_movement() -> void:
 	var rot_degrees := 15.0
 	var rot_interval := 0.015
 
-	tween.tween_callback(self, "look_at", [_target_position, Vector3.UP])
-	tween.tween_property(self, "global_translation", _target_position, move_time)
+	if not target_x:
+		tween.tween_property(self, "global_translation:z", _target_position.z, move_time)
+	elif not target_z:
+		tween.tween_property(self, "global_translation:x", _target_position.x, move_time)
 
 	for i in rot_loop:
 		tween.tween_callback(self, "rotate_y", [deg2rad(rot_degrees)]).set_delay(rot_interval)
 
-	tween.tween_callback(self, "look_at", [_initial_position, Vector3.UP])
-	tween.tween_property(self, "global_translation", _initial_position, move_time)
+	if not target_x:
+		tween.tween_property(self, "global_translation:z", _initial_position.z, move_time)
+	elif not target_z:
+		tween.tween_property(self, "global_translation:x", _initial_position.x, move_time)
 
 	for i in rot_loop:
 		tween.tween_callback(self, "rotate_y", [deg2rad(-rot_degrees)]).set_delay(rot_interval)
