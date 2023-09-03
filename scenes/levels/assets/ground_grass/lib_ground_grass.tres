@@ -1,13 +1,13 @@
 [gd_resource type="MeshLibrary" load_steps=23 format=2]
 
-[ext_resource path="res://scenes/levels/assets/ground_grass/src/grass_side_preview.png" type="Texture" id=1]
-[ext_resource path="res://scenes/levels/assets/ground_grass/src/grass_corner_3_preview.png" type="Texture" id=2]
-[ext_resource path="res://scenes/levels/assets/ground_grass/src/grass_corner_1_preview.png" type="Texture" id=3]
-[ext_resource path="res://scenes/levels/assets/ground_grass/src/grass_corner_2_preview.png" type="Texture" id=4]
-[ext_resource path="res://scenes/levels/assets/ground_grass/src/grass.tres" type="Material" id=5]
-[ext_resource path="res://scenes/levels/assets/ground_grass/src/grass_slope_corner_preview.png" type="Texture" id=6]
-[ext_resource path="res://scenes/levels/assets/ground_grass/src/grass_slope_preview.png" type="Texture" id=7]
-[ext_resource path="res://scenes/levels/assets/ground_grass/src/grass_center_preview.png" type="Texture" id=8]
+[ext_resource path="res://scenes/levels/assets/ground_grass/src/grass.tres" type="Material" id=1]
+[ext_resource path="res://scenes/levels/assets/ground_grass/src/grass_slope_corner_preview.png" type="Texture" id=2]
+[ext_resource path="res://scenes/levels/assets/ground_grass/src/grass_slope_preview.png" type="Texture" id=3]
+[ext_resource path="res://scenes/levels/assets/ground_grass/src/grass_center_preview.png" type="Texture" id=4]
+[ext_resource path="res://scenes/levels/assets/ground_grass/src/grass_corner_2_preview.png" type="Texture" id=5]
+[ext_resource path="res://scenes/levels/assets/ground_grass/src/grass_side_preview.png" type="Texture" id=6]
+[ext_resource path="res://scenes/levels/assets/ground_grass/src/grass_corner_3_preview.png" type="Texture" id=7]
+[ext_resource path="res://scenes/levels/assets/ground_grass/src/grass_corner_1_preview.png" type="Texture" id=8]
 
 [sub_resource type="ArrayMesh" id=1]
 resource_name = "grass_center_GrassCenter001"
@@ -18,7 +18,7 @@ surfaces/0 = {
 "blend_shape_data": [  ],
 "format": 2194711,
 "index_count": 6,
-"material": ExtResource( 5 ),
+"material": ExtResource( 1 ),
 "primitive": 4,
 "skeleton_aabb": [  ],
 "vertex_count": 4
@@ -31,12 +31,12 @@ data = PoolVector3Array( -1, 0, 1, -1, 0, -1, 1, 0, -1, -1, 0, 1, 1, 0, -1, 1, 0
 resource_name = "grass_corner_1_GrassCorner1001"
 surfaces/0 = {
 "aabb": AABB( -0.999998, -2, -1, 2, 2.00001, 2 ),
-"array_data": PoolByteArray( 212, 255, 127, 191, 0, 0, 0, 179, 6, 0, 128, 191, 0, 127, 126, 63, 0, 56, 0, 56, 0, 0, 48, 54, 0, 0, 0, 179, 0, 0, 160, 181, 0, 127, 127, 63, 0, 58, 0, 58, 0, 0, 48, 54, 0, 0, 0, 179, 9, 0, 128, 191, 0, 127, 127, 63, 0, 58, 0, 56, 206, 255, 127, 191, 0, 0, 0, 179, 0, 0, 32, 181, 0, 127, 126, 63, 0, 56, 0, 58, 0, 0, 48, 54, 0, 0, 0, 179, 0, 0, 160, 181, 0, 127, 127, 63, 0, 58, 0, 58, 200, 204, 76, 63, 0, 0, 0, 179, 7, 0, 128, 191, 0, 127, 127, 63, 153, 59, 0, 56, 0, 0, 48, 54, 0, 0, 0, 179, 9, 0, 128, 191, 0, 127, 127, 63, 0, 58, 0, 56, 208, 204, 76, 63, 0, 0, 0, 179, 192, 158, 177, 189, 0, 127, 127, 63, 153, 59, 211, 57, 206, 255, 127, 191, 0, 0, 0, 179, 0, 0, 32, 181, 0, 127, 126, 63, 0, 56, 0, 58, 16, 157, 177, 189, 0, 0, 0, 179, 208, 204, 76, 63, 0, 127, 126, 63, 243, 57, 153, 59, 0, 0, 48, 54, 0, 0, 0, 179, 0, 0, 160, 181, 0, 127, 126, 63, 0, 58, 0, 58, 218, 255, 127, 191, 0, 0, 0, 179, 204, 204, 76, 63, 0, 127, 126, 63, 0, 56, 153, 59, 16, 157, 177, 189, 0, 0, 0, 179, 208, 204, 76, 63, 0, 127, 127, 63, 243, 57, 153, 59, 208, 204, 76, 63, 0, 0, 0, 179, 192, 158, 177, 189, 0, 127, 127, 63, 153, 59, 211, 57, 0, 0, 48, 54, 0, 0, 0, 179, 0, 0, 160, 181, 0, 127, 127, 63, 0, 58, 0, 58, 0, 0, 48, 54, 205, 204, 204, 189, 236, 255, 127, 63, 0, 84, 126, 63, 31, 58, 0, 60, 218, 255, 127, 191, 0, 0, 0, 179, 204, 204, 76, 63, 0, 84, 126, 63, 0, 56, 153, 59, 216, 255, 127, 191, 205, 204, 204, 189, 232, 255, 127, 63, 0, 84, 126, 63, 0, 56, 0, 60, 16, 157, 177, 189, 0, 0, 0, 179, 208, 204, 76, 63, 0, 84, 126, 63, 243, 57, 153, 59, 208, 204, 76, 63, 0, 0, 0, 179, 192, 158, 177, 189, 26, 74, 94, 47, 153, 59, 211, 57, 0, 0, 48, 54, 205, 204, 204, 189, 236, 255, 127, 63, 26, 74, 94, 47, 31, 58, 0, 60, 26, 0, 128, 63, 205, 204, 204, 189, 0, 0, 96, 181, 26, 74, 94, 47, 0, 60, 0, 58, 16, 157, 177, 189, 0, 0, 0, 179, 208, 204, 76, 63, 26, 74, 94, 47, 243, 57, 153, 59, 200, 204, 76, 63, 0, 0, 0, 179, 7, 0, 128, 191, 42, 84, 84, 42, 153, 59, 0, 56, 26, 0, 128, 63, 205, 204, 204, 189, 0, 0, 96, 181, 42, 84, 84, 42, 0, 60, 0, 58, 24, 0, 128, 63, 205, 204, 204, 189, 7, 0, 128, 191, 42, 84, 84, 42, 255, 59, 0, 56, 208, 204, 76, 63, 0, 0, 0, 179, 192, 158, 177, 189, 42, 84, 84, 42, 153, 59, 211, 57, 24, 0, 128, 63, 205, 204, 204, 189, 7, 0, 128, 191, 127, 0, 127, 63, 98, 59, 78, 59, 26, 0, 128, 63, 0, 0, 0, 192, 0, 0, 96, 181, 127, 0, 127, 63, 98, 59, 78, 59, 24, 0, 128, 63, 0, 0, 0, 192, 7, 0, 128, 191, 127, 0, 127, 63, 98, 59, 78, 59, 26, 0, 128, 63, 205, 204, 204, 189, 0, 0, 96, 181, 127, 0, 127, 63, 98, 59, 78, 59, 0, 0, 48, 54, 205, 204, 204, 189, 236, 255, 127, 63, 0, 0, 127, 193, 98, 59, 78, 59, 216, 255, 127, 191, 0, 0, 0, 192, 232, 255, 127, 63, 0, 0, 127, 193, 98, 59, 78, 59, 0, 0, 48, 54, 0, 0, 0, 192, 236, 255, 127, 63, 0, 0, 127, 193, 98, 59, 78, 59, 216, 255, 127, 191, 205, 204, 204, 189, 232, 255, 127, 63, 0, 0, 127, 193, 98, 59, 78, 59, 26, 0, 128, 63, 205, 204, 204, 189, 0, 0, 96, 181, 63, 0, 127, 193, 98, 59, 78, 59, 0, 0, 48, 54, 0, 0, 0, 192, 236, 255, 127, 63, 63, 0, 127, 193, 98, 59, 78, 59, 26, 0, 128, 63, 0, 0, 0, 192, 0, 0, 96, 181, 63, 0, 127, 193, 98, 59, 78, 59, 0, 0, 48, 54, 205, 204, 204, 189, 236, 255, 127, 63, 63, 0, 127, 193, 98, 59, 78, 59 ),
+"array_data": PoolByteArray( 212, 255, 127, 191, 0, 0, 0, 179, 6, 0, 128, 191, 0, 127, 127, 63, 85, 57, 85, 57, 0, 0, 48, 54, 0, 0, 0, 179, 0, 0, 160, 181, 0, 127, 127, 63, 170, 58, 170, 58, 0, 0, 48, 54, 0, 0, 0, 179, 9, 0, 128, 191, 0, 127, 127, 63, 170, 58, 85, 57, 206, 255, 127, 191, 0, 0, 0, 179, 0, 0, 32, 181, 0, 127, 126, 63, 85, 57, 170, 58, 0, 0, 48, 54, 0, 0, 0, 179, 0, 0, 160, 181, 0, 127, 127, 63, 170, 58, 170, 58, 200, 204, 76, 63, 0, 0, 0, 179, 7, 0, 128, 191, 0, 127, 126, 63, 187, 59, 85, 57, 0, 0, 48, 54, 0, 0, 0, 179, 9, 0, 128, 191, 0, 127, 127, 63, 170, 58, 85, 57, 208, 204, 76, 63, 0, 0, 0, 179, 192, 158, 177, 189, 0, 127, 127, 63, 187, 59, 141, 58, 206, 255, 127, 191, 0, 0, 0, 179, 0, 0, 32, 181, 0, 127, 126, 63, 85, 57, 170, 58, 16, 157, 177, 189, 0, 0, 0, 179, 208, 204, 76, 63, 0, 127, 126, 63, 141, 58, 187, 59, 0, 0, 48, 54, 0, 0, 0, 179, 0, 0, 160, 181, 0, 127, 126, 63, 170, 58, 170, 58, 218, 255, 127, 191, 0, 0, 0, 179, 204, 204, 76, 63, 0, 127, 126, 63, 85, 57, 187, 59, 16, 157, 177, 189, 0, 0, 0, 179, 208, 204, 76, 63, 0, 127, 127, 63, 141, 58, 187, 59, 208, 204, 76, 63, 0, 0, 0, 179, 192, 158, 177, 189, 0, 127, 127, 63, 187, 59, 141, 58, 0, 0, 48, 54, 0, 0, 0, 179, 0, 0, 160, 181, 0, 127, 127, 63, 170, 58, 170, 58, 0, 0, 48, 54, 205, 204, 204, 189, 236, 255, 127, 63, 0, 84, 126, 63, 170, 58, 255, 59, 218, 255, 127, 191, 0, 0, 0, 179, 204, 204, 76, 63, 0, 84, 126, 63, 85, 57, 187, 59, 216, 255, 127, 191, 205, 204, 204, 189, 232, 255, 127, 63, 0, 84, 126, 63, 85, 57, 255, 59, 16, 157, 177, 189, 0, 0, 0, 179, 208, 204, 76, 63, 0, 84, 126, 63, 141, 58, 187, 59, 208, 204, 76, 63, 0, 0, 0, 179, 192, 158, 177, 189, 26, 74, 94, 47, 187, 59, 141, 58, 0, 0, 48, 54, 205, 204, 204, 189, 236, 255, 127, 63, 26, 74, 94, 47, 170, 58, 255, 59, 26, 0, 128, 63, 205, 204, 204, 189, 0, 0, 96, 181, 26, 74, 94, 47, 0, 60, 170, 58, 16, 157, 177, 189, 0, 0, 0, 179, 208, 204, 76, 63, 26, 74, 94, 47, 141, 58, 187, 59, 200, 204, 76, 63, 0, 0, 0, 179, 7, 0, 128, 191, 42, 84, 84, 42, 187, 59, 85, 57, 26, 0, 128, 63, 205, 204, 204, 189, 0, 0, 96, 181, 42, 84, 84, 42, 0, 60, 170, 58, 24, 0, 128, 63, 205, 204, 204, 189, 7, 0, 128, 191, 42, 84, 84, 42, 0, 60, 85, 57, 208, 204, 76, 63, 0, 0, 0, 179, 192, 158, 177, 189, 42, 84, 84, 42, 187, 59, 141, 58, 24, 0, 128, 63, 205, 204, 204, 189, 7, 0, 128, 191, 127, 0, 127, 63, 174, 59, 169, 59, 26, 0, 128, 63, 0, 0, 0, 192, 0, 0, 96, 181, 127, 0, 127, 63, 174, 59, 169, 59, 24, 0, 128, 63, 0, 0, 0, 192, 7, 0, 128, 191, 127, 0, 127, 63, 174, 59, 169, 59, 26, 0, 128, 63, 205, 204, 204, 189, 0, 0, 96, 181, 127, 0, 127, 63, 174, 59, 169, 59, 0, 0, 48, 54, 205, 204, 204, 189, 236, 255, 127, 63, 0, 0, 127, 193, 174, 59, 169, 59, 216, 255, 127, 191, 0, 0, 0, 192, 232, 255, 127, 63, 0, 0, 127, 193, 174, 59, 169, 59, 0, 0, 48, 54, 0, 0, 0, 192, 236, 255, 127, 63, 0, 0, 127, 193, 174, 59, 169, 59, 216, 255, 127, 191, 205, 204, 204, 189, 232, 255, 127, 63, 0, 0, 127, 193, 174, 59, 169, 59, 26, 0, 128, 63, 205, 204, 204, 189, 0, 0, 96, 181, 63, 0, 127, 193, 174, 59, 169, 59, 0, 0, 48, 54, 0, 0, 0, 192, 236, 255, 127, 63, 63, 0, 127, 193, 174, 59, 169, 59, 26, 0, 128, 63, 0, 0, 0, 192, 0, 0, 96, 181, 63, 0, 127, 193, 174, 59, 169, 59, 0, 0, 48, 54, 205, 204, 204, 189, 236, 255, 127, 63, 63, 0, 127, 193, 174, 59, 169, 59 ),
 "array_index_data": PoolByteArray( 0, 0, 2, 0, 1, 0, 3, 0, 0, 0, 1, 0, 4, 0, 6, 0, 5, 0, 4, 0, 5, 0, 7, 0, 8, 0, 10, 0, 9, 0, 11, 0, 8, 0, 9, 0, 12, 0, 14, 0, 13, 0, 15, 0, 17, 0, 16, 0, 18, 0, 15, 0, 16, 0, 19, 0, 21, 0, 20, 0, 19, 0, 20, 0, 22, 0, 23, 0, 25, 0, 24, 0, 23, 0, 24, 0, 26, 0, 27, 0, 29, 0, 28, 0, 27, 0, 28, 0, 30, 0, 31, 0, 33, 0, 32, 0, 31, 0, 32, 0, 34, 0, 35, 0, 37, 0, 36, 0, 35, 0, 36, 0, 38, 0 ),
 "blend_shape_data": [  ],
 "format": 2194711,
 "index_count": 57,
-"material": ExtResource( 5 ),
+"material": ExtResource( 1 ),
 "primitive": 4,
 "skeleton_aabb": [  ],
 "vertex_count": 39
@@ -54,7 +54,7 @@ surfaces/0 = {
 "blend_shape_data": [  ],
 "format": 2194711,
 "index_count": 30,
-"material": ExtResource( 5 ),
+"material": ExtResource( 1 ),
 "primitive": 4,
 "skeleton_aabb": [  ],
 "vertex_count": 24
@@ -72,7 +72,7 @@ surfaces/0 = {
 "blend_shape_data": [  ],
 "format": 2194711,
 "index_count": 36,
-"material": ExtResource( 5 ),
+"material": ExtResource( 1 ),
 "primitive": 4,
 "skeleton_aabb": [  ],
 "vertex_count": 32
@@ -90,7 +90,7 @@ surfaces/0 = {
 "blend_shape_data": [  ],
 "format": 2194711,
 "index_count": 18,
-"material": ExtResource( 5 ),
+"material": ExtResource( 1 ),
 "primitive": 4,
 "skeleton_aabb": [  ],
 "vertex_count": 12
@@ -108,7 +108,7 @@ surfaces/0 = {
 "blend_shape_data": [  ],
 "format": 2194711,
 "index_count": 6,
-"material": ExtResource( 5 ),
+"material": ExtResource( 1 ),
 "primitive": 4,
 "skeleton_aabb": [  ],
 "vertex_count": 4
@@ -126,7 +126,7 @@ surfaces/0 = {
 "blend_shape_data": [  ],
 "format": 2194711,
 "index_count": 6,
-"material": ExtResource( 5 ),
+"material": ExtResource( 1 ),
 "primitive": 4,
 "skeleton_aabb": [  ],
 "vertex_count": 6
@@ -141,40 +141,40 @@ item/0/mesh = SubResource( 1 )
 item/0/mesh_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 item/0/shapes = [ SubResource( 2 ), Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 ) ]
 item/0/navmesh_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
-item/0/preview = ExtResource( 8 )
+item/0/preview = ExtResource( 4 )
 item/1/name = "GrassCorner1"
 item/1/mesh = SubResource( 3 )
 item/1/mesh_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 item/1/shapes = [ SubResource( 4 ), Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 ) ]
 item/1/navmesh_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
-item/1/preview = ExtResource( 3 )
+item/1/preview = ExtResource( 8 )
 item/2/name = "GrassCorner2"
 item/2/mesh = SubResource( 5 )
 item/2/mesh_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 item/2/shapes = [ SubResource( 6 ), Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 ) ]
 item/2/navmesh_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
-item/2/preview = ExtResource( 4 )
+item/2/preview = ExtResource( 5 )
 item/3/name = "GrassCorner3"
 item/3/mesh = SubResource( 7 )
 item/3/mesh_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 item/3/shapes = [ SubResource( 8 ), Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 ) ]
 item/3/navmesh_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
-item/3/preview = ExtResource( 2 )
+item/3/preview = ExtResource( 7 )
 item/4/name = "GrassSide"
 item/4/mesh = SubResource( 9 )
 item/4/mesh_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 item/4/shapes = [ SubResource( 10 ), Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 ) ]
 item/4/navmesh_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
-item/4/preview = ExtResource( 1 )
+item/4/preview = ExtResource( 6 )
 item/5/name = "GrassSlope"
 item/5/mesh = SubResource( 11 )
 item/5/mesh_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 item/5/shapes = [ SubResource( 12 ), Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 ) ]
 item/5/navmesh_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
-item/5/preview = ExtResource( 7 )
+item/5/preview = ExtResource( 3 )
 item/6/name = "GrassSlopeCorner"
 item/6/mesh = SubResource( 13 )
 item/6/mesh_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 item/6/shapes = [ SubResource( 14 ), Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 ) ]
 item/6/navmesh_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
-item/6/preview = ExtResource( 6 )
+item/6/preview = ExtResource( 2 )
