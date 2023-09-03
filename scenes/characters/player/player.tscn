@@ -74,7 +74,7 @@ visible = false
 [node name="LevelComplete" parent="Gui" instance=ExtResource( 10 )]
 visible = false
 
-[node name="RayCast" type="RayCast" parent="."]
+[node name="RayCastGround" type="RayCast" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, -1.06581e-14, 0, 1.06581e-14, 1, 0, -0.6, -6.39488e-15 )
 enabled = true
 cast_to = Vector3( 0, -0.2, 0 )
@@ -100,9 +100,14 @@ target_key = "shadow_enabled"
 convert_to = 1
 
 [node name="CameraAxis" type="Position3D" parent="."]
+transform = Transform( 1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 0, 0 )
+
+[node name="RayCastCamera" type="RayCast" parent="CameraAxis"]
+enabled = true
+cast_to = Vector3( 0, 4, 0 )
 
 [node name="Camera" type="Camera" parent="CameraAxis"]
-transform = Transform( -1, -6.18175e-08, 6.18175e-08, 0, 0.707107, 0.707107, -8.74232e-08, 0.707107, -0.707107, 2.82276e-07, 3.00187, -3.22888 )
+transform = Transform( -1, 8.74228e-08, 7.37408e-15, 0, -8.9407e-08, 1, 8.74228e-08, 1, 8.9407e-08, 0, 4, 0 )
 fov = 65.0
 
 [node name="Visual" type="Spatial" parent="."]

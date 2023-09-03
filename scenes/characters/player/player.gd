@@ -33,6 +33,7 @@ var animation := {
 }
 
 onready var _state_manager: BaseStateManager = find_node("StateManager")
+onready var _state_stop: BaseState = _state_manager.get_node("Stop")
 onready var _visual: Spatial = find_node("Visual")
 onready var _camera: Camera = find_node("Camera")
 onready var _camera_axis: Position3D = find_node("CameraAxis")
@@ -41,7 +42,8 @@ onready var _label_debug: Label3D = find_node("LabelDebug")
 onready var _directional_light: DirectionalLight = find_node("DirectionalLight")
 onready var _anim_player: AnimationPlayer = $Visual.find_node("AnimationPlayer")
 onready var _area: Area = find_node("Area")
-onready var _ray_cast: RayCast = find_node("RayCast")
+onready var _ray_cast_ground: RayCast = find_node("RayCastGround")
+onready var _ray_cast_camera: RayCast = find_node("RayCastCamera")
 onready var _camera_focus: Spatial = null
 
 
@@ -61,6 +63,7 @@ func _ready() -> void:
 	_directional_light.set_as_toplevel(true)
 	_camera_axis.set_as_toplevel(true)
 	_mesh_direction.set_as_toplevel(true)
+	_ray_cast_camera.set_as_toplevel(true)
 	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
 	GameEvents.emit_signal("level_dialog", "mom", "start")
 	GameEvents.emit_signal("player_emitted", self)
@@ -172,8 +175,8 @@ func _process_move(_delta: float) -> void:
 	move_snap = -get_floor_normal() if is_on_floor() else Vector3.ZERO
 	move_weight = lerp(move_weight, move_axis, intertia_factor)
 
-	if _ray_cast.is_colliding():
-		_process_ray_cast(_ray_cast.get_collider())
+	if _ray_cast_ground.is_colliding():
+		_process_ray_cast(_ray_cast_ground.get_collider())
 
 	if move_axis.length():
 		direction_axis = move_axis.normalized()
@@ -196,6 +199,21 @@ func _process_camera(_delta: float) -> void:
 	_camera_axis.global_translation = _camera_axis.global_translation.linear_interpolate(
 		_camera_focus.global_translation, 0.1
 	)
+
+	_ray_cast_camera.global_translation = global_translation + Vector3(0, 0.2, 0)
+
+	if not _ray_cast_camera.is_colliding() or _state_manager.current_state == _state_stop:
+		_camera_axis.rotation = _camera_axis.rotation.linear_interpolate(
+			Vector3(deg2rad(-45), 0, 0), 0.1
+		)
+		return
+
+	var camera_obstacle: Node = _ray_cast_camera.get_collider()
+
+	if "house" in camera_obstacle.name.to_lower():
+		_camera_axis.rotation = _camera_axis.rotation.linear_interpolate(
+			Vector3(deg2rad(0), 0, 0), 0.1
+		)
 
 
 # Processa a colisão do ray cast.
@@ -307,7 +325,7 @@ func _on_Area_area_entered(area: Area) -> void:
 			GameEvents.emit_signal("level_dialog", "man", "complete")
 			area.monitorable = false
 			GameState.completed = true
-			_state_manager.transition_to(_state_manager.get_node("Stop"))
+			_state_manager.transition_to(_state_stop)
 			yield(get_tree().create_timer(2.0, false), "timeout")
 			GameState.add_score()
 			GameEvents.emit_signal("level_complete")
@@ -335,5 +353,5 @@ func _on_player_request_camera_focus(target: Spatial) -> void:
 		_camera_focus = null
 		return
 
-	_state_manager.transition_to(_state_manager.get_node("Stop"))
+	_state_manager.transition_to(_state_stop)
 	_camera_focus = target
