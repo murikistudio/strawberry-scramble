@@ -23,44 +23,11 @@ func _ready() -> void:
 
 
 func _process(_delta: float) -> void:
-	if not _player or not follow_distance:
-		return
-
-	var distance := global_translation.distance_to(_player.global_translation)
-	var follow_interpolation := 0.025
-
-	if distance <= follow_distance:
-		if not target_x:
-			global_translation.x = lerp(
-				global_translation.x,
-				clamp(
-					_player.global_translation.x,
-					_initial_position.x - follow_limit,
-					_initial_position.x + follow_limit
-				),
-				follow_interpolation
-			)
-
-		elif not target_z:
-			global_translation.z = lerp(
-				global_translation.z,
-				clamp(
-					_player.global_translation.z,
-					_initial_position.z - follow_limit,
-					_initial_position.z + follow_limit
-				),
-				follow_interpolation
-			)
-
-	else:
-		if not target_x:
-			global_translation.x = lerp(global_translation.x, _initial_position.x, follow_interpolation)
-
-		elif not target_z:
-			global_translation.z = lerp(global_translation.z, _initial_position.z, follow_interpolation)
+	_follow_player()
 
 
 # Private methods
+# Loop de movimentação e rotação.
 func _loop_movement() -> void:
 	# Animação
 	_anim_player.play("walk_loop", -1, 1.25)
@@ -98,6 +65,45 @@ func _loop_movement() -> void:
 
 	for i in rot_loop:
 		tween.tween_callback(self, "rotate_y", [deg2rad(-rot_degrees)]).set_delay(rot_interval)
+
+
+# Seguir o jogador em um dos eixos de acordo com a distância limite.
+func _follow_player() -> void:
+	if not _player or not follow_distance:
+		return
+
+	var distance := global_translation.distance_to(_player.global_translation)
+	var follow_interpolation := 0.025
+
+	if distance <= follow_distance:
+		if not target_x:
+			global_translation.x = lerp(
+				global_translation.x,
+				clamp(
+					_player.global_translation.x,
+					_initial_position.x - follow_limit,
+					_initial_position.x + follow_limit
+				),
+				follow_interpolation
+			)
+
+		elif not target_z:
+			global_translation.z = lerp(
+				global_translation.z,
+				clamp(
+					_player.global_translation.z,
+					_initial_position.z - follow_limit,
+					_initial_position.z + follow_limit
+				),
+				follow_interpolation
+			)
+
+	else:
+		if not target_x:
+			global_translation.x = lerp(global_translation.x, _initial_position.x, follow_interpolation)
+
+		elif not target_z:
+			global_translation.z = lerp(global_translation.z, _initial_position.z, follow_interpolation)
 
 
 # Event handlers
