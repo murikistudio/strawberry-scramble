@@ -1,7 +1,7 @@
 {
     "asset" : {
-        "generator" : "Khronos glTF Blender I/O v1.2.20",
-        "version" : "2.0"
+        "version" : "2.0",
+        "generator" : "Khronos glTF Blender I/O v1.2.20"
     },
     "extensionsUsed" : [
         "KHR_materials_unlit"
@@ -9,10 +9,10 @@
     "scene" : 0,
     "scenes" : [
         {
-            "name" : "Scene",
             "nodes" : [
                 1
-            ]
+            ],
+            "name" : "Scene"
         }
     ],
     "nodes" : [
@@ -21,25 +21,25 @@
             "name" : "GrassCorner2Collider -colonly"
         },
         {
-            "name" : "GrassCorner2",
             "mesh" : 1,
             "children" : [
                 0
-            ]
+            ],
+            "name" : "GrassCorner2"
         }
     ],
     "materials" : [
         {
-            "extensions" : {
-                "KHR_materials_unlit" : {}
-            },
-            "name" : "grass",
             "pbrMetallicRoughness" : {
                 "baseColorTexture" : {
                     "texCoord" : 0,
                     "index" : 0
                 }
-            }
+            },
+            "extensions" : {
+                "KHR_materials_unlit" : {}
+            },
+            "name" : "grass"
         }
     ],
     "meshes" : [
@@ -47,11 +47,11 @@
             "name" : "GrassCorner2Collider.001",
             "primitives" : [
                 {
+                    "indices" : 2,
                     "attributes" : {
-                        "POSITION" : 0,
-                        "NORMAL" : 1
-                    },
-                    "indices" : 2
+                        "NORMAL" : 0,
+                        "POSITION" : 1
+                    }
                 }
             ]
         },
@@ -59,12 +59,12 @@
             "name" : "GrassCorner2.001",
             "primitives" : [
                 {
-                    "attributes" : {
-                        "POSITION" : 3,
-                        "NORMAL" : 4,
-                        "TEXCOORD_0" : 5
-                    },
                     "indices" : 6,
+                    "attributes" : {
+                        "TEXCOORD_0" : 3,
+                        "NORMAL" : 4,
+                        "POSITION" : 5
+                    },
                     "material" : 0
                 }
             ]
@@ -78,117 +78,117 @@
     ],
     "images" : [
         {
-            "mimeType" : "image/png",
             "uri" : "grass.png",
+            "mimeType" : "image/png",
             "name" : "grass.png"
         }
     ],
     "accessors" : [
         {
-            "bufferView" : 0,
+            "type" : "VEC3",
             "count" : 4,
-            "componentType" : 5126,
+            "bufferView" : 0,
+            "componentType" : 5126
+        },
+        {
             "min" : [
                 -1,
                 0,
                 -1
             ],
+            "type" : "VEC3",
+            "bufferView" : 1,
+            "componentType" : 5126,
+            "count" : 4,
             "max" : [
                 1,
                 0,
                 1
-            ],
-            "type" : "VEC3"
+            ]
         },
         {
-            "bufferView" : 1,
-            "type" : "VEC3",
-            "componentType" : 5126,
-            "count" : 4
-        },
-        {
-            "bufferView" : 2,
             "type" : "SCALAR",
-            "componentType" : 5123,
-            "count" : 6
+            "count" : 6,
+            "bufferView" : 2,
+            "componentType" : 5123
         },
         {
-            "bufferView" : 3,
+            "type" : "VEC2",
             "count" : 24,
-            "componentType" : 5126,
+            "bufferView" : 3,
+            "componentType" : 5126
+        },
+        {
+            "type" : "VEC3",
+            "count" : 24,
+            "bufferView" : 4,
+            "componentType" : 5126
+        },
+        {
             "min" : [
                 -1,
                 -0.10000000149011612,
                 -1
             ],
+            "type" : "VEC3",
+            "bufferView" : 5,
+            "componentType" : 5126,
+            "count" : 24,
             "max" : [
                 1,
                 -2.9802322387695312e-08,
                 1.0000004768371582
-            ],
-            "type" : "VEC3"
+            ]
         },
         {
-            "bufferView" : 4,
-            "type" : "VEC3",
-            "componentType" : 5126,
-            "count" : 24
-        },
-        {
-            "bufferView" : 5,
-            "type" : "VEC2",
-            "componentType" : 5126,
-            "count" : 24
-        },
-        {
-            "bufferView" : 6,
             "type" : "SCALAR",
-            "componentType" : 5123,
-            "count" : 30
+            "count" : 30,
+            "bufferView" : 6,
+            "componentType" : 5123
         }
     ],
     "bufferViews" : [
         {
+            "byteOffset" : 0,
             "buffer" : 0,
-            "byteLength" : 48,
-            "byteOffset" : 0
+            "byteLength" : 48
         },
         {
+            "byteOffset" : 48,
             "buffer" : 0,
-            "byteLength" : 48,
-            "byteOffset" : 48
+            "byteLength" : 48
         },
         {
+            "byteOffset" : 96,
             "buffer" : 0,
-            "byteLength" : 12,
-            "byteOffset" : 96
+            "byteLength" : 12
         },
         {
+            "byteOffset" : 108,
             "buffer" : 0,
-            "byteLength" : 288,
-            "byteOffset" : 108
+            "byteLength" : 192
         },
         {
+            "byteOffset" : 300,
             "buffer" : 0,
-            "byteLength" : 288,
-            "byteOffset" : 396
+            "byteLength" : 288
         },
         {
+            "byteOffset" : 588,
             "buffer" : 0,
-            "byteLength" : 192,
-            "byteOffset" : 684
+            "byteLength" : 288
         },
         {
+            "byteOffset" : 876,
             "buffer" : 0,
-            "byteLength" : 60,
-            "byteOffset" : 876
+            "byteLength" : 60
         }
     ],
     "samplers" : [
         {
-            "magFilter" : 9729,
-            "minFilter" : 9986,
             "wrapS" : 10497,
+            "minFilter" : 9986,
+            "magFilter" : 9729,
             "wrapT" : 10497
         }
     ],
