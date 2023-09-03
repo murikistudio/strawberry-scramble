@@ -2,7 +2,7 @@ extends Control
 
 
 # Constants
-const BASE_PATH := "res://textures/icons/"
+const BASE_PATH_ICONS := "res://textures/icons/"
 
 
 # Variables
@@ -22,7 +22,7 @@ func _ready() -> void:
 
 # Private methods
 func _update_interface() -> void:
-	_texture_rect_trophy.texture = load(BASE_PATH + GameState.current_trophy + ".svg")
+	_texture_rect_trophy.texture = load(BASE_PATH_ICONS + GameState.current_trophy + ".svg")
 	_label_time.text = str(GameState.time_elapsed) + "s"
 	_label_deaths.text = "x" + str(GameState.times_died)
 	_label_trophy.text = tr(GameState.current_trophy)
@@ -45,6 +45,18 @@ func _on_ButtonQuit_pressed() -> void:
 
 
 func _on_ButtonNext_pressed() -> void:
+	var has_next := false
+
+	for level_def in DatabaseScenes.get_levels():
+		if level_def["name"] == GameState.current_level:
+			has_next = true
+			continue
+
+		if has_next:
+			GameState.current_level = level_def["name"]
+			GameTransition.change_scene_to(level_def["path"])
+			return
+
 	GameTransition.change_scene_to(DatabaseScenes.GUI_LEVEL_SELECT)
 
 

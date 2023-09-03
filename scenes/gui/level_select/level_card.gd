@@ -1,14 +1,14 @@
 extends MarginContainer
 
 
+# Constants
 const BASE_PATH_ICONS = "res://textures/icons/"
 
 
 # Variables
-export var level_path := ""
+export var level_def: Dictionary
 export var focus_button := false
 
-var _level_name := ""
 var _pressed := false
 
 onready var _label_level_name: Label = find_node("LabelLevelName")
@@ -20,19 +20,6 @@ onready var _label_time: Label = find_node("LabelTime")
 
 # Built-in overrides
 func _ready() -> void:
-	var parts := level_path.split("/", false)
-
-	if not parts.size():
-		return
-
-	var file_name: String = parts[-1]
-	parts = file_name.split(".", false)
-
-	if parts.size():
-		_level_name = parts[0]
-		file_name = tr(_level_name)
-
-	_label_level_name.text = file_name
 	_update_card()
 
 	if focus_button:
@@ -40,8 +27,11 @@ func _ready() -> void:
 		_button_level.grab_focus()
 
 
+# Private methods
 func _update_card() -> void:
-	var score: Dictionary = GameState.levels_progress.get(_level_name, {})
+	_label_level_name.text = tr(level_def.get("name", ""))
+
+	var score: Dictionary = GameState.levels_progress.get(level_def["name"], {})
 
 	if not score.size():
 		return
@@ -52,9 +42,9 @@ func _update_card() -> void:
 
 # Event handlers
 func _on_ButtonLevel_pressed() -> void:
-	if not level_path or _pressed:
+	if not level_def.get("path") or _pressed:
 		return
 
 	_pressed = true
-	GameState.current_level = _level_name
-	GameTransition.change_scene_to(level_path)
+	GameState.current_level = level_def["name"]
+	GameTransition.change_scene_to(level_def["path"])
