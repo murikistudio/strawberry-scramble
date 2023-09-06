@@ -2,7 +2,6 @@
   <img max-height="300" alt="Ted The Frog" src="textures/gui/logo.png">
 </p>
 
-# Strawberry Scramble
 Repositório de desenvolvimento do jogo Strawberry Scramble.
 
 ## Requisitos de Desenvolvimento
