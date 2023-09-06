@@ -1,0 +1,139 @@
+{
+    "asset" : {
+        "version" : "2.0",
+        "generator" : "Khronos glTF Blender I/O v1.2.20"
+    },
+    "extensionsUsed" : [
+        "KHR_materials_unlit"
+    ],
+    "scene" : 0,
+    "scenes" : [
+        {
+            "nodes" : [
+                0
+            ],
+            "name" : "Scene"
+        }
+    ],
+    "nodes" : [
+        {
+            "mesh" : 0,
+            "name" : "RipplesCorner1"
+        }
+    ],
+    "materials" : [
+        {
+            "pbrMetallicRoughness" : {
+                "baseColorTexture" : {
+                    "index" : 0,
+                    "texCoord" : 0
+                }
+            },
+            "name" : "ripples",
+            "extensions" : {
+                "KHR_materials_unlit" : {}
+            }
+        }
+    ],
+    "meshes" : [
+        {
+            "name" : "RipplesCorner1.001",
+            "primitives" : [
+                {
+                    "material" : 0,
+                    "indices" : 3,
+                    "attributes" : {
+                        "POSITION" : 0,
+                        "NORMAL" : 1,
+                        "TEXCOORD_0" : 2
+                    }
+                }
+            ]
+        }
+    ],
+    "textures" : [
+        {
+            "sampler" : 0,
+            "source" : 0
+        }
+    ],
+    "images" : [
+        {
+            "name" : "ripples_1.png",
+            "uri" : "ripples_1.png",
+            "mimeType" : "image/png"
+        }
+    ],
+    "accessors" : [
+        {
+            "bufferView" : 0,
+            "min" : [
+                -1,
+                0,
+                -1
+            ],
+            "count" : 4,
+            "max" : [
+                1,
+                0,
+                1
+            ],
+            "type" : "VEC3",
+            "componentType" : 5126
+        },
+        {
+            "bufferView" : 1,
+            "type" : "VEC3",
+            "componentType" : 5126,
+            "count" : 4
+        },
+        {
+            "bufferView" : 2,
+            "type" : "VEC2",
+            "componentType" : 5126,
+            "count" : 4
+        },
+        {
+            "bufferView" : 3,
+            "type" : "SCALAR",
+            "componentType" : 5123,
+            "count" : 6
+        }
+    ],
+    "bufferViews" : [
+        {
+            "byteLength" : 48,
+            "byteOffset" : 0,
+            "buffer" : 0
+        },
+        {
+            "byteLength" : 48,
+            "byteOffset" : 48,
+            "buffer" : 0
+        },
+        {
+            "byteLength" : 32,
+            "byteOffset" : 96,
+            "buffer" : 0
+        },
+        {
+            "byteLength" : 12,
+            "byteOffset" : 128,
+            "buffer" : 0
+        }
+    ],
+    "samplers" : [
+        {
+            "wrapT" : 10497,
+            "minFilter" : 9986,
+            "magFilter" : 9729,
+            "wrapS" : 10497
+        }
+    ],
+    "buffers" : [
+        {
+            "byteLength" : 140,
+            "uri" : "ripples_corner_1.bin"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+[gd_resource type="ShaderMaterial" load_steps=5 format=2]
+
+[ext_resource path="res://scenes/levels/assets/water/ripples.gdshader" type="Shader" id=1]
+[ext_resource path="res://scenes/levels/assets/water/src/ripples_2.png" type="Texture" id=2]
+[ext_resource path="res://scenes/levels/assets/water/src/ripples_1.png" type="Texture" id=3]
+[ext_resource path="res://scenes/levels/assets/water/src/ripples_3.png" type="Texture" id=4]
+
+[resource]
+shader = ExtResource( 1 )
+shader_param/speed = 0.6
+shader_param/speed_offset = 0.8
+shader_param/opacity = 0.4
+shader_param/texture_1 = ExtResource( 3 )
+shader_param/texture_2 = ExtResource( 2 )
+shader_param/texture_3 = ExtResource( 4 )
