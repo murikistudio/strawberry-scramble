@@ -5,13 +5,21 @@ extends Node
 
 # Variables
 export var visible := true
+export var delete_in_game := false
 
 
 # Built-in overrides
 func _ready() -> void:
 	var parent := get_parent()
 
-	if not parent or not "visible" in parent:
+	if not parent:
+		return
+
+	if delete_in_game:
+		parent.queue_free()
+		return
+
+	if not "visible" in parent:
 		return
 
 	parent.visible = visible
