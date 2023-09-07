@@ -65,22 +65,28 @@ func _ready() -> void:
 func _show_dialog(character: String, dialog: String) -> void:
 	var dialogs: Array = DIALOGS.get(character, {}).get(dialog, [])
 
-	if not dialogs.size():
-		return
-
 	var current_dialog := character + "_" + dialog
 
 	if current_dialog == _current_dialog:
 		return
 
 	_current_dialog = current_dialog
-	GameAudio.play_sfx(DatabaseAudio.SFX_BASE + _current_dialog + ".wav")
+
+	var sfx_path := DatabaseAudio.SFX_BASE + _current_dialog + ".wav"
+
+	if not ResourceLoader.exists(sfx_path):
+		sfx_path = DatabaseAudio.SFX_BASE + character + ".wav"
+
+	GameAudio.play_sfx(sfx_path)
 
 	var texture: Texture = get("texture_" + character)
 	_texture_rect_portrait.texture = texture
 
-	randomize()
-	dialog = dialogs[randi() % dialogs.size()]
+	if dialogs.size():
+		randomize()
+		dialog = dialogs[randi() % dialogs.size()]
+	else:
+		dialog = "_".join(["dlg", character, dialog])
 
 	_label_name.text = tr(character) + ":"
 	_label_text.text = tr(dialog)
