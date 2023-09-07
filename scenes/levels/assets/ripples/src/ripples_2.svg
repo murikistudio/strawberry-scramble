@@ -272,12 +272,12 @@
        style="color-interpolation-filters:sRGB;"
        inkscape:label="Blur"
        id="filter29"
-       x="0.11059414"
-       y="0.25393703"
-       width="0.6879027"
-       height="0.58326767">
+       x="0.13582678"
+       y="0.21751967"
+       width="0.72834652"
+       height="0.56496065">
       <feGaussianBlur
-         stdDeviation="2 2"
+         stdDeviation="1"
          result="blur"
          id="feGaussianBlur29" />
     </filter>
