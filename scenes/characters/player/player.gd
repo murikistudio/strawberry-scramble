@@ -65,7 +65,6 @@ func _ready() -> void:
 	_mesh_direction.set_as_toplevel(true)
 	_ray_cast_camera.set_as_toplevel(true)
 	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
-	GameEvents.emit_signal("level_dialog", "mom", "start")
 	GameEvents.emit_signal("player_emitted", self)
 	GameEvents.connect("player_request_camera_focus", self, "_on_player_request_camera_focus")
 
