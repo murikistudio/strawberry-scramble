@@ -37,6 +37,9 @@ DIALOGS,,
 mom,Mom,Mãe
 man,Old Man,Velho
 player,Boy,Garoto
+dlg_player_level_01_1,I must get the strawberries for mom.,Tenho que pegar os morangos pra mamãe.
+dlg_player_level_01_2,I better be careful with that moving platform...,É bom eu tomar cuidado com aquela plataforma móvel...
+dlg_player_level_01_3,"I think that's enough, time to go back home.","Acho que tá bom, hora de voltar pra casa."
 dlg_mom_start_1,"Bring the strawberries to me, NOW!!!","Anda, traga os morangos para mim, AGORA!!!"
 dlg_mom_start_2,"You asked for cake, so go get the strawberries!","Você que pediu bolo, então vai pegar os morangos!"
 dlg_mom_start_3,"Strawberries are missing to make the jam, go get them!","Faltam morangos para fazer a geléia, vá pegá-los!"
@@ -66,4 +69,4 @@ diamond,Diamond,Diamante
 ,,
 LEVELS,,
 test,Test,Teste
-,,
+level_01,Level 1,Nível 1
