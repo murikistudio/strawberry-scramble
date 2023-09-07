@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://scenes/levels/assets/ground_grass/lib_ground_grass.tres" type="MeshLibrary" id=1]
 [ext_resource path="res://scenes/characters/player/player.tscn" type="PackedScene" id=2]
@@ -6,12 +6,11 @@
 [ext_resource path="res://scenes/levels/assets/house/house.tscn" type="PackedScene" id=4]
 [ext_resource path="res://scenes/levels/assets/fence/lib_fences.tres" type="MeshLibrary" id=5]
 [ext_resource path="res://scenes/levels/assets/tree/lib_trees.tres" type="MeshLibrary" id=6]
-[ext_resource path="res://addons/utils/editor_visibility.gd" type="Script" id=7]
+[ext_resource path="res://scenes/levels/assets/water/lib_water.tres" type="MeshLibrary" id=7]
 [ext_resource path="res://scenes/levels/assets/bridge/lib_bridges.tres" type="MeshLibrary" id=8]
 [ext_resource path="res://scenes/levels/assets/strawberry/strawberry.tscn" type="PackedScene" id=9]
 [ext_resource path="res://scenes/levels/assets/misc/lib_misc.tres" type="MeshLibrary" id=10]
 [ext_resource path="res://scenes/levels/assets/rock/lib_rocks.tres" type="MeshLibrary" id=11]
-[ext_resource path="res://scenes/levels/assets/water/water.tscn" type="PackedScene" id=12]
 [ext_resource path="res://scenes/levels/assets/checkpoint/checkpoint.tscn" type="PackedScene" id=13]
 [ext_resource path="res://scenes/levels/assets/ground_grass/grass_platform.tscn" type="PackedScene" id=14]
 [ext_resource path="res://scenes/levels/assets/fence/big_fence_gate.tscn" type="PackedScene" id=15]
@@ -32,76 +31,20 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, -1.2 )
 [node name="House" parent="." instance=ExtResource( 4 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 2 )
 
-[node name="Water" type="Spatial" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0 )
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="EditorVisibility" type="Node" parent="Water"]
-script = ExtResource( 7 )
-
-[node name="Water" parent="Water" instance=ExtResource( 12 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, 0 )
-
-[node name="Water2" parent="Water" instance=ExtResource( 12 )]
-
-[node name="Water3" parent="Water" instance=ExtResource( 12 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 0, 0 )
-
-[node name="Water4" parent="Water" instance=ExtResource( 12 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, 20 )
-
-[node name="Water5" parent="Water" instance=ExtResource( 12 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 20 )
-
-[node name="Water6" parent="Water" instance=ExtResource( 12 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 0, 20 )
-
-[node name="Water10" parent="Water" instance=ExtResource( 12 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, 40 )
-
-[node name="Water11" parent="Water" instance=ExtResource( 12 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 40 )
-
-[node name="Water12" parent="Water" instance=ExtResource( 12 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 0, 40 )
-
-[node name="Water7" parent="Water" instance=ExtResource( 12 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, -20 )
-
-[node name="Water13" parent="Water" instance=ExtResource( 12 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 40, 0, 0 )
-
-[node name="Water14" parent="Water" instance=ExtResource( 12 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 40, 0, 20 )
-
-[node name="Water15" parent="Water" instance=ExtResource( 12 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 40, 0, 40 )
-
-[node name="Water16" parent="Water" instance=ExtResource( 12 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 40, 0, -20 )
-
-[node name="Water8" parent="Water" instance=ExtResource( 12 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -20 )
-
-[node name="Water9" parent="Water" instance=ExtResource( 12 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 0, -20 )
-
-[node name="Water17" parent="Water" instance=ExtResource( 12 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -40, 0, 0 )
-
-[node name="Water18" parent="Water" instance=ExtResource( 12 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -40, 0, 20 )
-
-[node name="Water19" parent="Water" instance=ExtResource( 12 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -40, 0, 40 )
-
-[node name="Water20" parent="Water" instance=ExtResource( 12 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -40, 0, -20 )
-
 [node name="GridMaps" type="Spatial" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
+
+[node name="Water" type="GridMap" parent="GridMaps" groups=["death", "water"]]
+mesh_library = ExtResource( 7 )
+cell_size = Vector3( 20, 2, 20 )
+cell_center_y = false
+data = {
+"cells": PoolIntArray( -65536, 0, 0, -65535, 0, 0, -65534, 0, 0, -65533, 0, 0, -4, 0, 0, -3, 0, 0, -2, 0, 0, -1, 0, 0, -65536, 1, 0, -65535, 1, 0, -65534, 1, 0, -65533, 1, 0, -4, 1, 0, -3, 1, 0, -2, 1, 0, -1, 1, 0, -65536, 2, 0, -65535, 2, 0, -65534, 2, 0, -65533, 2, 0, -4, 2, 0, -3, 2, 0, -2, 2, 0, -1, 2, 0, -65536, 65534, 0, -65535, 65534, 0, -65534, 65534, 0, -65533, 65534, 0, -4, 65534, 0, -3, 65534, 0, -2, 65534, 0, -1, 65534, 0, -65536, 65535, 0, -65535, 65535, 0, -65534, 65535, 0, -65533, 65535, 0, -4, 65535, 0, -3, 65535, 0, -2, 65535, 0, -1, 65535, 0 )
+}
+__meta__ = {
+"_editor_clip_": 0,
+"_editor_floor_": Vector3( 0, -1, 0 )
+}
 
 [node name="GroundGrass" type="GridMap" parent="GridMaps"]
 mesh_library = ExtResource( 1 )

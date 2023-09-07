@@ -1,6 +1,6 @@
 [gd_resource type="ShaderMaterial" load_steps=6 format=2]
 
-[ext_resource path="res://scenes/levels/assets/water/water.gdshader" type="Shader" id=1]
+[ext_resource path="res://scenes/levels/assets/water/src/water.gdshader" type="Shader" id=1]
 
 [sub_resource type="OpenSimplexNoise" id=4]
 period = 30.0

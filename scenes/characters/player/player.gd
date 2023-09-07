@@ -226,6 +226,9 @@ func _process_ray_cast(body: Spatial) -> void:
 	if body is GridMap:
 		var body_name := body.name.to_lower()
 
+		if body.is_in_group("death"):
+			_process_death(body)
+
 		if "grass" in body_name:
 			ground_type = "grass"
 
@@ -253,6 +256,34 @@ func _process_ray_cast(body: Spatial) -> void:
 
 		elif root.is_in_group("wood"):
 			ground_type = "wood"
+
+
+# Processar lógica de quando o jogador morrer.
+func _process_death(node: Spatial) -> void:
+	dead = true
+	_visual.visible = false
+	GameState.add_times_died()
+
+	# Spawnar efeito de água
+	if node.is_in_group("water"):
+		var water_splash: Spatial = scene_water_splash.instance()
+		add_child(water_splash)
+		water_splash.global_translation = global_translation
+		water_splash.global_translation.y += 2.0
+		GameAudio.play_sfx(DatabaseAudio.SFX_WATER)
+
+	# Spawnar efeito de água
+	elif node.is_in_group("thorns"):
+		var balloon_pop: Spatial = scene_balloon_pop.instance()
+		add_child(balloon_pop)
+		balloon_pop.global_translation = global_translation
+		balloon_pop.global_translation.y += -1.0
+
+	yield(get_tree().create_timer(1.0, false), "timeout")
+	global_translation = respawn_position
+	dead = false
+	_visual.visible = true
+	move_weight = Vector2.ZERO
 
 
 # Helper methods
@@ -286,39 +317,18 @@ func _on_Area_area_entered(area: Area) -> void:
 		return
 
 	if area.is_in_group("death"):
-		dead = true
-		_visual.visible = false
-		GameState.add_times_died()
-
-		# Spawnar efeito de água
-		if area.is_in_group("water"):
-			var water_splash: Spatial = scene_water_splash.instance()
-			add_child(water_splash)
-			water_splash.global_translation = global_translation
-			water_splash.global_translation.y += 2.0
-			GameAudio.play_sfx(DatabaseAudio.SFX_WATER)
-
-		# Spawnar efeito de água
-		elif area.is_in_group("thorns"):
-			var balloon_pop: Spatial = scene_balloon_pop.instance()
-			add_child(balloon_pop)
-			balloon_pop.global_translation = global_translation
-			balloon_pop.global_translation.y += -1.0
-
-		yield(get_tree().create_timer(1.0, false), "timeout")
-		global_translation = respawn_position
-		dead = false
-		_visual.visible = true
-		move_weight = Vector2.ZERO
+		_process_death(area)
 		return
 
 	if area.is_in_group("collectable"):
 		GameState.add_item_collected()
 		area.monitorable = false
+		return
 
 	if area.is_in_group("checkpoint"):
 		respawn_position = area.global_translation
 		GameEvents.emit_signal("level_checkpoint_touched", area)
+		return
 
 	if area.is_in_group("house"):
 		if GameState.current_trophy:
@@ -333,6 +343,8 @@ func _on_Area_area_entered(area: Area) -> void:
 		else:
 			GameEvents.emit_signal("level_dialog", "mom", "incomplete")
 			prints("Level incomplete...")
+
+		return
 
 	if area.is_in_group("lever"):
 		GameEvents.emit_signal("level_lever_touched", area)

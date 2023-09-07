@@ -1,0 +1,170 @@
+{
+    "asset" : {
+        "generator" : "Khronos glTF Blender I/O v1.2.20",
+        "version" : "2.0"
+    },
+    "scene" : 0,
+    "scenes" : [
+        {
+            "name" : "Scene",
+            "nodes" : [
+                1
+            ]
+        }
+    ],
+    "nodes" : [
+        {
+            "mesh" : 0,
+            "name" : "WaterCollider -colonly"
+        },
+        {
+            "mesh" : 1,
+            "name" : "WaterMesh",
+            "children" : [
+                0
+            ]
+        }
+    ],
+    "materials" : [
+        {
+            "pbrMetallicRoughness" : {},
+            "name" : "water"
+        }
+    ],
+    "meshes" : [
+        {
+            "name" : "WaterCollider.001",
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "TEXCOORD_0" : 0,
+                        "POSITION" : 1,
+                        "NORMAL" : 2
+                    },
+                    "indices" : 3
+                }
+            ]
+        },
+        {
+            "name" : "WaterMesh.001",
+            "primitives" : [
+                {
+                    "material" : 0,
+                    "attributes" : {
+                        "TEXCOORD_0" : 4,
+                        "POSITION" : 5,
+                        "NORMAL" : 6
+                    },
+                    "indices" : 3
+                }
+            ]
+        }
+    ],
+    "accessors" : [
+        {
+            "componentType" : 5126,
+            "count" : 4,
+            "type" : "VEC2",
+            "bufferView" : 0
+        },
+        {
+            "count" : 4,
+            "max" : [
+                10,
+                -2,
+                10
+            ],
+            "min" : [
+                -10,
+                -2,
+                -10
+            ],
+            "componentType" : 5126,
+            "type" : "VEC3",
+            "bufferView" : 1
+        },
+        {
+            "componentType" : 5126,
+            "count" : 4,
+            "type" : "VEC3",
+            "bufferView" : 2
+        },
+        {
+            "componentType" : 5123,
+            "count" : 6,
+            "type" : "SCALAR",
+            "bufferView" : 3
+        },
+        {
+            "componentType" : 5126,
+            "count" : 4,
+            "type" : "VEC2",
+            "bufferView" : 4
+        },
+        {
+            "count" : 4,
+            "max" : [
+                10,
+                0,
+                10
+            ],
+            "min" : [
+                -10,
+                0,
+                -10
+            ],
+            "componentType" : 5126,
+            "type" : "VEC3",
+            "bufferView" : 5
+        },
+        {
+            "componentType" : 5126,
+            "count" : 4,
+            "type" : "VEC3",
+            "bufferView" : 6
+        }
+    ],
+    "bufferViews" : [
+        {
+            "byteLength" : 32,
+            "buffer" : 0,
+            "byteOffset" : 0
+        },
+        {
+            "byteLength" : 48,
+            "buffer" : 0,
+            "byteOffset" : 32
+        },
+        {
+            "byteLength" : 48,
+            "buffer" : 0,
+            "byteOffset" : 80
+        },
+        {
+            "byteLength" : 12,
+            "buffer" : 0,
+            "byteOffset" : 128
+        },
+        {
+            "byteLength" : 32,
+            "buffer" : 0,
+            "byteOffset" : 140
+        },
+        {
+            "byteLength" : 48,
+            "buffer" : 0,
+            "byteOffset" : 172
+        },
+        {
+            "byteLength" : 48,
+            "buffer" : 0,
+            "byteOffset" : 220
+        }
+    ],
+    "buffers" : [
+        {
+            "byteLength" : 268,
+            "uri" : "water.bin"
+        }
+    ]
+}
