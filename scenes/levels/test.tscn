@@ -19,7 +19,7 @@
 [ext_resource path="res://scenes/levels/assets/thorns/thorns.tscn" type="PackedScene" id=17]
 [ext_resource path="res://scenes/characters/snail/snail.tscn" type="PackedScene" id=18]
 [ext_resource path="res://scenes/characters/fish/fish.tscn" type="PackedScene" id=19]
-[ext_resource path="res://scenes/levels/assets/water/lib_ripples.tres" type="MeshLibrary" id=20]
+[ext_resource path="res://scenes/levels/assets/ripples/lib_ripples.tres" type="MeshLibrary" id=20]
 
 [node name="Test" type="Spatial"]
 

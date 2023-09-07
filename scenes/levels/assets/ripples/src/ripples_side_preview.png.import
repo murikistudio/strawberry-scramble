@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/ripples_corner_2_preview.png-cced353b782e611b7d39a6f41b9ba8cf.stex"
+path="res://.import/ripples_side_preview.png-c1f15aba4c4a1e0bf8b573b7717532fa.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/levels/assets/water/src/ripples_corner_2_preview.png"
-dest_files=[ "res://.import/ripples_corner_2_preview.png-cced353b782e611b7d39a6f41b9ba8cf.stex" ]
+source_file="res://scenes/levels/assets/ripples/src/ripples_side_preview.png"
+dest_files=[ "res://.import/ripples_side_preview.png-c1f15aba4c4a1e0bf8b573b7717532fa.stex" ]
 
 [params]
 

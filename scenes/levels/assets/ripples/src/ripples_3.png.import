@@ -2,9 +2,9 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/ripples_2.png-9966200848004db5870bb84727834a5d.s3tc.stex"
-path.etc2="res://.import/ripples_2.png-9966200848004db5870bb84727834a5d.etc2.stex"
-path.etc="res://.import/ripples_2.png-9966200848004db5870bb84727834a5d.etc.stex"
+path.s3tc="res://.import/ripples_3.png-b32875977209a0c6d39333972dcacfd8.s3tc.stex"
+path.etc2="res://.import/ripples_3.png-b32875977209a0c6d39333972dcacfd8.etc2.stex"
+path.etc="res://.import/ripples_3.png-b32875977209a0c6d39333972dcacfd8.etc.stex"
 metadata={
 "imported_formats": [ "s3tc", "etc2", "etc" ],
 "vram_texture": true
@@ -12,8 +12,8 @@ metadata={
 
 [deps]
 
-source_file="res://scenes/levels/assets/water/src/ripples_2.png"
-dest_files=[ "res://.import/ripples_2.png-9966200848004db5870bb84727834a5d.s3tc.stex", "res://.import/ripples_2.png-9966200848004db5870bb84727834a5d.etc2.stex", "res://.import/ripples_2.png-9966200848004db5870bb84727834a5d.etc.stex" ]
+source_file="res://scenes/levels/assets/ripples/src/ripples_3.png"
+dest_files=[ "res://.import/ripples_3.png-b32875977209a0c6d39333972dcacfd8.s3tc.stex", "res://.import/ripples_3.png-b32875977209a0c6d39333972dcacfd8.etc2.stex", "res://.import/ripples_3.png-b32875977209a0c6d39333972dcacfd8.etc.stex" ]
 
 [params]
 

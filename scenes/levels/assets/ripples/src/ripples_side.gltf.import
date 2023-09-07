@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/ripples_side.gltf-9ed75470400ae164a74633d595774f38.scn"
+path="res://.import/ripples_side.gltf-e4ee7728cd0519cb45e873c6f6817c66.scn"
 
 [deps]
 
-source_file="res://scenes/levels/assets/water/src/ripples_side.gltf"
-dest_files=[ "res://.import/ripples_side.gltf-9ed75470400ae164a74633d595774f38.scn" ]
+source_file="res://scenes/levels/assets/ripples/src/ripples_side.gltf"
+dest_files=[ "res://.import/ripples_side.gltf-e4ee7728cd0519cb45e873c6f6817c66.scn" ]
 
 [params]
 
