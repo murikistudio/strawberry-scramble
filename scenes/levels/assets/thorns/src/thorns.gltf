@@ -11,30 +11,32 @@
         {
             "name" : "Scene",
             "nodes" : [
-                0
+                1
             ]
         }
     ],
     "nodes" : [
         {
             "mesh" : 0,
-            "name" : "ThornsMesh",
-            "scale" : [
-                0.6765422821044922,
-                0.4616236984729767,
-                0.6765422821044922
-            ]
+            "name" : "ThornsCollider -colonly"
+        },
+        {
+            "mesh" : 1,
+            "children" : [
+                0
+            ],
+            "name" : "ThornsMesh"
         }
     ],
     "materials" : [
         {
-            "name" : "thorns",
             "pbrMetallicRoughness" : {
                 "baseColorTexture" : {
                     "texCoord" : 0,
                     "index" : 0
                 }
             },
+            "name" : "thorns",
             "extensions" : {
                 "KHR_materials_unlit" : {}
             }
@@ -42,18 +44,30 @@
     ],
     "meshes" : [
         {
-            "name" : "ThornsMesh.001",
             "primitives" : [
                 {
-                    "indices" : 3,
                     "attributes" : {
-                        "TEXCOORD_0" : 0,
-                        "NORMAL" : 1,
-                        "POSITION" : 2
+                        "POSITION" : 0,
+                        "NORMAL" : 1
                     },
-                    "material" : 0
+                    "indices" : 2
                 }
-            ]
+            ],
+            "name" : "ThornsCollider.001"
+        },
+        {
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "POSITION" : 3,
+                        "NORMAL" : 4,
+                        "TEXCOORD_0" : 5
+                    },
+                    "material" : 0,
+                    "indices" : 6
+                }
+            ],
+            "name" : "ThornsMesh.001"
         }
     ],
     "textures" : [
@@ -71,73 +85,116 @@
     ],
     "accessors" : [
         {
-            "count" : 1370,
+            "count" : 24,
             "bufferView" : 0,
-            "type" : "VEC2",
-            "componentType" : 5126
-        },
-        {
-            "count" : 1370,
-            "bufferView" : 1,
-            "type" : "VEC3",
-            "componentType" : 5126
-        },
-        {
-            "count" : 1370,
+            "min" : [
+                -1,
+                0,
+                -1
+            ],
             "componentType" : 5126,
             "max" : [
-                1.5158673524856567,
-                1.6769990921020508,
-                1.6346389055252075
+                1,
+                0.6000000238418579,
+                1
             ],
-            "min" : [
-                -1.601540207862854,
-                -0.03676337003707886,
-                -1.8094992637634277
-            ],
-            "bufferView" : 2,
             "type" : "VEC3"
         },
         {
-            "count" : 1800,
+            "count" : 24,
+            "bufferView" : 1,
+            "componentType" : 5126,
+            "type" : "VEC3"
+        },
+        {
+            "count" : 36,
+            "bufferView" : 2,
+            "componentType" : 5123,
+            "type" : "SCALAR"
+        },
+        {
+            "count" : 1370,
             "bufferView" : 3,
-            "type" : "SCALAR",
-            "componentType" : 5123
+            "min" : [
+                -1.0835096836090088,
+                -0.01697087287902832,
+                -1.2242027521133423
+            ],
+            "componentType" : 5126,
+            "max" : [
+                1.0255483388900757,
+                0.7741424441337585,
+                1.1059023141860962
+            ],
+            "type" : "VEC3"
+        },
+        {
+            "count" : 1370,
+            "bufferView" : 4,
+            "componentType" : 5126,
+            "type" : "VEC3"
+        },
+        {
+            "count" : 1370,
+            "bufferView" : 5,
+            "componentType" : 5126,
+            "type" : "VEC2"
+        },
+        {
+            "count" : 1800,
+            "bufferView" : 6,
+            "componentType" : 5123,
+            "type" : "SCALAR"
         }
     ],
     "bufferViews" : [
         {
-            "buffer" : 0,
+            "byteLength" : 288,
             "byteOffset" : 0,
-            "byteLength" : 10960
+            "buffer" : 0
         },
         {
-            "buffer" : 0,
-            "byteOffset" : 10960,
-            "byteLength" : 16440
+            "byteLength" : 288,
+            "byteOffset" : 288,
+            "buffer" : 0
         },
         {
-            "buffer" : 0,
-            "byteOffset" : 27400,
-            "byteLength" : 16440
+            "byteLength" : 72,
+            "byteOffset" : 576,
+            "buffer" : 0
         },
         {
-            "buffer" : 0,
-            "byteOffset" : 43840,
-            "byteLength" : 3600
+            "byteLength" : 16440,
+            "byteOffset" : 648,
+            "buffer" : 0
+        },
+        {
+            "byteLength" : 16440,
+            "byteOffset" : 17088,
+            "buffer" : 0
+        },
+        {
+            "byteLength" : 10960,
+            "byteOffset" : 33528,
+            "buffer" : 0
+        },
+        {
+            "byteLength" : 3600,
+            "byteOffset" : 44488,
+            "buffer" : 0
         }
     ],
     "samplers" : [
         {
+            "wrapS" : 10497,
             "wrapT" : 10497,
             "minFilter" : 9986,
-            "wrapS" : 10497,
             "magFilter" : 9729
         }
     ],
     "buffers" : [
         {
-            "byteLength" : 47440,
+            "byteLength" : 48088,
             "uri" : "thorns.bin"
         }
     ]

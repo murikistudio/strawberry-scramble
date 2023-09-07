@@ -11,11 +11,11 @@
 [ext_resource path="res://scenes/levels/assets/strawberry/strawberry.tscn" type="PackedScene" id=9]
 [ext_resource path="res://scenes/levels/assets/misc/lib_misc.tres" type="MeshLibrary" id=10]
 [ext_resource path="res://scenes/levels/assets/rock/lib_rocks.tres" type="MeshLibrary" id=11]
+[ext_resource path="res://scenes/levels/assets/thorns/lib_thorns.tres" type="MeshLibrary" id=12]
 [ext_resource path="res://scenes/levels/assets/checkpoint/checkpoint.tscn" type="PackedScene" id=13]
 [ext_resource path="res://scenes/levels/assets/ground_grass/grass_platform.tscn" type="PackedScene" id=14]
 [ext_resource path="res://scenes/levels/assets/fence/big_fence_gate.tscn" type="PackedScene" id=15]
 [ext_resource path="res://scenes/levels/assets/fence/big_fence_lever.tscn" type="PackedScene" id=16]
-[ext_resource path="res://scenes/levels/assets/thorns/thorns.tscn" type="PackedScene" id=17]
 [ext_resource path="res://scenes/characters/snail/snail.tscn" type="PackedScene" id=18]
 [ext_resource path="res://scenes/characters/fish/fish.tscn" type="PackedScene" id=19]
 [ext_resource path="res://scenes/levels/assets/ripples/lib_ripples.tres" type="MeshLibrary" id=20]
@@ -130,6 +130,18 @@ __meta__ = {
 "_editor_floor_": Vector3( 0, -1, 0 )
 }
 
+[node name="Thorns" type="GridMap" parent="GridMaps" groups=["death", "thorns"]]
+mesh_library = ExtResource( 12 )
+cell_size = Vector3( 1, 1, 1 )
+cell_center_y = false
+data = {
+"cells": PoolIntArray( 4, 65529, 0, 6, 65529, 0 )
+}
+__meta__ = {
+"_editor_clip_": 0,
+"_editor_floor_": Vector3( 0, 0, 0 )
+}
+
 [node name="Strawberries" type="Spatial" parent="."]
 
 [node name="Strawberry3" parent="Strawberries" instance=ExtResource( 9 )]
@@ -202,9 +214,6 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 22, 2.3, -20.5045 )
 [node name="GrassPlatform" parent="Platforms" instance=ExtResource( 14 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, -17 )
 target_position = Vector3( 0, 0, 8 )
-
-[node name="Thorns" parent="." instance=ExtResource( 17 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 1, -6 )
 
 [node name="Gates" type="Spatial" parent="."]
 
