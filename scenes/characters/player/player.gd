@@ -279,7 +279,7 @@ func _process_death(node: Spatial) -> void:
 		balloon_pop.global_translation.y += -1.0
 
 	yield(get_tree().create_timer(1.0, false), "timeout")
-	global_translation = respawn_position
+	global_translation = respawn_position + Vector3(0, 0, -1)
 	dead = false
 	_visual.visible = true
 	move_weight = Vector2.ZERO
