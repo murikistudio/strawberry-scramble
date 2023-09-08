@@ -35,6 +35,11 @@ _global_script_classes=[ {
 "path": "res://database/audio.gd"
 }, {
 "base": "Reference",
+"class": "DatabaseConstants",
+"language": "GDScript",
+"path": "res://database/constants.gd"
+}, {
+"base": "Reference",
 "class": "DatabaseLevels",
 "language": "GDScript",
 "path": "res://database/levels.gd"
@@ -85,6 +90,7 @@ _global_script_class_icons={
 "ButtonHighlighter": "res://addons/utils/icons/button_highlighter.svg",
 "ConfigEnabler": "res://addons/utils/icons/config_enabler.png",
 "DatabaseAudio": "",
+"DatabaseConstants": "",
 "DatabaseLevels": "",
 "DatabaseScenes": "",
 "EditorVisibility": "res://addons/utils/icons/editor_visibility.png",

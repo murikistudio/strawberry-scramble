@@ -18,8 +18,10 @@ onready var _texture_rect_door: TextureRect = find_node("TextureRectDoor")
 onready var _texture_rect_collected: TextureRect = find_node("TextureRectCollected")
 onready var _label_deaths: Label = find_node("LabelDeaths")
 onready var _label_time: Label = find_node("LabelTime")
+onready var _label_time_goal: Label = find_node("LabelTimeGoal")
 onready var _label_collected: Label = find_node("LabelCollected")
 onready var _texture_no_trophy: Texture = _texture_rect_trophy.texture
+onready var _level_def := DatabaseLevels.get_level(GameState.current_level)
 
 
 # Built-in overrides
@@ -43,13 +45,33 @@ func update_hud() -> void:
 		GameCore.highlight_control_scale(_label_deaths)
 		_label_deaths.text = deaths
 
+		if GameState.times_died == 0:
+			_label_deaths.modulate = Color.white
+		else:
+			_label_deaths.modulate = DatabaseConstants.COLOR_PENALTY
+
 	# Tempo
-	var time := str(GameState.time_elapsed) + "s"
+	var time := str(GameState.time_elapsed)
+	var time_goal: int = _level_def.get("time", 0)
 
 	if _label_time.text != time:
 		GameCore.highlight_control_scale(_texture_rect_time)
 		GameCore.highlight_control_scale(_label_time)
 		_label_time.text = time
+
+		if time_goal > 0:
+			if GameState.time_elapsed <= time_goal:
+				_label_time_goal.text = " / " + str(time_goal) + "s"
+				_label_time.modulate = Color.white
+			else:
+				_label_time.text += "s"
+				_label_time_goal.text = ""
+				_label_time.modulate = DatabaseConstants.COLOR_PENALTY
+
+		else:
+			_label_time.text += "s"
+			_label_time_goal.text = ""
+			_label_time.modulate = Color.white
 
 	# Itens coletados
 	var collected_text := "{collected}/{available}".format({
