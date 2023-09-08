@@ -97,18 +97,30 @@ func reset_level() -> void:
 
 # Avalia estado do jogo (nota do jogador).
 func evaluate_game() -> void:
-	var items_progress := int((float(items_collected) / float(items_available)) * 100)
+	if not items_available:
+		return
 
-	if items_progress == 100:
-		if times_died == 0:
-			current_trophy = "diamond"
-		else:
-			current_trophy = "gold"
+	var penalty := 20
+	var level_def := DatabaseLevels.get_level(current_level)
+	var level_time: int = level_def.get("time", 0)
+	var general_progress := int((float(items_collected) / float(items_available)) * 100)
 
-	elif items_progress >= 66:
+	if level_time > 0 and time_elapsed > level_time:
+		general_progress = int(max(general_progress - penalty, 0))
+
+	if times_died > 0:
+		general_progress = int(max(general_progress - penalty, 0))
+
+	if general_progress == 100:
+		current_trophy = "diamond"
+
+	elif general_progress >= 80:
+		current_trophy = "gold"
+
+	elif general_progress >= 60:
 		current_trophy = "silver"
 
-	elif items_progress >= 33:
+	elif general_progress >= 40:
 		current_trophy = "bronze"
 
 	else:
@@ -174,4 +186,5 @@ func add_score() -> void:
 # Adicionar tempo passado na fase.
 func add_time_elapsed() -> void:
 	time_elapsed += 1
+	evaluate_game()
 	GameEvents.emit_signal("level_time_updated")

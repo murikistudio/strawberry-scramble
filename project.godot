@@ -34,6 +34,11 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://database/audio.gd"
 }, {
+"base": "Reference",
+"class": "DatabaseLevels",
+"language": "GDScript",
+"path": "res://database/levels.gd"
+}, {
 "base": "Node",
 "class": "DatabaseScenes",
 "language": "GDScript",
@@ -80,6 +85,7 @@ _global_script_class_icons={
 "ButtonHighlighter": "res://addons/utils/icons/button_highlighter.svg",
 "ConfigEnabler": "res://addons/utils/icons/config_enabler.png",
 "DatabaseAudio": "",
+"DatabaseLevels": "",
 "DatabaseScenes": "",
 "EditorVisibility": "res://addons/utils/icons/editor_visibility.png",
 "GuiTransition": "res://addons/simple-gui-transitions/icon.png",

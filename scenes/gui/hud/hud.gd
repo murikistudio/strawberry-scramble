@@ -19,6 +19,7 @@ onready var _texture_rect_collected: TextureRect = find_node("TextureRectCollect
 onready var _label_deaths: Label = find_node("LabelDeaths")
 onready var _label_time: Label = find_node("LabelTime")
 onready var _label_collected: Label = find_node("LabelCollected")
+onready var _texture_no_trophy: Texture = _texture_rect_trophy.texture
 
 
 # Built-in overrides
@@ -75,4 +76,5 @@ func update_hud() -> void:
 			GameCore.highlight_control_scale(_texture_rect_door)
 
 	else:
+		_texture_rect_trophy.texture = _texture_no_trophy
 		_texture_rect_door.self_modulate.a = 0.6
