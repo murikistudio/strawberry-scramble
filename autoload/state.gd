@@ -26,6 +26,7 @@ var time_elapsed: int
 # Session
 var items_collected: int
 var items_available: int
+var current_progress: int
 var current_trophy: String
 
 onready var _compress_data := not OS.is_debug_build()
@@ -92,6 +93,7 @@ func reset_level() -> void:
 	time_elapsed = 0
 	items_collected = 0
 	items_available = 0
+	current_progress = 0
 	current_trophy = ""
 
 
@@ -103,24 +105,24 @@ func evaluate_game() -> void:
 	var penalty := 20
 	var level_def := DatabaseLevels.get_level(current_level)
 	var level_time: int = level_def.get("time", 0)
-	var general_progress := int((float(items_collected) / float(items_available)) * 100)
+	current_progress = int((float(items_collected) / float(items_available)) * 100)
 
 	if level_time > 0 and time_elapsed > level_time:
-		general_progress = int(max(general_progress - penalty, 0))
+		current_progress = int(max(current_progress - penalty, 0))
 
 	if times_died > 0:
-		general_progress = int(max(general_progress - penalty, 0))
+		current_progress = int(max(current_progress - penalty, 0))
 
-	if general_progress == 100:
+	if current_progress == 100:
 		current_trophy = "diamond"
 
-	elif general_progress >= 80:
+	elif current_progress >= 80:
 		current_trophy = "gold"
 
-	elif general_progress >= 60:
+	elif current_progress >= 60:
 		current_trophy = "silver"
 
-	elif general_progress >= 40:
+	elif current_progress >= 40:
 		current_trophy = "bronze"
 
 	else:
