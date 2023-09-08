@@ -1,0 +1,133 @@
+{
+    "asset" : {
+        "generator" : "Khronos glTF Blender I/O v1.2.20",
+        "version" : "2.0"
+    },
+    "scene" : 0,
+    "scenes" : [
+        {
+            "nodes" : [
+                0
+            ],
+            "name" : "Scene"
+        }
+    ],
+    "nodes" : [
+        {
+            "mesh" : 0,
+            "name" : "BoulderMesh"
+        }
+    ],
+    "materials" : [
+        {
+            "name" : "boulder",
+            "pbrMetallicRoughness" : {
+                "baseColorTexture" : {
+                    "texCoord" : 0,
+                    "index" : 0
+                }
+            }
+        }
+    ],
+    "meshes" : [
+        {
+            "name" : "BoulderMesh.001",
+            "primitives" : [
+                {
+                    "indices" : 3,
+                    "material" : 0,
+                    "attributes" : {
+                        "TEXCOORD_0" : 0,
+                        "NORMAL" : 1,
+                        "POSITION" : 2
+                    }
+                }
+            ]
+        }
+    ],
+    "textures" : [
+        {
+            "source" : 0,
+            "sampler" : 0
+        }
+    ],
+    "images" : [
+        {
+            "mimeType" : "image/jpeg",
+            "name" : "boulder.jpg",
+            "uri" : "boulder.jpg"
+        }
+    ],
+    "accessors" : [
+        {
+            "count" : 182,
+            "componentType" : 5126,
+            "type" : "VEC2",
+            "bufferView" : 0
+        },
+        {
+            "count" : 182,
+            "componentType" : 5126,
+            "type" : "VEC3",
+            "bufferView" : 1
+        },
+        {
+            "min" : [
+                -0.9999999403953552,
+                -1,
+                -0.9999999403953552
+            ],
+            "componentType" : 5126,
+            "type" : "VEC3",
+            "count" : 182,
+            "max" : [
+                1,
+                1,
+                0.9999999403953552
+            ],
+            "bufferView" : 2
+        },
+        {
+            "count" : 960,
+            "componentType" : 5123,
+            "type" : "SCALAR",
+            "bufferView" : 3
+        }
+    ],
+    "bufferViews" : [
+        {
+            "byteLength" : 1456,
+            "byteOffset" : 0,
+            "buffer" : 0
+        },
+        {
+            "byteLength" : 2184,
+            "byteOffset" : 1456,
+            "buffer" : 0
+        },
+        {
+            "byteLength" : 2184,
+            "byteOffset" : 3640,
+            "buffer" : 0
+        },
+        {
+            "byteLength" : 1920,
+            "byteOffset" : 5824,
+            "buffer" : 0
+        }
+    ],
+    "samplers" : [
+        {
+            "minFilter" : 9986,
+            "magFilter" : 9729,
+            "wrapS" : 10497,
+            "wrapT" : 10497
+        }
+    ],
+    "buffers" : [
+        {
+            "byteLength" : 7744,
+            "uri" : "boulder.bin"
+        }
+    ]
+}
