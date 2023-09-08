@@ -11,7 +11,7 @@ const LEVELS := [
 	},
 	{
 		"name": "level_01",
-		"time": 34,
+		"time": 35,
 	},
 ]
 
