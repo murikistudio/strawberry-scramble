@@ -1,0 +1,139 @@
+{
+    "asset" : {
+        "version" : "2.0",
+        "generator" : "Khronos glTF Blender I/O v1.2.20"
+    },
+    "extensionsUsed" : [
+        "KHR_materials_unlit"
+    ],
+    "scene" : 0,
+    "scenes" : [
+        {
+            "name" : "Scene",
+            "nodes" : [
+                0
+            ]
+        }
+    ],
+    "nodes" : [
+        {
+            "name" : "Bush1Mesh",
+            "mesh" : 0
+        }
+    ],
+    "materials" : [
+        {
+            "pbrMetallicRoughness" : {
+                "baseColorTexture" : {
+                    "index" : 0,
+                    "texCoord" : 0
+                }
+            },
+            "name" : "tree_leaves",
+            "extensions" : {
+                "KHR_materials_unlit" : {}
+            }
+        }
+    ],
+    "meshes" : [
+        {
+            "name" : "Bush1Mesh.001",
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "NORMAL" : 0,
+                        "POSITION" : 1,
+                        "TEXCOORD_0" : 2
+                    },
+                    "material" : 0,
+                    "indices" : 3
+                }
+            ]
+        }
+    ],
+    "textures" : [
+        {
+            "sampler" : 0,
+            "source" : 0
+        }
+    ],
+    "images" : [
+        {
+            "mimeType" : "image/png",
+            "uri" : "tree_leaves.png",
+            "name" : "tree_leaves.png"
+        }
+    ],
+    "accessors" : [
+        {
+            "count" : 49,
+            "type" : "VEC3",
+            "componentType" : 5126,
+            "bufferView" : 0
+        },
+        {
+            "min" : [
+                -0.6369934678077698,
+                -0.0020331423729658127,
+                -0.62971031665802
+            ],
+            "type" : "VEC3",
+            "bufferView" : 1,
+            "count" : 49,
+            "componentType" : 5126,
+            "max" : [
+                0.6389379501342773,
+                0.7050498723983765,
+                0.6286100745201111
+            ]
+        },
+        {
+            "count" : 49,
+            "type" : "VEC2",
+            "componentType" : 5126,
+            "bufferView" : 2
+        },
+        {
+            "count" : 225,
+            "type" : "SCALAR",
+            "componentType" : 5123,
+            "bufferView" : 3
+        }
+    ],
+    "bufferViews" : [
+        {
+            "buffer" : 0,
+            "byteLength" : 588,
+            "byteOffset" : 0
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 588,
+            "byteOffset" : 588
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 392,
+            "byteOffset" : 1176
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 450,
+            "byteOffset" : 1568
+        }
+    ],
+    "samplers" : [
+        {
+            "magFilter" : 9729,
+            "wrapT" : 10497,
+            "wrapS" : 10497,
+            "minFilter" : 9986
+        }
+    ],
+    "buffers" : [
+        {
+            "uri" : "bush_1.bin",
+            "byteLength" : 2020
+        }
+    ]
+}
