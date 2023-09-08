@@ -132,7 +132,7 @@ theme = ExtResource( 5 )
 
 [node name="VBoxContainer5" type="VBoxContainer" parent="HBoxContainer/VBoxContainer/VBoxContainerCredits"]
 margin_right = 763.0
-margin_bottom = 105.0
+margin_bottom = 133.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
@@ -154,9 +154,9 @@ text = "Diego Almeida"
 align = 1
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="HBoxContainer/VBoxContainer/VBoxContainerCredits"]
-margin_top = 109.0
+margin_top = 137.0
 margin_right = 763.0
-margin_bottom = 215.0
+margin_bottom = 270.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
@@ -178,9 +178,9 @@ text = "Erik Silva Ferreira"
 align = 1
 
 [node name="VBoxContainer6" type="VBoxContainer" parent="HBoxContainer/VBoxContainer/VBoxContainerCredits"]
-margin_top = 219.0
+margin_top = 274.0
 margin_right = 763.0
-margin_bottom = 325.0
+margin_bottom = 407.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
@@ -202,6 +202,7 @@ text = "Joel Gomes"
 align = 1
 
 [node name="VBoxContainer3" type="VBoxContainer" parent="HBoxContainer/VBoxContainer/VBoxContainerCredits"]
+visible = false
 margin_top = 329.0
 margin_right = 763.0
 margin_bottom = 435.0
@@ -226,7 +227,7 @@ text = "Luciano Abreu"
 align = 1
 
 [node name="VBoxContainer4" type="VBoxContainer" parent="HBoxContainer/VBoxContainer/VBoxContainerCredits"]
-margin_top = 439.0
+margin_top = 411.0
 margin_right = 763.0
 margin_bottom = 545.0
 size_flags_horizontal = 3
@@ -237,7 +238,7 @@ margin_right = 763.0
 margin_bottom = 32.0
 size_flags_horizontal = 3
 size_flags_vertical = 1
-text = "Mole Maniacs v0.0.0"
+text = "Game Name v0.0.0"
 align = 1
 
 [node name="LabelStudio" type="Label" parent="HBoxContainer/VBoxContainer/VBoxContainerCredits/VBoxContainer4"]
