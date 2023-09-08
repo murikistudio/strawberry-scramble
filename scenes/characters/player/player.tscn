@@ -88,7 +88,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.77636e-15, 0.134719 )
 shape = SubResource( 10 )
 
 [node name="DirectionalLight" type="DirectionalLight" parent="."]
-transform = Transform( 0.642787, -0.541675, -0.541676, -6.18172e-08, -0.707107, 0.707106, -0.766045, -0.454519, -0.45452, 0, 1, 0 )
+transform = Transform( -0.707107, 0.612372, -0.353553, 0, 0.5, 0.866025, 0.707107, 0.612372, -0.353553, 0, 1, 0 )
 light_energy = 0.25
 shadow_enabled = true
 directional_shadow_normal_bias = 0.0
