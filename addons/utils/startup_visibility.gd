@@ -1,11 +1,11 @@
-class_name EditorVisibility, "res://addons/utils/icons/editor_visibility.png"
+class_name StartupVisibility, "res://addons/utils/icons/startup_visibility.png"
 extends Node
 # Node utilitário responsável por tornar um node pai visível ao iniciar o jogo.
 
 
 # Variables
-export var visible := true
-export var delete_in_game := false
+export(bool) var visible := true
+export(bool) var delete_in_game := false
 
 
 # Built-in overrides

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/editor_visibility.png-d3232ba77c65b002ab452a09f424e356.stex"
+path="res://.import/startup_visibility.png-c4bdd04b2d85bded59676adc3a5976e2.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://addons/utils/icons/editor_visibility.png"
-dest_files=[ "res://.import/editor_visibility.png-d3232ba77c65b002ab452a09f424e356.stex" ]
+source_file="res://addons/utils/icons/startup_visibility.png"
+dest_files=[ "res://.import/startup_visibility.png-c4bdd04b2d85bded59676adc3a5976e2.stex" ]
 
 [params]
 
