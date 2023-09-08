@@ -8,6 +8,7 @@ Paused,,Pausado
 Game Over,,Fim de Jogo
 Level Select,,Seleção de Fase
 Level Complete!,,Fase Concluída
+level_complete_percent,{level} ({percent}%),{level} ({percent}%)
 ,,
 LOCALES,,
 en,English,English
