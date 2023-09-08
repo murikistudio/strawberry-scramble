@@ -268,7 +268,7 @@ func _process_death(node: Spatial) -> void:
 		var water_splash: Spatial = scene_water_splash.instance()
 		add_child(water_splash)
 		water_splash.global_translation = global_translation
-		water_splash.global_translation.y += 2.0
+		water_splash.global_translation.y += 1.5
 		GameAudio.play_sfx(DatabaseAudio.SFX_WATER)
 
 	# Spawnar efeito de água
