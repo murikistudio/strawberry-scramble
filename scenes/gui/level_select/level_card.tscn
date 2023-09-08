@@ -80,7 +80,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.3
 
-[node name="TextureRect2" type="TextureRect" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+[node name="TextureRectTime" type="TextureRect" parent="MarginContainer/VBoxContainer/HBoxContainer"]
 margin_right = 83.0
 margin_bottom = 53.0
 mouse_filter = 2

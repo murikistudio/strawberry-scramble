@@ -16,6 +16,8 @@ onready var _texture_rect_thumbnail: TextureRect = find_node("TextureRectThumbna
 onready var _button_level: Button = find_node("ButtonLevel")
 onready var _texture_rect_trophy: TextureRect = find_node("TextureRectTrophy")
 onready var _label_time: Label = find_node("LabelTime")
+onready var _texture_rect_time: TextureRect = find_node("TextureRectTime")
+onready var _level_def := DatabaseLevels.get_level(level_def.get("name", ""))
 
 
 # Built-in overrides
@@ -29,11 +31,16 @@ func _ready() -> void:
 
 # Private methods
 func _update_card() -> void:
+	var score: Dictionary = GameState.levels_progress.get(level_def["name"], {})
 	_label_level_name.text = tr(level_def.get("name", ""))
 
-	var score: Dictionary = GameState.levels_progress.get(level_def["name"], {})
-
 	if not score.size():
+		_label_time.modulate = DatabaseConstants.COLOR_PENALTY
+		_texture_rect_time.modulate = DatabaseConstants.COLOR_PENALTY
+
+		if _level_def.get("time"):
+			_label_time.text = str(_level_def["time"]) + "s"
+
 		return
 
 	_label_time.text = str(score["time_elapsed"]) + "s"
