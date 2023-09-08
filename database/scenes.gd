@@ -40,10 +40,15 @@ static func get_levels() -> Array:
 		if parts.size():
 			file_name = parts[0]
 
+		if "test" in file_name.to_lower() and not OS.is_debug_build():
+			file_path = dir.get_next()
+			continue
+
 		level_paths.push_back({
 			"name": file_name,
 			"path": LEVEL_BASE + file_path,
 		})
+
 		file_path = dir.get_next()
 
 	return level_paths
