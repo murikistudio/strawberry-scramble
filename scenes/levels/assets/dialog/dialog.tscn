@@ -1,10 +1,15 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://scenes/levels/assets/dialog/dialog.gd" type="Script" id=1]
-[ext_resource path="res://textures/helper/dialog.svg" type="Texture" id=2]
 [ext_resource path="res://addons/utils/editor_visibility.gd" type="Script" id=3]
 
 [sub_resource type="BoxShape" id=1]
+
+[sub_resource type="CubeMesh" id=2]
+
+[sub_resource type="SpatialMaterial" id=3]
+flags_transparent = true
+albedo_color = Color( 0.74902, 0.513726, 0.796078, 0.25098 )
 
 [node name="Dialog" type="Area"]
 monitorable = false
@@ -14,13 +19,15 @@ script = ExtResource( 1 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
 shape = SubResource( 1 )
 
-[node name="Sprite3D" type="Sprite3D" parent="."]
-transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 1, 0 )
-billboard = 1
-double_sided = false
-texture = ExtResource( 2 )
+[node name="Visual" type="Spatial" parent="."]
 
-[node name="EditorVisibility" type="Node" parent="Sprite3D"]
+[node name="EditorVisibility" type="Node" parent="Visual"]
 script = ExtResource( 3 )
 visible = false
 delete_in_game = true
+
+[node name="MeshInstance" type="MeshInstance" parent="Visual"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
+mesh = SubResource( 2 )
+skeleton = NodePath("../..")
+material/0 = SubResource( 3 )

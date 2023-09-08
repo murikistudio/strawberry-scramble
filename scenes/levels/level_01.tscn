@@ -29,14 +29,14 @@ fallback_character = "mom"
 fallback_line = "start"
 
 [node name="Dialog2" parent="Dialogs" instance=ExtResource( 7 )]
-transform = Transform( 2.96899, 0, 0, 0, 1, 0, 0, 0, 0.68621, -1, 1, -26 )
+transform = Transform( 3.84935, 0, 0, 0, 1, 0, 0, 0, 0.68621, -1, 1, -26 )
 at_start = false
 once_per_level = true
 character = "player"
 line = "level_01_2"
 
 [node name="Dialog3" parent="Dialogs" instance=ExtResource( 7 )]
-transform = Transform( 1.37728, 0, 0, 0, 1, 0, 0, 0, 0.294286, -1, 1, -37.9904 )
+transform = Transform( 0.24963, 0, 0, 0, 1, 0, 0, 0, 0.294286, -1, 1, -37.9904 )
 at_start = false
 once_per_level = true
 character = "player"
