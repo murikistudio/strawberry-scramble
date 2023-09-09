@@ -5,6 +5,7 @@ extends Area
 export var started := false
 export(float, 0.0, 10.0, 0.01) var rotation_speed := 1.0
 export var direction := Vector3.ZERO
+export(PackedScene) var scene_water_splash: PackedScene
 onready var _visual: Spatial = find_node("Visual")
 onready var _mesh: Spatial = _visual.get_children()[0]
 onready var _ray_cast: RayCast = find_node("RayCast")
@@ -62,6 +63,11 @@ func _physics_process(delta: float) -> void:
 		_collider = collider
 
 		if _collider.is_in_group("death") and _collider.is_in_group("water"):
+			var water_splash: Spatial = scene_water_splash.instance()
+			get_parent().add_child(water_splash)
+			water_splash.global_translation = global_translation
+			water_splash.global_translation.y += 0.5
+			GameAudio.play_sfx_3d(water_splash, DatabaseAudio.SFX_WATER, 10.0)
 			queue_free()
 
 	else:
