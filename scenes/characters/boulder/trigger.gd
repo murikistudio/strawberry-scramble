@@ -8,6 +8,7 @@ export(float, -1.0, 30.0, 0.01) var trigger_interval := -1.0
 var _target_spawner: Spatial
 var _can_trigger := true
 onready var _visual: Spatial = find_node("Visual")
+onready var _timer: Timer = find_node("Timer")
 
 
 # Built-in overrides
@@ -29,5 +30,9 @@ func _on_BoulderTrigger_body_entered(body: Spatial) -> void:
 	_can_trigger = false
 
 	if trigger_interval > 0.0:
-		yield(get_tree().create_timer(trigger_interval, false), "timeout")
-		_can_trigger = true
+		_timer.wait_time = trigger_interval
+		_timer.start()
+
+
+func _on_Timer_timeout() -> void:
+	_can_trigger = true
