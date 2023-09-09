@@ -7,7 +7,6 @@ export(String, "spawn", "enable", "disable") var trigger_mode := "spawn"
 export(float, -1.0, 30.0, 0.01) var trigger_interval := -1.0
 var _target_spawner: Spatial
 var _can_trigger := true
-onready var _visual: Spatial = find_node("Visual")
 onready var _timer: Timer = find_node("Timer")
 
 
@@ -17,7 +16,6 @@ func _ready() -> void:
 		queue_free()
 		return
 
-	_visual.queue_free()
 	_target_spawner = get_node(target_spawner)
 
 

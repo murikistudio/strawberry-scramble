@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://scenes/characters/boulder/spawner.gd" type="Script" id=1]
 [ext_resource path="res://scenes/characters/boulder/boulder.tscn" type="PackedScene" id=2]
+[ext_resource path="res://addons/utils/startup_visibility.gd" type="Script" id=3]
 
 [sub_resource type="SphereMesh" id=3]
 radial_segments = 12
@@ -16,6 +17,11 @@ script = ExtResource( 1 )
 scene_boulder = ExtResource( 2 )
 
 [node name="Visual" type="Spatial" parent="."]
+
+[node name="StartupVisibility" type="Node" parent="Visual"]
+script = ExtResource( 3 )
+visible = false
+delete_in_game = true
 
 [node name="MeshInstance" type="MeshInstance" parent="Visual"]
 mesh = SubResource( 3 )
