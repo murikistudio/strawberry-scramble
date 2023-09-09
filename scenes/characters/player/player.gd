@@ -195,6 +195,16 @@ func _process_camera(_delta: float) -> void:
 	if not _camera_focus:
 		_camera_focus = _mesh_direction
 
+	var shake_obj = _camera.get_meta("shake", false)
+
+	if shake_obj:
+		var value := 0.2 / global_translation.distance_to(shake_obj.global_translation)
+		_camera.h_offset = rand_range(-value, value)
+		_camera.v_offset = rand_range(-value, value)
+	else:
+		_camera.h_offset = 0.0
+		_camera.v_offset = 0.0
+
 	_camera_axis.global_translation = _camera_axis.global_translation.linear_interpolate(
 		_camera_focus.global_translation, 0.1
 	)

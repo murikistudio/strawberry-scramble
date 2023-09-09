@@ -47,9 +47,7 @@ func _physics_process(delta: float) -> void:
 		_gravity_factor = 0.0
 
 		if not _animation_player.is_playing():
-			_animation_player.play("roll")
-			_audio_roll.play()
-			_audio_hit.play()
+			_roll_start()
 
 		var collider: Node = _ray_cast.get_collider()
 
@@ -64,13 +62,13 @@ func _physics_process(delta: float) -> void:
 			get_parent().add_child(water_splash)
 			water_splash.global_translation = global_translation
 			water_splash.global_translation.y += 0.5
-			_stop_sounds()
 			GameAudio.play_sfx_3d(water_splash, DatabaseAudio.SFX_WATER, 10.0, 0.6)
+			_roll_stop()
 			queue_free()
 
 	else:
 		if _animation_player.is_playing():
-			_stop_sounds()
+			_roll_stop()
 
 		_collider = null
 
@@ -82,7 +80,14 @@ func _physics_process(delta: float) -> void:
 
 
 # Private methods
-func _stop_sounds() -> void:
+func _roll_start() -> void:
+	_animation_player.play("roll")
+	_audio_roll.play()
+	_audio_hit.play()
+	get_viewport().get_camera().set_meta("shake", self)
+
+
+func _roll_stop() -> void:
+	get_viewport().get_camera().set_meta("shake", null)
 	_animation_player.stop(true)
 	_audio_roll.playing = false
-
