@@ -84,7 +84,7 @@ debug_shape_thickness = 5
 transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Area"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.77636e-15, 0.134719 )
+transform = Transform( 1.31949, 0, 0, 0, 1.31276, 0, 0, 0, 1, 0, 0, 0.132304 )
 shape = SubResource( 10 )
 
 [node name="DirectionalLight" type="DirectionalLight" parent="."]
