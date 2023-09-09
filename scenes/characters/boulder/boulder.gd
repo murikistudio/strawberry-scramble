@@ -2,7 +2,6 @@ extends Area
 
 
 # Variables
-export var started := false
 export(float, 0.0, 10.0, 0.01) var rotation_speed := 1.0
 export var direction := Vector3.ZERO
 export(PackedScene) var scene_water_splash: PackedScene
@@ -33,9 +32,6 @@ func _ready() -> void:
 
 
 func _physics_process(delta: float) -> void:
-	if not started:
-		return
-
 	var rot_factor := 120.0
 	var gravity_factor := 0.1
 
@@ -64,16 +60,17 @@ func _physics_process(delta: float) -> void:
 
 		if _collider.is_in_group("death") and _collider.is_in_group("water"):
 			var water_splash: Spatial = scene_water_splash.instance()
+			water_splash.time = 3.0
 			get_parent().add_child(water_splash)
 			water_splash.global_translation = global_translation
 			water_splash.global_translation.y += 0.5
-			GameAudio.play_sfx_3d(water_splash, DatabaseAudio.SFX_WATER, 10.0)
+			_stop_sounds()
+			GameAudio.play_sfx_3d(water_splash, DatabaseAudio.SFX_WATER, 10.0, 0.6)
 			queue_free()
 
 	else:
 		if _animation_player.is_playing():
-			_animation_player.stop(true)
-			_audio_roll.playing = false
+			_stop_sounds()
 
 		_collider = null
 
@@ -82,3 +79,10 @@ func _physics_process(delta: float) -> void:
 
 		if _gravity_factor >= 100.0:
 			queue_free()
+
+
+# Private methods
+func _stop_sounds() -> void:
+	_animation_player.stop(true)
+	_audio_roll.playing = false
+

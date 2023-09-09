@@ -13,6 +13,7 @@ signal level_dialog(character, dialog)
 signal level_time_updated
 signal level_lever_touched(lever)
 signal level_lever_pushed(target)
+signal level_boulder_triggered(spawner, mode)
 
 # Player signals
 signal player_died
