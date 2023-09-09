@@ -172,6 +172,7 @@ state_jump = NodePath("../Jump")
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
 [connection signal="options_exited" from="Gui/Options" to="Gui" method="_on_Options_options_exited"]
 [connection signal="area_entered" from="Area" to="." method="_on_Area_area_entered"]
+[connection signal="body_entered" from="Area" to="." method="_on_Area_body_entered"]
 [connection signal="state_entered" from="StateManager" to="." method="_on_StateManager_state_entered"]
 
 [editable path="Visual/Player"]

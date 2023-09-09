@@ -310,7 +310,7 @@ func _on_StateManager_state_entered(state: BaseState) -> void:
 		)
 
 
-# Tratar colisão do jogador com obstáculos do cenário e coletáveis.
+# Tratar colisão do jogador com inimigos e coletáveis.
 func _on_Area_area_entered(area: Area) -> void:
 	if dead:
 		return
@@ -347,6 +347,16 @@ func _on_Area_area_entered(area: Area) -> void:
 
 	if area.is_in_group("lever"):
 		GameEvents.emit_signal("level_lever_touched", area)
+
+
+# Tratar colisão do jogador com obstáculos do cenário.
+func _on_Area_body_entered(body: Spatial) -> void:
+	if dead:
+		return
+
+	if body.is_in_group("death"):
+		_process_death(body)
+		return
 
 
 # Avançar tempo no jogo.
