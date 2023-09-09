@@ -7,11 +7,11 @@ class_name DatabaseLevels
 const LEVELS := [
 	{
 		"name": "test",
-		"time": 36,
+		"time": 90,
 	},
 	{
 		"name": "level_01",
-		"time": 90,
+		"time": 36,
 	},
 ]
 
