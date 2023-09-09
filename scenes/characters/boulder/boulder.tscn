@@ -50,6 +50,7 @@ shape = SubResource( 1 )
 
 [node name="RayCast" type="RayCast" parent="."]
 enabled = true
+collision_mask = 3
 debug_shape_thickness = 5
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
