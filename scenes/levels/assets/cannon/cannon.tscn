@@ -1,0 +1,81 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://scenes/levels/assets/cannon/src/cannon.gltf" type="PackedScene" id=1]
+[ext_resource path="res://scenes/levels/assets/cannon/cannon.gd" type="Script" id=2]
+[ext_resource path="res://scenes/levels/assets/cannon/src/fire.tres" type="Material" id=3]
+[ext_resource path="res://sounds/sfx/cannon_wick.wav" type="AudioStream" id=4]
+[ext_resource path="res://sounds/sfx/cannon_shot.wav" type="AudioStream" id=5]
+
+[sub_resource type="BoxShape" id=1]
+
+[sub_resource type="ArrayMesh" id=3]
+resource_name = "fire_FireMesh001"
+surfaces/0 = {
+"aabb": AABB( -1, -1, 0, 2.00001, 2.00001, 1e-05 ),
+"array_data": PoolByteArray( 255, 255, 127, 63, 0, 0, 128, 63, 0, 0, 0, 128, 0, 0, 127, 63, 0, 60, 0, 0, 255, 255, 127, 191, 0, 0, 128, 191, 0, 0, 0, 128, 0, 0, 127, 63, 0, 0, 0, 60, 255, 255, 127, 63, 0, 0, 128, 191, 0, 0, 0, 128, 0, 0, 127, 63, 0, 60, 0, 60, 255, 255, 127, 191, 0, 0, 128, 63, 0, 0, 0, 128, 0, 0, 127, 63, 0, 0, 0, 0 ),
+"array_index_data": PoolByteArray( 0, 0, 2, 0, 1, 0, 0, 0, 1, 0, 3, 0 ),
+"blend_shape_data": [  ],
+"format": 2194711,
+"index_count": 6,
+"material": ExtResource( 3 ),
+"primitive": 4,
+"skeleton_aabb": [  ],
+"vertex_count": 4
+}
+
+[sub_resource type="Curve" id=4]
+_data = [ Vector2( 0, 1 ), 0.0, -0.0757438, 0, 0, Vector2( 1, 0 ), -3.0463, 0.0, 0, 0 ]
+
+[node name="Cannon" type="Area"]
+monitorable = false
+script = ExtResource( 2 )
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 0.21104, 0, 0, 0, 0.295284, 0.139077, 0, -0.24666, 0.166494, 0, 1.24114, -0.554374 )
+shape = SubResource( 1 )
+
+[node name="ParticlesWick" type="CPUParticles" parent="."]
+transform = Transform( 1, 0, 0, 0, 0.770658, -0.637249, 0, 0.637249, 0.770658, 0, 0.924854, 0.344215 )
+emitting = false
+amount = 16
+lifetime = 0.25
+mesh = SubResource( 3 )
+direction = Vector3( 0, 1, 0 )
+initial_velocity = 4.0
+initial_velocity_random = 0.4
+scale_amount = 0.04
+scale_amount_curve = SubResource( 4 )
+
+[node name="ParticlesShot" type="CPUParticles" parent="."]
+transform = Transform( 1, 0, 0, 0, 0.760429, 0.649421, 0, -0.649421, 0.760429, 0, 1.52133, -0.783067 )
+emitting = false
+amount = 64
+lifetime = 0.5
+explosiveness = 1.0
+mesh = SubResource( 3 )
+emission_shape = 1
+emission_sphere_radius = 0.2
+direction = Vector3( 0, 1, 0 )
+spread = 30.0
+gravity = Vector3( 0, 0, 0 )
+initial_velocity = 6.0
+initial_velocity_random = 0.5
+scale_amount = 0.06
+scale_amount_curve = SubResource( 4 )
+
+[node name="AudioWick" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource( 4 )
+unit_size = 2.0
+bus = "SFX"
+
+[node name="AudioShot" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource( 5 )
+unit_size = 5.0
+bus = "SFX"
+
+[node name="Visual" parent="." instance=ExtResource( 1 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0 )
+
+[connection signal="body_entered" from="." to="." method="_on_Cannon_body_entered"]
+
+[editable path="Visual"]

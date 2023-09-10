@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://addons/utils/startup_visibility.gd" type="Script" id=1]
+
+[sub_resource type="CapsuleMesh" id=1]
+radius = 0.5
+mid_height = 1.5
+radial_segments = 8
+rings = 2
+
+[sub_resource type="SpatialMaterial" id=2]
+render_priority = 1
+flags_transparent = true
+albedo_color = Color( 0, 0, 0, 0.501961 )
+
+[node name="CannonTarget" type="Spatial"]
+
+[node name="Visual" type="Spatial" parent="."]
+
+[node name="StartupVisibility" type="Node" parent="Visual"]
+script = ExtResource( 1 )
+visible = false
+delete_in_game = true
+
+[node name="MeshInstance" type="MeshInstance" parent="Visual"]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 1.25235, -5.47418e-08 )
+mesh = SubResource( 1 )
+skeleton = NodePath("../..")
+material/0 = SubResource( 2 )

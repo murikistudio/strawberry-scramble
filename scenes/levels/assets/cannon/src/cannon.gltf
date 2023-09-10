@@ -1,0 +1,200 @@
+{
+    "asset" : {
+        "version" : "2.0",
+        "generator" : "Khronos glTF Blender I/O v1.2.20"
+    },
+    "scene" : 0,
+    "scenes" : [
+        {
+            "nodes" : [
+                1
+            ],
+            "name" : "Scene"
+        }
+    ],
+    "nodes" : [
+        {
+            "name" : "CannonCollider -colonly",
+            "mesh" : 0,
+            "scale" : [
+                0.681480884552002,
+                0.681480884552002,
+                0.681480884552002
+            ]
+        },
+        {
+            "children" : [
+                0
+            ],
+            "name" : "Cannon",
+            "mesh" : 1
+        }
+    ],
+    "materials" : [
+        {
+            "pbrMetallicRoughness" : {
+                "baseColorTexture" : {
+                    "index" : 0,
+                    "texCoord" : 0
+                }
+            },
+            "name" : "cannon"
+        }
+    ],
+    "meshes" : [
+        {
+            "name" : "CannonCollider.001",
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "POSITION" : 0,
+                        "NORMAL" : 1
+                    },
+                    "indices" : 2
+                }
+            ]
+        },
+        {
+            "name" : "Cannon.001",
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "POSITION" : 3,
+                        "TEXCOORD_0" : 4,
+                        "NORMAL" : 5
+                    },
+                    "indices" : 6,
+                    "material" : 0
+                }
+            ]
+        }
+    ],
+    "textures" : [
+        {
+            "sampler" : 0,
+            "source" : 0
+        }
+    ],
+    "images" : [
+        {
+            "uri" : "cannon.png",
+            "name" : "cannon",
+            "mimeType" : "image/png"
+        }
+    ],
+    "accessors" : [
+        {
+            "bufferView" : 0,
+            "type" : "VEC3",
+            "min" : [
+                -0.960526704788208,
+                0.0018650293350219727,
+                -1.4829766750335693
+            ],
+            "count" : 48,
+            "max" : [
+                1.0755618810653687,
+                2.168598175048828,
+                1.2233399152755737
+            ],
+            "componentType" : 5126
+        },
+        {
+            "bufferView" : 1,
+            "type" : "VEC3",
+            "componentType" : 5126,
+            "count" : 48
+        },
+        {
+            "bufferView" : 2,
+            "type" : "SCALAR",
+            "componentType" : 5123,
+            "count" : 72
+        },
+        {
+            "bufferView" : 3,
+            "type" : "VEC3",
+            "min" : [
+                -0.6470985412597656,
+                -0.011232794262468815,
+                -1.0335040092468262
+            ],
+            "count" : 357,
+            "max" : [
+                0.7820401191711426,
+                1.740187406539917,
+                1.06088125705719
+            ],
+            "componentType" : 5126
+        },
+        {
+            "bufferView" : 4,
+            "type" : "VEC2",
+            "componentType" : 5126,
+            "count" : 357
+        },
+        {
+            "bufferView" : 5,
+            "type" : "VEC3",
+            "componentType" : 5126,
+            "count" : 357
+        },
+        {
+            "bufferView" : 6,
+            "type" : "SCALAR",
+            "componentType" : 5123,
+            "count" : 1248
+        }
+    ],
+    "bufferViews" : [
+        {
+            "buffer" : 0,
+            "byteLength" : 576,
+            "byteOffset" : 0
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 576,
+            "byteOffset" : 576
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 144,
+            "byteOffset" : 1152
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 4284,
+            "byteOffset" : 1296
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 2856,
+            "byteOffset" : 5580
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 4284,
+            "byteOffset" : 8436
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 2496,
+            "byteOffset" : 12720
+        }
+    ],
+    "samplers" : [
+        {
+            "wrapS" : 10497,
+            "minFilter" : 9986,
+            "magFilter" : 9729,
+            "wrapT" : 10497
+        }
+    ],
+    "buffers" : [
+        {
+            "byteLength" : 15216,
+            "uri" : "cannon.bin"
+        }
+    ]
+}

@@ -1,0 +1,139 @@
+{
+    "asset" : {
+        "generator" : "Khronos glTF Blender I/O v1.2.20",
+        "version" : "2.0"
+    },
+    "extensionsUsed" : [
+        "KHR_materials_unlit"
+    ],
+    "scene" : 0,
+    "scenes" : [
+        {
+            "name" : "Scene",
+            "nodes" : [
+                0
+            ]
+        }
+    ],
+    "nodes" : [
+        {
+            "name" : "FireMesh",
+            "mesh" : 0
+        }
+    ],
+    "materials" : [
+        {
+            "name" : "fire",
+            "extensions" : {
+                "KHR_materials_unlit" : {}
+            },
+            "pbrMetallicRoughness" : {
+                "baseColorTexture" : {
+                    "texCoord" : 0,
+                    "index" : 0
+                }
+            }
+        }
+    ],
+    "meshes" : [
+        {
+            "name" : "FireMesh.001",
+            "primitives" : [
+                {
+                    "indices" : 3,
+                    "attributes" : {
+                        "TEXCOORD_0" : 0,
+                        "NORMAL" : 1,
+                        "POSITION" : 2
+                    },
+                    "material" : 0
+                }
+            ]
+        }
+    ],
+    "textures" : [
+        {
+            "source" : 0,
+            "sampler" : 0
+        }
+    ],
+    "images" : [
+        {
+            "name" : "fire.png",
+            "mimeType" : "image/png",
+            "uri" : "fire.png"
+        }
+    ],
+    "accessors" : [
+        {
+            "bufferView" : 0,
+            "componentType" : 5126,
+            "type" : "VEC2",
+            "count" : 4
+        },
+        {
+            "bufferView" : 1,
+            "componentType" : 5126,
+            "type" : "VEC3",
+            "count" : 4
+        },
+        {
+            "max" : [
+                0.9999999403953552,
+                1,
+                0
+            ],
+            "count" : 4,
+            "bufferView" : 2,
+            "min" : [
+                -0.9999999403953552,
+                -1,
+                0
+            ],
+            "componentType" : 5126,
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 3,
+            "componentType" : 5123,
+            "type" : "SCALAR",
+            "count" : 6
+        }
+    ],
+    "bufferViews" : [
+        {
+            "buffer" : 0,
+            "byteLength" : 32,
+            "byteOffset" : 0
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 48,
+            "byteOffset" : 32
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 48,
+            "byteOffset" : 80
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 12,
+            "byteOffset" : 128
+        }
+    ],
+    "samplers" : [
+        {
+            "magFilter" : 9729,
+            "wrapS" : 10497,
+            "minFilter" : 9986,
+            "wrapT" : 10497
+        }
+    ],
+    "buffers" : [
+        {
+            "uri" : "fire.bin",
+            "byteLength" : 140
+        }
+    ]
+}

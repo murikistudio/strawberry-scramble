@@ -34,6 +34,7 @@ var animation := {
 
 onready var _state_manager: BaseStateManager = find_node("StateManager")
 onready var _state_stop: BaseState = _state_manager.get_node("Stop")
+onready var _state_idle: BaseState = _state_manager.get_node("Idle")
 onready var _visual: Spatial = find_node("Visual")
 onready var _camera: Camera = find_node("Camera")
 onready var _camera_axis: Position3D = find_node("CameraAxis")
@@ -67,6 +68,7 @@ func _ready() -> void:
 	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
 	GameEvents.emit_signal("player_emitted", self)
 	GameEvents.connect("player_request_camera_focus", self, "_on_player_request_camera_focus")
+	GameEvents.connect("level_cannon_entered", self, "_on_level_cannon_entered")
 
 
 func _physics_process(delta: float) -> void:
@@ -386,3 +388,13 @@ func _on_player_request_camera_focus(target: Spatial) -> void:
 
 	_state_manager.transition_to(_state_stop)
 	_camera_focus = target
+
+
+# Tratar colisão do jogador com o canhão.
+func _on_level_cannon_entered(target: Spatial) -> void:
+	_state_manager.transition_to(_state_stop)
+	_visual.visible = false
+	yield(get_tree().create_timer(3.0, false), "timeout")
+	global_translation = target.global_translation + Vector3(0, 5, 0)
+	_visual.visible = true
+	_state_manager.transition_to(_state_idle)
