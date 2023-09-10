@@ -18,7 +18,7 @@ func _ready() -> void:
 func _process(_delta: float) -> void:
 	if not _touched and not monitorable:
 		_touched = true
-		GameAudio.play_sfx(DatabaseAudio.SFX_COLLECT, -5.0)
+		GameAudio.play_sfx(DatabaseAudio.SFX_COLLECT, -10.0)
 		_animation_player.play("collected", -1, 2.0)
 
 
