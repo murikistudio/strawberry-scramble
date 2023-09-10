@@ -16,7 +16,7 @@ func _ready() -> void:
 func _add_level_cards() -> void:
 	var first_button_focused := false
 
-	for level_def in DatabaseScenes.get_levels():
+	for level_def in DatabaseLevels.get_levels():
 		var level_card: Control = scene_level_card.instance()
 		level_card.level_def = level_def
 

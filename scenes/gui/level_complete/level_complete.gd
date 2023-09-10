@@ -83,7 +83,7 @@ func _on_ButtonQuit_pressed() -> void:
 func _on_ButtonNext_pressed() -> void:
 	var has_next := false
 
-	for level_def in DatabaseScenes.get_levels():
+	for level_def in DatabaseLevels.get_levels():
 		if level_def["name"] == GameState.current_level:
 			has_next = true
 			continue
