@@ -333,7 +333,7 @@ func _on_Area_area_entered(area: Area) -> void:
 
 	if area.is_in_group("collectable"):
 		GameState.add_item_collected()
-		area.monitorable = false
+		area.set_deferred("monitorable", false)
 		return
 
 	if area.is_in_group("checkpoint"):
@@ -344,7 +344,7 @@ func _on_Area_area_entered(area: Area) -> void:
 	if area.is_in_group("house"):
 		if GameState.current_trophy:
 			GameEvents.emit_signal("level_dialog", "man", "complete")
-			area.monitorable = false
+			area.set_deferred("monitorable", false)
 			GameState.completed = true
 			_state_manager.transition_to(_state_stop)
 			yield(get_tree().create_timer(2.0, false), "timeout")
