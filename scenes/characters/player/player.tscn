@@ -43,6 +43,7 @@ emission_on_uv2 = false
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.65, 0 )
 collision_layer = 2
 collision_mask = 5
+collision/safe_margin = 0.01
 script = ExtResource( 1 )
 move_speed = 4.0
 intertia_factor = 0.18

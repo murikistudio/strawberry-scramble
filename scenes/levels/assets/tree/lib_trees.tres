@@ -1,14 +1,14 @@
 [gd_resource type="MeshLibrary" load_steps=25 format=2]
 
-[ext_resource path="res://scenes/levels/assets/tree/src/tree_leaves.tres" type="Material" id=1]
-[ext_resource path="res://scenes/levels/assets/tree/src/tree_1_preview.png" type="Texture" id=2]
-[ext_resource path="res://scenes/levels/assets/tree/src/tree_trunk.tres" type="Material" id=3]
-[ext_resource path="res://scenes/levels/assets/tree/src/tree_2_preview.png" type="Texture" id=4]
+[ext_resource path="res://scenes/levels/assets/tree/src/bush_1_preview.png" type="Texture" id=1]
+[ext_resource path="res://scenes/levels/assets/tree/src/tree_6_preview.png" type="Texture" id=2]
+[ext_resource path="res://scenes/levels/assets/tree/src/tree_leaves.tres" type="Material" id=3]
+[ext_resource path="res://scenes/levels/assets/tree/src/tree_trunk.tres" type="Material" id=4]
 [ext_resource path="res://scenes/levels/assets/tree/src/tree_3_preview.png" type="Texture" id=5]
-[ext_resource path="res://scenes/levels/assets/tree/src/tree_4_preview.png" type="Texture" id=6]
-[ext_resource path="res://scenes/levels/assets/tree/src/bush_1_preview.png" type="Texture" id=7]
-[ext_resource path="res://scenes/levels/assets/tree/src/tree_6_preview.png" type="Texture" id=8]
-[ext_resource path="res://scenes/levels/assets/tree/src/tree_5_preview.png" type="Texture" id=9]
+[ext_resource path="res://scenes/levels/assets/tree/src/tree_5_preview.png" type="Texture" id=6]
+[ext_resource path="res://scenes/levels/assets/tree/src/tree_4_preview.png" type="Texture" id=7]
+[ext_resource path="res://scenes/levels/assets/tree/src/tree_2_preview.png" type="Texture" id=8]
+[ext_resource path="res://scenes/levels/assets/tree/src/tree_1_preview.png" type="Texture" id=9]
 [ext_resource path="res://scenes/levels/assets/tree/src/bush_2_preview.png" type="Texture" id=10]
 
 [sub_resource type="ArrayMesh" id=1]
@@ -20,7 +20,7 @@ surfaces/0 = {
 "blend_shape_data": [  ],
 "format": 2194711,
 "index_count": 2061,
-"material": ExtResource( 3 ),
+"material": ExtResource( 4 ),
 "primitive": 4,
 "skeleton_aabb": [  ],
 "vertex_count": 480
@@ -32,7 +32,7 @@ surfaces/1 = {
 "blend_shape_data": [  ],
 "format": 2194711,
 "index_count": 960,
-"material": ExtResource( 1 ),
+"material": ExtResource( 3 ),
 "primitive": 4,
 "skeleton_aabb": [  ],
 "vertex_count": 220
@@ -50,7 +50,7 @@ surfaces/0 = {
 "blend_shape_data": [  ],
 "format": 2194711,
 "index_count": 681,
-"material": ExtResource( 3 ),
+"material": ExtResource( 4 ),
 "primitive": 4,
 "skeleton_aabb": [  ],
 "vertex_count": 201
@@ -62,7 +62,7 @@ surfaces/1 = {
 "blend_shape_data": [  ],
 "format": 2194711,
 "index_count": 1200,
-"material": ExtResource( 1 ),
+"material": ExtResource( 3 ),
 "primitive": 4,
 "skeleton_aabb": [  ],
 "vertex_count": 275
@@ -80,14 +80,14 @@ surfaces/0 = {
 "blend_shape_data": [  ],
 "format": 2194711,
 "index_count": 351,
-"material": ExtResource( 3 ),
+"material": ExtResource( 4 ),
 "primitive": 4,
 "skeleton_aabb": [  ],
 "vertex_count": 106
 }
 
 [sub_resource type="ConcavePolygonShape" id=6]
-data = PoolVector3Array( 0.7171, 0, 0.991, 0.7171, 0, -0.5127, -0.5102, 0, -0.5127, 0.7171, 0, 0.991, -0.5102, 0, -0.5127, -0.5102, 0, 0.991, 0.4006, 0.891, -0.1966, 0.7171, 0, -0.5127, 0.7171, 0, 0.991, 0.4006, 0.891, -0.1966, 0.7171, 0, 0.991, 0.4006, 0.891, 0.629, -0.425, 0.891, -0.1966, -0.5102, 0, -0.5127, 0.7171, 0, -0.5127, -0.425, 0.891, -0.1966, 0.7171, 0, -0.5127, 0.4006, 0.891, -0.1966, 0.4006, 0.891, 0.629, 0.7171, 0, 0.991, -0.5102, 0, 0.991, 0.4006, 0.891, 0.629, -0.5102, 0, 0.991, -0.425, 0.891, 0.629, -0.425, 0.891, 0.629, -0.425, 0.891, -0.1966, 0.4006, 0.891, -0.1966, -0.425, 0.891, 0.629, 0.4006, 0.891, -0.1966, 0.4006, 0.891, 0.629, -0.425, 0.891, 0.629, -0.5102, 0, 0.991, -0.5102, 0, -0.5127, -0.425, 0.891, 0.629, -0.5102, 0, -0.5127, -0.425, 0.891, -0.1966 )
+data = PoolVector3Array( 0.347, 0, 0.7205, 0.347, 0, -0.1583, -0.422, 0, -0.1583, 0.347, 0, 0.7205, -0.422, 0, -0.1583, -0.422, 0, 0.7205, 0.3242, 0.9107, -0.0878, 0.347, 0, -0.1583, 0.347, 0, 0.7205, 0.3242, 0.9107, -0.0878, 0.347, 0, 0.7205, 0.3242, 0.9107, 0.6284, -0.3928, 0.9107, -0.0878, -0.422, 0, -0.1583, 0.347, 0, -0.1583, -0.3928, 0.9107, -0.0878, 0.347, 0, -0.1583, 0.3242, 0.9107, -0.0878, 0.3242, 0.9107, 0.6284, 0.347, 0, 0.7205, -0.422, 0, 0.7205, 0.3242, 0.9107, 0.6284, -0.422, 0, 0.7205, -0.3928, 0.9107, 0.6284, -0.3928, 0.9107, 0.6284, -0.3928, 0.9107, -0.0878, 0.3242, 0.9107, -0.0878, -0.3928, 0.9107, 0.6284, 0.3242, 0.9107, -0.0878, 0.3242, 0.9107, 0.6284, -0.3928, 0.9107, 0.6284, -0.422, 0, 0.7205, -0.422, 0, -0.1583, -0.3928, 0.9107, 0.6284, -0.422, 0, -0.1583, -0.3928, 0.9107, -0.0878 )
 
 [sub_resource type="ArrayMesh" id=7]
 resource_name = "tree_4_Tree1001"
@@ -98,7 +98,7 @@ surfaces/0 = {
 "blend_shape_data": [  ],
 "format": 2194711,
 "index_count": 417,
-"material": ExtResource( 3 ),
+"material": ExtResource( 4 ),
 "primitive": 4,
 "skeleton_aabb": [  ],
 "vertex_count": 163
@@ -116,7 +116,7 @@ surfaces/0 = {
 "blend_shape_data": [  ],
 "format": 2194711,
 "index_count": 2061,
-"material": ExtResource( 3 ),
+"material": ExtResource( 4 ),
 "primitive": 4,
 "skeleton_aabb": [  ],
 "vertex_count": 480
@@ -134,7 +134,7 @@ surfaces/0 = {
 "blend_shape_data": [  ],
 "format": 2194711,
 "index_count": 681,
-"material": ExtResource( 3 ),
+"material": ExtResource( 4 ),
 "primitive": 4,
 "skeleton_aabb": [  ],
 "vertex_count": 201
@@ -152,7 +152,7 @@ surfaces/0 = {
 "blend_shape_data": [  ],
 "format": 2194711,
 "index_count": 225,
-"material": ExtResource( 1 ),
+"material": ExtResource( 3 ),
 "primitive": 4,
 "skeleton_aabb": [  ],
 "vertex_count": 49
@@ -167,7 +167,7 @@ surfaces/0 = {
 "blend_shape_data": [  ],
 "format": 2194711,
 "index_count": 675,
-"material": ExtResource( 1 ),
+"material": ExtResource( 3 ),
 "primitive": 4,
 "skeleton_aabb": [  ],
 "vertex_count": 147
@@ -179,13 +179,13 @@ item/0/mesh = SubResource( 1 )
 item/0/mesh_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 item/0/shapes = [ SubResource( 2 ), Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 ) ]
 item/0/navmesh_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
-item/0/preview = ExtResource( 2 )
+item/0/preview = ExtResource( 9 )
 item/1/name = "Tree2"
 item/1/mesh = SubResource( 3 )
 item/1/mesh_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 item/1/shapes = [ SubResource( 4 ), Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 ) ]
 item/1/navmesh_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
-item/1/preview = ExtResource( 4 )
+item/1/preview = ExtResource( 8 )
 item/2/name = "Tree3"
 item/2/mesh = SubResource( 5 )
 item/2/mesh_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
@@ -197,25 +197,25 @@ item/3/mesh = SubResource( 7 )
 item/3/mesh_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 item/3/shapes = [ SubResource( 8 ), Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 ) ]
 item/3/navmesh_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
-item/3/preview = ExtResource( 6 )
+item/3/preview = ExtResource( 7 )
 item/4/name = "Tree5"
 item/4/mesh = SubResource( 9 )
 item/4/mesh_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 item/4/shapes = [ SubResource( 10 ), Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 ) ]
 item/4/navmesh_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
-item/4/preview = ExtResource( 9 )
+item/4/preview = ExtResource( 6 )
 item/5/name = "Tree6"
 item/5/mesh = SubResource( 11 )
 item/5/mesh_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 item/5/shapes = [ SubResource( 12 ), Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 ) ]
 item/5/navmesh_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
-item/5/preview = ExtResource( 8 )
+item/5/preview = ExtResource( 2 )
 item/6/name = "Bush1"
 item/6/mesh = SubResource( 13 )
 item/6/mesh_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 item/6/shapes = [  ]
 item/6/navmesh_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
-item/6/preview = ExtResource( 7 )
+item/6/preview = ExtResource( 1 )
 item/7/name = "Bush2"
 item/7/mesh = SubResource( 14 )
 item/7/mesh_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
