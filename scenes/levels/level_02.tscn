@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://resources/level_env.tres" type="Environment" id=1]
 [ext_resource path="res://scenes/characters/player/player.tscn" type="PackedScene" id=2]
@@ -6,6 +6,8 @@
 [ext_resource path="res://scenes/levels/assets/grid_maps.tscn" type="PackedScene" id=4]
 [ext_resource path="res://scenes/levels/assets/strawberry/strawberry.tscn" type="PackedScene" id=5]
 [ext_resource path="res://scenes/levels/assets/dialog/dialog.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scenes/levels/assets/cannon/cannon.tscn" type="PackedScene" id=7]
+[ext_resource path="res://scenes/levels/assets/cannon/target.tscn" type="PackedScene" id=8]
 
 [node name="Level02" type="Spatial"]
 
@@ -36,11 +38,20 @@ character = "player"
 line = "level_02_2"
 
 [node name="Dialog3" parent="Dialogs" instance=ExtResource( 6 )]
-transform = Transform( 0.3, 0, 0, 0, 0.81, 0, 0, 0, 0.3, 13.4482, -3.96407, 16.5738 )
+transform = Transform( 0.3, 0, 0, 0, 0.81, 0, 0, 0, 0.3, 14.6713, -3.96407, 13.248 )
 at_start = false
 once_per_level = true
 character = "player"
 line = "level_02_3"
+
+[node name="Cannons" type="Spatial" parent="."]
+
+[node name="Cannon" parent="Cannons" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 13.3861, -4, 15.3858 )
+target = NodePath("../CannonTarget")
+
+[node name="CannonTarget" parent="Cannons" instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1.05, 2 )
 
 [node name="GridMaps" parent="." instance=ExtResource( 4 )]
 
@@ -73,11 +84,11 @@ __meta__ = {
 
 [node name="Trees" parent="GridMaps" index="3"]
 data = {
-"cells": PoolIntArray( 3, 0, 7, 65533, 0, 655367, -262129, 0, 7, 1, 1, 1441798, 65531, 2, 1048577, -262132, 2, 655363, 2, 3, 1048583, 4, 3, 1441792, 65533, 3, 655363, 65532, 4, 1441798, -327666, 13, 1441798, -327667, 15, 1441799, -327665, 16, 1441793, -327668, 17, 1048576, -262133, 65528, 1048583, -262132, 65529, 1048579, -262130, 65530, 6, -131070, 65530, 1048582, -131067, 65530, 655366, -65541, 65530, 1048576, -65535, 65531, 7, -262132, 65532, 655367, -65540, 65532, 1048577, -2, 65532, 655363, -262129, 65533, 1441794, -196600, 65533, 1441799, -131068, 65533, 1441799, -262133, 65534, 6, -131066, 65534, 655361 )
+"cells": PoolIntArray( 3, 0, 7, 65533, 0, 655367, -262129, 0, 7, 1, 1, 1441798, 65531, 2, 1048577, -262132, 2, 655363, 2, 3, 1048583, 4, 3, 1441792, 65533, 3, 655363, 65532, 4, 1441798, -327665, 16, 1441793, -327668, 17, 1048576, -262133, 65528, 1048583, -262132, 65529, 1048579, -262130, 65530, 6, -131070, 65530, 1048582, -131067, 65530, 655366, -65541, 65530, 1048576, -65535, 65531, 7, -262132, 65532, 655367, -65540, 65532, 1048577, -2, 65532, 655363, -262129, 65533, 1441794, -196600, 65533, 1441799, -131068, 65533, 1441799, -262133, 65534, 6, -131066, 65534, 655361 )
 }
 __meta__ = {
 "_editor_clip_": 0,
-"_editor_floor_": Vector3( 0, -2, 0 )
+"_editor_floor_": Vector3( 0, -5, 0 )
 }
 
 [node name="Rocks" parent="GridMaps" index="6"]
@@ -134,7 +145,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 13.0861, -4, 13.2858 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 14.9699, -4, 14.7101 )
 
 [node name="Strawberry17" parent="Strawberries" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 13.4843, -4, 16.5633 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 14.669, -4, 13.2074 )
 
 [node name="Strawberry3" parent="Strawberries" instance=ExtResource( 5 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.55891, -1, -2.75234 )
