@@ -4,6 +4,7 @@ extends Area
 # Variables
 export(NodePath) var target: NodePath
 var _target: Spatial
+var _enabled := true
 onready var _particles_wick: CPUParticles = find_node("ParticlesWick")
 onready var _particles_shot: CPUParticles = find_node("ParticlesShot")
 onready var _audio_wick: AudioStreamPlayer3D = find_node("AudioWick")
@@ -25,11 +26,11 @@ func _ready() -> void:
 
 # Event handlers
 func _on_Cannon_body_entered(body: Spatial) -> void:
-	if not _target or not body.is_in_group("player"):
+	if not _enabled or not _target or not body.is_in_group("player"):
 		return
 
 	GameEvents.emit_signal("level_cannon_entered", _target)
-	set_deferred("monitoring", false)
+	_enabled = false
 	_particles_wick.emitting = true
 	_audio_wick.play()
 	get_tree().create_timer(2.0, false).connect(
@@ -38,7 +39,7 @@ func _on_Cannon_body_entered(body: Spatial) -> void:
 
 
 func _on_Timer_timeout() -> void:
-	set_deferred("monitoring", true)
+	_enabled = true
 	_particles_wick.emitting = false
 	_audio_wick.stop()
 	_particles_shot.emitting = true
