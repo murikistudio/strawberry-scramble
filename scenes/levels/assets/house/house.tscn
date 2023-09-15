@@ -38,7 +38,7 @@ tracks/0/keys = {
 
 [node name="House" type="Area" groups=["ground", "house", "rock"]]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, -1.8 )
-monitoring = false
+monitorable = false
 script = ExtResource( 2 )
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
@@ -51,5 +51,7 @@ anims/door_open = SubResource( 2 )
 
 [node name="Visual" parent="." instance=ExtResource( 1 )]
 transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0 )
+
+[connection signal="body_entered" from="." to="." method="_on_House_body_entered"]
 
 [editable path="Visual"]

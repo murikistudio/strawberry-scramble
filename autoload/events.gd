@@ -18,6 +18,7 @@ signal level_cannon_entered(target)
 
 # Player signals
 signal player_died
+signal player_enabled(enable)
 signal player_item_available
 signal player_item_collected
 signal player_request_camera_focus(target)

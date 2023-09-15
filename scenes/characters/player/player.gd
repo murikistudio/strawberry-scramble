@@ -70,6 +70,7 @@ func _ready() -> void:
 	GameEvents.connect("player_request_camera_focus", self, "_on_player_request_camera_focus")
 	GameEvents.connect("level_cannon_entered", self, "_on_level_cannon_entered")
 	GameEvents.connect("level_checkpoint_touched", self, "_on_level_checkpoint_touched")
+	GameEvents.connect("player_enabled", self, "_on_player_enabled")
 
 
 func _physics_process(delta: float) -> void:
@@ -332,22 +333,6 @@ func _on_Area_area_entered(area: Area) -> void:
 		_process_death(area)
 		return
 
-	if area.is_in_group("house"):
-		if GameState.current_trophy:
-			GameEvents.emit_signal("level_dialog", "man", "complete")
-			area.set_deferred("monitorable", false)
-			GameState.completed = true
-			_state_manager.transition_to(_state_stop)
-			yield(get_tree().create_timer(2.0, false), "timeout")
-			GameState.add_score()
-			GameEvents.emit_signal("level_complete")
-			prints("Level complete!")
-		else:
-			GameEvents.emit_signal("level_dialog", "mom", "incomplete")
-			prints("Level incomplete...")
-
-		return
-
 	if area.is_in_group("lever"):
 		GameEvents.emit_signal("level_lever_touched", area)
 
@@ -368,6 +353,11 @@ func _on_Timer_timeout() -> void:
 		return
 
 	GameState.add_time_elapsed()
+
+
+# Habilita ou desabilita o controle do jogador.
+func _on_player_enabled(enabled: bool) -> void:
+	_state_manager.transition_to(_state_idle if enabled else _state_stop)
 
 
 # Alterar objeto de foco da câmera.
