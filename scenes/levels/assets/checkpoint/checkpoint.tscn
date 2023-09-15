@@ -39,7 +39,7 @@ tracks/0/keys = {
 
 [node name="Checkpoint" type="Area" groups=["checkpoint"]]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3, 0 )
-monitoring = false
+monitorable = false
 script = ExtResource( 2 )
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
@@ -55,5 +55,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.3, 0 )
 
 [node name="FlagOnMesh" parent="Visual" index="0"]
 visible = false
+
+[connection signal="body_entered" from="." to="." method="_on_Checkpoint_body_entered"]
 
 [editable path="Visual"]

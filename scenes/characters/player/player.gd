@@ -69,6 +69,7 @@ func _ready() -> void:
 	GameEvents.emit_signal("player_emitted", self)
 	GameEvents.connect("player_request_camera_focus", self, "_on_player_request_camera_focus")
 	GameEvents.connect("level_cannon_entered", self, "_on_level_cannon_entered")
+	GameEvents.connect("level_checkpoint_touched", self, "_on_level_checkpoint_touched")
 
 
 func _physics_process(delta: float) -> void:
@@ -331,11 +332,6 @@ func _on_Area_area_entered(area: Area) -> void:
 		_process_death(area)
 		return
 
-	if area.is_in_group("checkpoint"):
-		respawn_position = area.global_translation
-		GameEvents.emit_signal("level_checkpoint_touched", area)
-		return
-
 	if area.is_in_group("house"):
 		if GameState.current_trophy:
 			GameEvents.emit_signal("level_dialog", "man", "complete")
@@ -393,3 +389,8 @@ func _on_level_cannon_entered(target: Spatial) -> void:
 	global_translation = target.global_translation + Vector3(0, 5, 0)
 	_visual.visible = true
 	_state_manager.transition_to(_state_idle)
+
+
+# Definir posição de respawn a partir do checkpoint.
+func _on_level_checkpoint_touched(checkpoint: Spatial) -> void:
+	respawn_position = checkpoint.global_translation
