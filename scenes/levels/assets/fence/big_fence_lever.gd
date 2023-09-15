@@ -10,18 +10,16 @@ onready var _anim_player: AnimationPlayer = find_node("AnimationPlayer")
 # Built-in overrides
 func _ready() -> void:
 	_anim_player.play("RESET")
-	GameEvents.connect("level_lever_touched", self, "_on_level_lever_touched")
 
 
 # Event handlers
-func _on_level_lever_touched(lever: Node) -> void:
-	if _pushed or not target or lever != self:
+# Emite evento de alavanca puxada quando o jogador tocá-la.
+func _on_BigFenceLever_body_entered(body: Spatial) -> void:
+	if _pushed or not body.is_in_group("player"):
 		return
 
-	var target_node := get_node(target)
-
+	_pushed = true
 	_anim_player.play("push")
 	GameAudio.play_sfx(DatabaseAudio.SFX_LEVER)
-	_pushed = true
 	yield(get_tree().create_timer(1.0, false), "timeout")
-	GameEvents.emit_signal("level_lever_pushed", target_node)
+	GameEvents.emit_signal("level_lever_pushed", get_node(target))

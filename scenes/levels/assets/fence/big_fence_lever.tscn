@@ -36,7 +36,7 @@ tracks/0/keys = {
 }
 
 [node name="BigFenceLever" type="Area" groups=["lever"]]
-monitoring = false
+monitorable = false
 script = ExtResource( 2 )
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
@@ -51,5 +51,7 @@ anims/push = SubResource( 2 )
 
 [node name="BigFenceLever" parent="Visual/BigFenceLeverBase" index="0"]
 transform = Transform( 0.866025, -0.5, 0, 0.5, 0.866025, 0, 0, 0, 1, 0, 0, 0 )
+
+[connection signal="body_entered" from="." to="." method="_on_BigFenceLever_body_entered"]
 
 [editable path="Visual"]

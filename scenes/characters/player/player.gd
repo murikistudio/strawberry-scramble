@@ -333,9 +333,6 @@ func _on_Area_area_entered(area: Area) -> void:
 		_process_death(area)
 		return
 
-	if area.is_in_group("lever"):
-		GameEvents.emit_signal("level_lever_touched", area)
-
 
 # Tratar colisão do jogador com obstáculos do cenário.
 func _on_Area_body_entered(body: Spatial) -> void:
