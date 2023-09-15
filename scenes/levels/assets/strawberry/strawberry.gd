@@ -15,14 +15,17 @@ func _ready() -> void:
 	GameEvents.emit_signal("player_item_available")
 
 
-func _process(_delta: float) -> void:
-	if not _touched and not monitorable:
-		_touched = true
-		GameAudio.play_sfx(DatabaseAudio.SFX_COLLECT, -10.0)
-		_animation_player.play("collected", -1, 2.0)
-
-
 # Event handlers
+func _on_Strawberry_body_entered(body: Spatial) -> void:
+	if _touched or not body.is_in_group("player"):
+		return
+		
+	_touched = true
+	GameState.add_item_collected()
+	GameAudio.play_sfx(DatabaseAudio.SFX_COLLECT, -10.0)
+	_animation_player.play("collected", -1, 2.0)
+
+
 func _on_AnimationPlayer_animation_finished(anim_name: String) -> void:
 	if anim_name == "collected":
 		queue_free()

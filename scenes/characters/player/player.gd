@@ -331,11 +331,6 @@ func _on_Area_area_entered(area: Area) -> void:
 		_process_death(area)
 		return
 
-	if area.is_in_group("collectable"):
-		GameState.add_item_collected()
-		area.set_deferred("monitorable", false)
-		return
-
 	if area.is_in_group("checkpoint"):
 		respawn_position = area.global_translation
 		GameEvents.emit_signal("level_checkpoint_touched", area)

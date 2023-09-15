@@ -126,7 +126,7 @@ tracks/2/keys = {
 }
 
 [node name="Strawberry" type="Area" groups=["collectable", "strawberry"]]
-monitoring = false
+monitorable = false
 script = ExtResource( 2 )
 
 [node name="VisibilityEnabler" type="VisibilityEnabler" parent="."]
@@ -145,6 +145,7 @@ anims/RESET = SubResource( 2 )
 anims/collected = SubResource( 3 )
 anims/idle_loop = SubResource( 4 )
 
+[connection signal="body_entered" from="." to="." method="_on_Strawberry_body_entered"]
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]
 
 [editable path="Visual"]
