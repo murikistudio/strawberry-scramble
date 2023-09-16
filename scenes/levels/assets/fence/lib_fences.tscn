@@ -8,6 +8,7 @@
 [node name="LibFences" type="Spatial"]
 
 [node name="Fence" parent="." instance=ExtResource( 3 )]
+transform = Transform( 0.999848, 0, 0.0174524, 0, 1, 0, -0.0174524, 0, 0.999848, 0, 0, 0 )
 
 [node name="FenceCorner" parent="." instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0 )
