@@ -9,10 +9,10 @@
     "scene" : 0,
     "scenes" : [
         {
-            "name" : "Scene",
             "nodes" : [
                 1
-            ]
+            ],
+            "name" : "Scene"
         }
     ],
     "nodes" : [
@@ -21,25 +21,25 @@
             "mesh" : 0
         },
         {
-            "name" : "Tree5",
-            "mesh" : 1,
             "children" : [
                 0
-            ]
+            ],
+            "name" : "Tree5",
+            "mesh" : 1
         }
     ],
     "materials" : [
         {
-            "name" : "tree_trunk",
+            "pbrMetallicRoughness" : {
+                "baseColorTexture" : {
+                    "texCoord" : 0,
+                    "index" : 0
+                }
+            },
             "extensions" : {
                 "KHR_materials_unlit" : {}
             },
-            "pbrMetallicRoughness" : {
-                "baseColorTexture" : {
-                    "index" : 0,
-                    "texCoord" : 0
-                }
-            }
+            "name" : "tree_trunk"
         }
     ],
     "meshes" : [
@@ -47,11 +47,11 @@
             "name" : "Tree5Collider.001",
             "primitives" : [
                 {
-                    "indices" : 2,
                     "attributes" : {
-                        "POSITION" : 0,
-                        "NORMAL" : 1
-                    }
+                        "NORMAL" : 0,
+                        "POSITION" : 1
+                    },
+                    "indices" : 2
                 }
             ]
         },
@@ -59,13 +59,13 @@
             "name" : "Tree5.001",
             "primitives" : [
                 {
-                    "material" : 0,
-                    "indices" : 6,
                     "attributes" : {
-                        "POSITION" : 3,
-                        "TEXCOORD_0" : 4,
-                        "NORMAL" : 5
-                    }
+                        "NORMAL" : 3,
+                        "POSITION" : 4,
+                        "TEXCOORD_0" : 5
+                    },
+                    "indices" : 6,
+                    "material" : 0
                 }
             ]
         }
@@ -78,124 +78,124 @@
     ],
     "images" : [
         {
-            "uri" : "tree_trunk.png",
+            "mimeType" : "image/png",
             "name" : "tree_trunk.png",
-            "mimeType" : "image/png"
+            "uri" : "tree_trunk.png"
         }
     ],
     "accessors" : [
         {
-            "componentType" : 5126,
+            "type" : "VEC3",
             "bufferView" : 0,
+            "count" : 24,
+            "componentType" : 5126
+        },
+        {
+            "bufferView" : 1,
+            "count" : 24,
             "min" : [
                 -0.3574238419532776,
                 0,
                 -0.35918065905570984
             ],
-            "count" : 24,
+            "type" : "VEC3",
             "max" : [
                 0.5024468898773193,
                 3.123422145843506,
                 0.694324254989624
             ],
-            "type" : "VEC3"
+            "componentType" : 5126
         },
         {
-            "componentType" : 5126,
-            "bufferView" : 1,
-            "type" : "VEC3",
-            "count" : 24
-        },
-        {
-            "componentType" : 5123,
-            "bufferView" : 2,
             "type" : "SCALAR",
-            "count" : 36
+            "bufferView" : 2,
+            "count" : 36,
+            "componentType" : 5123
         },
         {
-            "componentType" : 5126,
+            "type" : "VEC3",
             "bufferView" : 3,
+            "count" : 492,
+            "componentType" : 5126
+        },
+        {
+            "bufferView" : 4,
+            "count" : 492,
             "min" : [
                 -1.127426266670227,
-                -0.08062150329351425,
+                -0.026738928630948067,
                 -0.8481650948524475
             ],
-            "count" : 480,
+            "type" : "VEC3",
             "max" : [
                 0.8375093340873718,
                 2.5565528869628906,
                 1.2882170677185059
             ],
-            "type" : "VEC3"
+            "componentType" : 5126
         },
         {
-            "componentType" : 5126,
-            "bufferView" : 4,
             "type" : "VEC2",
-            "count" : 480
-        },
-        {
-            "componentType" : 5126,
             "bufferView" : 5,
-            "type" : "VEC3",
-            "count" : 480
+            "count" : 492,
+            "componentType" : 5126
         },
         {
-            "componentType" : 5123,
-            "bufferView" : 6,
             "type" : "SCALAR",
-            "count" : 2061
+            "bufferView" : 6,
+            "count" : 2079,
+            "componentType" : 5123
         }
     ],
     "bufferViews" : [
         {
-            "buffer" : 0,
+            "byteLength" : 288,
             "byteOffset" : 0,
-            "byteLength" : 288
+            "buffer" : 0
         },
         {
-            "buffer" : 0,
+            "byteLength" : 288,
             "byteOffset" : 288,
-            "byteLength" : 288
+            "buffer" : 0
         },
         {
-            "buffer" : 0,
+            "byteLength" : 72,
             "byteOffset" : 576,
-            "byteLength" : 72
+            "buffer" : 0
         },
         {
-            "buffer" : 0,
+            "byteLength" : 5904,
             "byteOffset" : 648,
-            "byteLength" : 5760
+            "buffer" : 0
         },
         {
-            "buffer" : 0,
-            "byteOffset" : 6408,
-            "byteLength" : 3840
+            "byteLength" : 5904,
+            "byteOffset" : 6552,
+            "buffer" : 0
         },
         {
-            "buffer" : 0,
-            "byteOffset" : 10248,
-            "byteLength" : 5760
+            "byteLength" : 3936,
+            "byteOffset" : 12456,
+            "buffer" : 0
         },
         {
-            "buffer" : 0,
-            "byteOffset" : 16008,
-            "byteLength" : 4122
+            "byteLength" : 4158,
+            "byteOffset" : 16392,
+            "buffer" : 0
         }
     ],
     "samplers" : [
         {
-            "magFilter" : 9729,
             "minFilter" : 9986,
-            "wrapS" : 10497,
-            "wrapT" : 10497
+            "magFilter" : 9729,
+            "wrapT" : 10497,
+            "wrapS" : 10497
         }
     ],
     "buffers" : [
         {
-            "uri" : "tree_5.bin",
-            "byteLength" : 20132
+            "byteLength" : 20552,
+            "uri" : "tree_5.bin"
         }
     ]
 }
