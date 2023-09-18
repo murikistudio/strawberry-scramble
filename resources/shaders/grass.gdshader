@@ -2,7 +2,7 @@ shader_type spatial;
 render_mode shadows_disabled, specular_disabled;
 
 uniform float offset: hint_range(0.0, 1.0, 0.1) = 0.2;
-uniform float speed: hint_range(0.0, 1.0, 0.1) = 1.0;
+uniform float speed: hint_range(0.0, 10.0, 0.1) = 1.0;
 uniform sampler2D texture_: hint_albedo;
 
 void vertex() {
