@@ -34,6 +34,7 @@ __meta__ = {
 
 [node name="Grass" type="GridMap" parent="."]
 mesh_library = ExtResource( 10 )
+cell_size = Vector3( 2, 1, 2 )
 cell_center_y = false
 __meta__ = {
 "_editor_clip_": 0

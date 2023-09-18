@@ -1,7 +1,7 @@
 {
     "asset" : {
-        "generator" : "Khronos glTF Blender I/O v1.2.20",
-        "version" : "2.0"
+        "version" : "2.0",
+        "generator" : "Khronos glTF Blender I/O v1.2.20"
     },
     "extensionsUsed" : [
         "KHR_materials_unlit"
@@ -17,8 +17,8 @@
     ],
     "nodes" : [
         {
-            "mesh" : 0,
-            "name" : "Grass2Mesh"
+            "name" : "Grass2Mesh",
+            "mesh" : 0
         }
     ],
     "materials" : [
@@ -26,13 +26,13 @@
             "extensions" : {
                 "KHR_materials_unlit" : {}
             },
-            "name" : "grass",
             "pbrMetallicRoughness" : {
                 "baseColorTexture" : {
                     "index" : 0,
                     "texCoord" : 0
                 }
-            }
+            },
+            "name" : "grass"
         }
     ],
     "meshes" : [
@@ -40,94 +40,94 @@
             "name" : "Grass2Mesh.001",
             "primitives" : [
                 {
+                    "material" : 0,
                     "indices" : 3,
                     "attributes" : {
                         "NORMAL" : 0,
                         "TEXCOORD_0" : 1,
                         "POSITION" : 2
-                    },
-                    "material" : 0
+                    }
                 }
             ]
         }
     ],
     "textures" : [
         {
-            "sampler" : 0,
-            "source" : 0
+            "source" : 0,
+            "sampler" : 0
         }
     ],
     "images" : [
         {
-            "mimeType" : "image/png",
             "name" : "grass.png",
-            "uri" : "grass.png"
+            "uri" : "grass.png",
+            "mimeType" : "image/png"
         }
     ],
     "accessors" : [
         {
-            "componentType" : 5126,
-            "bufferView" : 0,
-            "type" : "VEC3",
-            "count" : 312
-        },
-        {
-            "componentType" : 5126,
-            "bufferView" : 1,
-            "type" : "VEC2",
-            "count" : 312
-        },
-        {
-            "bufferView" : 2,
-            "type" : "VEC3",
-            "componentType" : 5126,
             "count" : 312,
+            "type" : "VEC3",
+            "componentType" : 5126,
+            "bufferView" : 0
+        },
+        {
+            "count" : 312,
+            "type" : "VEC2",
+            "componentType" : 5126,
+            "bufferView" : 1
+        },
+        {
             "max" : [
-                1.0659852027893066,
-                0.412895143032074,
-                0.8336698412895203
+                0.8325732946395874,
+                0.38065388798713684,
+                0.7685720324516296
             ],
             "min" : [
-                -0.9658148884773254,
-                -0.048060208559036255,
-                -0.9275422692298889
-            ]
+                -0.8655706644058228,
+                -0.04430738836526871,
+                -0.8008701801300049
+            ],
+            "bufferView" : 2,
+            "count" : 312,
+            "type" : "VEC3",
+            "componentType" : 5126
         },
         {
-            "componentType" : 5123,
-            "bufferView" : 3,
+            "count" : 468,
             "type" : "SCALAR",
-            "count" : 468
+            "componentType" : 5123,
+            "bufferView" : 3
         }
     ],
     "bufferViews" : [
         {
+            "byteLength" : 3744,
             "byteOffset" : 0,
-            "buffer" : 0,
-            "byteLength" : 3744
+            "buffer" : 0
         },
         {
+            "byteLength" : 2496,
             "byteOffset" : 3744,
-            "buffer" : 0,
-            "byteLength" : 2496
+            "buffer" : 0
         },
         {
+            "byteLength" : 3744,
             "byteOffset" : 6240,
-            "buffer" : 0,
-            "byteLength" : 3744
+            "buffer" : 0
         },
         {
+            "byteLength" : 936,
             "byteOffset" : 9984,
-            "buffer" : 0,
-            "byteLength" : 936
+            "buffer" : 0
         }
     ],
     "samplers" : [
         {
-            "wrapS" : 10497,
-            "minFilter" : 9986,
             "magFilter" : 9729,
-            "wrapT" : 10497
+            "wrapT" : 10497,
+            "minFilter" : 9986,
+            "wrapS" : 10497
         }
     ],
     "buffers" : [
