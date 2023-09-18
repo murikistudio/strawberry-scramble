@@ -173,7 +173,7 @@ func _process_visual(_delta: float) -> void:
 
 # Processa a gravidade e movimentação do jogador seguindo os eixos do controle.
 func _process_move(_delta: float) -> void:
-	if _state_manager.current_state == _state_stop:
+	if _state_manager.current_state == _state_stop and not GameState.completed:
 		return
 
 	var move_vec: Vector2 = move_weight * move_speed * move_speed_multiplier
