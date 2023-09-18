@@ -1,0 +1,10 @@
+[gd_resource type="ShaderMaterial" load_steps=3 format=2]
+
+[ext_resource path="res://resources/shaders/grass.gdshader" type="Shader" id=1]
+[ext_resource path="res://scenes/levels/assets/grass/src/grass.png" type="Texture" id=2]
+
+[resource]
+shader = ExtResource( 1 )
+shader_param/offset = 0.2
+shader_param/speed = 1.0
+shader_param/texture_ = ExtResource( 2 )

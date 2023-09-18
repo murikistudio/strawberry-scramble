@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://scenes/levels/assets/fence/lib_fences.tres" type="MeshLibrary" id=1]
 [ext_resource path="res://scenes/levels/assets/tree/lib_trees.tres" type="MeshLibrary" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://scenes/levels/assets/water/lib_water.tres" type="MeshLibrary" id=7]
 [ext_resource path="res://scenes/levels/assets/rock/lib_rocks.tres" type="MeshLibrary" id=8]
 [ext_resource path="res://scenes/levels/assets/ripples/lib_ripples.tres" type="MeshLibrary" id=9]
+[ext_resource path="res://scenes/levels/assets/grass/lib_grass.tres" type="MeshLibrary" id=10]
 
 [node name="GridMaps" type="Spatial"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
@@ -29,6 +30,13 @@ cell_center_y = false
 __meta__ = {
 "_editor_clip_": 0,
 "_editor_floor_": Vector3( 0, 0, 0 )
+}
+
+[node name="Grass" type="GridMap" parent="."]
+mesh_library = ExtResource( 10 )
+cell_center_y = false
+__meta__ = {
+"_editor_clip_": 0
 }
 
 [node name="Fences" type="GridMap" parent="."]

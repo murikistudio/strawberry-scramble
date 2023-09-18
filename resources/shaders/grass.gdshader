@@ -3,6 +3,7 @@ render_mode shadows_disabled, specular_disabled;
 
 uniform float offset: hint_range(0.0, 1.0, 0.1) = 0.2;
 uniform float speed: hint_range(0.0, 1.0, 0.1) = 1.0;
+uniform sampler2D texture_: hint_albedo;
 
 void vertex() {
 	VERTEX.x += sin(TIME * speed) * VERTEX.y * offset;
@@ -10,5 +11,8 @@ void vertex() {
 }
 
 void fragment() {
-	ALBEDO = COLOR.rgb;
+	vec4 color = texture(texture_, UV);
+	ALPHA_SCISSOR = 0.5;
+	ALBEDO = color.rgb;
+	ALPHA = color.a;
 }
