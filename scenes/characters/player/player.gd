@@ -108,6 +108,9 @@ func set_animation(anim_name: String, speed := 1.0, blend := 0.2) -> void:
 
 # Toca som aleatório de voz de passo.
 func play_sfx_step() -> void:
+	if not is_on_floor():
+		return
+
 	var step_volume := -22.0
 	var sfx := {
 		"grass": [
@@ -170,6 +173,9 @@ func _process_visual(_delta: float) -> void:
 
 # Processa a gravidade e movimentação do jogador seguindo os eixos do controle.
 func _process_move(_delta: float) -> void:
+	if _state_manager.current_state == _state_stop:
+		return
+
 	var move_vec: Vector2 = move_weight * move_speed * move_speed_multiplier
 	var translation_vec := Vector3(-move_vec.x, move_gravity, move_vec.y)
 
