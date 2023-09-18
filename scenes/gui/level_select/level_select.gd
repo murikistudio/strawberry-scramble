@@ -9,6 +9,7 @@ onready var _container_levels: GridContainer = find_node("GridContainerLevels")
 # Built-in overrides
 func _ready() -> void:
 	_add_level_cards()
+	GameAudio.play_bgm(DatabaseAudio.BGM_MENU)
 
 
 # Private methods

@@ -33,6 +33,9 @@ func _ready() -> void:
 	GameEvents.connect("level_time_updated", self, "update_hud")
 	update_hud()
 
+	if _level_def.get("bgm"):
+		GameAudio.play_bgm(_level_def["bgm"])
+
 
 # Public methods
 # Atualiza valores mostrados na interface de usuário.
