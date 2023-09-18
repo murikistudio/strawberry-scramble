@@ -1,7 +1,7 @@
 {
     "asset" : {
-        "version" : "2.0",
-        "generator" : "Khronos glTF Blender I/O v1.2.20"
+        "generator" : "Khronos glTF Blender I/O v1.2.20",
+        "version" : "2.0"
     },
     "extensionsUsed" : [
         "KHR_materials_unlit"
@@ -9,10 +9,10 @@
     "scene" : 0,
     "scenes" : [
         {
-            "name" : "Scene",
             "nodes" : [
                 0
-            ]
+            ],
+            "name" : "Scene"
         }
     ],
     "nodes" : [
@@ -23,16 +23,16 @@
     ],
     "materials" : [
         {
-            "pbrMetallicRoughness" : {
-                "baseColorTexture" : {
-                    "index" : 0,
-                    "texCoord" : 0
-                }
-            },
-            "name" : "tree_leaves",
             "extensions" : {
                 "KHR_materials_unlit" : {}
-            }
+            },
+            "pbrMetallicRoughness" : {
+                "baseColorTexture" : {
+                    "texCoord" : 0,
+                    "index" : 0
+                }
+            },
+            "name" : "bush"
         }
     ],
     "meshes" : [
@@ -40,12 +40,12 @@
             "name" : "Bush1Mesh.001",
             "primitives" : [
                 {
+                    "material" : 0,
                     "attributes" : {
                         "NORMAL" : 0,
-                        "POSITION" : 1,
-                        "TEXCOORD_0" : 2
+                        "TEXCOORD_0" : 1,
+                        "POSITION" : 2
                     },
-                    "material" : 0,
                     "indices" : 3
                 }
             ]
@@ -53,81 +53,81 @@
     ],
     "textures" : [
         {
-            "sampler" : 0,
-            "source" : 0
+            "source" : 0,
+            "sampler" : 0
         }
     ],
     "images" : [
         {
-            "mimeType" : "image/png",
             "uri" : "tree_leaves.png",
-            "name" : "tree_leaves.png"
+            "name" : "tree_leaves.png",
+            "mimeType" : "image/png"
         }
     ],
     "accessors" : [
         {
-            "count" : 49,
             "type" : "VEC3",
             "componentType" : 5126,
-            "bufferView" : 0
+            "bufferView" : 0,
+            "count" : 49
         },
         {
+            "type" : "VEC2",
+            "componentType" : 5126,
+            "bufferView" : 1,
+            "count" : 49
+        },
+        {
+            "type" : "VEC3",
+            "max" : [
+                0.6389379501342773,
+                0.7050498723983765,
+                0.6286100745201111
+            ],
             "min" : [
                 -0.6369934678077698,
                 -0.0020331423729658127,
                 -0.62971031665802
             ],
-            "type" : "VEC3",
-            "bufferView" : 1,
-            "count" : 49,
             "componentType" : 5126,
-            "max" : [
-                0.6389379501342773,
-                0.7050498723983765,
-                0.6286100745201111
-            ]
+            "bufferView" : 2,
+            "count" : 49
         },
         {
-            "count" : 49,
-            "type" : "VEC2",
-            "componentType" : 5126,
-            "bufferView" : 2
-        },
-        {
-            "count" : 225,
             "type" : "SCALAR",
             "componentType" : 5123,
-            "bufferView" : 3
+            "bufferView" : 3,
+            "count" : 225
         }
     ],
     "bufferViews" : [
         {
             "buffer" : 0,
-            "byteLength" : 588,
-            "byteOffset" : 0
+            "byteOffset" : 0,
+            "byteLength" : 588
         },
         {
             "buffer" : 0,
-            "byteLength" : 588,
-            "byteOffset" : 588
+            "byteOffset" : 588,
+            "byteLength" : 392
         },
         {
             "buffer" : 0,
-            "byteLength" : 392,
-            "byteOffset" : 1176
+            "byteOffset" : 980,
+            "byteLength" : 588
         },
         {
             "buffer" : 0,
-            "byteLength" : 450,
-            "byteOffset" : 1568
+            "byteOffset" : 1568,
+            "byteLength" : 450
         }
     ],
     "samplers" : [
         {
-            "magFilter" : 9729,
-            "wrapT" : 10497,
             "wrapS" : 10497,
-            "minFilter" : 9986
+            "minFilter" : 9986,
+            "wrapT" : 10497,
+            "magFilter" : 9729
         }
     ],
     "buffers" : [

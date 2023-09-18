@@ -17,8 +17,8 @@
     ],
     "nodes" : [
         {
-            "mesh" : 0,
-            "name" : "Bush2Mesh"
+            "name" : "Bush2Mesh",
+            "mesh" : 0
         }
     ],
     "materials" : [
@@ -26,78 +26,78 @@
             "extensions" : {
                 "KHR_materials_unlit" : {}
             },
-            "name" : "tree_leaves",
             "pbrMetallicRoughness" : {
                 "baseColorTexture" : {
-                    "index" : 0,
-                    "texCoord" : 0
+                    "texCoord" : 0,
+                    "index" : 0
                 }
-            }
+            },
+            "name" : "bush"
         }
     ],
     "meshes" : [
         {
+            "name" : "Bush2Mesh.001",
             "primitives" : [
                 {
-                    "indices" : 3,
                     "material" : 0,
                     "attributes" : {
                         "NORMAL" : 0,
                         "TEXCOORD_0" : 1,
                         "POSITION" : 2
-                    }
+                    },
+                    "indices" : 3
                 }
-            ],
-            "name" : "Bush2Mesh.001"
+            ]
         }
     ],
     "textures" : [
         {
-            "sampler" : 0,
-            "source" : 0
+            "source" : 0,
+            "sampler" : 0
         }
     ],
     "images" : [
         {
-            "mimeType" : "image/png",
+            "uri" : "tree_leaves.png",
             "name" : "tree_leaves.png",
-            "uri" : "tree_leaves.png"
+            "mimeType" : "image/png"
         }
     ],
     "accessors" : [
         {
-            "componentType" : 5126,
             "type" : "VEC3",
-            "count" : 147,
-            "bufferView" : 0
+            "componentType" : 5126,
+            "bufferView" : 0,
+            "count" : 147
         },
         {
-            "componentType" : 5126,
             "type" : "VEC2",
-            "count" : 147,
-            "bufferView" : 1
+            "componentType" : 5126,
+            "bufferView" : 1,
+            "count" : 147
         },
         {
-            "componentType" : 5126,
-            "count" : 147,
-            "min" : [
-                -0.6676821708679199,
-                -0.0013409324456006289,
-                -0.5821561813354492
-            ],
             "type" : "VEC3",
             "max" : [
                 0.5890530943870544,
                 0.46500641107559204,
                 0.6836341619491577
             ],
-            "bufferView" : 2
+            "min" : [
+                -0.6676821708679199,
+                -0.0013409324456006289,
+                -0.5821561813354492
+            ],
+            "componentType" : 5126,
+            "bufferView" : 2,
+            "count" : 147
         },
         {
-            "componentType" : 5123,
             "type" : "SCALAR",
-            "count" : 675,
-            "bufferView" : 3
+            "componentType" : 5123,
+            "bufferView" : 3,
+            "count" : 675
         }
     ],
     "bufferViews" : [
@@ -124,16 +124,16 @@
     ],
     "samplers" : [
         {
+            "wrapS" : 10497,
             "minFilter" : 9986,
             "wrapT" : 10497,
-            "magFilter" : 9729,
-            "wrapS" : 10497
+            "magFilter" : 9729
         }
     ],
     "buffers" : [
         {
-            "byteLength" : 6056,
-            "uri" : "bush_2.bin"
+            "uri" : "bush_2.bin",
+            "byteLength" : 6056
         }
     ]
 }

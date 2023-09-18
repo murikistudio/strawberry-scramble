@@ -1,8 +1,9 @@
 shader_type spatial;
 render_mode shadows_disabled, specular_disabled;
 
-uniform float offset: hint_range(0.0, 1.0, 0.1) = 0.2;
-uniform float speed: hint_range(0.0, 10.0, 0.1) = 1.0;
+uniform float offset: hint_range(0.0, 1.0, 0.01) = 0.2;
+uniform float alpha_scissor: hint_range(-0.01, 1.0, 0.01) = 0.5;
+uniform float speed: hint_range(0.0, 10.0, 0.01) = 1.0;
 uniform sampler2D texture_: hint_albedo;
 
 void vertex() {
@@ -12,7 +13,10 @@ void vertex() {
 
 void fragment() {
 	vec4 color = texture(texture_, UV);
-	ALPHA_SCISSOR = 0.5;
 	ALBEDO = color.rgb;
-	ALPHA = color.a;
+	
+	if (alpha_scissor > 0.0) {
+		ALPHA_SCISSOR = alpha_scissor;
+		ALPHA = color.a;
+	}
 }
