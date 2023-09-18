@@ -21,7 +21,7 @@ func _ready() -> void:
 
 # Event handlers
 func _on_BoulderTrigger_body_entered(body: Spatial) -> void:
-	if not _can_trigger or not _target_spawner or not "player" in body.name.to_lower():
+	if not _can_trigger or not _target_spawner or not body.is_in_group("player"):
 		return
 
 	GameEvents.emit_signal("level_boulder_triggered", _target_spawner, trigger_mode)

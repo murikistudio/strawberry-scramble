@@ -38,7 +38,7 @@ func _ready() -> void:
 
 # Private methods
 func _show_dialog(body = null) -> void:
-	if body and not "player" in body.name.to_lower():
+	if body and not body.is_in_group("player"):
 		return
 
 	GameEvents.emit_signal("level_dialog", _character, _line)
