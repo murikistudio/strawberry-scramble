@@ -30,6 +30,7 @@ func _on_Cannon_body_entered(body: Spatial) -> void:
 		return
 
 	GameEvents.emit_signal("level_cannon_entered", _target)
+	GameEvents.emit_signal("player_request_camera_focus", _particles_shot)
 	_enabled = false
 	_particles_wick.emitting = true
 	_audio_wick.play()

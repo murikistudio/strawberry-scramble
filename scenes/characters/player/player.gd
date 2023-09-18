@@ -379,6 +379,7 @@ func _on_level_cannon_entered(target: Spatial) -> void:
 	_state_manager.transition_to(_state_stop)
 	_visual.visible = false
 	yield(get_tree().create_timer(3.0, false), "timeout")
+	GameEvents.emit_signal("player_request_camera_focus", null)
 	global_translation = target.global_translation + Vector3(0, 5, 0)
 	_visual.visible = true
 	_state_manager.transition_to(_state_idle)
