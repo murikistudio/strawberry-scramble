@@ -30,6 +30,7 @@ func _ready() -> void:
 		_line = fallback_line
 
 	if at_start:
+		yield(get_tree().create_timer(0.5, false), "timeout")
 		_show_dialog()
 		return
 
