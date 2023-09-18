@@ -1,7 +1,7 @@
 {
     "asset" : {
-        "version" : "2.0",
-        "generator" : "Khronos glTF Blender I/O v1.2.20"
+        "generator" : "Khronos glTF Blender I/O v1.2.20",
+        "version" : "2.0"
     },
     "extensionsUsed" : [
         "KHR_materials_unlit"
@@ -23,16 +23,16 @@
     ],
     "materials" : [
         {
+            "name" : "grass",
             "extensions" : {
                 "KHR_materials_unlit" : {}
             },
             "pbrMetallicRoughness" : {
                 "baseColorTexture" : {
-                    "index" : 0,
-                    "texCoord" : 0
+                    "texCoord" : 0,
+                    "index" : 0
                 }
-            },
-            "name" : "grass"
+            }
         }
     ],
     "meshes" : [
@@ -40,100 +40,100 @@
             "name" : "Grass1Mesh.001",
             "primitives" : [
                 {
-                    "material" : 0,
-                    "indices" : 3,
                     "attributes" : {
-                        "NORMAL" : 0,
+                        "POSITION" : 0,
                         "TEXCOORD_0" : 1,
-                        "POSITION" : 2
-                    }
+                        "NORMAL" : 2
+                    },
+                    "indices" : 3,
+                    "material" : 0
                 }
             ]
         }
     ],
     "textures" : [
         {
-            "source" : 0,
-            "sampler" : 0
+            "sampler" : 0,
+            "source" : 0
         }
     ],
     "images" : [
         {
-            "name" : "grass.png",
             "uri" : "grass.png",
-            "mimeType" : "image/png"
+            "mimeType" : "image/png",
+            "name" : "grass.png"
         }
     ],
     "accessors" : [
-        {
-            "count" : 240,
-            "type" : "VEC3",
-            "componentType" : 5126,
-            "bufferView" : 0
-        },
-        {
-            "count" : 240,
-            "type" : "VEC2",
-            "componentType" : 5126,
-            "bufferView" : 1
-        },
         {
             "max" : [
                 0.8288808465003967,
                 0.3684206008911133,
                 0.7651634812355042
             ],
+            "type" : "VEC3",
+            "bufferView" : 0,
+            "count" : 240,
             "min" : [
                 -0.7570652961730957,
                 -0.022004442289471626,
                 -0.7830392122268677
             ],
-            "bufferView" : 2,
-            "count" : 240,
-            "type" : "VEC3",
             "componentType" : 5126
         },
         {
-            "count" : 360,
+            "type" : "VEC2",
+            "count" : 240,
+            "componentType" : 5126,
+            "bufferView" : 1
+        },
+        {
+            "type" : "VEC3",
+            "count" : 240,
+            "componentType" : 5126,
+            "bufferView" : 2
+        },
+        {
             "type" : "SCALAR",
+            "count" : 360,
             "componentType" : 5123,
             "bufferView" : 3
         }
     ],
     "bufferViews" : [
         {
-            "byteLength" : 2880,
             "byteOffset" : 0,
-            "buffer" : 0
-        },
-        {
-            "byteLength" : 1920,
-            "byteOffset" : 2880,
-            "buffer" : 0
-        },
-        {
             "byteLength" : 2880,
-            "byteOffset" : 4800,
             "buffer" : 0
         },
         {
-            "byteLength" : 720,
+            "byteOffset" : 2880,
+            "byteLength" : 1920,
+            "buffer" : 0
+        },
+        {
+            "byteOffset" : 4800,
+            "byteLength" : 2880,
+            "buffer" : 0
+        },
+        {
             "byteOffset" : 7680,
+            "byteLength" : 720,
             "buffer" : 0
         }
     ],
     "samplers" : [
         {
-            "magFilter" : 9729,
             "wrapT" : 10497,
+            "magFilter" : 9729,
             "minFilter" : 9986,
             "wrapS" : 10497
         }
     ],
     "buffers" : [
         {
-            "byteLength" : 8400,
-            "uri" : "grass_1.bin"
+            "uri" : "grass_1.bin",
+            "byteLength" : 8400
         }
     ]
 }
