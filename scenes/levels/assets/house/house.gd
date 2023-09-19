@@ -3,6 +3,7 @@ extends Area
 
 # Variables
 var _activated := false
+var _completed := false
 onready var _animation_player: AnimationPlayer = $AnimationPlayer
 
 
@@ -33,7 +34,11 @@ func _on_level_cannot_complete() -> void:
 
 # Finalização de fase caso o jogador colidir com a casa.
 func _on_House_body_entered(_body: Spatial) -> void:
+	if _completed:
+		return
+
 	if GameState.current_trophy:
+		_completed = true
 		GameState.completed = true
 		GameEvents.emit_signal("level_dialog", "man", "complete")
 		GameEvents.emit_signal("player_enabled", false)
