@@ -18,26 +18,21 @@
     "nodes" : [
         {
             "mesh" : 0,
-            "scale" : [
-                0.5,
-                0.5,
-                0.5
-            ],
             "name" : "GrassPlatform"
         }
     ],
     "materials" : [
         {
-            "extensions" : {
-                "KHR_materials_unlit" : {}
-            },
+            "name" : "grass",
             "pbrMetallicRoughness" : {
                 "baseColorTexture" : {
-                    "index" : 0,
-                    "texCoord" : 0
+                    "texCoord" : 0,
+                    "index" : 0
                 }
             },
-            "name" : "grass"
+            "extensions" : {
+                "KHR_materials_unlit" : {}
+            }
         }
     ],
     "meshes" : [
@@ -45,86 +40,86 @@
             "name" : "GrassPlatform.001",
             "primitives" : [
                 {
-                    "indices" : 3,
-                    "material" : 0,
                     "attributes" : {
                         "POSITION" : 0,
                         "TEXCOORD_0" : 1,
                         "NORMAL" : 2
-                    }
+                    },
+                    "material" : 0,
+                    "indices" : 3
                 }
             ]
         }
     ],
     "textures" : [
         {
-            "sampler" : 0,
-            "source" : 0
+            "source" : 0,
+            "sampler" : 0
         }
     ],
     "images" : [
         {
-            "uri" : "grass.png",
             "mimeType" : "image/png",
-            "name" : "grass.png"
+            "name" : "grass.png",
+            "uri" : "grass.png"
         }
     ],
     "accessors" : [
         {
-            "type" : "VEC3",
-            "componentType" : 5126,
             "bufferView" : 0,
-            "max" : [
-                2.0000061988830566,
-                -2.9802320611338473e-08,
-                2.000001907348633
-            ],
             "count" : 96,
-            "min" : [
-                -2.0000061988830566,
-                -1.0000001192092896,
-                -2.000004291534424
-            ]
-        },
-        {
-            "type" : "VEC2",
-            "componentType" : 5126,
-            "count" : 96,
-            "bufferView" : 1
-        },
-        {
             "type" : "VEC3",
-            "componentType" : 5126,
-            "count" : 96,
-            "bufferView" : 2
+            "max" : [
+                1.000000238418579,
+                -2.9802322387695312e-08,
+                1.000000238418579
+            ],
+            "min" : [
+                -1.000000238418579,
+                -0.5,
+                -1.000000238418579
+            ],
+            "componentType" : 5126
         },
         {
+            "bufferView" : 1,
+            "count" : 96,
+            "type" : "VEC2",
+            "componentType" : 5126
+        },
+        {
+            "bufferView" : 2,
+            "count" : 96,
+            "type" : "VEC3",
+            "componentType" : 5126
+        },
+        {
+            "bufferView" : 3,
+            "count" : 288,
             "type" : "SCALAR",
-            "componentType" : 5123,
-            "count" : 138,
-            "bufferView" : 3
+            "componentType" : 5123
         }
     ],
     "bufferViews" : [
         {
+            "byteOffset" : 0,
             "buffer" : 0,
-            "byteLength" : 1152,
-            "byteOffset" : 0
+            "byteLength" : 1152
         },
         {
+            "byteOffset" : 1152,
             "buffer" : 0,
-            "byteLength" : 768,
-            "byteOffset" : 1152
+            "byteLength" : 768
         },
         {
+            "byteOffset" : 1920,
             "buffer" : 0,
-            "byteLength" : 1152,
-            "byteOffset" : 1920
+            "byteLength" : 1152
         },
         {
+            "byteOffset" : 3072,
             "buffer" : 0,
-            "byteLength" : 276,
-            "byteOffset" : 3072
+            "byteLength" : 576
         }
     ],
     "samplers" : [
@@ -138,7 +133,7 @@
     "buffers" : [
         {
             "uri" : "grass_platform.bin",
-            "byteLength" : 3348
+            "byteLength" : 3648
         }
     ]
 }
