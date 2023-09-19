@@ -1,0 +1,133 @@
+{
+    "asset" : {
+        "generator" : "Khronos glTF Blender I/O v1.2.20",
+        "version" : "2.0"
+    },
+    "scene" : 0,
+    "scenes" : [
+        {
+            "name" : "Scene",
+            "nodes" : [
+                0
+            ]
+        }
+    ],
+    "nodes" : [
+        {
+            "name" : "ArrowMesh",
+            "mesh" : 0
+        }
+    ],
+    "materials" : [
+        {
+            "name" : "arrow",
+            "pbrMetallicRoughness" : {
+                "baseColorTexture" : {
+                    "index" : 0,
+                    "texCoord" : 0
+                }
+            }
+        }
+    ],
+    "meshes" : [
+        {
+            "name" : "ArrowMesh.001",
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "NORMAL" : 0,
+                        "TEXCOORD_0" : 1,
+                        "POSITION" : 2
+                    },
+                    "material" : 0,
+                    "indices" : 3
+                }
+            ]
+        }
+    ],
+    "textures" : [
+        {
+            "source" : 0,
+            "sampler" : 0
+        }
+    ],
+    "images" : [
+        {
+            "mimeType" : "image/png",
+            "name" : "arrow",
+            "uri" : "arrow.png"
+        }
+    ],
+    "accessors" : [
+        {
+            "componentType" : 5126,
+            "bufferView" : 0,
+            "type" : "VEC3",
+            "count" : 120
+        },
+        {
+            "componentType" : 5126,
+            "bufferView" : 1,
+            "type" : "VEC2",
+            "count" : 120
+        },
+        {
+            "min" : [
+                -0.36378249526023865,
+                -4.440892098500626e-16,
+                -0.13675370812416077
+            ],
+            "count" : 120,
+            "type" : "VEC3",
+            "componentType" : 5126,
+            "bufferView" : 2,
+            "max" : [
+                0.36378249526023865,
+                0.9998372793197632,
+                0.13675370812416077
+            ]
+        },
+        {
+            "componentType" : 5123,
+            "bufferView" : 3,
+            "type" : "SCALAR",
+            "count" : 312
+        }
+    ],
+    "bufferViews" : [
+        {
+            "buffer" : 0,
+            "byteLength" : 1440,
+            "byteOffset" : 0
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 960,
+            "byteOffset" : 1440
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 1440,
+            "byteOffset" : 2400
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 624,
+            "byteOffset" : 3840
+        }
+    ],
+    "samplers" : [
+        {
+            "wrapS" : 10497,
+            "minFilter" : 9986,
+            "magFilter" : 9729,
+            "wrapT" : 10497
+        }
+    ],
+    "buffers" : [
+        {
+            "uri" : "arrow.bin",
+            "byteLength" : 4464
+        }
+    ]
+}

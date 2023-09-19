@@ -4,7 +4,8 @@ extends Area
 # Variables
 export var target: NodePath
 var _pushed := false
-onready var _anim_player: AnimationPlayer = find_node("AnimationPlayer")
+onready var _anim_player: AnimationPlayer = $AnimationPlayer
+onready var _arrow: Spatial = find_node("Arrow")
 
 
 # Built-in overrides
@@ -19,6 +20,7 @@ func _on_BigFenceLever_body_entered(body: Spatial) -> void:
 		return
 
 	_pushed = true
+	_arrow.stop()
 	_anim_player.play("push")
 	GameAudio.play_sfx(DatabaseAudio.SFX_LEVER)
 	yield(get_tree().create_timer(1.0, false), "timeout")
