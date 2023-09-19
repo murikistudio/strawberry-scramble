@@ -3,6 +3,9 @@
         "version" : "2.0",
         "generator" : "Khronos glTF Blender I/O v1.2.20"
     },
+    "extensionsUsed" : [
+        "KHR_materials_unlit"
+    ],
     "scene" : 0,
     "scenes" : [
         {
@@ -14,59 +17,63 @@
     ],
     "nodes" : [
         {
-            "name" : "CannonCollider -colonly",
             "mesh" : 0,
             "scale" : [
                 0.681480884552002,
                 0.681480884552002,
                 0.681480884552002
-            ]
+            ],
+            "name" : "CannonCollider -colonly"
         },
         {
+            "mesh" : 1,
+            "name" : "Cannon",
             "children" : [
                 0
-            ],
-            "name" : "Cannon",
-            "mesh" : 1
+            ]
         }
     ],
     "materials" : [
         {
             "pbrMetallicRoughness" : {
                 "baseColorTexture" : {
-                    "index" : 0,
-                    "texCoord" : 0
+                    "texCoord" : 0,
+                    "index" : 0
                 }
             },
-            "name" : "cannon"
+            "name" : "cannon",
+            "extensions" : {
+                "KHR_materials_unlit" : {}
+            }
         }
     ],
     "meshes" : [
         {
-            "name" : "CannonCollider.001",
             "primitives" : [
                 {
                     "attributes" : {
-                        "POSITION" : 0,
-                        "NORMAL" : 1
+                        "NORMAL" : 0,
+                        "POSITION" : 1
                     },
                     "indices" : 2
                 }
-            ]
+            ],
+            "name" : "CannonCollider.001"
         },
         {
-            "name" : "Cannon.001",
             "primitives" : [
                 {
                     "attributes" : {
-                        "POSITION" : 3,
-                        "TEXCOORD_0" : 4,
-                        "NORMAL" : 5
+                        "NORMAL" : 3,
+                        "POSITION" : 4,
+                        "COLOR_0" : 5,
+                        "TEXCOORD_0" : 6
                     },
-                    "indices" : 6,
-                    "material" : 0
+                    "material" : 0,
+                    "indices" : 7
                 }
-            ]
+            ],
+            "name" : "Cannon.001"
         }
     ],
     "textures" : [
@@ -78,72 +85,78 @@
     "images" : [
         {
             "uri" : "cannon.png",
-            "name" : "cannon",
-            "mimeType" : "image/png"
+            "mimeType" : "image/png",
+            "name" : "cannon"
         }
     ],
     "accessors" : [
         {
-            "bufferView" : 0,
             "type" : "VEC3",
-            "min" : [
-                -0.960526704788208,
-                0.0018650293350219727,
-                -1.4829766750335693
-            ],
             "count" : 48,
+            "componentType" : 5126,
+            "bufferView" : 0
+        },
+        {
             "max" : [
                 1.0755618810653687,
                 2.168598175048828,
                 1.2233399152755737
             ],
-            "componentType" : 5126
-        },
-        {
-            "bufferView" : 1,
+            "min" : [
+                -0.960526704788208,
+                0.0018650293350219727,
+                -1.4829766750335693
+            ],
             "type" : "VEC3",
+            "count" : 48,
             "componentType" : 5126,
-            "count" : 48
+            "bufferView" : 1
         },
         {
-            "bufferView" : 2,
             "type" : "SCALAR",
+            "count" : 72,
             "componentType" : 5123,
-            "count" : 72
+            "bufferView" : 2
         },
         {
-            "bufferView" : 3,
             "type" : "VEC3",
+            "count" : 909,
+            "componentType" : 5126,
+            "bufferView" : 3
+        },
+        {
+            "max" : [
+                0.7696171998977661,
+                1.7785379886627197,
+                1.10524320602417
+            ],
             "min" : [
                 -0.6470985412597656,
-                -0.011232794262468815,
-                -1.0335040092468262
+                -0.01123279333114624,
+                -1.0887702703475952
             ],
-            "count" : 357,
-            "max" : [
-                0.7820401191711426,
-                1.740187406539917,
-                1.06088125705719
-            ],
-            "componentType" : 5126
-        },
-        {
-            "bufferView" : 4,
-            "type" : "VEC2",
-            "componentType" : 5126,
-            "count" : 357
-        },
-        {
-            "bufferView" : 5,
             "type" : "VEC3",
+            "count" : 909,
             "componentType" : 5126,
-            "count" : 357
+            "bufferView" : 4
         },
         {
-            "bufferView" : 6,
+            "type" : "VEC4",
+            "count" : 909,
+            "componentType" : 5126,
+            "bufferView" : 5
+        },
+        {
+            "type" : "VEC2",
+            "count" : 909,
+            "componentType" : 5126,
+            "bufferView" : 6
+        },
+        {
             "type" : "SCALAR",
+            "count" : 2427,
             "componentType" : 5123,
-            "count" : 1248
+            "bufferView" : 7
         }
     ],
     "bufferViews" : [
@@ -164,36 +177,41 @@
         },
         {
             "buffer" : 0,
-            "byteLength" : 4284,
+            "byteLength" : 10908,
             "byteOffset" : 1296
         },
         {
             "buffer" : 0,
-            "byteLength" : 2856,
-            "byteOffset" : 5580
+            "byteLength" : 10908,
+            "byteOffset" : 12204
         },
         {
             "buffer" : 0,
-            "byteLength" : 4284,
-            "byteOffset" : 8436
+            "byteLength" : 14544,
+            "byteOffset" : 23112
         },
         {
             "buffer" : 0,
-            "byteLength" : 2496,
-            "byteOffset" : 12720
+            "byteLength" : 7272,
+            "byteOffset" : 37656
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 4854,
+            "byteOffset" : 44928
         }
     ],
     "samplers" : [
         {
-            "wrapS" : 10497,
             "minFilter" : 9986,
+            "wrapT" : 10497,
             "magFilter" : 9729,
-            "wrapT" : 10497
+            "wrapS" : 10497
         }
     ],
     "buffers" : [
         {
-            "byteLength" : 15216,
+            "byteLength" : 49784,
             "uri" : "cannon.bin"
         }
     ]

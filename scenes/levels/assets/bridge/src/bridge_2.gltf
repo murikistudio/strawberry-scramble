@@ -6,10 +6,10 @@
     "scene" : 0,
     "scenes" : [
         {
-            "name" : "Scene",
             "nodes" : [
                 1
-            ]
+            ],
+            "name" : "Scene"
         }
     ],
     "nodes" : [
@@ -18,22 +18,22 @@
             "name" : "Bridge2Collider -colonly"
         },
         {
-            "mesh" : 1,
             "children" : [
                 0
             ],
+            "mesh" : 1,
             "name" : "Bridge2"
         }
     ],
     "materials" : [
         {
+            "name" : "bridge",
             "pbrMetallicRoughness" : {
                 "baseColorTexture" : {
-                    "texCoord" : 0,
-                    "index" : 0
+                    "index" : 0,
+                    "texCoord" : 0
                 }
-            },
-            "name" : "bridge"
+            }
         }
     ],
     "meshes" : [
@@ -53,143 +53,143 @@
             "name" : "Bridge2.001",
             "primitives" : [
                 {
-                    "material" : 0,
                     "indices" : 6,
                     "attributes" : {
-                        "TEXCOORD_0" : 3,
-                        "POSITION" : 4,
+                        "POSITION" : 3,
+                        "TEXCOORD_0" : 4,
                         "NORMAL" : 5
-                    }
+                    },
+                    "material" : 0
                 }
             ]
         }
     ],
     "textures" : [
         {
-            "source" : 0,
-            "sampler" : 0
+            "sampler" : 0,
+            "source" : 0
         }
     ],
     "images" : [
         {
             "uri" : "bridge.png",
-            "mimeType" : "image/png",
-            "name" : "bridge.png"
+            "name" : "bridge.png",
+            "mimeType" : "image/png"
         }
     ],
     "accessors" : [
         {
+            "bufferView" : 0,
             "count" : 24,
-            "type" : "VEC3",
+            "max" : [
+                0.5010091662406921,
+                0,
+                1.0020183324813843
+            ],
             "min" : [
                 -0.5010091662406921,
                 -0.05532758682966232,
                 -1.0020183324813843
             ],
             "componentType" : 5126,
-            "bufferView" : 0,
-            "max" : [
-                0.5010091662406921,
-                0,
-                1.0020183324813843
-            ]
-        },
-        {
-            "count" : 24,
-            "componentType" : 5126,
-            "bufferView" : 1,
             "type" : "VEC3"
         },
         {
+            "bufferView" : 1,
+            "count" : 24,
+            "componentType" : 5126,
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 2,
             "count" : 36,
             "componentType" : 5123,
-            "bufferView" : 2,
             "type" : "SCALAR"
         },
         {
-            "count" : 288,
-            "componentType" : 5126,
             "bufferView" : 3,
-            "type" : "VEC2"
-        },
-        {
             "count" : 288,
-            "type" : "VEC3",
-            "min" : [
-                -0.5190026760101318,
-                -0.10427588224411011,
-                -0.9999999403953552
-            ],
-            "componentType" : 5126,
-            "bufferView" : 4,
             "max" : [
                 0.5022359490394592,
                 0.005451202392578125,
-                1
-            ]
-        },
-        {
-            "count" : 288,
+                0.9999999403953552
+            ],
+            "min" : [
+                -0.5190026760101318,
+                -0.10427594184875488,
+                -1.0000001192092896
+            ],
             "componentType" : 5126,
-            "bufferView" : 5,
             "type" : "VEC3"
         },
         {
+            "bufferView" : 4,
+            "count" : 288,
+            "componentType" : 5126,
+            "type" : "VEC2"
+        },
+        {
+            "bufferView" : 5,
+            "count" : 288,
+            "componentType" : 5126,
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 6,
             "count" : 432,
             "componentType" : 5123,
-            "bufferView" : 6,
             "type" : "SCALAR"
         }
     ],
     "bufferViews" : [
         {
             "byteLength" : 288,
-            "buffer" : 0,
-            "byteOffset" : 0
+            "byteOffset" : 0,
+            "buffer" : 0
         },
         {
             "byteLength" : 288,
-            "buffer" : 0,
-            "byteOffset" : 288
+            "byteOffset" : 288,
+            "buffer" : 0
         },
         {
             "byteLength" : 72,
-            "buffer" : 0,
-            "byteOffset" : 576
+            "byteOffset" : 576,
+            "buffer" : 0
+        },
+        {
+            "byteLength" : 3456,
+            "byteOffset" : 648,
+            "buffer" : 0
         },
         {
             "byteLength" : 2304,
-            "buffer" : 0,
-            "byteOffset" : 648
+            "byteOffset" : 4104,
+            "buffer" : 0
         },
         {
             "byteLength" : 3456,
-            "buffer" : 0,
-            "byteOffset" : 2952
-        },
-        {
-            "byteLength" : 3456,
-            "buffer" : 0,
-            "byteOffset" : 6408
+            "byteOffset" : 6408,
+            "buffer" : 0
         },
         {
             "byteLength" : 864,
-            "buffer" : 0,
-            "byteOffset" : 9864
+            "byteOffset" : 9864,
+            "buffer" : 0
         }
     ],
     "samplers" : [
         {
-            "wrapT" : 10497,
             "magFilter" : 9729,
             "wrapS" : 10497,
+            "wrapT" : 10497,
             "minFilter" : 9986
         }
     ],
     "buffers" : [
         {
-            "byteLength" : 10728,
-            "uri" : "bridge_2.bin"
+            "uri" : "bridge_2.bin",
+            "byteLength" : 10728
         }
     ]
 }

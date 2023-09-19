@@ -35,7 +35,7 @@ transform = Transform( 0.21104, 0, 0, 0, 0.295284, 0.139077, 0, -0.24666, 0.1664
 shape = SubResource( 1 )
 
 [node name="ParticlesWick" type="CPUParticles" parent="."]
-transform = Transform( 1, 0, 0, 0, 0.770658, -0.637249, 0, 0.637249, 0.770658, 0, 0.924854, 0.344215 )
+transform = Transform( 1, 0, 0, 0, 0.770658, -0.637249, 0, 0.637249, 0.770658, 0, 0.811423, 0.620161 )
 emitting = false
 amount = 16
 lifetime = 0.25
