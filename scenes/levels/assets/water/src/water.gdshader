@@ -22,7 +22,6 @@ vec2 get_uv_offset(vec2 uv) {
 }
 
 void vertex() {
-	vec2 offset = get_uv_offset(UV);
 	vec4 tex = texture(noise_1, UV);
 	VERTEX.y = sin(tex.x * TIME * wave_speed) * wave_height;
 }
@@ -35,13 +34,13 @@ void fragment() {
 	vec3 color = noise_1_color.rgb;
 	float noise_1_color_limit = color_limit + abs(sin(TIME * color_variation_speed)) * color_variation_amount;
 	float noise_2_color_limit = color_limit + abs(cos(TIME * color_variation_speed)) * color_variation_amount;
-	
+
 	if (noise_1_color.r > noise_1_color_limit || noise_2_color.r > noise_2_color_limit) {
 		color = color_1.rgb;
 	} else {
 		color = color_2.rgb;
 	}
-	
+
 	ALBEDO = color;
 	ALPHA = alpha;
 }
