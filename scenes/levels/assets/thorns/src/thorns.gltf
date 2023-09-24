@@ -32,14 +32,14 @@
         {
             "pbrMetallicRoughness" : {
                 "baseColorTexture" : {
-                    "texCoord" : 0,
-                    "index" : 0
+                    "index" : 0,
+                    "texCoord" : 0
                 }
             },
-            "name" : "thorns",
             "extensions" : {
                 "KHR_materials_unlit" : {}
-            }
+            },
+            "name" : "thorns"
         }
     ],
     "meshes" : [
@@ -47,8 +47,8 @@
             "primitives" : [
                 {
                     "attributes" : {
-                        "POSITION" : 0,
-                        "NORMAL" : 1
+                        "NORMAL" : 0,
+                        "POSITION" : 1
                     },
                     "indices" : 2
                 }
@@ -59,8 +59,8 @@
             "primitives" : [
                 {
                     "attributes" : {
-                        "POSITION" : 3,
-                        "NORMAL" : 4,
+                        "NORMAL" : 3,
+                        "POSITION" : 4,
                         "TEXCOORD_0" : 5
                     },
                     "material" : 0,
@@ -79,109 +79,109 @@
     "images" : [
         {
             "mimeType" : "image/png",
-            "name" : "thorns.png",
-            "uri" : "thorns.png"
+            "uri" : "thorns.png",
+            "name" : "thorns.png"
         }
     ],
     "accessors" : [
         {
-            "count" : 24,
+            "count" : 48,
+            "type" : "VEC3",
             "bufferView" : 0,
-            "min" : [
-                -1,
-                0,
-                -1
-            ],
-            "componentType" : 5126,
-            "max" : [
-                1,
-                0.6000000238418579,
-                1
-            ],
-            "type" : "VEC3"
+            "componentType" : 5126
         },
         {
-            "count" : 24,
+            "count" : 48,
+            "type" : "VEC3",
+            "max" : [
+                0.8999999761581421,
+                0.6640121340751648,
+                0.8999999761581421
+            ],
+            "componentType" : 5126,
             "bufferView" : 1,
-            "componentType" : 5126,
-            "type" : "VEC3"
-        },
-        {
-            "count" : 36,
-            "bufferView" : 2,
-            "componentType" : 5123,
-            "type" : "SCALAR"
-        },
-        {
-            "count" : 1370,
-            "bufferView" : 3,
             "min" : [
-                -1.0835096836090088,
-                -0.01697087287902832,
-                -1.2242027521133423
-            ],
-            "componentType" : 5126,
+                -0.8999999761581421,
+                0,
+                -0.8999999761581421
+            ]
+        },
+        {
+            "count" : 72,
+            "type" : "SCALAR",
+            "bufferView" : 2,
+            "componentType" : 5123
+        },
+        {
+            "count" : 1370,
+            "type" : "VEC3",
+            "bufferView" : 3,
+            "componentType" : 5126
+        },
+        {
+            "count" : 1370,
+            "type" : "VEC3",
             "max" : [
-                1.0255483388900757,
-                0.7741424441337585,
-                1.1059023141860962
+                1.011612892150879,
+                0.7741423845291138,
+                1.048155426979065
             ],
-            "type" : "VEC3"
-        },
-        {
-            "count" : 1370,
+            "componentType" : 5126,
             "bufferView" : 4,
-            "componentType" : 5126,
-            "type" : "VEC3"
+            "min" : [
+                -1.026313304901123,
+                -0.016970857977867126,
+                -1.0276768207550049
+            ]
         },
         {
             "count" : 1370,
+            "type" : "VEC2",
             "bufferView" : 5,
-            "componentType" : 5126,
-            "type" : "VEC2"
+            "componentType" : 5126
         },
         {
             "count" : 1800,
+            "type" : "SCALAR",
             "bufferView" : 6,
-            "componentType" : 5123,
-            "type" : "SCALAR"
+            "componentType" : 5123
         }
     ],
     "bufferViews" : [
         {
-            "byteLength" : 288,
-            "byteOffset" : 0,
-            "buffer" : 0
+            "byteLength" : 576,
+            "buffer" : 0,
+            "byteOffset" : 0
         },
         {
-            "byteLength" : 288,
-            "byteOffset" : 288,
-            "buffer" : 0
+            "byteLength" : 576,
+            "buffer" : 0,
+            "byteOffset" : 576
         },
         {
-            "byteLength" : 72,
-            "byteOffset" : 576,
-            "buffer" : 0
-        },
-        {
-            "byteLength" : 16440,
-            "byteOffset" : 648,
-            "buffer" : 0
+            "byteLength" : 144,
+            "buffer" : 0,
+            "byteOffset" : 1152
         },
         {
             "byteLength" : 16440,
-            "byteOffset" : 17088,
-            "buffer" : 0
+            "buffer" : 0,
+            "byteOffset" : 1296
+        },
+        {
+            "byteLength" : 16440,
+            "buffer" : 0,
+            "byteOffset" : 17736
         },
         {
             "byteLength" : 10960,
-            "byteOffset" : 33528,
-            "buffer" : 0
+            "buffer" : 0,
+            "byteOffset" : 34176
         },
         {
             "byteLength" : 3600,
-            "byteOffset" : 44488,
-            "buffer" : 0
+            "buffer" : 0,
+            "byteOffset" : 45136
         }
     ],
     "samplers" : [
@@ -194,7 +194,7 @@
     ],
     "buffers" : [
         {
-            "byteLength" : 48088,
+            "byteLength" : 48736,
             "uri" : "thorns.bin"
         }
     ]
