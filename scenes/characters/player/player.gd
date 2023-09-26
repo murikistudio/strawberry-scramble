@@ -13,6 +13,7 @@ export(float, 0.0, 1.0, 0.01) var intertia_factor := 0.15
 export(float, 0.5, 2.0, 0.01) var view_forward_multiplier := 1.0
 export(PackedScene) var scene_water_splash: PackedScene
 export(PackedScene) var scene_balloon_pop: PackedScene
+export(Array, ShaderMaterial) var shaders_to_update: Array
 
 var input_move_axis := Vector2.ZERO
 var jumps_left := jump_times setget _set_jumps_left
@@ -72,6 +73,12 @@ func _ready() -> void:
 	GameEvents.connect("level_checkpoint_touched", self, "_on_level_checkpoint_touched")
 	GameEvents.connect("player_enabled", self, "_on_player_enabled")
 
+	for material in shaders_to_update:
+		if not material:
+			continue
+
+		GameCore.register_global_shader_param("player_world_position", material)
+
 
 func _physics_process(delta: float) -> void:
 	if dead:
@@ -88,6 +95,8 @@ func _physics_process(delta: float) -> void:
 
 
 func _process(_delta: float) -> void:
+	GameCore.set_global_shader_param("player_world_position", global_translation)
+
 	if (
 		not dead
 		and not GameState.completed
