@@ -1,0 +1,139 @@
+{
+    "asset" : {
+        "version" : "2.0",
+        "generator" : "Khronos glTF Blender I/O v1.2.20"
+    },
+    "extensionsUsed" : [
+        "KHR_materials_unlit"
+    ],
+    "scene" : 0,
+    "scenes" : [
+        {
+            "nodes" : [
+                0
+            ],
+            "name" : "Scene"
+        }
+    ],
+    "nodes" : [
+        {
+            "mesh" : 0,
+            "name" : "GrassCenter -col"
+        }
+    ],
+    "materials" : [
+        {
+            "pbrMetallicRoughness" : {
+                "baseColorTexture" : {
+                    "texCoord" : 0,
+                    "index" : 0
+                }
+            },
+            "extensions" : {
+                "KHR_materials_unlit" : {}
+            },
+            "name" : "grass"
+        }
+    ],
+    "meshes" : [
+        {
+            "name" : "GrassCenter.001",
+            "primitives" : [
+                {
+                    "indices" : 3,
+                    "attributes" : {
+                        "TEXCOORD_0" : 0,
+                        "NORMAL" : 1,
+                        "POSITION" : 2
+                    },
+                    "material" : 0
+                }
+            ]
+        }
+    ],
+    "textures" : [
+        {
+            "source" : 0,
+            "sampler" : 0
+        }
+    ],
+    "images" : [
+        {
+            "uri" : "grass.png",
+            "mimeType" : "image/png",
+            "name" : "grass.png"
+        }
+    ],
+    "accessors" : [
+        {
+            "type" : "VEC2",
+            "count" : 4,
+            "bufferView" : 0,
+            "componentType" : 5126
+        },
+        {
+            "type" : "VEC3",
+            "count" : 4,
+            "bufferView" : 1,
+            "componentType" : 5126
+        },
+        {
+            "min" : [
+                -0.9999997019767761,
+                0,
+                -0.9999999403953552
+            ],
+            "type" : "VEC3",
+            "bufferView" : 2,
+            "componentType" : 5126,
+            "count" : 4,
+            "max" : [
+                1.0000003576278687,
+                0,
+                1.0000003576278687
+            ]
+        },
+        {
+            "type" : "SCALAR",
+            "count" : 6,
+            "bufferView" : 3,
+            "componentType" : 5123
+        }
+    ],
+    "bufferViews" : [
+        {
+            "byteOffset" : 0,
+            "buffer" : 0,
+            "byteLength" : 32
+        },
+        {
+            "byteOffset" : 32,
+            "buffer" : 0,
+            "byteLength" : 48
+        },
+        {
+            "byteOffset" : 80,
+            "buffer" : 0,
+            "byteLength" : 48
+        },
+        {
+            "byteOffset" : 128,
+            "buffer" : 0,
+            "byteLength" : 12
+        }
+    ],
+    "samplers" : [
+        {
+            "wrapS" : 10497,
+            "minFilter" : 9986,
+            "magFilter" : 9729,
+            "wrapT" : 10497
+        }
+    ],
+    "buffers" : [
+        {
+            "uri" : "grass_center.bin",
+            "byteLength" : 140
+        }
+    ]
+}

@@ -1,0 +1,139 @@
+{
+    "asset" : {
+        "generator" : "Khronos glTF Blender I/O v1.2.20",
+        "version" : "2.0"
+    },
+    "extensionsUsed" : [
+        "KHR_materials_unlit"
+    ],
+    "scene" : 0,
+    "scenes" : [
+        {
+            "nodes" : [
+                0
+            ],
+            "name" : "Scene"
+        }
+    ],
+    "nodes" : [
+        {
+            "mesh" : 0,
+            "name" : "GrassSlopeCorner -col"
+        }
+    ],
+    "materials" : [
+        {
+            "pbrMetallicRoughness" : {
+                "baseColorTexture" : {
+                    "texCoord" : 0,
+                    "index" : 0
+                }
+            },
+            "name" : "grass",
+            "extensions" : {
+                "KHR_materials_unlit" : {}
+            }
+        }
+    ],
+    "meshes" : [
+        {
+            "name" : "GrassSlopeCorner.001",
+            "primitives" : [
+                {
+                    "indices" : 3,
+                    "material" : 0,
+                    "attributes" : {
+                        "TEXCOORD_0" : 0,
+                        "NORMAL" : 1,
+                        "POSITION" : 2
+                    }
+                }
+            ]
+        }
+    ],
+    "textures" : [
+        {
+            "source" : 0,
+            "sampler" : 0
+        }
+    ],
+    "images" : [
+        {
+            "mimeType" : "image/png",
+            "uri" : "grass.png",
+            "name" : "grass.png"
+        }
+    ],
+    "accessors" : [
+        {
+            "componentType" : 5126,
+            "count" : 6,
+            "type" : "VEC2",
+            "bufferView" : 0
+        },
+        {
+            "componentType" : 5126,
+            "count" : 6,
+            "type" : "VEC3",
+            "bufferView" : 1
+        },
+        {
+            "max" : [
+                1.0000003576278687,
+                1,
+                1.0000003576278687
+            ],
+            "bufferView" : 2,
+            "componentType" : 5126,
+            "count" : 6,
+            "min" : [
+                -0.9999997019767761,
+                0,
+                -0.9999999403953552
+            ],
+            "type" : "VEC3"
+        },
+        {
+            "componentType" : 5123,
+            "count" : 6,
+            "type" : "SCALAR",
+            "bufferView" : 3
+        }
+    ],
+    "bufferViews" : [
+        {
+            "buffer" : 0,
+            "byteOffset" : 0,
+            "byteLength" : 48
+        },
+        {
+            "buffer" : 0,
+            "byteOffset" : 48,
+            "byteLength" : 72
+        },
+        {
+            "buffer" : 0,
+            "byteOffset" : 120,
+            "byteLength" : 72
+        },
+        {
+            "buffer" : 0,
+            "byteOffset" : 192,
+            "byteLength" : 12
+        }
+    ],
+    "samplers" : [
+        {
+            "wrapT" : 10497,
+            "minFilter" : 9986,
+            "wrapS" : 10497,
+            "magFilter" : 9729
+        }
+    ],
+    "buffers" : [
+        {
+            "uri" : "grass_slope_corner.bin",
+            "byteLength" : 204
+        }
+    ]
+}

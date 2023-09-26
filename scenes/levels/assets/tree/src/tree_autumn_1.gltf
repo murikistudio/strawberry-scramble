@@ -1,0 +1,291 @@
+{
+    "asset" : {
+        "generator" : "Khronos glTF Blender I/O v1.2.20",
+        "version" : "2.0"
+    },
+    "extensionsUsed" : [
+        "KHR_materials_unlit"
+    ],
+    "scene" : 0,
+    "scenes" : [
+        {
+            "nodes" : [
+                1
+            ],
+            "name" : "Scene"
+        }
+    ],
+    "nodes" : [
+        {
+            "name" : "Tree1Collider -colonly",
+            "mesh" : 0
+        },
+        {
+            "children" : [
+                0
+            ],
+            "name" : "Tree1",
+            "mesh" : 1
+        }
+    ],
+    "materials" : [
+        {
+            "pbrMetallicRoughness" : {
+                "baseColorTexture" : {
+                    "index" : 0,
+                    "texCoord" : 0
+                }
+            },
+            "extensions" : {
+                "KHR_materials_unlit" : {}
+            },
+            "name" : "tree_trunk_2"
+        },
+        {
+            "pbrMetallicRoughness" : {
+                "baseColorTexture" : {
+                    "index" : 1,
+                    "texCoord" : 0
+                }
+            },
+            "extensions" : {
+                "KHR_materials_unlit" : {}
+            },
+            "name" : "tree_autumn_leaves"
+        }
+    ],
+    "meshes" : [
+        {
+            "name" : "Tree1Collider.001",
+            "primitives" : [
+                {
+                    "indices" : 2,
+                    "attributes" : {
+                        "NORMAL" : 0,
+                        "POSITION" : 1
+                    }
+                }
+            ]
+        },
+        {
+            "name" : "Tree1.001",
+            "primitives" : [
+                {
+                    "material" : 0,
+                    "indices" : 6,
+                    "attributes" : {
+                        "NORMAL" : 3,
+                        "POSITION" : 4,
+                        "TEXCOORD_0" : 5
+                    }
+                },
+                {
+                    "material" : 1,
+                    "indices" : 10,
+                    "attributes" : {
+                        "NORMAL" : 7,
+                        "POSITION" : 8,
+                        "TEXCOORD_0" : 9
+                    }
+                }
+            ]
+        }
+    ],
+    "textures" : [
+        {
+            "source" : 0,
+            "sampler" : 0
+        },
+        {
+            "source" : 1,
+            "sampler" : 1
+        }
+    ],
+    "images" : [
+        {
+            "uri" : "tree_trunk_2.png",
+            "name" : "tree_trunk_2.png",
+            "mimeType" : "image/png"
+        },
+        {
+            "uri" : "tree_autumn_leaves_2.png",
+            "name" : "tree_autumn_leaves_2.png",
+            "mimeType" : "image/png"
+        }
+    ],
+    "accessors" : [
+        {
+            "type" : "VEC3",
+            "bufferView" : 0,
+            "count" : 24,
+            "componentType" : 5126
+        },
+        {
+            "type" : "VEC3",
+            "bufferView" : 1,
+            "min" : [
+                -0.3574238419532776,
+                0,
+                -0.35918065905570984
+            ],
+            "componentType" : 5126,
+            "count" : 24,
+            "max" : [
+                0.5024468898773193,
+                3.123422145843506,
+                0.694324254989624
+            ]
+        },
+        {
+            "type" : "SCALAR",
+            "bufferView" : 2,
+            "count" : 36,
+            "componentType" : 5123
+        },
+        {
+            "type" : "VEC3",
+            "bufferView" : 3,
+            "count" : 104,
+            "componentType" : 5126
+        },
+        {
+            "type" : "VEC3",
+            "bufferView" : 4,
+            "min" : [
+                -0.674446702003479,
+                -0.050850749015808105,
+                -0.49383243918418884
+            ],
+            "componentType" : 5126,
+            "count" : 104,
+            "max" : [
+                1.0135873556137085,
+                1.4996225833892822,
+                0.7047730684280396
+            ]
+        },
+        {
+            "type" : "VEC2",
+            "bufferView" : 5,
+            "count" : 104,
+            "componentType" : 5126
+        },
+        {
+            "type" : "SCALAR",
+            "bufferView" : 6,
+            "count" : 336,
+            "componentType" : 5123
+        },
+        {
+            "type" : "VEC3",
+            "bufferView" : 7,
+            "count" : 695,
+            "componentType" : 5126
+        },
+        {
+            "type" : "VEC3",
+            "bufferView" : 8,
+            "min" : [
+                -1.448094367980957,
+                -0.06718885898590088,
+                -1.2629568576812744
+            ],
+            "componentType" : 5126,
+            "count" : 695,
+            "max" : [
+                1.4376468658447266,
+                3.0156235694885254,
+                1.2629563808441162
+            ]
+        },
+        {
+            "type" : "VEC2",
+            "bufferView" : 9,
+            "count" : 695,
+            "componentType" : 5126
+        },
+        {
+            "type" : "SCALAR",
+            "bufferView" : 10,
+            "count" : 1236,
+            "componentType" : 5123
+        }
+    ],
+    "bufferViews" : [
+        {
+            "byteOffset" : 0,
+            "buffer" : 0,
+            "byteLength" : 288
+        },
+        {
+            "byteOffset" : 288,
+            "buffer" : 0,
+            "byteLength" : 288
+        },
+        {
+            "byteOffset" : 576,
+            "buffer" : 0,
+            "byteLength" : 72
+        },
+        {
+            "byteOffset" : 648,
+            "buffer" : 0,
+            "byteLength" : 1248
+        },
+        {
+            "byteOffset" : 1896,
+            "buffer" : 0,
+            "byteLength" : 1248
+        },
+        {
+            "byteOffset" : 3144,
+            "buffer" : 0,
+            "byteLength" : 832
+        },
+        {
+            "byteOffset" : 3976,
+            "buffer" : 0,
+            "byteLength" : 672
+        },
+        {
+            "byteOffset" : 4648,
+            "buffer" : 0,
+            "byteLength" : 8340
+        },
+        {
+            "byteOffset" : 12988,
+            "buffer" : 0,
+            "byteLength" : 8340
+        },
+        {
+            "byteOffset" : 21328,
+            "buffer" : 0,
+            "byteLength" : 5560
+        },
+        {
+            "byteOffset" : 26888,
+            "buffer" : 0,
+            "byteLength" : 2472
+        }
+    ],
+    "samplers" : [
+        {
+            "wrapS" : 10497,
+            "minFilter" : 9986,
+            "magFilter" : 9729,
+            "wrapT" : 10497
+        },
+        {
+            "wrapS" : 10497,
+            "minFilter" : 9986,
+            "magFilter" : 9729,
+            "wrapT" : 10497
+        }
+    ],
+    "buffers" : [
+        {
+            "uri" : "tree_autumn_1.bin",
+            "byteLength" : 29360
+        }
+    ]
+}

@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://scenes/levels/assets/tree/src/tree_4.gltf" type="PackedScene" id=1]
 [ext_resource path="res://scenes/levels/assets/tree/src/tree_1.gltf" type="PackedScene" id=2]
@@ -8,8 +8,13 @@
 [ext_resource path="res://scenes/levels/assets/tree/src/tree_6.gltf" type="PackedScene" id=6]
 [ext_resource path="res://scenes/levels/assets/tree/src/tree_5.gltf" type="PackedScene" id=7]
 [ext_resource path="res://scenes/levels/assets/tree/src/bush_2.gltf" type="PackedScene" id=8]
+[ext_resource path="res://scenes/levels/assets/tree/src/tree_autumn_1.gltf" type="PackedScene" id=9]
+[ext_resource path="res://scenes/levels/assets/tree/src/palm_tree.gltf" type="PackedScene" id=10]
 
 [node name="LibTrees" type="Spatial"]
+
+[node name="tree_autumn_1" parent="." instance=ExtResource( 9 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 0 )
 
 [node name="Tree1" parent="." instance=ExtResource( 2 )]
 
@@ -37,6 +42,10 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -13, 0, -4 )
 [node name="Bush2" parent="." instance=ExtResource( 8 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0, -4 )
 
+[node name="palm_tree" parent="." instance=ExtResource( 10 )]
+transform = Transform( 0.999992, -0.00397934, 0, 0.00397934, 0.999992, 0, 0, 0, 1, 2.28091, 0, -3.25019 )
+
+[editable path="tree_autumn_1"]
 [editable path="Tree1"]
 [editable path="Tree2"]
 [editable path="Tree3"]
