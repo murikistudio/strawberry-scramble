@@ -13,7 +13,7 @@ var _step_time := 0.0
 
 # State overrides
 func enter() -> void:
-	player.set_animation("run_loop", 1.8)
+	player.set_animation("run_loop", 1.32)
 	_step_time = 0.0
 
 
@@ -22,7 +22,7 @@ func physics_process(delta: float) -> BaseState:
 
 	_step_time += delta
 
-	step_sound_interval = 0.25 / player.move_weight.length()
+	step_sound_interval = 0.3 / player.move_weight.length()
 
 	if _step_time >= step_sound_interval:
 		_step_time = 0.0
@@ -38,4 +38,3 @@ func physics_process(delta: float) -> BaseState:
 		return get_state(state_jump)
 
 	return null
-
