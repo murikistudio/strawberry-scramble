@@ -6,14 +6,14 @@
 
 [node name="LibGrass" type="Spatial"]
 
-[node name="grass_autumn_1" parent="." instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.06084, 0, 0 )
-
 [node name="Grass1" parent="." instance=ExtResource( 2 )]
 
 [node name="Grass2" parent="." instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0 )
 
-[editable path="grass_autumn_1"]
+[node name="Autumn1" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.93916, 0, 0 )
+
 [editable path="Grass1"]
 [editable path="Grass2"]
+[editable path="Autumn1"]
