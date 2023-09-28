@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/cannon.gltf-43fe4b1ec7c0e937f4a236ad7eaf52e1.scn"
+path="res://.import/cannon.gltf-3c07b7e763e885be6bab94b42e35c675.scn"
 
 [deps]
 
-source_file="res://scenes/levels/assets/cannon/src/cannon.gltf"
-dest_files=[ "res://.import/cannon.gltf-43fe4b1ec7c0e937f4a236ad7eaf52e1.scn" ]
+source_file="res://scenes/levels/assets/interactive/cannon/src/cannon.gltf"
+dest_files=[ "res://.import/cannon.gltf-3c07b7e763e885be6bab94b42e35c675.scn" ]
 
 [params]
 

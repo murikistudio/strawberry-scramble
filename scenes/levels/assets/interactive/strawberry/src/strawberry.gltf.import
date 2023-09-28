@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/fire.gltf-3af80bb858ab575215ee8487a64215ec.scn"
+path="res://.import/strawberry.gltf-c4edd0316d035e9494e28394aac42ada.scn"
 
 [deps]
 
-source_file="res://scenes/levels/assets/cannon/src/fire.gltf"
-dest_files=[ "res://.import/fire.gltf-3af80bb858ab575215ee8487a64215ec.scn" ]
+source_file="res://scenes/levels/assets/interactive/strawberry/src/strawberry.gltf"
+dest_files=[ "res://.import/strawberry.gltf-c4edd0316d035e9494e28394aac42ada.scn" ]
 
 [params]
 

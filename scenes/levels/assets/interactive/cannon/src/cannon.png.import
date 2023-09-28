@@ -2,9 +2,9 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/flag.png-6c201b7e233b913e5f8646835fba91a2.s3tc.stex"
-path.etc2="res://.import/flag.png-6c201b7e233b913e5f8646835fba91a2.etc2.stex"
-path.etc="res://.import/flag.png-6c201b7e233b913e5f8646835fba91a2.etc.stex"
+path.s3tc="res://.import/cannon.png-2c2efd74086b7612e7aad1bf7a463f13.s3tc.stex"
+path.etc2="res://.import/cannon.png-2c2efd74086b7612e7aad1bf7a463f13.etc2.stex"
+path.etc="res://.import/cannon.png-2c2efd74086b7612e7aad1bf7a463f13.etc.stex"
 metadata={
 "imported_formats": [ "s3tc", "etc2", "etc" ],
 "vram_texture": true
@@ -12,8 +12,8 @@ metadata={
 
 [deps]
 
-source_file="res://scenes/levels/assets/checkpoint/src/flag.png"
-dest_files=[ "res://.import/flag.png-6c201b7e233b913e5f8646835fba91a2.s3tc.stex", "res://.import/flag.png-6c201b7e233b913e5f8646835fba91a2.etc2.stex", "res://.import/flag.png-6c201b7e233b913e5f8646835fba91a2.etc.stex" ]
+source_file="res://scenes/levels/assets/interactive/cannon/src/cannon.png"
+dest_files=[ "res://.import/cannon.png-2c2efd74086b7612e7aad1bf7a463f13.s3tc.stex", "res://.import/cannon.png-2c2efd74086b7612e7aad1bf7a463f13.etc2.stex", "res://.import/cannon.png-2c2efd74086b7612e7aad1bf7a463f13.etc.stex" ]
 
 [params]
 

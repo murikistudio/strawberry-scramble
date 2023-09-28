@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/house_1.gltf-f034b7aa8a5bd09241e2fd88b3e67c52.scn"
+path="res://.import/flag.gltf-254d432bec02653c7a82e69a63d88918.scn"
 
 [deps]
 
-source_file="res://scenes/levels/assets/house/src/house_1.gltf"
-dest_files=[ "res://.import/house_1.gltf-f034b7aa8a5bd09241e2fd88b3e67c52.scn" ]
+source_file="res://scenes/levels/assets/interactive/checkpoint/src/flag.gltf"
+dest_files=[ "res://.import/flag.gltf-254d432bec02653c7a82e69a63d88918.scn" ]
 
 [params]
 

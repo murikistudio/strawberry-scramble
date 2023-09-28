@@ -2,12 +2,12 @@
 
 [ext_resource path="res://resources/level_env.tres" type="Environment" id=1]
 [ext_resource path="res://scenes/characters/player/player.tscn" type="PackedScene" id=2]
-[ext_resource path="res://scenes/levels/assets/house/house.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/levels/assets/interactive/house/house.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scenes/levels/assets/grid_maps.tscn" type="PackedScene" id=4]
-[ext_resource path="res://scenes/levels/assets/strawberry/strawberry.tscn" type="PackedScene" id=5]
-[ext_resource path="res://scenes/levels/assets/dialog/dialog.tscn" type="PackedScene" id=6]
-[ext_resource path="res://scenes/levels/assets/cannon/cannon.tscn" type="PackedScene" id=7]
-[ext_resource path="res://scenes/levels/assets/cannon/target.tscn" type="PackedScene" id=8]
+[ext_resource path="res://scenes/levels/assets/interactive/strawberry/strawberry.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/levels/assets/interactive/dialog/dialog.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scenes/levels/assets/interactive/cannon/cannon.tscn" type="PackedScene" id=7]
+[ext_resource path="res://scenes/levels/assets/interactive/cannon/target.tscn" type="PackedScene" id=8]
 
 [node name="Level02" type="Spatial"]
 
