@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/grass_wall_corner.gltf-4903ef50e0f9901e678cf5d9e63e35a3.scn"
+path="res://.import/grass_autumn_corner_2.gltf-bee2686c9a9805b0ea521da71177a047.scn"
 
 [deps]
 
-source_file="res://scenes/levels/assets/ground_autumn/src/grass_wall_corner.gltf"
-dest_files=[ "res://.import/grass_wall_corner.gltf-4903ef50e0f9901e678cf5d9e63e35a3.scn" ]
+source_file="res://scenes/levels/assets/autumn/ground/src/grass_autumn_corner_2.gltf"
+dest_files=[ "res://.import/grass_autumn_corner_2.gltf-bee2686c9a9805b0ea521da71177a047.scn" ]
 
 [params]
 

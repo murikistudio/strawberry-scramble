@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/grass_wall_side_preview.png-55b8539295c47357a078e4bb2756538d.stex"
+path="res://.import/grass_slope_preview.png-8f69d9535ee5f28318aaf9c14f315181.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/levels/assets/ground_autumn/src/grass_wall_side_preview.png"
-dest_files=[ "res://.import/grass_wall_side_preview.png-55b8539295c47357a078e4bb2756538d.stex" ]
+source_file="res://scenes/levels/assets/autumn/ground/src/grass_slope_preview.png"
+dest_files=[ "res://.import/grass_slope_preview.png-8f69d9535ee5f28318aaf9c14f315181.stex" ]
 
 [params]
 
