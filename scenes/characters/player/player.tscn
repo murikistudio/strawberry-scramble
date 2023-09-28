@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=2]
+[gd_scene load_steps=28 format=2]
 
 [ext_resource path="res://scenes/characters/player/player.gd" type="Script" id=1]
 [ext_resource path="res://classes/base/state_manager.gd" type="Script" id=2]
@@ -22,6 +22,7 @@
 [ext_resource path="res://scenes/levels/assets/tree/src/bush.tres" type="Material" id=20]
 [ext_resource path="res://scenes/levels/assets/tree/src/tree_leaves.tres" type="Material" id=21]
 [ext_resource path="res://scenes/levels/assets/tree/src/tree_leaves_2.tres" type="Material" id=22]
+[ext_resource path="res://scenes/levels/assets/grass/src/grass_002.tres" type="Material" id=23]
 
 [sub_resource type="CapsuleShape" id=1]
 radius = 0.25
@@ -54,7 +55,7 @@ intertia_factor = 0.18
 view_forward_multiplier = 1.5
 scene_water_splash = ExtResource( 8 )
 scene_balloon_pop = ExtResource( 18 )
-shaders_to_update = [ ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ) ]
+shaders_to_update = [ ExtResource( 19 ), ExtResource( 23 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ) ]
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
 transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0 )
