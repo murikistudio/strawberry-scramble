@@ -12,9 +12,9 @@
 [ext_resource path="res://scenes/levels/assets/interactive/cannon/cannon.tscn" type="PackedScene" id=10]
 [ext_resource path="res://scenes/levels/assets/interactive/cannon/target.tscn" type="PackedScene" id=11]
 [ext_resource path="res://scenes/levels/assets/interactive/checkpoint/checkpoint.tscn" type="PackedScene" id=13]
-[ext_resource path="res://scenes/levels/assets/ground_grass/grass_platform.tscn" type="PackedScene" id=14]
-[ext_resource path="res://scenes/levels/assets/fence/big_fence_gate.tscn" type="PackedScene" id=15]
-[ext_resource path="res://scenes/levels/assets/fence/big_fence_lever.tscn" type="PackedScene" id=16]
+[ext_resource path="res://scenes/levels/assets/common/ground/grass_platform.tscn" type="PackedScene" id=14]
+[ext_resource path="res://scenes/levels/assets/common/fences/big_fence_gate.tscn" type="PackedScene" id=15]
+[ext_resource path="res://scenes/levels/assets/common/fences/big_fence_lever.tscn" type="PackedScene" id=16]
 [ext_resource path="res://scenes/characters/snail/snail.tscn" type="PackedScene" id=18]
 [ext_resource path="res://scenes/characters/fish/fish.tscn" type="PackedScene" id=19]
 

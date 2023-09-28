@@ -18,11 +18,11 @@
 [ext_resource path="res://scenes/characters/player/states/stop.gd" type="Script" id=16]
 [ext_resource path="res://addons/utils/config_enabler.gd" type="Script" id=17]
 [ext_resource path="res://scenes/effects/balloon_pop/balloon_pop.tscn" type="PackedScene" id=18]
-[ext_resource path="res://scenes/levels/assets/grass/src/grass.tres" type="Material" id=19]
-[ext_resource path="res://scenes/levels/assets/tree/src/bush.tres" type="Material" id=20]
-[ext_resource path="res://scenes/levels/assets/tree/src/tree_leaves.tres" type="Material" id=21]
-[ext_resource path="res://scenes/levels/assets/tree/src/tree_leaves_2.tres" type="Material" id=22]
-[ext_resource path="res://scenes/levels/assets/grass/src/grass_002.tres" type="Material" id=23]
+[ext_resource path="res://scenes/levels/assets/common/grass/src/grass.tres" type="Material" id=19]
+[ext_resource path="res://scenes/levels/assets/common/trees/src/bush.tres" type="Material" id=20]
+[ext_resource path="res://scenes/levels/assets/common/trees/src/tree_leaves.tres" type="Material" id=21]
+[ext_resource path="res://scenes/levels/assets/common/trees/src/tree_leaves_2.tres" type="Material" id=22]
+[ext_resource path="res://scenes/levels/assets/autumn/grass/src/grass_002.tres" type="Material" id=23]
 
 [sub_resource type="CapsuleShape" id=1]
 radius = 0.25

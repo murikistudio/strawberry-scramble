@@ -4,7 +4,7 @@
 [ext_resource path="res://scenes/characters/player/player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://resources/level_env.tres" type="Environment" id=3]
 [ext_resource path="res://scenes/levels/assets/grid_maps.tscn" type="PackedScene" id=4]
-[ext_resource path="res://scenes/levels/assets/ground_grass/grass_platform.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/levels/assets/common/ground/grass_platform.tscn" type="PackedScene" id=5]
 [ext_resource path="res://scenes/levels/assets/interactive/strawberry/strawberry.tscn" type="PackedScene" id=6]
 [ext_resource path="res://scenes/levels/assets/interactive/dialog/dialog.tscn" type="PackedScene" id=7]
 
