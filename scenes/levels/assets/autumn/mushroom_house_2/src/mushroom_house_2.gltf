@@ -1,0 +1,201 @@
+{
+    "asset" : {
+        "version" : "2.0",
+        "generator" : "Khronos glTF Blender I/O v1.2.20"
+    },
+    "extensionsUsed" : [
+        "KHR_materials_unlit"
+    ],
+    "scene" : 0,
+    "scenes" : [
+        {
+            "name" : "Scene",
+            "nodes" : [
+                1
+            ]
+        }
+    ],
+    "nodes" : [
+        {
+            "name" : "MushroomHouse2Collider -colonly",
+            "mesh" : 0
+        },
+        {
+            "children" : [
+                0
+            ],
+            "name" : "MushroomHouse2Mesh",
+            "mesh" : 1
+        }
+    ],
+    "materials" : [
+        {
+            "extensions" : {
+                "KHR_materials_unlit" : {}
+            },
+            "name" : "mushroom_house_2",
+            "pbrMetallicRoughness" : {
+                "baseColorTexture" : {
+                    "texCoord" : 0,
+                    "index" : 0
+                }
+            }
+        }
+    ],
+    "meshes" : [
+        {
+            "name" : "MushroomHouse2Collider.001",
+            "primitives" : [
+                {
+                    "indices" : 2,
+                    "attributes" : {
+                        "POSITION" : 0,
+                        "NORMAL" : 1
+                    }
+                }
+            ]
+        },
+        {
+            "name" : "MushroomHouse2Mesh.001",
+            "primitives" : [
+                {
+                    "indices" : 6,
+                    "attributes" : {
+                        "POSITION" : 3,
+                        "NORMAL" : 4,
+                        "TEXCOORD_0" : 5
+                    },
+                    "material" : 0
+                }
+            ]
+        }
+    ],
+    "textures" : [
+        {
+            "source" : 0,
+            "sampler" : 0
+        }
+    ],
+    "images" : [
+        {
+            "uri" : "mushroom_house_2.png",
+            "mimeType" : "image/png",
+            "name" : "mushroom_house_2.png"
+        }
+    ],
+    "accessors" : [
+        {
+            "componentType" : 5126,
+            "count" : 177,
+            "min" : [
+                -2.1571993827819824,
+                0,
+                -2.093508243560791
+            ],
+            "max" : [
+                2.1571993827819824,
+                4.285338401794434,
+                2.093508243560791
+            ],
+            "bufferView" : 0,
+            "type" : "VEC3"
+        },
+        {
+            "componentType" : 5126,
+            "count" : 177,
+            "bufferView" : 1,
+            "type" : "VEC3"
+        },
+        {
+            "componentType" : 5123,
+            "count" : 276,
+            "bufferView" : 2,
+            "type" : "SCALAR"
+        },
+        {
+            "componentType" : 5126,
+            "count" : 478,
+            "min" : [
+                -2.2069013118743896,
+                -0.007668015547096729,
+                -2.2780439853668213
+            ],
+            "max" : [
+                2.207872152328491,
+                4.380077362060547,
+                2.110564708709717
+            ],
+            "bufferView" : 3,
+            "type" : "VEC3"
+        },
+        {
+            "componentType" : 5126,
+            "count" : 478,
+            "bufferView" : 4,
+            "type" : "VEC3"
+        },
+        {
+            "componentType" : 5126,
+            "count" : 478,
+            "bufferView" : 5,
+            "type" : "VEC2"
+        },
+        {
+            "componentType" : 5123,
+            "count" : 696,
+            "bufferView" : 6,
+            "type" : "SCALAR"
+        }
+    ],
+    "bufferViews" : [
+        {
+            "buffer" : 0,
+            "byteOffset" : 0,
+            "byteLength" : 2124
+        },
+        {
+            "buffer" : 0,
+            "byteOffset" : 2124,
+            "byteLength" : 2124
+        },
+        {
+            "buffer" : 0,
+            "byteOffset" : 4248,
+            "byteLength" : 552
+        },
+        {
+            "buffer" : 0,
+            "byteOffset" : 4800,
+            "byteLength" : 5736
+        },
+        {
+            "buffer" : 0,
+            "byteOffset" : 10536,
+            "byteLength" : 5736
+        },
+        {
+            "buffer" : 0,
+            "byteOffset" : 16272,
+            "byteLength" : 3824
+        },
+        {
+            "buffer" : 0,
+            "byteOffset" : 20096,
+            "byteLength" : 1392
+        }
+    ],
+    "samplers" : [
+        {
+            "wrapT" : 10497,
+            "magFilter" : 9729,
+            "wrapS" : 10497,
+            "minFilter" : 9986
+        }
+    ],
+    "buffers" : [
+        {
+            "uri" : "mushroom_house_2.bin",
+            "byteLength" : 21488
+        }
+    ]
+}

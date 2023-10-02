@@ -1,0 +1,206 @@
+{
+    "asset" : {
+        "version" : "2.0",
+        "generator" : "Khronos glTF Blender I/O v1.2.20"
+    },
+    "extensionsUsed" : [
+        "KHR_materials_unlit"
+    ],
+    "scene" : 0,
+    "scenes" : [
+        {
+            "name" : "Scene",
+            "nodes" : [
+                1
+            ]
+        }
+    ],
+    "nodes" : [
+        {
+            "name" : "ChapelCollider -colonly",
+            "translation" : [
+                0,
+                1,
+                0
+            ],
+            "mesh" : 0
+        },
+        {
+            "name" : "ChapelMesh",
+            "children" : [
+                0
+            ],
+            "mesh" : 1
+        }
+    ],
+    "materials" : [
+        {
+            "name" : "chapel",
+            "extensions" : {
+                "KHR_materials_unlit" : {}
+            },
+            "pbrMetallicRoughness" : {
+                "baseColorTexture" : {
+                    "index" : 0,
+                    "texCoord" : 0
+                }
+            }
+        }
+    ],
+    "meshes" : [
+        {
+            "name" : "ChapelCollider.001",
+            "primitives" : [
+                {
+                    "indices" : 2,
+                    "attributes" : {
+                        "NORMAL" : 0,
+                        "POSITION" : 1
+                    }
+                }
+            ]
+        },
+        {
+            "name" : "ChapelMesh.001",
+            "primitives" : [
+                {
+                    "material" : 0,
+                    "indices" : 6,
+                    "attributes" : {
+                        "TEXCOORD_0" : 3,
+                        "NORMAL" : 4,
+                        "POSITION" : 5
+                    }
+                }
+            ]
+        }
+    ],
+    "textures" : [
+        {
+            "source" : 0,
+            "sampler" : 0
+        }
+    ],
+    "images" : [
+        {
+            "name" : "chapel.png",
+            "mimeType" : "image/png",
+            "uri" : "chapel.png"
+        }
+    ],
+    "accessors" : [
+        {
+            "type" : "VEC3",
+            "count" : 84,
+            "componentType" : 5126,
+            "bufferView" : 0
+        },
+        {
+            "type" : "VEC3",
+            "count" : 84,
+            "max" : [
+                1.8350588083267212,
+                5.517311096191406,
+                2.0366969108581543
+            ],
+            "componentType" : 5126,
+            "bufferView" : 1,
+            "min" : [
+                -1.937575101852417,
+                -1,
+                -2.1699681282043457
+            ]
+        },
+        {
+            "type" : "SCALAR",
+            "count" : 132,
+            "componentType" : 5123,
+            "bufferView" : 2
+        },
+        {
+            "type" : "VEC2",
+            "count" : 1390,
+            "componentType" : 5126,
+            "bufferView" : 3
+        },
+        {
+            "type" : "VEC3",
+            "count" : 1390,
+            "componentType" : 5126,
+            "bufferView" : 4
+        },
+        {
+            "type" : "VEC3",
+            "count" : 1390,
+            "max" : [
+                1.8389809131622314,
+                6.866171360015869,
+                2.071068286895752
+            ],
+            "componentType" : 5126,
+            "bufferView" : 5,
+            "min" : [
+                -1.9313781261444092,
+                -0.019406147301197052,
+                -2.160552978515625
+            ]
+        },
+        {
+            "type" : "SCALAR",
+            "count" : 2088,
+            "componentType" : 5123,
+            "bufferView" : 6
+        }
+    ],
+    "bufferViews" : [
+        {
+            "buffer" : 0,
+            "byteLength" : 1008,
+            "byteOffset" : 0
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 1008,
+            "byteOffset" : 1008
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 264,
+            "byteOffset" : 2016
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 11120,
+            "byteOffset" : 2280
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 16680,
+            "byteOffset" : 13400
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 16680,
+            "byteOffset" : 30080
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 4176,
+            "byteOffset" : 46760
+        }
+    ],
+    "samplers" : [
+        {
+            "wrapS" : 10497,
+            "minFilter" : 9986,
+            "magFilter" : 9729,
+            "wrapT" : 10497
+        }
+    ],
+    "buffers" : [
+        {
+            "uri" : "chapel.bin",
+            "byteLength" : 50936
+        }
+    ]
+}
