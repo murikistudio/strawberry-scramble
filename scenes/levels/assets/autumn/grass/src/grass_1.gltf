@@ -23,11 +23,11 @@
     ],
     "materials" : [
         {
-            "name" : "grass.002",
+            "name" : "grass",
             "pbrMetallicRoughness" : {
                 "baseColorTexture" : {
-                    "index" : 0,
-                    "texCoord" : 0
+                    "texCoord" : 0,
+                    "index" : 0
                 }
             },
             "extensions" : {
@@ -39,13 +39,13 @@
         {
             "primitives" : [
                 {
+                    "material" : 0,
                     "indices" : 3,
                     "attributes" : {
-                        "NORMAL" : 0,
-                        "TEXCOORD_0" : 1,
-                        "POSITION" : 2
-                    },
-                    "material" : 0
+                        "TEXCOORD_0" : 0,
+                        "POSITION" : 1,
+                        "NORMAL" : 2
+                    }
                 }
             ],
             "name" : "Grass1Mesh.001"
@@ -59,27 +59,21 @@
     ],
     "images" : [
         {
-            "mimeType" : "image/png",
-            "name" : "grass_autumn.png",
-            "uri" : "grass_autumn.png"
+            "uri" : "grass.png",
+            "name" : "grass.png",
+            "mimeType" : "image/png"
         }
     ],
     "accessors" : [
         {
-            "count" : 240,
-            "type" : "VEC3",
             "bufferView" : 0,
-            "componentType" : 5126
+            "count" : 240,
+            "componentType" : 5126,
+            "type" : "VEC2"
         },
         {
-            "count" : 240,
-            "type" : "VEC2",
             "bufferView" : 1,
-            "componentType" : 5126
-        },
-        {
-            "count" : 240,
-            "type" : "VEC3",
+            "componentType" : 5126,
             "max" : [
                 0.8288808465003967,
                 0.3684206008911133,
@@ -90,50 +84,56 @@
                 -0.022004442289471626,
                 -0.7830392122268677
             ],
-            "bufferView" : 2,
-            "componentType" : 5126
+            "count" : 240,
+            "type" : "VEC3"
         },
         {
-            "count" : 360,
-            "type" : "SCALAR",
+            "bufferView" : 2,
+            "count" : 240,
+            "componentType" : 5126,
+            "type" : "VEC3"
+        },
+        {
             "bufferView" : 3,
-            "componentType" : 5123
+            "count" : 360,
+            "componentType" : 5123,
+            "type" : "SCALAR"
         }
     ],
     "bufferViews" : [
         {
-            "byteLength" : 2880,
             "buffer" : 0,
+            "byteLength" : 1920,
             "byteOffset" : 0
         },
         {
-            "byteLength" : 1920,
             "buffer" : 0,
-            "byteOffset" : 2880
+            "byteLength" : 2880,
+            "byteOffset" : 1920
         },
         {
-            "byteLength" : 2880,
             "buffer" : 0,
+            "byteLength" : 2880,
             "byteOffset" : 4800
         },
         {
-            "byteLength" : 720,
             "buffer" : 0,
+            "byteLength" : 720,
             "byteOffset" : 7680
         }
     ],
     "samplers" : [
         {
             "wrapT" : 10497,
-            "magFilter" : 9729,
             "wrapS" : 10497,
-            "minFilter" : 9986
+            "minFilter" : 9986,
+            "magFilter" : 9729
         }
     ],
     "buffers" : [
         {
-            "byteLength" : 8400,
-            "uri" : "grass_autumn_1.bin"
+            "uri" : "grass_1.bin",
+            "byteLength" : 8400
         }
     ]
 }

@@ -22,7 +22,7 @@
 [ext_resource path="res://scenes/levels/assets/common/trees/src/bush.tres" type="Material" id=20]
 [ext_resource path="res://scenes/levels/assets/common/trees/src/tree_leaves.tres" type="Material" id=21]
 [ext_resource path="res://scenes/levels/assets/common/trees/src/tree_leaves_2.tres" type="Material" id=22]
-[ext_resource path="res://scenes/levels/assets/autumn/grass/src/grass_002.tres" type="Material" id=23]
+[ext_resource path="res://scenes/levels/assets/autumn/grass/src/grass.tres" type="Material" id=23]
 
 [sub_resource type="CapsuleShape" id=1]
 radius = 0.25
