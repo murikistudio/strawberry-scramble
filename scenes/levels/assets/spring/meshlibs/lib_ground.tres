@@ -1,15 +1,13 @@
-[gd_resource type="MeshLibrary" load_steps=29 format=2]
+[gd_resource type="MeshLibrary" load_steps=23 format=2]
 
-[ext_resource path="res://scenes/levels/assets/common/ground/src/grass_corner_3_preview.png" type="Texture" id=1]
-[ext_resource path="res://scenes/levels/assets/common/ground/src/grass_slope_preview.png" type="Texture" id=2]
-[ext_resource path="res://scenes/levels/assets/common/ground/src/grass_corner_1_preview.png" type="Texture" id=3]
-[ext_resource path="res://scenes/levels/assets/common/ground/src/grass_side_preview.png" type="Texture" id=4]
-[ext_resource path="res://scenes/levels/assets/common/ground/src/grass_center_preview.png" type="Texture" id=5]
-[ext_resource path="res://scenes/levels/assets/common/ground/src/grass_slope_corner_preview.png" type="Texture" id=6]
-[ext_resource path="res://scenes/levels/assets/common/ground/src/grass_wall_corner_preview.png" type="Texture" id=7]
-[ext_resource path="res://scenes/levels/assets/common/ground/src/grass_corner_2_preview.png" type="Texture" id=8]
-[ext_resource path="res://scenes/levels/assets/common/ground/src/grass_wall_side_preview.png" type="Texture" id=9]
-[ext_resource path="res://scenes/levels/assets/common/ground/src/grass.tres" type="Material" id=10]
+[ext_resource path="res://scenes/levels/assets/common/ground/src/grass.tres" type="Material" id=1]
+[ext_resource path="res://scenes/levels/assets/common/ground/src/grass_wall_corner_preview.png" type="Texture" id=2]
+[ext_resource path="res://scenes/levels/assets/common/ground/src/grass_wall_side_preview.png" type="Texture" id=3]
+[ext_resource path="res://scenes/levels/assets/common/ground/src/grass_corner_3_preview.png" type="Texture" id=4]
+[ext_resource path="res://scenes/levels/assets/common/ground/src/grass_side_preview.png" type="Texture" id=5]
+[ext_resource path="res://scenes/levels/assets/common/ground/src/grass_corner_1_preview.png" type="Texture" id=6]
+[ext_resource path="res://scenes/levels/assets/common/ground/src/grass_corner_2_preview.png" type="Texture" id=7]
+[ext_resource path="res://scenes/levels/assets/common/ground/src/grass_center_preview.png" type="Texture" id=8]
 
 [sub_resource type="ArrayMesh" id=1]
 resource_name = "grass_center_GrassCenter001"
@@ -20,7 +18,7 @@ surfaces/0 = {
 "blend_shape_data": [  ],
 "format": 2194711,
 "index_count": 6,
-"material": ExtResource( 10 ),
+"material": ExtResource( 1 ),
 "primitive": 4,
 "skeleton_aabb": [  ],
 "vertex_count": 4
@@ -38,7 +36,7 @@ surfaces/0 = {
 "blend_shape_data": [  ],
 "format": 2194711,
 "index_count": 72,
-"material": ExtResource( 10 ),
+"material": ExtResource( 1 ),
 "primitive": 4,
 "skeleton_aabb": [  ],
 "vertex_count": 24
@@ -56,7 +54,7 @@ surfaces/0 = {
 "blend_shape_data": [  ],
 "format": 2194711,
 "index_count": 30,
-"material": ExtResource( 10 ),
+"material": ExtResource( 1 ),
 "primitive": 4,
 "skeleton_aabb": [  ],
 "vertex_count": 13
@@ -74,7 +72,7 @@ surfaces/0 = {
 "blend_shape_data": [  ],
 "format": 2194711,
 "index_count": 36,
-"material": ExtResource( 10 ),
+"material": ExtResource( 1 ),
 "primitive": 4,
 "skeleton_aabb": [  ],
 "vertex_count": 32
@@ -92,7 +90,7 @@ surfaces/0 = {
 "blend_shape_data": [  ],
 "format": 2194711,
 "index_count": 18,
-"material": ExtResource( 10 ),
+"material": ExtResource( 1 ),
 "primitive": 4,
 "skeleton_aabb": [  ],
 "vertex_count": 12
@@ -102,42 +100,6 @@ surfaces/0 = {
 data = PoolVector3Array( 1, 0, -1, 1, -2, -1, 1, -2, 1, 1, 0, -1, 1, -2, 1, 1, 0, 1, -1, 0, -1, 1, 0, -1, 1, 0, 1, -1, 0, 1, -1, 0, -1, 1, 0, 1 )
 
 [sub_resource type="ArrayMesh" id=11]
-resource_name = "grass_slope_GrassSlope001"
-surfaces/0 = {
-"aabb": AABB( -1, 0, -1, 2.00001, 1, 2.00001 ),
-"array_data": PoolByteArray( 5, 0, 128, 63, 0, 0, 128, 51, 247, 255, 127, 63, 0, 84, 95, 58, 85, 57, 85, 57, 255, 255, 127, 191, 0, 0, 128, 63, 251, 255, 127, 191, 0, 84, 92, 57, 85, 53, 0, 56, 247, 255, 127, 191, 0, 0, 0, 0, 5, 0, 128, 63, 0, 84, 126, 63, 85, 53, 85, 57, 251, 255, 127, 63, 0, 0, 128, 63, 2, 0, 128, 191, 0, 84, 72, 54, 255, 55, 85, 53 ),
-"array_index_data": PoolByteArray( 0, 0, 2, 0, 1, 0, 3, 0, 0, 0, 1, 0 ),
-"blend_shape_data": [  ],
-"format": 2194711,
-"index_count": 6,
-"material": ExtResource( 10 ),
-"primitive": 4,
-"skeleton_aabb": [  ],
-"vertex_count": 4
-}
-
-[sub_resource type="ConcavePolygonShape" id=12]
-data = PoolVector3Array( 1, 0, 1, -1, 0, 1, -1, 1, -1, 1, 1, -1, 1, 0, 1, -1, 1, -1 )
-
-[sub_resource type="ArrayMesh" id=13]
-resource_name = "grass_slope_corner_GrassSlopeCorner001"
-surfaces/0 = {
-"aabb": AABB( -1, 0, -1, 2, 1, 2 ),
-"array_data": PoolByteArray( 251, 255, 127, 191, 0, 0, 0, 0, 255, 255, 127, 191, 0, 127, 126, 63, 85, 53, 85, 53, 251, 255, 127, 191, 0, 0, 0, 0, 3, 0, 128, 63, 0, 127, 126, 63, 85, 53, 85, 57, 3, 0, 128, 63, 0, 0, 0, 0, 251, 255, 127, 63, 0, 127, 126, 63, 85, 57, 85, 57, 3, 0, 128, 63, 0, 0, 0, 0, 251, 255, 127, 63, 225, 63, 84, 84, 85, 57, 85, 57, 255, 255, 127, 63, 0, 0, 128, 63, 255, 255, 127, 191, 225, 63, 84, 84, 85, 57, 85, 53, 251, 255, 127, 191, 0, 0, 0, 0, 255, 255, 127, 191, 225, 63, 84, 84, 85, 53, 85, 53 ),
-"array_index_data": PoolByteArray( 0, 0, 2, 0, 1, 0, 3, 0, 5, 0, 4, 0 ),
-"blend_shape_data": [  ],
-"format": 2194711,
-"index_count": 6,
-"material": ExtResource( 10 ),
-"primitive": 4,
-"skeleton_aabb": [  ],
-"vertex_count": 6
-}
-
-[sub_resource type="ConcavePolygonShape" id=14]
-data = PoolVector3Array( -1, 0, -1, 1, 0, 1, -1, 0, 1, 1, 0, 1, -1, 0, -1, 1, 1, -1 )
-
-[sub_resource type="ArrayMesh" id=15]
 resource_name = "grass_wall_side_GrassWallSide001"
 surfaces/0 = {
 "aabb": AABB( 1, -2, -1, 1.00136e-05, 2.00001, 2 ),
@@ -146,16 +108,16 @@ surfaces/0 = {
 "blend_shape_data": [  ],
 "format": 2194711,
 "index_count": 6,
-"material": ExtResource( 10 ),
+"material": ExtResource( 1 ),
 "primitive": 4,
 "skeleton_aabb": [  ],
 "vertex_count": 4
 }
 
-[sub_resource type="ConcavePolygonShape" id=16]
+[sub_resource type="ConcavePolygonShape" id=12]
 data = PoolVector3Array( 1, 0, -1, 1, -2, -1, 1, -2, 1, 1, 0, -1, 1, -2, 1, 1, 0, 1 )
 
-[sub_resource type="ArrayMesh" id=17]
+[sub_resource type="ArrayMesh" id=13]
 resource_name = "grass_wall_corner_GrassWallCorner001"
 surfaces/0 = {
 "aabb": AABB( -0.999998, -2, -1, 2.00001, 2.00001, 2 ),
@@ -164,13 +126,13 @@ surfaces/0 = {
 "blend_shape_data": [  ],
 "format": 2194711,
 "index_count": 18,
-"material": ExtResource( 10 ),
+"material": ExtResource( 1 ),
 "primitive": 4,
 "skeleton_aabb": [  ],
 "vertex_count": 12
 }
 
-[sub_resource type="ConcavePolygonShape" id=18]
+[sub_resource type="ConcavePolygonShape" id=14]
 data = PoolVector3Array( 1, 0, -1, 1, -2, -1, 1, -2, 0, 1, 0, -1, 1, -2, 0, 1, 0, 0, 0, 0, 1, 0, -2, 1, -1, -2, 1, 0, 0, 1, -1, -2, 1, -1, 0, 1, 1, 0, 0, 1, -2, 0, 0, -2, 1, 1, 0, 0, 0, -2, 1, 0, 0, 1 )
 
 [resource]
@@ -179,52 +141,40 @@ item/0/mesh = SubResource( 1 )
 item/0/mesh_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 item/0/shapes = [ SubResource( 2 ), Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 ) ]
 item/0/navmesh_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
-item/0/preview = ExtResource( 5 )
+item/0/preview = ExtResource( 8 )
 item/1/name = "GrassCorner1"
 item/1/mesh = SubResource( 3 )
 item/1/mesh_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 item/1/shapes = [ SubResource( 4 ), Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 ) ]
 item/1/navmesh_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
-item/1/preview = ExtResource( 3 )
+item/1/preview = ExtResource( 6 )
 item/2/name = "GrassCorner2"
 item/2/mesh = SubResource( 5 )
 item/2/mesh_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 item/2/shapes = [ SubResource( 6 ), Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 ) ]
 item/2/navmesh_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
-item/2/preview = ExtResource( 8 )
+item/2/preview = ExtResource( 7 )
 item/3/name = "GrassCorner3"
 item/3/mesh = SubResource( 7 )
 item/3/mesh_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 item/3/shapes = [ SubResource( 8 ), Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 ) ]
 item/3/navmesh_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
-item/3/preview = ExtResource( 1 )
+item/3/preview = ExtResource( 4 )
 item/4/name = "GrassSide"
 item/4/mesh = SubResource( 9 )
 item/4/mesh_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 item/4/shapes = [ SubResource( 10 ), Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 ) ]
 item/4/navmesh_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
-item/4/preview = ExtResource( 4 )
-item/5/name = "GrassSlope"
+item/4/preview = ExtResource( 5 )
+item/5/name = "GrassWallSide"
 item/5/mesh = SubResource( 11 )
 item/5/mesh_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 item/5/shapes = [ SubResource( 12 ), Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 ) ]
 item/5/navmesh_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
-item/5/preview = ExtResource( 2 )
-item/6/name = "GrassSlopeCorner"
+item/5/preview = ExtResource( 3 )
+item/6/name = "GrassWallCorner"
 item/6/mesh = SubResource( 13 )
 item/6/mesh_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 item/6/shapes = [ SubResource( 14 ), Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 ) ]
 item/6/navmesh_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
-item/6/preview = ExtResource( 6 )
-item/7/name = "GrassWallSide"
-item/7/mesh = SubResource( 15 )
-item/7/mesh_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
-item/7/shapes = [ SubResource( 16 ), Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 ) ]
-item/7/navmesh_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
-item/7/preview = ExtResource( 9 )
-item/8/name = "GrassWallCorner"
-item/8/mesh = SubResource( 17 )
-item/8/mesh_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
-item/8/shapes = [ SubResource( 18 ), Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 ) ]
-item/8/navmesh_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
-item/8/preview = ExtResource( 7 )
+item/6/preview = ExtResource( 2 )
