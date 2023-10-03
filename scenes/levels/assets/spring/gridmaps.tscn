@@ -5,7 +5,7 @@
 [ext_resource path="res://scenes/levels/assets/common/bridges/lib_bridges.tres" type="MeshLibrary" id=3]
 [ext_resource path="res://scenes/levels/assets/common/misc/lib_misc.tres" type="MeshLibrary" id=4]
 [ext_resource path="res://scenes/levels/assets/common/thorns/lib_thorns.tres" type="MeshLibrary" id=5]
-[ext_resource path="res://scenes/levels/assets/common/ground/lib_ground_grass.tres" type="MeshLibrary" id=6]
+[ext_resource path="res://scenes/levels/assets/spring/meshlibs/lib_ground.tres" type="MeshLibrary" id=6]
 [ext_resource path="res://scenes/levels/assets/common/water/lib_water.tres" type="MeshLibrary" id=7]
 [ext_resource path="res://scenes/levels/assets/common/rocks/lib_rocks.tres" type="MeshLibrary" id=8]
 [ext_resource path="res://scenes/levels/assets/common/ripples/lib_ripples.tres" type="MeshLibrary" id=9]
@@ -14,16 +14,7 @@
 [node name="GridMaps" type="Spatial"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
 
-[node name="Water" type="GridMap" parent="." groups=["death", "water"]]
-mesh_library = ExtResource( 7 )
-cell_size = Vector3( 20, 2, 20 )
-cell_center_y = false
-__meta__ = {
-"_editor_clip_": 0,
-"_editor_floor_": Vector3( 0, 0, 0 )
-}
-
-[node name="GroundGrass" type="GridMap" parent="."]
+[node name="Ground" type="GridMap" parent="."]
 mesh_library = ExtResource( 6 )
 cell_size = Vector3( 2, 1, 2 )
 cell_center_y = false
@@ -40,9 +31,9 @@ __meta__ = {
 "_editor_clip_": 0
 }
 
-[node name="Fences" type="GridMap" parent="."]
-mesh_library = ExtResource( 1 )
-cell_size = Vector3( 2, 1, 2 )
+[node name="Rocks" type="GridMap" parent="."]
+mesh_library = ExtResource( 8 )
+cell_size = Vector3( 1, 1, 1 )
 cell_center_y = false
 __meta__ = {
 "_editor_clip_": 0,
@@ -67,6 +58,15 @@ __meta__ = {
 "_editor_floor_": Vector3( 0, 0, 0 )
 }
 
+[node name="Fences" type="GridMap" parent="."]
+mesh_library = ExtResource( 1 )
+cell_size = Vector3( 2, 1, 2 )
+cell_center_y = false
+__meta__ = {
+"_editor_clip_": 0,
+"_editor_floor_": Vector3( 0, 0, 0 )
+}
+
 [node name="Misc" type="GridMap" parent="."]
 mesh_library = ExtResource( 4 )
 cell_size = Vector3( 1, 1, 1 )
@@ -76,9 +76,18 @@ __meta__ = {
 "_editor_floor_": Vector3( 0, 0, 0 )
 }
 
-[node name="Rocks" type="GridMap" parent="."]
-mesh_library = ExtResource( 8 )
+[node name="Thorns" type="GridMap" parent="." groups=["death", "thorns"]]
+mesh_library = ExtResource( 5 )
 cell_size = Vector3( 1, 1, 1 )
+cell_center_y = false
+__meta__ = {
+"_editor_clip_": 0,
+"_editor_floor_": Vector3( 0, 0, 0 )
+}
+
+[node name="Water" type="GridMap" parent="." groups=["death", "water"]]
+mesh_library = ExtResource( 7 )
+cell_size = Vector3( 20, 2, 20 )
 cell_center_y = false
 __meta__ = {
 "_editor_clip_": 0,
@@ -88,15 +97,6 @@ __meta__ = {
 [node name="Ripples" type="GridMap" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, 0 )
 mesh_library = ExtResource( 9 )
-cell_center_y = false
-__meta__ = {
-"_editor_clip_": 0,
-"_editor_floor_": Vector3( 0, 0, 0 )
-}
-
-[node name="Thorns" type="GridMap" parent="." groups=["death", "thorns"]]
-mesh_library = ExtResource( 5 )
-cell_size = Vector3( 1, 1, 1 )
 cell_center_y = false
 __meta__ = {
 "_editor_clip_": 0,
