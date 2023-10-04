@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/scarecrow_preview.png-6c1f5e70e23f478033d6506f81c5ead9.stex"
+path="res://.import/scarecrow.png-555290d860d30153a46d6f6975e81621.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/levels/assets/common/misc/src/scarecrow_preview.png"
-dest_files=[ "res://.import/scarecrow_preview.png-6c1f5e70e23f478033d6506f81c5ead9.stex" ]
+source_file="res://scenes/levels/assets/common/misc/src/previews/scarecrow.png"
+dest_files=[ "res://.import/scarecrow.png-555290d860d30153a46d6f6975e81621.stex" ]
 
 [params]
 

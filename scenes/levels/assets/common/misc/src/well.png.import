@@ -2,9 +2,9 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/well.png-b623d593c0cbafdc986b20b638ef1395.s3tc.stex"
-path.etc2="res://.import/well.png-b623d593c0cbafdc986b20b638ef1395.etc2.stex"
-path.etc="res://.import/well.png-b623d593c0cbafdc986b20b638ef1395.etc.stex"
+path.s3tc="res://.import/well.png-b599f84ff946e9aad5dea29890afbf19.s3tc.stex"
+path.etc2="res://.import/well.png-b599f84ff946e9aad5dea29890afbf19.etc2.stex"
+path.etc="res://.import/well.png-b599f84ff946e9aad5dea29890afbf19.etc.stex"
 metadata={
 "imported_formats": [ "s3tc", "etc2", "etc" ],
 "vram_texture": true
@@ -12,8 +12,8 @@ metadata={
 
 [deps]
 
-source_file="res://scenes/levels/assets/common/well/src/well.png"
-dest_files=[ "res://.import/well.png-b623d593c0cbafdc986b20b638ef1395.s3tc.stex", "res://.import/well.png-b623d593c0cbafdc986b20b638ef1395.etc2.stex", "res://.import/well.png-b623d593c0cbafdc986b20b638ef1395.etc.stex" ]
+source_file="res://scenes/levels/assets/common/misc/src/well.png"
+dest_files=[ "res://.import/well.png-b599f84ff946e9aad5dea29890afbf19.s3tc.stex", "res://.import/well.png-b599f84ff946e9aad5dea29890afbf19.etc2.stex", "res://.import/well.png-b599f84ff946e9aad5dea29890afbf19.etc.stex" ]
 
 [params]
 

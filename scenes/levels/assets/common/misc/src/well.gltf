@@ -1,0 +1,201 @@
+{
+    "asset" : {
+        "generator" : "Khronos glTF Blender I/O v1.2.20",
+        "version" : "2.0"
+    },
+    "extensionsUsed" : [
+        "KHR_materials_unlit"
+    ],
+    "scene" : 0,
+    "scenes" : [
+        {
+            "name" : "Scene",
+            "nodes" : [
+                1
+            ]
+        }
+    ],
+    "nodes" : [
+        {
+            "name" : "WellCollider -colonly",
+            "mesh" : 0
+        },
+        {
+            "name" : "WellMesh",
+            "mesh" : 1,
+            "children" : [
+                0
+            ]
+        }
+    ],
+    "materials" : [
+        {
+            "extensions" : {
+                "KHR_materials_unlit" : {}
+            },
+            "name" : "well",
+            "pbrMetallicRoughness" : {
+                "baseColorTexture" : {
+                    "texCoord" : 0,
+                    "index" : 0
+                }
+            }
+        }
+    ],
+    "meshes" : [
+        {
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "NORMAL" : 0,
+                        "POSITION" : 1
+                    },
+                    "indices" : 2
+                }
+            ],
+            "name" : "WellCollider.001"
+        },
+        {
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "NORMAL" : 3,
+                        "POSITION" : 4,
+                        "TEXCOORD_0" : 5
+                    },
+                    "material" : 0,
+                    "indices" : 6
+                }
+            ],
+            "name" : "WellMesh.001"
+        }
+    ],
+    "textures" : [
+        {
+            "source" : 0,
+            "sampler" : 0
+        }
+    ],
+    "images" : [
+        {
+            "name" : "well.png",
+            "uri" : "well.png",
+            "mimeType" : "image/png"
+        }
+    ],
+    "accessors" : [
+        {
+            "type" : "VEC3",
+            "bufferView" : 0,
+            "count" : 70,
+            "componentType" : 5126
+        },
+        {
+            "min" : [
+                -1,
+                0,
+                -0.9808189272880554
+            ],
+            "count" : 70,
+            "componentType" : 5126,
+            "type" : "VEC3",
+            "max" : [
+                1,
+                2.0531210899353027,
+                1.0212244987487793
+            ],
+            "bufferView" : 1
+        },
+        {
+            "type" : "SCALAR",
+            "bufferView" : 2,
+            "count" : 96,
+            "componentType" : 5123
+        },
+        {
+            "type" : "VEC3",
+            "bufferView" : 3,
+            "count" : 1672,
+            "componentType" : 5126
+        },
+        {
+            "min" : [
+                -1.0262959003448486,
+                -0.008630854077637196,
+                -0.9931458830833435
+            ],
+            "count" : 1672,
+            "componentType" : 5126,
+            "type" : "VEC3",
+            "max" : [
+                1.0511143207550049,
+                2.031909227371216,
+                0.986413836479187
+            ],
+            "bufferView" : 4
+        },
+        {
+            "type" : "VEC2",
+            "bufferView" : 5,
+            "count" : 1672,
+            "componentType" : 5126
+        },
+        {
+            "type" : "SCALAR",
+            "bufferView" : 6,
+            "count" : 2550,
+            "componentType" : 5123
+        }
+    ],
+    "bufferViews" : [
+        {
+            "byteOffset" : 0,
+            "byteLength" : 840,
+            "buffer" : 0
+        },
+        {
+            "byteOffset" : 840,
+            "byteLength" : 840,
+            "buffer" : 0
+        },
+        {
+            "byteOffset" : 1680,
+            "byteLength" : 192,
+            "buffer" : 0
+        },
+        {
+            "byteOffset" : 1872,
+            "byteLength" : 20064,
+            "buffer" : 0
+        },
+        {
+            "byteOffset" : 21936,
+            "byteLength" : 20064,
+            "buffer" : 0
+        },
+        {
+            "byteOffset" : 42000,
+            "byteLength" : 13376,
+            "buffer" : 0
+        },
+        {
+            "byteOffset" : 55376,
+            "byteLength" : 5100,
+            "buffer" : 0
+        }
+    ],
+    "samplers" : [
+        {
+            "magFilter" : 9729,
+            "wrapS" : 10497,
+            "minFilter" : 9986,
+            "wrapT" : 10497
+        }
+    ],
+    "buffers" : [
+        {
+            "byteLength" : 60476,
+            "uri" : "well.bin"
+        }
+    ]
+}

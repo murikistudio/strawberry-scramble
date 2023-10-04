@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/well.gltf-2a786b7796a3b1d5467c96fbf9ad59e8.scn"
+path="res://.import/well.gltf-d0119d0ab4e4300ccf58a78964ae3469.scn"
 
 [deps]
 
-source_file="res://scenes/levels/assets/common/well/src/well.gltf"
-dest_files=[ "res://.import/well.gltf-2a786b7796a3b1d5467c96fbf9ad59e8.scn" ]
+source_file="res://scenes/levels/assets/common/misc/src/well.gltf"
+dest_files=[ "res://.import/well.gltf-d0119d0ab4e4300ccf58a78964ae3469.scn" ]
 
 [params]
 

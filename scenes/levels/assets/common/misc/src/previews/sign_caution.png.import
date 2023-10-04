@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/well_preview.png-ad682b0e721def00bbfaef67d2123be8.stex"
+path="res://.import/sign_caution.png-840c9b3cb3fa19631e9ced14c98d979b.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/levels/assets/common/well/src/well_preview.png"
-dest_files=[ "res://.import/well_preview.png-ad682b0e721def00bbfaef67d2123be8.stex" ]
+source_file="res://scenes/levels/assets/common/misc/src/previews/sign_caution.png"
+dest_files=[ "res://.import/sign_caution.png-840c9b3cb3fa19631e9ced14c98d979b.stex" ]
 
 [params]
 
@@ -23,7 +23,7 @@ flags/repeat=0
 flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
-flags/srgb=1
+flags/srgb=0
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/HDR_as_SRGB=false
