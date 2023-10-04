@@ -1,0 +1,139 @@
+{
+    "asset" : {
+        "generator" : "Khronos glTF Blender I/O v1.2.20",
+        "version" : "2.0"
+    },
+    "extensionsUsed" : [
+        "KHR_materials_unlit"
+    ],
+    "scene" : 0,
+    "scenes" : [
+        {
+            "name" : "Scene",
+            "nodes" : [
+                0
+            ]
+        }
+    ],
+    "nodes" : [
+        {
+            "name" : "GroundWallSide -col",
+            "mesh" : 0
+        }
+    ],
+    "materials" : [
+        {
+            "name" : "ground",
+            "pbrMetallicRoughness" : {
+                "baseColorTexture" : {
+                    "texCoord" : 0,
+                    "index" : 0
+                }
+            },
+            "extensions" : {
+                "KHR_materials_unlit" : {}
+            }
+        }
+    ],
+    "meshes" : [
+        {
+            "name" : "GroundWallSide.001",
+            "primitives" : [
+                {
+                    "indices" : 3,
+                    "attributes" : {
+                        "NORMAL" : 0,
+                        "POSITION" : 1,
+                        "TEXCOORD_0" : 2
+                    },
+                    "material" : 0
+                }
+            ]
+        }
+    ],
+    "textures" : [
+        {
+            "sampler" : 0,
+            "source" : 0
+        }
+    ],
+    "images" : [
+        {
+            "uri" : "ground.png",
+            "name" : "ground.png",
+            "mimeType" : "image/png"
+        }
+    ],
+    "accessors" : [
+        {
+            "componentType" : 5126,
+            "bufferView" : 0,
+            "type" : "VEC3",
+            "count" : 4
+        },
+        {
+            "componentType" : 5126,
+            "min" : [
+                1,
+                -2,
+                -0.9999998211860657
+            ],
+            "bufferView" : 1,
+            "count" : 4,
+            "max" : [
+                1.0000019073486328,
+                0,
+                1
+            ],
+            "type" : "VEC3"
+        },
+        {
+            "componentType" : 5126,
+            "bufferView" : 2,
+            "type" : "VEC2",
+            "count" : 4
+        },
+        {
+            "componentType" : 5123,
+            "bufferView" : 3,
+            "type" : "SCALAR",
+            "count" : 6
+        }
+    ],
+    "bufferViews" : [
+        {
+            "byteLength" : 48,
+            "byteOffset" : 0,
+            "buffer" : 0
+        },
+        {
+            "byteLength" : 48,
+            "byteOffset" : 48,
+            "buffer" : 0
+        },
+        {
+            "byteLength" : 32,
+            "byteOffset" : 96,
+            "buffer" : 0
+        },
+        {
+            "byteLength" : 12,
+            "byteOffset" : 128,
+            "buffer" : 0
+        }
+    ],
+    "samplers" : [
+        {
+            "wrapS" : 10497,
+            "wrapT" : 10497,
+            "minFilter" : 9986,
+            "magFilter" : 9729
+        }
+    ],
+    "buffers" : [
+        {
+            "uri" : "wall_side.bin",
+            "byteLength" : 140
+        }
+    ]
+}

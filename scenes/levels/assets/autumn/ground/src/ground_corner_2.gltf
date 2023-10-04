@@ -1,0 +1,201 @@
+{
+    "asset" : {
+        "version" : "2.0",
+        "generator" : "Khronos glTF Blender I/O v1.2.20"
+    },
+    "extensionsUsed" : [
+        "KHR_materials_unlit"
+    ],
+    "scene" : 0,
+    "scenes" : [
+        {
+            "nodes" : [
+                1
+            ],
+            "name" : "Scene"
+        }
+    ],
+    "nodes" : [
+        {
+            "name" : "GroundCorner2Collider -colonly",
+            "mesh" : 0
+        },
+        {
+            "children" : [
+                0
+            ],
+            "name" : "GroundCorner2Mesh",
+            "mesh" : 1
+        }
+    ],
+    "materials" : [
+        {
+            "extensions" : {
+                "KHR_materials_unlit" : {}
+            },
+            "pbrMetallicRoughness" : {
+                "baseColorTexture" : {
+                    "index" : 0,
+                    "texCoord" : 0
+                }
+            },
+            "name" : "ground"
+        }
+    ],
+    "meshes" : [
+        {
+            "name" : "GroundCorner2Collider.001",
+            "primitives" : [
+                {
+                    "indices" : 2,
+                    "attributes" : {
+                        "POSITION" : 0,
+                        "NORMAL" : 1
+                    }
+                }
+            ]
+        },
+        {
+            "name" : "GroundCorner2Mesh.001",
+            "primitives" : [
+                {
+                    "material" : 0,
+                    "indices" : 6,
+                    "attributes" : {
+                        "POSITION" : 3,
+                        "TEXCOORD_0" : 4,
+                        "NORMAL" : 5
+                    }
+                }
+            ]
+        }
+    ],
+    "textures" : [
+        {
+            "source" : 0,
+            "sampler" : 0
+        }
+    ],
+    "images" : [
+        {
+            "mimeType" : "image/png",
+            "name" : "ground.png",
+            "uri" : "ground.png"
+        }
+    ],
+    "accessors" : [
+        {
+            "count" : 4,
+            "min" : [
+                -1,
+                0,
+                -1
+            ],
+            "bufferView" : 0,
+            "max" : [
+                1,
+                0,
+                1
+            ],
+            "type" : "VEC3",
+            "componentType" : 5126
+        },
+        {
+            "type" : "VEC3",
+            "componentType" : 5126,
+            "count" : 4,
+            "bufferView" : 1
+        },
+        {
+            "type" : "SCALAR",
+            "componentType" : 5123,
+            "count" : 6,
+            "bufferView" : 2
+        },
+        {
+            "count" : 13,
+            "min" : [
+                -1,
+                -0.10000000149011612,
+                -1
+            ],
+            "bufferView" : 3,
+            "max" : [
+                1,
+                -2.9802322387695312e-08,
+                1.0000004768371582
+            ],
+            "type" : "VEC3",
+            "componentType" : 5126
+        },
+        {
+            "type" : "VEC2",
+            "componentType" : 5126,
+            "count" : 13,
+            "bufferView" : 4
+        },
+        {
+            "type" : "VEC3",
+            "componentType" : 5126,
+            "count" : 13,
+            "bufferView" : 5
+        },
+        {
+            "type" : "SCALAR",
+            "componentType" : 5123,
+            "count" : 30,
+            "bufferView" : 6
+        }
+    ],
+    "bufferViews" : [
+        {
+            "byteOffset" : 0,
+            "buffer" : 0,
+            "byteLength" : 48
+        },
+        {
+            "byteOffset" : 48,
+            "buffer" : 0,
+            "byteLength" : 48
+        },
+        {
+            "byteOffset" : 96,
+            "buffer" : 0,
+            "byteLength" : 12
+        },
+        {
+            "byteOffset" : 108,
+            "buffer" : 0,
+            "byteLength" : 156
+        },
+        {
+            "byteOffset" : 264,
+            "buffer" : 0,
+            "byteLength" : 104
+        },
+        {
+            "byteOffset" : 368,
+            "buffer" : 0,
+            "byteLength" : 156
+        },
+        {
+            "byteOffset" : 524,
+            "buffer" : 0,
+            "byteLength" : 60
+        }
+    ],
+    "samplers" : [
+        {
+            "wrapS" : 10497,
+            "magFilter" : 9729,
+            "minFilter" : 9986,
+            "wrapT" : 10497
+        }
+    ],
+    "buffers" : [
+        {
+            "byteLength" : 584,
+            "uri" : "ground_corner_2.bin"
+        }
+    ]
+}

@@ -1,0 +1,139 @@
+{
+    "asset" : {
+        "generator" : "Khronos glTF Blender I/O v1.2.20",
+        "version" : "2.0"
+    },
+    "extensionsUsed" : [
+        "KHR_materials_unlit"
+    ],
+    "scene" : 0,
+    "scenes" : [
+        {
+            "nodes" : [
+                0
+            ],
+            "name" : "Scene"
+        }
+    ],
+    "nodes" : [
+        {
+            "name" : "GroundWallCorner -col",
+            "mesh" : 0
+        }
+    ],
+    "materials" : [
+        {
+            "pbrMetallicRoughness" : {
+                "baseColorTexture" : {
+                    "index" : 0,
+                    "texCoord" : 0
+                }
+            },
+            "extensions" : {
+                "KHR_materials_unlit" : {}
+            },
+            "name" : "ground"
+        }
+    ],
+    "meshes" : [
+        {
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "NORMAL" : 0,
+                        "TEXCOORD_0" : 1,
+                        "POSITION" : 2
+                    },
+                    "material" : 0,
+                    "indices" : 3
+                }
+            ],
+            "name" : "GroundWallCorner.001"
+        }
+    ],
+    "textures" : [
+        {
+            "sampler" : 0,
+            "source" : 0
+        }
+    ],
+    "images" : [
+        {
+            "mimeType" : "image/png",
+            "name" : "ground.png",
+            "uri" : "ground.png"
+        }
+    ],
+    "accessors" : [
+        {
+            "componentType" : 5126,
+            "type" : "VEC3",
+            "count" : 12,
+            "bufferView" : 0
+        },
+        {
+            "componentType" : 5126,
+            "type" : "VEC2",
+            "count" : 12,
+            "bufferView" : 1
+        },
+        {
+            "min" : [
+                -0.999997615814209,
+                -2,
+                -1.0000008344650269
+            ],
+            "count" : 12,
+            "componentType" : 5126,
+            "bufferView" : 2,
+            "type" : "VEC3",
+            "max" : [
+                1.0000030994415283,
+                0,
+                0.9999988079071045
+            ]
+        },
+        {
+            "componentType" : 5123,
+            "type" : "SCALAR",
+            "count" : 18,
+            "bufferView" : 3
+        }
+    ],
+    "bufferViews" : [
+        {
+            "buffer" : 0,
+            "byteLength" : 144,
+            "byteOffset" : 0
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 96,
+            "byteOffset" : 144
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 144,
+            "byteOffset" : 240
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 36,
+            "byteOffset" : 384
+        }
+    ],
+    "samplers" : [
+        {
+            "minFilter" : 9986,
+            "wrapS" : 10497,
+            "magFilter" : 9729,
+            "wrapT" : 10497
+        }
+    ],
+    "buffers" : [
+        {
+            "byteLength" : 420,
+            "uri" : "wall_corner.bin"
+        }
+    ]
+}
