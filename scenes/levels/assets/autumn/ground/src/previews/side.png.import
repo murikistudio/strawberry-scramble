@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/ground_side.png-e6b68cac04f5c3eca8bc41d845bb244a.stex"
+path="res://.import/side.png-d8f40f48206c0d818dbee23d47911586.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/levels/assets/autumn/ground/src/previews/ground_side.png"
-dest_files=[ "res://.import/ground_side.png-e6b68cac04f5c3eca8bc41d845bb244a.stex" ]
+source_file="res://scenes/levels/assets/autumn/ground/src/previews/side.png"
+dest_files=[ "res://.import/side.png-d8f40f48206c0d818dbee23d47911586.stex" ]
 
 [params]
 
