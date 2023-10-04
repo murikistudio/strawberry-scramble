@@ -42,10 +42,15 @@ func apply_changes() -> void:
 		mesh_lib.set_item_name(i, child.name)
 
 		if child.filename:
-			var preview_path := child.filename.replace("." + child.filename.get_extension(), "_preview.png")
+			var base_filename := child.filename.get_file().replace("." + child.filename.get_extension(), "")
+			var preview_path := child.filename.get_base_dir() + "/" + base_filename + "_preview.png"
+			var preview_path_alt := child.filename.get_base_dir() + "/previews/" + base_filename + ".png"
 
 			if directory.file_exists(preview_path):
 				mesh_lib.set_item_preview(i, load(preview_path))
+
+			elif directory.file_exists(preview_path_alt):
+				mesh_lib.set_item_preview(i, load(preview_path_alt))
 
 		_iterate_child(mesh_lib, i, child)
 
