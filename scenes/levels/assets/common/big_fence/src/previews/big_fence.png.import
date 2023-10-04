@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/fence_corner_preview.png-003694500f76ab6b6de85807f680fc3c.stex"
+path="res://.import/big_fence.png-140ed4bfca00683c91146a364fc0bbf6.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/levels/assets/common/fences/src/fence_corner_preview.png"
-dest_files=[ "res://.import/fence_corner_preview.png-003694500f76ab6b6de85807f680fc3c.stex" ]
+source_file="res://scenes/levels/assets/common/big_fence/src/previews/big_fence.png"
+dest_files=[ "res://.import/big_fence.png-140ed4bfca00683c91146a364fc0bbf6.stex" ]
 
 [params]
 

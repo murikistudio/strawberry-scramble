@@ -1,11 +1,11 @@
 [gd_resource type="MeshLibrary" load_steps=15 format=2]
 
-[ext_resource path="res://scenes/levels/assets/common/fences/src/fence_preview.png" type="Texture" id=1]
-[ext_resource path="res://scenes/levels/assets/common/fences/src/big_fence.tres" type="Material" id=2]
+[ext_resource path="res://scenes/levels/assets/common/fences/src/previews/fence_end.png" type="Texture" id=1]
+[ext_resource path="res://scenes/levels/assets/common/fences/src/previews/fence_corner.png" type="Texture" id=2]
 [ext_resource path="res://scenes/levels/assets/common/fences/src/fence.tres" type="Material" id=3]
-[ext_resource path="res://scenes/levels/assets/common/fences/src/fence_corner_preview.png" type="Texture" id=4]
-[ext_resource path="res://scenes/levels/assets/common/fences/src/fence_end_preview.png" type="Texture" id=5]
-[ext_resource path="res://scenes/levels/assets/common/fences/src/big_fence_preview.png" type="Texture" id=6]
+[ext_resource path="res://scenes/levels/assets/common/big_fence/src/previews/big_fence.png" type="Texture" id=4]
+[ext_resource path="res://scenes/levels/assets/common/big_fence/src/big_fence.tres" type="Material" id=5]
+[ext_resource path="res://scenes/levels/assets/common/fences/src/previews/fence.png" type="Texture" id=6]
 
 [sub_resource type="ArrayMesh" id=1]
 resource_name = "fence_FenceMesh001"
@@ -70,7 +70,7 @@ surfaces/0 = {
 "blend_shape_data": [  ],
 "format": 2194711,
 "index_count": 222,
-"material": ExtResource( 2 ),
+"material": ExtResource( 5 ),
 "primitive": 4,
 "skeleton_aabb": [  ],
 "vertex_count": 160
@@ -85,22 +85,22 @@ item/0/mesh = SubResource( 1 )
 item/0/mesh_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 item/0/shapes = [ SubResource( 2 ), Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 ) ]
 item/0/navmesh_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
-item/0/preview = ExtResource( 1 )
+item/0/preview = ExtResource( 6 )
 item/1/name = "FenceCorner"
 item/1/mesh = SubResource( 3 )
 item/1/mesh_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 item/1/shapes = [ SubResource( 4 ), Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 ) ]
 item/1/navmesh_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
-item/1/preview = ExtResource( 4 )
+item/1/preview = ExtResource( 2 )
 item/2/name = "FenceEnd"
 item/2/mesh = SubResource( 5 )
 item/2/mesh_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 item/2/shapes = [ SubResource( 6 ), Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 ) ]
 item/2/navmesh_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
-item/2/preview = ExtResource( 5 )
+item/2/preview = ExtResource( 1 )
 item/3/name = "BigFence"
 item/3/mesh = SubResource( 7 )
 item/3/mesh_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 item/3/shapes = [ SubResource( 8 ), Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 ) ]
 item/3/navmesh_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
-item/3/preview = ExtResource( 6 )
+item/3/preview = ExtResource( 4 )
