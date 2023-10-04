@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/ground_winter.png-03f5ffde7f0cddd443bf1e79f1a791e3.stex"
+path="res://.import/ground.png-f31dc048d0e3472866b4f962e63a46c1.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/levels/assets/winter/ground/src/ground_winter.png"
-dest_files=[ "res://.import/ground_winter.png-03f5ffde7f0cddd443bf1e79f1a791e3.stex" ]
+source_file="res://scenes/levels/assets/winter/ground/src/ground.png"
+dest_files=[ "res://.import/ground.png-f31dc048d0e3472866b4f962e63a46c1.stex" ]
 
 [params]
 
