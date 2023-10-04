@@ -49,6 +49,17 @@ func register_global_shader_param(param: String, shader_material: ShaderMaterial
 		shaders.push_back(shader_material)
 
 
+# Desregistra um parâmetro global de um shader.
+func unregister_global_shader_param(param: String, shader_material: ShaderMaterial) -> void:
+	if not _shaders.get(param.hash()):
+		return
+
+	var shaders: Array = _shaders[param.hash()]
+
+	if shaders.has(shader_material):
+		shaders.erase(shader_material)
+
+
 # Altera o valor de um parâmetro global dos shaders registrados.
 func set_global_shader_param(param: String, value) -> void:
 	var shaders: Array = _shaders.get(param.hash(), [])
