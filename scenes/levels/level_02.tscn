@@ -2,7 +2,7 @@
 
 [ext_resource path="res://resources/level_env.tres" type="Environment" id=1]
 [ext_resource path="res://scenes/characters/player/player.tscn" type="PackedScene" id=2]
-[ext_resource path="res://scenes/levels/assets/interactive/house/house.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/levels/assets/interactive/home/home.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scenes/levels/assets/spring/gridmaps.tscn" type="PackedScene" id=4]
 [ext_resource path="res://scenes/levels/assets/interactive/strawberry/strawberry.tscn" type="PackedScene" id=5]
 [ext_resource path="res://scenes/levels/assets/interactive/dialog/dialog.tscn" type="PackedScene" id=6]
@@ -17,7 +17,7 @@ environment = ExtResource( 1 )
 [node name="Player" parent="." instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.65, 2 )
 
-[node name="House" parent="." instance=ExtResource( 3 )]
+[node name="Home" parent="." instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 6.2 )
 
 [node name="Dialogs" type="Spatial" parent="."]

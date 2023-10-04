@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/house_2.gltf-b122ac572a80a18b208e0728cd9370a5.scn"
+path="res://.import/house_1.gltf-4029e3d16acfce35dffb974a1be140e3.scn"
 
 [deps]
 
-source_file="res://scenes/levels/assets/interactive/house/src/house_2.gltf"
-dest_files=[ "res://.import/house_2.gltf-b122ac572a80a18b208e0728cd9370a5.scn" ]
+source_file="res://scenes/levels/assets/common/house_1/src/house_1.gltf"
+dest_files=[ "res://.import/house_1.gltf-4029e3d16acfce35dffb974a1be140e3.scn" ]
 
 [params]
 

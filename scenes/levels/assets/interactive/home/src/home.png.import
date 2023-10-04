@@ -2,9 +2,9 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/house.png-fe7faaf6fc879d717b06ed8f160f6f83.s3tc.stex"
-path.etc2="res://.import/house.png-fe7faaf6fc879d717b06ed8f160f6f83.etc2.stex"
-path.etc="res://.import/house.png-fe7faaf6fc879d717b06ed8f160f6f83.etc.stex"
+path.s3tc="res://.import/home.png-42e42ee3938af56ba0ff540c9a244192.s3tc.stex"
+path.etc2="res://.import/home.png-42e42ee3938af56ba0ff540c9a244192.etc2.stex"
+path.etc="res://.import/home.png-42e42ee3938af56ba0ff540c9a244192.etc.stex"
 metadata={
 "imported_formats": [ "s3tc", "etc2", "etc" ],
 "vram_texture": true
@@ -12,8 +12,8 @@ metadata={
 
 [deps]
 
-source_file="res://scenes/levels/assets/interactive/house/src/house.png"
-dest_files=[ "res://.import/house.png-fe7faaf6fc879d717b06ed8f160f6f83.s3tc.stex", "res://.import/house.png-fe7faaf6fc879d717b06ed8f160f6f83.etc2.stex", "res://.import/house.png-fe7faaf6fc879d717b06ed8f160f6f83.etc.stex" ]
+source_file="res://scenes/levels/assets/interactive/home/src/home.png"
+dest_files=[ "res://.import/home.png-42e42ee3938af56ba0ff540c9a244192.s3tc.stex", "res://.import/home.png-42e42ee3938af56ba0ff540c9a244192.etc2.stex", "res://.import/home.png-42e42ee3938af56ba0ff540c9a244192.etc.stex" ]
 
 [params]
 
