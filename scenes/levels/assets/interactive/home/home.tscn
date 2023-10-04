@@ -9,7 +9,7 @@ extents = Vector3( 0.5, 0.75, 0.5 )
 [sub_resource type="Animation" id=1]
 length = 0.001
 tracks/0/type = "value"
-tracks/0/path = NodePath("Visual/HouseCollider /DoorMesh:rotation_degrees")
+tracks/0/path = NodePath("Visual/HomeCollider /DoorMesh:rotation_degrees")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -24,7 +24,7 @@ tracks/0/keys = {
 [sub_resource type="Animation" id=2]
 resource_name = "door_open"
 tracks/0/type = "value"
-tracks/0/path = NodePath("Visual/HouseCollider /DoorMesh:rotation_degrees")
+tracks/0/path = NodePath("Visual/HomeCollider /DoorMesh:rotation_degrees")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
