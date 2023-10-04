@@ -9,65 +9,65 @@
     "scene" : 0,
     "scenes" : [
         {
+            "name" : "Scene",
             "nodes" : [
                 1
-            ],
-            "name" : "Scene"
+            ]
         }
     ],
     "nodes" : [
         {
             "mesh" : 0,
-            "name" : "MushroomHouse1Collider -colonly"
+            "name" : "House2Collider -colonly"
         },
         {
+            "mesh" : 1,
             "children" : [
                 0
             ],
-            "mesh" : 1,
-            "name" : "MushroomHouse1Mesh"
+            "name" : "House2Mesh"
         }
     ],
     "materials" : [
         {
-            "extensions" : {
-                "KHR_materials_unlit" : {}
-            },
             "pbrMetallicRoughness" : {
                 "baseColorTexture" : {
-                    "index" : 0,
-                    "texCoord" : 0
+                    "texCoord" : 0,
+                    "index" : 0
                 }
             },
-            "name" : "mushroom_house_1"
+            "name" : "house_2",
+            "extensions" : {
+                "KHR_materials_unlit" : {}
+            }
         }
     ],
     "meshes" : [
         {
             "primitives" : [
                 {
+                    "indices" : 2,
                     "attributes" : {
-                        "POSITION" : 0,
-                        "NORMAL" : 1
-                    },
-                    "indices" : 2
+                        "NORMAL" : 0,
+                        "POSITION" : 1
+                    }
                 }
             ],
-            "name" : "MushroomHouse1Collider.001"
+            "name" : "House2Collider.001"
         },
         {
             "primitives" : [
                 {
+                    "indices" : 6,
                     "material" : 0,
                     "attributes" : {
-                        "TEXCOORD_0" : 3,
+                        "NORMAL" : 3,
                         "POSITION" : 4,
-                        "NORMAL" : 5
-                    },
-                    "indices" : 6
+                        "TEXCOORD_0" : 5
+                    }
                 }
             ],
-            "name" : "MushroomHouse1Mesh.001"
+            "name" : "House2Mesh.001"
         }
     ],
     "textures" : [
@@ -78,31 +78,31 @@
     ],
     "images" : [
         {
-            "uri" : "mushroom_house_1.png",
-            "mimeType" : "image/png",
-            "name" : "mushroom_house_1.png"
+            "uri" : "house_2.png",
+            "name" : "house_2.png",
+            "mimeType" : "image/png"
         }
     ],
     "accessors" : [
         {
-            "min" : [
-                -2.1571993827819824,
-                0,
-                -2.093508243560791
-            ],
+            "count" : 177,
             "bufferView" : 0,
+            "componentType" : 5126,
+            "type" : "VEC3"
+        },
+        {
             "max" : [
                 2.1571993827819824,
                 4.285338401794434,
                 2.093508243560791
             ],
-            "count" : 177,
-            "componentType" : 5126,
-            "type" : "VEC3"
-        },
-        {
-            "count" : 177,
             "bufferView" : 1,
+            "min" : [
+                -2.1571993827819824,
+                0,
+                -2.093508243560791
+            ],
+            "count" : 177,
             "componentType" : 5126,
             "type" : "VEC3"
         },
@@ -116,19 +116,19 @@
             "count" : 478,
             "bufferView" : 3,
             "componentType" : 5126,
-            "type" : "VEC2"
+            "type" : "VEC3"
         },
         {
-            "min" : [
-                -2.2069013118743896,
-                -0.007668015547096729,
-                -2.2780439853668213
-            ],
-            "bufferView" : 4,
             "max" : [
                 2.207872152328491,
                 4.380077362060547,
                 2.110564708709717
+            ],
+            "bufferView" : 4,
+            "min" : [
+                -2.2069013118743896,
+                -0.007668015547096729,
+                -2.2780439853668213
             ],
             "count" : 478,
             "componentType" : 5126,
@@ -138,7 +138,7 @@
             "count" : 478,
             "bufferView" : 5,
             "componentType" : 5126,
-            "type" : "VEC3"
+            "type" : "VEC2"
         },
         {
             "count" : 696,
@@ -166,17 +166,17 @@
         {
             "buffer" : 0,
             "byteOffset" : 4800,
+            "byteLength" : 5736
+        },
+        {
+            "buffer" : 0,
+            "byteOffset" : 10536,
+            "byteLength" : 5736
+        },
+        {
+            "buffer" : 0,
+            "byteOffset" : 16272,
             "byteLength" : 3824
-        },
-        {
-            "buffer" : 0,
-            "byteOffset" : 8624,
-            "byteLength" : 5736
-        },
-        {
-            "buffer" : 0,
-            "byteOffset" : 14360,
-            "byteLength" : 5736
         },
         {
             "buffer" : 0,
@@ -186,16 +186,16 @@
     ],
     "samplers" : [
         {
-            "magFilter" : 9729,
-            "wrapT" : 10497,
             "wrapS" : 10497,
-            "minFilter" : 9986
+            "minFilter" : 9986,
+            "wrapT" : 10497,
+            "magFilter" : 9729
         }
     ],
     "buffers" : [
         {
-            "byteLength" : 21488,
-            "uri" : "mushroom_house_1.bin"
+            "uri" : "house_2.bin",
+            "byteLength" : 21488
         }
     ]
 }

@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/mushroom_house_1.gltf-ec157436a9339cab48f4c49cd0baa1a3.scn"
+path="res://.import/house_2.gltf-955c4d3aa51d4b69fa9122608e502430.scn"
 
 [deps]
 
-source_file="res://scenes/levels/assets/autumn/mushroom_house_1/src/mushroom_house_1.gltf"
-dest_files=[ "res://.import/mushroom_house_1.gltf-ec157436a9339cab48f4c49cd0baa1a3.scn" ]
+source_file="res://scenes/levels/assets/autumn/house_2/src/house_2.gltf"
+dest_files=[ "res://.import/house_2.gltf-955c4d3aa51d4b69fa9122608e502430.scn" ]
 
 [params]
 
