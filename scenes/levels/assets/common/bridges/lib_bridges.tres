@@ -1,7 +1,7 @@
 [gd_resource type="MeshLibrary" load_steps=8 format=2]
 
-[ext_resource path="res://scenes/levels/assets/common/bridges/src/bridge_2_preview.png" type="Texture" id=1]
-[ext_resource path="res://scenes/levels/assets/common/bridges/src/bridge_1_preview.png" type="Texture" id=2]
+[ext_resource path="res://scenes/levels/assets/common/bridges/src/previews/bridge_2.png" type="Texture" id=1]
+[ext_resource path="res://scenes/levels/assets/common/bridges/src/previews/bridge_1.png" type="Texture" id=2]
 [ext_resource path="res://scenes/levels/assets/common/bridges/src/bridge.tres" type="Material" id=3]
 
 [sub_resource type="ArrayMesh" id=1]

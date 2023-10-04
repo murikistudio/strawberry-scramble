@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/bridge_2_preview.png-928a83ba83f6a79f2fd19299e7625d4a.stex"
+path="res://.import/bridge_2.png-9c3d4e4c5554b305d8301ae30f4ae8e3.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/levels/assets/common/bridges/src/bridge_2_preview.png"
-dest_files=[ "res://.import/bridge_2_preview.png-928a83ba83f6a79f2fd19299e7625d4a.stex" ]
+source_file="res://scenes/levels/assets/common/bridges/src/previews/bridge_2.png"
+dest_files=[ "res://.import/bridge_2.png-9c3d4e4c5554b305d8301ae30f4ae8e3.stex" ]
 
 [params]
 
