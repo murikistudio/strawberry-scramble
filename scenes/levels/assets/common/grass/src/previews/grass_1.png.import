@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/grass_2_preview.png-33d9ac5a8df75a1d6df9856f5395f28b.stex"
+path="res://.import/grass_1.png-73b6027520535835d75af76b3cd74d4b.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/levels/assets/common/grass/src/grass_2_preview.png"
-dest_files=[ "res://.import/grass_2_preview.png-33d9ac5a8df75a1d6df9856f5395f28b.stex" ]
+source_file="res://scenes/levels/assets/common/grass/src/previews/grass_1.png"
+dest_files=[ "res://.import/grass_1.png-73b6027520535835d75af76b3cd74d4b.stex" ]
 
 [params]
 
