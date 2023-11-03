@@ -3,6 +3,10 @@ class_name PlayerStateMove
 # Estado base de movimentação do jogador, detectando controles.
 
 
+# Variables
+onready var _camera_axis: Spatial = player.find_node("CameraAxis")
+
+
 # State overrides
 func process(_delta: float) -> BaseState:
 	player.input_move_axis = Input.get_vector(
@@ -10,7 +14,7 @@ func process(_delta: float) -> BaseState:
 		"move_down", "move_up"
 	)
 	player.move_axis = player.input_move_axis.rotated(
-		player._camera_axis.global_rotation.y
+		_camera_axis.global_rotation.y
 	)
 
 	return null

@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=2]
+[gd_scene load_steps=29 format=2]
 
 [ext_resource path="res://scenes/characters/player/player.gd" type="Script" id=1]
 [ext_resource path="res://classes/base/state_manager.gd" type="Script" id=2]
@@ -23,6 +23,7 @@
 [ext_resource path="res://scenes/levels/assets/common/trees/src/tree_leaves.tres" type="Material" id=21]
 [ext_resource path="res://scenes/levels/assets/common/trees/src/tree_leaves_2.tres" type="Material" id=22]
 [ext_resource path="res://scenes/levels/assets/autumn/grass/src/grass.tres" type="Material" id=23]
+[ext_resource path="res://scenes/characters/player/components/camera.gd" type="Script" id=24]
 
 [sub_resource type="CapsuleShape" id=1]
 radius = 0.25
@@ -138,6 +139,12 @@ text = "Player"
 
 [node name="Player" parent="Visual" instance=ExtResource( 5 )]
 transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, -0.633532, 0 )
+
+[node name="Components" type="Node" parent="."]
+
+[node name="Camera" type="Node" parent="Components"]
+script = ExtResource( 24 )
+player = NodePath("../..")
 
 [node name="StateManager" type="Node" parent="."]
 script = ExtResource( 2 )
