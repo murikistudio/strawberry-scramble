@@ -15,7 +15,6 @@ export(PackedScene) var scene_water_splash: PackedScene
 export(PackedScene) var scene_balloon_pop: PackedScene
 export(Array, ShaderMaterial) var shaders_to_update: Array
 
-var input_move_axis := Vector2.ZERO
 var jumps_left := jump_times setget _set_jumps_left
 var direction_axis := Vector2.UP
 var move_axis := Vector2.ZERO

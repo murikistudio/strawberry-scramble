@@ -12,4 +12,3 @@ export(NodePath) var state_jump: NodePath
 func enter() -> void:
 	player.set_animation("idle_loop")
 	player.move_axis = Vector2.ZERO
-	player.input_move_axis = Vector2.ZERO
