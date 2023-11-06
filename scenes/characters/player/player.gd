@@ -25,10 +25,9 @@ var dead := false
 var ground_type := "grass"
 var respawn_position: Vector3
 
-onready var _state_manager: BaseStateManager = find_node("StateManager")
-onready var _state_stop: BaseState = _state_manager.get_node("Stop")
-onready var _state_idle: BaseState = _state_manager.get_node("Idle")
-onready var _visual: Spatial = find_node("Visual")
+onready var state_manager: BaseStateManager = find_node("StateManager")
+onready var state_stop: BaseState = state_manager.get_node("Stop")
+onready var state_idle: BaseState = state_manager.get_node("Idle")
 onready var _area: Area = find_node("Area")
 
 
@@ -46,8 +45,6 @@ func _ready() -> void:
 	respawn_position = global_translation
 	GameEvents.emit_signal("player_emitted", self)
 	GameEvents.connect("player_request_camera_focus", self, "_on_player_request_camera_focus")
-	GameEvents.connect("level_cannon_entered", self, "_on_level_cannon_entered")
-	GameEvents.connect("level_checkpoint_touched", self, "_on_level_checkpoint_touched")
 	GameEvents.connect("player_enabled", self, "_on_player_enabled")
 
 
@@ -70,28 +67,12 @@ func _on_Timer_timeout() -> void:
 
 # Habilita ou desabilita o controle do jogador.
 func _on_player_enabled(enabled: bool) -> void:
-	_state_manager.transition_to(_state_idle if enabled else _state_stop)
+	state_manager.transition_to(state_idle if enabled else state_stop)
 
 
 # Alterar objeto de foco da câmera.
 func _on_player_request_camera_focus(target: Spatial) -> void:
 	if not target:
-		_state_manager.transition_to(_state_idle)
+		state_manager.transition_to(state_idle)
 	else:
-		_state_manager.transition_to(_state_stop)
-
-
-# Tratar colisão do jogador com o canhão.
-func _on_level_cannon_entered(target: Spatial) -> void:
-	_state_manager.transition_to(_state_stop)
-	_visual.visible = false
-	yield(get_tree().create_timer(3.0, false), "timeout")
-	GameEvents.emit_signal("player_request_camera_focus", null)
-	global_translation = target.global_translation + Vector3(0, 5, 0)
-	_visual.visible = true
-	_state_manager.transition_to(_state_idle)
-
-
-# Definir posição de respawn a partir do checkpoint.
-func _on_level_checkpoint_touched(checkpoint: Spatial) -> void:
-	respawn_position = checkpoint.global_translation
+		state_manager.transition_to(state_stop)

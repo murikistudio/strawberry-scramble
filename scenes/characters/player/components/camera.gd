@@ -11,8 +11,6 @@ onready var _camera: Camera = player.find_node("Camera")
 onready var _camera_axis: Spatial = player.find_node("CameraAxis")
 onready var _mesh_direction: MeshInstance = player.find_node("MeshDirection")
 onready var _ray_cast_camera: RayCast = player.find_node("RayCastCamera")
-onready var _state_manager: BaseStateManager = player.find_node("StateManager")
-onready var _state_stop: BaseState = _state_manager.get_node("Stop")
 onready var _camera_focus: Spatial = null
 onready var _camera_fov_default: float = _camera.fov
 onready var _camera_fov_far: float = _camera_fov_default + 25.0
@@ -38,6 +36,9 @@ func _physics_process(_delta: float) -> void:
 # Define os valores de objetos guardados no meta da câmera.
 func _set_objects_from_meta() -> void:
 	_shake_obj = _camera.get_meta("shake", false)
+
+	if _shake_obj and not is_instance_valid(_shake_obj):
+		_shake_obj = null
 
 
 # Processa o campo de visão quando a pedra gigante estiver rolando.
@@ -73,7 +74,7 @@ func _process_focus() -> void:
 func _process_collision() -> void:
 	_ray_cast_camera.global_translation = player.global_translation + Vector3(0, 0.2, 0)
 
-	if not _ray_cast_camera.is_colliding() or _state_manager.current_state == _state_stop:
+	if not _ray_cast_camera.is_colliding() or player.state_manager.current_state == player.state_stop:
 		_camera_axis.rotation = _camera_axis.rotation.linear_interpolate(
 			Vector3(deg2rad(-45), 0, 0), 0.1
 		)
