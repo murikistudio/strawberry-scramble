@@ -15,8 +15,6 @@ export(float, 0.0, 2.0, 0.01) var gravity_force := 0.5
 export(float, 0.0, 10.0, 0.1) var move_speed := 5.0
 export(float, 0.0, 1.0, 0.01) var intertia_factor := 0.15
 export(float, 0.5, 2.0, 0.01) var view_forward_multiplier := 1.0
-export(PackedScene) var scene_water_splash: PackedScene
-export(PackedScene) var scene_balloon_pop: PackedScene
 export(Array, ShaderMaterial) var shaders_to_update: Array
 
 var jumps_left := jump_times setget _set_jumps_left
@@ -99,34 +97,6 @@ func _process_visual(_delta: float) -> void:
 	_mesh_direction.global_translation = target_vec
 
 
-# Processar lógica de quando o jogador morrer.
-func _process_death(node: Spatial) -> void:
-	dead = true
-	_visual.visible = false
-	GameState.add_times_died()
-
-	# Spawnar efeito de água
-	if node.is_in_group("water"):
-		var water_splash: Spatial = scene_water_splash.instance()
-		add_child(water_splash)
-		water_splash.global_translation = global_translation
-		water_splash.global_translation.y += 1.5
-		GameAudio.play_sfx(DatabaseAudio.SFX_WATER)
-
-	# Spawnar efeito de água
-	elif node.is_in_group("thorns"):
-		var balloon_pop: Spatial = scene_balloon_pop.instance()
-		add_child(balloon_pop)
-		balloon_pop.global_translation = global_translation
-		balloon_pop.global_translation.y += -1.0
-
-	yield(get_tree().create_timer(1.0, false), "timeout")
-	global_translation = respawn_position + Vector3(0, 0, -1)
-	dead = false
-	_visual.visible = true
-	move_weight = Vector2.ZERO
-
-
 # Helper methods
 # Converte o Vector2 de entrada de controle para a direção alvo em Vector3.
 static func _get_axis_offset(axis_vec: Vector2) -> Vector3:
@@ -134,26 +104,6 @@ static func _get_axis_offset(axis_vec: Vector2) -> Vector3:
 
 
 # Event handlers
-# Tratar colisão do jogador com inimigos e coletáveis.
-func _on_Area_area_entered(area: Area) -> void:
-	if dead:
-		return
-
-	if area.is_in_group("death"):
-		_process_death(area)
-		return
-
-
-# Tratar colisão do jogador com obstáculos do cenário.
-func _on_Area_body_entered(body: Spatial) -> void:
-	if dead:
-		return
-
-	if body.is_in_group("death"):
-		_process_death(body)
-		return
-
-
 # Avançar tempo no jogo.
 func _on_Timer_timeout() -> void:
 	if GameState.completed:

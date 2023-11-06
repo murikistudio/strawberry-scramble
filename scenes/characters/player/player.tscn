@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=2]
+[gd_scene load_steps=34 format=2]
 
 [ext_resource path="res://scenes/characters/player/player.gd" type="Script" id=1]
 [ext_resource path="res://classes/base/state_manager.gd" type="Script" id=2]
@@ -28,6 +28,7 @@
 [ext_resource path="res://scenes/characters/player/components/sfx.gd" type="Script" id=26]
 [ext_resource path="res://classes/base/component_manager.gd" type="Script" id=27]
 [ext_resource path="res://scenes/characters/player/components/movement.gd" type="Script" id=28]
+[ext_resource path="res://scenes/characters/player/components/collision.gd" type="Script" id=29]
 
 [sub_resource type="CapsuleShape" id=1]
 radius = 0.25
@@ -58,8 +59,6 @@ script = ExtResource( 1 )
 move_speed = 4.0
 intertia_factor = 0.18
 view_forward_multiplier = 1.5
-scene_water_splash = ExtResource( 8 )
-scene_balloon_pop = ExtResource( 18 )
 shaders_to_update = [ ExtResource( 19 ), ExtResource( 23 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ) ]
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
@@ -138,17 +137,22 @@ transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, -0.6
 script = ExtResource( 27 )
 owner_object = NodePath("..")
 
-[node name="Camera" type="Node" parent="ComponentManager"]
-script = ExtResource( 24 )
-
 [node name="Animation" type="Node" parent="ComponentManager"]
 script = ExtResource( 25 )
 
-[node name="Sfx" type="Node" parent="ComponentManager"]
-script = ExtResource( 26 )
+[node name="Camera" type="Node" parent="ComponentManager"]
+script = ExtResource( 24 )
+
+[node name="Collision" type="Node" parent="ComponentManager"]
+script = ExtResource( 29 )
+scene_water_splash = ExtResource( 8 )
+scene_balloon_pop = ExtResource( 18 )
 
 [node name="Movement" type="Node" parent="ComponentManager"]
 script = ExtResource( 28 )
+
+[node name="Sfx" type="Node" parent="ComponentManager"]
+script = ExtResource( 26 )
 
 [node name="StateManager" type="Node" parent="."]
 script = ExtResource( 2 )
@@ -189,8 +193,8 @@ state_jump = NodePath("../Jump")
 
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
 [connection signal="options_exited" from="Gui/Options" to="Gui" method="_on_Options_options_exited"]
-[connection signal="area_entered" from="Area" to="." method="_on_Area_area_entered"]
-[connection signal="body_entered" from="Area" to="." method="_on_Area_body_entered"]
+[connection signal="area_entered" from="Area" to="ComponentManager/Collision" method="_on_Area_area_entered"]
+[connection signal="body_entered" from="Area" to="ComponentManager/Collision" method="_on_Area_body_entered"]
 [connection signal="state_entered" from="StateManager" to="ComponentManager/Animation" method="_on_StateManager_state_entered"]
 
 [editable path="Visual/Player"]
