@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=2]
+[gd_scene load_steps=33 format=2]
 
 [ext_resource path="res://scenes/characters/player/player.gd" type="Script" id=1]
 [ext_resource path="res://classes/base/state_manager.gd" type="Script" id=2]
@@ -27,6 +27,7 @@
 [ext_resource path="res://scenes/characters/player/components/animation.gd" type="Script" id=25]
 [ext_resource path="res://scenes/characters/player/components/sfx.gd" type="Script" id=26]
 [ext_resource path="res://classes/base/component_manager.gd" type="Script" id=27]
+[ext_resource path="res://scenes/characters/player/components/movement.gd" type="Script" id=28]
 
 [sub_resource type="CapsuleShape" id=1]
 radius = 0.25
@@ -145,6 +146,9 @@ script = ExtResource( 25 )
 
 [node name="Sfx" type="Node" parent="ComponentManager"]
 script = ExtResource( 26 )
+
+[node name="Movement" type="Node" parent="ComponentManager"]
+script = ExtResource( 28 )
 
 [node name="StateManager" type="Node" parent="."]
 script = ExtResource( 2 )

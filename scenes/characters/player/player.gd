@@ -27,7 +27,6 @@ var move_snap := Vector3.ZERO
 var dead := false
 var ground_type := "grass"
 var respawn_position: Vector3
-var raycast_object: Spatial
 
 onready var _state_manager: BaseStateManager = find_node("StateManager")
 onready var _state_stop: BaseState = _state_manager.get_node("Stop")
@@ -36,7 +35,6 @@ onready var _visual: Spatial = find_node("Visual")
 onready var _mesh_direction: MeshInstance = find_node("MeshDirection")
 onready var _directional_light: DirectionalLight = find_node("DirectionalLight")
 onready var _area: Area = find_node("Area")
-onready var _ray_cast_ground: RayCast = find_node("RayCastGround")
 
 
 # Setters and getters
@@ -73,11 +71,7 @@ func _physics_process(delta: float) -> void:
 
 	_directional_light.global_translation = global_translation
 
-	_process_move(delta)
 	_process_visual(delta)
-
-	if move_gravity < -50.0:
-		get_tree().reload_current_scene()
 
 
 func _process(_delta: float) -> void:
@@ -103,71 +97,6 @@ func _process_visual(_delta: float) -> void:
 		look_at(interp_vec, Vector3.UP)
 
 	_mesh_direction.global_translation = target_vec
-
-
-# Processa a gravidade e movimentação do jogador seguindo os eixos do controle.
-func _process_move(_delta: float) -> void:
-	var move_vec: Vector2 = move_weight * move_speed
-	var translation_vec := Vector3(-move_vec.x, move_gravity, move_vec.y)
-
-	move_and_slide_with_snap(translation_vec, move_snap, Vector3.UP, true)
-
-	move_snap = -get_floor_normal() if is_on_floor() else Vector3.ZERO
-	move_weight = lerp(move_weight, move_axis, intertia_factor)
-
-	if _ray_cast_ground.is_colliding():
-		_process_ray_cast(_ray_cast_ground.get_collider())
-
-	if is_on_floor():
-		jumps_left = jump_times
-		move_gravity = 0.0
-	else:
-		move_gravity = move_gravity - gravity_force
-
-	if is_on_ceiling() and move_gravity > 0.0:
-		move_gravity = -1.0
-
-
-# Processa a colisão do ray cast.
-func _process_ray_cast(body: Spatial) -> void:
-	if body == raycast_object:
-		return
-
-	raycast_object = body
-
-	if body is GridMap:
-		var body_name := body.name.to_lower()
-
-		if body.is_in_group("death"):
-			_process_death(body)
-
-		if "grass" in body_name:
-			ground_type = "grass"
-
-		elif "bridge" in body_name or "fence" in body_name or "tree" in body_name:
-			ground_type = "wood"
-
-		else:
-			ground_type = "rock"
-
-		return
-
-	var root := body.find_parent("Visual")
-
-	if not root:
-		return
-
-	root = root.get_parent()
-
-	if root.is_in_group("ground"):
-		if root.is_in_group("grass"):
-			ground_type = "grass"
-
-		elif root.is_in_group("rock"):
-			ground_type = "rock"
-
-		elif root.is_in_group("wood"):
-			ground_type = "wood"
 
 
 # Processar lógica de quando o jogador morrer.
