@@ -30,6 +30,8 @@ func _ready() -> void:
 		queue_free()
 		return
 
+	GameEvents.connect("player_died", self, "_on_player_died")
+
 
 func _physics_process(delta: float) -> void:
 	var rot_factor := 120.0
@@ -91,3 +93,10 @@ func _roll_stop() -> void:
 	get_viewport().get_camera().set_meta("shake", null)
 	_animation_player.stop(true)
 	_audio_roll.playing = false
+
+
+# Event handlers
+func _on_player_died() -> void:
+	yield(get_tree().create_timer(1.0, false), "timeout")
+	_roll_stop()
+	queue_free()

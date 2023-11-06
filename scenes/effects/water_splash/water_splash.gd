@@ -9,7 +9,7 @@ var time := 1.5
 func _ready() -> void:
 	set_as_toplevel(true)
 	one_shot = true
-	var timer := get_tree().create_timer(time)
+	var timer := get_tree().create_timer(time, false)
 	timer.connect("timeout", self, "_on_timer_timeout")
 
 
