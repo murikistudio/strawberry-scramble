@@ -44,7 +44,6 @@ func _init() -> void:
 func _ready() -> void:
 	respawn_position = global_translation
 	GameEvents.emit_signal("player_emitted", self)
-	GameEvents.connect("player_request_camera_focus", self, "_on_player_request_camera_focus")
 	GameEvents.connect("player_enabled", self, "_on_player_enabled")
 
 
@@ -68,11 +67,3 @@ func _on_Timer_timeout() -> void:
 # Habilita ou desabilita o controle do jogador.
 func _on_player_enabled(enabled: bool) -> void:
 	state_manager.transition_to(state_idle if enabled else state_stop)
-
-
-# Alterar objeto de foco da câmera.
-func _on_player_request_camera_focus(target: Spatial) -> void:
-	if not target:
-		state_manager.transition_to(state_idle)
-	else:
-		state_manager.transition_to(state_stop)

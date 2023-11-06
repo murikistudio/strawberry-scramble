@@ -94,5 +94,7 @@ func _process_collision() -> void:
 func _on_player_request_camera_focus(target: Spatial) -> void:
 	if not target:
 		_camera_focus = null
+		player.state_manager.transition_to(player.state_idle)
 	else:
 		_camera_focus = target
+		player.state_manager.transition_to(player.state_stop)
