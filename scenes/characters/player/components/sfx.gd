@@ -3,12 +3,10 @@ extends PlayerBaseComponent
 
 # Built-in overrides
 func _ready() -> void:
-	player.connect("sfx_jumped", self, "_play_sfx_jump")
-	player.connect("sfx_stepped", self, "_play_sfx_step")
-	player.connect("sfx_swinged", self, "_play_sfx_swing")
+	player.connect("sfx_played", self, "_play_sfx")
 
 
-# Event handlers
+# Private methods
 # Toca som aleatório de voz de pulo.
 func _play_sfx_jump() -> void:
 	if rand_range(0, 100) > 30:
@@ -58,6 +56,15 @@ func _play_sfx_swing() -> void:
 		DatabaseAudio.SFX_SWING_3,
 	]
 	GameAudio.play_sfx(_get_random_item(sfx), -12.0)
+
+
+# Event handlers
+# Toca efeito sonoro.
+func _play_sfx(sfx: String) -> void:
+	var method_name := "_play_sfx_" + sfx
+
+	if has_method(method_name):
+		call(method_name)
 
 
 # Static methods

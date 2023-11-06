@@ -26,7 +26,7 @@ func physics_process(delta: float) -> BaseState:
 
 	if _step_time >= step_sound_interval:
 		_step_time = 0.0
-		player.emit_signal("sfx_stepped")
+		player.emit_signal("sfx_played", "step")
 
 	if not player.is_on_floor():
 		return get_state(state_coyote)

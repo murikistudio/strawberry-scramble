@@ -6,9 +6,7 @@ class_name Player
 
 # Signals
 signal animation_changed(name, speed)
-signal sfx_stepped
-signal sfx_jumped
-signal sfx_swinged
+signal sfx_played(name)
 
 
 # Variables
