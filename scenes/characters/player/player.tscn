@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=2]
+[gd_scene load_steps=33 format=2]
 
 [ext_resource path="res://scenes/characters/player/player.gd" type="Script" id=1]
 [ext_resource path="res://classes/base/state_manager.gd" type="Script" id=2]
@@ -21,14 +21,13 @@
 [ext_resource path="res://scenes/levels/assets/common/grass/src/grass.tres" type="Material" id=19]
 [ext_resource path="res://scenes/levels/assets/common/trees/src/bush.tres" type="Material" id=20]
 [ext_resource path="res://scenes/levels/assets/common/trees/src/tree_leaves.tres" type="Material" id=21]
-[ext_resource path="res://scenes/levels/assets/common/trees/src/tree_leaves_2.tres" type="Material" id=22]
-[ext_resource path="res://scenes/levels/assets/autumn/grass/src/grass.tres" type="Material" id=23]
 [ext_resource path="res://scenes/characters/player/components/camera.gd" type="Script" id=24]
 [ext_resource path="res://scenes/characters/player/components/animation.gd" type="Script" id=25]
 [ext_resource path="res://scenes/characters/player/components/sfx.gd" type="Script" id=26]
 [ext_resource path="res://classes/base/component_manager.gd" type="Script" id=27]
 [ext_resource path="res://scenes/characters/player/components/movement.gd" type="Script" id=28]
 [ext_resource path="res://scenes/characters/player/components/collision.gd" type="Script" id=29]
+[ext_resource path="res://scenes/characters/player/components/visual.gd" type="Script" id=30]
 
 [sub_resource type="CapsuleShape" id=1]
 radius = 0.25
@@ -59,7 +58,6 @@ script = ExtResource( 1 )
 move_speed = 4.0
 intertia_factor = 0.18
 view_forward_multiplier = 1.5
-shaders_to_update = [ ExtResource( 19 ), ExtResource( 23 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ) ]
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
 transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0 )
@@ -153,6 +151,10 @@ script = ExtResource( 28 )
 
 [node name="Sfx" type="Node" parent="ComponentManager"]
 script = ExtResource( 26 )
+
+[node name="Visual" type="Node" parent="ComponentManager"]
+script = ExtResource( 30 )
+shaders_to_update = [ ExtResource( 19 ), ExtResource( 21 ), ExtResource( 20 ) ]
 
 [node name="StateManager" type="Node" parent="."]
 script = ExtResource( 2 )
