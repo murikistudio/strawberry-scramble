@@ -1,25 +1,23 @@
-extends Node
+extends PlayerBaseComponent
 
 
 # Variables
-export(NodePath) var player: NodePath
 var _animation := {
 	"name": "idle_loop",
 	"speed": 1.0,
 	"blend": 0.2,
 }
-onready var _player: Player = get_node(player)
-onready var _anim_player: AnimationPlayer = _player.get_node("Visual").find_node("AnimationPlayer")
+onready var _anim_player: AnimationPlayer = player.get_node("Visual").find_node("AnimationPlayer")
 
 
 # Built-in overrides
 func _ready() -> void:
-	_player.connect("animation_changed", self, "_set_animation")
+	player.connect("animation_changed", self, "_set_animation")
 
 
 func _process(_delta: float) -> void:
 	if _animation["name"] == "run_loop":
-		_anim_player.playback_speed = _player.move_weight.length()
+		_anim_player.playback_speed = player.move_weight.length()
 	else:
 		_anim_player.playback_speed = _animation["speed"]
 

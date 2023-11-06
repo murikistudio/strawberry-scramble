@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=2]
+[gd_scene load_steps=31 format=2]
 
 [ext_resource path="res://scenes/characters/player/player.gd" type="Script" id=1]
 [ext_resource path="res://classes/base/state_manager.gd" type="Script" id=2]
@@ -25,6 +25,7 @@
 [ext_resource path="res://scenes/levels/assets/autumn/grass/src/grass.tres" type="Material" id=23]
 [ext_resource path="res://scenes/characters/player/components/camera.gd" type="Script" id=24]
 [ext_resource path="res://scenes/characters/player/components/animation.gd" type="Script" id=25]
+[ext_resource path="res://classes/base/component_manager.gd" type="Script" id=27]
 
 [sub_resource type="CapsuleShape" id=1]
 radius = 0.25
@@ -141,15 +142,15 @@ text = "Player"
 [node name="Player" parent="Visual" instance=ExtResource( 5 )]
 transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, -0.633532, 0 )
 
-[node name="Components" type="Node" parent="."]
+[node name="ComponentManager" type="Node" parent="."]
+script = ExtResource( 27 )
+owner_object = NodePath("..")
 
-[node name="Camera" type="Node" parent="Components"]
+[node name="Camera" type="Node" parent="ComponentManager"]
 script = ExtResource( 24 )
-player = NodePath("../..")
 
-[node name="Animation" type="Node" parent="Components"]
+[node name="Animation" type="Node" parent="ComponentManager"]
 script = ExtResource( 25 )
-player = NodePath("../..")
 
 [node name="StateManager" type="Node" parent="."]
 script = ExtResource( 2 )
@@ -193,6 +194,6 @@ state_jump = NodePath("../Jump")
 [connection signal="area_entered" from="Area" to="." method="_on_Area_area_entered"]
 [connection signal="body_entered" from="Area" to="." method="_on_Area_body_entered"]
 [connection signal="state_entered" from="StateManager" to="." method="_on_StateManager_state_entered"]
-[connection signal="state_entered" from="StateManager" to="Components/Animation" method="_on_StateManager_state_entered"]
+[connection signal="state_entered" from="StateManager" to="ComponentManager/Animation" method="_on_StateManager_state_entered"]
 
 [editable path="Visual/Player"]
