@@ -11,10 +11,6 @@ signal sfx_played(name)
 
 # Variables
 export(int, 1, 5, 1) var jump_times := 1
-export(float, 0.0, 2.0, 0.01) var gravity_force := 0.5
-export(float, 0.0, 10.0, 0.1) var move_speed := 5.0
-export(float, 0.0, 1.0, 0.01) var intertia_factor := 0.15
-export(float, 0.5, 2.0, 0.01) var view_forward_multiplier := 1.0
 
 var jumps_left := jump_times setget _set_jumps_left
 var move_axis := Vector2.ZERO
@@ -28,7 +24,6 @@ var respawn_position: Vector3
 onready var state_manager: BaseStateManager = find_node("StateManager")
 onready var state_stop: BaseState = state_manager.get_node("Stop")
 onready var state_idle: BaseState = state_manager.get_node("Idle")
-onready var _area: Area = find_node("Area")
 
 
 # Setters and getters

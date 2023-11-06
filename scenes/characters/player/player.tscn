@@ -55,9 +55,6 @@ collision_layer = 2
 collision_mask = 5
 collision/safe_margin = 0.01
 script = ExtResource( 1 )
-move_speed = 4.0
-intertia_factor = 0.18
-view_forward_multiplier = 1.5
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
 transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0 )

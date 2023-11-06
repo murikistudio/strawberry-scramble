@@ -3,6 +3,7 @@ extends PlayerBaseComponent
 
 # Variables
 export(Array, ShaderMaterial) var shaders_to_update: Array
+export(float, 0.5, 2.0, 0.01) var view_forward_multiplier := 1.5
 onready var _mesh_direction: MeshInstance = player.find_node("MeshDirection")
 onready var _directional_light: DirectionalLight = player.find_node("DirectionalLight")
 
@@ -36,7 +37,7 @@ func _physics_process(delta: float) -> void:
 # Private methods
 # Atualiza as malhas visuais de acordo com o estado.
 func _process_visual(_delta: float) -> void:
-	var target_vec: Vector3 = player.global_translation + _get_axis_offset(player.move_weight) * player.view_forward_multiplier
+	var target_vec: Vector3 = player.global_translation + _get_axis_offset(player.move_weight) * view_forward_multiplier
 	var interp_vec: Vector3 = lerp(player.global_translation, target_vec, 0.01)
 
 	if player.move_weight.length() > 0.1:
