@@ -16,9 +16,7 @@ export(PackedScene) var scene_balloon_pop: PackedScene
 export(Array, ShaderMaterial) var shaders_to_update: Array
 
 var jumps_left := jump_times setget _set_jumps_left
-var direction_axis := Vector2.UP
 var move_axis := Vector2.ZERO
-var move_speed_multiplier := 1.0
 var move_weight := Vector2.ZERO
 var move_gravity := 0.0
 var move_snap := Vector3.ZERO
@@ -174,7 +172,7 @@ func _process_visual(_delta: float) -> void:
 
 # Processa a gravidade e movimentação do jogador seguindo os eixos do controle.
 func _process_move(_delta: float) -> void:
-	var move_vec: Vector2 = move_weight * move_speed * move_speed_multiplier
+	var move_vec: Vector2 = move_weight * move_speed
 	var translation_vec := Vector3(-move_vec.x, move_gravity, move_vec.y)
 
 	move_and_slide_with_snap(translation_vec, move_snap, Vector3.UP, true)
@@ -184,9 +182,6 @@ func _process_move(_delta: float) -> void:
 
 	if _ray_cast_ground.is_colliding():
 		_process_ray_cast(_ray_cast_ground.get_collider())
-
-	if move_axis.length():
-		direction_axis = move_axis.normalized()
 
 	if is_on_floor():
 		jumps_left = jump_times
