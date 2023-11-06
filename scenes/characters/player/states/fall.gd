@@ -11,7 +11,7 @@ export(NodePath) var state_jump: NodePath
 
 # State overrides
 func enter() -> void:
-	player.set_animation("fall_loop")
+	player.emit_signal("animation_changed", "fall_loop", 1.0)
 
 
 func physics_process(delta: float) -> BaseState:

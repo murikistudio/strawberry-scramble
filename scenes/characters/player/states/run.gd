@@ -13,7 +13,7 @@ var _step_time := 0.0
 
 # State overrides
 func enter() -> void:
-	player.set_animation("run_loop", 1.32)
+	player.emit_signal("animation_changed", "run_loop", 1.32)
 	_step_time = 0.0
 
 

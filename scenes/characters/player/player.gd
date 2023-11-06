@@ -4,6 +4,10 @@ class_name Player
 # A lógica de suas ações é delegada aos seus respectivos estados.
 
 
+# Signals
+signal animation_changed(name, speed)
+
+
 # Variables
 export var debug := false
 export(int, 1, 5, 1) var jump_times := 1
@@ -24,11 +28,6 @@ var dead := false
 var ground_type := "grass"
 var respawn_position: Vector3
 var raycast_object: Spatial
-var animation := {
-	"name": "idle_loop",
-	"speed": 1.0,
-	"blend": 0.2,
-}
 
 onready var _state_manager: BaseStateManager = find_node("StateManager")
 onready var _state_stop: BaseState = _state_manager.get_node("Stop")
@@ -37,7 +36,6 @@ onready var _visual: Spatial = find_node("Visual")
 onready var _mesh_direction: MeshInstance = find_node("MeshDirection")
 onready var _label_debug: Label3D = find_node("LabelDebug")
 onready var _directional_light: DirectionalLight = find_node("DirectionalLight")
-onready var _anim_player: AnimationPlayer = $Visual.find_node("AnimationPlayer")
 onready var _area: Area = find_node("Area")
 onready var _ray_cast_ground: RayCast = find_node("RayCastGround")
 
@@ -98,13 +96,6 @@ func _process(_delta: float) -> void:
 
 
 # Public methods
-# Define a animação atual do jogador.
-func set_animation(anim_name: String, speed := 1.0, blend := 0.2) -> void:
-	animation["name"] = anim_name
-	animation["speed"] = speed
-	animation["blend"] = blend
-
-
 # Toca som aleatório de voz de passo.
 func play_sfx_step() -> void:
 	if not is_on_floor():
@@ -161,8 +152,6 @@ func play_sfx_swing(pitch := 1.0) -> void:
 func _process_visual(_delta: float) -> void:
 	var target_vec: Vector3 = global_translation + _get_axis_offset(move_weight) * view_forward_multiplier
 	var interp_vec: Vector3 = lerp(global_translation, target_vec, 0.01)
-
-	_anim_player.playback_speed = move_weight.length() if animation["name"] == "run_loop" else animation["speed"]
 
 	if move_weight.length() > 0.1:
 		look_at(interp_vec, Vector3.UP)
@@ -279,13 +268,6 @@ static func _get_random_item(array: Array):
 func _on_StateManager_state_entered(state: BaseState) -> void:
 	if debug and _label_debug:
 		_label_debug.text = state.name
-
-	if _anim_player:
-		_anim_player.play(
-			animation["name"],
-			animation["blend"],
-			animation["speed"]
-		)
 
 
 # Tratar colisão do jogador com inimigos e coletáveis.

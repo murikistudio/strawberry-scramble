@@ -10,7 +10,7 @@ export(NodePath) var state_jump: NodePath
 
 # State overrides
 func enter() -> void:
-	player.set_animation("idle_loop")
+	player.emit_signal("animation_changed", "idle_loop", 1.0)
 	player.play_sfx_step()
 
 
