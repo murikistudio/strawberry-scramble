@@ -12,8 +12,8 @@ func enter() -> void:
 	player.move_gravity = jump_force
 	player.move_snap = Vector3.ZERO
 	player.jumps_left -= 1
-	player.play_sfx_jump()
-	player.play_sfx_swing(0.8)
+	player.emit_signal("sfx_jumped")
+	player.emit_signal("sfx_swinged")
 	player.emit_signal("animation_changed", "jump_loop", 1.0)
 
 

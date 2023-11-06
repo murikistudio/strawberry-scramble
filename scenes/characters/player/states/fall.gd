@@ -24,8 +24,8 @@ func physics_process(delta: float) -> BaseState:
 		return null
 
 	if player.move_axis.length():
-		player.play_sfx_step()
+		player.emit_signal("sfx_stepped")
 		return get_state(state_run)
 
-	player.play_sfx_step()
+	player.emit_signal("sfx_stepped")
 	return get_state(state_idle)

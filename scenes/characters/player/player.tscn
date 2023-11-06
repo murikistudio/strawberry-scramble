@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=2]
+[gd_scene load_steps=32 format=2]
 
 [ext_resource path="res://scenes/characters/player/player.gd" type="Script" id=1]
 [ext_resource path="res://classes/base/state_manager.gd" type="Script" id=2]
@@ -25,6 +25,7 @@
 [ext_resource path="res://scenes/levels/assets/autumn/grass/src/grass.tres" type="Material" id=23]
 [ext_resource path="res://scenes/characters/player/components/camera.gd" type="Script" id=24]
 [ext_resource path="res://scenes/characters/player/components/animation.gd" type="Script" id=25]
+[ext_resource path="res://scenes/characters/player/components/sfx.gd" type="Script" id=26]
 [ext_resource path="res://classes/base/component_manager.gd" type="Script" id=27]
 
 [sub_resource type="CapsuleShape" id=1]
@@ -129,16 +130,6 @@ mesh = SubResource( 8 )
 skeleton = NodePath("../..")
 material/0 = SubResource( 9 )
 
-[node name="LabelDebug" type="Label3D" parent="Visual"]
-transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 1, 0 )
-visible = false
-billboard = 1
-double_sided = false
-no_depth_test = true
-fixed_size = true
-alpha_cut = 1
-text = "Player"
-
 [node name="Player" parent="Visual" instance=ExtResource( 5 )]
 transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, -0.633532, 0 )
 
@@ -151,6 +142,9 @@ script = ExtResource( 24 )
 
 [node name="Animation" type="Node" parent="ComponentManager"]
 script = ExtResource( 25 )
+
+[node name="Sfx" type="Node" parent="ComponentManager"]
+script = ExtResource( 26 )
 
 [node name="StateManager" type="Node" parent="."]
 script = ExtResource( 2 )
@@ -193,7 +187,6 @@ state_jump = NodePath("../Jump")
 [connection signal="options_exited" from="Gui/Options" to="Gui" method="_on_Options_options_exited"]
 [connection signal="area_entered" from="Area" to="." method="_on_Area_area_entered"]
 [connection signal="body_entered" from="Area" to="." method="_on_Area_body_entered"]
-[connection signal="state_entered" from="StateManager" to="." method="_on_StateManager_state_entered"]
 [connection signal="state_entered" from="StateManager" to="ComponentManager/Animation" method="_on_StateManager_state_entered"]
 
 [editable path="Visual/Player"]

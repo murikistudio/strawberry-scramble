@@ -6,10 +6,12 @@ class_name Player
 
 # Signals
 signal animation_changed(name, speed)
+signal sfx_stepped
+signal sfx_jumped
+signal sfx_swinged
 
 
 # Variables
-export var debug := false
 export(int, 1, 5, 1) var jump_times := 1
 export(float, 0.0, 2.0, 0.01) var gravity_force := 0.5
 export(float, 0.0, 10.0, 0.1) var move_speed := 5.0
@@ -34,7 +36,6 @@ onready var _state_stop: BaseState = _state_manager.get_node("Stop")
 onready var _state_idle: BaseState = _state_manager.get_node("Idle")
 onready var _visual: Spatial = find_node("Visual")
 onready var _mesh_direction: MeshInstance = find_node("MeshDirection")
-onready var _label_debug: Label3D = find_node("LabelDebug")
 onready var _directional_light: DirectionalLight = find_node("DirectionalLight")
 onready var _area: Area = find_node("Area")
 onready var _ray_cast_ground: RayCast = find_node("RayCastGround")
@@ -52,7 +53,6 @@ func _init() -> void:
 
 func _ready() -> void:
 	respawn_position = global_translation
-	_label_debug.visible = debug
 	_directional_light.set_as_toplevel(true)
 	_mesh_direction.set_as_toplevel(true)
 	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
@@ -93,58 +93,6 @@ func _process(_delta: float) -> void:
 	):
 		GameEvents.emit_signal("level_paused")
 		get_tree().paused = true
-
-
-# Public methods
-# Toca som aleatório de voz de passo.
-func play_sfx_step() -> void:
-	if not is_on_floor():
-		return
-
-	var step_volume := -22.0
-	var sfx := {
-		"grass": [
-			DatabaseAudio.SFX_STEP_GRASS_1,
-			DatabaseAudio.SFX_STEP_GRASS_2,
-		],
-		"rock": [
-			DatabaseAudio.SFX_STEP_ROCK_1,
-			DatabaseAudio.SFX_STEP_ROCK_2,
-		],
-		"wood": [
-			DatabaseAudio.SFX_STEP_WOOD_1,
-			DatabaseAudio.SFX_STEP_WOOD_2,
-		],
-	}
-
-	GameAudio.play_sfx(
-		_get_random_item(sfx[ground_type]),
-		step_volume,
-		rand_range(1.05, 1.15)
-	)
-
-
-# Toca som aleatório de voz de pulo.
-func play_sfx_jump(pitch := 1.2) -> void:
-	if rand_range(0, 100) > 30:
-		return
-
-	var sfx := [
-		DatabaseAudio.SFX_JUMP_1,
-		DatabaseAudio.SFX_JUMP_2,
-		DatabaseAudio.SFX_JUMP_3,
-	]
-	GameAudio.play_sfx(_get_random_item(sfx), -4.0, pitch)
-
-
-# Toca som aleatório de movimento rápido do ar.
-func play_sfx_swing(pitch := 1.0) -> void:
-	var sfx := [
-		DatabaseAudio.SFX_SWING_1,
-		DatabaseAudio.SFX_SWING_2,
-		DatabaseAudio.SFX_SWING_3,
-	]
-	GameAudio.play_sfx(_get_random_item(sfx), -12.0, pitch)
 
 
 # Private methods
@@ -258,18 +206,7 @@ static func _get_axis_offset(axis_vec: Vector2) -> Vector3:
 	return Vector3(-axis_vec.x, 0.0, axis_vec.y)
 
 
-# Retorna um item aleatório da array.
-static func _get_random_item(array: Array):
-	return array[randi() % array.size()]
-
-
 # Event handlers
-# Executado quando o jogador entra em um novo estado.
-func _on_StateManager_state_entered(state: BaseState) -> void:
-	if debug and _label_debug:
-		_label_debug.text = state.name
-
-
 # Tratar colisão do jogador com inimigos e coletáveis.
 func _on_Area_area_entered(area: Area) -> void:
 	if dead:
