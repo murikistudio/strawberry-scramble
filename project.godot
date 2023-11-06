@@ -10,6 +10,16 @@ config_version=4
 
 _global_script_classes=[ {
 "base": "Node",
+"class": "BaseComponent",
+"language": "GDScript",
+"path": "res://classes/base/component.gd"
+}, {
+"base": "Node",
+"class": "BaseComponentManager",
+"language": "GDScript",
+"path": "res://classes/base/component_manager.gd"
+}, {
+"base": "Node",
 "class": "BaseState",
 "language": "GDScript",
 "path": "res://classes/base/state.gd"
@@ -64,6 +74,11 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://scenes/characters/player/player.gd"
 }, {
+"base": "BaseComponent",
+"class": "PlayerBaseComponent",
+"language": "GDScript",
+"path": "res://scenes/characters/player/components/base/base.gd"
+}, {
 "base": "BaseState",
 "class": "PlayerBaseState",
 "language": "GDScript",
@@ -85,6 +100,8 @@ _global_script_classes=[ {
 "path": "res://addons/utils/startup_visibility.gd"
 } ]
 _global_script_class_icons={
+"BaseComponent": "",
+"BaseComponentManager": "",
 "BaseState": "",
 "BaseStateManager": "",
 "ButtonHighlighter": "res://addons/utils/icons/button_highlighter.svg",
@@ -96,6 +113,7 @@ _global_script_class_icons={
 "GuiTransition": "res://addons/simple-gui-transitions/icon.png",
 "PlatformVisibility": "res://addons/utils/icons/platform_visibility.png",
 "Player": "",
+"PlayerBaseComponent": "",
 "PlayerBaseState": "",
 "PlayerStateFall": "",
 "PlayerStateMove": "",
