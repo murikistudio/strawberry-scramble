@@ -35,7 +35,7 @@
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
-     inkscape:current-layer="layer4">
+     inkscape:current-layer="layer1">
     <inkscape:grid
        id="grid1"
        units="px"
@@ -272,12 +272,12 @@
        style="color-interpolation-filters:sRGB;"
        inkscape:label="Blur"
        id="filter29"
-       x="0.13582678"
-       y="0.21751967"
-       width="0.72834652"
-       height="0.56496065">
+       x="0.15000001"
+       y="0.23523621"
+       width="0.70000006"
+       height="0.52952758">
       <feGaussianBlur
-         stdDeviation="1"
+         stdDeviation="0"
          result="blur"
          id="feGaussianBlur29" />
     </filter>
