@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://scenes/levels/assets/common/platform/platform.gd" type="Script" id=1]
-[ext_resource path="res://models/level/common/ground/platform.gltf" type="PackedScene" id=2]
+[ext_resource path="res://models/level/spring/ground/platform.gltf" type="PackedScene" id=2]
 
 [sub_resource type="CylinderShape" id=1]
 height = 0.5

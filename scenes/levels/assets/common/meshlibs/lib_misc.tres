@@ -1,12 +1,12 @@
 [gd_resource type="MeshLibrary" load_steps=16 format=2]
 
-[ext_resource path="res://models/level/common/misc/previews/scarecrow.png" type="Texture" id=1]
-[ext_resource path="res://models/level/common/misc/well.tres" type="Material" id=2]
-[ext_resource path="res://models/level/common/misc/previews/sign_direction.png" type="Texture" id=3]
-[ext_resource path="res://models/level/common/misc/scarecrow.tres" type="Material" id=4]
-[ext_resource path="res://models/level/common/misc/sign.tres" type="Material" id=5]
-[ext_resource path="res://models/level/common/misc/previews/sign_caution.png" type="Texture" id=6]
-[ext_resource path="res://models/level/common/misc/previews/well.png" type="Texture" id=7]
+[ext_resource path="res://models/level/autumn/scarecrow/previews/scarecrow.png" type="Texture" id=1]
+[ext_resource path="res://models/level/common/well/well.tres" type="Material" id=2]
+[ext_resource path="res://models/level/common/signs/previews/sign_direction.png" type="Texture" id=3]
+[ext_resource path="res://models/level/autumn/scarecrow/scarecrow.tres" type="Material" id=4]
+[ext_resource path="res://models/level/common/signs/sign.tres" type="Material" id=5]
+[ext_resource path="res://models/level/common/signs/previews/sign_caution.png" type="Texture" id=6]
+[ext_resource path="res://models/level/common/well/previews/well.png" type="Texture" id=7]
 
 [sub_resource type="ArrayMesh" id=1]
 resource_name = "sign_caution_SignCautionMesh001"

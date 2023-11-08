@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://models/level/common/misc/scarecrow.gltf" type="PackedScene" id=1]
-[ext_resource path="res://models/level/common/misc/sign_caution.gltf" type="PackedScene" id=2]
-[ext_resource path="res://models/level/common/misc/sign_direction.gltf" type="PackedScene" id=3]
-[ext_resource path="res://models/level/common/misc/well.gltf" type="PackedScene" id=4]
+[ext_resource path="res://models/level/autumn/scarecrow/scarecrow.gltf" type="PackedScene" id=1]
+[ext_resource path="res://models/level/common/signs/sign_caution.gltf" type="PackedScene" id=2]
+[ext_resource path="res://models/level/common/signs/sign_direction.gltf" type="PackedScene" id=3]
+[ext_resource path="res://models/level/common/well/well.gltf" type="PackedScene" id=4]
 
 [node name="LibMisc" type="Spatial"]
 
