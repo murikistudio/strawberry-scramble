@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/jarro1.png-bd63090861f35e9f51f77ea0ea5b42ec.stex"
+path="res://.import/jarro2.png-902cb40bf5634cff5bcb83df2d198094.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/levels/assets/new_assets/jarro1.png"
-dest_files=[ "res://.import/jarro1.png-bd63090861f35e9f51f77ea0ea5b42ec.stex" ]
+source_file="res://models/new_assets/jarro2.png"
+dest_files=[ "res://.import/jarro2.png-902cb40bf5634cff5bcb83df2d198094.stex" ]
 
 [params]
 
