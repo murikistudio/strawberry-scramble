@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://scenes/characters/fish/src/fish.gltf" type="PackedScene" id=1]
+[ext_resource path="res://models/characters/fish/fish.gltf" type="PackedScene" id=1]
 [ext_resource path="res://scenes/characters/fish/fish.gd" type="Script" id=2]
 [ext_resource path="res://scenes/effects/water_splash/water_splash.tscn" type="PackedScene" id=3]
 

@@ -1,12 +1,12 @@
 [gd_scene load_steps=8 format=2]
 
-[ext_resource path="res://scenes/levels/assets/common/ground/src/side.gltf" type="PackedScene" id=2]
-[ext_resource path="res://scenes/levels/assets/common/ground/src/corner_3.gltf" type="PackedScene" id=3]
-[ext_resource path="res://scenes/levels/assets/common/ground/src/corner_1.gltf" type="PackedScene" id=4]
-[ext_resource path="res://scenes/levels/assets/common/ground/src/center.gltf" type="PackedScene" id=5]
-[ext_resource path="res://scenes/levels/assets/common/ground/src/corner_2.gltf" type="PackedScene" id=6]
-[ext_resource path="res://scenes/levels/assets/common/ground/src/wall_side.gltf" type="PackedScene" id=8]
-[ext_resource path="res://scenes/levels/assets/common/ground/src/wall_corner.gltf" type="PackedScene" id=9]
+[ext_resource path="res://models/level/common/ground/side.gltf" type="PackedScene" id=2]
+[ext_resource path="res://models/level/common/ground/corner_3.gltf" type="PackedScene" id=3]
+[ext_resource path="res://models/level/common/ground/corner_1.gltf" type="PackedScene" id=4]
+[ext_resource path="res://models/level/common/ground/center.gltf" type="PackedScene" id=5]
+[ext_resource path="res://models/level/common/ground/corner_2.gltf" type="PackedScene" id=6]
+[ext_resource path="res://models/level/common/ground/wall_side.gltf" type="PackedScene" id=8]
+[ext_resource path="res://models/level/common/ground/wall_corner.gltf" type="PackedScene" id=9]
 
 [node name="LibGround" type="Spatial"]
 

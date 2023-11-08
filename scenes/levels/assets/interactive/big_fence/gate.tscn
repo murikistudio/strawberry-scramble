@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://scenes/levels/assets/common/big_fence/src/big_fence_gate.gltf" type="PackedScene" id=1]
+[ext_resource path="res://models/level/common/big_fence/big_fence_gate.gltf" type="PackedScene" id=1]
 [ext_resource path="res://scenes/levels/assets/interactive/big_fence/gate.gd" type="Script" id=2]
 
 [sub_resource type="Animation" id=1]

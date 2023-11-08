@@ -1,0 +1,201 @@
+{
+    "asset" : {
+        "version" : "2.0",
+        "generator" : "Khronos glTF Blender I/O v1.2.20"
+    },
+    "extensionsUsed" : [
+        "KHR_materials_unlit"
+    ],
+    "scene" : 0,
+    "scenes" : [
+        {
+            "name" : "Scene",
+            "nodes" : [
+                1
+            ]
+        }
+    ],
+    "nodes" : [
+        {
+            "name" : "PalmTreeCollider -colonly",
+            "mesh" : 0
+        },
+        {
+            "name" : "PalmTreeMesh",
+            "mesh" : 1,
+            "children" : [
+                0
+            ]
+        }
+    ],
+    "materials" : [
+        {
+            "name" : "palm_tree",
+            "extensions" : {
+                "KHR_materials_unlit" : {}
+            },
+            "pbrMetallicRoughness" : {
+                "baseColorTexture" : {
+                    "texCoord" : 0,
+                    "index" : 0
+                }
+            }
+        }
+    ],
+    "meshes" : [
+        {
+            "name" : "PalmTreeCollider.001",
+            "primitives" : [
+                {
+                    "indices" : 2,
+                    "attributes" : {
+                        "NORMAL" : 0,
+                        "POSITION" : 1
+                    }
+                }
+            ]
+        },
+        {
+            "name" : "PalmTreeMesh.001",
+            "primitives" : [
+                {
+                    "material" : 0,
+                    "indices" : 6,
+                    "attributes" : {
+                        "TEXCOORD_0" : 3,
+                        "NORMAL" : 4,
+                        "POSITION" : 5
+                    }
+                }
+            ]
+        }
+    ],
+    "textures" : [
+        {
+            "sampler" : 0,
+            "source" : 0
+        }
+    ],
+    "images" : [
+        {
+            "uri" : "palm_tree.png",
+            "mimeType" : "image/png",
+            "name" : "palm_tree.png"
+        }
+    ],
+    "accessors" : [
+        {
+            "type" : "VEC3",
+            "count" : 24,
+            "bufferView" : 0,
+            "componentType" : 5126
+        },
+        {
+            "type" : "VEC3",
+            "count" : 24,
+            "max" : [
+                0.46409550309181213,
+                2.936997413635254,
+                0.6021137833595276
+            ],
+            "bufferView" : 1,
+            "componentType" : 5126,
+            "min" : [
+                -0.5150015950202942,
+                0,
+                -0.38320380449295044
+            ]
+        },
+        {
+            "type" : "SCALAR",
+            "count" : 36,
+            "bufferView" : 2,
+            "componentType" : 5123
+        },
+        {
+            "type" : "VEC2",
+            "count" : 1490,
+            "bufferView" : 3,
+            "componentType" : 5126
+        },
+        {
+            "type" : "VEC3",
+            "count" : 1490,
+            "bufferView" : 4,
+            "componentType" : 5126
+        },
+        {
+            "type" : "VEC3",
+            "count" : 1490,
+            "max" : [
+                1.2214068174362183,
+                2.9219892024993896,
+                1.0874651670455933
+            ],
+            "bufferView" : 5,
+            "componentType" : 5126,
+            "min" : [
+                -1.33913254737854,
+                -0.029254773631691933,
+                -1.2915488481521606
+            ]
+        },
+        {
+            "type" : "SCALAR",
+            "count" : 1854,
+            "bufferView" : 6,
+            "componentType" : 5123
+        }
+    ],
+    "bufferViews" : [
+        {
+            "byteOffset" : 0,
+            "byteLength" : 288,
+            "buffer" : 0
+        },
+        {
+            "byteOffset" : 288,
+            "byteLength" : 288,
+            "buffer" : 0
+        },
+        {
+            "byteOffset" : 576,
+            "byteLength" : 72,
+            "buffer" : 0
+        },
+        {
+            "byteOffset" : 648,
+            "byteLength" : 11920,
+            "buffer" : 0
+        },
+        {
+            "byteOffset" : 12568,
+            "byteLength" : 17880,
+            "buffer" : 0
+        },
+        {
+            "byteOffset" : 30448,
+            "byteLength" : 17880,
+            "buffer" : 0
+        },
+        {
+            "byteOffset" : 48328,
+            "byteLength" : 3708,
+            "buffer" : 0
+        }
+    ],
+    "samplers" : [
+        {
+            "wrapS" : 10497,
+            "magFilter" : 9729,
+            "wrapT" : 10497,
+            "minFilter" : 9986
+        }
+    ],
+    "buffers" : [
+        {
+            "uri" : "palm_tree.bin",
+            "byteLength" : 52036
+        }
+    ]
+}

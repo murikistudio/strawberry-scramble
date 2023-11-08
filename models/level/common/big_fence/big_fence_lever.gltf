@@ -1,0 +1,219 @@
+{
+    "asset" : {
+        "version" : "2.0",
+        "generator" : "Khronos glTF Blender I/O v1.2.20"
+    },
+    "extensionsUsed" : [
+        "KHR_materials_unlit"
+    ],
+    "scene" : 0,
+    "scenes" : [
+        {
+            "nodes" : [
+                1
+            ],
+            "name" : "Scene"
+        }
+    ],
+    "nodes" : [
+        {
+            "mesh" : 0,
+            "name" : "BigFenceLever"
+        },
+        {
+            "children" : [
+                0
+            ],
+            "scale" : [
+                1.4416595697402954,
+                1.4416595697402954,
+                1.4416595697402954
+            ],
+            "mesh" : 1,
+            "name" : "BigFenceLeverBase"
+        }
+    ],
+    "materials" : [
+        {
+            "pbrMetallicRoughness" : {
+                "baseColorTexture" : {
+                    "texCoord" : 0,
+                    "index" : 0
+                }
+            },
+            "extensions" : {
+                "KHR_materials_unlit" : {}
+            },
+            "name" : "big_fence"
+        }
+    ],
+    "meshes" : [
+        {
+            "primitives" : [
+                {
+                    "material" : 0,
+                    "indices" : 3,
+                    "attributes" : {
+                        "POSITION" : 0,
+                        "TEXCOORD_0" : 1,
+                        "NORMAL" : 2
+                    }
+                }
+            ],
+            "name" : "BigFenceLever.001"
+        },
+        {
+            "primitives" : [
+                {
+                    "material" : 0,
+                    "indices" : 7,
+                    "attributes" : {
+                        "POSITION" : 4,
+                        "TEXCOORD_0" : 5,
+                        "NORMAL" : 6
+                    }
+                }
+            ],
+            "name" : "BigFenceLeverBase.001"
+        }
+    ],
+    "textures" : [
+        {
+            "sampler" : 0,
+            "source" : 0
+        }
+    ],
+    "images" : [
+        {
+            "mimeType" : "image/png",
+            "uri" : "big_fence.png",
+            "name" : "big_fence"
+        }
+    ],
+    "accessors" : [
+        {
+            "min" : [
+                -0.06796559691429138,
+                0.012862786650657654,
+                -0.06775557994842529
+            ],
+            "max" : [
+                0.07011134922504425,
+                0.46863335371017456,
+                0.0648995041847229
+            ],
+            "componentType" : 5126,
+            "bufferView" : 0,
+            "count" : 134,
+            "type" : "VEC3"
+        },
+        {
+            "count" : 134,
+            "type" : "VEC2",
+            "componentType" : 5126,
+            "bufferView" : 1
+        },
+        {
+            "count" : 134,
+            "type" : "VEC3",
+            "componentType" : 5126,
+            "bufferView" : 2
+        },
+        {
+            "count" : 204,
+            "type" : "SCALAR",
+            "componentType" : 5123,
+            "bufferView" : 3
+        },
+        {
+            "min" : [
+                -0.2992326617240906,
+                -0.020256593823432922,
+                -0.08206099271774292
+            ],
+            "max" : [
+                0.29776787757873535,
+                0.12970665097236633,
+                0.08380800485610962
+            ],
+            "componentType" : 5126,
+            "bufferView" : 4,
+            "count" : 96,
+            "type" : "VEC3"
+        },
+        {
+            "count" : 96,
+            "type" : "VEC2",
+            "componentType" : 5126,
+            "bufferView" : 5
+        },
+        {
+            "count" : 96,
+            "type" : "VEC3",
+            "componentType" : 5126,
+            "bufferView" : 6
+        },
+        {
+            "count" : 144,
+            "type" : "SCALAR",
+            "componentType" : 5123,
+            "bufferView" : 7
+        }
+    ],
+    "bufferViews" : [
+        {
+            "buffer" : 0,
+            "byteLength" : 1608,
+            "byteOffset" : 0
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 1072,
+            "byteOffset" : 1608
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 1608,
+            "byteOffset" : 2680
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 408,
+            "byteOffset" : 4288
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 1152,
+            "byteOffset" : 4696
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 768,
+            "byteOffset" : 5848
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 1152,
+            "byteOffset" : 6616
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 288,
+            "byteOffset" : 7768
+        }
+    ],
+    "samplers" : [
+        {
+            "wrapT" : 10497,
+            "wrapS" : 10497,
+            "minFilter" : 9986,
+            "magFilter" : 9729
+        }
+    ],
+    "buffers" : [
+        {
+            "byteLength" : 8056,
+            "uri" : "big_fence_lever.bin"
+        }
+    ]
+}

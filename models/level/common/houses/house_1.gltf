@@ -1,0 +1,273 @@
+{
+    "asset" : {
+        "version" : "2.0",
+        "generator" : "Khronos glTF Blender I/O v1.2.20"
+    },
+    "scene" : 0,
+    "scenes" : [
+        {
+            "nodes" : [
+                2
+            ],
+            "name" : "Scene"
+        }
+    ],
+    "nodes" : [
+        {
+            "name" : "DoorMesh",
+            "translation" : [
+                -0.3513350188732147,
+                0.31742528080940247,
+                1.4232960939407349
+            ],
+            "mesh" : 0
+        },
+        {
+            "name" : "House1Mesh",
+            "mesh" : 1
+        },
+        {
+            "children" : [
+                0,
+                1
+            ],
+            "name" : "House1Collider -colonly",
+            "mesh" : 2
+        }
+    ],
+    "materials" : [
+        {
+            "pbrMetallicRoughness" : {
+                "baseColorTexture" : {
+                    "index" : 0,
+                    "texCoord" : 0
+                }
+            },
+            "name" : "house"
+        }
+    ],
+    "meshes" : [
+        {
+            "name" : "DoorMesh.001",
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "POSITION" : 0,
+                        "NORMAL" : 1,
+                        "TEXCOORD_0" : 2
+                    },
+                    "material" : 0,
+                    "indices" : 3
+                }
+            ]
+        },
+        {
+            "name" : "House1Mesh.001",
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "POSITION" : 4,
+                        "NORMAL" : 5,
+                        "TEXCOORD_0" : 6
+                    },
+                    "material" : 0,
+                    "indices" : 7
+                }
+            ]
+        },
+        {
+            "name" : "House1Collider.001",
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "POSITION" : 8,
+                        "NORMAL" : 9
+                    },
+                    "indices" : 10
+                }
+            ]
+        }
+    ],
+    "textures" : [
+        {
+            "source" : 0,
+            "sampler" : 0
+        }
+    ],
+    "images" : [
+        {
+            "mimeType" : "image/png",
+            "name" : "house.png",
+            "uri" : "house.png"
+        }
+    ],
+    "accessors" : [
+        {
+            "count" : 118,
+            "max" : [
+                0.7043963670730591,
+                1.1422947645187378,
+                -0.03794741630554199
+            ],
+            "componentType" : 5126,
+            "type" : "VEC3",
+            "min" : [
+                -0.0018184483051300049,
+                0.04588085412979126,
+                -0.07859945297241211
+            ],
+            "bufferView" : 0
+        },
+        {
+            "count" : 118,
+            "componentType" : 5126,
+            "bufferView" : 1,
+            "type" : "VEC3"
+        },
+        {
+            "count" : 118,
+            "componentType" : 5126,
+            "bufferView" : 2,
+            "type" : "VEC2"
+        },
+        {
+            "count" : 144,
+            "componentType" : 5123,
+            "bufferView" : 3,
+            "type" : "SCALAR"
+        },
+        {
+            "count" : 1549,
+            "max" : [
+                4.427403450012207,
+                4.168069362640381,
+                2.354022979736328
+            ],
+            "componentType" : 5126,
+            "type" : "VEC3",
+            "min" : [
+                -4.443775177001953,
+                -0.06805706024169922,
+                -2.354022979736328
+            ],
+            "bufferView" : 4
+        },
+        {
+            "count" : 1549,
+            "componentType" : 5126,
+            "bufferView" : 5,
+            "type" : "VEC3"
+        },
+        {
+            "count" : 1549,
+            "componentType" : 5126,
+            "bufferView" : 6,
+            "type" : "VEC2"
+        },
+        {
+            "count" : 2397,
+            "componentType" : 5123,
+            "bufferView" : 7,
+            "type" : "SCALAR"
+        },
+        {
+            "count" : 168,
+            "max" : [
+                4.4953436851501465,
+                4.193504333496094,
+                2.34704327583313
+            ],
+            "componentType" : 5126,
+            "type" : "VEC3",
+            "min" : [
+                -4.478443145751953,
+                -0.06977913528680801,
+                -2.3774800300598145
+            ],
+            "bufferView" : 8
+        },
+        {
+            "count" : 168,
+            "componentType" : 5126,
+            "bufferView" : 9,
+            "type" : "VEC3"
+        },
+        {
+            "count" : 264,
+            "componentType" : 5123,
+            "bufferView" : 10,
+            "type" : "SCALAR"
+        }
+    ],
+    "bufferViews" : [
+        {
+            "byteOffset" : 0,
+            "buffer" : 0,
+            "byteLength" : 1416
+        },
+        {
+            "byteOffset" : 1416,
+            "buffer" : 0,
+            "byteLength" : 1416
+        },
+        {
+            "byteOffset" : 2832,
+            "buffer" : 0,
+            "byteLength" : 944
+        },
+        {
+            "byteOffset" : 3776,
+            "buffer" : 0,
+            "byteLength" : 288
+        },
+        {
+            "byteOffset" : 4064,
+            "buffer" : 0,
+            "byteLength" : 18588
+        },
+        {
+            "byteOffset" : 22652,
+            "buffer" : 0,
+            "byteLength" : 18588
+        },
+        {
+            "byteOffset" : 41240,
+            "buffer" : 0,
+            "byteLength" : 12392
+        },
+        {
+            "byteOffset" : 53632,
+            "buffer" : 0,
+            "byteLength" : 4794
+        },
+        {
+            "byteOffset" : 58428,
+            "buffer" : 0,
+            "byteLength" : 2016
+        },
+        {
+            "byteOffset" : 60444,
+            "buffer" : 0,
+            "byteLength" : 2016
+        },
+        {
+            "byteOffset" : 62460,
+            "buffer" : 0,
+            "byteLength" : 528
+        }
+    ],
+    "samplers" : [
+        {
+            "wrapT" : 10497,
+            "magFilter" : 9729,
+            "minFilter" : 9986,
+            "wrapS" : 10497
+        }
+    ],
+    "buffers" : [
+        {
+            "byteLength" : 62988,
+            "uri" : "house_1.bin"
+        }
+    ]
+}

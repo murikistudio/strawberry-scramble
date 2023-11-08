@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://models/level/common/thorns/thorns.gltf" type="PackedScene" id=1]
+
+[node name="LibThorns" type="Spatial"]
+
+[node name="Thorns" parent="." instance=ExtResource( 1 )]
+
+[editable path="Thorns"]
