@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/chapel.png-cd5918ef2d88201a7b4ff59295204b07.stex"
+path="res://.import/rock_1.png-fe108aad13d9030045a97b4e9eb281d7.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/levels/assets/new_assets/chapel.png"
-dest_files=[ "res://.import/chapel.png-cd5918ef2d88201a7b4ff59295204b07.stex" ]
+source_file="res://models/level/winter/rock/rock_1.png"
+dest_files=[ "res://.import/rock_1.png-fe108aad13d9030045a97b4e9eb281d7.stex" ]
 
 [params]
 

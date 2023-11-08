@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/carroça winter.png-50910e0d7f58320f34e6c423878d0c69.stex"
+path="res://.import/cart.png-da55af2d016c2cd05ace1b76a198964a.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/levels/assets/new_assets/carroça winter.png"
-dest_files=[ "res://.import/carroça winter.png-50910e0d7f58320f34e6c423878d0c69.stex" ]
+source_file="res://models/level/autumn/cart/cart.png"
+dest_files=[ "res://.import/cart.png-da55af2d016c2cd05ace1b76a198964a.stex" ]
 
 [params]
 
