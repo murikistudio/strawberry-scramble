@@ -135,7 +135,7 @@ config/author="Muriki Game Studio"
 
 [audio]
 
-default_bus_layout="res://resources/default_bus_layout.tres"
+default_bus_layout="res://resources/bus_layouts/default_bus_layout.tres"
 
 [autoload]
 
