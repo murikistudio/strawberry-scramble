@@ -1,7 +1,7 @@
 {
     "asset" : {
-        "version" : "2.0",
-        "generator" : "Khronos glTF Blender I/O v1.2.20"
+        "generator" : "Khronos glTF Blender I/O v1.2.20",
+        "version" : "2.0"
     },
     "extensionsUsed" : [
         "KHR_materials_unlit"
@@ -18,7 +18,7 @@
     "nodes" : [
         {
             "mesh" : 0,
-            "name" : "GroundWallSide -col"
+            "name" : "GroundPlatformMesh"
         }
     ],
     "materials" : [
@@ -26,29 +26,29 @@
             "extensions" : {
                 "KHR_materials_unlit" : {}
             },
-            "name" : "ground",
             "pbrMetallicRoughness" : {
                 "baseColorTexture" : {
                     "texCoord" : 0,
                     "index" : 0
                 }
-            }
+            },
+            "name" : "ground"
         }
     ],
     "meshes" : [
         {
-            "name" : "GroundWallSide.001",
             "primitives" : [
                 {
-                    "attributes" : {
-                        "TEXCOORD_0" : 0,
-                        "POSITION" : 1,
-                        "NORMAL" : 2
-                    },
                     "material" : 0,
+                    "attributes" : {
+                        "NORMAL" : 0,
+                        "POSITION" : 1,
+                        "TEXCOORD_0" : 2
+                    },
                     "indices" : 3
                 }
-            ]
+            ],
+            "name" : "GroundPlatformMesh.001"
         }
     ],
     "textures" : [
@@ -67,73 +67,73 @@
     "accessors" : [
         {
             "bufferView" : 0,
-            "count" : 4,
             "componentType" : 5126,
-            "type" : "VEC2"
-        },
-        {
-            "bufferView" : 1,
-            "max" : [
-                1.0000019073486328,
-                0,
-                1
-            ],
-            "type" : "VEC3",
-            "count" : 4,
-            "componentType" : 5126,
-            "min" : [
-                1,
-                -2,
-                -0.9999998211860657
-            ]
-        },
-        {
-            "bufferView" : 2,
-            "count" : 4,
-            "componentType" : 5126,
+            "count" : 96,
             "type" : "VEC3"
         },
         {
+            "max" : [
+                1.000000238418579,
+                -2.9802322387695312e-08,
+                1.000000238418579
+            ],
+            "componentType" : 5126,
+            "min" : [
+                -1.000000238418579,
+                -0.5,
+                -1.000000238418579
+            ],
+            "type" : "VEC3",
+            "bufferView" : 1,
+            "count" : 96
+        },
+        {
+            "bufferView" : 2,
+            "componentType" : 5126,
+            "count" : 96,
+            "type" : "VEC2"
+        },
+        {
             "bufferView" : 3,
-            "count" : 6,
             "componentType" : 5123,
+            "count" : 288,
             "type" : "SCALAR"
         }
     ],
     "bufferViews" : [
         {
-            "buffer" : 0,
             "byteOffset" : 0,
-            "byteLength" : 32
+            "byteLength" : 1152,
+            "buffer" : 0
         },
         {
-            "buffer" : 0,
-            "byteOffset" : 32,
-            "byteLength" : 48
+            "byteOffset" : 1152,
+            "byteLength" : 1152,
+            "buffer" : 0
         },
         {
-            "buffer" : 0,
-            "byteOffset" : 80,
-            "byteLength" : 48
+            "byteOffset" : 2304,
+            "byteLength" : 768,
+            "buffer" : 0
         },
         {
-            "buffer" : 0,
-            "byteOffset" : 128,
-            "byteLength" : 12
+            "byteOffset" : 3072,
+            "byteLength" : 576,
+            "buffer" : 0
         }
     ],
     "samplers" : [
         {
-            "wrapS" : 10497,
             "minFilter" : 9986,
             "magFilter" : 9729,
-            "wrapT" : 10497
+            "wrapT" : 10497,
+            "wrapS" : 10497
         }
     ],
     "buffers" : [
         {
-            "uri" : "wall_side.bin",
-            "byteLength" : 140
+            "byteLength" : 3648,
+            "uri" : "platform.bin"
         }
     ]
 }
