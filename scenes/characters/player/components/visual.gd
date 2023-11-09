@@ -4,7 +4,6 @@ extends PlayerBaseComponent
 # Variables
 export(float, 0.5, 2.0, 0.01) var view_forward_multiplier := 1.5
 export(float, 1.0, 20.0, 0.1) var turn_speed := 10.0
-export(Array, ShaderMaterial) var shaders_to_update: Array
 onready var _mesh_direction: MeshInstance = player.find_node("MeshDirection")
 onready var _directional_light: DirectionalLight = player.find_node("DirectionalLight")
 
@@ -14,12 +13,6 @@ func _ready() -> void:
 	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
 	_directional_light.set_as_toplevel(true)
 	_mesh_direction.set_as_toplevel(true)
-
-	for material in shaders_to_update:
-		if not material:
-			continue
-
-		GameCore.register_global_shader_param("player_world_position", material)
 
 
 func _process(_delta: float) -> void:
