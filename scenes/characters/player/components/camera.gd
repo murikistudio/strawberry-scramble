@@ -83,7 +83,7 @@ func _process_collision() -> void:
 	var camera_obstacle: Node = _ray_cast_camera.get_collider()
 	var obstacle_name := camera_obstacle.name.to_lower()
 
-	if "home" in obstacle_name or "house" in obstacle_name:
+	if "ground" in obstacle_name or "house" in obstacle_name:
 		_camera_axis.rotation = _camera_axis.rotation.linear_interpolate(
 			Vector3(deg2rad(0), 0, 0), 0.1
 		)
