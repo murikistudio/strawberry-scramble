@@ -23,7 +23,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
 script = ExtResource( 11 )
 shaders = [ ExtResource( 14 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 15 ) ]
 
-[node name="Ground" type="GridMap" parent="."]
+[node name="Ground" type="GridMap" parent="." groups=["grass"]]
 mesh_library = ExtResource( 6 )
 cell_size = Vector3( 2, 1, 2 )
 cell_center_y = false

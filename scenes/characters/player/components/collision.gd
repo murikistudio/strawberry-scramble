@@ -34,7 +34,7 @@ func _process_ray_cast(body: Spatial) -> void:
 		if body.is_in_group("death"):
 			_process_death(body)
 
-		if "grass" in body_name:
+		if body.is_in_group("grass"):
 			player.ground_type = "grass"
 
 		elif "bridge" in body_name or "fence" in body_name or "tree" in body_name:
