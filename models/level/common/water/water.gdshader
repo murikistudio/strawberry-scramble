@@ -1,5 +1,5 @@
 shader_type spatial;
-render_mode unshaded, blend_mix, depth_draw_always;
+render_mode blend_mix, depth_draw_always;
 
 uniform float alpha = 1.0;
 uniform vec4 color_1: hint_color;
