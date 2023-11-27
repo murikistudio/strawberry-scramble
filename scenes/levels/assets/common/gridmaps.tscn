@@ -1,0 +1,88 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://classes/shader_registry.gd" type="Script" id=11]
+
+[node name="GridMaps" type="Spatial"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
+
+[node name="ShaderRegistry" type="Node" parent="."]
+script = ExtResource( 11 )
+
+[node name="Ground" type="GridMap" parent="." groups=["grass"]]
+cell_size = Vector3( 2, 1, 2 )
+cell_center_y = false
+__meta__ = {
+"_editor_clip_": 0,
+"_editor_floor_": Vector3( 0, 0, 0 )
+}
+
+[node name="Grass" type="GridMap" parent="."]
+cell_size = Vector3( 2, 1, 2 )
+cell_center_y = false
+__meta__ = {
+"_editor_clip_": 0
+}
+
+[node name="Rocks" type="GridMap" parent="."]
+cell_size = Vector3( 1, 1, 1 )
+cell_center_y = false
+__meta__ = {
+"_editor_clip_": 0,
+"_editor_floor_": Vector3( 0, 0, 0 )
+}
+
+[node name="Trees" type="GridMap" parent="."]
+cell_size = Vector3( 1, 1, 1 )
+cell_center_y = false
+__meta__ = {
+"_editor_clip_": 0,
+"_editor_floor_": Vector3( 0, 0, 0 )
+}
+
+[node name="Bridges" type="GridMap" parent="."]
+cell_size = Vector3( 2, 1, 2 )
+cell_center_y = false
+__meta__ = {
+"_editor_clip_": 0,
+"_editor_floor_": Vector3( 0, 0, 0 )
+}
+
+[node name="Fences" type="GridMap" parent="."]
+cell_size = Vector3( 2, 1, 2 )
+cell_center_y = false
+__meta__ = {
+"_editor_clip_": 0,
+"_editor_floor_": Vector3( 0, 0, 0 )
+}
+
+[node name="Misc" type="GridMap" parent="."]
+cell_size = Vector3( 1, 1, 1 )
+cell_center_y = false
+__meta__ = {
+"_editor_clip_": 0,
+"_editor_floor_": Vector3( 0, 0, 0 )
+}
+
+[node name="Thorns" type="GridMap" parent="." groups=["death", "thorns"]]
+cell_size = Vector3( 1, 1, 1 )
+cell_center_y = false
+__meta__ = {
+"_editor_clip_": 0,
+"_editor_floor_": Vector3( 0, 0, 0 )
+}
+
+[node name="Water" type="GridMap" parent="." groups=["death", "water"]]
+cell_size = Vector3( 20, 2, 20 )
+cell_center_y = false
+__meta__ = {
+"_editor_clip_": 0,
+"_editor_floor_": Vector3( 0, 0, 0 )
+}
+
+[node name="Ripples" type="GridMap" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, 0 )
+cell_center_y = false
+__meta__ = {
+"_editor_clip_": 0,
+"_editor_floor_": Vector3( 0, 0, 0 )
+}
