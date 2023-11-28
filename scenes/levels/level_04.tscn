@@ -148,13 +148,13 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 13.7841, -3, 0.102527 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 14.1243, -3, 2.40026 )
 
 [node name="Strawberry12" parent="Strawberries" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 14.541, -4, 7.40026 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 14.0032, -4, 6.94966 )
 
 [node name="Strawberry13" parent="Strawberries" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 14.541, -4, 9.52555 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 14.0032, -4, 9.01681 )
 
 [node name="Strawberry14" parent="Strawberries" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 14.541, -4, 11.4633 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 14.0032, -4, 11.0127 )
 
 [node name="Strawberry15" parent="Strawberries" instance=ExtResource( 5 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 13.0861, -4, 13.2858 )

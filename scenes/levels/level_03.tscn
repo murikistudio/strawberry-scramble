@@ -41,16 +41,16 @@ __meta__ = {
 
 [node name="Rocks" parent="GridMaps" index="3"]
 data = {
-"cells": PoolIntArray( -262135, 65510, 1441793, -262133, 65510, 1, -262131, 65510, 1048577, -262140, 65514, 1048577, -262125, 65515, 1441793, -262140, 65516, 655361, -262125, 65517, 1, -262140, 65518, 1441793, -262125, 65520, 1048577, -262125, 65522, 655361, -196588, 65533, 1441794, -65518, 65535, 2 )
+"cells": PoolIntArray( -65516, 0, 1441794, -262135, 65511, 655361, -262133, 65511, 1048577, -262131, 65511, 1, -262140, 65515, 655361, -262125, 65515, 1, -262140, 65517, 1441793, -262125, 65517, 1441793, -262140, 65519, 1, -262125, 65520, 1, -262125, 65522, 1, -196588, 65532, 1048578 )
 }
 __meta__ = {
 "_editor_clip_": 0,
-"_editor_floor_": Vector3( 0, -3, 0 )
+"_editor_floor_": Vector3( 0, -1, 0 )
 }
 
 [node name="Trees" parent="GridMaps" index="4"]
 data = {
-"cells": PoolIntArray( 131084, 0, 7, 65530, 1, 1441792, 6, 4, 1441793, 65535, 6, 1441798, 5, 7, 1048582, 65530, 7, 1441799, -196593, 65508, 2, -196607, 65509, 1048582, -196602, 65509, 1048579, -196589, 65509, 7, -196587, 65509, 1441793, -196592, 65511, 6, -196608, 65512, 1048577, -196604, 65512, 7, -131071, 65524, 6, -65541, 65524, 7, -196591, 65525, 655367, -196587, 65525, 1048582, -196585, 65526, 1441793, -131065, 65526, 655360, -65545, 65526, 1048577, -65539, 65526, 1441798, -196592, 65528, 1048578, -131068, 65528, 1048583, -196592, 65530, 1048576, -196586, 65530, 7, -65541, 65530, 0, -196590, 65531, 6, 5, 65534, 655366, 65533, 65534, 7, 131083, 65534, 1441795, 65551, 65535, 655367, -65516, 65535, 1048583 )
+"cells": PoolIntArray( 131084, 0, 7, 65530, 1, 1441792, 6, 4, 1441793, 65535, 6, 1441798, 5, 7, 1048582, 65530, 7, 1441799, -196593, 65508, 2, -196607, 65509, 1048582, -196602, 65509, 1048579, -196589, 65509, 7, -196587, 65509, 1441793, -196592, 65511, 6, -196608, 65512, 1048577, -196604, 65512, 7, -131071, 65524, 6, -65541, 65524, 7, -196591, 65525, 655367, -196587, 65525, 1048582, -196585, 65526, 1441793, -131065, 65526, 655360, -65545, 65526, 1048577, -65539, 65526, 1441798, -196592, 65528, 1048578, -131068, 65528, 1048583, -196592, 65530, 1048576, -196586, 65530, 7, -65541, 65530, 0, -196590, 65531, 6, 5, 65534, 655366, 65533, 65534, 7, 131083, 65534, 1441795, 65551, 65535, 655367 )
 }
 __meta__ = {
 "_editor_clip_": 0,
@@ -74,7 +74,7 @@ __meta__ = {
 [node name="Enemies" type="Spatial" parent="."]
 
 [node name="Fish" parent="Enemies" instance=ExtResource( 6 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 19.3743, -4, -16.9154 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 19.0335, -4, -17.5241 )
 
 [node name="Strawberries" type="Spatial" parent="."]
 
@@ -97,13 +97,13 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4, -1, -10 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4, -2, -15 )
 
 [node name="Strawberry8" parent="Strawberries" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.53319, -2, -17.4525 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.02921, -2, -17.0214 )
 
 [node name="Strawberry9" parent="Strawberries" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.53319, -2, -19.4525 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.02921, -2, -19.0042 )
 
 [node name="Strawberry10" parent="Strawberries" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.53319, -2, -21.4525 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.02921, -2, -20.8925 )
 
 [node name="Strawberry11" parent="Strawberries" instance=ExtResource( 5 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.53319, -2, -25.4525 )
@@ -115,25 +115,25 @@ transform = Transform( 0.756895, 0, 0, 0, 0.756895, 0, 0, 0, 0.756895, 1.45905, 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.53319, -2, -25.4525 )
 
 [node name="Strawberry13" parent="Strawberries" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9.53319, -2, -25.4525 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9.07186, -2, -25.1166 )
 
 [node name="Strawberry14" parent="Strawberries" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 11.5332, -2, -25.4525 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 11.0719, -2, -25.1166 )
 
 [node name="Strawberry15" parent="Strawberries" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 13.5332, -2, -25.4525 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 13.0719, -2, -25.1166 )
 
 [node name="Strawberry16" parent="Strawberries" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 19.5332, -2, -20.4525 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 19.219, -2, -21.0424 )
 
 [node name="Strawberry17" parent="Strawberries" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 19.5332, -2, -18.4525 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 19.0488, -2, -18.9098 )
 
 [node name="Strawberry18" parent="Strawberries" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 19.5332, -2, -15.4525 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 19.0559, -2, -16.0285 )
 
 [node name="Strawberry19" parent="Strawberries" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 19.5332, -2, -13.4525 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 19.0559, -2, -14.1591 )
 
 [node name="Strawberry20" parent="Strawberries" instance=ExtResource( 5 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 19.5332, -2, -9.45253 )
@@ -142,7 +142,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 19.5332, -2, -9.45253 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 20.5332, -2, -6.45253 )
 
 [node name="Strawberry22" parent="Strawberries" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0.8, 0 )
 
 [node name="Strawberry23" parent="Strawberries" instance=ExtResource( 5 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 2, 0 )
