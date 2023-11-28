@@ -9,7 +9,7 @@
 [ext_resource path="res://scenes/levels/assets/interactive/cannon/cannon.tscn" type="PackedScene" id=7]
 [ext_resource path="res://scenes/levels/assets/interactive/cannon/target.tscn" type="PackedScene" id=8]
 
-[node name="Level02" type="Spatial"]
+[node name="Level04" type="Spatial"]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = ExtResource( 1 )
