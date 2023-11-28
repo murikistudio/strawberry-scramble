@@ -6,10 +6,10 @@
     "scene" : 0,
     "scenes" : [
         {
-            "name" : "Scene",
             "nodes" : [
                 1
-            ]
+            ],
+            "name" : "Scene"
         }
     ],
     "nodes" : [
@@ -19,21 +19,21 @@
         },
         {
             "name" : "Rock2",
-            "mesh" : 1,
             "children" : [
                 0
-            ]
+            ],
+            "mesh" : 1
         }
     ],
     "materials" : [
         {
+            "name" : "rock_2",
             "pbrMetallicRoughness" : {
                 "baseColorTexture" : {
                     "index" : 0,
                     "texCoord" : 0
                 }
-            },
-            "name" : "rock_2"
+            }
         }
     ],
     "meshes" : [
@@ -43,8 +43,8 @@
                 {
                     "indices" : 2,
                     "attributes" : {
-                        "NORMAL" : 0,
-                        "POSITION" : 1
+                        "POSITION" : 0,
+                        "NORMAL" : 1
                     }
                 }
             ]
@@ -54,142 +54,142 @@
             "primitives" : [
                 {
                     "indices" : 6,
-                    "material" : 0,
                     "attributes" : {
-                        "NORMAL" : 3,
+                        "TEXCOORD_0" : 3,
                         "POSITION" : 4,
-                        "TEXCOORD_0" : 5
-                    }
+                        "NORMAL" : 5
+                    },
+                    "material" : 0
                 }
             ]
         }
     ],
     "textures" : [
         {
-            "source" : 0,
-            "sampler" : 0
+            "sampler" : 0,
+            "source" : 0
         }
     ],
     "images" : [
         {
-            "uri" : "rock_2.png",
+            "mimeType" : "image/png",
             "name" : "rock_2.png",
-            "mimeType" : "image/png"
+            "uri" : "rock_2.png"
         }
     ],
     "accessors" : [
         {
-            "bufferView" : 0,
             "type" : "VEC3",
-            "componentType" : 5126,
-            "count" : 53
-        },
-        {
-            "bufferView" : 1,
-            "max" : [
-                0.58921217918396,
-                1.1522278785705566,
-                0.618649423122406
-            ],
-            "type" : "VEC3",
-            "componentType" : 5126,
             "min" : [
                 -0.58921217918396,
                 -0.10638739913702011,
                 -0.6182562112808228
             ],
-            "count" : 53
-        },
-        {
-            "bufferView" : 2,
-            "type" : "SCALAR",
-            "componentType" : 5123,
-            "count" : 96
-        },
-        {
-            "bufferView" : 3,
-            "type" : "VEC3",
-            "componentType" : 5126,
-            "count" : 52
-        },
-        {
-            "bufferView" : 4,
             "max" : [
-                0.6150045394897461,
-                1.1495482921600342,
-                0.6322313547134399
+                0.58921217918396,
+                0.9916898608207703,
+                0.618649423122406
             ],
-            "type" : "VEC3",
+            "count" : 53,
             "componentType" : 5126,
+            "bufferView" : 0
+        },
+        {
+            "type" : "VEC3",
+            "count" : 53,
+            "componentType" : 5126,
+            "bufferView" : 1
+        },
+        {
+            "type" : "SCALAR",
+            "count" : 96,
+            "componentType" : 5123,
+            "bufferView" : 2
+        },
+        {
+            "type" : "VEC2",
+            "count" : 52,
+            "componentType" : 5126,
+            "bufferView" : 3
+        },
+        {
+            "type" : "VEC3",
             "min" : [
                 -0.5883015394210815,
                 -0.13517452776432037,
                 -0.6014695167541504
             ],
-            "count" : 52
-        },
-        {
-            "bufferView" : 5,
-            "type" : "VEC2",
+            "max" : [
+                0.6150045394897461,
+                1.0019664764404297,
+                0.6322313547134399
+            ],
+            "count" : 52,
             "componentType" : 5126,
-            "count" : 52
+            "bufferView" : 4
         },
         {
-            "bufferView" : 6,
+            "type" : "VEC3",
+            "count" : 52,
+            "componentType" : 5126,
+            "bufferView" : 5
+        },
+        {
             "type" : "SCALAR",
+            "count" : 300,
             "componentType" : 5123,
-            "count" : 300
+            "bufferView" : 6
         }
     ],
     "bufferViews" : [
         {
             "byteOffset" : 0,
-            "buffer" : 0,
-            "byteLength" : 636
+            "byteLength" : 636,
+            "buffer" : 0
         },
         {
             "byteOffset" : 636,
-            "buffer" : 0,
-            "byteLength" : 636
+            "byteLength" : 636,
+            "buffer" : 0
         },
         {
             "byteOffset" : 1272,
-            "buffer" : 0,
-            "byteLength" : 192
+            "byteLength" : 192,
+            "buffer" : 0
         },
         {
             "byteOffset" : 1464,
-            "buffer" : 0,
-            "byteLength" : 624
+            "byteLength" : 416,
+            "buffer" : 0
         },
         {
-            "byteOffset" : 2088,
-            "buffer" : 0,
-            "byteLength" : 624
+            "byteOffset" : 1880,
+            "byteLength" : 624,
+            "buffer" : 0
         },
         {
-            "byteOffset" : 2712,
-            "buffer" : 0,
-            "byteLength" : 416
+            "byteOffset" : 2504,
+            "byteLength" : 624,
+            "buffer" : 0
         },
         {
             "byteOffset" : 3128,
-            "buffer" : 0,
-            "byteLength" : 600
+            "byteLength" : 600,
+            "buffer" : 0
         }
     ],
     "samplers" : [
         {
-            "magFilter" : 9729,
             "wrapS" : 10497,
             "minFilter" : 9986,
+            "magFilter" : 9729,
             "wrapT" : 10497
         }
     ],
     "buffers" : [
         {
-            "uri" : "rock_2.bin",
-            "byteLength" : 3728
+            "byteLength" : 3728,
+            "uri" : "rock_2.bin"
         }
     ]
 }
