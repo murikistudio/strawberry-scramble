@@ -17,12 +17,12 @@
     ],
     "nodes" : [
         {
-            "mesh" : 0,
-            "name" : "SignDirectionCollider -colonly"
+            "name" : "SignDirection1Collider -colonly",
+            "mesh" : 0
         },
         {
+            "name" : "SignDirection1Mesh",
             "mesh" : 1,
-            "name" : "SignDirectionMesh",
             "children" : [
                 0
             ]
@@ -30,21 +30,21 @@
     ],
     "materials" : [
         {
-            "pbrMetallicRoughness" : {
-                "baseColorTexture" : {
-                    "texCoord" : 0,
-                    "index" : 0
-                }
-            },
             "name" : "sign",
             "extensions" : {
                 "KHR_materials_unlit" : {}
+            },
+            "pbrMetallicRoughness" : {
+                "baseColorTexture" : {
+                    "index" : 0,
+                    "texCoord" : 0
+                }
             }
         }
     ],
     "meshes" : [
         {
-            "name" : "SignDirectionCollider.001",
+            "name" : "SignDirection1Collider.001",
             "primitives" : [
                 {
                     "attributes" : {
@@ -56,15 +56,15 @@
             ]
         },
         {
-            "name" : "SignDirectionMesh.001",
+            "name" : "SignDirection1Mesh.001",
             "primitives" : [
                 {
-                    "material" : 0,
                     "attributes" : {
-                        "TEXCOORD_0" : 3,
-                        "NORMAL" : 4,
-                        "POSITION" : 5
+                        "NORMAL" : 3,
+                        "POSITION" : 4,
+                        "TEXCOORD_0" : 5
                     },
+                    "material" : 0,
                     "indices" : 6
                 }
             ]
@@ -72,33 +72,33 @@
     ],
     "textures" : [
         {
-            "sampler" : 0,
-            "source" : 0
+            "source" : 0,
+            "sampler" : 0
         }
     ],
     "images" : [
         {
+            "uri" : "sign.png",
             "name" : "sign.png",
-            "mimeType" : "image/png",
-            "uri" : "sign.png"
+            "mimeType" : "image/png"
         }
     ],
     "accessors" : [
         {
             "type" : "VEC3",
             "count" : 24,
-            "bufferView" : 0,
-            "componentType" : 5126
+            "componentType" : 5126,
+            "bufferView" : 0
         },
         {
-            "type" : "VEC3",
-            "count" : 24,
             "min" : [
                 -0.49289268255233765,
                 -0.07224324345588684,
                 -0.0883362889289856
             ],
+            "type" : "VEC3",
             "componentType" : 5126,
+            "count" : 24,
             "max" : [
                 0.6383958458900452,
                 0.9979071617126465,
@@ -109,92 +109,92 @@
         {
             "type" : "SCALAR",
             "count" : 36,
-            "bufferView" : 2,
-            "componentType" : 5123
-        },
-        {
-            "type" : "VEC2",
-            "count" : 62,
-            "bufferView" : 3,
-            "componentType" : 5126
+            "componentType" : 5123,
+            "bufferView" : 2
         },
         {
             "type" : "VEC3",
             "count" : 62,
-            "bufferView" : 4,
-            "componentType" : 5126
+            "componentType" : 5126,
+            "bufferView" : 3
         },
         {
-            "type" : "VEC3",
-            "count" : 62,
             "min" : [
                 -0.4954272508621216,
                 -0.07458329945802689,
                 -0.032004762440919876
             ],
+            "type" : "VEC3",
             "componentType" : 5126,
+            "count" : 62,
             "max" : [
                 0.638969361782074,
                 0.9892681241035461,
                 0.07235247641801834
             ],
+            "bufferView" : 4
+        },
+        {
+            "type" : "VEC2",
+            "count" : 62,
+            "componentType" : 5126,
             "bufferView" : 5
         },
         {
             "type" : "SCALAR",
             "count" : 96,
-            "bufferView" : 6,
-            "componentType" : 5123
+            "componentType" : 5123,
+            "bufferView" : 6
         }
     ],
     "bufferViews" : [
         {
             "byteOffset" : 0,
-            "byteLength" : 288,
-            "buffer" : 0
+            "buffer" : 0,
+            "byteLength" : 288
         },
         {
             "byteOffset" : 288,
-            "byteLength" : 288,
-            "buffer" : 0
+            "buffer" : 0,
+            "byteLength" : 288
         },
         {
             "byteOffset" : 576,
-            "byteLength" : 72,
-            "buffer" : 0
+            "buffer" : 0,
+            "byteLength" : 72
         },
         {
             "byteOffset" : 648,
-            "byteLength" : 496,
-            "buffer" : 0
+            "buffer" : 0,
+            "byteLength" : 744
         },
         {
-            "byteOffset" : 1144,
-            "byteLength" : 744,
-            "buffer" : 0
+            "byteOffset" : 1392,
+            "buffer" : 0,
+            "byteLength" : 744
         },
         {
-            "byteOffset" : 1888,
-            "byteLength" : 744,
-            "buffer" : 0
+            "byteOffset" : 2136,
+            "buffer" : 0,
+            "byteLength" : 496
         },
         {
             "byteOffset" : 2632,
-            "byteLength" : 192,
-            "buffer" : 0
+            "buffer" : 0,
+            "byteLength" : 192
         }
     ],
     "samplers" : [
         {
-            "wrapS" : 10497,
             "wrapT" : 10497,
             "minFilter" : 9986,
+            "wrapS" : 10497,
             "magFilter" : 9729
         }
     ],
     "buffers" : [
         {
-            "uri" : "sign_direction.bin",
+            "uri" : "sign_direction_1.bin",
             "byteLength" : 2824
         }
     ]

@@ -2,9 +2,9 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/well.png-2adf277e2cb634750ff2f78a99b86348.s3tc.stex"
-path.etc2="res://.import/well.png-2adf277e2cb634750ff2f78a99b86348.etc2.stex"
-path.etc="res://.import/well.png-2adf277e2cb634750ff2f78a99b86348.etc.stex"
+path.s3tc="res://.import/well.png-108a3be0367f4fa3cf09d70586d62b00.s3tc.stex"
+path.etc2="res://.import/well.png-108a3be0367f4fa3cf09d70586d62b00.etc2.stex"
+path.etc="res://.import/well.png-108a3be0367f4fa3cf09d70586d62b00.etc.stex"
 metadata={
 "imported_formats": [ "s3tc", "etc2", "etc" ],
 "vram_texture": true
@@ -12,8 +12,8 @@ metadata={
 
 [deps]
 
-source_file="res://models/level/common/well/well.png"
-dest_files=[ "res://.import/well.png-2adf277e2cb634750ff2f78a99b86348.s3tc.stex", "res://.import/well.png-2adf277e2cb634750ff2f78a99b86348.etc2.stex", "res://.import/well.png-2adf277e2cb634750ff2f78a99b86348.etc.stex" ]
+source_file="res://models/level/autumn/well/well.png"
+dest_files=[ "res://.import/well.png-108a3be0367f4fa3cf09d70586d62b00.s3tc.stex", "res://.import/well.png-108a3be0367f4fa3cf09d70586d62b00.etc2.stex", "res://.import/well.png-108a3be0367f4fa3cf09d70586d62b00.etc.stex" ]
 
 [params]
 

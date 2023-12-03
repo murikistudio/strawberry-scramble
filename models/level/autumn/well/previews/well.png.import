@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/well.png-85aad06317c069645856ddc49e8f2792.stex"
+path="res://.import/well.png-bee877687f7508857d785ec9e643b153.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://models/level/common/well/previews/well.png"
-dest_files=[ "res://.import/well.png-85aad06317c069645856ddc49e8f2792.stex" ]
+source_file="res://models/level/autumn/well/previews/well.png"
+dest_files=[ "res://.import/well.png-bee877687f7508857d785ec9e643b153.stex" ]
 
 [params]
 

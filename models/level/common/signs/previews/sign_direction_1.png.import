@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/sign_direction.png-49b0f56223b1dd344dcc1089a4f1673a.stex"
+path="res://.import/sign_direction_1.png-f6a972d62f14dfdeff31d3d6c4f684aa.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://models/level/common/signs/previews/sign_direction.png"
-dest_files=[ "res://.import/sign_direction.png-49b0f56223b1dd344dcc1089a4f1673a.stex" ]
+source_file="res://models/level/common/signs/previews/sign_direction_1.png"
+dest_files=[ "res://.import/sign_direction_1.png-f6a972d62f14dfdeff31d3d6c4f684aa.stex" ]
 
 [params]
 
@@ -23,7 +23,7 @@ flags/repeat=0
 flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
-flags/srgb=0
+flags/srgb=1
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/HDR_as_SRGB=false

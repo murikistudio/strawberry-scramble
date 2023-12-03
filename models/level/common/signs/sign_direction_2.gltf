@@ -1,0 +1,201 @@
+{
+    "asset" : {
+        "version" : "2.0",
+        "generator" : "Khronos glTF Blender I/O v1.2.20"
+    },
+    "extensionsUsed" : [
+        "KHR_materials_unlit"
+    ],
+    "scene" : 0,
+    "scenes" : [
+        {
+            "name" : "Scene",
+            "nodes" : [
+                1
+            ]
+        }
+    ],
+    "nodes" : [
+        {
+            "name" : "SignDirection2Collider -colonly",
+            "mesh" : 0
+        },
+        {
+            "name" : "SignDirection2Mesh",
+            "mesh" : 1,
+            "children" : [
+                0
+            ]
+        }
+    ],
+    "materials" : [
+        {
+            "name" : "sign",
+            "pbrMetallicRoughness" : {
+                "baseColorTexture" : {
+                    "index" : 0,
+                    "texCoord" : 0
+                }
+            },
+            "extensions" : {
+                "KHR_materials_unlit" : {}
+            }
+        }
+    ],
+    "meshes" : [
+        {
+            "name" : "SignDirection2Collider.001",
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "POSITION" : 0,
+                        "NORMAL" : 1
+                    },
+                    "indices" : 2
+                }
+            ]
+        },
+        {
+            "name" : "SignDirection2Mesh.001",
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "POSITION" : 3,
+                        "NORMAL" : 4,
+                        "TEXCOORD_0" : 5
+                    },
+                    "material" : 0,
+                    "indices" : 6
+                }
+            ]
+        }
+    ],
+    "textures" : [
+        {
+            "source" : 0,
+            "sampler" : 0
+        }
+    ],
+    "images" : [
+        {
+            "name" : "sign.png",
+            "mimeType" : "image/png",
+            "uri" : "sign.png"
+        }
+    ],
+    "accessors" : [
+        {
+            "min" : [
+                -0.6358266472816467,
+                -0.07224324345588684,
+                -0.0883362889289856
+            ],
+            "type" : "VEC3",
+            "count" : 24,
+            "max" : [
+                0.4954618811607361,
+                0.9979071617126465,
+                0.088336281478405
+            ],
+            "bufferView" : 0,
+            "componentType" : 5126
+        },
+        {
+            "type" : "VEC3",
+            "bufferView" : 1,
+            "componentType" : 5126,
+            "count" : 24
+        },
+        {
+            "type" : "SCALAR",
+            "bufferView" : 2,
+            "componentType" : 5123,
+            "count" : 36
+        },
+        {
+            "min" : [
+                -0.638969361782074,
+                -0.07458329945802689,
+                -0.032004762440919876
+            ],
+            "type" : "VEC3",
+            "count" : 62,
+            "max" : [
+                0.4954272508621216,
+                0.9892681241035461,
+                0.07235247641801834
+            ],
+            "bufferView" : 3,
+            "componentType" : 5126
+        },
+        {
+            "type" : "VEC3",
+            "bufferView" : 4,
+            "componentType" : 5126,
+            "count" : 62
+        },
+        {
+            "type" : "VEC2",
+            "bufferView" : 5,
+            "componentType" : 5126,
+            "count" : 62
+        },
+        {
+            "type" : "SCALAR",
+            "bufferView" : 6,
+            "componentType" : 5123,
+            "count" : 96
+        }
+    ],
+    "bufferViews" : [
+        {
+            "byteLength" : 288,
+            "byteOffset" : 0,
+            "buffer" : 0
+        },
+        {
+            "byteLength" : 288,
+            "byteOffset" : 288,
+            "buffer" : 0
+        },
+        {
+            "byteLength" : 72,
+            "byteOffset" : 576,
+            "buffer" : 0
+        },
+        {
+            "byteLength" : 744,
+            "byteOffset" : 648,
+            "buffer" : 0
+        },
+        {
+            "byteLength" : 744,
+            "byteOffset" : 1392,
+            "buffer" : 0
+        },
+        {
+            "byteLength" : 496,
+            "byteOffset" : 2136,
+            "buffer" : 0
+        },
+        {
+            "byteLength" : 192,
+            "byteOffset" : 2632,
+            "buffer" : 0
+        }
+    ],
+    "samplers" : [
+        {
+            "minFilter" : 9986,
+            "wrapS" : 10497,
+            "wrapT" : 10497,
+            "magFilter" : 9729
+        }
+    ],
+    "buffers" : [
+        {
+            "byteLength" : 2824,
+            "uri" : "sign_direction_2.bin"
+        }
+    ]
+}

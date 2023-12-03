@@ -1,24 +1,19 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://models/level/autumn/scarecrow/scarecrow.gltf" type="PackedScene" id=1]
+[ext_resource path="res://models/level/common/signs/sign_direction_2.gltf" type="PackedScene" id=1]
 [ext_resource path="res://models/level/common/signs/sign_caution.gltf" type="PackedScene" id=2]
-[ext_resource path="res://models/level/common/signs/sign_direction.gltf" type="PackedScene" id=3]
-[ext_resource path="res://models/level/common/well/well.gltf" type="PackedScene" id=4]
+[ext_resource path="res://models/level/common/signs/sign_direction_1.gltf" type="PackedScene" id=3]
 
 [node name="LibMisc" type="Spatial"]
 
 [node name="SignCaution" parent="." instance=ExtResource( 2 )]
 
-[node name="SignDirection" parent="." instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 0 )
+[node name="SignDirection1" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0 )
 
-[node name="Scarecrow" parent="." instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 0 )
-
-[node name="Well" parent="." instance=ExtResource( 4 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 0 )
+[node name="SignDirection2" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 0 )
 
 [editable path="SignCaution"]
-[editable path="SignDirection"]
-[editable path="Scarecrow"]
-[editable path="Well"]
+[editable path="SignDirection1"]
+[editable path="SignDirection2"]
