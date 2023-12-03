@@ -1,6 +1,6 @@
 shader_type spatial;
 
-render_mode unshaded, blend_add, depth_draw_always;
+render_mode blend_add, depth_draw_always;
 
 uniform sampler2D texture_1: hint_albedo;
 uniform sampler2D texture_2: hint_albedo;
