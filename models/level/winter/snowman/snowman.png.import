@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/tree.png-b536d66ee5ce37b2003c94df2501df5c.stex"
+path="res://.import/snowman.png-a34131d31153520e1e17f61d1df315c7.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://models/level/winter/ground/tree.png"
-dest_files=[ "res://.import/tree.png-b536d66ee5ce37b2003c94df2501df5c.stex" ]
+source_file="res://models/level/winter/snowman/snowman.png"
+dest_files=[ "res://.import/snowman.png-a34131d31153520e1e17f61d1df315c7.stex" ]
 
 [params]
 
