@@ -1,7 +1,7 @@
 [gd_resource type="MeshLibrary" load_steps=5 format=2]
 
 [ext_resource path="res://models/level/common/water/water.tres" type="Material" id=1]
-[ext_resource path="res://models/level/common/water/water_preview.png" type="Texture" id=2]
+[ext_resource path="res://models/level/common/water/previews/water.png" type="Texture" id=2]
 
 [sub_resource type="ArrayMesh" id=1]
 resource_name = "water_WaterMesh001"
