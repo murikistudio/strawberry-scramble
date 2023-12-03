@@ -1,9 +1,10 @@
-[gd_resource type="MeshLibrary" load_steps=8 format=2]
+[gd_resource type="MeshLibrary" load_steps=10 format=2]
 
 [ext_resource path="res://models/level/common/ripples/ripples.tres" type="Material" id=1]
-[ext_resource path="res://models/level/common/ripples/ripples_corner_2_preview.png" type="Texture" id=2]
-[ext_resource path="res://models/level/common/ripples/ripples_side_preview.png" type="Texture" id=3]
-[ext_resource path="res://models/level/common/ripples/ripples_corner_1_preview.png" type="Texture" id=4]
+[ext_resource path="res://models/level/common/ripples/previews/ripples_side.png" type="Texture" id=2]
+[ext_resource path="res://models/level/common/ripples/previews/ripples_corner_2.png" type="Texture" id=3]
+[ext_resource path="res://models/level/common/ripples/previews/ripples_corner_1.png" type="Texture" id=4]
+[ext_resource path="res://models/level/common/ripples/previews/ripples_center.png" type="Texture" id=5]
 
 [sub_resource type="ArrayMesh" id=1]
 resource_name = "ripples_side_RipplesSide001"
@@ -50,13 +51,28 @@ surfaces/0 = {
 "vertex_count": 4
 }
 
+[sub_resource type="ArrayMesh" id=4]
+resource_name = "ripples_center_RipplesCenter001"
+surfaces/0 = {
+"aabb": AABB( -1, 0, -1, 2, 1e-05, 2 ),
+"array_data": PoolByteArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 128, 0, 127, 127, 63, 85, 53, 85, 53, 0, 0, 128, 63, 0, 0, 0, 0, 0, 0, 128, 191, 0, 127, 127, 63, 85, 57, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 128, 191, 0, 127, 127, 63, 85, 53, 0, 0, 0, 0, 128, 63, 0, 0, 0, 0, 0, 0, 0, 128, 0, 127, 127, 63, 85, 57, 85, 53, 0, 0, 128, 191, 0, 0, 0, 0, 0, 0, 0, 128, 0, 127, 127, 127, 85, 53, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 128, 191, 0, 127, 127, 127, 85, 57, 85, 53, 0, 0, 128, 191, 0, 0, 0, 0, 0, 0, 128, 191, 0, 127, 127, 127, 85, 57, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 128, 0, 127, 127, 127, 85, 53, 85, 53, 0, 0, 128, 191, 0, 0, 0, 0, 0, 0, 128, 63, 0, 127, 129, 63, 85, 57, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 128, 0, 127, 129, 63, 85, 53, 85, 53, 0, 0, 128, 191, 0, 0, 0, 0, 0, 0, 0, 128, 0, 127, 129, 63, 85, 57, 85, 53, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 128, 63, 0, 127, 129, 63, 85, 53, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 128, 63, 0, 127, 0, 63, 85, 57, 85, 53, 0, 0, 128, 63, 0, 0, 0, 0, 0, 0, 0, 128, 0, 127, 0, 63, 85, 53, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 128, 0, 127, 0, 63, 85, 53, 85, 53, 0, 0, 128, 63, 0, 0, 0, 0, 0, 0, 128, 63, 0, 127, 0, 63, 85, 57, 0, 0 ),
+"array_index_data": PoolByteArray( 0, 0, 2, 0, 1, 0, 0, 0, 1, 0, 3, 0, 4, 0, 6, 0, 5, 0, 4, 0, 5, 0, 7, 0, 8, 0, 10, 0, 9, 0, 8, 0, 9, 0, 11, 0, 12, 0, 14, 0, 13, 0, 12, 0, 13, 0, 15, 0 ),
+"blend_shape_data": [  ],
+"format": 2194711,
+"index_count": 24,
+"material": ExtResource( 1 ),
+"primitive": 4,
+"skeleton_aabb": [  ],
+"vertex_count": 16
+}
+
 [resource]
 item/0/name = "RipplesSide"
 item/0/mesh = SubResource( 1 )
 item/0/mesh_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 item/0/shapes = [  ]
 item/0/navmesh_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
-item/0/preview = ExtResource( 3 )
+item/0/preview = ExtResource( 2 )
 item/1/name = "RipplesCorner1"
 item/1/mesh = SubResource( 2 )
 item/1/mesh_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
@@ -68,4 +84,10 @@ item/2/mesh = SubResource( 3 )
 item/2/mesh_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 item/2/shapes = [  ]
 item/2/navmesh_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
-item/2/preview = ExtResource( 2 )
+item/2/preview = ExtResource( 3 )
+item/3/name = "RipplesCenter"
+item/3/mesh = SubResource( 4 )
+item/3/mesh_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+item/3/shapes = [  ]
+item/3/navmesh_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+item/3/preview = ExtResource( 5 )

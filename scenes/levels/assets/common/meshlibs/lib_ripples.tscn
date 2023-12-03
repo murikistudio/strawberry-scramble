@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://models/level/common/ripples/ripples_corner_1.gltf" type="PackedScene" id=1]
 [ext_resource path="res://models/level/common/ripples/ripples_side.gltf" type="PackedScene" id=2]
 [ext_resource path="res://models/level/common/ripples/ripples_corner_2.gltf" type="PackedScene" id=3]
+[ext_resource path="res://models/level/common/ripples/ripples_center.gltf" type="PackedScene" id=4]
 
 [node name="LibRipples" type="Spatial"]
 
@@ -16,6 +17,9 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1 )
 
 [node name="RipplesCorner2" parent="." instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -6 )
+
+[node name="RipplesCenter" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -8 )
 
 [editable path="RipplesSide"]
 [editable path="RipplesCorner1"]

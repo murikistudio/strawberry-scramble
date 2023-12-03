@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/ripples_corner_2_preview.png-0788b5525d08b49dc49f7885f50a6740.stex"
+path="res://.import/ripples_side.png-4ad189637add89d762fc8ebddf60b160.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://models/level/common/ripples/ripples_corner_2_preview.png"
-dest_files=[ "res://.import/ripples_corner_2_preview.png-0788b5525d08b49dc49f7885f50a6740.stex" ]
+source_file="res://models/level/common/ripples/previews/ripples_side.png"
+dest_files=[ "res://.import/ripples_side.png-4ad189637add89d762fc8ebddf60b160.stex" ]
 
 [params]
 
