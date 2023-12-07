@@ -1,7 +1,7 @@
 shader_type spatial;
 render_mode blend_mix, depth_draw_always;
 
-uniform float alpha = 1.0;
+uniform float alpha: hint_range(0.0, 1.0, 0.01) = 1.0;
 uniform vec4 color_1: hint_color;
 uniform vec4 color_2: hint_color;
 uniform float color_limit = 0.6;
