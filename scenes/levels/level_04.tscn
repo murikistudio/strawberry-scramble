@@ -27,7 +27,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 6.2 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
 once_per_level = true
 character = "player"
-line = "level_02_1"
+line = "level_04_1"
 fallback_character = "mom"
 fallback_line = "start"
 
@@ -36,14 +36,14 @@ transform = Transform( 2.5, 0, 0, 0, 1, 0, 0, 0, 1, 14, -3, 3 )
 at_start = false
 once_per_level = true
 character = "player"
-line = "level_02_2"
+line = "level_04_2"
 
 [node name="Dialog3" parent="Dialogs" instance=ExtResource( 6 )]
 transform = Transform( 0.3, 0, 0, 0, 0.81, 0, 0, 0, 0.3, 14.6713, -2.96407, 13.248 )
 at_start = false
 once_per_level = true
 character = "player"
-line = "level_02_3"
+line = "level_04_3"
 
 [node name="Cannons" type="Spatial" parent="."]
 
