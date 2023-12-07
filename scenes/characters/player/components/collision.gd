@@ -65,6 +65,9 @@ func _process_ray_cast(body: Spatial) -> void:
 
 # Processar lógica de quando o jogador morrer.
 func _process_death(node: Spatial) -> void:
+	if player.dead:
+		return
+
 	player.dead = true
 	_visual.visible = false
 	GameState.add_times_died()
