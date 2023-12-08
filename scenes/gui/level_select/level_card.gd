@@ -17,7 +17,7 @@ onready var _button_level: Button = find_node("ButtonLevel")
 onready var _texture_rect_trophy: TextureRect = find_node("TextureRectTrophy")
 onready var _label_time: Label = find_node("LabelTime")
 onready var _texture_rect_time: TextureRect = find_node("TextureRectTime")
-onready var _level_def := DatabaseLevels.get_level(level_def.get("name", ""))
+onready var _level_def := DatabaseLevels.get_level(level_def.get("world", ""), level_def.get("name", ""))
 
 
 # Built-in overrides
@@ -53,5 +53,6 @@ func _on_ButtonLevel_pressed() -> void:
 		return
 
 	_pressed = true
+	GameState.current_world = level_def["world"]
 	GameState.current_level = level_def["name"]
 	GameTransition.change_scene_to(level_def["path"])

@@ -13,7 +13,7 @@ onready var _texture_rect_trophy: TextureRect = find_node("TextureRectTrophy")
 onready var _label_trophy: Label = find_node("LabelTrophy")
 onready var _label_collected: Label = find_node("LabelCollected")
 onready var _button_next: TextureButton = find_node("ButtonNext")
-onready var _level_def := DatabaseLevels.get_level(GameState.current_level)
+onready var _level_def := DatabaseLevels.get_level(GameState.current_world, GameState.current_level)
 
 
 # Built-in overrides
@@ -83,7 +83,7 @@ func _on_ButtonQuit_pressed() -> void:
 func _on_ButtonNext_pressed() -> void:
 	var has_next := false
 
-	for level_def in DatabaseLevels.get_levels():
+	for level_def in DatabaseLevels.get_levels(GameState.current_world):
 		if level_def["name"] == GameState.current_level:
 			has_next = true
 			continue

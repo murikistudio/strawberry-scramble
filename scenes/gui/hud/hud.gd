@@ -21,7 +21,7 @@ onready var _label_time: Label = find_node("LabelTime")
 onready var _label_time_goal: Label = find_node("LabelTimeGoal")
 onready var _label_collected: Label = find_node("LabelCollected")
 onready var _texture_no_trophy: Texture = _texture_rect_trophy.texture
-onready var _level_def := DatabaseLevels.get_level(GameState.current_level)
+onready var _level_def := DatabaseLevels.get_level(GameState.current_world, GameState.current_level)
 
 
 # Built-in overrides

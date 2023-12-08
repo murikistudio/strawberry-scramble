@@ -35,20 +35,21 @@ const LEVELS := [
 
 # Static methods
 # Retorna as definições da fase em específico.
-static func get_level(name: String) -> Dictionary:
+static func get_level(world: String, name: String) -> Dictionary:
 	for level in LEVELS:
-		if level["name"] == name:
+		if level["world"] == world and level["name"] == name:
 			return level
 
 	return {}
 
 
 # Obtém informações de nomes e caminhos das cenas de fases na pasta levels.
-static func get_levels() -> Array:
+static func get_levels(world: String) -> Array:
 	var level_paths := []
 	var dir := Directory.new()
+	var base_path = BASE_PATH + world + "/"
 
-	if dir.open(BASE_PATH) != OK:
+	if dir.open(base_path) != OK:
 		push_error("An error occurred when trying to access the path.")
 		return level_paths
 
@@ -72,7 +73,7 @@ static func get_levels() -> Array:
 			file_path = dir.get_next()
 			continue
 
-		levels_raw[file_name] = BASE_PATH + file_path
+		levels_raw[file_name] = base_path + file_path
 		file_path = dir.get_next()
 
 	var file_names := levels_raw.keys().duplicate()
@@ -81,6 +82,7 @@ static func get_levels() -> Array:
 	for file_name in file_names:
 		level_paths.push_back({
 			"name": file_name,
+			"world": world,
 			"path": levels_raw[file_name],
 		})
 

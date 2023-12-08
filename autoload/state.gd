@@ -19,6 +19,7 @@ var levels_progress := {}
 
 # Level
 var completed: bool
+var current_world: String = "spring"
 var current_level: String
 var times_died: int
 var time_elapsed: int
@@ -103,7 +104,7 @@ func evaluate_game() -> void:
 		return
 
 	var penalty := 20
-	var level_def := DatabaseLevels.get_level(current_level)
+	var level_def := DatabaseLevels.get_level(current_world, current_level)
 	var level_time: int = level_def.get("time", 0)
 	current_progress = int((float(items_collected) / float(items_available)) * 100)
 
