@@ -19,7 +19,7 @@ var levels_progress := {}
 
 # Level
 var completed: bool
-var current_world: String = "spring"
+var current_world: String
 var current_level: String
 var times_died: int
 var time_elapsed: int
@@ -164,7 +164,7 @@ func add_score() -> void:
 	}
 
 	var score_added := false
-	var existing_score: Dictionary = levels_progress.get(current_level, {})
+	var existing_score: Dictionary = levels_progress.get(current_world, {}).get(current_level, {})
 	var existing_trophy_int: int = TROPHIES.get(existing_score.get("current_trophy", ""))
 	var current_trophy_int: int = TROPHIES.get(current_trophy)
 
@@ -172,15 +172,18 @@ func add_score() -> void:
 		prints("Score not added, a better score already exists!")
 		return
 
+	if not current_world in levels_progress.keys():
+		levels_progress[current_world] = {}
+
 	if current_trophy_int > existing_trophy_int:
-		levels_progress[current_level] = score
+		levels_progress[current_world][current_level] = score
 		score_added = true
 
 	elif current_trophy_int == existing_trophy_int:
 		var existing_time: int = existing_score.get("time_elapsed", -1)
 
 		if existing_time >= 0 and time_elapsed < existing_time:
-			levels_progress[current_level] = score
+			levels_progress[current_world][current_level] = score
 			score_added = true
 
 	if score_added:

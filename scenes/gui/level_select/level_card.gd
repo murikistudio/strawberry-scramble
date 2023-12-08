@@ -31,7 +31,8 @@ func _ready() -> void:
 
 # Private methods
 func _update_card() -> void:
-	var score: Dictionary = GameState.levels_progress.get(level_def["name"], {})
+	var world_progress: Dictionary = GameState.levels_progress.get(level_def["world"], {})
+	var score: Dictionary = world_progress.get(level_def["name"], {})
 	_label_level_name.text = tr(level_def.get("name", ""))
 
 	if not score.size():

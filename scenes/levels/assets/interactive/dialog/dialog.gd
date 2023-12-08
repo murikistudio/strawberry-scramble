@@ -21,7 +21,9 @@ func _ready() -> void:
 	_character = character
 	_line = line
 
-	if once_per_level and GameState.current_level in GameState.levels_progress.keys():
+	var world_progress: Dictionary = GameState.levels_progress.get(GameState.current_world, {})
+
+	if once_per_level and GameState.current_level in world_progress.keys():
 		if not fallback_character or not fallback_line:
 			queue_free()
 			return
