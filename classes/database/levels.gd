@@ -8,12 +8,26 @@ const BASE_PATH := "res://scenes/levels/"
 const LEVELS := [
 	{
 		"name": "level_01",
-		"time": 36,
+		"world": "spring",
+		"time": 12,
 		"bgm": DatabaseAudio.BGM_LEVEL,
 	},
 	{
 		"name": "level_02",
+		"world": "spring",
 		"time": 32,
+		"bgm": DatabaseAudio.BGM_LEVEL,
+	},
+	{
+		"name": "level_03",
+		"world": "spring",
+		"time": 36,
+		"bgm": DatabaseAudio.BGM_LEVEL,
+	},
+	{
+		"name": "level_04",
+		"world": "spring",
+		"time": 22,
 		"bgm": DatabaseAudio.BGM_LEVEL,
 	},
 ]
