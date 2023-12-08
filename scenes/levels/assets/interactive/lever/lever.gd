@@ -15,7 +15,7 @@ func _ready() -> void:
 
 # Event handlers
 # Emite evento de alavanca puxada quando o jogador tocá-la.
-func _on_BigFenceLever_body_entered(body: Spatial) -> void:
+func _on_Lever_body_entered(body: Node) -> void:
 	if _pushed or not body.is_in_group("player"):
 		return
 
@@ -24,4 +24,8 @@ func _on_BigFenceLever_body_entered(body: Spatial) -> void:
 	_anim_player.play("push")
 	GameAudio.play_sfx(DatabaseAudio.SFX_LEVER)
 	yield(get_tree().create_timer(1.0, false), "timeout")
-	GameEvents.emit_signal("level_lever_pushed", get_node(target))
+
+	if target:
+		GameEvents.emit_signal("level_lever_pushed", get_node(target))
+
+

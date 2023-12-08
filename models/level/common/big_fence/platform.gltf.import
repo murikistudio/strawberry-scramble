@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/big_fence.gltf-5c618a1d51253f19a755fa21bd5d8d70.scn"
+path="res://.import/platform.gltf-8b028606c90101939598d82533934b58.scn"
 
 [deps]
 
-source_file="res://models/level/common/big_fence/big_fence.gltf"
-dest_files=[ "res://.import/big_fence.gltf-5c618a1d51253f19a755fa21bd5d8d70.scn" ]
+source_file="res://models/level/common/big_fence/platform.gltf"
+dest_files=[ "res://.import/platform.gltf-8b028606c90101939598d82533934b58.scn" ]
 
 [params]
 

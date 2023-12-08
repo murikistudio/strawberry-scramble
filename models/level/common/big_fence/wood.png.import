@@ -2,9 +2,9 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/big_fence.png-28620809757d3fbce618831386c3171d.s3tc.stex"
-path.etc2="res://.import/big_fence.png-28620809757d3fbce618831386c3171d.etc2.stex"
-path.etc="res://.import/big_fence.png-28620809757d3fbce618831386c3171d.etc.stex"
+path.s3tc="res://.import/wood.png-7dd178eb3ea3f99cb415e21cb02f05ff.s3tc.stex"
+path.etc2="res://.import/wood.png-7dd178eb3ea3f99cb415e21cb02f05ff.etc2.stex"
+path.etc="res://.import/wood.png-7dd178eb3ea3f99cb415e21cb02f05ff.etc.stex"
 metadata={
 "imported_formats": [ "s3tc", "etc2", "etc" ],
 "vram_texture": true
@@ -12,8 +12,8 @@ metadata={
 
 [deps]
 
-source_file="res://models/level/common/big_fence/big_fence.png"
-dest_files=[ "res://.import/big_fence.png-28620809757d3fbce618831386c3171d.s3tc.stex", "res://.import/big_fence.png-28620809757d3fbce618831386c3171d.etc2.stex", "res://.import/big_fence.png-28620809757d3fbce618831386c3171d.etc.stex" ]
+source_file="res://models/level/common/big_fence/wood.png"
+dest_files=[ "res://.import/wood.png-7dd178eb3ea3f99cb415e21cb02f05ff.s3tc.stex", "res://.import/wood.png-7dd178eb3ea3f99cb415e21cb02f05ff.etc2.stex", "res://.import/wood.png-7dd178eb3ea3f99cb415e21cb02f05ff.etc.stex" ]
 
 [params]
 

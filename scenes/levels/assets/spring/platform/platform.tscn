@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://models/level/spring/ground/platform.gltf" type="PackedScene" id=1]
+[ext_resource path="res://scenes/levels/assets/common/platform/platform.tscn" type="PackedScene" id=2]
+
+[node name="Platform" instance=ExtResource( 2 )]
+
+[node name="Platform" parent="Visual" index="0" instance=ExtResource( 1 )]
+
+[editable path="Visual/Platform"]

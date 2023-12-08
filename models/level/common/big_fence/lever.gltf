@@ -1,0 +1,219 @@
+{
+    "asset" : {
+        "version" : "2.0",
+        "generator" : "Khronos glTF Blender I/O v1.2.20"
+    },
+    "extensionsUsed" : [
+        "KHR_materials_unlit"
+    ],
+    "scene" : 0,
+    "scenes" : [
+        {
+            "nodes" : [
+                1
+            ],
+            "name" : "Scene"
+        }
+    ],
+    "nodes" : [
+        {
+            "mesh" : 0,
+            "name" : "Lever"
+        },
+        {
+            "mesh" : 1,
+            "scale" : [
+                1.4416595697402954,
+                1.4416595697402954,
+                1.4416595697402954
+            ],
+            "children" : [
+                0
+            ],
+            "name" : "LeverBase"
+        }
+    ],
+    "materials" : [
+        {
+            "pbrMetallicRoughness" : {
+                "baseColorTexture" : {
+                    "index" : 0,
+                    "texCoord" : 0
+                }
+            },
+            "name" : "wood",
+            "extensions" : {
+                "KHR_materials_unlit" : {}
+            }
+        }
+    ],
+    "meshes" : [
+        {
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "TEXCOORD_0" : 0,
+                        "NORMAL" : 1,
+                        "POSITION" : 2
+                    },
+                    "indices" : 3,
+                    "material" : 0
+                }
+            ],
+            "name" : "Lever.001"
+        },
+        {
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "TEXCOORD_0" : 4,
+                        "NORMAL" : 5,
+                        "POSITION" : 6
+                    },
+                    "indices" : 7,
+                    "material" : 0
+                }
+            ],
+            "name" : "LeverBase.001"
+        }
+    ],
+    "textures" : [
+        {
+            "sampler" : 0,
+            "source" : 0
+        }
+    ],
+    "images" : [
+        {
+            "uri" : "wood.png",
+            "mimeType" : "image/png",
+            "name" : "wood.png"
+        }
+    ],
+    "accessors" : [
+        {
+            "bufferView" : 0,
+            "type" : "VEC2",
+            "count" : 134,
+            "componentType" : 5126
+        },
+        {
+            "bufferView" : 1,
+            "type" : "VEC3",
+            "count" : 134,
+            "componentType" : 5126
+        },
+        {
+            "bufferView" : 2,
+            "min" : [
+                -0.06796559691429138,
+                0.012862786650657654,
+                -0.06775557994842529
+            ],
+            "componentType" : 5126,
+            "type" : "VEC3",
+            "count" : 134,
+            "max" : [
+                0.07011134922504425,
+                0.46863335371017456,
+                0.0648995041847229
+            ]
+        },
+        {
+            "bufferView" : 3,
+            "type" : "SCALAR",
+            "count" : 204,
+            "componentType" : 5123
+        },
+        {
+            "bufferView" : 4,
+            "type" : "VEC2",
+            "count" : 96,
+            "componentType" : 5126
+        },
+        {
+            "bufferView" : 5,
+            "type" : "VEC3",
+            "count" : 96,
+            "componentType" : 5126
+        },
+        {
+            "bufferView" : 6,
+            "min" : [
+                -0.2992326617240906,
+                -0.020256593823432922,
+                -0.08206099271774292
+            ],
+            "componentType" : 5126,
+            "type" : "VEC3",
+            "count" : 96,
+            "max" : [
+                0.29776787757873535,
+                0.12970665097236633,
+                0.08380800485610962
+            ]
+        },
+        {
+            "bufferView" : 7,
+            "type" : "SCALAR",
+            "count" : 144,
+            "componentType" : 5123
+        }
+    ],
+    "bufferViews" : [
+        {
+            "byteLength" : 1072,
+            "byteOffset" : 0,
+            "buffer" : 0
+        },
+        {
+            "byteLength" : 1608,
+            "byteOffset" : 1072,
+            "buffer" : 0
+        },
+        {
+            "byteLength" : 1608,
+            "byteOffset" : 2680,
+            "buffer" : 0
+        },
+        {
+            "byteLength" : 408,
+            "byteOffset" : 4288,
+            "buffer" : 0
+        },
+        {
+            "byteLength" : 768,
+            "byteOffset" : 4696,
+            "buffer" : 0
+        },
+        {
+            "byteLength" : 1152,
+            "byteOffset" : 5464,
+            "buffer" : 0
+        },
+        {
+            "byteLength" : 1152,
+            "byteOffset" : 6616,
+            "buffer" : 0
+        },
+        {
+            "byteLength" : 288,
+            "byteOffset" : 7768,
+            "buffer" : 0
+        }
+    ],
+    "samplers" : [
+        {
+            "wrapS" : 10497,
+            "minFilter" : 9986,
+            "magFilter" : 9729,
+            "wrapT" : 10497
+        }
+    ],
+    "buffers" : [
+        {
+            "uri" : "lever.bin",
+            "byteLength" : 8056
+        }
+    ]
+}

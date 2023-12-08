@@ -11,10 +11,10 @@
 [ext_resource path="res://scenes/levels/assets/interactive/strawberry/strawberry.tscn" type="PackedScene" id=9]
 [ext_resource path="res://scenes/levels/assets/interactive/cannon/cannon.tscn" type="PackedScene" id=10]
 [ext_resource path="res://scenes/levels/assets/interactive/cannon/target.tscn" type="PackedScene" id=11]
+[ext_resource path="res://scenes/levels/assets/spring/platform/platform.tscn" type="PackedScene" id=12]
 [ext_resource path="res://scenes/levels/assets/interactive/checkpoint/checkpoint.tscn" type="PackedScene" id=13]
-[ext_resource path="res://scenes/levels/assets/common/platform/platform.tscn" type="PackedScene" id=14]
-[ext_resource path="res://scenes/levels/assets/interactive/big_fence/gate.tscn" type="PackedScene" id=15]
-[ext_resource path="res://scenes/levels/assets/interactive/big_fence/lever.tscn" type="PackedScene" id=16]
+[ext_resource path="res://scenes/levels/assets/common/platform_wooden/platform_wooden.tscn" type="PackedScene" id=14]
+[ext_resource path="res://scenes/levels/assets/interactive/lever/lever.tscn" type="PackedScene" id=16]
 [ext_resource path="res://scenes/characters/snail/snail.tscn" type="PackedScene" id=18]
 [ext_resource path="res://scenes/characters/fish/fish.tscn" type="PackedScene" id=19]
 
@@ -193,23 +193,21 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -23, 2.3, -26.0045 )
 
 [node name="Platforms" type="Spatial" parent="."]
 
-[node name="GrassPlatform" parent="Platforms" instance=ExtResource( 14 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, -17 )
-target_position = Vector3( 0, 0, 8 )
-
-[node name="GrassPlatform2" parent="Platforms" instance=ExtResource( 14 )]
+[node name="GrassPlatform2" parent="Platforms" instance=ExtResource( 12 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -18, 1, -3 )
 duration = 2.0
 target_position = Vector3( 0, 0, -2 )
+
+[node name="PlatformWooden" parent="Platforms" instance=ExtResource( 14 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, -17 )
+moving = false
+target_position = Vector3( 0, 0, 8 )
 
 [node name="Gates" type="Spatial" parent="."]
 
 [node name="BigFenceLever" parent="Gates" instance=ExtResource( 16 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 1, -1 )
-target = NodePath("../BigFenceGate")
-
-[node name="BigFenceGate" parent="Gates" instance=ExtResource( 15 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -5 )
+target = NodePath("../../Platforms/PlatformWooden")
 
 [node name="Enemies" type="Spatial" parent="."]
 

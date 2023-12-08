@@ -1,0 +1,145 @@
+{
+    "asset" : {
+        "generator" : "Khronos glTF Blender I/O v1.2.20",
+        "version" : "2.0"
+    },
+    "extensionsUsed" : [
+        "KHR_materials_unlit"
+    ],
+    "scene" : 0,
+    "scenes" : [
+        {
+            "name" : "Scene",
+            "nodes" : [
+                0
+            ]
+        }
+    ],
+    "nodes" : [
+        {
+            "name" : "PlatformMesh",
+            "rotation" : [
+                -0.7071067690849304,
+                0,
+                0,
+                0.7071067690849304
+            ],
+            "mesh" : 0
+        }
+    ],
+    "materials" : [
+        {
+            "name" : "wood",
+            "pbrMetallicRoughness" : {
+                "baseColorTexture" : {
+                    "index" : 0,
+                    "texCoord" : 0
+                }
+            },
+            "extensions" : {
+                "KHR_materials_unlit" : {}
+            }
+        }
+    ],
+    "meshes" : [
+        {
+            "name" : "PlatformMesh.001",
+            "primitives" : [
+                {
+                    "indices" : 3,
+                    "material" : 0,
+                    "attributes" : {
+                        "POSITION" : 1,
+                        "TEXCOORD_0" : 0,
+                        "NORMAL" : 2
+                    }
+                }
+            ]
+        }
+    ],
+    "textures" : [
+        {
+            "source" : 0,
+            "sampler" : 0
+        }
+    ],
+    "images" : [
+        {
+            "mimeType" : "image/png",
+            "name" : "wood.png",
+            "uri" : "wood.png"
+        }
+    ],
+    "accessors" : [
+        {
+            "type" : "VEC2",
+            "count" : 320,
+            "componentType" : 5126,
+            "bufferView" : 0
+        },
+        {
+            "max" : [
+                1.0000004768371582,
+                1.0027307271957397,
+                0.03147811442613602
+            ],
+            "bufferView" : 1,
+            "min" : [
+                -1.0000004768371582,
+                -1.0027306079864502,
+                -0.22343197464942932
+            ],
+            "type" : "VEC3",
+            "count" : 320,
+            "componentType" : 5126
+        },
+        {
+            "type" : "VEC3",
+            "count" : 320,
+            "componentType" : 5126,
+            "bufferView" : 2
+        },
+        {
+            "type" : "SCALAR",
+            "count" : 480,
+            "componentType" : 5123,
+            "bufferView" : 3
+        }
+    ],
+    "bufferViews" : [
+        {
+            "buffer" : 0,
+            "byteOffset" : 0,
+            "byteLength" : 2560
+        },
+        {
+            "buffer" : 0,
+            "byteOffset" : 2560,
+            "byteLength" : 3840
+        },
+        {
+            "buffer" : 0,
+            "byteOffset" : 6400,
+            "byteLength" : 3840
+        },
+        {
+            "buffer" : 0,
+            "byteOffset" : 10240,
+            "byteLength" : 960
+        }
+    ],
+    "samplers" : [
+        {
+            "minFilter" : 9986,
+            "wrapT" : 10497,
+            "wrapS" : 10497,
+            "magFilter" : 9729
+        }
+    ],
+    "buffers" : [
+        {
+            "uri" : "platform.bin",
+            "byteLength" : 11200
+        }
+    ]
+}

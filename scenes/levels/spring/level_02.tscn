@@ -4,9 +4,9 @@
 [ext_resource path="res://scenes/characters/player/player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://resources/environments/level_env.tres" type="Environment" id=3]
 [ext_resource path="res://scenes/levels/assets/spring/gridmaps.tscn" type="PackedScene" id=4]
-[ext_resource path="res://scenes/levels/assets/common/platform/platform.tscn" type="PackedScene" id=5]
 [ext_resource path="res://scenes/levels/assets/interactive/strawberry/strawberry.tscn" type="PackedScene" id=6]
 [ext_resource path="res://scenes/levels/assets/interactive/dialog/dialog.tscn" type="PackedScene" id=7]
+[ext_resource path="res://scenes/levels/assets/spring/platform/platform.tscn" type="PackedScene" id=8]
 
 [node name="Level02" type="Spatial"]
 
@@ -98,12 +98,12 @@ __meta__ = {
 
 [node name="Platforms" type="Spatial" parent="."]
 
-[node name="GrassPlatform" parent="Platforms" instance=ExtResource( 5 )]
+[node name="GrassPlatform" parent="Platforms" instance=ExtResource( 8 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 1, -8 )
 duration = 3.0
 target_position = Vector3( -6, 0, 0 )
 
-[node name="GrassPlatform2" parent="Platforms" instance=ExtResource( 5 )]
+[node name="GrassPlatform2" parent="Platforms" instance=ExtResource( 8 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -18, 1, -11 )
 duration = 3.0
 target_position = Vector3( 0, 0, -4 )
