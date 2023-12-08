@@ -69,7 +69,7 @@ static func get_levels(world: String) -> Array:
 		if parts.size():
 			file_name = parts[0]
 
-		if "test" in file_name.to_lower() and not OS.is_debug_build():
+		if "test" in file_name.to_lower():
 			file_path = dir.get_next()
 			continue
 
