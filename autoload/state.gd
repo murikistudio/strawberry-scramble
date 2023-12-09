@@ -155,6 +155,9 @@ func add_times_died() -> void:
 
 # Adiciona pontuação final ao estado.
 func add_score() -> void:
+	if not current_world or not current_level:
+		return
+
 	var score := {
 		"current_trophy": current_trophy,
 		"items_collected": items_collected,
