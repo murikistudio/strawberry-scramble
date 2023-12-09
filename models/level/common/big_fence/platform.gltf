@@ -1,7 +1,7 @@
 {
     "asset" : {
-        "generator" : "Khronos glTF Blender I/O v1.2.20",
-        "version" : "2.0"
+        "version" : "2.0",
+        "generator" : "Khronos glTF Blender I/O v1.2.20"
     },
     "extensionsUsed" : [
         "KHR_materials_unlit"
@@ -17,44 +17,44 @@
     ],
     "nodes" : [
         {
-            "name" : "PlatformMesh",
+            "mesh" : 0,
             "rotation" : [
                 -0.7071067690849304,
                 0,
                 0,
                 0.7071067690849304
             ],
-            "mesh" : 0
+            "name" : "PlatformMesh"
         }
     ],
     "materials" : [
         {
-            "name" : "wood",
             "pbrMetallicRoughness" : {
                 "baseColorTexture" : {
-                    "index" : 0,
-                    "texCoord" : 0
+                    "texCoord" : 0,
+                    "index" : 0
                 }
             },
             "extensions" : {
                 "KHR_materials_unlit" : {}
-            }
+            },
+            "name" : "wood"
         }
     ],
     "meshes" : [
         {
-            "name" : "PlatformMesh.001",
             "primitives" : [
                 {
                     "indices" : 3,
                     "material" : 0,
                     "attributes" : {
-                        "POSITION" : 1,
                         "TEXCOORD_0" : 0,
+                        "POSITION" : 1,
                         "NORMAL" : 2
                     }
                 }
-            ]
+            ],
+            "name" : "PlatformMesh.001"
         }
     ],
     "textures" : [
@@ -66,42 +66,42 @@
     "images" : [
         {
             "mimeType" : "image/png",
-            "name" : "wood.png",
-            "uri" : "wood.png"
+            "uri" : "wood.png",
+            "name" : "wood.png"
         }
     ],
     "accessors" : [
         {
+            "count" : 208,
             "type" : "VEC2",
-            "count" : 320,
             "componentType" : 5126,
             "bufferView" : 0
         },
         {
+            "count" : 208,
+            "type" : "VEC3",
             "max" : [
                 1.0000004768371582,
                 1.0027307271957397,
-                0.03147811442613602
+                0.03147805109620094
             ],
             "bufferView" : 1,
+            "componentType" : 5126,
             "min" : [
                 -1.0000004768371582,
                 -1.0027306079864502,
                 -0.22343197464942932
-            ],
-            "type" : "VEC3",
-            "count" : 320,
-            "componentType" : 5126
+            ]
         },
         {
+            "count" : 208,
             "type" : "VEC3",
-            "count" : 320,
             "componentType" : 5126,
             "bufferView" : 2
         },
         {
+            "count" : 312,
             "type" : "SCALAR",
-            "count" : 480,
             "componentType" : 5123,
             "bufferView" : 3
         }
@@ -109,37 +109,37 @@
     "bufferViews" : [
         {
             "buffer" : 0,
-            "byteOffset" : 0,
-            "byteLength" : 2560
+            "byteLength" : 1664,
+            "byteOffset" : 0
         },
         {
             "buffer" : 0,
-            "byteOffset" : 2560,
-            "byteLength" : 3840
+            "byteLength" : 2496,
+            "byteOffset" : 1664
         },
         {
             "buffer" : 0,
-            "byteOffset" : 6400,
-            "byteLength" : 3840
+            "byteLength" : 2496,
+            "byteOffset" : 4160
         },
         {
             "buffer" : 0,
-            "byteOffset" : 10240,
-            "byteLength" : 960
+            "byteLength" : 624,
+            "byteOffset" : 6656
         }
     ],
     "samplers" : [
         {
-            "minFilter" : 9986,
-            "wrapT" : 10497,
+            "magFilter" : 9729,
             "wrapS" : 10497,
-            "magFilter" : 9729
+            "wrapT" : 10497,
+            "minFilter" : 9986
         }
     ],
     "buffers" : [
         {
-            "uri" : "platform.bin",
-            "byteLength" : 11200
+            "byteLength" : 7280,
+            "uri" : "platform.bin"
         }
     ]
 }
