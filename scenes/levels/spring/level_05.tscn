@@ -1,0 +1,247 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://resources/environments/level_env.tres" type="Environment" id=1]
+[ext_resource path="res://scenes/levels/assets/spring/gridmaps.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/levels/assets/interactive/home/home.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/characters/player/player.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/levels/assets/spring/platform/platform.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/levels/assets/common/platform_wooden/platform_wooden.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scenes/levels/assets/interactive/lever/lever.tscn" type="PackedScene" id=7]
+[ext_resource path="res://scenes/levels/assets/interactive/checkpoint/checkpoint.tscn" type="PackedScene" id=8]
+[ext_resource path="res://scenes/levels/assets/interactive/cannon/target.tscn" type="PackedScene" id=9]
+[ext_resource path="res://scenes/levels/assets/interactive/cannon/cannon.tscn" type="PackedScene" id=10]
+[ext_resource path="res://scenes/levels/assets/interactive/strawberry/strawberry.tscn" type="PackedScene" id=11]
+[ext_resource path="res://scenes/characters/snail/snail.tscn" type="PackedScene" id=12]
+
+[node name="Level05" type="Spatial"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = ExtResource( 1 )
+
+[node name="Player" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.65, -6 )
+
+[node name="Home" parent="." instance=ExtResource( 3 )]
+
+[node name="GridMaps" parent="." instance=ExtResource( 2 )]
+
+[node name="Ground" parent="GridMaps" index="1"]
+data = {
+"cells": PoolIntArray( 0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 4, 65532, 0, 655364, 65533, 0, 0, 65534, 0, 0, 65535, 0, 0, -131069, 0, 5, -65540, 0, 655365, 0, 1, 1441796, 1, 1, 1441796, 2, 1, 1441796, 3, 1, 1, 65532, 1, 1441793, 65533, 1, 1441796, 65534, 1, 1441796, 65535, 1, 1441796, -131072, 1, 1441797, -131071, 1, 1441797, -131070, 1, 1441797, -131069, 1, 6, -65540, 1, 1441798, -65539, 1, 1441797, -65538, 1, 1441797, -65537, 1, 1441797, -131072, 65521, 1048580, -131071, 65521, 1048577, -131063, 65521, 655361, -131062, 65521, 1048580, -131061, 65521, 1048577, -65548, 65521, 655361, -65547, 65521, 1048580, -65546, 65521, 1048580, -65545, 65521, 1048577, -65538, 65521, 655361, -65537, 65521, 1048580, -196606, 65522, 1048577, -196600, 65522, 655361, -131080, 65522, 655361, -131079, 65522, 1048580, -131078, 65522, 1048580, -131077, 65522, 1048580, -131076, 65522, 1048580, -131075, 65522, 1048577, -131072, 65522, 655360, -131071, 65522, 4, -131063, 65522, 655364, -131062, 65522, 1441792, -131061, 65522, 4, -65548, 65522, 655364, -65547, 65522, 1441792, -65546, 65522, 1441792, -65545, 65522, 4, -65538, 65522, 655364, -65537, 65522, 655360, -196606, 65523, 1, -196600, 65523, 1441793, -131080, 65523, 1441793, -131079, 65523, 1441796, -131078, 65523, 1441796, -131077, 65523, 1441796, -131076, 65523, 1441796, -131075, 65523, 1, -131072, 65523, 1048576, -131071, 65523, 4, -131063, 65523, 655364, -131062, 65523, 1441792, -131061, 65523, 4, -65548, 65523, 655364, -65547, 65523, 1441792, -65546, 65523, 1441792, -65545, 65523, 4, -65538, 65523, 655364, -65537, 65523, 1048576, -131072, 65524, 1441796, -131071, 65524, 1, -131063, 65524, 1441793, -131062, 65524, 1441796, -131061, 65524, 1, -65548, 65524, 1441793, -65547, 65524, 1441796, -65546, 65524, 1441796, -65545, 65524, 1, -65538, 65524, 1441793, -65537, 65524, 1441796, -131072, 65528, 1048580, -131071, 65528, 1048580, -131070, 65528, 1048577, -65539, 65528, 655361, -65538, 65528, 1048580, -65537, 65528, 1048580, -131072, 65529, 655360, -131071, 65529, 655360, -131070, 65529, 4, -131065, 65529, 655361, -131064, 65529, 1048580, -131063, 65529, 1048580, -131062, 65529, 1048580, -131061, 65529, 1048580, -131060, 65529, 1048580, -131059, 65529, 1048577, -65539, 65529, 655364, -65538, 65529, 655360, -65537, 65529, 655360, -131072, 65530, 1441796, -131071, 65530, 1441796, -131070, 65530, 1, -131065, 65530, 655364, -131064, 65530, 0, -131063, 65530, 0, -131062, 65530, 0, -131061, 65530, 0, -131060, 65530, 0, -131059, 65530, 4, -65539, 65530, 1441793, -65538, 65530, 1441796, -65537, 65530, 1441796, -65536, 65530, 1048577, -1, 65530, 655361, 0, 65531, 1048580, 1, 65531, 1048580, 2, 65531, 1048580, 3, 65531, 1048577, 65532, 65531, 655361, 65533, 65531, 1048580, 65534, 65531, 1048580, 65535, 65531, 1048580, -131072, 65531, 1048581, -131071, 65531, 1048581, -131070, 65531, 1048581, -131069, 65531, 1048582, -131065, 65531, 655364, -131064, 65531, 0, -131063, 65531, 0, -131062, 65531, 0, -131061, 65531, 0, -131060, 65531, 0, -131059, 65531, 4, -65540, 65531, 655366, -65539, 65531, 1048581, -65538, 65531, 1048581, -65537, 65531, 1048581, 0, 65532, 0, 1, 65532, 0, 2, 65532, 0, 3, 65532, 4, 65532, 65532, 655364, 65533, 65532, 0, 65534, 65532, 0, 65535, 65532, 0, -131069, 65532, 5, -131065, 65532, 655364, -131064, 65532, 0, -131063, 65532, 0, -131062, 65532, 0, -131061, 65532, 0, -131060, 65532, 0, -131059, 65532, 4, -65540, 65532, 655365, 0, 65533, 0, 1, 65533, 0, 2, 65533, 0, 3, 65533, 4, 65532, 65533, 655364, 65533, 65533, 0, 65534, 65533, 0, 65535, 65533, 0, -131069, 65533, 5, -131065, 65533, 655364, -131064, 65533, 0, -131063, 65533, 0, -131062, 65533, 0, -131061, 65533, 0, -131060, 65533, 0, -131059, 65533, 4, -65540, 65533, 655365, 0, 65534, 0, 1, 65534, 0, 2, 65534, 0, 3, 65534, 4, 65532, 65534, 655364, 65533, 65534, 0, 65534, 65534, 0, 65535, 65534, 0, -131069, 65534, 5, -131065, 65534, 1441793, -131064, 65534, 1441796, -131063, 65534, 1441796, -131062, 65534, 1441796, -131061, 65534, 1441796, -131060, 65534, 1441796, -131059, 65534, 1, -65540, 65534, 655365, 0, 65535, 0, 1, 65535, 0, 2, 65535, 0, 3, 65535, 4, 65532, 65535, 655364, 65533, 65535, 0, 65534, 65535, 0, 65535, 65535, 0, -131069, 65535, 5, -65540, 65535, 655365 )
+}
+__meta__ = {
+"_editor_clip_": 0,
+"_editor_floor_": Vector3( 0, -2, 0 )
+}
+
+[node name="Grass" parent="GridMaps" index="2"]
+data = {
+"cells": PoolIntArray( 0, 0, 655360, 1, 1, 655360, 65534, 1, 655360, -131062, 65521, 655361, -65547, 65521, 655361, -65545, 65521, 655360, -65537, 65521, 655360, -196606, 65522, 655360, -131078, 65522, 655360, -131076, 65522, 655360, -131071, 65522, 655361, -131063, 65522, 655360, -131061, 65522, 655360, -65538, 65522, 655360, -196600, 65523, 655361, -131079, 65523, 655361, -131077, 65523, 655361, -131072, 65523, 655360, -131062, 65523, 655361, -65547, 65523, 655360, -65545, 65523, 655361, -131063, 65524, 655360, -131061, 65524, 655360, -65538, 65524, 655361, -131072, 65528, 655360, -131070, 65528, 655361, -131065, 65529, 655361, -131061, 65529, 655360, -65538, 65529, 655361, -131071, 65530, 655360, -131063, 65530, 655360, -131059, 65530, 655361, -1, 65530, 655360, -131065, 65531, 655360, -131061, 65531, 655361, 65534, 65532, 655361, -131063, 65532, 655360, -131060, 65532, 655360, 1, 65533, 655360, -131065, 65533, 655361, -131061, 65533, 655361, 65533, 65534, 655360, -131063, 65534, 655360, -131059, 65534, 655360, 2, 65535, 655361 )
+}
+__meta__ = {
+"_editor_clip_": 0,
+"_editor_floor_": Vector3( 0, -2, 0 )
+}
+
+[node name="Rocks" parent="GridMaps" index="3"]
+data = {
+"cells": PoolIntArray( -262137, 65510, 1, -262135, 65510, 1441793, -262133, 65510, 655361, -262131, 65510, 655361, -262129, 65510, 1048577 )
+}
+__meta__ = {
+"_editor_clip_": 0,
+"_editor_floor_": Vector3( 0, -4, 0 )
+}
+
+[node name="Trees" parent="GridMaps" index="4"]
+data = {
+"cells": PoolIntArray( 2, 1, 6, 5, 1, 655361, 65530, 1, 0, 65534, 1, 655366, -131070, 65506, 2, -131072, 65507, 3, -131053, 65507, 1441795, -131049, 65507, 1441794, -65539, 65507, 1048583, -131071, 65508, 6, -65559, 65508, 655366, -65555, 65508, 1048583, -131052, 65509, 1441799, -131050, 65511, 655366, -65538, 65511, 1048582, -131070, 65512, 655367, -65559, 65512, 1048576, -65555, 65513, 655361, -65540, 65520, 1048579, -131069, 65521, 7, -65542, 65521, 1048576, -131067, 65522, 1441794, -65537, 65522, 655366, -131054, 65523, 7, -131047, 65523, 1441799, -131068, 65524, 1441798, -131057, 65524, 0, -131049, 65524, 655366, -65541, 65524, 1048583, -131052, 65526, 6, -131047, 65526, 1441793, -131054, 65527, 655362, 2, 65528, 7, 5, 65528, 655360, -131056, 65528, 655367, -131049, 65529, 1048579, 65530, 65530, 655361, -131046, 65530, 1048583, 65533, 65531, 1048582, 5, 65532, 655366, -131056, 65532, 1048577, -131051, 65532, 1441798, -131048, 65532, 655360, 65530, 65535, 655367 )
+}
+__meta__ = {
+"_editor_clip_": 0,
+"_editor_floor_": Vector3( 0, -2, 0 )
+}
+
+[node name="Fences" parent="GridMaps" index="6"]
+data = {
+"cells": PoolIntArray( 3, 0, 1441792, 65532, 0, 1441792, 0, 1, 0, 1, 1, 0, 2, 1, 0, 3, 1, 1, 65532, 1, 1441793, 65533, 1, 0, 65534, 1, 0, 65535, 1, 0, 0, 65531, 655362, 1, 65531, 655360, 2, 65531, 655360, 3, 65531, 1048577, 65532, 65531, 655361, 65533, 65531, 655360, 65534, 65531, 655360, 65535, 65531, 2, 3, 65532, 1441792, 65532, 65532, 1441792, 3, 65533, 1441792, 65532, 65533, 1441792, 3, 65534, 1441792, 65532, 65534, 1441792, 3, 65535, 1441792, 65532, 65535, 1441792 )
+}
+
+[node name="Misc" parent="GridMaps" index="7"]
+data = {
+"cells": PoolIntArray( -65540, 65511, 655361 )
+}
+__meta__ = {
+"_editor_clip_": 0,
+"_editor_floor_": Vector3( 0, -2, 0 )
+}
+
+[node name="Thorns" parent="GridMaps" index="8"]
+data = {
+"cells": PoolIntArray( -131087, 65509, 1441792, -131077, 65511, 1441792 )
+}
+__meta__ = {
+"_editor_clip_": 0,
+"_editor_floor_": Vector3( 0, -3, 0 )
+}
+
+[node name="Water" parent="GridMaps" index="9"]
+data = {
+"cells": PoolIntArray( -131072, 0, 1441792, -131071, 0, 1441792, -131070, 0, 1441792, -65539, 0, 1441792, -65538, 0, 1441792, -65537, 0, 1441792, -131072, 1, 1441792, -131071, 1, 1441792, -131070, 1, 1441792, -65539, 1, 1441792, -65538, 1, 1441792, -65537, 1, 1441792, -131072, 65534, 1441792, -131071, 65534, 1441792, -131070, 65534, 1441792, -65539, 65534, 1441792, -65538, 65534, 1441792, -65537, 65534, 1441792, -131072, 65535, 1441792, -131071, 65535, 1441792, -131070, 65535, 1441792, -65539, 65535, 1441792, -65538, 65535, 1441792, -65537, 65535, 1441792 )
+}
+__meta__ = {
+"_editor_clip_": 0,
+"_editor_floor_": Vector3( 0, -2, 0 )
+}
+
+[node name="Ripples" parent="GridMaps" index="10"]
+data = {
+"cells": PoolIntArray( -131068, 0, 655360, -65541, 0, 0, -131068, 1, 655360, -65541, 1, 0, -131072, 2, 1048576, -131071, 2, 1048576, -131070, 2, 1048576, -131069, 2, 1048576, -131068, 2, 1048577, -65541, 2, 1, -65540, 2, 1048576, -65539, 2, 1048576, -65538, 2, 1048576, -65537, 2, 1048576, -131072, 65520, 1441792, -131071, 65520, 1441792, -131070, 65520, 655361, -131064, 65520, 1441793, -131063, 65520, 1441792, -131062, 65520, 1441792, -131061, 65520, 1441792, -131060, 65520, 655361, -65549, 65520, 1441793, -65548, 65520, 1441792, -65547, 65520, 1441792, -65546, 65520, 1441792, -65545, 65520, 1441792, -65544, 65520, 655361, -65539, 65520, 1441793, -65538, 65520, 1441792, -65537, 65520, 1441792, -131070, 65521, 655362, -131069, 65521, 655361, -131065, 65521, 1441793, -131064, 65521, 1441794, -131060, 65521, 655360, -65549, 65521, 0, -65544, 65521, 655362, -65543, 65521, 1441792, -65542, 65521, 1441792, -65541, 65521, 1441792, -65540, 65521, 1441792, -65539, 65521, 1441794, -131069, 65522, 655360, -131065, 65522, 0, -131060, 65522, 655360, -65549, 65522, 0, -131069, 65523, 655360, -131065, 65523, 0, -131060, 65523, 655360, -65549, 65523, 0, -131070, 65524, 1048578, -131069, 65524, 1048577, -131065, 65524, 1, -131064, 65524, 2, -131060, 65524, 655360, -65549, 65524, 0, -65544, 65524, 1048578, -65543, 65524, 1048576, -65542, 65524, 1048576, -65541, 65524, 1048576, -65540, 65524, 1048576, -65539, 65524, 2, -131072, 65525, 1048576, -131071, 65525, 1048576, -131070, 65525, 1048577, -131064, 65525, 1, -131063, 65525, 1048576, -131062, 65525, 1048576, -131061, 65525, 1048576, -131060, 65525, 1048577, -65549, 65525, 1, -65548, 65525, 1048576, -65547, 65525, 1048576, -65546, 65525, 1048576, -65545, 65525, 1048576, -65544, 65525, 1048577, -65539, 65525, 1, -65538, 65525, 1048576, -65537, 65525, 1048576, -131072, 65527, 1441792, -131071, 65527, 1441792, -131070, 65527, 1441792, -131069, 65527, 655361, -65540, 65527, 1441793, -65539, 65527, 1441792, -65538, 65527, 1441792, -65537, 65527, 1441792, -131069, 65528, 655360, -131066, 65528, 1441793, -131065, 65528, 1441792, -131064, 65528, 1441792, -131063, 65528, 1441792, -131062, 65528, 1441792, -131061, 65528, 1441792, -131060, 65528, 1441792, -131059, 65528, 1441792, -131058, 65528, 655361, -65540, 65528, 0, -131069, 65529, 655360, -131066, 65529, 0, -131058, 65529, 655360, -65540, 65529, 0, -131069, 65530, 655362, -131068, 65530, 655361, -131066, 65530, 0, -131058, 65530, 655360, -65541, 65530, 1441793, -65540, 65530, 1441794, -131068, 65531, 655360, -131066, 65531, 0, -131058, 65531, 655360, -65541, 65531, 0, -131068, 65532, 655360, -131066, 65532, 0, -131058, 65532, 655360, -65541, 65532, 0, -131068, 65533, 655360, -131066, 65533, 0, -131058, 65533, 655360, -65541, 65533, 0, -131068, 65534, 655360, -131066, 65534, 0, -131058, 65534, 655360, -65541, 65534, 0, -131068, 65535, 655360, -131066, 65535, 1, -131065, 65535, 1048576, -131064, 65535, 1048576, -131063, 65535, 1048576, -131062, 65535, 1048576, -131061, 65535, 1048576, -131060, 65535, 1048576, -131059, 65535, 1048576, -131058, 65535, 1048577, -65541, 65535, 0 )
+}
+__meta__ = {
+"_editor_clip_": 0,
+"_editor_floor_": Vector3( 0, -2, 0 )
+}
+
+[node name="Platforms" type="Spatial" parent="."]
+
+[node name="Platform" parent="Platforms" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, -17 )
+duration = 3.0
+target_position = Vector3( 0, 0, -4 )
+
+[node name="PlatformWooden" parent="Platforms" instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 21, -1, -21 )
+moving = false
+target_position = Vector3( 0, 0, 6 )
+
+[node name="Lever" parent="Platforms" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -20, -1, -26 )
+target = NodePath("../PlatformWooden")
+
+[node name="Checkpoints" type="Spatial" parent="."]
+
+[node name="Checkpoint" parent="Checkpoints" instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3, -26 )
+
+[node name="Cannons" type="Spatial" parent="."]
+
+[node name="Cannon" parent="Cannons" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 21, -1, -6 )
+target = NodePath("../CannonTarget")
+
+[node name="CannonTarget" parent="Cannons" instance=ExtResource( 9 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -7 )
+
+[node name="Strawberries" type="Spatial" parent="."]
+
+[node name="Strawberry" parent="Strawberries" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -11 )
+
+[node name="Strawberry2" parent="Strawberries" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, -1, -13 )
+
+[node name="Strawberry3" parent="Strawberries" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, -15 )
+
+[node name="Strawberry5" parent="Strawberries" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, -17 )
+
+[node name="Strawberry6" parent="Strawberries" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, -19 )
+
+[node name="Strawberry7" parent="Strawberries" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, -21 )
+
+[node name="Strawberry8" parent="Strawberries" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, -23 )
+
+[node name="Strawberry9" parent="Strawberries" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3, -1, -26 )
+
+[node name="Strawberry27" parent="Strawberries" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, -1, -26 )
+
+[node name="Strawberry15" parent="Strawberries" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7, -2, -26 )
+
+[node name="Strawberry16" parent="Strawberries" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9, -2, -26 )
+
+[node name="Strawberry17" parent="Strawberries" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 11, -2, -26 )
+
+[node name="Strawberry18" parent="Strawberries" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 13, -2, -26 )
+
+[node name="Strawberry19" parent="Strawberries" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 15, -2, -26 )
+
+[node name="Strawberry20" parent="Strawberries" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 17, -2, -26 )
+
+[node name="Strawberry21" parent="Strawberries" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 19, -1, -26 )
+
+[node name="Strawberry22" parent="Strawberries" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 21, -1, -24 )
+
+[node name="Strawberry24" parent="Strawberries" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 21, -1, -21 )
+
+[node name="Strawberry25" parent="Strawberries" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 21, -1, -18 )
+
+[node name="Strawberry26" parent="Strawberries" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 21, -1, -15 )
+
+[node name="Strawberry28" parent="Strawberries" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 21, -1, -12 )
+
+[node name="Strawberry35" parent="Strawberries" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 19, -1, -10 )
+
+[node name="Strawberry29" parent="Strawberries" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 23, -1, -10 )
+
+[node name="Strawberry30" parent="Strawberries" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 23, -1, -7 )
+
+[node name="Strawberry31" parent="Strawberries" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 19, -1, -7 )
+
+[node name="Strawberry33" parent="Strawberries" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 19, -1, -4 )
+
+[node name="Strawberry34" parent="Strawberries" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 23, -1, -4 )
+
+[node name="Strawberry23" parent="Strawberries" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 21, -1, -28 )
+
+[node name="Strawberry10" parent="Strawberries" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -18, -1, -26 )
+
+[node name="Strawberry11" parent="Strawberries" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -20, -1, -24 )
+
+[node name="Strawberry13" parent="Strawberries" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -20, -1, -28 )
+
+[node name="Strawberry14" parent="Strawberries" instance=ExtResource( 11 )]
+transform = Transform( 0.669338, 0, 0, 0, 0.669338, 0, 0, 0, 0.669338, -22.5316, -1, -27.486 )
+
+[node name="Strawberry12" parent="Strawberries" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -22, -1, -26 )
+
+[node name="Strawberry4" parent="Strawberries" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3, -1, -13 )
+
+[node name="Enemies" type="Spatial" parent="."]
+
+[node name="Snail" parent="Enemies" instance=ExtResource( 12 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -7, -2, -26 )
+move_time = 4.0
+target_x = -5.0
+follow_limit = 1.5
+
+[editable path="GridMaps"]
