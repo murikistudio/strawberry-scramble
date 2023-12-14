@@ -198,22 +198,22 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 21, -1, -15 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 21, -1, -12 )
 
 [node name="Strawberry35" parent="Strawberries" instance=ExtResource( 11 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 19, -1, -10 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 19, -1, -10.5128 )
 
 [node name="Strawberry29" parent="Strawberries" instance=ExtResource( 11 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 23, -1, -10 )
 
 [node name="Strawberry30" parent="Strawberries" instance=ExtResource( 11 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 23, -1, -7 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 22.8532, -1, -7.4437 )
 
 [node name="Strawberry31" parent="Strawberries" instance=ExtResource( 11 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 19, -1, -7 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 19, -1, -6.71083 )
 
 [node name="Strawberry33" parent="Strawberries" instance=ExtResource( 11 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 19, -1, -4 )
 
 [node name="Strawberry34" parent="Strawberries" instance=ExtResource( 11 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 23, -1, -4 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 23, -1, -4.51399 )
 
 [node name="Strawberry23" parent="Strawberries" instance=ExtResource( 11 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 21, -1, -28 )
