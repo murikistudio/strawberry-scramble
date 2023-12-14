@@ -67,7 +67,9 @@ __meta__ = {
 
 [node name="Thorns" type="GridMap" parent="." groups=["death", "thorns"]]
 cell_size = Vector3( 1, 1, 1 )
+cell_center_x = false
 cell_center_y = false
+cell_center_z = false
 __meta__ = {
 "_editor_clip_": 0,
 "_editor_floor_": Vector3( 0, 0, 0 )
