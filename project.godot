@@ -59,6 +59,16 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://classes/database/scenes.gd"
 }, {
+"base": "Area",
+"class": "EnemyJumper",
+"language": "GDScript",
+"path": "res://scenes/characters/base/jumper.gd"
+}, {
+"base": "Area",
+"class": "EnemyWalker",
+"language": "GDScript",
+"path": "res://scenes/characters/base/walker.gd"
+}, {
 "base": "Node",
 "class": "GuiTransition",
 "language": "GDScript",
@@ -110,6 +120,8 @@ _global_script_class_icons={
 "DatabaseConstants": "",
 "DatabaseLevels": "",
 "DatabaseScenes": "",
+"EnemyJumper": "",
+"EnemyWalker": "",
 "GuiTransition": "res://addons/simple-gui-transitions/icon.png",
 "PlatformVisibility": "res://addons/utils/icons/platform_visibility.png",
 "Player": "",

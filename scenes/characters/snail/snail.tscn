@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://scenes/characters/snail/snail.gd" type="Script" id=1]
+[ext_resource path="res://scenes/characters/base/walker.gd" type="Script" id=1]
 [ext_resource path="res://models/characters/snail/snail.gltf" type="PackedScene" id=2]
 [ext_resource path="res://sounds/sfx/snail.wav" type="AudioStream" id=3]
 

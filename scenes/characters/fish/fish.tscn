@@ -5,10 +5,17 @@
 [ext_resource path="res://scenes/effects/water_splash/water_splash.tscn" type="PackedScene" id=3]
 [ext_resource path="res://addons/utils/startup_visibility.gd" type="Script" id=4]
 
+[sub_resource type="CubeMesh" id=4]
+
+[sub_resource type="SpatialMaterial" id=5]
+flags_transparent = true
+flags_unshaded = true
+albedo_color = Color( 1, 0, 0, 0.25098 )
+
 [sub_resource type="Animation" id=2]
 length = 0.001
 tracks/0/type = "value"
-tracks/0/path = NodePath("Fish:translation")
+tracks/0/path = NodePath("./CollisionShape:translation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -20,7 +27,7 @@ tracks/0/keys = {
 "values": [ Vector3( 0, 0, 0 ) ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("Fish:rotation_degrees")
+tracks/1/path = NodePath("./CollisionShape:rotation_degrees")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -32,7 +39,7 @@ tracks/1/keys = {
 "values": [ Vector3( 0, 0, 0 ) ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("Fish/Visual:rotation_degrees")
+tracks/2/path = NodePath("CollisionShape/Visual:rotation_degrees")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -44,7 +51,7 @@ tracks/2/keys = {
 "values": [ Vector3( -90, -180, 0 ) ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("Fish/Visual:visible")
+tracks/3/path = NodePath("CollisionShape/Visual:visible")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
@@ -57,12 +64,12 @@ tracks/3/keys = {
 }
 
 [sub_resource type="Animation" id=3]
-resource_name = "jump"
+resource_name = "jump_loop"
 length = 4.0
 loop = true
 step = 0.05
 tracks/0/type = "value"
-tracks/0/path = NodePath("Fish:translation")
+tracks/0/path = NodePath("./CollisionShape:translation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -74,7 +81,7 @@ tracks/0/keys = {
 "values": [ Vector3( 0, 0, 0 ), Vector3( 0, 5, 0 ), Vector3( 0, 0, 0 ), Vector3( 0, 0, 0 ) ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("Fish:rotation_degrees")
+tracks/1/path = NodePath("./CollisionShape:rotation_degrees")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -86,7 +93,7 @@ tracks/1/keys = {
 "values": [ Vector3( 0, 0, 0 ), Vector3( 0, 0, 0 ), Vector3( -180, 0, 0 ), Vector3( -180, 0, 0 ), Vector3( 0, 0, 0 ) ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("Fish/Visual:rotation_degrees")
+tracks/2/path = NodePath("CollisionShape/Visual:rotation_degrees")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -115,7 +122,7 @@ tracks/3/keys = {
 } ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("Fish/Visual:visible")
+tracks/4/path = NodePath("CollisionShape/Visual:visible")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/imported = false
@@ -128,35 +135,17 @@ tracks/4/keys = {
 }
 
 [sub_resource type="BoxShape" id=1]
+extents = Vector3( 0.3, 0.9, 0.5 )
 
-[sub_resource type="CubeMesh" id=4]
-
-[sub_resource type="SpatialMaterial" id=5]
-flags_transparent = true
-flags_unshaded = true
-albedo_color = Color( 1, 0, 0, 0.25098 )
-
-[node name="Fish" type="Spatial"]
+[node name="Fish" type="Area" groups=["death"]]
+monitoring = false
 script = ExtResource( 2 )
 scene_water_splash = ExtResource( 3 )
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/RESET = SubResource( 2 )
-anims/jump = SubResource( 3 )
-
-[node name="Fish" type="Area" parent="." groups=["death"]]
-monitoring = false
-
-[node name="CollisionShape" type="CollisionShape" parent="Fish"]
-transform = Transform( 0.216783, 0, 0, 0, 0.692549, 0, 0, 0, 0.399329, 0, 0, 0 )
-shape = SubResource( 1 )
-
-[node name="Visual" parent="Fish" instance=ExtResource( 1 )]
-transform = Transform( -0.8, -6.99382e-08, -3.0571e-15, 0, -3.49691e-08, 0.8, -6.99382e-08, 0.8, 3.49691e-08, 0, 0, 0 )
 
 [node name="MeshInstance" type="MeshInstance" parent="."]
 transform = Transform( 0.5, 0, 0, 0, 3, 0, 0, 0, 0.5, 0, 3, 0 )
 mesh = SubResource( 4 )
+skeleton = NodePath("")
 material/0 = SubResource( 5 )
 
 [node name="StartupVisibility" type="Node" parent="MeshInstance"]
@@ -164,4 +153,14 @@ script = ExtResource( 4 )
 visible = false
 delete_in_game = true
 
-[editable path="Fish/Visual"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/RESET = SubResource( 2 )
+anims/jump_loop = SubResource( 3 )
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+shape = SubResource( 1 )
+
+[node name="Visual" parent="CollisionShape" instance=ExtResource( 1 )]
+transform = Transform( -1, -8.74228e-08, -3.82137e-15, 0, -4.37114e-08, 1, -8.74228e-08, 1, 4.37114e-08, 0, 0, 0 )
+
+[editable path="CollisionShape/Visual"]

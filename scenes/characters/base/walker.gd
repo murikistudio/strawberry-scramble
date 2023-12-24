@@ -1,4 +1,5 @@
 extends Area
+class_name EnemyWalker
 
 
 # Variables
@@ -7,9 +8,9 @@ export var target_x: float
 export var target_z: float
 export(float, 0.0, 10.0, 0.1) var follow_distance := 5.0
 export(float, 0.0, 10.0, 0.1) var follow_limit := 1.0
-onready var _anim_player: AnimationPlayer = $AnimationPlayer
+onready var _anim_player: AnimationPlayer = find_node("AnimationPlayer")
 onready var _initial_position := global_translation
-onready var _target_position := Vector3()
+onready var _target_position := Vector3.ZERO
 onready var _player: Spatial
 
 
@@ -29,8 +30,8 @@ func _process(_delta: float) -> void:
 # Private methods
 # Loop de movimentação e rotação.
 func _loop_movement() -> void:
-	# Animação
-	_anim_player.play("walk_loop", -1, 1.25)
+	if _anim_player:
+		_anim_player.play("walk_loop", -1, 1.25)
 
 	# Movimentar apenas um eixo
 	if target_x:
