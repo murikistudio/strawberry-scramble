@@ -42,6 +42,7 @@ tracks/0/keys = {
 [node name="Snail" type="Area" groups=["death"]]
 monitoring = false
 script = ExtResource( 1 )
+anim_speed = 1.25
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
 transform = Transform( 0.355243, 0, 0, 0, 0.503567, 0, 0, 0, 0.852149, 0, 0.459051, -0.18467 )

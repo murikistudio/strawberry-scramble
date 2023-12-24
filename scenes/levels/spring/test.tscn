@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://scenes/levels/assets/spring/gridmaps.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/characters/player/player.tscn" type="PackedScene" id=2]
@@ -14,6 +14,7 @@
 [ext_resource path="res://scenes/levels/assets/spring/platform/platform.tscn" type="PackedScene" id=12]
 [ext_resource path="res://scenes/levels/assets/interactive/checkpoint/checkpoint.tscn" type="PackedScene" id=13]
 [ext_resource path="res://scenes/levels/assets/common/platform_wooden/platform_wooden.tscn" type="PackedScene" id=14]
+[ext_resource path="res://scenes/characters/crab/crab.tscn" type="PackedScene" id=15]
 [ext_resource path="res://scenes/levels/assets/interactive/lever/lever.tscn" type="PackedScene" id=16]
 [ext_resource path="res://scenes/characters/snail/snail.tscn" type="PackedScene" id=18]
 [ext_resource path="res://scenes/characters/fish/fish.tscn" type="PackedScene" id=19]
@@ -59,11 +60,7 @@ __meta__ = {
 
 [node name="Trees" parent="GridMaps" index="4"]
 data = {
-"cells": PoolIntArray( -65510, 0, 655360, 65518, 1, 655366, 65528, 1, 1048576, 65515, 2, 6, -65512, 2, 1441795, 6, 3, 1048578, 65515, 4, 0, 65517, 4, 1441795, 65520, 4, 7, 4, 6, 655361, 19, 7, 655367, 327658, 7, 4, 327663, 7, 2, 65531, 8, 655360, 65535, 8, 1048579, 22, 9, 655361, 327665, 9, 1441793, 327661, 10, 1441795, 327658, 11, 1441792, 327663, 12, 5, 13, 15, 655366, 327673, 15, 1441795, 65546, 17, 1048583, 262142, 17, 1048583, 131076, 19, 1048582, 65504, 65509, 1048576, 65510, 65509, 655367, 21, 65513, 1441794, 65535, 65513, 1048578, 24, 65515, 1441793, 2, 65516, 655363, 19, 65516, 1048579, 65533, 65532, 1441794, -65517, 65532, 1048577, -65512, 65533, 1048583, 65531, 65534, 1048579, 5, 65535, 655361, 65516, 65535, 655367, 65521, 65535, 1441796, -65515, 65535, 655366 )
-}
-__meta__ = {
-"_editor_clip_": 0,
-"_editor_floor_": Vector3( 0, 4, 0 )
+"cells": PoolIntArray( -65510, 0, 655360, 65518, 1, 655366, 65515, 2, 6, -65512, 2, 1441795, 6, 3, 1048578, 65515, 4, 0, 65517, 4, 1441795, 65520, 4, 7, 4, 6, 655361, 19, 7, 655367, 327658, 7, 4, 327663, 7, 2, 65531, 8, 655360, 65535, 8, 1048579, 22, 9, 655361, 327665, 9, 1441793, 327661, 10, 1441795, 327658, 11, 1441792, 327663, 12, 5, 13, 15, 655366, 327673, 15, 1441795, 65546, 17, 1048583, 262142, 17, 1048583, 131076, 19, 1048582, 65504, 65509, 1048576, 65510, 65509, 655367, 21, 65513, 1441794, 65535, 65513, 1048578, 24, 65515, 1441793, 2, 65516, 655363, 19, 65516, 1048579, 65533, 65532, 1441794, -65517, 65532, 1048577, -65512, 65533, 1048583, 65531, 65534, 1048579, 5, 65535, 655361, 65516, 65535, 655367, 65521, 65535, 1441796, -65515, 65535, 655366 )
 }
 
 [node name="Bridges" parent="GridMaps" index="5"]
@@ -230,6 +227,11 @@ target_x = 9.0
 
 [node name="Fish" parent="Enemies" instance=ExtResource( 19 )]
 transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 21.9, -2, -9.5 )
+
+[node name="Crab" parent="Enemies" instance=ExtResource( 15 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 1, 7 )
+move_time = 6.0
+target_z = -8.0
 
 [node name="Boulders" type="Spatial" parent="."]
 

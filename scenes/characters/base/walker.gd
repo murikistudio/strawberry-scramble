@@ -3,6 +3,7 @@ class_name EnemyWalker
 
 
 # Variables
+export(float, 0.1, 10.0, 0.01) var anim_speed := 1.0
 export(float, 0.5, 10.0, 0.1) var move_time := 5.0
 export var target_x: float
 export var target_z: float
@@ -31,7 +32,7 @@ func _process(_delta: float) -> void:
 # Loop de movimentação e rotação.
 func _loop_movement() -> void:
 	if _anim_player:
-		_anim_player.play("walk_loop", -1, 1.25)
+		_anim_player.play("walk_loop", -1, anim_speed)
 
 	# Movimentar apenas um eixo
 	if target_x:
