@@ -88,10 +88,18 @@ func _update_level_panel(level_def := {}) -> void:
 		_texture_level_trophy.visible = true
 		_container_level_time.visible = true
 
+		var thumb_path := DatabaseLevels.BASE_PATH + _current_world + "/thumbnails/" + _current_level + ".jpg"
+
+		if ResourceLoader.exists(thumb_path):
+			_texture_level_thumbnail.texture = load(thumb_path)
+		else:
+			prints("Thumbnail not found:", thumb_path)
+
 	else:
 		_label_level_name.text = tr(_current_world)
 		_texture_level_trophy.visible = false
 		_container_level_time.visible = false
+		_texture_level_thumbnail.texture = load(DatabaseLevels.BASE_PATH + _current_world + "/thumbnails/default.jpg")
 
 
 	if score.size():
