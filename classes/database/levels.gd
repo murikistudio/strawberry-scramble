@@ -5,6 +5,12 @@ class_name DatabaseLevels
 
 # Constants
 const BASE_PATH := "res://scenes/levels/"
+const WORLDS := [
+	"spring",
+	"summer",
+	"autumn",
+	"winter",
+]
 const LEVELS := [
 	{
 		"name": "level_01",
@@ -56,7 +62,7 @@ static func get_levels(world: String) -> Array:
 	var base_path = BASE_PATH + world + "/"
 
 	if dir.open(base_path) != OK:
-		push_error("An error occurred when trying to access the path.")
+		prints("An error occurred when trying to access the path:", base_path)
 		return level_paths
 
 	dir.list_dir_begin(true, true)
@@ -86,10 +92,14 @@ static func get_levels(world: String) -> Array:
 	file_names.sort()
 
 	for file_name in file_names:
-		level_paths.push_back({
+		var data := {
 			"name": file_name,
 			"world": world,
 			"path": levels_raw[file_name],
-		})
+		}
+
+		data.merge(get_level(data["world"], data["name"]))
+
+		level_paths.push_back(data)
 
 	return level_paths

@@ -4,5 +4,6 @@ class_name DatabaseConstants
 
 
 # Constants
+const BASE_PATH_ICONS = "res://textures/icons/"
 const COLOR_PENALTY := Color.darkgray
 const COLOR_COMPLETE := Color.lightgreen

@@ -1,23 +1,26 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://resources/themes/default_theme.tres" type="Theme" id=1]
 [ext_resource path="res://scenes/gui/background/background.tscn" type="PackedScene" id=2]
 [ext_resource path="res://resources/themes/font_medium.tres" type="Theme" id=3]
-[ext_resource path="res://scenes/gui/level_select/level_card.tscn" type="PackedScene" id=4]
 [ext_resource path="res://textures/buttons/back.svg" type="Texture" id=5]
 [ext_resource path="res://addons/utils/button_highlighter.gd" type="Script" id=6]
 [ext_resource path="res://textures/buttons/button_focus.svg" type="Texture" id=7]
 [ext_resource path="res://textures/buttons/mask.png" type="BitMap" id=8]
-[ext_resource path="res://scenes/gui/level_select/level_tab.gd" type="Script" id=9]
+[ext_resource path="res://scenes/levels/spring/thumbnails/default.jpg" type="Texture" id=9]
 [ext_resource path="res://scenes/gui/level_select/level_select.gd" type="Script" id=10]
 [ext_resource path="res://addons/simple-gui-transitions/transition.gd" type="Script" id=11]
+[ext_resource path="res://textures/hud/clock.svg" type="Texture" id=12]
+[ext_resource path="res://textures/icons/no_trophy.svg" type="Texture" id=13]
+[ext_resource path="res://textures/buttons/play_flat.svg" type="Texture" id=14]
+[ext_resource path="res://resources/themes/font_large.tres" type="Theme" id=15]
 
 [node name="LevelSelect" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 theme = ExtResource( 1 )
 script = ExtResource( 10 )
-scene_level_card = ExtResource( 4 )
+_texture_play = ExtResource( 14 )
 
 [node name="Background" parent="." instance=ExtResource( 2 )]
 
@@ -26,27 +29,30 @@ script = ExtResource( 11 )
 animation_enter = 5
 animation_leave = 5
 layout = NodePath("..")
-controls = [ NodePath("../MarginContainer/HBoxContainer/VBoxContainer2/ButtonBack"), NodePath("../MarginContainer/HBoxContainer/VBoxContainer") ]
+controls = [ NodePath("../MarginContainer/VBoxContainer/HBoxContainer2/ButtonBack"), NodePath("../MarginContainer/VBoxContainer/HBoxContainer2/VBoxContainer/LabelTitle"), NodePath("../MarginContainer/VBoxContainer/HBoxContainer2/VBoxContainer/ButtonWorld"), NodePath("../MarginContainer/VBoxContainer/Panel") ]
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
 margin_left = 20.0
 margin_top = 20.0
 margin_right = 1260.0
 margin_bottom = 700.0
-
-[node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
-margin_right = 123.0
-margin_bottom = 680.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="ButtonBack" type="TextureButton" parent="MarginContainer/HBoxContainer/VBoxContainer2"]
-margin_right = 123.0
-margin_bottom = 135.0
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+margin_right = 1240.0
+margin_bottom = 133.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="ButtonBack" type="TextureButton" parent="MarginContainer/VBoxContainer/HBoxContainer2"]
+margin_right = 175.0
+margin_bottom = 133.0
+focus_neighbour_right = NodePath("../VBoxContainer/ButtonWorld")
 size_flags_horizontal = 3
 size_flags_vertical = 3
 texture_normal = ExtResource( 5 )
@@ -55,28 +61,28 @@ texture_click_mask = ExtResource( 8 )
 expand = true
 stretch_mode = 5
 
-[node name="ButtonHighlighter" type="Node" parent="MarginContainer/HBoxContainer/VBoxContainer2/ButtonBack"]
+[node name="ButtonHighlighter" type="Node" parent="MarginContainer/VBoxContainer/HBoxContainer2/ButtonBack"]
 script = ExtResource( 6 )
 
-[node name="Control" type="Control" parent="MarginContainer/HBoxContainer/VBoxContainer2"]
-margin_top = 139.0
-margin_right = 123.0
-margin_bottom = 680.0
+[node name="Control2" type="Control" parent="MarginContainer/VBoxContainer/HBoxContainer2"]
+margin_left = 179.0
+margin_right = 442.0
+margin_bottom = 133.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-size_flags_stretch_ratio = 4.0
+size_flags_stretch_ratio = 1.5
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
-margin_left = 127.0
-margin_right = 1112.0
-margin_bottom = 680.0
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer2"]
+margin_left = 446.0
+margin_right = 797.0
+margin_bottom = 133.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-size_flags_stretch_ratio = 8.0
+size_flags_stretch_ratio = 2.0
 
-[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer"]
-margin_right = 985.0
-margin_bottom = 88.0
+[node name="LabelTitle" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer2/VBoxContainer"]
+margin_right = 351.0
+margin_bottom = 64.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.15
@@ -85,55 +91,159 @@ text = "Level Select"
 align = 1
 valign = 1
 
-[node name="TabContainer" type="TabContainer" parent="MarginContainer/HBoxContainer/VBoxContainer"]
-margin_top = 92.0
-margin_right = 985.0
-margin_bottom = 680.0
+[node name="ButtonWorld" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer2/VBoxContainer"]
+margin_top = 68.0
+margin_right = 351.0
+margin_bottom = 133.0
+focus_neighbour_left = NodePath("../../ButtonBack")
 size_flags_horizontal = 3
 size_flags_vertical = 3
+size_flags_stretch_ratio = 0.15
+text = "spring"
 
-[node name="spring" type="Tabs" parent="MarginContainer/HBoxContainer/VBoxContainer/TabContainer"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = 8.0
-margin_top = 51.0
-margin_right = -8.0
-margin_bottom = -8.0
-script = ExtResource( 9 )
-scene_level_card = ExtResource( 4 )
+[node name="ButtonHighlighter" type="Node" parent="MarginContainer/VBoxContainer/HBoxContainer2/VBoxContainer/ButtonWorld"]
+script = ExtResource( 6 )
 
-[node name="summer" type="Tabs" parent="MarginContainer/HBoxContainer/VBoxContainer/TabContainer"]
-visible = false
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = 8.0
-margin_top = 51.0
-margin_right = -8.0
-margin_bottom = -8.0
+[node name="Control" type="Control" parent="MarginContainer/VBoxContainer/HBoxContainer2"]
+margin_left = 801.0
+margin_right = 1240.0
+margin_bottom = 133.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 2.5
 
-[node name="autumn" type="Tabs" parent="MarginContainer/HBoxContainer/VBoxContainer/TabContainer"]
-visible = false
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = 8.0
-margin_top = 51.0
-margin_right = -8.0
-margin_bottom = -8.0
+[node name="Control" type="Control" parent="MarginContainer/VBoxContainer"]
+margin_top = 137.0
+margin_right = 1240.0
+margin_bottom = 143.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.05
 
-[node name="winter" type="Tabs" parent="MarginContainer/HBoxContainer/VBoxContainer/TabContainer"]
-visible = false
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = 8.0
-margin_top = 51.0
-margin_right = -8.0
-margin_bottom = -8.0
-
-[node name="VBoxContainer3" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
-margin_left = 1116.0
+[node name="Panel" type="Panel" parent="MarginContainer/VBoxContainer"]
+margin_top = 147.0
 margin_right = 1240.0
 margin_bottom = 680.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
+size_flags_stretch_ratio = 4.0
 
-[connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer2/ButtonBack" to="." method="_on_ButtonBack_pressed"]
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/Panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/Panel/MarginContainer"]
+margin_left = 20.0
+margin_top = 20.0
+margin_right = 1220.0
+margin_bottom = 513.0
+
+[node name="GridContainerLevels" type="GridContainer" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/HBoxContainer"]
+margin_right = 712.0
+margin_bottom = 493.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 1.5
+theme = ExtResource( 15 )
+columns = 4
+
+[node name="Control" type="Control" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/HBoxContainer"]
+margin_left = 716.0
+margin_right = 721.0
+margin_bottom = 493.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.01
+
+[node name="Panel2" type="Panel" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/HBoxContainer"]
+margin_left = 725.0
+margin_right = 1200.0
+margin_bottom = 493.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/HBoxContainer/Panel2"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/HBoxContainer/Panel2/MarginContainer"]
+margin_left = 20.0
+margin_top = 20.0
+margin_right = 455.0
+margin_bottom = 473.0
+
+[node name="TextureLevelThumbnail" type="TextureRect" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/HBoxContainer/Panel2/MarginContainer/VBoxContainer"]
+margin_right = 435.0
+margin_bottom = 296.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 4.0
+texture = ExtResource( 9 )
+expand = true
+stretch_mode = 7
+
+[node name="TextureLevelTrophy" type="TextureRect" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/HBoxContainer/Panel2/MarginContainer/VBoxContainer/TextureLevelThumbnail"]
+anchor_left = 0.7
+anchor_top = 0.05
+anchor_right = 0.95
+anchor_bottom = 0.4
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 3.0
+texture = ExtResource( 13 )
+expand = true
+stretch_mode = 6
+
+[node name="LabelLevelName" type="Label" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/HBoxContainer/Panel2/MarginContainer/VBoxContainer"]
+margin_top = 300.0
+margin_right = 435.0
+margin_bottom = 374.0
+size_flags_horizontal = 3
+size_flags_vertical = 7
+theme = ExtResource( 3 )
+text = "---"
+align = 1
+valign = 1
+
+[node name="ContainerLevelTime" type="HBoxContainer" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/HBoxContainer/Panel2/MarginContainer/VBoxContainer"]
+margin_top = 378.0
+margin_right = 435.0
+margin_bottom = 453.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Control" type="Control" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/HBoxContainer/Panel2/MarginContainer/VBoxContainer/ContainerLevelTime"]
+margin_right = 105.0
+margin_bottom = 75.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="TextureLevelTime" type="TextureRect" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/HBoxContainer/Panel2/MarginContainer/VBoxContainer/ContainerLevelTime"]
+margin_left = 109.0
+margin_right = 215.0
+margin_bottom = 75.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource( 12 )
+expand = true
+stretch_mode = 6
+
+[node name="LabelLevelTime" type="Label" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/HBoxContainer/Panel2/MarginContainer/VBoxContainer/ContainerLevelTime"]
+margin_left = 219.0
+margin_right = 325.0
+margin_bottom = 75.0
+size_flags_horizontal = 3
+size_flags_vertical = 7
+text = "---"
+align = 1
+valign = 1
+
+[node name="Control2" type="Control" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/HBoxContainer/Panel2/MarginContainer/VBoxContainer/ContainerLevelTime"]
+margin_left = 329.0
+margin_right = 435.0
+margin_bottom = 75.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer2/ButtonBack" to="." method="_on_ButtonBack_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer2/VBoxContainer/ButtonWorld" to="." method="_on_ButtonWorld_pressed"]

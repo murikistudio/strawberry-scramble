@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/thumbnail.jpg-afff0ec8d47017002249535e350f43e1.stex"
+path="res://.import/default.jpg-0af4dce9121d5152b4392a67d872d513.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/levels/thumbnails/thumbnail.jpg"
-dest_files=[ "res://.import/thumbnail.jpg-afff0ec8d47017002249535e350f43e1.stex" ]
+source_file="res://scenes/levels/spring/thumbnails/default.jpg"
+dest_files=[ "res://.import/default.jpg-0af4dce9121d5152b4392a67d872d513.stex" ]
 
 [params]
 
