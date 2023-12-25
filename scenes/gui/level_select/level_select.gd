@@ -84,7 +84,7 @@ func _update_level_panel(level_def := {}) -> void:
 	var score: Dictionary = world_progress.get(level_def.get("name", ""), {})
 
 	if level_def.size():
-		_label_level_name.text = tr(level_def["name"])
+		_label_level_name.text = tr(_current_world + "_" + level_def["name"])
 		_texture_level_trophy.visible = true
 		_container_level_time.visible = true
 

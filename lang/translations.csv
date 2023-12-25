@@ -83,14 +83,14 @@ summer,Summer,Verão
 autumn,Autumn,Outono
 winter,Winter,Inverno
 test,Test,Teste
-level_01,Level 1,Nível 1
-level_02,Level 2,Nível 2
-level_03,Level 3,Nível 3
-level_04,Level 4,Nível 4
-level_05,Level 5,Nível 5
-level_06,Level 6,Nível 6
-level_07,Level 7,Nível 7
-level_08,Level 8,Nível 8
-level_09,Level 9,Nível 9
-level_10,Level 10,Nível 10
+spring_level_01,Just Beginning,Apenas Começando
+spring_level_02,Floating Floors,Chãos Voadores
+spring_level_03,Jumping Like Fish,Pulando Como Peixe
+spring_level_04,Creeping To A Cannon,Rastejando Até Um Canhão
+spring_level_05,A Thorny Path,Um Caminho Espinhoso
+spring_level_06,Level 6,Nível 6
+spring_level_07,Level 7,Nível 7
+spring_level_08,Level 8,Nível 8
+spring_level_09,Level 9,Nível 9
+spring_level_10,Level 10,Nível 10
 ,,
