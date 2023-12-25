@@ -25,7 +25,7 @@ func _ready() -> void:
 # Private methods
 func _update_interface() -> void:
 	_label_percent.text = tr("level_complete_percent").format({
-		"level": tr(GameState.current_level),
+		"level": tr(GameState.current_world + "_" + GameState.current_level),
 		"percent": GameState.current_progress,
 	})
 
