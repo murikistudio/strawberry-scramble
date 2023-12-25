@@ -48,13 +48,13 @@ texture_house_opened = ExtResource( 12 )
 [node name="GuiTransition" type="Node" parent="."]
 script = ExtResource( 5 )
 layout = NodePath("..")
-controls = [ NodePath("../Panel/MarginContainer/HBoxContainer/TextureRectCollected"), NodePath("../Panel/MarginContainer/HBoxContainer/LabelCollected"), NodePath("../Panel/MarginContainer/HBoxContainer/TextureRectTrophy"), NodePath("../Panel/MarginContainer/HBoxContainer/TextureRectDoor"), NodePath("../Panel2/MarginContainer/HBoxContainer/TextureRectTime"), NodePath("../Panel2/MarginContainer/HBoxContainer/LabelTime") ]
+controls = [ NodePath("../PanelUpper/MarginContainer/HBoxContainer/TextureRectCollected"), NodePath("../PanelUpper/MarginContainer/HBoxContainer/LabelCollected"), NodePath("../PanelUpper/MarginContainer/HBoxContainer/TextureRectTrophy"), NodePath("../PanelUpper/MarginContainer/HBoxContainer/TextureRectDoor"), NodePath("../PanelLower/MarginContainer/HBoxContainer/TextureRectTime"), NodePath("../PanelLower/MarginContainer/HBoxContainer/LabelTime") ]
 
 [node name="Joystick" parent="." instance=ExtResource( 10 )]
 
 [node name="ContainerDialogBox" parent="." instance=ExtResource( 6 )]
 
-[node name="Panel2" type="Panel" parent="."]
+[node name="PanelLower" type="Panel" parent="."]
 self_modulate = Color( 1, 1, 1, 0.784314 )
 anchor_left = 0.74
 anchor_top = 0.15
@@ -64,19 +64,19 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_styles/panel = SubResource( 7 )
 
-[node name="MarginContainer" type="MarginContainer" parent="Panel2"]
+[node name="MarginContainer" type="MarginContainer" parent="PanelLower"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 theme = SubResource( 9 )
 custom_constants/margin_top = 16
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Panel2/MarginContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelLower/MarginContainer"]
 margin_left = 8.0
 margin_top = 16.0
 margin_right = 299.0
 margin_bottom = 55.0
 
-[node name="TextureRectTime" type="TextureRect" parent="Panel2/MarginContainer/HBoxContainer"]
+[node name="TextureRectTime" type="TextureRect" parent="PanelLower/MarginContainer/HBoxContainer"]
 margin_right = 65.0
 margin_bottom = 39.0
 rect_pivot_offset = Vector2( 60, 49 )
@@ -87,7 +87,7 @@ texture = ExtResource( 8 )
 expand = true
 stretch_mode = 6
 
-[node name="LabelTime" type="Label" parent="Panel2/MarginContainer/HBoxContainer"]
+[node name="LabelTime" type="Label" parent="PanelLower/MarginContainer/HBoxContainer"]
 margin_left = 69.0
 margin_right = 97.0
 margin_bottom = 39.0
@@ -99,7 +99,7 @@ text = "99"
 align = 2
 valign = 1
 
-[node name="LabelTimeGoal" type="Label" parent="Panel2/MarginContainer/HBoxContainer"]
+[node name="LabelTimeGoal" type="Label" parent="PanelLower/MarginContainer/HBoxContainer"]
 margin_left = 101.0
 margin_right = 148.0
 margin_bottom = 39.0
@@ -110,7 +110,7 @@ theme = ExtResource( 13 )
 text = " / 99s"
 valign = 1
 
-[node name="TextureRectDeaths" type="TextureRect" parent="Panel2/MarginContainer/HBoxContainer"]
+[node name="TextureRectDeaths" type="TextureRect" parent="PanelLower/MarginContainer/HBoxContainer"]
 margin_left = 170.0
 margin_right = 235.0
 margin_bottom = 39.0
@@ -122,7 +122,7 @@ texture = ExtResource( 9 )
 expand = true
 stretch_mode = 6
 
-[node name="LabelDeaths" type="Label" parent="Panel2/MarginContainer/HBoxContainer"]
+[node name="LabelDeaths" type="Label" parent="PanelLower/MarginContainer/HBoxContainer"]
 margin_left = 239.0
 margin_right = 291.0
 margin_bottom = 39.0
@@ -134,7 +134,7 @@ theme = ExtResource( 11 )
 text = "x9"
 valign = 1
 
-[node name="Panel" type="Panel" parent="."]
+[node name="PanelUpper" type="Panel" parent="."]
 self_modulate = Color( 1, 1, 1, 0.784314 )
 anchor_left = 0.7
 anchor_top = 0.04
@@ -145,12 +145,12 @@ size_flags_vertical = 0
 size_flags_stretch_ratio = 4.0
 custom_styles/panel = SubResource( 8 )
 
-[node name="MarginContainer" type="MarginContainer" parent="Panel"]
+[node name="MarginContainer" type="MarginContainer" parent="PanelUpper"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 theme = SubResource( 9 )
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Panel/MarginContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelUpper/MarginContainer"]
 margin_left = 8.0
 margin_top = 8.0
 margin_right = 350.0
@@ -158,7 +158,7 @@ margin_bottom = 70.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="TextureRectCollected" type="TextureRect" parent="Panel/MarginContainer/HBoxContainer"]
+[node name="TextureRectCollected" type="TextureRect" parent="PanelUpper/MarginContainer/HBoxContainer"]
 margin_right = 84.0
 margin_bottom = 62.0
 rect_pivot_offset = Vector2( 60, 49 )
@@ -169,7 +169,7 @@ texture = ExtResource( 4 )
 expand = true
 stretch_mode = 6
 
-[node name="LabelCollected" type="Label" parent="Panel/MarginContainer/HBoxContainer"]
+[node name="LabelCollected" type="Label" parent="PanelUpper/MarginContainer/HBoxContainer"]
 margin_left = 88.0
 margin_right = 164.0
 margin_bottom = 62.0
@@ -180,7 +180,7 @@ size_flags_stretch_ratio = 0.9
 text = "99/99"
 valign = 1
 
-[node name="TextureRectTrophy" type="TextureRect" parent="Panel/MarginContainer/HBoxContainer"]
+[node name="TextureRectTrophy" type="TextureRect" parent="PanelUpper/MarginContainer/HBoxContainer"]
 margin_left = 168.0
 margin_right = 253.0
 margin_bottom = 62.0
@@ -192,7 +192,7 @@ texture = ExtResource( 2 )
 expand = true
 stretch_mode = 6
 
-[node name="TextureRectDoor" type="TextureRect" parent="Panel/MarginContainer/HBoxContainer"]
+[node name="TextureRectDoor" type="TextureRect" parent="PanelUpper/MarginContainer/HBoxContainer"]
 margin_left = 257.0
 margin_right = 342.0
 margin_bottom = 62.0

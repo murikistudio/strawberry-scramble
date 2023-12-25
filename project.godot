@@ -144,6 +144,7 @@ config/icon="res://icon.png"
 config/version="0.0.1"
 config/build=1
 config/author="Muriki Game Studio"
+run/show_hud=true
 
 [audio]
 

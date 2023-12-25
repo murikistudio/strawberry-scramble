@@ -36,6 +36,10 @@ func _ready() -> void:
 	if _level_def.get("bgm"):
 		GameAudio.play_bgm(_level_def["bgm"])
 
+	if not ProjectSettings.get_setting("application/run/show_hud"):
+		$PanelLower.modulate.a = 0.0
+		$PanelUpper.modulate.a = 0.0
+
 
 # Public methods
 # Atualiza valores mostrados na interface de usuário.
