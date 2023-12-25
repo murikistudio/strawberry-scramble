@@ -28,6 +28,9 @@ func _ready() -> void:
 	_button_world.connect("focus_entered", self, "_unset_current_level")
 	_update_layout()
 
+	yield(GuiTransitions, "show_completed")
+	_button_world.grab_focus()
+
 
 # Private methods
 func _unset_current_level() -> void:
@@ -46,9 +49,20 @@ func _add_level_buttons() -> void:
 		child.queue_free()
 
 	var level_defs := DatabaseLevels.get_levels(_current_world)
+	var unlocked := true
 
 	for i in level_defs.size():
-		var level_button := _create_level_button(i, level_defs[i])
+		var level_def: Dictionary = level_defs[i]
+		var level_button := _create_level_button(i, level_def)
+		var score: Dictionary = GameState.levels_progress.get(_current_world, {}).get(level_def["name"], {})
+
+		if not unlocked:
+			level_button.disabled = true
+			level_button.focus_mode = Control.FOCUS_NONE
+
+		if unlocked and not score.size():
+			unlocked = false
+
 		_grid_container_levels.add_child(level_button)
 
 	if level_defs.size() < MAX_LEVELS:
