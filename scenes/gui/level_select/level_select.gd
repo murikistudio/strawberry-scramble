@@ -96,6 +96,7 @@ func _create_level_button(i: int, level_def: Dictionary) -> Button:
 func _update_level_panel(level_def := {}) -> void:
 	var world_progress: Dictionary = GameState.levels_progress.get(level_def.get("world", ""), {})
 	var score: Dictionary = world_progress.get(level_def.get("name", ""), {})
+	var thumb_default := DatabaseLevels.BASE_PATH + _current_world + "/thumbnails/default.jpg"
 
 	if level_def.size():
 		_label_level_name.text = tr(_current_world + "_" + level_def["name"])
@@ -106,12 +107,14 @@ func _update_level_panel(level_def := {}) -> void:
 
 		if ResourceLoader.exists(thumb_path):
 			_texture_level_thumbnail.texture = load(thumb_path)
+		else:
+			_texture_level_thumbnail.texture = load(thumb_default)
 
 	else:
 		_label_level_name.text = tr(_current_world)
 		_texture_level_trophy.visible = false
 		_container_level_time.visible = false
-		_texture_level_thumbnail.texture = load(DatabaseLevels.BASE_PATH + _current_world + "/thumbnails/default.jpg")
+		_texture_level_thumbnail.texture = load(thumb_default)
 
 
 	if score.size():
