@@ -42,6 +42,12 @@ const LEVELS := [
 		"time": 60,
 		"bgm": DatabaseAudio.BGM_LEVEL,
 	},
+	{
+		"name": "level_06",
+		"world": "spring",
+		"time": 84,
+		"bgm": DatabaseAudio.BGM_LEVEL,
+	},
 ]
 
 
