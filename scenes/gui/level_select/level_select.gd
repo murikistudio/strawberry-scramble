@@ -92,8 +92,6 @@ func _update_level_panel(level_def := {}) -> void:
 
 		if ResourceLoader.exists(thumb_path):
 			_texture_level_thumbnail.texture = load(thumb_path)
-		else:
-			prints("Thumbnail not found:", thumb_path)
 
 	else:
 		_label_level_name.text = tr(_current_world)
