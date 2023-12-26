@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://resources/themes/default_theme.tres" type="Theme" id=1]
 [ext_resource path="res://scenes/gui/background/background.tscn" type="PackedScene" id=2]
@@ -13,6 +13,7 @@
 [ext_resource path="res://textures/buttons/button_focus_alt.svg" type="Texture" id=11]
 [ext_resource path="res://textures/buttons/exit.svg" type="Texture" id=12]
 [ext_resource path="res://textures/buttons/about.svg" type="Texture" id=13]
+[ext_resource path="res://addons/utils/platform_visibility.gd" type="Script" id=14]
 
 [node name="Menu" type="Control"]
 anchor_right = 1.0
@@ -80,6 +81,10 @@ stretch_mode = 5
 
 [node name="ButtonHighlighter" type="Node" parent="MarginContainer/HBoxContainer2/VBoxContainer2/ButtonQuit"]
 script = ExtResource( 8 )
+
+[node name="PlatformVisibility" type="Node" parent="MarginContainer/HBoxContainer2/VBoxContainer2/ButtonQuit"]
+script = ExtResource( 14 )
+platforms = 4
 
 [node name="Control2" type="Control" parent="MarginContainer/HBoxContainer2"]
 margin_left = 178.0
