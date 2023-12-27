@@ -1,7 +1,7 @@
 {
     "asset" : {
-        "version" : "2.0",
-        "generator" : "Khronos glTF Blender I/O v1.2.20"
+        "generator" : "Khronos glTF Blender I/O v1.2.20",
+        "version" : "2.0"
     },
     "scene" : 0,
     "scenes" : [
@@ -27,13 +27,13 @@
     ],
     "materials" : [
         {
+            "name" : "rock_3",
             "pbrMetallicRoughness" : {
                 "baseColorTexture" : {
                     "index" : 0,
                     "texCoord" : 0
                 }
-            },
-            "name" : "rock_3"
+            }
         }
     ],
     "meshes" : [
@@ -41,11 +41,11 @@
             "name" : "Rock3Collider.001",
             "primitives" : [
                 {
-                    "indices" : 2,
                     "attributes" : {
                         "NORMAL" : 0,
                         "POSITION" : 1
-                    }
+                    },
+                    "indices" : 2
                 }
             ]
         },
@@ -53,13 +53,13 @@
             "name" : "Rock3.001",
             "primitives" : [
                 {
-                    "indices" : 6,
-                    "material" : 0,
                     "attributes" : {
                         "NORMAL" : 3,
                         "POSITION" : 4,
                         "TEXCOORD_0" : 5
-                    }
+                    },
+                    "material" : 0,
+                    "indices" : 6
                 }
             ]
         }
@@ -72,124 +72,124 @@
     ],
     "images" : [
         {
-            "uri" : "rock_3.png",
             "name" : "rock_3.png",
-            "mimeType" : "image/png"
+            "mimeType" : "image/png",
+            "uri" : "rock_3.png"
         }
     ],
     "accessors" : [
         {
-            "bufferView" : 0,
             "type" : "VEC3",
+            "count" : 24,
             "componentType" : 5126,
-            "count" : 24
+            "bufferView" : 0
         },
         {
-            "bufferView" : 1,
             "max" : [
-                0.6114319562911987,
-                0.7642900347709656,
-                0.6878609657287598
+                0.5086868405342102,
+                0.7699999809265137,
+                0.533252477645874
             ],
-            "type" : "VEC3",
-            "componentType" : 5126,
             "min" : [
-                -0.6114319562911987,
+                -0.5121962428092957,
                 0,
-                -0.6878609657287598
+                -0.5753650665283203
             ],
+            "bufferView" : 1,
+            "type" : "VEC3",
+            "componentType" : 5126,
             "count" : 24
         },
         {
-            "bufferView" : 2,
             "type" : "SCALAR",
+            "count" : 36,
             "componentType" : 5123,
-            "count" : 36
+            "bufferView" : 2
         },
         {
-            "bufferView" : 3,
             "type" : "VEC3",
+            "count" : 66,
             "componentType" : 5126,
-            "count" : 66
+            "bufferView" : 3
         },
         {
-            "bufferView" : 4,
             "max" : [
-                0.5881668925285339,
-                0.7821370959281921,
-                0.636416494846344
+                0.5915665626525879,
+                0.7821856737136841,
+                0.6365830898284912
             ],
-            "type" : "VEC3",
-            "componentType" : 5126,
             "min" : [
                 -0.5881668925285339,
-                -0.005131840240210295,
-                -0.6769084930419922
+                -0.005961976479738951,
+                -0.6769289970397949
             ],
-            "count" : 66
-        },
-        {
-            "bufferView" : 5,
-            "type" : "VEC2",
+            "bufferView" : 4,
+            "type" : "VEC3",
             "componentType" : 5126,
             "count" : 66
         },
         {
-            "bufferView" : 6,
+            "type" : "VEC2",
+            "count" : 66,
+            "componentType" : 5126,
+            "bufferView" : 5
+        },
+        {
             "type" : "SCALAR",
+            "count" : 192,
             "componentType" : 5123,
-            "count" : 192
+            "bufferView" : 6
         }
     ],
     "bufferViews" : [
         {
             "byteOffset" : 0,
-            "buffer" : 0,
-            "byteLength" : 288
+            "byteLength" : 288,
+            "buffer" : 0
         },
         {
             "byteOffset" : 288,
-            "buffer" : 0,
-            "byteLength" : 288
+            "byteLength" : 288,
+            "buffer" : 0
         },
         {
             "byteOffset" : 576,
-            "buffer" : 0,
-            "byteLength" : 72
+            "byteLength" : 72,
+            "buffer" : 0
         },
         {
             "byteOffset" : 648,
-            "buffer" : 0,
-            "byteLength" : 792
+            "byteLength" : 792,
+            "buffer" : 0
         },
         {
             "byteOffset" : 1440,
-            "buffer" : 0,
-            "byteLength" : 792
+            "byteLength" : 792,
+            "buffer" : 0
         },
         {
             "byteOffset" : 2232,
-            "buffer" : 0,
-            "byteLength" : 528
+            "byteLength" : 528,
+            "buffer" : 0
         },
         {
             "byteOffset" : 2760,
-            "buffer" : 0,
-            "byteLength" : 384
+            "byteLength" : 384,
+            "buffer" : 0
         }
     ],
     "samplers" : [
         {
-            "magFilter" : 9729,
-            "wrapS" : 10497,
             "minFilter" : 9986,
-            "wrapT" : 10497
+            "wrapT" : 10497,
+            "magFilter" : 9729,
+            "wrapS" : 10497
         }
     ],
     "buffers" : [
         {
-            "uri" : "rock_3.bin",
-            "byteLength" : 3144
+            "byteLength" : 3144,
+            "uri" : "rock_3.bin"
         }
     ]
 }
