@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://scenes/gui/hud/hud.gd" type="Script" id=1]
 [ext_resource path="res://textures/icons/no_trophy.svg" type="Texture" id=2]
@@ -13,6 +13,62 @@
 [ext_resource path="res://resources/themes/font_small.tres" type="Theme" id=11]
 [ext_resource path="res://textures/hud/house_opened.svg" type="Texture" id=12]
 [ext_resource path="res://resources/themes/font_tiny.tres" type="Theme" id=13]
+[ext_resource path="res://resources/themes/font_large.tres" type="Theme" id=14]
+
+[sub_resource type="Animation" id=10]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:percent_visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 1.0 ]
+}
+
+[sub_resource type="Animation" id=11]
+resource_name = "fade_out"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 3, 5 ),
+"transitions": PoolRealArray( -2, -2, -2 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:percent_visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 1.0 ]
+}
 
 [sub_resource type="StyleBoxFlat" id=7]
 bg_color = Color( 0.71, 0.4473, 0.4473, 1 )
@@ -48,11 +104,25 @@ texture_house_opened = ExtResource( 12 )
 [node name="GuiTransition" type="Node" parent="."]
 script = ExtResource( 5 )
 layout = NodePath("..")
-controls = [ NodePath("../PanelUpper/MarginContainer/HBoxContainer/TextureRectCollected"), NodePath("../PanelUpper/MarginContainer/HBoxContainer/LabelCollected"), NodePath("../PanelUpper/MarginContainer/HBoxContainer/TextureRectTrophy"), NodePath("../PanelUpper/MarginContainer/HBoxContainer/TextureRectDoor"), NodePath("../PanelLower/MarginContainer/HBoxContainer/TextureRectTime"), NodePath("../PanelLower/MarginContainer/HBoxContainer/LabelTime") ]
+controls = [ NodePath("../PanelUpper/MarginContainer/HBoxContainer/TextureRectCollected"), NodePath("../PanelUpper/MarginContainer/HBoxContainer/LabelCollected"), NodePath("../PanelUpper/MarginContainer/HBoxContainer/TextureRectTrophy"), NodePath("../PanelUpper/MarginContainer/HBoxContainer/TextureRectDoor"), NodePath("../PanelLower/MarginContainer/HBoxContainer/TextureRectTime"), NodePath("../PanelLower/MarginContainer/HBoxContainer/LabelTime"), NodePath("../LabelLevelName") ]
 
 [node name="Joystick" parent="." instance=ExtResource( 10 )]
 
 [node name="ContainerDialogBox" parent="." instance=ExtResource( 6 )]
+
+[node name="LabelLevelName" type="Label" parent="."]
+anchor_left = 0.3
+anchor_top = 0.06
+anchor_right = 0.7
+anchor_bottom = 0.25
+theme = ExtResource( 14 )
+text = "This Is A Level Name"
+align = 1
+autowrap = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="LabelLevelName"]
+anims/RESET = SubResource( 10 )
+anims/fade_out = SubResource( 11 )
 
 [node name="PanelLower" type="Panel" parent="."]
 self_modulate = Color( 1, 1, 1, 0.784314 )

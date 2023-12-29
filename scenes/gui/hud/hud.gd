@@ -20,6 +20,7 @@ onready var _label_deaths: Label = find_node("LabelDeaths")
 onready var _label_time: Label = find_node("LabelTime")
 onready var _label_time_goal: Label = find_node("LabelTimeGoal")
 onready var _label_collected: Label = find_node("LabelCollected")
+onready var _label_level_name: Label = find_node("LabelLevelName")
 onready var _texture_no_trophy: Texture = _texture_rect_trophy.texture
 onready var _level_def := DatabaseLevels.get_level(GameState.current_world, GameState.current_level)
 onready var _time_goal := stepify(float(_level_def.get("time", 0)), 0.1)
@@ -41,10 +42,17 @@ func _ready() -> void:
 		$PanelLower.modulate.a = 0.0
 		$PanelUpper.modulate.a = 0.0
 
+	_label_level_name.get_node("AnimationPlayer").play("fade_out")
+
 
 # Public methods
 # Atualiza valores mostrados na interface de usuário.
 func _update_hud() -> void:
+	if _level_def.get("world") and _level_def.get("name"):
+		_label_level_name.text = _level_def["world"] + "_" + _level_def["name"]
+	else:
+		_label_level_name.text = ""
+
 	# Mortes
 	var deaths := "x" + str(GameState.times_died)
 
