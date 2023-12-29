@@ -22,7 +22,8 @@ var completed: bool
 var current_world: String
 var current_level: String
 var times_died: int
-var time_elapsed: int
+var time_elapsed: float
+var time_elapsed_rounded: int
 
 # Session
 var items_collected: int
@@ -91,7 +92,8 @@ func load_game() -> void:
 func reset_level() -> void:
 	completed = false
 	times_died = 0
-	time_elapsed = 0
+	time_elapsed = 0.0
+	time_elapsed_rounded = 0
 	items_collected = 0
 	items_available = 0
 	current_progress = 0
@@ -105,7 +107,7 @@ func evaluate_game() -> void:
 
 	var penalty := 20
 	var level_def := DatabaseLevels.get_level(current_world, current_level)
-	var level_time: int = level_def.get("time", 0)
+	var level_time := float(level_def.get("time", 0))
 	current_progress = int((float(items_collected) / float(items_available)) * 100)
 
 	if level_time > 0 and time_elapsed > level_time:
@@ -183,9 +185,9 @@ func add_score() -> void:
 		score_added = true
 
 	elif current_trophy_int == existing_trophy_int:
-		var existing_time: int = existing_score.get("time_elapsed", -1)
+		var existing_time := float(existing_score.get("time_elapsed", -1))
 
-		if existing_time >= 0 and time_elapsed < existing_time:
+		if existing_time >= 0.0 and time_elapsed < existing_time:
 			levels_progress[current_world][current_level] = score
 			score_added = true
 
@@ -195,7 +197,13 @@ func add_score() -> void:
 
 
 # Adicionar tempo passado na fase.
-func add_time_elapsed() -> void:
-	time_elapsed += 1
-	evaluate_game()
+func add_time_elapsed(value: float) -> void:
+	time_elapsed += value
+
+	var time_rounded := int(time_elapsed)
+
+	if time_rounded != time_elapsed_rounded:
+		time_elapsed_rounded = time_rounded
+		evaluate_game()
+
 	GameEvents.emit_signal("level_time_updated")

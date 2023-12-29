@@ -46,7 +46,7 @@ func _update_interface() -> void:
 		_label_collected.modulate = DatabaseConstants.COLOR_COMPLETE
 
 	# Time
-	_label_time.text = str(GameState.time_elapsed)
+	_label_time.text = DatabaseLevels.format_level_time(GameState.time_elapsed)
 	var time_goal: int = _level_def.get("time", 0)
 
 	if time_goal > 0:

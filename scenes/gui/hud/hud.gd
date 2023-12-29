@@ -22,16 +22,17 @@ onready var _label_time_goal: Label = find_node("LabelTimeGoal")
 onready var _label_collected: Label = find_node("LabelCollected")
 onready var _texture_no_trophy: Texture = _texture_rect_trophy.texture
 onready var _level_def := DatabaseLevels.get_level(GameState.current_world, GameState.current_level)
+onready var _time_goal := stepify(float(_level_def.get("time", 0)), 0.1)
 
 
 # Built-in overrides
 func _ready() -> void:
-	GameEvents.connect("player_died", self, "update_hud")
-	GameEvents.connect("player_item_collected", self, "update_hud")
-	GameEvents.connect("player_item_available", self, "update_hud")
-	GameEvents.connect("level_can_complete", self, "update_hud")
-	GameEvents.connect("level_time_updated", self, "update_hud")
-	update_hud()
+	GameEvents.connect("player_died", self, "_update_hud")
+	GameEvents.connect("player_item_collected", self, "_update_hud")
+	GameEvents.connect("player_item_available", self, "_update_hud")
+	GameEvents.connect("level_can_complete", self, "_update_hud")
+	GameEvents.connect("level_time_updated", self, "_update_time")
+	_update_hud()
 
 	if _level_def.get("bgm"):
 		GameAudio.play_bgm(_level_def["bgm"])
@@ -43,7 +44,7 @@ func _ready() -> void:
 
 # Public methods
 # Atualiza valores mostrados na interface de usuário.
-func update_hud() -> void:
+func _update_hud() -> void:
 	# Mortes
 	var deaths := "x" + str(GameState.times_died)
 
@@ -58,27 +59,7 @@ func update_hud() -> void:
 			_label_deaths.modulate = DatabaseConstants.COLOR_PENALTY
 
 	# Tempo
-	var time := str(GameState.time_elapsed)
-	var time_goal: int = _level_def.get("time", 0)
-
-	if _label_time.text != time:
-		GameCore.highlight_control_scale(_texture_rect_time)
-		GameCore.highlight_control_scale(_label_time)
-		_label_time.text = time
-
-		if time_goal > 0:
-			if GameState.time_elapsed <= time_goal:
-				_label_time_goal.text = " / " + str(time_goal) + "s"
-				_label_time.modulate = Color.white
-			else:
-				_label_time.text += "s"
-				_label_time_goal.text = ""
-				_label_time.modulate = DatabaseConstants.COLOR_PENALTY
-
-		else:
-			_label_time.text += "s"
-			_label_time_goal.text = ""
-			_label_time.modulate = Color.white
+	_update_time()
 
 	# Itens coletados
 	var collected_text := "{collected}/{available}".format({
@@ -107,3 +88,23 @@ func update_hud() -> void:
 	else:
 		_texture_rect_trophy.texture = _texture_no_trophy
 		_texture_rect_door.self_modulate.a = 0.6
+
+
+# Private methods
+# Atualiza label de tempo da fase.
+func _update_time() -> void:
+	_label_time.text = DatabaseLevels.format_level_time(GameState.time_elapsed, 0.1)
+
+	if _time_goal > 0:
+		if GameState.time_elapsed <= _time_goal:
+			_label_time_goal.text = " / " + str(_time_goal) + "s"
+			_label_time.modulate = Color.white
+		else:
+			_label_time.text += "s"
+			_label_time_goal.text = ""
+			_label_time.modulate = DatabaseConstants.COLOR_PENALTY
+
+	else:
+		_label_time.text += "s"
+		_label_time_goal.text = ""
+		_label_time.modulate = Color.white

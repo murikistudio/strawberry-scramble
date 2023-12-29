@@ -109,3 +109,8 @@ static func get_levels(world: String) -> Array:
 		level_paths.push_back(data)
 
 	return level_paths
+
+
+# Formata o tempo da fase de forma genérica.
+static func format_level_time(time, precision := 0.01) -> String:
+	return str(stepify(float(time), precision)).replace(".", ",")

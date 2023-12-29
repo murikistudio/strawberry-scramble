@@ -42,8 +42,11 @@ func _ready() -> void:
 	GameEvents.connect("player_enabled", self, "_on_player_enabled")
 
 
-func _process(_delta: float) -> void:
+func _process(delta: float) -> void:
 	var can_pause := not get_tree().paused and Input.is_action_just_pressed("pause")
+
+	if not GameState.completed:
+		GameState.add_time_elapsed(delta)
 
 	if not dead and not GameState.completed and can_pause:
 		GameEvents.emit_signal("level_paused")
@@ -51,14 +54,6 @@ func _process(_delta: float) -> void:
 
 
 # Event handlers
-# Avançar tempo no jogo.
-func _on_Timer_timeout() -> void:
-	if GameState.completed:
-		return
-
-	GameState.add_time_elapsed()
-
-
 # Habilita ou desabilita o controle do jogador.
 func _on_player_enabled(enabled: bool) -> void:
 	state_manager.transition_to(state_idle if enabled else state_stop)

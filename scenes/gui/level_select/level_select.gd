@@ -120,7 +120,7 @@ func _update_level_panel(level_def := {}) -> void:
 	if score.size():
 		_texture_level_time.modulate = Color.white
 		_label_level_time.modulate = Color.white
-		_label_level_time.text = str(score["time_elapsed"]) + "s"
+		_label_level_time.text = DatabaseLevels.format_level_time(score["time_elapsed"]) + "s"
 		_texture_level_trophy.texture = load(DatabaseConstants.BASE_PATH_ICONS + score["current_trophy"] + ".svg")
 
 	else:
