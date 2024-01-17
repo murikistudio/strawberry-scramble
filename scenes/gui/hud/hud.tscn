@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://scenes/gui/hud/hud.gd" type="Script" id=1]
 [ext_resource path="res://textures/icons/no_trophy.svg" type="Texture" id=2]
@@ -9,7 +9,6 @@
 [ext_resource path="res://textures/hud/house_closed.svg" type="Texture" id=7]
 [ext_resource path="res://textures/hud/clock.svg" type="Texture" id=8]
 [ext_resource path="res://textures/hud/death.svg" type="Texture" id=9]
-[ext_resource path="res://scenes/gui/joystick/joystick.tscn" type="PackedScene" id=10]
 [ext_resource path="res://resources/themes/font_small.tres" type="Theme" id=11]
 [ext_resource path="res://textures/hud/house_opened.svg" type="Texture" id=12]
 [ext_resource path="res://resources/themes/font_tiny.tres" type="Theme" id=13]
@@ -105,8 +104,6 @@ texture_house_opened = ExtResource( 12 )
 script = ExtResource( 5 )
 layout = NodePath("..")
 controls = [ NodePath("../PanelUpper/MarginContainer/HBoxContainer/TextureRectCollected"), NodePath("../PanelUpper/MarginContainer/HBoxContainer/LabelCollected"), NodePath("../PanelUpper/MarginContainer/HBoxContainer/TextureRectTrophy"), NodePath("../PanelUpper/MarginContainer/HBoxContainer/TextureRectDoor"), NodePath("../PanelLower/MarginContainer/HBoxContainer/TextureRectTime"), NodePath("../PanelLower/MarginContainer/HBoxContainer/LabelTime"), NodePath("../LabelLevelName") ]
-
-[node name="Joystick" parent="." instance=ExtResource( 10 )]
 
 [node name="ContainerDialogBox" parent="." instance=ExtResource( 6 )]
 
