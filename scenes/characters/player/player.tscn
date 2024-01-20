@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=2]
+[gd_scene load_steps=30 format=2]
 
 [ext_resource path="res://scenes/characters/player/player.gd" type="Script" id=1]
 [ext_resource path="res://classes/base/state_manager.gd" type="Script" id=2]
@@ -45,8 +45,6 @@ emission = Color( 1, 1, 1, 1 )
 emission_energy = 0.25
 emission_operator = 0
 emission_on_uv2 = false
-
-[sub_resource type="PlaneMesh" id=11]
 
 [node name="Player" type="KinematicBody" groups=["player"]]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.65, 0 )
@@ -121,6 +119,7 @@ light_energy = 0.3
 light_negative = true
 light_specular = 0.0
 light_cull_mask = 4294967293
+shadow_enabled = true
 spot_range = 8.0
 spot_attenuation = 0.5
 spot_angle = 5.0
@@ -132,16 +131,6 @@ cast_shadow = 0
 mesh = SubResource( 8 )
 skeleton = NodePath("../..")
 material/0 = SubResource( 9 )
-
-[node name="MeshInstance" type="MeshInstance" parent="Visual"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.4, 0 )
-visible = false
-mesh = SubResource( 11 )
-
-[node name="MeshInstance2" type="MeshInstance" parent="Visual/MeshInstance"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0 )
-mesh = SubResource( 11 )
-skeleton = NodePath("../..")
 
 [node name="Player" parent="Visual" instance=ExtResource( 5 )]
 transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, -0.633532, 0 )
