@@ -13,6 +13,7 @@ signal sfx_played(name)
 export(int, 1, 5, 1) var jump_times := 1
 
 var jumps_left := jump_times setget _set_jumps_left
+var input_axis := Vector2.ZERO
 var move_axis := Vector2.ZERO
 var move_weight := Vector2.ZERO
 var move_gravity := 0.0

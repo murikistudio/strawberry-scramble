@@ -9,11 +9,11 @@ onready var _camera_axis: Spatial = player.find_node("CameraAxis")
 
 # State overrides
 func process(_delta: float) -> BaseState:
-	var input_vector := Input.get_vector(
+	player.input_axis = Input.get_vector(
 		"move_left", "move_right",
 		"move_down", "move_up"
 	)
 
-	player.move_axis = input_vector.rotated(_camera_axis.global_rotation.y)
+	player.move_axis = player.input_axis.rotated(_camera_axis.global_rotation.y)
 
 	return null
