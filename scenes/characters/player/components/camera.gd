@@ -55,7 +55,7 @@ func _physics_process(_delta: float) -> void:
 	_process_shake()
 	_process_focus()
 	_process_movement(_delta)
-	#_process_collision()
+	_process_collision()
 
 
 # Private methods
@@ -133,7 +133,7 @@ func _process_collision() -> void:
 		if _ray_cast_camera.is_colliding() \
 		else _camera_origin.global_translation
 
-	_camera.translation.z += 0.2
+	_camera.translation.z += 0.1
 
 
 # Event handlers
