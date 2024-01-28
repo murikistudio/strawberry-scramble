@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://resources/environments/level_env.tres" type="Environment" id=1]
 [ext_resource path="res://scenes/characters/player/player.tscn" type="PackedScene" id=2]
@@ -9,11 +9,15 @@
 [ext_resource path="res://scenes/levels/assets/interactive/cannon/cannon.tscn" type="PackedScene" id=7]
 [ext_resource path="res://scenes/levels/assets/interactive/cannon/target.tscn" type="PackedScene" id=8]
 [ext_resource path="res://scenes/characters/snail/snail.tscn" type="PackedScene" id=9]
+[ext_resource path="res://scenes/levels/assets/spring/skybox.tscn" type="PackedScene" id=10]
 
 [node name="Level04" type="Spatial"]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = ExtResource( 1 )
+
+[node name="Skybox" parent="." instance=ExtResource( 10 )]
+transform = Transform( 55, 0, 0, 0, 55, 0, 0, 0, 55, 9, -5.38512, 4 )
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.65, 2 )
@@ -100,7 +104,7 @@ __meta__ = {
 
 [node name="Water" parent="GridMaps" index="9"]
 data = {
-"cells": PoolIntArray( -196608, 0, 0, -196607, 0, 0, -131074, 0, 0, -131073, 0, 0, -196608, 1, 0, -196607, 1, 0, -196606, 1, 0, -131075, 1, 0, -131074, 1, 0, -131073, 1, 0, -196608, 2, 0, -196607, 2, 0, -196606, 2, 0, -131075, 2, 0, -131074, 2, 0, -131073, 2, 0, -196608, 3, 0, -196607, 3, 0, -196606, 3, 0, -196605, 3, 0, -131076, 3, 0, -131075, 3, 0, -131074, 3, 0, -131073, 3, 0, -196608, 4, 0, -196607, 4, 0, -196606, 4, 0, -196605, 4, 0, -131076, 4, 0, -131075, 4, 0, -131074, 4, 0, -131073, 4, 0, -196608, 65535, 0, -196607, 65535, 0, -131074, 65535, 0, -131073, 65535, 0 )
+"cells": PoolIntArray( -196608, 0, 0, -196607, 0, 0, -196606, 0, 0, -196605, 0, 0, -131075, 0, 0, -131074, 0, 0, -131073, 0, 0, -196608, 1, 0, -196607, 1, 0, -196606, 1, 0, -196605, 1, 0, -131075, 1, 0, -131074, 1, 0, -131073, 1, 0, -196608, 2, 0, -196607, 2, 0, -196606, 2, 0, -131074, 2, 0, -131073, 2, 0, -196608, 3, 0, -196607, 3, 0, -131073, 3, 0, -196608, 65533, 0, -196607, 65533, 0, -196606, 65533, 0, -131074, 65533, 0, -131073, 65533, 0, -196608, 65534, 0, -196607, 65534, 0, -196606, 65534, 0, -196605, 65534, 0, -131075, 65534, 0, -131074, 65534, 0, -131073, 65534, 0, -196608, 65535, 0, -196607, 65535, 0, -196606, 65535, 0, -196605, 65535, 0, -131075, 65535, 0, -131074, 65535, 0, -131073, 65535, 0 )
 }
 __meta__ = {
 "_editor_clip_": 0,
