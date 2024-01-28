@@ -101,14 +101,19 @@ target_key = "shadow_enabled"
 convert_to = 1
 
 [node name="CameraAxis" type="Position3D" parent="."]
-transform = Transform( 1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 0, 0 )
 
-[node name="RayCastCamera" type="RayCast" parent="CameraAxis"]
+[node name="CameraSmooth" type="Position3D" parent="CameraAxis"]
+
+[node name="RayCastCamera" type="RayCast" parent="CameraAxis/CameraSmooth"]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0 )
 enabled = true
-cast_to = Vector3( 0, 4, 0 )
+cast_to = Vector3( 0, 3, 0 )
 
-[node name="Camera" type="Camera" parent="CameraAxis"]
-transform = Transform( -1, 8.74228e-08, 7.37408e-15, 0, -8.9407e-08, 1, 8.74228e-08, 1, 8.9407e-08, 0, 4, 0 )
+[node name="CameraOrigin" type="Position3D" parent="CameraAxis/CameraSmooth"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.19209e-07, -3 )
+
+[node name="Camera" type="Camera" parent="CameraAxis/CameraSmooth"]
+transform = Transform( -1, 8.74228e-08, 7.81621e-15, 8.74228e-08, 1, 4.56956e-08, -3.82137e-15, 4.56956e-08, -1, -7.81621e-15, -1.78814e-07, -3 )
 fov = 65.0
 
 [node name="Visual" type="Spatial" parent="."]
