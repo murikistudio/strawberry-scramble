@@ -1,5 +1,5 @@
 shader_type spatial;
-render_mode specular_disabled;
+render_mode specular_disabled, cull_disabled;
 
 uniform sampler2D texture_: hint_albedo;
 uniform float alpha_scissor: hint_range(-0.01, 1.0, 0.01) = 0.5;
