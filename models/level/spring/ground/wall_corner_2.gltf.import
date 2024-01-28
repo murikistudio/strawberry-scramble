@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/wall_corner.gltf-a0a18c538f6338c0e497cc2880c6b3e6.scn"
+path="res://.import/wall_corner_2.gltf-8b5372bbf62cde865ff6f96f423ca761.scn"
 
 [deps]
 
-source_file="res://models/level/spring/ground/wall_corner.gltf"
-dest_files=[ "res://.import/wall_corner.gltf-a0a18c538f6338c0e497cc2880c6b3e6.scn" ]
+source_file="res://models/level/spring/ground/wall_corner_2.gltf"
+dest_files=[ "res://.import/wall_corner_2.gltf-8b5372bbf62cde865ff6f96f423ca761.scn" ]
 
 [params]
 

@@ -1,14 +1,14 @@
-[gd_resource type="MeshLibrary" load_steps=26 format=2]
+[gd_resource type="MeshLibrary" load_steps=28 format=2]
 
-[ext_resource path="res://models/level/spring/ground/previews/side.png" type="Texture" id=1]
-[ext_resource path="res://models/level/spring/ground/previews/corner_2.png" type="Texture" id=2]
-[ext_resource path="res://models/level/spring/ground/previews/wall_side.png" type="Texture" id=3]
-[ext_resource path="res://models/level/spring/ground/previews/corner_3.png" type="Texture" id=4]
-[ext_resource path="res://models/level/spring/ground/previews/corner_1.png" type="Texture" id=5]
+[ext_resource path="res://models/level/spring/ground/previews/wall_side.png" type="Texture" id=2]
+[ext_resource path="res://models/level/spring/ground/previews/side.png" type="Texture" id=3]
+[ext_resource path="res://models/level/spring/ground/ground.tres" type="Material" id=4]
+[ext_resource path="res://models/level/spring/ground/previews/corner_3.png" type="Texture" id=5]
 [ext_resource path="res://models/level/spring/ground/previews/center.png" type="Texture" id=6]
-[ext_resource path="res://models/level/spring/ground/previews/wall_corner.png" type="Texture" id=7]
-[ext_resource path="res://models/level/spring/ground/ground.tres" type="Material" id=8]
+[ext_resource path="res://models/level/spring/ground/previews/corner_2.png" type="Texture" id=7]
+[ext_resource path="res://models/level/spring/ground/previews/corner_1.png" type="Texture" id=8]
 [ext_resource path="res://models/level/spring/ground/previews/corner_4.png" type="Texture" id=9]
+[ext_resource path="res://models/level/spring/ground/previews/wall_corner_2.png" type="Texture" id=10]
 
 [sub_resource type="ArrayMesh" id=1]
 resource_name = "center_GroundCenterMesh001"
@@ -19,7 +19,7 @@ surfaces/0 = {
 "blend_shape_data": [  ],
 "format": 2194711,
 "index_count": 6,
-"material": ExtResource( 8 ),
+"material": ExtResource( 4 ),
 "primitive": 4,
 "skeleton_aabb": [  ],
 "vertex_count": 4
@@ -37,7 +37,7 @@ surfaces/0 = {
 "blend_shape_data": [  ],
 "format": 2194711,
 "index_count": 72,
-"material": ExtResource( 8 ),
+"material": ExtResource( 4 ),
 "primitive": 4,
 "skeleton_aabb": [  ],
 "vertex_count": 24
@@ -55,7 +55,7 @@ surfaces/0 = {
 "blend_shape_data": [  ],
 "format": 2194711,
 "index_count": 30,
-"material": ExtResource( 8 ),
+"material": ExtResource( 4 ),
 "primitive": 4,
 "skeleton_aabb": [  ],
 "vertex_count": 13
@@ -73,7 +73,7 @@ surfaces/0 = {
 "blend_shape_data": [  ],
 "format": 2194711,
 "index_count": 36,
-"material": ExtResource( 8 ),
+"material": ExtResource( 4 ),
 "primitive": 4,
 "skeleton_aabb": [  ],
 "vertex_count": 32
@@ -91,7 +91,7 @@ surfaces/0 = {
 "blend_shape_data": [  ],
 "format": 2194711,
 "index_count": 18,
-"material": ExtResource( 8 ),
+"material": ExtResource( 4 ),
 "primitive": 4,
 "skeleton_aabb": [  ],
 "vertex_count": 12
@@ -109,7 +109,7 @@ surfaces/0 = {
 "blend_shape_data": [  ],
 "format": 2194711,
 "index_count": 6,
-"material": ExtResource( 8 ),
+"material": ExtResource( 4 ),
 "primitive": 4,
 "skeleton_aabb": [  ],
 "vertex_count": 4
@@ -119,7 +119,7 @@ surfaces/0 = {
 data = PoolVector3Array( 1, 0, -1, 1, -2, -1, 1, -2, 1, 1, 0, -1, 1, -2, 1, 1, 0, 1 )
 
 [sub_resource type="ArrayMesh" id=13]
-resource_name = "wall_corner_WallCornerMesh001"
+resource_name = "wall_corner_1_WallCorner1Mesh001"
 surfaces/0 = {
 "aabb": AABB( -0.999998, -2, -1, 2.00001, 2.00001, 2 ),
 "array_data": PoolByteArray( 24, 0, 128, 63, 0, 0, 0, 0, 7, 0, 128, 191, 127, 0, 127, 127, 230, 59, 102, 34, 26, 0, 128, 63, 0, 0, 0, 192, 0, 0, 96, 181, 105, 0, 127, 116, 243, 58, 204, 55, 24, 0, 128, 63, 0, 0, 0, 192, 7, 0, 128, 191, 127, 0, 127, 127, 230, 59, 204, 55, 26, 0, 128, 63, 0, 0, 0, 0, 0, 0, 96, 181, 105, 0, 127, 116, 243, 58, 102, 34, 0, 0, 48, 54, 0, 0, 0, 0, 236, 255, 127, 63, 21, 0, 127, 74, 12, 57, 102, 34, 216, 255, 127, 191, 0, 0, 0, 192, 232, 255, 127, 63, 0, 0, 127, 63, 25, 56, 204, 55, 0, 0, 48, 54, 0, 0, 0, 192, 236, 255, 127, 63, 21, 0, 127, 74, 12, 57, 204, 55, 216, 255, 127, 191, 0, 0, 0, 0, 232, 255, 127, 63, 0, 0, 127, 63, 25, 56, 102, 34, 51, 51, 51, 63, 0, 0, 0, 192, 51, 51, 51, 63, 63, 0, 127, 95, 0, 58, 204, 55, 51, 51, 51, 63, 0, 0, 0, 0, 51, 51, 51, 63, 63, 0, 127, 95, 0, 58, 102, 34 ),
@@ -127,7 +127,7 @@ surfaces/0 = {
 "blend_shape_data": [  ],
 "format": 2194711,
 "index_count": 24,
-"material": ExtResource( 8 ),
+"material": ExtResource( 4 ),
 "primitive": 4,
 "skeleton_aabb": [  ],
 "vertex_count": 10
@@ -145,7 +145,7 @@ surfaces/0 = {
 "blend_shape_data": [  ],
 "format": 2194711,
 "index_count": 72,
-"material": ExtResource( 8 ),
+"material": ExtResource( 4 ),
 "primitive": 4,
 "skeleton_aabb": [  ],
 "vertex_count": 24
@@ -153,6 +153,24 @@ surfaces/0 = {
 
 [sub_resource type="ConcavePolygonShape" id=16]
 data = PoolVector3Array( -1, 0, -1, 0.7, 0, -0.2, 0.3, 0, 0.3, -1, 0, -1, 1, 0, -1, 0.7, 0, -0.2, 1, 0, -1, 1, -2, -1, 0.7, -2, -0.2, 1, 0, -1, 0.7, -2, -0.2, 0.7, 0, -0.2, -0.2, 0, 0.7, -0.2, -2, 0.7, -1, -2, 1, -0.2, 0, 0.7, -1, -2, 1, -1, 0, 1, 0.7, 0, -0.2, 0.7, -2, -0.2, 0.3, -2, 0.3, 0.7, 0, -0.2, 0.3, -2, 0.3, 0.3, 0, 0.3, -1, 0, -1, -0.2, 0, 0.7, -1, 0, 1, 0.3, 0, 0.3, 0.3, -2, 0.3, -0.2, -2, 0.7, 0.3, 0, 0.3, -0.2, -2, 0.7, -0.2, 0, 0.7, 0.3, 0, 0.3, -0.2, 0, 0.7, -1, 0, -1 )
+
+[sub_resource type="ArrayMesh" id=17]
+resource_name = "wall_corner_2_WallCorner2Mesh001"
+surfaces/0 = {
+"aabb": AABB( -0.999998, -2, -1, 2.00001, 2.00001, 2 ),
+"array_data": PoolByteArray( 24, 0, 128, 63, 0, 0, 0, 0, 7, 0, 128, 191, 92, 0, 127, 109, 230, 59, 102, 34, 51, 51, 51, 63, 0, 0, 0, 192, 205, 204, 76, 190, 80, 0, 127, 103, 243, 58, 204, 55, 24, 0, 128, 63, 0, 0, 0, 192, 7, 0, 128, 191, 92, 0, 127, 109, 230, 59, 204, 55, 51, 51, 51, 63, 0, 0, 0, 0, 205, 204, 76, 190, 80, 0, 127, 103, 243, 58, 102, 34, 205, 204, 76, 190, 0, 0, 0, 0, 51, 51, 51, 63, 46, 0, 127, 86, 12, 57, 102, 34, 216, 255, 127, 191, 0, 0, 0, 192, 232, 255, 127, 63, 34, 0, 127, 80, 25, 56, 204, 55, 205, 204, 76, 190, 0, 0, 0, 192, 51, 51, 51, 63, 46, 0, 127, 86, 12, 57, 204, 55, 216, 255, 127, 191, 0, 0, 0, 0, 232, 255, 127, 63, 34, 0, 127, 80, 25, 56, 102, 34, 154, 153, 153, 62, 0, 0, 0, 192, 154, 153, 153, 62, 63, 0, 127, 95, 0, 58, 204, 55, 154, 153, 153, 62, 0, 0, 0, 0, 154, 153, 153, 62, 63, 0, 127, 95, 0, 58, 102, 34 ),
+"array_index_data": PoolByteArray( 0, 0, 2, 0, 1, 0, 0, 0, 1, 0, 3, 0, 4, 0, 6, 0, 5, 0, 4, 0, 5, 0, 7, 0, 3, 0, 1, 0, 8, 0, 3, 0, 8, 0, 9, 0, 9, 0, 8, 0, 6, 0, 9, 0, 6, 0, 4, 0 ),
+"blend_shape_data": [  ],
+"format": 2194711,
+"index_count": 24,
+"material": ExtResource( 4 ),
+"primitive": 4,
+"skeleton_aabb": [  ],
+"vertex_count": 10
+}
+
+[sub_resource type="ConcavePolygonShape" id=18]
+data = PoolVector3Array( 1, 0, -1, 1, -2, -1, 0.7, -2, -0.2, 1, 0, -1, 0.7, -2, -0.2, 0.7, 0, -0.2, -0.2, 0, 0.7, -0.2, -2, 0.7, -1, -2, 1, -0.2, 0, 0.7, -1, -2, 1, -1, 0, 1, 0.7, 0, -0.2, 0.7, -2, -0.2, 0.3, -2, 0.3, 0.7, 0, -0.2, 0.3, -2, 0.3, 0.3, 0, 0.3, 0.3, 0, 0.3, 0.3, -2, 0.3, -0.2, -2, 0.7, 0.3, 0, 0.3, -0.2, -2, 0.7, -0.2, 0, 0.7 )
 
 [resource]
 item/0/name = "GrassCenter"
@@ -166,40 +184,45 @@ item/1/mesh = SubResource( 3 )
 item/1/mesh_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 item/1/shapes = [ SubResource( 4 ), Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 ) ]
 item/1/navmesh_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
-item/1/preview = ExtResource( 5 )
+item/1/preview = ExtResource( 8 )
 item/2/name = "GrassCorner2"
 item/2/mesh = SubResource( 5 )
 item/2/mesh_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 item/2/shapes = [ SubResource( 6 ), Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 ) ]
 item/2/navmesh_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
-item/2/preview = ExtResource( 2 )
+item/2/preview = ExtResource( 7 )
 item/3/name = "GrassCorner3"
 item/3/mesh = SubResource( 7 )
 item/3/mesh_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 item/3/shapes = [ SubResource( 8 ), Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 ) ]
 item/3/navmesh_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
-item/3/preview = ExtResource( 4 )
+item/3/preview = ExtResource( 5 )
 item/4/name = "GrassSide"
 item/4/mesh = SubResource( 9 )
 item/4/mesh_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 item/4/shapes = [ SubResource( 10 ), Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 ) ]
 item/4/navmesh_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
-item/4/preview = ExtResource( 1 )
+item/4/preview = ExtResource( 3 )
 item/5/name = "GrassWallSide"
 item/5/mesh = SubResource( 11 )
 item/5/mesh_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 item/5/shapes = [ SubResource( 12 ), Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 ) ]
 item/5/navmesh_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
-item/5/preview = ExtResource( 3 )
-item/6/name = "GrassWallCorner"
+item/5/preview = ExtResource( 2 )
+item/6/name = "GrassWallCorner1"
 item/6/mesh = SubResource( 13 )
 item/6/mesh_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 item/6/shapes = [ SubResource( 14 ), Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 ) ]
 item/6/navmesh_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
-item/6/preview = ExtResource( 7 )
 item/7/name = "GrassCorner4"
 item/7/mesh = SubResource( 15 )
 item/7/mesh_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 item/7/shapes = [ SubResource( 16 ), Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 ) ]
 item/7/navmesh_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 item/7/preview = ExtResource( 9 )
+item/8/name = "GrassWallCorner2"
+item/8/mesh = SubResource( 17 )
+item/8/mesh_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+item/8/shapes = [ SubResource( 18 ), Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 ) ]
+item/8/navmesh_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+item/8/preview = ExtResource( 10 )
