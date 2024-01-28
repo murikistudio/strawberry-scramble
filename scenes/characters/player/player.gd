@@ -57,3 +57,9 @@ func _process(delta: float) -> void:
 # Habilita ou desabilita o controle do jogador.
 func _on_player_enabled(enabled: bool) -> void:
 	state_manager.transition_to(state_idle if enabled else state_stop)
+
+
+# Helper methods
+# Converte o Vector2 de entrada de controle para a direção alvo em Vector3.
+static func get_axis_offset(axis_vec: Vector2) -> Vector3:
+	return Vector3(-axis_vec.x, 0.0, axis_vec.y)

@@ -40,12 +40,5 @@ func _process_visual(delta: float) -> void:
 
 		player.global_rotation.y = target_rotation
 
-	var target_vec: Vector3 = player.global_translation + _get_axis_offset(player.move_weight) * view_forward_multiplier
+	var target_vec: Vector3 = player.global_translation + player.get_axis_offset(player.move_weight) * view_forward_multiplier
 	_mesh_direction.global_translation = target_vec
-
-
-# Helper methods
-# Converte o Vector2 de entrada de controle para a direção alvo em Vector3.
-static func _get_axis_offset(axis_vec: Vector2) -> Vector3:
-	return Vector3(-axis_vec.x, 0.0, axis_vec.y)
-
