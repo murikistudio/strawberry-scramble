@@ -92,8 +92,9 @@ shape = SubResource( 10 )
 transform = Transform( -0.707107, 0.612372, -0.353553, 0, 0.5, 0.866025, 0.707107, 0.612372, -0.353553, 0, 1, 0 )
 light_energy = 0.25
 shadow_enabled = true
-shadow_bias = 0.2
+shadow_bias = 0.09
 directional_shadow_normal_bias = 0.0
+directional_shadow_depth_range = 1
 
 [node name="ConfigEnabler" type="Node" parent="DirectionalLight"]
 script = ExtResource( 17 )
