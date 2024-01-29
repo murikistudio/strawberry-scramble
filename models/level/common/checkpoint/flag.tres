@@ -5,6 +5,7 @@
 [resource]
 resource_name = "flag"
 vertex_color_use_as_albedo = true
+params_cull_mode = 2
 params_use_alpha_scissor = true
 params_alpha_scissor_threshold = 0.1
 albedo_texture = ExtResource( 1 )
