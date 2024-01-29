@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/thorns_preview.png-ce7d38f9c26c86d45a9a7a7af3f2d06e.stex"
+path="res://.import/thorns.png-5c988ab5b38a0a15cfd2476dba921f04.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://models/level/common/thorns/thorns_preview.png"
-dest_files=[ "res://.import/thorns_preview.png-ce7d38f9c26c86d45a9a7a7af3f2d06e.stex" ]
+source_file="res://models/level/common/thorns/previews/thorns.png"
+dest_files=[ "res://.import/thorns.png-5c988ab5b38a0a15cfd2476dba921f04.stex" ]
 
 [params]
 

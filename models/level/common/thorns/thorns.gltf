@@ -1,11 +1,8 @@
 {
     "asset" : {
-        "version" : "2.0",
-        "generator" : "Khronos glTF Blender I/O v1.2.20"
+        "generator" : "Khronos glTF Blender I/O v1.2.20",
+        "version" : "2.0"
     },
-    "extensionsUsed" : [
-        "KHR_materials_unlit"
-    ],
     "scene" : 0,
     "scenes" : [
         {
@@ -17,15 +14,15 @@
     ],
     "nodes" : [
         {
-            "mesh" : 0,
-            "name" : "ThornsCollider -colonly"
+            "name" : "ThornsCollider -colonly",
+            "mesh" : 0
         },
         {
+            "name" : "ThornsMesh",
             "mesh" : 1,
             "children" : [
                 0
-            ],
-            "name" : "ThornsMesh"
+            ]
         }
     ],
     "materials" : [
@@ -36,9 +33,6 @@
                     "texCoord" : 0
                 }
             },
-            "extensions" : {
-                "KHR_materials_unlit" : {}
-            },
             "name" : "thorns"
         }
     ],
@@ -47,8 +41,8 @@
             "primitives" : [
                 {
                     "attributes" : {
-                        "NORMAL" : 0,
-                        "POSITION" : 1
+                        "POSITION" : 0,
+                        "NORMAL" : 1
                     },
                     "indices" : 2
                 }
@@ -59,9 +53,9 @@
             "primitives" : [
                 {
                     "attributes" : {
-                        "NORMAL" : 3,
+                        "TEXCOORD_0" : 3,
                         "POSITION" : 4,
-                        "TEXCOORD_0" : 5
+                        "NORMAL" : 5
                     },
                     "material" : 0,
                     "indices" : 6
@@ -72,129 +66,129 @@
     ],
     "textures" : [
         {
-            "sampler" : 0,
-            "source" : 0
+            "source" : 0,
+            "sampler" : 0
         }
     ],
     "images" : [
         {
+            "name" : "thorns.png",
             "mimeType" : "image/png",
-            "uri" : "thorns.png",
-            "name" : "thorns.png"
+            "uri" : "thorns.png"
         }
     ],
     "accessors" : [
         {
-            "count" : 48,
-            "type" : "VEC3",
-            "bufferView" : 0,
-            "componentType" : 5126
-        },
-        {
-            "count" : 48,
-            "type" : "VEC3",
+            "min" : [
+                -0.8999999761581421,
+                0,
+                -0.8999999761581421
+            ],
             "max" : [
                 0.8999999761581421,
                 0.6640121340751648,
                 0.8999999761581421
             ],
             "componentType" : 5126,
-            "bufferView" : 1,
-            "min" : [
-                -0.8999999761581421,
-                0,
-                -0.8999999761581421
-            ]
+            "count" : 48,
+            "type" : "VEC3",
+            "bufferView" : 0
         },
         {
-            "count" : 72,
+            "componentType" : 5126,
+            "type" : "VEC3",
+            "bufferView" : 1,
+            "count" : 48
+        },
+        {
+            "componentType" : 5123,
             "type" : "SCALAR",
             "bufferView" : 2,
-            "componentType" : 5123
+            "count" : 72
         },
         {
-            "count" : 1370,
-            "type" : "VEC3",
+            "componentType" : 5126,
+            "type" : "VEC2",
             "bufferView" : 3,
-            "componentType" : 5126
+            "count" : 730
         },
         {
-            "count" : 1370,
-            "type" : "VEC3",
+            "min" : [
+                -1.026313304901123,
+                -0.016970857977867126,
+                -1.0276768207550049
+            ],
             "max" : [
                 1.011612892150879,
                 0.7741423845291138,
                 1.048155426979065
             ],
             "componentType" : 5126,
-            "bufferView" : 4,
-            "min" : [
-                -1.026313304901123,
-                -0.016970857977867126,
-                -1.0276768207550049
-            ]
+            "count" : 730,
+            "type" : "VEC3",
+            "bufferView" : 4
         },
         {
-            "count" : 1370,
-            "type" : "VEC2",
+            "componentType" : 5126,
+            "type" : "VEC3",
             "bufferView" : 5,
-            "componentType" : 5126
+            "count" : 730
         },
         {
-            "count" : 1800,
+            "componentType" : 5123,
             "type" : "SCALAR",
             "bufferView" : 6,
-            "componentType" : 5123
+            "count" : 1800
         }
     ],
     "bufferViews" : [
         {
-            "byteLength" : 576,
             "buffer" : 0,
+            "byteLength" : 576,
             "byteOffset" : 0
         },
         {
-            "byteLength" : 576,
             "buffer" : 0,
+            "byteLength" : 576,
             "byteOffset" : 576
         },
         {
-            "byteLength" : 144,
             "buffer" : 0,
+            "byteLength" : 144,
             "byteOffset" : 1152
         },
         {
-            "byteLength" : 16440,
             "buffer" : 0,
+            "byteLength" : 5840,
             "byteOffset" : 1296
         },
         {
-            "byteLength" : 16440,
             "buffer" : 0,
-            "byteOffset" : 17736
+            "byteLength" : 8760,
+            "byteOffset" : 7136
         },
         {
-            "byteLength" : 10960,
             "buffer" : 0,
-            "byteOffset" : 34176
+            "byteLength" : 8760,
+            "byteOffset" : 15896
         },
         {
+            "buffer" : 0,
             "byteLength" : 3600,
-            "buffer" : 0,
-            "byteOffset" : 45136
+            "byteOffset" : 24656
         }
     ],
     "samplers" : [
         {
             "wrapS" : 10497,
-            "wrapT" : 10497,
             "minFilter" : 9986,
+            "wrapT" : 10497,
             "magFilter" : 9729
         }
     ],
     "buffers" : [
         {
-            "byteLength" : 48736,
+            "byteLength" : 28256,
             "uri" : "thorns.bin"
         }
     ]
