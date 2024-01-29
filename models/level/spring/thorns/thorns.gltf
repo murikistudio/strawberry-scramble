@@ -1,0 +1,201 @@
+{
+    "asset" : {
+        "generator" : "Khronos glTF Blender I/O v1.2.20",
+        "version" : "2.0"
+    },
+    "extensionsUsed" : [
+        "KHR_materials_unlit"
+    ],
+    "scene" : 0,
+    "scenes" : [
+        {
+            "name" : "Scene",
+            "nodes" : [
+                1
+            ]
+        }
+    ],
+    "nodes" : [
+        {
+            "name" : "ThornsCollider -colonly",
+            "mesh" : 0
+        },
+        {
+            "mesh" : 1,
+            "name" : "ThornsMesh",
+            "children" : [
+                0
+            ]
+        }
+    ],
+    "materials" : [
+        {
+            "name" : "thorns",
+            "pbrMetallicRoughness" : {
+                "baseColorTexture" : {
+                    "index" : 0,
+                    "texCoord" : 0
+                }
+            },
+            "extensions" : {
+                "KHR_materials_unlit" : {}
+            }
+        }
+    ],
+    "meshes" : [
+        {
+            "name" : "ThornsCollider.001",
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "POSITION" : 0,
+                        "NORMAL" : 1
+                    },
+                    "indices" : 2
+                }
+            ]
+        },
+        {
+            "name" : "ThornsMesh.001",
+            "primitives" : [
+                {
+                    "material" : 0,
+                    "attributes" : {
+                        "POSITION" : 3,
+                        "TEXCOORD_0" : 4,
+                        "NORMAL" : 5
+                    },
+                    "indices" : 6
+                }
+            ]
+        }
+    ],
+    "textures" : [
+        {
+            "sampler" : 0,
+            "source" : 0
+        }
+    ],
+    "images" : [
+        {
+            "name" : "thorns.png",
+            "uri" : "thorns.png",
+            "mimeType" : "image/png"
+        }
+    ],
+    "accessors" : [
+        {
+            "type" : "VEC3",
+            "bufferView" : 0,
+            "min" : [
+                -0.8483636975288391,
+                0,
+                -0.8483636975288391
+            ],
+            "count" : 48,
+            "componentType" : 5126,
+            "max" : [
+                0.8483636975288391,
+                0.5,
+                0.8483636975288391
+            ]
+        },
+        {
+            "type" : "VEC3",
+            "componentType" : 5126,
+            "bufferView" : 1,
+            "count" : 48
+        },
+        {
+            "type" : "SCALAR",
+            "componentType" : 5123,
+            "bufferView" : 2,
+            "count" : 72
+        },
+        {
+            "type" : "VEC3",
+            "bufferView" : 3,
+            "min" : [
+                -1.092551589012146,
+                -0.08298619091510773,
+                -1.0150643587112427
+            ],
+            "count" : 1902,
+            "componentType" : 5126,
+            "max" : [
+                0.9788177013397217,
+                0.7094138264656067,
+                1.1221320629119873
+            ]
+        },
+        {
+            "type" : "VEC2",
+            "componentType" : 5126,
+            "bufferView" : 4,
+            "count" : 1902
+        },
+        {
+            "type" : "VEC3",
+            "componentType" : 5126,
+            "bufferView" : 5,
+            "count" : 1902
+        },
+        {
+            "type" : "SCALAR",
+            "componentType" : 5123,
+            "bufferView" : 6,
+            "count" : 2322
+        }
+    ],
+    "bufferViews" : [
+        {
+            "byteLength" : 576,
+            "byteOffset" : 0,
+            "buffer" : 0
+        },
+        {
+            "byteLength" : 576,
+            "byteOffset" : 576,
+            "buffer" : 0
+        },
+        {
+            "byteLength" : 144,
+            "byteOffset" : 1152,
+            "buffer" : 0
+        },
+        {
+            "byteLength" : 22824,
+            "byteOffset" : 1296,
+            "buffer" : 0
+        },
+        {
+            "byteLength" : 15216,
+            "byteOffset" : 24120,
+            "buffer" : 0
+        },
+        {
+            "byteLength" : 22824,
+            "byteOffset" : 39336,
+            "buffer" : 0
+        },
+        {
+            "byteLength" : 4644,
+            "byteOffset" : 62160,
+            "buffer" : 0
+        }
+    ],
+    "samplers" : [
+        {
+            "minFilter" : 9986,
+            "wrapS" : 10497,
+            "wrapT" : 10497,
+            "magFilter" : 9729
+        }
+    ],
+    "buffers" : [
+        {
+            "byteLength" : 66804,
+            "uri" : "thorns.bin"
+        }
+    ]
+}
