@@ -24,6 +24,9 @@ const SFX_JUMP_3 := SFX_BASE + "jump_3.wav"
 const SFX_SWING_1 := SFX_BASE + "swing_1.wav"
 const SFX_SWING_2 := SFX_BASE + "swing_2.wav"
 const SFX_SWING_3 := SFX_BASE + "swing_3.wav"
+const SFX_SLIDE_1 := SFX_BASE + "slide_1.wav"
+const SFX_SLIDE_2 := SFX_BASE + "slide_2.wav"
+const SFX_SLIDE_3 := SFX_BASE + "slide_3.wav"
 
 # Music
 const BGM_BASE := "res://sounds/bgm/"

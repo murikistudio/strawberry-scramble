@@ -6,6 +6,7 @@ extends PlayerStateMove
 export(NodePath) var state_coyote: NodePath
 export(NodePath) var state_idle: NodePath
 export(NodePath) var state_jump: NodePath
+export(NodePath) var state_slide: NodePath
 export var step_sound_interval := 0.25
 
 var _step_time := 0.0
@@ -36,5 +37,8 @@ func physics_process(delta: float) -> BaseState:
 
 	if Input.is_action_just_pressed("jump"):
 		return get_state(state_jump)
+
+	if Input.is_action_just_pressed("slide"):
+		return get_state(state_slide)
 
 	return null
