@@ -129,7 +129,7 @@ light_cull_mask = 4294967293
 shadow_enabled = true
 spot_range = 8.0
 spot_attenuation = 0.5
-spot_angle = 5.0
+spot_angle = 7.5
 spot_angle_attenuation = 2.0
 
 [node name="MeshDirection" type="MeshInstance" parent="Visual"]
