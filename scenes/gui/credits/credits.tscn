@@ -132,7 +132,7 @@ theme = ExtResource( 5 )
 
 [node name="VBoxContainer5" type="VBoxContainer" parent="HBoxContainer/VBoxContainer/VBoxContainerCredits"]
 margin_right = 763.0
-margin_bottom = 133.0
+margin_bottom = 179.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
@@ -153,34 +153,10 @@ size_flags_vertical = 1
 text = "Diego Almeida"
 align = 1
 
-[node name="VBoxContainer2" type="VBoxContainer" parent="HBoxContainer/VBoxContainer/VBoxContainerCredits"]
-margin_top = 137.0
-margin_right = 763.0
-margin_bottom = 270.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-
-[node name="Label5" type="Label" parent="HBoxContainer/VBoxContainer/VBoxContainerCredits/VBoxContainer2"]
-margin_right = 763.0
-margin_bottom = 32.0
-size_flags_horizontal = 3
-size_flags_vertical = 1
-text = "Game Design:"
-align = 1
-
-[node name="Label4" type="Label" parent="HBoxContainer/VBoxContainer/VBoxContainerCredits/VBoxContainer2"]
-margin_top = 36.0
-margin_right = 763.0
-margin_bottom = 68.0
-size_flags_horizontal = 3
-size_flags_vertical = 1
-text = "Erik Silva Ferreira"
-align = 1
-
 [node name="VBoxContainer6" type="VBoxContainer" parent="HBoxContainer/VBoxContainer/VBoxContainerCredits"]
-margin_top = 274.0
+margin_top = 183.0
 margin_right = 763.0
-margin_bottom = 407.0
+margin_bottom = 362.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
@@ -227,7 +203,7 @@ text = "Luciano Abreu"
 align = 1
 
 [node name="VBoxContainer4" type="VBoxContainer" parent="HBoxContainer/VBoxContainer/VBoxContainerCredits"]
-margin_top = 411.0
+margin_top = 366.0
 margin_right = 763.0
 margin_bottom = 545.0
 size_flags_horizontal = 3
