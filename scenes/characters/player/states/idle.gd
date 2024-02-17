@@ -12,6 +12,7 @@ export(NodePath) var state_jump: NodePath
 func enter() -> void:
 	player.emit_signal("animation_changed", "idle_loop", 1.0)
 	player.emit_signal("sfx_played", "step")
+	player.emit_signal("smoke_spawned")
 
 
 func physics_process(delta: float) -> BaseState:

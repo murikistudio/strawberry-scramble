@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=2]
+[gd_scene load_steps=32 format=2]
 
 [ext_resource path="res://scenes/characters/player/player.gd" type="Script" id=1]
 [ext_resource path="res://classes/base/state_manager.gd" type="Script" id=2]
@@ -19,6 +19,7 @@
 [ext_resource path="res://addons/utils/config_enabler.gd" type="Script" id=17]
 [ext_resource path="res://scenes/effects/balloon_pop/balloon_pop.tscn" type="PackedScene" id=18]
 [ext_resource path="res://scenes/characters/player/states/slide.gd" type="Script" id=19]
+[ext_resource path="res://scenes/effects/smoke/smoke.tscn" type="PackedScene" id=20]
 [ext_resource path="res://scenes/characters/player/components/camera.gd" type="Script" id=24]
 [ext_resource path="res://scenes/characters/player/components/animation.gd" type="Script" id=25]
 [ext_resource path="res://scenes/characters/player/components/sfx.gd" type="Script" id=26]
@@ -169,6 +170,7 @@ script = ExtResource( 26 )
 
 [node name="Visual" type="Node" parent="ComponentManager"]
 script = ExtResource( 30 )
+scene_smoke = ExtResource( 20 )
 
 [node name="StateManager" type="Node" parent="."]
 script = ExtResource( 2 )

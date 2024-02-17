@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://models/common/smoke/smoke.dae" type="PackedScene" id=1]
+[ext_resource path="res://scenes/effects/smoke/smoke.gd" type="Script" id=2]
+
+[node name="Smoke" type="Spatial"]
+script = ExtResource( 2 )
+
+[node name="Visual" parent="." instance=ExtResource( 1 )]
+
+[editable path="Visual"]

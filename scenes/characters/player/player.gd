@@ -7,6 +7,7 @@ class_name Player
 # Signals
 signal animation_changed(name, speed)
 signal sfx_played(name)
+signal smoke_spawned
 
 
 # Variables
