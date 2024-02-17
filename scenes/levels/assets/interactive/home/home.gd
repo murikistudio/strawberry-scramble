@@ -4,7 +4,6 @@ extends Area
 # Variables
 var _activated := false
 var _completed := false
-onready var _animation_player: AnimationPlayer = $AnimationPlayer
 
 
 # Built-in overrides
@@ -20,7 +19,6 @@ func _on_level_can_complete() -> void:
 		return
 
 	_activated = true
-	_animation_player.play("door_open")
 
 
 # Fecha a porta caso não se possa finalizar a fase.
@@ -29,7 +27,6 @@ func _on_level_cannot_complete() -> void:
 		return
 
 	_activated = false
-	_animation_player.play_backwards("door_open")
 
 
 # Finalização de fase caso o jogador colidir com a casa.
