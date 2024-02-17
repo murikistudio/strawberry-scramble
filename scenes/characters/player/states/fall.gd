@@ -28,6 +28,4 @@ func physics_process(delta: float) -> BaseState:
 		player.emit_signal("smoke_spawned")
 		return get_state(state_run)
 
-	player.emit_signal("sfx_played", "step")
-	player.emit_signal("smoke_spawned")
 	return get_state(state_idle)
