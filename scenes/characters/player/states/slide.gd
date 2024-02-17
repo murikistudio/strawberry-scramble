@@ -7,7 +7,7 @@ export(NodePath) var state_idle: NodePath
 export(NodePath) var state_jump: NodePath
 export var slide_time := 0.3
 export var slide_speed := 1.5
-export var smoke_interval := 0.08
+export var smoke_interval := 0.09
 
 var _slide_time := 0.0
 var _smoke_interval := 0.0
@@ -26,7 +26,7 @@ func physics_process(delta: float) -> BaseState:
 	_slide_time += delta
 	_smoke_interval += delta
 
-	if _smoke_interval >= smoke_interval:
+	if _smoke_interval >= smoke_interval and player.is_on_floor():
 		player.emit_signal("smoke_spawned")
 		_smoke_interval = 0.0
 
