@@ -207,7 +207,7 @@ scene={
 "materials/storage": 2
 }
 texture={
-"flags/srgb": 1
+"flags/mipmaps": true
 }
 
 [input]
