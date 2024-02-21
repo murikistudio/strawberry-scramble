@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://scenes/levels/assets/spring/gridmaps.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/characters/player/player.tscn" type="PackedScene" id=2]
@@ -16,6 +16,7 @@
 [ext_resource path="res://scenes/levels/assets/common/platform_wooden/platform_wooden.tscn" type="PackedScene" id=14]
 [ext_resource path="res://scenes/characters/crab/crab.tscn" type="PackedScene" id=15]
 [ext_resource path="res://scenes/levels/assets/interactive/lever/lever.tscn" type="PackedScene" id=16]
+[ext_resource path="res://scenes/levels/assets/spring/skybox.tscn" type="PackedScene" id=17]
 [ext_resource path="res://scenes/characters/snail/snail.tscn" type="PackedScene" id=18]
 [ext_resource path="res://scenes/characters/fish/fish.tscn" type="PackedScene" id=19]
 
@@ -23,6 +24,9 @@
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = ExtResource( 3 )
+
+[node name="Skybox" parent="." instance=ExtResource( 17 )]
+transform = Transform( 60, 0, 0, 0, 60, 0, 0, 0, 60, 0, -1, -9 )
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, -2.2 )
@@ -63,11 +67,6 @@ data = {
 "cells": PoolIntArray( -65510, 0, 655360, 65518, 1, 655366, 65515, 2, 6, -65512, 2, 1441795, 6, 3, 1048578, 65515, 4, 0, 65517, 4, 1441795, 65520, 4, 7, 4, 6, 655361, 19, 7, 655367, 327658, 7, 4, 327663, 7, 2, 65531, 8, 655360, 65535, 8, 1048579, 22, 9, 655361, 327665, 9, 1441793, 327661, 10, 1441795, 327658, 11, 1441792, 327663, 12, 5, 13, 15, 655366, 327673, 15, 1441795, 65546, 17, 1048583, 262142, 17, 1048583, 131076, 19, 1048582, 65504, 65509, 1048576, 65510, 65509, 655367, 21, 65513, 1441794, 65535, 65513, 1048578, 24, 65515, 1441793, 2, 65516, 655363, 19, 65516, 1048579, 65533, 65532, 1441794, -65517, 65532, 1048577, -65512, 65533, 1048583, 65531, 65534, 1048579, 5, 65535, 655361, 65516, 65535, 655367, 65521, 65535, 1441796, -65515, 65535, 655366 )
 }
 
-[node name="Bridges" parent="GridMaps" index="5"]
-data = {
-"cells": PoolIntArray( 2, 65525, 1441792, 3, 65525, 1441793, 5, 65525, 1441792, 7, 65525, 1441793, 8, 65525, 1441792 )
-}
-
 [node name="Fences" parent="GridMaps" index="6"]
 data = {
 "cells": PoolIntArray( 4, 0, 1048576, 65530, 0, 1441794, 4, 1, 1048576, 65530, 1, 1048578, 4, 2, 1048576, 65530, 2, 1048576, 3, 3, 655361, 4, 3, 1, 65530, 3, 1441793, 65531, 3, 1048577, 2, 4, 655361, 3, 4, 1, 65531, 4, 1441793, 65532, 4, 1048577, 0, 5, 655360, 1, 5, 655360, 2, 5, 1, 65532, 5, 1441793, 65533, 5, 655360, 65534, 5, 655360, 65535, 5, 655360, 0, 65533, 655362, 1, 65533, 0, 2, 65533, 1048577, 65532, 65533, 655361, 65533, 65533, 0, 65534, 65533, 0, 65535, 65533, 2, 2, 65534, 1441793, 3, 65534, 1048577, 65530, 65534, 655361, 65531, 65534, 0, 65532, 65534, 1, 3, 65535, 1441793, 4, 65535, 1048577, 65530, 65535, 1441792 )
@@ -85,11 +84,11 @@ data = {
 
 [node name="Water" parent="GridMaps" index="9"]
 data = {
-"cells": PoolIntArray( -65536, 0, 0, -65535, 0, 0, -65534, 0, 0, -65533, 0, 0, -4, 0, 0, -3, 0, 0, -2, 0, 0, -1, 0, 0, -65536, 1, 0, -65535, 1, 0, -65534, 1, 0, -65533, 1, 0, -4, 1, 0, -3, 1, 0, -2, 1, 0, -1, 1, 0, -65536, 2, 0, -65535, 2, 0, -65534, 2, 0, -65533, 2, 0, -4, 2, 0, -3, 2, 0, -2, 2, 0, -1, 2, 0, -65536, 65534, 0, -65535, 65534, 0, -65534, 65534, 0, -65533, 65534, 0, -4, 65534, 0, -3, 65534, 0, -2, 65534, 0, -1, 65534, 0, -65536, 65535, 0, -65535, 65535, 0, -65534, 65535, 0, -65533, 65535, 0, -4, 65535, 0, -3, 65535, 0, -2, 65535, 0, -1, 65535, 0 )
+"cells": PoolIntArray( -65536, 0, 0, -65535, 0, 0, -65534, 0, 0, -65533, 0, 0, -4, 0, 0, -3, 0, 0, -2, 0, 0, -1, 0, 0, -65536, 1, 0, -65535, 1, 0, -65534, 1, 0, -3, 1, 0, -2, 1, 0, -1, 1, 0, -65536, 2, 0, -65535, 2, 0, -65534, 2, 0, -3, 2, 0, -2, 2, 0, -1, 2, 0, -65536, 65532, 0, -65535, 65532, 0, -2, 65532, 0, -1, 65532, 0, -65536, 65533, 0, -65535, 65533, 0, -65534, 65533, 0, -3, 65533, 0, -2, 65533, 0, -1, 65533, 0, -131072, 65534, 0, -65536, 65534, 0, -65535, 65534, 0, -65534, 65534, 0, -65533, 65534, 0, -4, 65534, 0, -3, 65534, 0, -2, 65534, 0, -1, 65534, 0, -131072, 65535, 0, -65536, 65535, 0, -65535, 65535, 0, -65534, 65535, 0, -65533, 65535, 0, -4, 65535, 0, -3, 65535, 0, -2, 65535, 0, -1, 65535, 0 )
 }
 __meta__ = {
 "_editor_clip_": 0,
-"_editor_floor_": Vector3( 0, -1, 0 )
+"_editor_floor_": Vector3( 0, -2, 0 )
 }
 
 [node name="Ripples" parent="GridMaps" index="10"]
@@ -113,7 +112,10 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 1, -21 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 1, -21 )
 
 [node name="Strawberry9" parent="Strawberries" instance=ExtResource( 9 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 1, -21 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 1, -21 )
+
+[node name="Strawberry33" parent="Strawberries" instance=ExtResource( 9 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 1, -21 )
 
 [node name="Strawberry10" parent="Strawberries" instance=ExtResource( 9 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 1, -21 )
@@ -207,6 +209,16 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -23, 2.3, -26.0045 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -18, 1, -3 )
 duration = 2.0
 target_position = Vector3( 0, 0, -2 )
+
+[node name="GrassPlatform3" parent="Platforms" instance=ExtResource( 12 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 1, -21 )
+duration = 3.0
+target_position = Vector3( -5, 0, 0 )
+
+[node name="GrassPlatform4" parent="Platforms" instance=ExtResource( 12 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 1, -21 )
+duration = 3.0
+target_position = Vector3( 5, 0, 0 )
 
 [node name="PlatformWooden" parent="Platforms" instance=ExtResource( 14 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, -17 )

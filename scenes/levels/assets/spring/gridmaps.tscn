@@ -1,9 +1,8 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://scenes/levels/assets/common/gridmaps.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/levels/assets/common/meshlibs/lib_fences.tres" type="MeshLibrary" id=2]
 [ext_resource path="res://scenes/levels/assets/common/meshlibs/lib_thorns.tres" type="MeshLibrary" id=3]
-[ext_resource path="res://scenes/levels/assets/common/meshlibs/lib_bridges.tres" type="MeshLibrary" id=4]
 [ext_resource path="res://scenes/levels/assets/common/meshlibs/lib_misc.tres" type="MeshLibrary" id=5]
 [ext_resource path="res://scenes/levels/assets/spring/meshlibs/lib_trees.tres" type="MeshLibrary" id=6]
 [ext_resource path="res://scenes/levels/assets/spring/meshlibs/lib_ground.tres" type="MeshLibrary" id=7]
@@ -32,9 +31,6 @@ mesh_library = ExtResource( 8 )
 
 [node name="Trees" parent="." index="4"]
 mesh_library = ExtResource( 6 )
-
-[node name="Bridges" parent="." index="5"]
-mesh_library = ExtResource( 4 )
 
 [node name="Fences" parent="." index="6"]
 mesh_library = ExtResource( 2 )
