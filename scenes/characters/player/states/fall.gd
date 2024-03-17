@@ -21,7 +21,7 @@ func physics_process(delta: float) -> BaseState:
 	if player.jumps_left and Input.is_action_just_pressed("jump"):
 		return get_state(state_jump)
 
-	if Input.is_action_just_pressed("action"):
+	if GameState.player_skills.get("slam") and Input.is_action_just_pressed("action"):
 		return get_state(state_slam)
 
 	if not player.is_on_floor():

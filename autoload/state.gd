@@ -19,6 +19,7 @@ var levels_progress := {}
 var player_skills := {
 	"slide": false,
 	"double_jump": false,
+	"slam": false,
 }
 
 # Level
@@ -87,7 +88,7 @@ func load_game() -> void:
 		prints("Could not load game data from", path)
 		return
 
-	player_skills = loaded_data.get("player_skills", player_skills)
+	player_skills.merge(loaded_data.get("player_skills", {}), true)
 	levels_progress = loaded_data.get("levels_progress", levels_progress)
 
 	prints("Loaded game data from", path)
