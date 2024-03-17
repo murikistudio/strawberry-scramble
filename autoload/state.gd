@@ -16,6 +16,10 @@ const TROPHIES := {
 # Variables
 # Global
 var levels_progress := {}
+var player_skills := {
+	"slide": false,
+	"double_jump": false,
+}
 
 # Level
 var completed: bool
@@ -44,6 +48,7 @@ func _ready() -> void:
 # Salva as informações persistentes do, como pontuações.
 func save_game() -> void:
 	var save_data := {
+		"player_skills": player_skills,
 		"levels_progress": levels_progress,
 	}
 
@@ -82,8 +87,8 @@ func load_game() -> void:
 		prints("Could not load game data from", path)
 		return
 
-	for key in loaded_data.keys():
-		set(key, loaded_data[key])
+	player_skills = loaded_data.get("player_skills", player_skills)
+	levels_progress = loaded_data.get("levels_progress", levels_progress)
 
 	prints("Loaded game data from", path)
 
