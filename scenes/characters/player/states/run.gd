@@ -26,7 +26,7 @@ func physics_process(delta: float) -> BaseState:
 	_step_time += delta
 	_slide_delay += delta
 
-	step_sound_interval = 0.3 / player.move_weight.length()
+	step_sound_interval = 0.3 / (max(player.move_weight.length(), 0.01))
 
 	if _step_time >= step_sound_interval:
 		_step_time = 0.0
