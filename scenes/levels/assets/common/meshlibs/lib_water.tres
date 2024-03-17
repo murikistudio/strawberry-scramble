@@ -19,7 +19,7 @@ surfaces/0 = {
 }
 
 [sub_resource type="ConcavePolygonShape" id=2]
-data = PoolVector3Array( -10, -2, 10, -10, -2, -10, 10, -2, -10, -10, -2, 10, 10, -2, -10, 10, -2, 10 )
+data = PoolVector3Array( -10, 0, 10, -10, 0, -10, 10, 0, -10, -10, 0, 10, 10, 0, -10, 10, 0, 10 )
 
 [resource]
 item/0/name = "Water"

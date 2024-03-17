@@ -6,10 +6,10 @@
     "scene" : 0,
     "scenes" : [
         {
-            "name" : "Scene",
             "nodes" : [
                 1
-            ]
+            ],
+            "name" : "Scene"
         }
     ],
     "nodes" : [
@@ -18,11 +18,11 @@
             "name" : "WaterCollider -colonly"
         },
         {
-            "mesh" : 1,
-            "name" : "WaterMesh",
             "children" : [
                 0
-            ]
+            ],
+            "mesh" : 1,
+            "name" : "WaterMesh"
         }
     ],
     "materials" : [
@@ -33,76 +33,50 @@
     ],
     "meshes" : [
         {
-            "name" : "WaterCollider.001",
             "primitives" : [
                 {
+                    "indices" : 3,
                     "attributes" : {
-                        "TEXCOORD_0" : 0,
-                        "POSITION" : 1,
-                        "NORMAL" : 2
-                    },
-                    "indices" : 3
+                        "NORMAL" : 0,
+                        "TEXCOORD_0" : 1,
+                        "POSITION" : 2
+                    }
                 }
-            ]
+            ],
+            "name" : "WaterCollider.001"
         },
         {
-            "name" : "WaterMesh.001",
             "primitives" : [
                 {
-                    "material" : 0,
+                    "indices" : 3,
                     "attributes" : {
-                        "TEXCOORD_0" : 4,
-                        "POSITION" : 5,
-                        "NORMAL" : 6
+                        "NORMAL" : 4,
+                        "TEXCOORD_0" : 5,
+                        "POSITION" : 6
                     },
-                    "indices" : 3
+                    "material" : 0
                 }
-            ]
+            ],
+            "name" : "WaterMesh.001"
         }
     ],
     "accessors" : [
         {
+            "type" : "VEC3",
             "componentType" : 5126,
             "count" : 4,
-            "type" : "VEC2",
             "bufferView" : 0
         },
         {
-            "count" : 4,
-            "max" : [
-                10,
-                -2,
-                10
-            ],
-            "min" : [
-                -10,
-                -2,
-                -10
-            ],
+            "type" : "VEC2",
             "componentType" : 5126,
-            "type" : "VEC3",
+            "count" : 4,
             "bufferView" : 1
         },
         {
             "componentType" : 5126,
-            "count" : 4,
+            "bufferView" : 2,
             "type" : "VEC3",
-            "bufferView" : 2
-        },
-        {
-            "componentType" : 5123,
-            "count" : 6,
-            "type" : "SCALAR",
-            "bufferView" : 3
-        },
-        {
-            "componentType" : 5126,
-            "count" : 4,
-            "type" : "VEC2",
-            "bufferView" : 4
-        },
-        {
-            "count" : 4,
             "max" : [
                 10,
                 0,
@@ -113,58 +87,84 @@
                 0,
                 -10
             ],
-            "componentType" : 5126,
+            "count" : 4
+        },
+        {
+            "type" : "SCALAR",
+            "componentType" : 5123,
+            "count" : 6,
+            "bufferView" : 3
+        },
+        {
             "type" : "VEC3",
+            "componentType" : 5126,
+            "count" : 4,
+            "bufferView" : 4
+        },
+        {
+            "type" : "VEC2",
+            "componentType" : 5126,
+            "count" : 4,
             "bufferView" : 5
         },
         {
             "componentType" : 5126,
-            "count" : 4,
+            "bufferView" : 6,
             "type" : "VEC3",
-            "bufferView" : 6
+            "max" : [
+                10,
+                0,
+                10
+            ],
+            "min" : [
+                -10,
+                0,
+                -10
+            ],
+            "count" : 4
         }
     ],
     "bufferViews" : [
         {
-            "byteLength" : 32,
+            "byteOffset" : 0,
             "buffer" : 0,
-            "byteOffset" : 0
+            "byteLength" : 48
         },
         {
-            "byteLength" : 48,
+            "byteOffset" : 48,
             "buffer" : 0,
-            "byteOffset" : 32
+            "byteLength" : 32
         },
         {
-            "byteLength" : 48,
+            "byteOffset" : 80,
             "buffer" : 0,
-            "byteOffset" : 80
+            "byteLength" : 48
         },
         {
-            "byteLength" : 12,
+            "byteOffset" : 128,
             "buffer" : 0,
-            "byteOffset" : 128
+            "byteLength" : 12
         },
         {
-            "byteLength" : 32,
+            "byteOffset" : 140,
             "buffer" : 0,
-            "byteOffset" : 140
+            "byteLength" : 48
         },
         {
-            "byteLength" : 48,
+            "byteOffset" : 188,
             "buffer" : 0,
-            "byteOffset" : 172
+            "byteLength" : 32
         },
         {
-            "byteLength" : 48,
+            "byteOffset" : 220,
             "buffer" : 0,
-            "byteOffset" : 220
+            "byteLength" : 48
         }
     ],
     "buffers" : [
         {
-            "byteLength" : 268,
-            "uri" : "water.bin"
+            "uri" : "water.bin",
+            "byteLength" : 268
         }
     ]
 }
