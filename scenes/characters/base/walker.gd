@@ -13,11 +13,14 @@ onready var _anim_player: AnimationPlayer = find_node("AnimationPlayer")
 onready var _initial_position := global_translation
 onready var _target_position := Vector3.ZERO
 onready var _player: Spatial
+var dead := false
+var _tween: SceneTreeTween
 
 
 # Built-in overrides
 func _init() -> void:
 	GameEvents.connect("player_emitted", self, "_on_player_emitted")
+	GameEvents.connect("enemy_killed", self, "_on_enemy_killed")
 
 
 func _ready() -> void:
@@ -68,10 +71,22 @@ func _loop_movement() -> void:
 	for i in rot_loop:
 		tween.tween_callback(self, "rotate_y", [deg2rad(-rot_degrees)]).set_delay(rot_interval)
 
+	_tween = tween
+
 
 # Seguir o jogador em um dos eixos de acordo com a distância limite.
 func _follow_player() -> void:
 	if not _player or not follow_distance:
+		return
+
+	if not _tween:
+		rotate_y(0.5)
+		var scale_factor := 0.025
+		scale -= Vector3(scale_factor, scale_factor, scale_factor)
+
+		if scale.x <= 0.05:
+			queue_free()
+
 		return
 
 	var distance := global_translation.distance_to(_player.global_translation)
@@ -111,3 +126,14 @@ func _follow_player() -> void:
 # Event handlers
 func _on_player_emitted(player: Spatial) -> void:
 	_player = player
+
+
+func _on_enemy_killed(enemy: Area) -> void:
+	if dead or enemy != self:
+		return
+
+	_tween.stop()
+	_tween = null
+	dead = true
+	set_deferred("monitorable", false)
+	GameAudio.play_sfx(DatabaseAudio.SFX_HIT, -10.0)

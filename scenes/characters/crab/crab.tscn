@@ -6,7 +6,7 @@
 [sub_resource type="BoxShape" id=1]
 extents = Vector3( 1.07286, 0.789481, 0.788405 )
 
-[node name="Crab" type="Area" groups=["death"]]
+[node name="Crab" type="Area" groups=["death", "enemy"]]
 monitoring = false
 script = ExtResource( 1 )
 anim_speed = 1.5

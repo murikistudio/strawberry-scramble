@@ -94,6 +94,21 @@ func _process_death(node: Spatial) -> void:
 	player.move_weight = Vector2.ZERO
 
 
+# Processar colisão do jogador com inimigos.
+func _kill_enemy(area: Area, jump := true) -> void:
+	if player.dead or not area.is_in_group("enemy"):
+		return
+
+	if area.get("dead"):
+		return
+
+	if jump:
+		player.reset_jumps_left()
+		player.state_manager.transition_to(player.state_manager.get_node("Jump"))
+
+	GameEvents.emit_signal("enemy_killed", area)
+
+
 # Event handlers
 # Tratar colisão do jogador com inimigos e coletáveis.
 func _on_Area_area_entered(area: Area) -> void:
@@ -101,8 +116,20 @@ func _on_Area_area_entered(area: Area) -> void:
 		return
 
 	if area.is_in_group("death"):
+		if area.is_in_group("enemy"):
+			if area.get("dead"):
+				return
+
+			if player.state_manager.current_state.name == "Slide":
+				_kill_enemy(area, false)
+				return
+
 		_process_death(area)
-		return
+
+
+# Tratar colisão do jogador ao pular em inimigos.
+func _on_AreaJump_area_entered(area: Area) -> void:
+	_kill_enemy(area)
 
 
 # Tratar colisão do jogador com obstáculos do cenário.

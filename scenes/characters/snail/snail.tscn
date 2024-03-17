@@ -39,7 +39,7 @@ tracks/0/keys = {
 "values": [ Vector3( 1, 0.9, 1.25 ), Vector3( 1.2, 1, 1 ), Vector3( 1, 0.9, 1.25 ) ]
 }
 
-[node name="Snail" type="Area" groups=["death"]]
+[node name="Snail" type="Area" groups=["death", "enemy"]]
 monitoring = false
 script = ExtResource( 1 )
 anim_speed = 1.25
