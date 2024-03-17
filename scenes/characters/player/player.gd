@@ -8,6 +8,7 @@ class_name Player
 signal animation_changed(name, speed)
 signal sfx_played(name)
 signal smoke_spawned
+signal died(animation)
 
 
 # Variables
@@ -26,6 +27,7 @@ var respawn_position: Vector3
 onready var state_manager: BaseStateManager = find_node("StateManager")
 onready var state_stop: BaseState = state_manager.get_node("Stop")
 onready var state_idle: BaseState = state_manager.get_node("Idle")
+onready var anim_player: AnimationPlayer = $Visual/Player/AnimationPlayer
 
 
 # Setters and getters
@@ -44,6 +46,7 @@ func _ready() -> void:
 	GameEvents.emit_signal("player_emitted", self)
 	GameEvents.connect("player_enabled", self, "_on_player_enabled")
 	GameEvents.connect("player_skill_obtained", self, "_on_player_skill_obtained")
+	connect("died", self, "_on_died")
 
 
 func _process(delta: float) -> void:
@@ -78,6 +81,13 @@ func _on_player_enabled(enabled: bool) -> void:
 func _on_player_skill_obtained(skill: String) -> void:
 	if skill == "double_jump":
 		reset_jump_times()
+
+
+# Alterar para o estado da morte do jogador.
+func _on_died(animation: String) -> void:
+	var state_death = state_manager.get_node("Death")
+	state_death.animation = animation
+	state_manager.transition_to(state_death)
 
 
 # Helper methods

@@ -17,11 +17,11 @@
 [ext_resource path="res://scenes/gui/hud/hud.tscn" type="PackedScene" id=15]
 [ext_resource path="res://scenes/characters/player/states/stop.gd" type="Script" id=16]
 [ext_resource path="res://addons/utils/config_enabler.gd" type="Script" id=17]
-[ext_resource path="res://scenes/effects/balloon_pop/balloon_pop.tscn" type="PackedScene" id=18]
 [ext_resource path="res://scenes/characters/player/states/slide.gd" type="Script" id=19]
 [ext_resource path="res://scenes/effects/smoke/smoke.tscn" type="PackedScene" id=20]
 [ext_resource path="res://scenes/characters/player/states/slam.gd" type="Script" id=21]
 [ext_resource path="res://scenes/effects/shockwave/shockwave.tscn" type="PackedScene" id=22]
+[ext_resource path="res://scenes/characters/player/states/death.gd" type="Script" id=23]
 [ext_resource path="res://scenes/characters/player/components/camera.gd" type="Script" id=24]
 [ext_resource path="res://scenes/characters/player/components/animation.gd" type="Script" id=25]
 [ext_resource path="res://scenes/characters/player/components/sfx.gd" type="Script" id=26]
@@ -171,8 +171,6 @@ script = ExtResource( 24 )
 
 [node name="Collision" type="Node" parent="ComponentManager"]
 script = ExtResource( 29 )
-scene_water_splash = ExtResource( 8 )
-scene_balloon_pop = ExtResource( 18 )
 
 [node name="Movement" type="Node" parent="ComponentManager"]
 script = ExtResource( 28 )
@@ -234,6 +232,11 @@ state_jump = NodePath("../Jump")
 script = ExtResource( 21 )
 state_idle = NodePath("../Idle")
 scene_shockwave = ExtResource( 22 )
+
+[node name="Death" type="Node" parent="StateManager"]
+script = ExtResource( 23 )
+state_idle = NodePath("../Idle")
+scene_water_splash = ExtResource( 8 )
 
 [connection signal="options_exited" from="Gui/Options" to="Gui" method="_on_Options_options_exited"]
 [connection signal="area_entered" from="AreaJump" to="ComponentManager/Collision" method="_on_AreaJump_area_entered"]
