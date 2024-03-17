@@ -245,5 +245,16 @@ margin_bottom = 75.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
+[node name="ButtonTest" type="Button" parent="."]
+anchor_left = 0.8
+anchor_top = 0.02
+anchor_right = 0.99
+anchor_bottom = 0.1
+text = "Test"
+
+[node name="ButtonHighlighter" type="Node" parent="ButtonTest"]
+script = ExtResource( 6 )
+
 [connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer2/ButtonBack" to="." method="_on_ButtonBack_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer2/VBoxContainer/ButtonWorld" to="." method="_on_ButtonWorld_pressed"]
+[connection signal="pressed" from="ButtonTest" to="." method="_on_ButtonTest_pressed"]

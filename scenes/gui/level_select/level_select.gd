@@ -12,6 +12,7 @@ onready var _current_world := GameState.current_world if GameState.current_world
 onready var _current_level := ""
 onready var _button_back: BaseButton = find_node("ButtonBack")
 onready var _button_world: Button = find_node("ButtonWorld")
+onready var _button_test: Button = find_node("ButtonTest")
 onready var _grid_container_levels: GridContainer = find_node("GridContainerLevels")
 onready var _texture_level_thumbnail: TextureRect = find_node("TextureLevelThumbnail")
 onready var _texture_level_trophy: TextureRect = find_node("TextureLevelTrophy")
@@ -26,6 +27,7 @@ func _ready() -> void:
 	GameAudio.play_bgm(DatabaseAudio.BGM_MENU)
 	_button_back.connect("focus_entered", self, "_unset_current_level")
 	_button_world.connect("focus_entered", self, "_unset_current_level")
+	_button_test.visible = OS.is_debug_build()
 	_update_layout()
 
 	yield(GuiTransitions, "show_completed")
@@ -174,3 +176,7 @@ func _on_level_button_pressed(level_button: Button) -> void:
 	GameState.current_world = level_def["world"]
 	GameState.current_level = level_def["name"]
 	GameTransition.change_scene_to(level_def["path"])
+
+
+func _on_ButtonTest_pressed() -> void:
+	GameTransition.change_scene_to(DatabaseLevels.BASE_PATH + _current_world + "/test.tscn")
