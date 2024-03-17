@@ -42,7 +42,7 @@ func physics_process(delta: float) -> BaseState:
 	if Input.is_action_just_pressed("jump"):
 		return get_state(state_jump)
 
-	if _slide_delay >= slide_delay and Input.is_action_just_pressed("action"):
+	if GameState.player_skills.get("slide") and _slide_delay >= slide_delay and Input.is_action_just_pressed("action"):
 		_slide_delay = 0.0
 		return get_state(state_slide)
 

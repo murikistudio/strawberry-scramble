@@ -20,7 +20,7 @@ func _play_sfx_jump() -> void:
 	GameAudio.play_sfx(_get_random_item(sfx), -4.0)
 
 
-# Toca som aleatório de voz de pulo.
+# Toca som aleatório de deslizar.
 func _play_sfx_slide() -> void:
 	var sfx := [
 		DatabaseAudio.SFX_SLIDE_1,
@@ -30,7 +30,12 @@ func _play_sfx_slide() -> void:
 	GameAudio.play_sfx(_get_random_item(sfx), -4.0, rand_range(0.9, 1.1))
 
 
-# Toca som aleatório de voz de passo.
+# Toca som de acertar o chão.
+func _play_sfx_slam() -> void:
+	GameAudio.play_sfx(DatabaseAudio.SFX_SLAM, -4.0, rand_range(0.9, 1.1))
+
+
+# Toca som aleatório de passo.
 func _play_sfx_step() -> void:
 	if not player.is_on_floor():
 		return

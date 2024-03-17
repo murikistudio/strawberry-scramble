@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=2]
+[gd_scene load_steps=34 format=2]
 
 [ext_resource path="res://scenes/characters/player/player.gd" type="Script" id=1]
 [ext_resource path="res://classes/base/state_manager.gd" type="Script" id=2]
@@ -20,6 +20,8 @@
 [ext_resource path="res://scenes/effects/balloon_pop/balloon_pop.tscn" type="PackedScene" id=18]
 [ext_resource path="res://scenes/characters/player/states/slide.gd" type="Script" id=19]
 [ext_resource path="res://scenes/effects/smoke/smoke.tscn" type="PackedScene" id=20]
+[ext_resource path="res://scenes/characters/player/states/slam.gd" type="Script" id=21]
+[ext_resource path="res://scenes/effects/shockwave/shockwave.tscn" type="PackedScene" id=22]
 [ext_resource path="res://scenes/characters/player/components/camera.gd" type="Script" id=24]
 [ext_resource path="res://scenes/characters/player/components/animation.gd" type="Script" id=25]
 [ext_resource path="res://scenes/characters/player/components/sfx.gd" type="Script" id=26]
@@ -198,22 +200,30 @@ script = ExtResource( 9 )
 state_idle = NodePath("../Idle")
 state_run = NodePath("../Run")
 state_jump = NodePath("../Jump")
+state_slam = NodePath("../Slam")
 state_fall = NodePath("../Fall")
 
 [node name="Jump" type="Node" parent="StateManager"]
 script = ExtResource( 6 )
 state_fall = NodePath("../Fall")
+state_slam = NodePath("../Slam")
 
 [node name="Fall" type="Node" parent="StateManager"]
 script = ExtResource( 7 )
 state_idle = NodePath("../Idle")
 state_run = NodePath("../Run")
 state_jump = NodePath("../Jump")
+state_slam = NodePath("../Slam")
 
 [node name="Slide" type="Node" parent="StateManager"]
 script = ExtResource( 19 )
 state_idle = NodePath("../Idle")
 state_jump = NodePath("../Jump")
+
+[node name="Slam" type="Node" parent="StateManager"]
+script = ExtResource( 21 )
+state_idle = NodePath("../Idle")
+scene_shockwave = ExtResource( 22 )
 
 [connection signal="options_exited" from="Gui/Options" to="Gui" method="_on_Options_options_exited"]
 [connection signal="area_entered" from="Area" to="ComponentManager/Collision" method="_on_Area_area_entered"]

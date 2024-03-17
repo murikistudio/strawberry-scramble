@@ -39,9 +39,11 @@ func _init() -> void:
 
 
 func _ready() -> void:
+	jump_times = _get_jump_times()
 	respawn_position = global_translation
 	GameEvents.emit_signal("player_emitted", self)
 	GameEvents.connect("player_enabled", self, "_on_player_enabled")
+	GameEvents.connect("player_skill_obtained", self, "_on_player_skill_obtained")
 
 
 func _process(delta: float) -> void:
@@ -55,10 +57,22 @@ func _process(delta: float) -> void:
 		get_tree().paused = true
 
 
+# Private methods
+# Retorna quantos pulos o jogador pode dar com base na habilidade adquirida.
+func _get_jump_times() -> int:
+	return 2 if GameState.player_skills.get("double_jump") else jump_times
+
+
 # Event handlers
 # Habilita ou desabilita o controle do jogador.
 func _on_player_enabled(enabled: bool) -> void:
 	state_manager.transition_to(state_idle if enabled else state_stop)
+
+
+# Habilita o pulo duplo no jogador.
+func _on_player_skill_obtained(skill: String) -> void:
+	if skill == "double_jump":
+		jump_times = _get_jump_times()
 
 
 # Helper methods
