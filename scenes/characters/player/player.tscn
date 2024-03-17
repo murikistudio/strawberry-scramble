@@ -93,7 +93,7 @@ shape = SubResource( 10 )
 
 [node name="DirectionalLight" type="DirectionalLight" parent="."]
 transform = Transform( -0.707107, 0.612372, -0.353553, 0, 0.5, 0.866025, 0.707107, 0.612372, -0.353553, 0, 1, 0 )
-light_energy = 0.25
+light_energy = 0.4
 shadow_enabled = true
 shadow_bias = 0.09
 directional_shadow_normal_bias = 0.0
@@ -125,7 +125,7 @@ near = 0.01
 
 [node name="SpotLightShadow" type="SpotLight" parent="Visual"]
 transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0.58296, -2.5482e-08 )
-light_energy = 0.3
+light_energy = 0.6
 light_negative = true
 light_specular = 0.0
 light_cull_mask = 4294967293
