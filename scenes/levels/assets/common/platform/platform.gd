@@ -23,7 +23,7 @@ func _move_platform() -> void:
 	if not target_position.length() or duration <= 0.0:
 		return
 
-	var tween := create_tween().set_loops().set_trans(Tween.TRANS_SINE)
+	var tween := create_tween().set_loops().set_trans(Tween.TRANS_SINE).set_process_mode(Tween.TWEEN_PROCESS_PHYSICS)
 	tween.tween_property(self, "global_translation", _position_target, duration)
 	tween.tween_property(self, "global_translation", _position_initial, duration)
 
