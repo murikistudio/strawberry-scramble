@@ -10,7 +10,7 @@ enum ControllerLook {
 
 
 # Constants
-const CAMERA_FOV_WEIGHT := 0.04
+const SHAKE_MAX := 0.05
 
 
 # Variables
@@ -37,6 +37,7 @@ onready var _shake_obj
 func _ready() -> void:
 	GameEvents.connect("player_request_camera_focus", self, "_on_player_request_camera_focus")
 	GameEvents.connect("level_complete", self, "_on_level_complete")
+	GameEvents.connect("level_shake", self, "_on_level_shake")
 	_camera_axis.set_as_toplevel(true)
 	_camera_smooth.set_as_toplevel(true)
 
@@ -50,8 +51,6 @@ func _unhandled_input(event: InputEvent) -> void:
 
 
 func _physics_process(_delta: float) -> void:
-	_set_objects_from_meta()
-	_process_fov()
 	_process_shake()
 	_process_focus()
 	_process_movement(_delta)
@@ -60,28 +59,21 @@ func _physics_process(_delta: float) -> void:
 
 # Private methods
 # Define os valores de objetos guardados no meta da câmera.
-func _set_objects_from_meta() -> void:
-	_shake_obj = _camera.get_meta("shake", false)
+func _on_level_shake(body: Spatial) -> void:
+	_shake_obj = body
 
 	if _shake_obj and not is_instance_valid(_shake_obj):
 		_shake_obj = null
 
 
-# Processa o campo de visão quando a pedra gigante estiver rolando.
-func _process_fov() -> void:
-	if _shake_obj:
-		_camera.fov = lerp(_camera.fov, _camera_fov_far, CAMERA_FOV_WEIGHT)
-	else:
-		_camera.fov = lerp(_camera.fov, _camera_fov_default, CAMERA_FOV_WEIGHT)
-
-
 # Processa a tremulação da câmera quando a pedra gigante estiver rolando.
 func _process_shake() -> void:
-	if _shake_obj:
+	if _shake_obj and is_instance_valid(_shake_obj):
 		var value := 0.2 / player.global_translation.distance_to(_shake_obj.global_translation)
-		_camera.h_offset = rand_range(-value, value)
-		_camera.v_offset = rand_range(-value, value)
+		_camera.h_offset = clamp(rand_range(-value, value), -SHAKE_MAX, SHAKE_MAX)
+		_camera.v_offset = clamp(rand_range(-value, value), -SHAKE_MAX, SHAKE_MAX)
 	else:
+		_shake_obj = null
 		_camera.h_offset = 0.0
 		_camera.v_offset = 0.0
 

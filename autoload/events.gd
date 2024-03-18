@@ -15,6 +15,7 @@ signal level_time_updated
 signal level_lever_pushed(target)
 signal level_boulder_triggered(spawner, mode)
 signal level_cannon_entered(target)
+signal level_shake(body)
 signal enemy_killed(enemy)
 
 # Player signals

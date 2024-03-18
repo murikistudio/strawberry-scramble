@@ -86,11 +86,11 @@ func _roll_start() -> void:
 	_animation_player.play("roll")
 	_audio_roll.play()
 	_audio_hit.play()
-	get_viewport().get_camera().set_meta("shake", self)
+	GameEvents.emit_signal("level_shake", self)
 
 
 func _roll_stop() -> void:
-	get_viewport().get_camera().set_meta("shake", null)
+	GameEvents.emit_signal("level_shake", null)
 	_animation_player.stop(true)
 	_audio_roll.playing = false
 
