@@ -31,3 +31,9 @@ func _spawn_shockwave() -> void:
 	player.add_child(shockwave)
 	shockwave.set_as_toplevel(true)
 	shockwave.global_translation = player.global_translation + Vector3(0.0, -0.6, 0.0)
+
+	for i in 10:
+		GameEvents.emit_signal("level_shake", shockwave)
+		yield(get_tree(), "idle_frame")
+
+	GameEvents.emit_signal("level_shake", null)
