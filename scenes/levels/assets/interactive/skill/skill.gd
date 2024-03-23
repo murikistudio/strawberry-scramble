@@ -6,7 +6,7 @@ const ROTATE_SPEED := 5.0
 
 
 # Variables
-export var skill := ""
+export(String, "double_jump", "slam", "slide") var skill := ""
 onready var _sprite: Sprite3D = $Sprite3D
 
 
