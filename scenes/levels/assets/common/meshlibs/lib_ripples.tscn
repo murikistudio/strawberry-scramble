@@ -24,3 +24,4 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -8 )
 [editable path="RipplesSide"]
 [editable path="RipplesCorner1"]
 [editable path="RipplesCorner2"]
+[editable path="RipplesCenter"]
