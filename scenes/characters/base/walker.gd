@@ -9,6 +9,7 @@ export var target_x: float
 export var target_z: float
 export(float, 0.0, 10.0, 0.1) var follow_distance := 5.0
 export(float, 0.0, 10.0, 0.1) var follow_limit := 1.0
+export(float, 0.0, 10.0, 0.1) var wait_at_start := 0.0
 onready var _anim_player: AnimationPlayer = find_node("AnimationPlayer")
 onready var _initial_position := global_translation
 onready var _target_position := Vector3.ZERO
@@ -24,6 +25,9 @@ func _init() -> void:
 
 
 func _ready() -> void:
+	if wait_at_start > 0.0:
+		yield(get_tree().create_timer(wait_at_start, false), "timeout")
+
 	_loop_movement()
 
 

@@ -4,14 +4,19 @@ class_name EnemyJumper
 
 # Variables
 export(float, 0.1, 10.0, 0.1) var anim_speed := 1.0
+export(float, 0.0, 10.0, 0.1) var wait_at_start := 0.0
 onready var _anim_player: AnimationPlayer = find_node("AnimationPlayer")
 var dead := false
 
 
 # Built-in overrides
 func _ready() -> void:
-	_anim_player.play("jump_loop", -1, anim_speed)
 	GameEvents.connect("enemy_killed", self, "_on_enemy_killed")
+
+	if wait_at_start > 0.0:
+		yield(get_tree().create_timer(wait_at_start, false), "timeout")
+
+	_anim_player.play("jump_loop", -1, anim_speed)
 
 
 func _process(_delta: float) -> void:
