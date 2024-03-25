@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://resources/environments/level_env.tres" type="Environment" id=1]
 [ext_resource path="res://scenes/characters/player/player.tscn" type="PackedScene" id=2]
@@ -14,6 +14,7 @@
 [ext_resource path="res://scenes/characters/snail/snail.tscn" type="PackedScene" id=12]
 [ext_resource path="res://scenes/levels/assets/interactive/checkpoint/checkpoint.tscn" type="PackedScene" id=13]
 [ext_resource path="res://scenes/characters/fish/fish.tscn" type="PackedScene" id=14]
+[ext_resource path="res://scenes/characters/bee/bee.tscn" type="PackedScene" id=15]
 
 [node name="Level01" type="Spatial"]
 
@@ -168,6 +169,9 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 49, -2, -28.5 )
 [node name="Fish2" parent="Enemies" instance=ExtResource( 14 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 49, -2, -25.5 )
 wait_at_start = 2.0
+
+[node name="Bee" parent="Enemies" instance=ExtResource( 15 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 5, 1, -22 )
 
 [node name="Strawberries" type="Spatial" parent="."]
 
