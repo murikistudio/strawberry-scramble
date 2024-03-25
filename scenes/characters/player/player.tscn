@@ -122,6 +122,7 @@ convert_to = 1
 [node name="RayCastCamera" type="RayCast" parent="CameraAxis/CameraSmooth"]
 enabled = true
 cast_to = Vector3( 0, 0, -3 )
+debug_shape_thickness = 1
 
 [node name="CameraOrigin" type="Position3D" parent="CameraAxis/CameraSmooth"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.19209e-07, -3 )
