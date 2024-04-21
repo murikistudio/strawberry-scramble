@@ -1,21 +1,21 @@
 {
     "asset" : {
-        "generator" : "Khronos glTF Blender I/O v1.2.20",
-        "version" : "2.0"
+        "version" : "2.0",
+        "generator" : "Khronos glTF Blender I/O v1.2.20"
     },
     "scene" : 0,
     "scenes" : [
         {
-            "name" : "Scene",
             "nodes" : [
                 0
-            ]
+            ],
+            "name" : "Scene"
         }
     ],
     "nodes" : [
         {
-            "name" : "Grass2Mesh",
-            "mesh" : 0
+            "mesh" : 0,
+            "name" : "Grass2Mesh"
         }
     ],
     "materials" : [
@@ -23,26 +23,26 @@
             "name" : "grass",
             "pbrMetallicRoughness" : {
                 "baseColorTexture" : {
-                    "index" : 0,
-                    "texCoord" : 0
+                    "texCoord" : 0,
+                    "index" : 0
                 }
             }
         }
     ],
     "meshes" : [
         {
-            "name" : "Grass2Mesh.001",
             "primitives" : [
                 {
-                    "material" : 0,
                     "attributes" : {
-                        "NORMAL" : 0,
-                        "POSITION" : 1,
-                        "TEXCOORD_0" : 2
+                        "TEXCOORD_0" : 0,
+                        "NORMAL" : 1,
+                        "POSITION" : 2
                     },
+                    "material" : 0,
                     "indices" : 3
                 }
-            ]
+            ],
+            "name" : "Grass2Mesh.001"
         }
     ],
     "textures" : [
@@ -53,67 +53,67 @@
     ],
     "images" : [
         {
+            "uri" : "grass.png",
             "name" : "grass.png",
-            "mimeType" : "image/png",
-            "uri" : "grass.png"
+            "mimeType" : "image/png"
         }
     ],
     "accessors" : [
         {
-            "count" : 218,
-            "type" : "VEC3",
-            "componentType" : 5126,
-            "bufferView" : 0
-        },
-        {
-            "count" : 218,
-            "max" : [
-                0.8325732946395874,
-                0.38065388798713684,
-                0.7685720324516296
-            ],
-            "componentType" : 5126,
-            "min" : [
-                -0.8655706644058228,
-                -0.04430738836526871,
-                -0.8008701801300049
-            ],
-            "type" : "VEC3",
-            "bufferView" : 1
-        },
-        {
-            "count" : 218,
+            "bufferView" : 0,
+            "count" : 238,
             "type" : "VEC2",
-            "componentType" : 5126,
-            "bufferView" : 2
+            "componentType" : 5126
         },
         {
-            "count" : 468,
+            "bufferView" : 1,
+            "count" : 238,
+            "type" : "VEC3",
+            "componentType" : 5126
+        },
+        {
+            "bufferView" : 2,
+            "count" : 238,
+            "type" : "VEC3",
+            "componentType" : 5126,
+            "max" : [
+                0.8000273704528809,
+                0.38065388798713684,
+                0.7998353242874146
+            ],
+            "min" : [
+                -0.8326653242111206,
+                -0.04430738091468811,
+                -0.7148385047912598
+            ]
+        },
+        {
+            "bufferView" : 3,
+            "count" : 510,
             "type" : "SCALAR",
-            "componentType" : 5123,
-            "bufferView" : 3
+            "componentType" : 5123
         }
     ],
     "bufferViews" : [
         {
-            "byteLength" : 2616,
             "buffer" : 0,
-            "byteOffset" : 0
+            "byteOffset" : 0,
+            "byteLength" : 1904
         },
         {
-            "byteLength" : 2616,
             "buffer" : 0,
-            "byteOffset" : 2616
+            "byteOffset" : 1904,
+            "byteLength" : 2856
         },
         {
-            "byteLength" : 1744,
             "buffer" : 0,
-            "byteOffset" : 5232
+            "byteOffset" : 4760,
+            "byteLength" : 2856
         },
         {
-            "byteLength" : 936,
             "buffer" : 0,
-            "byteOffset" : 6976
+            "byteOffset" : 7616,
+            "byteLength" : 1020
         }
     ],
     "samplers" : [
@@ -126,8 +126,8 @@
     ],
     "buffers" : [
         {
-            "byteLength" : 7912,
-            "uri" : "grass_2.bin"
+            "uri" : "grass_2.bin",
+            "byteLength" : 8636
         }
     ]
 }
