@@ -330,6 +330,14 @@ look_right={
 
 pointing/emulate_touch_from_mouse=true
 
+[layer_names]
+
+3d_physics/layer_1="Scenery"
+3d_physics/layer_2="Player Kinematic"
+3d_physics/layer_3="Player Area"
+3d_physics/layer_4="Enemy Kinematic"
+3d_physics/layer_5="Enemy Area"
+
 [locale]
 
 translations=PoolStringArray( "res://lang/translations.en.translation", "res://lang/translations.pt_BR.translation" )
@@ -342,6 +350,7 @@ common/enable_pause_aware_picking=true
 
 [rendering]
 
+quality/driver/driver_name=""
 quality/driver/fallback_to_gles2=true
 vram_compression/import_etc=true
 environment/default_environment="res://resources/environments/default_env.tres"
