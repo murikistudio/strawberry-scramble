@@ -7,7 +7,7 @@
    viewBox="0 0 101.59999 101.6"
    version="1.1"
    id="svg195"
-   inkscape:version="1.3.2 (091e20ef0f, 2023-11-25)"
+   inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
    sodipodi:docname="ripples_2.svg"
    inkscape:export-filename="ripples_2.png"
    inkscape:export-xdpi="64"
@@ -29,11 +29,11 @@
      showgrid="true"
      inkscape:zoom="1.2402344"
      inkscape:cx="120.94488"
-     inkscape:cy="223.74803"
+     inkscape:cy="224.55433"
      inkscape:window-width="1920"
-     inkscape:window-height="1015"
-     inkscape:window-x="0"
-     inkscape:window-y="0"
+     inkscape:window-height="1027"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
      inkscape:window-maximized="1"
      inkscape:current-layer="layer1">
     <inkscape:grid
@@ -283,7 +283,7 @@
     </filter>
   </defs>
   <rect
-     style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:3.65803;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+     style="display:none;fill:#000000;fill-opacity:1;stroke:none;stroke-width:3.65803;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
      id="rect2"
      width="101.6"
      height="101.6"
