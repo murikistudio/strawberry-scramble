@@ -1,18 +1,16 @@
 <p align="center">
-  <img max-height="300" alt="Ted The Frog" src="textures/gui/logo.png">
+  <img max-height="300" alt="Strawberry Scramble" src="textures/gui/logo.png">
 </p>
 
-Repositório de desenvolvimento do jogo Strawberry Scramble.
+Strawberry Scramble game development repository.
 
-## Requisitos de Desenvolvimento
+## Development Requirements
 - [Godot 3.5.x](https://godotengine.org/download)
 - [Blender 2.79](https://download.blender.org/release/Blender2.79/)
-- [Addon para exportar glTF no Blender 2.79](https://github.com/bgempire/io_scene_gltf2/releases/tag/v0.0.1)
+- [Addon to export glTF on Blender 2.79](https://github.com/bgempire/io_scene_gltf2/releases/tag/v0.0.1)
 - [Git](https://git-scm.com/downloads)
-- [GitHub Desktop](https://desktop.github.com/) (Opcional)
 
-## Créditos
-- Diego Almeida (arte)
-- Erik Silva Ferreira (game design)
-- Joel Gomes da Silva (programação, áudio)
-- Luciano Abreu (arte)
+## Credits
+- Diego Almeida (art)
+- Joel Gomes (programming, audio)
+- Luciano Abreu (art)
