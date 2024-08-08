@@ -1,6 +1,6 @@
 extends Reference
 class_name DatabaseAudio
-# Definições de caminhos de arquivos de músicas e efeitos sonoros usados no jogo.
+# Definitions of music and sound effect file paths used in the game.
 
 
 # Sound effects

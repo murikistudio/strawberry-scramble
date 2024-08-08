@@ -1,6 +1,6 @@
 extends Node
 class_name DatabaseScenes
-# Definições de caminhos de arquivos de cenas usadas no jogo.
+# Definitions of scene file paths used in the game.
 
 
 # Constants

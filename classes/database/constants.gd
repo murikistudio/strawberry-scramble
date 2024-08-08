@@ -1,6 +1,6 @@
 extends Reference
 class_name DatabaseConstants
-# Definições de constantes gerais utilizadas no jogo.
+# Definitions of general constants used in the game.
 
 
 # Constants

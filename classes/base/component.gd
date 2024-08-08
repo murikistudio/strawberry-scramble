@@ -1,5 +1,6 @@
 extends Node
 class_name BaseComponent
+# Base class for components in the object.
 
 
 # Variables

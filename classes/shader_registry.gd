@@ -1,4 +1,5 @@
 extends Node
+# Node responsible for registering global shader parameters.
 
 
 # Variables
@@ -7,7 +8,7 @@ export(Array, ShaderMaterial) var shaders: Array = []
 
 
 # Built-in overrides
-# Registrar parâmetros de shaders ao iniciar cena.
+# Register shaders parameters when starting scene.
 func _enter_tree() -> void:
 	for material in shaders:
 		if not material:
@@ -16,7 +17,7 @@ func _enter_tree() -> void:
 		GameCore.register_global_shader_param(property_name, material)
 
 
-# Desregistrar parâmetros de shaders ao sair da cena.
+# Unregister shaders parameters when exiting the scene.
 func _exit_tree() -> void:
 	for material in shaders:
 		if not material:

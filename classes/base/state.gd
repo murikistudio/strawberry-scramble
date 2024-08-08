@@ -1,5 +1,6 @@
 extends Node
 class_name BaseState
+# Base class for states in the state machine.
 
 
 # Variables
@@ -12,37 +13,37 @@ func _set_object(value: Node) -> void:
 
 
 # Virtual methods
-# Executado ao entrar no estado.
+# Executed upon entering the state.
 func enter() -> void:
 	pass
 
 
-# Executado ao sair do estado.
+# Executed when exiting the state.
 func exit() -> void:
 	pass
 
 
-# Executado em cada input do usuário.
+# Executed in each input of the user.
 func input(_event: InputEvent) -> BaseState:
 	return null
 
 
-# Executado em cada input não manipulado do usuário.
+# Executed in each unhandled input of the user.
 func unhandled_input(_event: InputEvent) -> BaseState:
 	return null
 
 
-# Executado a cada quadro do jogo.
+# Executed in each frame of the game.
 func process(_delta: float) -> BaseState:
 	return null
 
 
-# Executado a cada quadro em sincronia com a física do jogo.
+# Executed in each frame in sync with the physics of the game.
 func physics_process(_delta: float) -> BaseState:
 	return null
 
 
-# Resolve o node de estado a partir de seu node path.
+# Returns the state with the given node path.
 func get_state(node: NodePath) -> BaseState:
 	if not node:
 		push_warning("Node path not set at state: " + name)

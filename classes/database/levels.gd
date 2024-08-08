@@ -1,6 +1,6 @@
 extends Reference
 class_name DatabaseLevels
-# Definições de fases do jogo.
+# Level definitions in the game.
 
 
 # Constants
@@ -52,7 +52,7 @@ const LEVELS := [
 
 
 # Static methods
-# Retorna as definições da fase em específico.
+# Returns the definitions of the specific level.
 static func get_level(world: String, name: String) -> Dictionary:
 	for level in LEVELS:
 		if level["world"] == world and level["name"] == name:
@@ -61,7 +61,7 @@ static func get_level(world: String, name: String) -> Dictionary:
 	return {}
 
 
-# Obtém informações de nomes e caminhos das cenas de fases na pasta levels.
+# Get information of names and paths of level scenes in the levels folder.
 static func get_levels(world: String) -> Array:
 	var level_paths := []
 	var dir := Directory.new()
@@ -111,6 +111,6 @@ static func get_levels(world: String) -> Array:
 	return level_paths
 
 
-# Formata o tempo da fase de forma genérica.
+# Format the level time in a generic way.
 static func format_level_time(time, precision := 0.01) -> String:
 	return str(stepify(float(time), precision)).replace(".", ",")
