@@ -1,5 +1,5 @@
 extends CanvasLayer
-# Overlay usada no jogo para transições de cenas e telas de loading.
+# Overlay used in the game for transitions of scenes and loading screens.
 #
 # Depends:
 # - GuiTransitions
@@ -22,7 +22,7 @@ func _ready() -> void:
 	visible = false
 
 
-# Mostrar overlay no jogo.
+# Show overlay in the game.
 func show() -> void:
 	var tween := create_tween().set_trans(Tween.TRANS_SINE)
 	tween.tween_property(_texture_rect, "self_modulate:a", 1.0, fade_speed)
@@ -31,7 +31,7 @@ func show() -> void:
 	emit_signal("show_completed")
 
 
-# Esconder overlay no jogo.
+# Hide overlay in the game.
 func hide() -> void:
 	var tween := create_tween().set_trans(Tween.TRANS_SINE)
 	tween.tween_property(_texture_rect, "self_modulate:a", 0.0, fade_speed)
@@ -40,7 +40,7 @@ func hide() -> void:
 	visible = false
 
 
-# Transiciona suavemente para uma nova cena no jogo.
+# Smoothly transition to a new scene in the game.
 func change_scene_to(scene, unpause := true) -> void:
 	if not scene:
 		push_warning("No scene passed to change_scene_to!")

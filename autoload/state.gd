@@ -1,5 +1,5 @@
 extends Node
-# Estado global do jogo contendo dados úteis em todo o ciclo do jogo.
+# Global state of the game containing useful data throughout the game cycle.
 
 
 # Constants
@@ -46,7 +46,7 @@ func _ready() -> void:
 
 
 # Public methods
-# Salva as informações persistentes do, como pontuações.
+# Save the persistent information of the game, such as scores.
 func save_game() -> void:
 	var save_data := {
 		"player_skills": player_skills,
@@ -66,7 +66,7 @@ func save_game() -> void:
 	print("Saved game to ", path)
 
 
-# Carrega save existente ou cria arquivo de save caso não exista.
+# Loads existing save or creates save file if it does not exist.
 func load_game() -> void:
 	var path = SAVE_PATH + ".dat" if _compress_data else SAVE_PATH + ".json"
 	var file := File.new()
@@ -94,7 +94,7 @@ func load_game() -> void:
 	prints("Loaded game data from", path)
 
 
-# Reseta status da fase selecionada.
+# Reset status of the selected level.
 func reset_level() -> void:
 	completed = false
 	times_died = 0
@@ -106,7 +106,7 @@ func reset_level() -> void:
 	current_trophy = ""
 
 
-# Avalia estado do jogo (nota do jogador).
+# Evaluates the status of the game (player rating).
 func evaluate_game() -> void:
 	if not items_available:
 		return
@@ -143,14 +143,14 @@ func evaluate_game() -> void:
 		GameEvents.emit_signal("level_cannot_complete")
 
 
-# Adiciona item coletado ao contador.
+# Adds item collected to the counter.
 func add_item_collected() -> void:
 	items_collected += 1
 	GameEvents.emit_signal("player_item_collected")
 	evaluate_game()
 
 
-# Adiciona morte do jogador ao contador.
+# Add the player's death to the counter.
 func add_times_died() -> void:
 	times_died += 1
 
@@ -161,7 +161,7 @@ func add_times_died() -> void:
 	evaluate_game()
 
 
-# Adiciona pontuação final ao estado.
+# Adds final score to the state.
 func add_score() -> void:
 	if not current_world or not current_level:
 		return
@@ -202,7 +202,7 @@ func add_score() -> void:
 		save_game()
 
 
-# Adicionar tempo passado na fase.
+# Add time spent in the level.
 func add_time_elapsed(value: float) -> void:
 	time_elapsed += value
 

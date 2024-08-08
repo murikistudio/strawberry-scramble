@@ -1,5 +1,5 @@
 extends AudioStreamPlayer
-# Singleton que gerencia a reprodução da música e efeitos sonoros do jogo.
+# Singleton that manages the playback of music and sound effects in the game.
 
 
 # Constants
@@ -25,7 +25,7 @@ func _ready() -> void:
 
 
 # Public methods
-# Toca a música a partir do caminho de arquivo passado.
+# Plays the music from the specified file path.
 func play_bgm(file) -> void:
 	if _tween.is_active():
 		return
@@ -52,7 +52,7 @@ func play_bgm(file) -> void:
 	_tween.start()
 
 
-# Toca um efeito sonoro a partir de um AudioStream ou caminho de arquivo.
+# Plays a sound effect from an AudioStream or file path.
 func play_sfx(file, vol := 0.0, pitch := 1.0) -> void:
 	var _stream := _get_stream(file)
 
@@ -69,7 +69,7 @@ func play_sfx(file, vol := 0.0, pitch := 1.0) -> void:
 	add_child(audio)
 
 
-# Toca um efeito sonoro 3D na posição do node Spatial passado.
+# Plays a 3D sound effect on the position of the specified spatial node.
 func play_sfx_3d(node: Spatial, file, unit_size := 1.0, pitch := 1.0) -> void:
 	var _stream := _get_stream(file)
 
@@ -87,7 +87,7 @@ func play_sfx_3d(node: Spatial, file, unit_size := 1.0, pitch := 1.0) -> void:
 
 
 # Private methods
-# Retorna a stream de áudio a partir de um caminho, ou nulo caso inválido.
+# Returns the audio stream from a path, or null if invalid.
 func _get_stream(file) -> AudioStream:
 	if not file:
 		return null
@@ -102,6 +102,6 @@ func _get_stream(file) -> AudioStream:
 
 
 # Event handlers
-# Deleta o player de áudio após a repordução.
+# Delete the audio player after playback.
 func _on_audio_finished(audio: Node) -> void:
 	audio.queue_free()

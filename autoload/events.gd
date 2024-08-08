@@ -1,5 +1,5 @@
 extends Node
-# Event bus central contendo sinais úteis em locais fragmentados no jogo.
+# Central event bus containing useful signals in fragmented places in the game.
 
 
 # Level signals

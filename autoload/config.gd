@@ -1,5 +1,5 @@
 extends Node
-# Gerenciador de configurações de usuário do jogo.
+# Game user settings manager.
 
 
 # Signals
@@ -23,6 +23,7 @@ var sfx := 1.0
 var bgm := 1.0
 
 
+# Built-in overrides
 func _ready() -> void:
 	var loaded := load_config()
 	apply_config()
@@ -33,6 +34,8 @@ func _ready() -> void:
 	save_config()
 
 
+# Public methods
+# Save config to disk.
 func save_config() -> void:
 	var config_file := ConfigFile.new()
 
@@ -43,6 +46,7 @@ func save_config() -> void:
 	prints("Saved config to:", SAVE_PATH)
 
 
+# Load config from disk.
 func load_config() -> bool:
 	var config_file := ConfigFile.new()
 	var err := config_file.load(SAVE_PATH)
@@ -60,6 +64,7 @@ func load_config() -> bool:
 	return true
 
 
+# Apply current config to game.
 func apply_config(video := true, audio := true, locale := true) -> void:
 	if video:
 		OS.window_fullscreen = fullscreen
