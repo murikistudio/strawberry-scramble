@@ -1,7 +1,7 @@
 class_name ConfigEnabler, "res://addons/utils/icons/config_enabler.png"
 extends Node
-# Node utilitário que habilita ou desabilita uma propriedade do pai de acordo
-# com uma configuração de usuário.
+# Utility node that enables or disables a property of the parent node
+# according to a user configuration.
 
 
 # Enums
@@ -38,7 +38,7 @@ func _ready() -> void:
 
 
 # Public methods
-# Aplica a configuração especificada no node pai.
+# Apply the specified configuration in the parent node.
 func apply_value():
 	if not _config_valid:
 		push_warning("Invalid config set in project settings: " + SETTING_BASE)
@@ -77,7 +77,7 @@ func _get_config_values() -> void:
 	_config_singleton.connect(setting_signal, self, "apply_value")
 
 
-# Obtém e converte o valor da configuração especificada.
+# Obtains and converts the specified configuration value.
 func _get_value():
 	var value = _config_singleton.call(_config_getter, config_key)
 

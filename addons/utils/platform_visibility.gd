@@ -1,7 +1,7 @@
 class_name PlatformVisibility, "res://addons/utils/icons/platform_visibility.png"
 extends Node
-# Node utilitário responsável por mostrar ou esconder um controle de
-# interface de usuário pai de acordo com a plataforma atual.
+# Utility Node responsible for showing or hiding a parent user interface
+# control according to the current platform.
 
 
 # Enums
@@ -39,13 +39,13 @@ func _ready() -> void:
 
 
 # Public methods
-# Atualizar visibilidade do controle.
+# Update control visibility.
 func update_visibility() -> void:
 	var cur_parent := get_parent()
 
 	if not cur_parent or not "visible" in cur_parent:
 		return
 
-	# Verificar se a flag da plataforma atual está ativada nas plataformas
+	# Check that the current platform flag is activated on platforms
 	if platforms & _current_platform:
 		cur_parent.visible = visible

@@ -1,10 +1,10 @@
 class_name ButtonHighlighter, "res://addons/utils/icons/button_highlighter.svg"
 extends Node
-# Node utilitário que altera o visual do pai quando este for pressionado.
+# Utility node that alters the look of the parent when it is pressed.
 #
-# Este node reproduz um som e altera o brilho do pai através de modulate
-# quando este for clicado.
-# Ele também possui animações de brilho, escala e rotação.
+# This node plays a sound and changes the brightness of the parent through
+# modulate when it's clicked.
+# It also has brightness, scale and rotation animations.
 
 
 # Constants
@@ -46,7 +46,7 @@ func _ready() -> void:
 
 
 # Private methods
-# Setter da propriedade anim_brightness.
+# Setter of the anim_brightness property.
 func _set_anim_brightness(value: bool) -> void:
 	anim_brightness = value
 
@@ -54,7 +54,7 @@ func _set_anim_brightness(value: bool) -> void:
 		_animate_brightness()
 
 
-# Setter da propriedade anim_rotation.
+# Setter of the anim_rotation property.
 func _set_anim_rotation(value: bool) -> void:
 	anim_rotation = value
 
@@ -62,7 +62,7 @@ func _set_anim_rotation(value: bool) -> void:
 		_animate_rotation()
 
 
-# Setter da propriedade anim_scale.
+# Setter of the property anim_scale.
 func _set_anim_scale(value: bool) -> void:
 	anim_scale = value
 
@@ -70,14 +70,14 @@ func _set_anim_scale(value: bool) -> void:
 		_animate_scale()
 
 
-# Atribuir valores iniciais de variáveis de animação.
+# Assign initial values ​​of animation variables.
 func _set_initial_values() -> void:
 	anim_brightness = _parent.self_modulate.a
 	_initial_scale = _parent.rect_scale
 	_initial_rotation = _parent.rect_rotation
 
 
-# Retornar som a ser reproduzido ao clicar no botão.
+# Return sound to be played when clicking the button.
 func _get_click_sound() -> AudioStream:
 	var setting_click_sound: String = ProjectSettings.get_setting(SETTING_CLICK_SOUND)
 
@@ -87,13 +87,13 @@ func _get_click_sound() -> AudioStream:
 	return null
 
 
-# Retornar bus de áudio onde reproduzir som do clique do botão.
+# Return audio bus where to play the click of the button.
 func _get_click_sound_bus() -> String:
 	var bus: String = ProjectSettings.get_setting(SETTING_CLICK_SOUND_BUS)
 	return bus if bus else "Master"
 
 
-# Criar player de áudio e tocar som de click.
+# Create audio player and play click sound.
 func _play_click_sound() -> void:
 	if not _click_sound or not click_sound:
 		return
@@ -106,7 +106,7 @@ func _play_click_sound() -> void:
 	add_child(audio_player)
 
 
-# Executar animação de modulação de brilho.
+# Play brightness modulation animation.
 func _animate_brightness() -> void:
 	if not anim_brightness:
 		return
@@ -120,7 +120,7 @@ func _animate_brightness() -> void:
 	tween.connect("finished", self, "_on_tween_finished", ["_animate_brightness"])
 
 
-# Executar animação de modulação de rotação.
+# Play rotation modulation animation.
 func _animate_rotation() -> void:
 	if not anim_rotation:
 		return
@@ -136,7 +136,7 @@ func _animate_rotation() -> void:
 	tween.connect("finished", self, "_on_tween_finished", ["_animate_rotation"])
 
 
-# Executar animação de modulação de escala.
+# Play scale modulation animation.
 func _animate_scale() -> void:
 	if not anim_scale:
 		return
@@ -151,7 +151,7 @@ func _animate_scale() -> void:
 	tween.connect("finished", self, "_on_tween_finished", ["_animate_scale"])
 
 
-# Conectar sinais de reação do node pai.
+# Connect signals of interaction from the parent node.
 func _connect_signals() -> void:
 	if _parent.has_signal("mouse_entered"):
 		_parent.connect("mouse_entered", self, "_on_parent_mouse_entered")
@@ -177,13 +177,13 @@ func _connect_signals() -> void:
 	get_tree().connect("idle_frame", self, "_on_idle_frame", [], Node.CONNECT_ONESHOT)
 
 
-# Alterar brilho do node pai.
+# Change brightness of the parent node.
 func _set_brightness(value: float) -> void:
 	if change_brightness:
 		_parent.modulate.v = value
 
 
-# Centraliza o pivô do node pai.
+# Centralizes the pivot of the parent node.
 func _center_pivot() -> void:
 	if not _parent:
 		return
@@ -192,41 +192,41 @@ func _center_pivot() -> void:
 
 
 # Event handlers
-# Focar node pai quando o mouse focá-lo.
+# Focus parent node when the mouse focuses it.
 func _on_parent_mouse_entered() -> void:
 	if mouse_focus_grab and _parent.focus_mode != Control.FOCUS_NONE:
 		_parent.grab_focus()
 
 
-# Desfocar node pai quando o mouse desfocá-lo.
+# Release focus from parent node when the mouse exits it.
 func _on_parent_mouse_exited() -> void:
 	if mouse_focus_release and _parent.focus_mode != Control.FOCUS_NONE:
 		_parent.release_focus()
 
 
-# Iniciar animações dos botões no quadro seguinte.
+# Start button animations on the next frame.
 func _on_idle_frame() -> void:
 	_animate_brightness()
 	_animate_rotation()
 	_animate_scale()
 
 
-# Alterar brilho quando o node pai for pressionado.
+# Change brightness when the parent is pressed.
 func _on_parent_button_down() -> void:
 	_set_brightness(pressed_brightness)
 
 
-# Alterar o brilho e tocar som quando o node pai for solto.
+# Change the brightness and play sound when the parent is released.
 func _on_parent_button_up(_arg = null) -> void:
 	_set_brightness(normal_brightness)
 	_play_click_sound()
 
 
-# Deleta o player de áudio ao terminar o som de click.
+# Delete the audio player when the sound ends.
 func _on_audio_player_finished(audio_player: AudioStreamPlayer) -> void:
 	audio_player.queue_free()
 
 
-# Executar loop de animação sempre que o loop anterior terminar.
+# Play animation loop whenever the previous loop ends.
 func _on_tween_finished(method: String) -> void:
 	call(method)

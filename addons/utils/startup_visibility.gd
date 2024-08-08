@@ -1,6 +1,6 @@
 class_name StartupVisibility, "res://addons/utils/icons/startup_visibility.png"
 extends Node
-# Node utilitário responsável por tornar um node pai visível ao iniciar o jogo.
+# Node utility responsible for making a parent node visible when starting the game.
 
 
 # Variables
