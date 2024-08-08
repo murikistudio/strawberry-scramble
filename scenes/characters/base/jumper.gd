@@ -1,5 +1,6 @@
 extends Area
 class_name EnemyJumper
+# Base class of the jumper enemies, such as fish.
 
 
 # Variables
@@ -32,6 +33,7 @@ func _process(_delta: float) -> void:
 
 
 # Event handlers
+# Kill current enemy.
 func _on_enemy_killed(enemy: Area) -> void:
 	if dead or enemy != self:
 		return

@@ -1,5 +1,6 @@
 extends Area
 class_name EnemyWalker
+# Base class for enemies that walk back and forth, such as snails.
 
 
 # Variables
@@ -36,12 +37,12 @@ func _process(_delta: float) -> void:
 
 
 # Private methods
-# Loop de movimentação e rotação.
+# Movement and rotation loop.
 func _loop_movement() -> void:
 	if _anim_player:
 		_anim_player.play("walk_loop", -1, anim_speed)
 
-	# Movimentar apenas um eixo
+	# Move only one axis
 	if target_x:
 		target_z = 0.0
 
@@ -53,7 +54,7 @@ func _loop_movement() -> void:
 
 	_target_position = _initial_position + Vector3(target_x, 0.0, target_z)
 
-	# Ciclo de movimento e rotação
+	# Movement and rotation cycle
 	var tween := create_tween().set_loops().set_trans(Tween.TRANS_SINE)
 	var rot_loop := 12
 	var rot_degrees := 15.0
@@ -78,7 +79,7 @@ func _loop_movement() -> void:
 	_tween = tween
 
 
-# Seguir o jogador em um dos eixos de acordo com a distância limite.
+# Follow the player on one axis according to the distance limit.
 func _follow_player() -> void:
 	if not _player or not follow_distance:
 		return
@@ -128,10 +129,12 @@ func _follow_player() -> void:
 
 
 # Event handlers
+# Store the player reference at the start.
 func _on_player_emitted(player: Spatial) -> void:
 	_player = player
 
 
+# Kill current enemy.
 func _on_enemy_killed(enemy: Area) -> void:
 	if dead or enemy != self:
 		return

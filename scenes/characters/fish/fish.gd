@@ -1,4 +1,5 @@
 extends EnemyJumper
+# Base class of the fish enemies.
 
 
 # Variables
@@ -7,6 +8,7 @@ onready var _visual: Spatial = find_node("Visual")
 
 
 # Public methods
+# Spawns a water splash effect.
 func spawn_water_splash() -> void:
 	if not scene_water_splash:
 		return
